@@ -7,6 +7,13 @@
 
 Scheduler and recurring job surfaces.
 
+## HRCN Boundary Note
+
+Profile source: HRCN v0.1.3.
+Current repository boundary: HRCN v0.2.4.
+This README is a navigation/context surface only.
+Runtime, dependency, CMS, API-write, or apply/write authority is not granted by this README.
+
 Profile: `compact`
 
 ## HRCN Position
@@ -14,7 +21,7 @@ Profile: `compact`
 - Shell: middle
 - Meridian(s): scheduler
 - Sector: runtime
-- Version / TTL: HRCN-v0.1.3 / 180 days
+- Version / TTL: HRCN-v0.2.4 boundary / inherits HRCN-v0.1.3 profile / 180 days
 - Last Verified: 2026-06-04
 
 ## Read Before Editing

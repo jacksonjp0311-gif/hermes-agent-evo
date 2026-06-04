@@ -9,7 +9,14 @@ Built-in tools and terminal/environment backends.
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Under HRCN v0.1.3, this README is a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: HRCN v0.1.3. Current repository boundary: HRCN v0.2.4. This README remains a navigation and context surface only.
+
+## HRCN Boundary Note
+
+Profile source: HRCN v0.1.3.
+Current repository boundary: HRCN v0.2.4.
+This README is a navigation/context surface only.
+Runtime, dependency, CMS, API-write, or apply/write authority is not granted by this README.
 
 Profile: `full`
 
@@ -34,7 +41,7 @@ This folder may contain source files, docs, reports, schemas, scripts, UI assets
 
 ## T - Theory / Basis
 
-Governed by HRCN v0.1.3, RCC repository orientation, CMS permission discipline, RCC-N profile-gated governance, and Hermes upstream development boundaries.
+Profile inherited from HRCN v0.1.3. Current repository boundary is HRCN v0.2.4, with RCC repository orientation, CMS permission discipline, RCC-N profile-gated governance, and Hermes upstream development boundaries.
 
 ## I - Invariants
 
@@ -51,7 +58,7 @@ Governed by HRCN v0.1.3, RCC repository orientation, CMS permission discipline, 
 
 Read this README before editing this folder.
 
-For HRCN v0.1.3 docs-only work, expected validation is:
+For current docs/context work, expected validation is:
 
 ```powershell
 git status --short
@@ -64,7 +71,7 @@ Sphere Position:
 - Shell: middle
 - Meridian(s): tools
 - Sector: runtime
-- Version / TTL: HRCN-v0.1.3 / 180 days
+- Version / TTL: HRCN-v0.2.4 boundary / inherits HRCN-v0.1.3 profile / 180 days
 - Last Verified: 2026-06-04
 
 Local Role:
@@ -73,7 +80,9 @@ Local Role:
 
 Evidence Surface:
 
-- `docs/context-layer/hrcn-v0.1.3.validation.json`
+- `docs/context-layer/hrcn-v0.1.3.validation.json` (profile source)
+- `docs/context-layer/hermes-surface-boundary-map.json` (current boundary)
+- `docs/context-layer/hrcn-v0.2.4.public-surface-coherence.validation.json` (current public-surface validation)
 
 Validation Surface:
 

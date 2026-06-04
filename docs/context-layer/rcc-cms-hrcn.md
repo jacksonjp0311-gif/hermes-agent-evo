@@ -217,3 +217,27 @@ HRCN-L-010: validator failure must stop add/commit/push flow.
 
 Non-claim lock: HRCN v0.2.3 is a README render hygiene and bug/lesson closure layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V023_RENDER_HYGIENE_END -->
+
+<!-- HRCN_V024_PUBLIC_SURFACE_COHERENCE_START -->
+## HRCN v0.2.4 - Public Surface Coherence Recovery
+
+HRCN v0.2.4 closes public-surface drift before v0.3.
+
+```text
+location first
+candidate validation before writing
+README render hygiene is evidence hygiene
+roadmap, rehydration, mini README, and validation surfaces must agree
+```
+
+Logged lessons:
+
+```text
+HRCN-L-009: README render hygiene scans are required.
+HRCN-L-010: validator failure must stop add/commit/push flow.
+HRCN-L-011: writer failure must terminate before staging.
+HRCN-L-012: every script begins with location/root verification.
+```
+
+Non-claim lock: HRCN v0.2.4 is a public-surface coherence recovery layer. It repairs README render hygiene, roadmap drift, rehydration drift, mini README boundary wording, and bug/lesson logs. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V024_PUBLIC_SURFACE_COHERENCE_END -->
