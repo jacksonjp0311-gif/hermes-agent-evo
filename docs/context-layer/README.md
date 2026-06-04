@@ -136,6 +136,9 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 | `rcc-cms-hrcn.validation.json` | v0.1.1 README/mini README validation. |
 | `rcc-cms-hrcn.lesson-injection.validation.json` | v0.1.2 lesson injection validation. |
 | `hrcn-v0.1.3.validation.json` | v0.1.3 coherence/compression/rehydration validation. |
+| `hrcn-v0.1.4.validation.json` | v0.1.4 runtime-boundary/CMS-intake validation. |
+| `cms-root-intake-plan.md` | Future CMS root-folder intake plan. |
+| `hrcn-runtime-evolution-boundary.md` | Phase-bounded runtime evolution boundary. |
 
 Lesson lock:
 

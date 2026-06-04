@@ -48,6 +48,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v0.1.1 | Can the root README and mini README surfaces become navigable without touching runtime code? | `docs/context-layer/rcc-cms-hrcn.validation.json` |
 | HRCN v0.1.2 | Can Cyber/CMS/RCC-N lessons be injected before runtime bridge work? | `docs/context-layer/cybernetic-lessons-injection.md` |
 | HRCN v0.1.3 | Can README state, mini README profiles, and rehydration protocol cohere without runtime mutation? | `docs/context-layer/hrcn-v0.1.3.validation.json` |
+| HRCN v0.1.4 | Can Hermes state future runtime evolution and CMS root-folder intake without granting live authority? | `docs/context-layer/hrcn-v0.1.4.validation.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -72,8 +73,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v0.1.3` |
-| Previous anchor | `HRCN v0.1.2` |
+| Current checkpoint | `HRCN v0.1.4` |
+| Previous anchor | `HRCN v0.1.3` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -81,7 +82,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Context layer mini README | `docs/context-layer/README.md` |
 | Rehydration protocol | `docs/context-layer/hermes-agent-rehydration-protocol.md` |
 | Profile map | `docs/context-layer/hrcn-profile-map.json` |
-| Validation report | `docs/context-layer/hrcn-v0.1.3.validation.json` |
+| Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
+| CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
+| Validation report | `docs/context-layer/hrcn-v0.1.4.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 
 ### Core Law
@@ -96,6 +99,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - No production, security, consciousness, sentience, AGI, or autonomy claim.
 - Rehydration is orientation, not authority.
 - Profile adoption is not validation.
+- A future `cms/` root folder is not live CMS integration by itself.
+- Future runtime mutation requires route map, evidence boundary, dry-run path, rollback plan, validation, and explicit human authorization.
+- Current docs-only status does not mean runtime will never change.
 
 ### HRCN v0.1.3 Surface Lock
 
@@ -105,6 +111,95 @@ docs/context-layer contract, roadmap, profile map, rehydration protocol,
 mini README profiles, validation report, runtime lock, and non-claim
 boundaries agree.
 ```
+
+<!-- HRCN_RUNTIME_EVOLUTION_BOUNDARY_START -->
+### Current Runtime Boundary and Future Runtime Evolution
+
+HRCN v0.1.4 keeps the current repository state docs-only, but it does not lock Hermes into docs-only forever.
+
+Current boundary:
+
+```text
+HRCN v0.1.4 does not change Hermes runtime.
+```
+
+Future boundary:
+
+```text
+Hermes runtime may evolve only after surface mapping, evidence boundaries,
+dry-run design, rollback coverage, validation, and explicit human authorization.
+```
+
+This distinction matters:
+
+| Statement | Status |
+|---|---|
+| HRCN changes Hermes runtime now. | `False` |
+| HRCN forbids future runtime work forever. | `False` |
+| HRCN requires runtime work to pass gates before execution. | `True` |
+| CMS can be copied into the repo and immediately become authority. | `False` |
+| CMS root-folder intake can be planned before integration. | `True` |
+
+Runtime evolution sequence:
+
+```text
+map surfaces -> define packet -> design read-only bridge -> classify proposals
+-> design dry-run -> bind rollback -> validate -> human authorize -> execute
+```
+
+Non-claim lock: runtime evolution planning is not runtime mutation, not production readiness, not security proof, not external validation, and not autonomous write authority.
+<!-- HRCN_RUNTIME_EVOLUTION_BOUNDARY_END -->
+
+<!-- HRCN_CMS_ROOT_INTAKE_START -->
+### Future CMS Root Folder Intake Plan
+
+The intended direction is to pull Cybernetic Memory System into Hermes as a visible root-level governance substrate after the Hermes surface boundary map is complete.
+
+Candidate future root:
+
+```text
+cms/
+```
+
+Current rule:
+
+```text
+No CMS root folder may grant live memory, repair, skill, dry-run, apply,
+API-write, or runtime authority merely by existing in the Hermes repository.
+```
+
+Intake phases:
+
+| Phase | Meaning | Authority |
+|---|---|---|
+| `cms_intake_plan` | Document folder target, import method, and boundaries | docs only |
+| `cms_read_only_mirror` | Bring CMS surfaces into Hermes without runtime wiring | read-only |
+| `cms_context_packet` | Define what Hermes may read from CMS | read-only |
+| `cms_adapter_design` | Specify proposal classification interfaces | design only |
+| `cms_dry_run_bridge` | Simulate Hermes/CMS interactions | simulation only |
+| `cms_apply_gate` | Require human authorization, rollback, and validation | gate only |
+| `cms_runtime_integration` | Live integration after all prior gates | future authorized phase |
+
+Possible import methods:
+
+| Method | Use case | Risk |
+|---|---|---|
+| Git submodule | Preserve CMS as separately versioned source | requires submodule discipline |
+| Git subtree | Vendor CMS history into Hermes | larger repo history |
+| Root folder copy | Simple local-first snapshot | must preserve provenance |
+| Python/package dependency | Runtime-style integration | too early before bridge design |
+
+Preferred near-term posture:
+
+```text
+plan first
+map second
+read-only intake third
+integration later
+```
+
+Non-claim lock: CMS root intake planning does not activate CMS runtime, does not grant CMS authority, does not prove Hermes correctness, and does not make Hermes production-ready or secure.
+<!-- HRCN_CMS_ROOT_INTAKE_END -->
 
 ### Rehydration Protocol
 
@@ -224,6 +319,7 @@ Gap classes:
 | HRCN-L-003 | Local UX/icon and package-lock changes appeared beside HRCN docs. | Pre-existing local files were not separated from new HRCN docs surfaces. | Record pre-existing dirty state and validate only HRCN-introduced docs paths unless the human authorizes broader cleanup. |
 | HRCN-L-004 | Mini README expansion became heavy across all folders. | Full RCC blocks were applied before profile selection existed. | Use profile-gated mini README surfaces: full, compact, pointer. |
 | HRCN-L-005 | Fresh threads can become version-eager after context expansion. | The repo had context surfaces but not an explicit rehydration protocol. | Require identity, boundary, state, target, and authority scans before proposing version work. |
+| HRCN-L-006 | Agent visibility wording could imply runtime will never change. | Permanent visibility-only language conflicts with the intended CMS-to-Hermes integration path. | Use phase-bounded language: no runtime mutation now; future runtime work only after mapping, dry-run, rollback, validation, and human authorization. |
 
 ### HRCN Roadmap
 
@@ -233,6 +329,7 @@ Gap classes:
 | HRCN v0.1.1 | README + Mini README Surface Expansion | Root README and mini READMEs only. |
 | HRCN v0.1.2 | Cyber/CMS/RCC-N Lesson Injection | Docs/context lesson injection only. |
 | HRCN v0.1.3 | Coherence, Profile Compression, and Rehydration Protocol | Docs/context profile gating and rehydration only. |
+| HRCN v0.1.4 | Runtime Evolution Boundary and CMS Root Intake Plan | Docs/context planning only; no runtime or CMS folder import. |
 | HRCN v0.2 | Hermes Surface Boundary Map | Read-only runtime map; no edits. |
 | HRCN v0.3 | Agent Rehydration Packet Contract | Context packet design; no loader. |
 | HRCN v0.4 | CMS Read-Only Bridge Design | Read-only bridge spec; no memory writes. |
@@ -278,7 +375,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v0.1.3 is a docs/context/navigation coherence and compression layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.1.4 is a docs/context planning and boundary layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

@@ -142,3 +142,33 @@ boundary, state, target, and authority scans.
 
 Non-claim lock: HRCN v0.1.3 is a docs/context/navigation coherence and compression layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V013_COHERENCE_END -->
+
+<!-- HRCN_V014_RUNTIME_CMS_INTAKE_START -->
+## HRCN v0.1.4 - Runtime Evolution Boundary and CMS Root Intake
+
+HRCN v0.1.4 records the future direction without changing runtime:
+
+```text
+Hermes runtime may evolve later.
+CMS may become a root-level governance substrate later.
+Neither happens in v0.1.4.
+```
+
+Current blocked action:
+
+```text
+runtime_mutation = false
+cms_folder_import = false
+cms_write_authority = false
+api_write_authority = false
+```
+
+Future required gates:
+
+```text
+surface_map -> rehydration_packet -> read_only_bridge -> proposal_classification
+-> dry_run -> rollback -> validation -> human_authorization -> runtime_change
+```
+
+Non-claim lock: HRCN v0.1.4 is a docs/context planning and boundary layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V014_RUNTIME_CMS_INTAKE_END -->

@@ -12,6 +12,7 @@ HRCN v0.1.3 — Coherence, Profile Compression, and Rehydration Protocol
 | HRCN v0.1.1 | README + Mini README Surface Expansion | Root README and mini READMEs only. |
 | HRCN v0.1.2 | Cyber/CMS/RCC-N Lesson Injection | Docs/context lesson injection only. |
 | HRCN v0.1.3 | Coherence, Profile Compression, and Rehydration Protocol | Docs/context profile gating and rehydration only. |
+| HRCN v0.1.4 | Runtime Evolution Boundary and CMS Root Intake Plan | Docs/context planning only; no runtime or CMS folder import. |
 | HRCN v0.2 | Hermes Surface Boundary Map | Read-only runtime map; no edits. |
 | HRCN v0.3 | Agent Rehydration Packet Contract | Context packet design; no loader. |
 | HRCN v0.4 | CMS Read-Only Bridge Design | Design only; no memory writes. |

@@ -1,0 +1,31 @@
+{
+  "allowed_changed_paths": [
+    "README.md",
+    "docs/context-layer/README.md",
+    "docs/context-layer/cms-root-intake-plan.md",
+    "docs/context-layer/hrcn-roadmap.md",
+    "docs/context-layer/hrcn-runtime-evolution-boundary.md",
+    "docs/context-layer/rcc-cms-hrcn.md"
+  ],
+  "api_write_authority_granted": false,
+  "blocked_changed_paths": [],
+  "checkpoint": "Runtime Evolution Boundary and CMS Root Intake Plan",
+  "cms_folder_import_performed": false,
+  "cms_root_folder_not_authority": true,
+  "cms_root_intake_plan_present": true,
+  "cms_write_authority_granted": false,
+  "dependency_changes_allowed": false,
+  "docs_only": true,
+  "future_runtime_allowed_only_after_gates": true,
+  "non_claim_lock": "HRCN v0.1.4 is a docs/context planning and boundary layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "passed": true,
+  "previous_anchor": "HRCN v0.1.3",
+  "primary_lock": "HRCN v0.1.4 may plan runtime evolution and CMS root intake, but may not mutate Hermes runtime or import CMS.",
+  "readme_current_checkpoint": true,
+  "repository": "hermes-agent-evo",
+  "runtime_code_changes_allowed": false,
+  "runtime_evolution_boundary_present": true,
+  "schema": "HRCN-v0.1.4-runtime-boundary-cms-intake-validation",
+  "timestamp_utc": "2026-06-04T19:10:20.850990+00:00",
+  "version": "HRCN v0.1.4"
+}
