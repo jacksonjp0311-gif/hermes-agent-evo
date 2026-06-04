@@ -168,3 +168,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v0.3-agent-rehydration-packet-contract.md` | v0.3 human-readable packet contract. |
 | `hrcn-v0.3.validation.json` | v0.3 validation artifact. |
 | `hrcn-v0.3.validation.md` | v0.3 validation report. |
+
+| `hrcn-v0.4-cms-read-only-bridge-design.json` | v0.4 machine-readable CMS read-only bridge design. |
+| `hrcn-v0.4-cms-read-only-bridge-design.md` | v0.4 human-readable CMS read-only bridge design. |
+| `hrcn-v0.4.validation.json` | v0.4 validation artifact. |
+| `hrcn-v0.4.validation.md` | v0.4 validation report. |

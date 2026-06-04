@@ -1,0 +1,78 @@
+{
+  "allowed_future_read_only_inputs": [
+    "validated CMS state summaries",
+    "lesson ledgers",
+    "claim-boundary notes",
+    "repository governance rules",
+    "evidence-package references",
+    "rollback requirements",
+    "human authorization requirements"
+  ],
+  "bridge_direction": "CMS context -> Hermes orientation only",
+  "bridge_interface_contract": {
+    "allowed_authority_class": "read_only_context",
+    "blocked_authority_classes": [
+      "dry_run",
+      "apply_write",
+      "cms_intake"
+    ],
+    "input_contract": "A future bridge may expose CMS records as read-only documents with provenance, timestamp, source path, confidence/validation tier, and claim boundary.",
+    "output_contract": "Hermes may produce proposals, classifications, and dry-run plans only; no apply/write action is authorized by this design.",
+    "required_filters": [
+      "no secrets",
+      "no live credentials",
+      "no unresolved private data",
+      "no unvalidated apply instructions"
+    ],
+    "required_metadata": [
+      "source",
+      "timestamp_utc",
+      "validation_tier",
+      "claim_boundary",
+      "allowed_use",
+      "blocked_use",
+      "human_authorization_requirement"
+    ]
+  },
+  "bridge_is_not": [
+    "runtime implementation",
+    "adapter implementation",
+    "loader",
+    "CMS import",
+    "CMS writer",
+    "repair applier",
+    "API writer",
+    "memory authority",
+    "production/security proof"
+  ],
+  "bridge_purpose": "Design a future path for Hermes to read CMS context as orientation/evidence without granting CMS write authority or runtime command authority.",
+  "checkpoint": "CMS Read-Only Bridge Design",
+  "created_utc": "2026-06-04T22:09:48.269241+00:00",
+  "forbidden_v0_4_behaviors": [
+    "write to CMS",
+    "write to Hermes runtime",
+    "execute repairs",
+    "modify dependencies",
+    "create cms/ root folder",
+    "call external APIs",
+    "store secrets",
+    "load live private memory as authority",
+    "treat CMS context as command",
+    "treat CMS context as validation"
+  ],
+  "future_gate_sequence": [
+    "v0.4 read-only bridge design",
+    "v0.5 permission adapter design",
+    "v0.6 repair recommendation adapter design",
+    "v0.7 dry-run bridge",
+    "v0.8 apply gate",
+    "v0.9 evidence harness",
+    "v1.0 governed Hermes-CMS nexus"
+  ],
+  "non_claim_lock": "HRCN v0.4 is a docs/context bridge-design layer. It defines a future CMS read-only bridge boundary. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "previous_validated_anchor": "HRCN v0.3",
+  "primary_law": "A CMS bridge may inform Hermes; it may not command Hermes.",
+  "repository": "hermes-agent-evo",
+  "schema": "HRCN-v0.4-cms-read-only-bridge-design",
+  "version": "HRCN v0.4"
+}

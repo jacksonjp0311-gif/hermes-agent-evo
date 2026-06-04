@@ -266,3 +266,28 @@ docs/context-layer/hrcn-v0.3.validation.md
 
 Non-claim lock: HRCN v0.3 is a docs/context packet-contract layer. It defines the packet a future agent must load before proposing work. It does not create a loader, modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V03_AGENT_PACKET_END -->
+
+<!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_START -->
+## HRCN v0.4 - CMS Read-Only Bridge Design
+
+HRCN v0.4 defines a future bridge boundary where CMS may inform Hermes as read-only context.
+
+```text
+A CMS bridge may inform Hermes; it may not command Hermes.
+read-only context is not apply authority
+CMS evidence is not CMS command
+bridge design is not bridge implementation
+human authorization gates dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json
+docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.md
+docs/context-layer/hrcn-v0.4.validation.json
+docs/context-layer/hrcn-v0.4.validation.md
+```
+
+Non-claim lock: HRCN v0.4 is a docs/context bridge-design layer. It defines a future CMS read-only bridge boundary. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_END -->
