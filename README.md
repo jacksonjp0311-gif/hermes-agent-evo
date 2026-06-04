@@ -53,6 +53,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v0.2.4 | Can public README rendering, roadmap, rehydration, mini READMEs, and failure lessons agree before v0.3? | `docs/context-layer/hrcn-v0.2.4.public-surface-coherence.validation.json` |
 | HRCN v0.3 | Can a future agent load a bounded rehydration packet before proposing work? | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | HRCN v0.4 | Can CMS context be designed as read-only orientation without write authority? | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
+| HRCN v0.5 | Can memory visibility, use, proposal, dry-run, and apply authority be separated? | `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -77,8 +78,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v0.4` |
-| Previous validated anchor | `HRCN v0.3` |
+| Current checkpoint | `HRCN v0.5` |
+| Previous validated anchor | `HRCN v0.4` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -89,10 +90,11 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v0.4.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v0.5.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
+| Memory permission adapter design | `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json` |
 
 ### Core Law
 
@@ -122,6 +124,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - No CMS read-only bridge design grants CMS write authority.
 - CMS context is orientation/evidence, not command authority.
 - A CMS bridge may inform Hermes; it may not command Hermes.
+- No memory permission design grants apply authority.
+- Memory records cannot upgrade their own permission class.
+- Memory may surface context; permission determines use; humans authorize action.
 
 ### Current HRCN Surface Lock
 
@@ -436,7 +441,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v0.4 is a docs/context bridge-design layer. It defines a future CMS read-only bridge boundary. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.5 is a docs/context memory-permission adapter design layer. It defines permission classes and gates for future memory use. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
@@ -692,3 +697,37 @@ human authorization
 
 Non-claim lock: HRCN v0.4 does not create a loader, adapter, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
 <!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_END -->
+
+<!-- HRCN_V05_MEMORY_PERMISSION_START -->
+### HRCN v0.5 Memory Permission Adapter Design
+
+HRCN v0.5 defines the permission geometry a future memory adapter must obey.
+
+Current rule:
+
+```text
+Memory may surface context; permission determines use; humans authorize action.
+```
+
+Permission artifacts:
+
+```text
+docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json
+docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.md
+docs/context-layer/hrcn-v0.5.validation.json
+docs/context-layer/hrcn-v0.5.validation.md
+```
+
+v0.5 separates six things that must not collapse into one another:
+
+```text
+memory visibility
+permitted use
+proposal authority
+dry-run candidacy
+apply/write authority
+human authorization
+```
+
+Non-claim lock: HRCN v0.5 does not create a loader, adapter, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
+<!-- HRCN_V05_MEMORY_PERMISSION_END -->

@@ -1,0 +1,128 @@
+{
+  "adapter_is_not": [
+    "runtime implementation",
+    "permission engine implementation",
+    "loader",
+    "CMS import",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "adapter_purpose": "Design the permission matrix a future adapter must use before CMS or memory context can affect Hermes proposals.",
+  "checkpoint": "Memory Permission Adapter Design",
+  "created_utc": "2026-06-04T22:19:05.735071+00:00",
+  "decision_rules": [
+    "No memory record can upgrade its own permission class.",
+    "No memory record can authorize runtime mutation.",
+    "No memory record can authorize CMS writes.",
+    "No memory record can override repository state.",
+    "No unvalidated memory record can be treated as evidence.",
+    "No evidence reference can become apply authority without human authorization.",
+    "If permission is ambiguous, classify as blocked or visible_only.",
+    "If the target surface is runtime/dependency/CMS/API, require explicit future-phase authorization."
+  ],
+  "forbidden_v0_5_behaviors": [
+    "implement adapter",
+    "create runtime loader",
+    "write to CMS",
+    "write to Hermes runtime",
+    "execute repairs",
+    "modify dependencies",
+    "create cms/ root folder",
+    "call external APIs",
+    "store secrets",
+    "treat memory as command",
+    "treat memory as validation",
+    "grant apply/write authority"
+  ],
+  "future_gate_sequence": [
+    "v0.5 memory permission adapter design",
+    "v0.6 repair recommendation adapter design",
+    "v0.7 dry-run adapter design",
+    "v0.8 apply-gate adapter design",
+    "v0.9 evidence package and benchmark harness",
+    "v1.0 governed Hermes-CMS nexus"
+  ],
+  "geometry": {
+    "apply": "what remains blocked until explicit human authorization and rollback evidence",
+    "authorization": "the human-controlled transition boundary",
+    "dry_run": "what may be simulated in a future phase",
+    "proposal": "what the agent may suggest",
+    "use": "what memory/context may be used for",
+    "visibility": "what memory/context can be seen"
+  },
+  "non_claim_lock": "HRCN v0.5 is a docs/context memory-permission adapter design layer. It defines permission classes and gates for future memory use. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "permission_classes": {
+    "apply_candidate": {
+      "allowed_outputs": [
+        "apply-gate request draft"
+      ],
+      "meaning": "Record may be considered for future apply/write only after apply-gate, rollback, validation, and human authorization exist.",
+      "requires_human_authorization": true
+    },
+    "blocked": {
+      "allowed_outputs": [],
+      "meaning": "Record or request cannot be used.",
+      "requires_human_authorization": false
+    },
+    "context_only": {
+      "allowed_outputs": [
+        "context summary",
+        "claim-boundary note"
+      ],
+      "meaning": "Record may provide bounded background context.",
+      "requires_human_authorization": false
+    },
+    "dry_run_candidate": {
+      "allowed_outputs": [
+        "dry-run plan draft"
+      ],
+      "meaning": "Record may support a future dry-run design only after the dry-run phase exists.",
+      "requires_human_authorization": true
+    },
+    "evidence_reference": {
+      "allowed_outputs": [
+        "evidence reference",
+        "bounded recommendation"
+      ],
+      "meaning": "Record may be cited as internal evidence if provenance and validation tier are present.",
+      "requires_human_authorization": false
+    },
+    "proposal_allowed": {
+      "allowed_outputs": [
+        "proposal",
+        "risk note",
+        "required validation list"
+      ],
+      "meaning": "Record may support a proposal, but not a dry-run or apply/write action.",
+      "requires_human_authorization": false
+    },
+    "visible_only": {
+      "allowed_outputs": [
+        "orientation note"
+      ],
+      "meaning": "Record may be seen for orientation but not cited as evidence or used to recommend action.",
+      "requires_human_authorization": false
+    }
+  },
+  "previous_validated_anchor": "HRCN v0.4",
+  "primary_law": "Memory may surface context; permission determines use; humans authorize action.",
+  "repository": "hermes-agent-evo",
+  "required_record_fields": [
+    "source",
+    "timestamp_utc",
+    "record_type",
+    "validation_tier",
+    "permission_class",
+    "claim_boundary",
+    "allowed_use",
+    "blocked_use",
+    "target_surface",
+    "human_authorization_requirement",
+    "rollback_requirement"
+  ],
+  "schema": "HRCN-v0.5-memory-permission-adapter-design",
+  "version": "HRCN v0.5"
+}

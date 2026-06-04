@@ -1,4 +1,4 @@
-# Hermes Agent Rehydration Protocol — HRCN v0.4
+# Hermes Agent Rehydration Protocol — HRCN v0.5
 
 Status: docs/context/navigation protocol only.
 
@@ -67,6 +67,8 @@ Read:
 - `docs/context-layer/hrcn-v0.3.validation.json`
 - `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json`
 - `docs/context-layer/hrcn-v0.4.validation.json`
+- `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json`
+- `docs/context-layer/hrcn-v0.5.validation.json`
 - `git status --short`
 
 Recover:
@@ -151,6 +153,27 @@ Core rule:
 A CMS bridge may inform Hermes; it may not command Hermes.
 ```
 
+### 8. Memory Permission Adapter Design Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json`
+- `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.md`
+
+Recover:
+
+- permission classes
+- required memory record fields
+- decision rules
+- blocked memory behaviors
+- human authorization boundary
+
+Core rule:
+
+```text
+Memory may surface context; permission determines use; humans authorize action.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -169,4 +192,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v0.4 is a docs/context bridge-design layer. It defines a future CMS read-only bridge boundary. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.5 is a docs/context memory-permission adapter design layer. It defines permission classes and gates for future memory use. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.

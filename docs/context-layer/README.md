@@ -173,3 +173,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v0.4-cms-read-only-bridge-design.md` | v0.4 human-readable CMS read-only bridge design. |
 | `hrcn-v0.4.validation.json` | v0.4 validation artifact. |
 | `hrcn-v0.4.validation.md` | v0.4 validation report. |
+
+| `hrcn-v0.5-memory-permission-adapter-design.json` | v0.5 machine-readable memory permission adapter design. |
+| `hrcn-v0.5-memory-permission-adapter-design.md` | v0.5 human-readable memory permission adapter design. |
+| `hrcn-v0.5.validation.json` | v0.5 validation artifact. |
+| `hrcn-v0.5.validation.md` | v0.5 validation report. |

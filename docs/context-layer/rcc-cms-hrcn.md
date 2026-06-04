@@ -291,3 +291,29 @@ docs/context-layer/hrcn-v0.4.validation.md
 
 Non-claim lock: HRCN v0.4 is a docs/context bridge-design layer. It defines a future CMS read-only bridge boundary. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_END -->
+
+<!-- HRCN_V05_MEMORY_PERMISSION_START -->
+## HRCN v0.5 - Memory Permission Adapter Design
+
+HRCN v0.5 defines the permission boundary for future memory/CMS context use.
+
+```text
+Memory may surface context; permission determines use; humans authorize action.
+memory visibility is not apply authority
+permission class gates use
+proposal is not dry-run
+dry-run is not apply
+human authorization gates dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json
+docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.md
+docs/context-layer/hrcn-v0.5.validation.json
+docs/context-layer/hrcn-v0.5.validation.md
+```
+
+Non-claim lock: HRCN v0.5 is a docs/context memory-permission adapter design layer. It defines permission classes and gates for future memory use. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V05_MEMORY_PERMISSION_END -->
