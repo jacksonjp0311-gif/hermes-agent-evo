@@ -196,3 +196,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v0.8-apply-gate-adapter-design.md` | v0.8 human-readable apply-gate adapter design. |
 | `hrcn-v0.8.validation.json` | v0.8 validation artifact. |
 | `hrcn-v0.8.validation.md` | v0.8 validation report. |
+
+| `hrcn-v0.9-evidence-package-benchmark-harness.json` | v0.9 machine-readable evidence package and benchmark harness. |
+| `hrcn-v0.9-evidence-package-benchmark-harness.md` | v0.9 human-readable evidence package and benchmark harness. |
+| `hrcn-v0.9.validation.json` | v0.9 validation artifact. |
+| `hrcn-v0.9.validation.md` | v0.9 validation report. |

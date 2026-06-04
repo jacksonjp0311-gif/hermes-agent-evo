@@ -1,4 +1,4 @@
-# Hermes Agent Rehydration Protocol — HRCN v0.8
+# Hermes Agent Rehydration Protocol — HRCN v0.9
 
 Status: docs/context/navigation protocol only.
 
@@ -75,6 +75,8 @@ Read:
 - `docs/context-layer/hrcn-v0.7.validation.json`
 - `docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.json`
 - `docs/context-layer/hrcn-v0.8.validation.json`
+- `docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.json`
+- `docs/context-layer/hrcn-v0.9.validation.json`
 - `git status --short`
 
 Recover:
@@ -249,6 +251,30 @@ Core rule:
 Apply is a gated transition, not an agent decision.
 ```
 
+### 12. Evidence Package and Benchmark Harness Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.json`
+- `docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.md`
+
+Recover:
+
+- evidence package classes
+- required evidence package fields
+- benchmark harness requirements
+- CMS import evidence gate
+- provenance and manifest requirements
+- secret scan requirement
+- rollback/removal requirements
+- human authorization boundary
+
+Core rule:
+
+```text
+No claim or action graduates without an evidence package.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -267,4 +293,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.

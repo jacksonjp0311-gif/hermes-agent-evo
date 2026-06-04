@@ -58,6 +58,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v0.6.1 | Can README render hygiene and HRCN block placement be closed before dry-run design? | `docs/context-layer/hrcn-v0.6.1-readme-geometry-closure.validation.json` |
 | HRCN v0.7 | Can future changes be simulated without live mutation or apply authority? | `docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json` |
 | HRCN v0.8 | Can apply/write be gated by explicit authorization, rollback, validation, and evidence? | `docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.json` |
+| HRCN v0.9 | Can future claims/actions bind to reproducible evidence before CMS nexus work? | `docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -76,14 +77,14 @@ Hermes already supplies CLI/TUI, model routing, tools, skills, memory hooks, ter
 
 #### What this fork is not
 
-This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through HRCN v0.8, the fork remains documentation, navigation, profile compression, rehydration, runtime-evolution planning, CMS intake planning, read-only surface mapping, packet/bridge/permission/recommendation/dry-run/apply-gate design, and README geometry closure only.
+This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through HRCN v0.9, the fork remains documentation, navigation, profile compression, rehydration, runtime-evolution planning, CMS intake planning, read-only surface mapping, packet/bridge/permission/recommendation/dry-run/apply-gate/evidence-harness design, and README geometry closure only.
 
 ### Current Public Metrics
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v0.8` |
-| Previous validated anchor | `HRCN v0.7` |
+| Current checkpoint | `HRCN v0.9` |
+| Previous validated anchor | `HRCN v0.8` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -94,7 +95,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v0.8.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v0.9.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -102,6 +103,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Repair recommendation adapter design | `docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json` |
 | Dry-run adapter design | `docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json` |
 | Apply-gate adapter design | `docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.json` |
+| Evidence package and benchmark harness | `docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.json` |
 
 ### Core Law
 
@@ -144,6 +146,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - Human authorization, rollback, validation, and evidence are required before any future apply/write transition.
 - No apply-gate design grants live apply authority.
 - Apply is a gated transition, not an agent decision.
+- Benchmark output is evidence, not authority.
+- CMS cannot be copied into Hermes without provenance, manifest, secret scan, read-only boundary, rollback, validation, and human authorization.
+- No claim or action graduates without an evidence package.
 
 ### Current HRCN Surface Lock
 
@@ -484,6 +489,43 @@ live apply
 Non-claim lock: HRCN v0.8 does not create a loader, adapter, dry-run executor, apply executor, repair executor, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
 <!-- HRCN_V08_APPLY_GATE_END -->
 
+<!-- HRCN_V09_EVIDENCE_BENCHMARK_START -->
+### HRCN v0.9 Evidence Package and Benchmark Harness
+
+HRCN v0.9 defines the evidence package and benchmark harness required before future governed Hermes-CMS nexus work or CMS import work.
+
+Current rule:
+
+```text
+No claim or action graduates without an evidence package.
+```
+
+Evidence artifacts:
+
+```text
+docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.json
+docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.md
+docs/context-layer/hrcn-v0.9.validation.json
+docs/context-layer/hrcn-v0.9.validation.md
+```
+
+v0.9 separates seven things that must not collapse into one another:
+
+```text
+claim/action
+evidence package
+benchmark contract
+audit record
+rollback binding
+authorization record
+promotion decision
+```
+
+CMS is near, but v0.9 does not copy CMS. A future CMS copy must carry provenance, manifest, secret scan, read-only boundary, rollback/removal plan, validation commands, and human authorization.
+
+Non-claim lock: HRCN v0.9 does not create a loader, adapter, benchmark executor, dry-run executor, apply executor, repair executor, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
+<!-- HRCN_V09_EVIDENCE_BENCHMARK_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -665,7 +707,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

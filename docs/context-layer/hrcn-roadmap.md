@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v0.8 - Apply-Gate Adapter Design
+HRCN v0.9 - Evidence Package and Benchmark Harness
 
 ## Phase Map
 
@@ -22,13 +22,18 @@ HRCN v0.8 - Apply-Gate Adapter Design
 | HRCN v0.6.1 | README Geometry Closure | Render hygiene and HRCN block placement closure; no runtime or adapter changes. |
 | HRCN v0.7 | Dry-Run Adapter Design | Simulation design only; no dry-run executor, live mutation, or apply authority. |
 | HRCN v0.8 | Apply-Gate Adapter Design | Apply-gate design only; no apply executor, live mutation, or write authority. |
-| HRCN v0.9 | Evidence Package and Benchmark Harness | Evidence contract. |
-| HRCN v1.0 | Governed Hermes-CMS Nexus | Only after prior gates survive validation. |
+| HRCN v0.9 | Evidence Package and Benchmark Harness | Evidence design only; no benchmark executor, CMS copy, live mutation, or write authority. |
+| HRCN v1.0 | Governed Hermes-CMS Nexus Planning | Nexus planning only unless separately authorized. |
+| HRCN v1.0.x | CMS Read-Only Mirror Import Authorization Path | Future path; requires evidence gate, provenance, manifest, secret scan, rollback, validation, and human authorization. |
 
 ## Next Anchor
 
-HRCN v0.9 - Evidence Package and Benchmark Harness.
+HRCN v1.0 - Governed Hermes-CMS Nexus Planning.
+
+## Near-Term CMS Import Boundary
+
+CMS is near, but not copied in v0.9. A future CMS read-only mirror/import step requires provenance, manifest, secret scan, read-only boundary, rollback/removal plan, validation commands, and explicit human authorization.
 
 ## Non-Claim Lock
 
-HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.

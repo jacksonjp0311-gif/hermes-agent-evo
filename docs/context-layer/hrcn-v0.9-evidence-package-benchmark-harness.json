@@ -1,0 +1,181 @@
+{
+  "adapter_purpose": "Define evidence and benchmark requirements that future CMS import, nexus, dry-run, or apply work must satisfy.",
+  "benchmark_harness_requirements": [
+    "must be repeatable",
+    "must declare inputs and outputs",
+    "must separate expected outputs from actual outputs",
+    "must include path-boundary checks",
+    "must include secret-scan result before any future commit or import",
+    "must include rollback or cleanup requirements",
+    "must record failure as evidence, not hide it",
+    "must classify synthetic evidence separately from runtime validation",
+    "must not claim production/security/external validation from docs-only checks"
+  ],
+  "checkpoint": "Evidence Package and Benchmark Harness",
+  "cms_import_evidence_gate": {
+    "cms_copy_allowed_in_v0_9": false,
+    "future_allowed_initial_mode": "read_only_mirror_candidate",
+    "future_cms_copy_requires": [
+      "source repository or local source path",
+      "import method decision",
+      "provenance record",
+      "file manifest",
+      "license/provenance note",
+      "secret scan",
+      "read-only boundary statement",
+      "blocked-authority statement",
+      "rollback/removal plan",
+      "post-import validation commands",
+      "human authorization"
+    ],
+    "future_disallowed_initial_modes": [
+      "runtime_integration",
+      "CMS write authority",
+      "API authority",
+      "memory authority",
+      "repair apply authority",
+      "autonomous authority"
+    ]
+  },
+  "created_utc": "2026-06-04T23:02:15.711221+00:00",
+  "decision_rules": [
+    "No claim or action can promote without evidence_package.",
+    "No evidence package can authorize itself.",
+    "No docs-only evidence can prove runtime correctness, security, production readiness, or external validation.",
+    "No benchmark result can grant apply/write authority without apply-gate and human authorization.",
+    "No CMS import may occur without provenance, manifest, secret scan, read-only boundary, rollback plan, validation commands, and human authorization.",
+    "If evidence is missing, classify as insufficient.",
+    "If a package attempts live authority in v0.9, classify as blocked_live_authority.",
+    "If benchmark commands mutate runtime/dependencies/CMS/API state, reject for v0.9."
+  ],
+  "evidence_package_classes": {
+    "apply_gate_evidence": {
+      "allowed_outputs": [
+        "apply-gate checklist",
+        "rollback proof",
+        "validation proof"
+      ],
+      "can_promote": true,
+      "meaning": "Evidence required before future apply-gate consideration."
+    },
+    "blocked_live_authority": {
+      "allowed_outputs": [
+        "blocked authority note"
+      ],
+      "can_promote": false,
+      "meaning": "Any evidence package attempting to grant live authority is blocked."
+    },
+    "cms_import_evidence": {
+      "allowed_outputs": [
+        "CMS source provenance",
+        "import manifest",
+        "read-only boundary report",
+        "secret scan report",
+        "license/provenance note"
+      ],
+      "can_promote": true,
+      "meaning": "Evidence required before any future CMS folder copy or read-only mirror."
+    },
+    "documentation_evidence": {
+      "allowed_outputs": [
+        "docs validation report",
+        "render audit",
+        "path boundary report"
+      ],
+      "can_promote": true,
+      "meaning": "Docs/context evidence only."
+    },
+    "dry_run_evidence": {
+      "allowed_outputs": [
+        "dry-run trace",
+        "expected diff",
+        "sandbox cleanup report"
+      ],
+      "can_promote": true,
+      "meaning": "Simulation evidence only; no live mutation proof."
+    },
+    "insufficient": {
+      "allowed_outputs": [
+        "blocked evidence note"
+      ],
+      "can_promote": false,
+      "meaning": "Evidence package is missing or incomplete."
+    },
+    "runtime_evidence_candidate": {
+      "allowed_outputs": [
+        "runtime evidence plan",
+        "benchmark requirement map",
+        "risk register"
+      ],
+      "can_promote": false,
+      "meaning": "Evidence candidate for future runtime nexus work; blocked from execution in v0.9."
+    }
+  },
+  "forbidden_v0_9_behaviors": [
+    "implement adapter",
+    "create runtime loader",
+    "create dry-run executor",
+    "create apply executor",
+    "create benchmark executor",
+    "execute repair",
+    "copy CMS folder",
+    "write to CMS",
+    "write to Hermes runtime",
+    "modify dependencies",
+    "call external APIs",
+    "store secrets",
+    "stage commit or push as evidence side effect",
+    "grant live apply/write authority"
+  ],
+  "future_gate_sequence": [
+    "v0.9 evidence package and benchmark harness",
+    "v1.0 governed Hermes-CMS nexus planning",
+    "v1.0.x CMS read-only mirror/import authorization path"
+  ],
+  "geometry": {
+    "audit_record": "the immutable summary of what was checked",
+    "authorization_record": "human authorization if dangerous transition is requested",
+    "benchmark_contract": "the repeatable check suite required for evaluation",
+    "claim_or_action": "what is being asserted or requested",
+    "evidence_package": "the artifact bundle supporting the claim/action",
+    "promotion_decision": "whether the claim/action may advance to future nexus work",
+    "rollback_binding": "how reversal is tied to the evidence package"
+  },
+  "harness_is_not": [
+    "runtime implementation",
+    "benchmark executor implementation",
+    "loader",
+    "CMS import",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "horizon": "Last design gate before governed Hermes-CMS nexus planning.",
+  "non_claim_lock": "HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "previous_validated_anchor": "HRCN v0.8",
+  "primary_law": "No claim or action graduates without an evidence package.",
+  "repository": "hermes-agent-evo",
+  "required_evidence_package_fields": [
+    "source",
+    "timestamp_utc",
+    "package_id",
+    "claim_or_action_reference",
+    "target_surface",
+    "evidence_class",
+    "artifact_manifest",
+    "benchmark_contract",
+    "validation_commands",
+    "expected_outputs",
+    "actual_outputs",
+    "audit_summary",
+    "rollback_binding",
+    "secret_scan_result",
+    "provenance_record",
+    "human_authorization_requirement",
+    "promotion_decision"
+  ],
+  "schema": "HRCN-v0.9-evidence-package-benchmark-harness",
+  "version": "HRCN v0.9"
+}

@@ -396,3 +396,29 @@ docs/context-layer/hrcn-v0.8.validation.md
 
 Non-claim lock: HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V08_APPLY_GATE_END -->
+
+<!-- HRCN_V09_EVIDENCE_BENCHMARK_START -->
+## HRCN v0.9 - Evidence Package and Benchmark Harness
+
+HRCN v0.9 defines the evidence boundary for future claims, actions, CMS import, and nexus work.
+
+```text
+No claim or action graduates without an evidence package.
+evidence package is not authority
+benchmark output is not production proof
+CMS import requires provenance, manifest, secret scan, rollback, validation, and authorization
+failure must be recorded as evidence
+human authorization gates dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.json
+docs/context-layer/hrcn-v0.9-evidence-package-benchmark-harness.md
+docs/context-layer/hrcn-v0.9.validation.json
+docs/context-layer/hrcn-v0.9.validation.md
+```
+
+Non-claim lock: HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V09_EVIDENCE_BENCHMARK_END -->
