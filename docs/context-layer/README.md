@@ -1,55 +1,9 @@
-# Website
-
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-
-## Installation
-
-```bash
-yarn
-```
-
-## Local Development
-
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-
-## Diagram Linting
-
-CI runs `ascii-guard` to lint docs for ASCII box diagrams. Use Mermaid (````mermaid`) or plain lists/tables instead of ASCII boxes to avoid CI failures.
-
 <!-- HRCN_MINI_README_START -->
-# website
+# docs/context-layer
 
 ## Folder Purpose
 
-Public Docusaurus documentation site.
+Internal RCC/CMS/HRCN context and governance boundary layer.
 
 ## S - Specification
 
@@ -100,15 +54,15 @@ git status --short
 
 Sphere Position:
 
-- Shell: outer
-- Meridian(s): documentation
-- Sector: public
+- Shell: center
+- Meridian(s): source, governance, documentation
+- Sector: context-layer
 - Version / TTL: HRCN-v0.1.1 / 180 days
 - Last Verified: 2026-06-04
 
 Local Role:
 
-- Public Docusaurus documentation site.
+- Internal RCC/CMS/HRCN context and governance boundary layer.
 
 Evidence Surface:
 
@@ -160,3 +114,20 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 <!-- MINI_README_UPDATE_RULE_END -->
 <!-- HRCN_MINI_README_END -->
 
+<!-- HRCN_CONTEXT_LAYER_ARTIFACTS_START -->
+## HRCN v0.1.2 Artifact Index
+
+| Artifact | Role |
+|---|---|
+| `rcc-cms-hrcn.md` | Primary HRCN context contract. |
+| `cybernetic-lessons-injection.md` | Injected CMS/RCC-N lessons from Cybernetic Memory System. |
+| `hrcn-roadmap.md` | Current HRCN phase map and next anchor. |
+| `rcc-cms-hrcn.validation.json` | Latest README/mini README validation. |
+| `rcc-cms-hrcn.lesson-injection.validation.json` | Lesson injection validation. |
+
+Lesson lock:
+
+```text
+Cyber lessons must be logged before Hermes runtime bridge work begins.
+```
+<!-- HRCN_CONTEXT_LAYER_ARTIFACTS_END -->

@@ -1,0 +1,150 @@
+{
+  "boundary_repair": {
+    "commit_performed_by_writer": false,
+    "icon_policy": "excluded_unless_explicitly_authorized",
+    "package_lock_policy": "excluded_unless_explicitly_authorized",
+    "previous_runtime_blocked_paths_detected": [
+      "package-lock.json"
+    ],
+    "push_performed_by_writer": false,
+    "reason": "package-lock.json and optional icon were excluded from the staged HRCN docs commit and should not make the docs-only validation fail.",
+    "timestamp_utc": "2026-06-04T18:36:58.945210+00:00"
+  },
+  "checkpoint": "Cyber/CMS/RCC-N Lesson Injection",
+  "commit_performed_by_writer": false,
+  "current_git_status_paths": [
+    "README.md",
+    "package-lock.json",
+    "providers/README.md",
+    "ui-tui/README.md",
+    "web/README.md",
+    "website/README.md",
+    ".plans/README.md",
+    "acp_adapter/README.md",
+    "agent/README.md",
+    "apps/README.md",
+    "assets/README.md",
+    "assets/hermes_caduceus_icon.ico",
+    "cron/README.md",
+    "docs/README.md",
+    "docs/context-layer/",
+    "gateway/README.md",
+    "hermes_cli/README.md",
+    "optional-skills/README.md",
+    "plans/README.md",
+    "plugins/README.md",
+    "scripts/README.md",
+    "skills/README.md",
+    "tests/README.md",
+    "tools/README.md",
+    "tui_gateway/README.md"
+  ],
+  "docs_only": true,
+  "excluded_local_artifacts": [
+    "package-lock.json",
+    "assets/hermes_caduceus_icon.ico"
+  ],
+  "files_written": [
+    "README.md",
+    "docs/context-layer/rcc-cms-hrcn.md",
+    "docs/context-layer/README.md",
+    "docs/context-layer/cybernetic-lessons-injection.md",
+    "docs/context-layer/hrcn-roadmap.md",
+    "docs/context-layer/rcc-cms-hrcn.lesson-injection.validation.json",
+    "docs/context-layer/rcc-cms-hrcn.lesson-injection.validation.md"
+  ],
+  "lesson_count": 10,
+  "lessons": [
+    {
+      "application": "Important CMS and RCC lessons must be logged in Hermes HRCN docs before runtime integration.",
+      "id": "HRCN-L-004",
+      "lesson": "Evidence-level lessons must become public surface memory.",
+      "source": "CMS-SA v0.5.1"
+    },
+    {
+      "application": "Hermes HRCN push scripts must not pretend the repo is clean when generated evidence or local artifacts remain.",
+      "id": "HRCN-L-005",
+      "lesson": "Final verifier residue must be committed or discarded.",
+      "source": "CMS-SA v0.5.1 residual closure"
+    },
+    {
+      "application": "Hermes may propose actions; CMS/HRCN decides permission class; human authorization gates dangerous writes.",
+      "id": "HRCN-L-006",
+      "lesson": "Agent proposal is not authority.",
+      "source": "CMS-SA v0.5.0"
+    },
+    {
+      "application": "docs/context-layer can orient Hermes without changing prompts, memory, tools, providers, or runtime behavior.",
+      "id": "HRCN-L-007",
+      "lesson": "Read-only context is not runtime integration.",
+      "source": "CMS-SA v0.5.0"
+    },
+    {
+      "application": "Future Hermes repair plans must stay simulation-only until explicit apply gates and authorization exist.",
+      "id": "HRCN-L-008",
+      "lesson": "Dry-run is not write authority.",
+      "source": "CMS-SA v0.4.5"
+    },
+    {
+      "application": "Each future HRCN bridge phase must preserve blocked actions and rollback evidence before any live target write.",
+      "id": "HRCN-L-009",
+      "lesson": "Apply gate, apply packet, and dry-apply sandbox are not live authority.",
+      "source": "CMS-SA v0.4.6-v0.4.8"
+    },
+    {
+      "application": "HRCN must validate phase boundaries in order: context -> route map -> proposal -> dry-run -> evidence -> authorization.",
+      "id": "HRCN-L-010",
+      "lesson": "Validation order is part of system geometry.",
+      "source": "CMS-SA v0.4.5"
+    },
+    {
+      "application": "Hermes HRCN roadmap and validation reports must advance together.",
+      "id": "HRCN-L-011",
+      "lesson": "Registry/history must not lag current checkpoint.",
+      "source": "CMS-SA v0.5.1"
+    },
+    {
+      "application": "Large Hermes HRCN patches should be delivered as file-run PowerShell scripts.",
+      "id": "HRCN-L-012",
+      "lesson": "File-run scripts prevent interactive paste drift.",
+      "source": "CMS failure ledger"
+    },
+    {
+      "application": "HRCN should select the lightest sufficient governance profile and measure utility before claiming improvement.",
+      "id": "HRCN-L-013",
+      "lesson": "Profile adoption is not validation.",
+      "source": "RCC-N v1.7"
+    }
+  ],
+  "non_claim_lock": "HRCN v0.1.2 validation boundary repair is docs/context/navigation evidence hygiene. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "passed": true,
+  "primary_lock": "HRCN v0.1.2 may log and inject lessons but may not mutate Hermes runtime or grant authority.",
+  "push_performed_by_writer": false,
+  "rccn_v17_injection": {
+    "adoption_profiles": [
+      "Lite",
+      "Standard",
+      "Full",
+      "Federated",
+      "Critical"
+    ],
+    "core": [
+      "RCC tells the agent what the repository means.",
+      "RCC-N tells the agent where it is.",
+      "Validation tells the agent whether reality agreed.",
+      "Profiled geometry is adoptable governance."
+    ],
+    "hermes_profile_selection": {
+      "current_phase": "Lite-to-Standard documentation profile",
+      "next_profile_trigger": "Advance only after read-only surface boundary map and baseline utility evidence exist.",
+      "reason": "HRCN v0.1.2 is internal docs/navigation only, with no runtime mutation."
+    },
+    "source": "RCC-N v1.7",
+    "utility_lock": "Before claiming RCC/HRCN improves Hermes, require baseline comparison, task traces, validation outcomes, and governance-cost accounting."
+  },
+  "repository": "hermes-agent-evo",
+  "runtime_blocked_paths_detected": [],
+  "schema": "HRCN-v0.1.2-lesson-injection-validation",
+  "timestamp_utc": "2026-06-04T18:34:46.927147+00:00",
+  "version": "HRCN v0.1.2"
+}

@@ -1,0 +1,161 @@
+{
+  "README_human_opening_preserved": true,
+  "README_pointer_present": true,
+  "checkpoint": "Hermes README and Mini README Surface Expansion",
+  "commit_performed": false,
+  "context_doc_present": true,
+  "context_mini_readme_present": true,
+  "current_git_status_paths": [
+    "README.md",
+    "package-lock.json",
+    "providers/README.md",
+    "ui-tui/README.md",
+    "web/README.md",
+    "website/README.md",
+    ".plans/README.md",
+    "acp_adapter/README.md",
+    "agent/README.md",
+    "apps/README.md",
+    "assets/README.md",
+    "assets/hermes_caduceus_icon.ico",
+    "cron/README.md",
+    "docs/README.md",
+    "docs/context-layer/",
+    "gateway/README.md",
+    "hermes_cli/README.md",
+    "optional-skills/README.md",
+    "plans/README.md",
+    "plugins/README.md",
+    "scripts/README.md",
+    "skills/README.md",
+    "tests/README.md",
+    "tools/README.md",
+    "tui_gateway/README.md"
+  ],
+  "docs_only": true,
+  "mini_readmes_created": [
+    ".plans/README.md",
+    "acp_adapter/README.md",
+    "agent/README.md",
+    "apps/README.md",
+    "assets/README.md",
+    "cron/README.md",
+    "docs/README.md",
+    "gateway/README.md",
+    "hermes_cli/README.md",
+    "optional-skills/README.md",
+    "plans/README.md",
+    "plugins/README.md",
+    "scripts/README.md",
+    "skills/README.md",
+    "tests/README.md",
+    "tools/README.md",
+    "tui_gateway/README.md"
+  ],
+  "mini_readmes_touched": [
+    ".plans/README.md",
+    "acp_adapter/README.md",
+    "agent/README.md",
+    "apps/README.md",
+    "assets/README.md",
+    "cron/README.md",
+    "docs/README.md",
+    "docs/context-layer/README.md",
+    "gateway/README.md",
+    "hermes_cli/README.md",
+    "optional-skills/README.md",
+    "plans/README.md",
+    "plugins/README.md",
+    "providers/README.md",
+    "scripts/README.md",
+    "skills/README.md",
+    "tests/README.md",
+    "tools/README.md",
+    "tui_gateway/README.md",
+    "ui-tui/README.md",
+    "web/README.md",
+    "website/README.md"
+  ],
+  "mini_readmes_touched_count": 22,
+  "mini_readmes_updated": [
+    "docs/context-layer/README.md",
+    "providers/README.md",
+    "ui-tui/README.md",
+    "web/README.md",
+    "website/README.md"
+  ],
+  "non_claim_lock": "HRCN v0.1.1 is a docs/context/navigation layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "non_claim_lock_present": true,
+  "passed": true,
+  "pre_existing_dirty_paths": [
+    "README.md",
+    "assets/hermes_caduceus_icon.ico",
+    "docs/context-layer/",
+    "package-lock.json"
+  ],
+  "primary_lock": "HRCN v0.1.1 may expand README and mini README navigation but may not mutate runtime or grant authority.",
+  "push_performed": false,
+  "repository": "hermes-agent-evo",
+  "roadmap": [
+    {
+      "boundary": "docs only",
+      "name": "Hermes README/RCC Documentation Anchor",
+      "phase": "HRCN v0.1"
+    },
+    {
+      "boundary": "root README and mini READMEs only",
+      "name": "README + Mini README Surface Expansion",
+      "phase": "HRCN v0.1.1"
+    },
+    {
+      "boundary": "read-only runtime map",
+      "name": "Hermes Surface Boundary Map",
+      "phase": "HRCN v0.2"
+    },
+    {
+      "boundary": "context packet design",
+      "name": "Agent Rehydration Packet Contract",
+      "phase": "HRCN v0.3"
+    },
+    {
+      "boundary": "design only",
+      "name": "CMS Read-Only Bridge Design",
+      "phase": "HRCN v0.4"
+    },
+    {
+      "boundary": "proposal classification",
+      "name": "Memory Permission Adapter Design",
+      "phase": "HRCN v0.5"
+    },
+    {
+      "boundary": "recommendations only",
+      "name": "Repair Recommendation Adapter Design",
+      "phase": "HRCN v0.6"
+    },
+    {
+      "boundary": "simulation only",
+      "name": "Dry-Run Adapter Design",
+      "phase": "HRCN v0.7"
+    },
+    {
+      "boundary": "human auth + rollback",
+      "name": "Apply-Gate Adapter Design",
+      "phase": "HRCN v0.8"
+    },
+    {
+      "boundary": "evidence contract",
+      "name": "Evidence Package and Benchmark Harness",
+      "phase": "HRCN v0.9"
+    },
+    {
+      "boundary": "only after prior gates pass",
+      "name": "Governed Hermes-CMS Nexus",
+      "phase": "HRCN v1.0"
+    }
+  ],
+  "runtime_code_changed_by_patch": [],
+  "runtime_code_changes_allowed": false,
+  "schema": "HRCN-v0.1.1-readme-mini-readme-surface-validation",
+  "timestamp_utc": "2026-06-04T18:24:54.505589+00:00",
+  "version": "HRCN v0.1.1"
+}

@@ -26,6 +26,252 @@ Use any model you want — [Nous Portal](https://portal.nousresearch.com), [Open
 <tr><td><b>Research-ready</b></td><td>Batch trajectory generation, trajectory compression for training the next generation of tool-calling models.</td></tr>
 </table>
 
+<!-- HRCN_CONTEXT_LAYER_START -->
+## Codex / RCC-CMS-HRCN Context Layer
+
+This fork includes an internal, docs-only Codex/RCC/CMS/HRCN governance layer for James Paul Jackson's Hermes work.
+
+The upstream Hermes product README above this section is preserved. This block is additive: it explains the fork's local governance context without changing Hermes runtime behavior.
+
+```text
+Hermes acts.
+RCC orients.
+CMS governs.
+Human authorization unlocks dangerous transitions.
+```
+
+### Current HRCN Snapshot
+
+| Layer | What it answers | Primary surface |
+|---|---|---|
+| HRCN v0.1 | Can Hermes carry a docs-only RCC/CMS/HRCN context anchor without runtime mutation? | `docs/context-layer/rcc-cms-hrcn.md` |
+| HRCN v0.1.1 | Can the root README and mini README surfaces become navigable without touching runtime code? | `docs/context-layer/rcc-cms-hrcn.validation.json` |
+
+Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
+
+### Human Director Box
+
+#### What this fork is
+
+This fork is a local-first Hermes Agent workspace prepared for governed agent evolution:
+
+```text
+Hermes runtime -> repository orientation -> proposal classification
+-> dry-run / evidence -> CMS permission boundary -> human authorization
+```
+
+Hermes already supplies CLI/TUI, model routing, tools, skills, memory hooks, terminal backends, gateway surfaces, scheduler, and documentation. HRCN adds a repository-governance map before any direct runtime bridge is attempted.
+
+#### What this fork is not
+
+This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. HRCN v0.1.1 is documentation and navigation only.
+
+### Current Public Metrics
+
+| Surface | Result |
+|---|---:|
+| Current checkpoint | `HRCN v0.1.1` |
+| Previous anchor | `HRCN v0.1` |
+| Runtime code changed | `False` |
+| Dependency files changed by HRCN | `False` |
+| README pointer present | `True` |
+| Context layer doc | `docs/context-layer/rcc-cms-hrcn.md` |
+| Context layer mini README | `docs/context-layer/README.md` |
+| Validation report | `docs/context-layer/rcc-cms-hrcn.validation.json` |
+| Mini README surfaces | `top-level docs/navigation READMEs` |
+| Commit performed by script | `False` |
+| Push performed by script | `False` |
+
+### Core Law
+
+- No docs context is runtime integration.
+- No README surface is correctness.
+- No mini README is validation.
+- No agent proposal is authority.
+- No memory bridge without CMS permission.
+- No repair apply without human authorization.
+- No runtime mutation in HRCN v0.1.1.
+- No production, security, consciousness, sentience, AGI, or autonomy claim.
+
+### HRCN v0.1.1 README Surface Lock
+
+```text
+No Hermes HRCN context surface is current unless the root README,
+docs/context-layer document, mini READMEs, validation report, runtime lock,
+and non-claim boundaries agree.
+```
+
+### Repository Layers
+
+| Layer | Purpose | Main paths |
+|---|---|---|
+| Hermes runtime core | Agent loop, CLI, tool orchestration, sessions, logging, batch runs | `run_agent.py`, `cli.py`, `model_tools.py`, `toolsets.py`, `hermes_state.py`, `agent/` |
+| Tool and skill body | Built-in tools, terminal backends, bundled skills, optional skills | `tools/`, `skills/`, `optional-skills/` |
+| Provider and plugin surface | Model providers, memory/context plugins, external integrations | `providers/`, `plugins/` |
+| Messaging and scheduling | Gateway adapters, cron scheduler, ACP bridge | `gateway/`, `cron/`, `acp_adapter/` |
+| TUI and UI surfaces | Terminal UI, TUI gateway, dashboard/web/desktop app surfaces | `ui-tui/`, `tui_gateway/`, `web/`, `apps/` |
+| Developer docs | Architecture, contributing, supplemental guides | `docs/`, `website/`, `AGENTS.md` |
+| HRCN context layer | Codex/RCC/CMS/HRCN orientation and governance boundaries | `docs/context-layer/` |
+| Validation/tests | Pytest suite and repo scripts | `tests/`, `scripts/` |
+| Local assets | Banner and local UX assets | `assets/` |
+
+### PART I - Human README
+
+Author: James Paul Jackson.
+
+The working model:
+
+```text
+Hermes = capable actor runtime
+RCC    = repository orientation
+CMS    = governed memory and permission substrate
+HRCN   = bridge contract
+Human  = write boundary
+```
+
+Human operating rule:
+
+```text
+Do not hack runtime first.
+Orient the repository.
+Map the surfaces.
+Preserve non-claim locks.
+Then decide whether a bridge deserves a dry-run.
+```
+
+### PART II - RCC Nexus README
+
+RCC tells the agent what the repository means. RCC-N tells the agent where it is. Validation tells the agent whether repository-bound checks agreed.
+
+HRCN v0.1.1 treats the Hermes repo as a navigable field:
+
+| Shell | Meaning |
+|---|---|
+| center | Source identity, README, AGENTS.md, context layer, non-claim locks |
+| inner | Runtime body: agent loop, CLI, model/tools/session primitives |
+| middle | Tools, skills, gateways, providers, TUI, web, scripts, tests |
+| outer | Docs, website, local assets, validation reports, future evidence |
+
+Meridians:
+
+```text
+source, runtime, tools, skills, provider, gateway, ui, docs, context, safety, governance
+```
+
+### PART III - AI Agent README
+
+Before editing this fork, an AI agent should read:
+
+1. `README.md`
+2. `AGENTS.md`
+3. `docs/context-layer/README.md`
+4. `docs/context-layer/rcc-cms-hrcn.md`
+5. the target folder `README.md`
+6. relevant source, tests, and upstream docs
+
+Patch routing:
+
+| Change type | Read first | Boundary |
+|---|---|---|
+| Docs/context patch | `README.md`, `docs/context-layer/README.md` | Allowed in HRCN v0.1.1 |
+| Mini README patch | target folder `README.md` | Docs-only |
+| Runtime patch | `AGENTS.md`, target source, tests | Blocked until future HRCN phase |
+| Tool/skill/provider patch | target folder, tests, security notes | Blocked until future HRCN phase |
+| Dependency patch | `pyproject.toml`, `uv.lock`, package files | Blocked in HRCN v0.1.1 |
+| Apply/write bridge | HRCN contract + CMS authorization | Future phase only |
+
+### README + Mini Repo Audit Map
+
+A patch is incomplete if it changes folder purpose, route meaning, evidence surface, validation command, or claim boundary without updating the matching README/mini README surface.
+
+Gap classes:
+
+| Gap class | Detection question | Required repair |
+|---|---|---|
+| README drift | Does the root README describe the current HRCN state? | Patch the HRCN block. |
+| Mini README drift | Did a folder gain or change governance meaning? | Patch the affected folder README. |
+| Runtime drift | Did non-doc source change? | Stop; this is outside v0.1.1. |
+| Claim drift | Does text imply correctness, safety, sentience, autonomy, AGI, or production readiness? | Restore non-claim lock. |
+| Context drift | Does context imply a loader or runtime integration? | Restore docs-only language. |
+| Local artifact drift | Are `.venv`, local configs, icons, logs, or package-lock changes mixed in? | Separate or explicitly classify before commit. |
+
+### AI Failure Learning Ledger
+
+| Lesson ID | Failure observed | Root cause | Permanent rule |
+|---|---|---|---|
+| HRCN-L-001 | HRCN v0.1 validation reported `README.md` as `EADME.md` and `package-lock.json` as `ackage-lock.json`. | Git status parser trimmed the line before slicing the status prefix. | Parse Git short status by taking characters after the two status columns and space without trimming first. |
+| HRCN-L-002 | Context docs were valid but `context_files_exist` reported false. | Validation checked path state before validation files were fully written and status paths were malformed. | Recompute validation after all files are written and verify actual file existence directly. |
+| HRCN-L-003 | Local UX/icon and package-lock changes appeared beside HRCN docs. | Pre-existing local files were not separated from new HRCN docs surfaces. | Record pre-existing dirty state and validate only HRCN-introduced docs paths unless the human authorizes broader cleanup. |
+
+### HRCN Roadmap
+
+| Phase | Name | Boundary |
+|---|---|---|
+| HRCN v0.1 | Hermes README/RCC Documentation Anchor | Internal docs only. |
+| HRCN v0.1.1 | README + Mini README Surface Expansion | Root README and mini READMEs only. |
+| HRCN v0.2 | Hermes Surface Boundary Map | Read-only runtime map; no edits. |
+| HRCN v0.3 | Agent Rehydration Packet Contract | Context packet design; no loader. |
+| HRCN v0.4 | CMS Read-Only Bridge Design | Read-only bridge spec; no memory writes. |
+| HRCN v0.5 | Memory Permission Adapter Design | Proposal classification only. |
+| HRCN v0.6 | Repair Recommendation Adapter Design | Recommendations only. |
+| HRCN v0.7 | Dry-Run Adapter Design | Simulation only. |
+| HRCN v0.8 | Apply-Gate Adapter Design | Human authorization + rollback requirements. |
+| HRCN v0.9 | Evidence Package and Benchmark Harness | Evidence contract. |
+| HRCN v1.0 | Governed Hermes-CMS Nexus | Only after prior gates survive validation. |
+
+### Full Directory Box
+
+| Surface | Purpose |
+|---|---|
+| `agent/` | Agent internals: providers, memory, compression, context helpers, runtime utilities. |
+| `tools/` | Built-in tools and terminal/environment backends. |
+| `skills/` | Bundled procedural skill surfaces. |
+| `optional-skills/` | Optional/niche skill surfaces. |
+| `plugins/` | Plugin families for memory, providers, context engines, observability, platforms, and extensions. |
+| `providers/` | Provider abstractions and routing surfaces. |
+| `hermes_cli/` | CLI subcommands, setup/config flows, registry, skin engine, and distribution surfaces. |
+| `gateway/` | Messaging gateway adapters and session routing. |
+| `cron/` | Scheduler and recurring job surfaces. |
+| `acp_adapter/` | ACP server integration. |
+| `tui_gateway/` | Python JSON-RPC backend for the TUI. |
+| `ui-tui/` | Ink/React terminal UI. |
+| `web/` | Dashboard/frontend app. |
+| `apps/` | Desktop/bootstrap/shared apps. |
+| `docs/` | Internal and supplemental docs. |
+| `website/` | Public Docusaurus documentation. |
+| `scripts/` | Install, test, release, dev, and utility scripts. |
+| `tests/` | Pytest suite and fixtures. |
+| `assets/` | README/local UX assets. |
+| `docs/context-layer/` | HRCN/RCC/CMS context layer for this fork. |
+
+### Mini README Update Rule
+
+If a folder's purpose, files, routes, evidence surfaces, validation commands, or claim boundaries change, update the folder mini README in the same commit.
+
+Non-claim lock: navigation is not validation, but stale navigation is repository drift.
+
+### Non-Claim Lock
+
+HRCN v0.1.1 is a docs/context/navigation layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+
+<!-- HRCN_ROOT_LESSON_INJECTION_START -->
+### HRCN v0.1.2 Lesson Injection
+
+The HRCN context layer now records Cyber/CMS/RCC-N lessons before runtime bridge work:
+
+```text
+agent_proposal_is_not_authority
+read_only_context_is_not_runtime_integration
+dry_run_is_not_write_authority
+apply_gate_is_not_apply_authority
+final_verifier_residue_must_be_committed_or_discarded
+profile_adoption_is_not_validation
+```
+
+Primary lesson surface: `docs/context-layer/cybernetic-lessons-injection.md`.
+<!-- HRCN_ROOT_LESSON_INJECTION_END -->
+<!-- HRCN_CONTEXT_LAYER_END -->
+
 ---
 
 ## Quick Install
