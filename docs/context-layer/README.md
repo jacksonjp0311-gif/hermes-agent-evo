@@ -186,3 +186,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 
 | `hrcn-v0.6.1-readme-geometry-closure.validation.json` | v0.6.1 README geometry closure validation artifact. |
 | `hrcn-v0.6.1-readme-geometry-closure.validation.md` | v0.6.1 README geometry closure validation report. |
+
+| `hrcn-v0.7-dry-run-adapter-design.json` | v0.7 machine-readable dry-run adapter design. |
+| `hrcn-v0.7-dry-run-adapter-design.md` | v0.7 human-readable dry-run adapter design. |
+| `hrcn-v0.7.validation.json` | v0.7 validation artifact. |
+| `hrcn-v0.7.validation.md` | v0.7 validation report. |

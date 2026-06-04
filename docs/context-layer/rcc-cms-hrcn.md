@@ -343,3 +343,29 @@ docs/context-layer/hrcn-v0.6.validation.md
 
 Non-claim lock: HRCN v0.6 is a docs/context repair-recommendation adapter design layer. It defines recommendation classes and gates for future repair advice. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V06_REPAIR_RECOMMENDATION_END -->
+
+<!-- HRCN_V07_DRY_RUN_START -->
+## HRCN v0.7 - Dry-Run Adapter Design
+
+HRCN v0.7 defines the boundary for future dry-run simulations.
+
+```text
+A dry-run may simulate a change; it may not become the change.
+simulation is not mutation
+expected diff is not applied diff
+evidence package is not production proof
+rollback plan is not rollback execution
+human authorization gates dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json
+docs/context-layer/hrcn-v0.7-dry-run-adapter-design.md
+docs/context-layer/hrcn-v0.7.validation.json
+docs/context-layer/hrcn-v0.7.validation.md
+```
+
+Non-claim lock: HRCN v0.7 is a docs/context dry-run adapter design layer. It defines simulation boundaries and evidence requirements for future dry-runs. It does not create a loader, adapter, runtime bridge, dry-run executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V07_DRY_RUN_END -->

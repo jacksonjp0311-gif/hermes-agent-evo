@@ -56,6 +56,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v0.5 | Can memory visibility, use, proposal, dry-run, and apply authority be separated? | `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json` |
 | HRCN v0.6 | Can repair recommendations be generated without repair execution or apply authority? | `docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json` |
 | HRCN v0.6.1 | Can README render hygiene and HRCN block placement be closed before dry-run design? | `docs/context-layer/hrcn-v0.6.1-readme-geometry-closure.validation.json` |
+| HRCN v0.7 | Can future changes be simulated without live mutation or apply authority? | `docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -80,8 +81,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v0.6.1` |
-| Previous validated anchor | `HRCN v0.6` |
+| Current checkpoint | `HRCN v0.7` |
+| Previous validated anchor | `HRCN v0.6.1` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -92,12 +93,13 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v0.6.1-readme-geometry-closure.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v0.7.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
 | Memory permission adapter design | `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json` |
 | Repair recommendation adapter design | `docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json` |
+| Dry-run adapter design | `docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json` |
 
 ### Core Law
 
@@ -134,6 +136,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - No repair recommendation grants staging, commit, push, runtime mutation, or apply authority.
 - A repair recommendation may describe a path; it may not apply the path.
 - README geometry must keep HRCN version blocks inside the HRCN context layer.
+- No dry-run design grants live mutation authority.
+- Dry-run evidence is not apply authority.
+- A dry-run may simulate a change; it may not become the change.
 
 ### Current HRCN Surface Lock
 
@@ -403,6 +408,41 @@ human authorization
 Non-claim lock: HRCN v0.6 does not create a loader, adapter, repair executor, dry-run executor, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
 <!-- HRCN_V06_REPAIR_RECOMMENDATION_END -->
 
+<!-- HRCN_V07_DRY_RUN_START -->
+### HRCN v0.7 Dry-Run Adapter Design
+
+HRCN v0.7 defines how future proposals and repair recommendations may be simulated without live mutation.
+
+Current rule:
+
+```text
+A dry-run may simulate a change; it may not become the change.
+```
+
+Dry-run artifacts:
+
+```text
+docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json
+docs/context-layer/hrcn-v0.7-dry-run-adapter-design.md
+docs/context-layer/hrcn-v0.7.validation.json
+docs/context-layer/hrcn-v0.7.validation.md
+```
+
+v0.7 separates seven things that must not collapse into one another:
+
+```text
+proposal
+dry-run plan
+sandbox boundary
+expected diff
+evidence package
+rollback plan
+human authorization
+```
+
+Non-claim lock: HRCN v0.7 does not create a loader, adapter, dry-run executor, repair executor, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
+<!-- HRCN_V07_DRY_RUN_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -584,7 +624,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v0.6.1 is a README geometry closure layer. It repairs HRCN block placement, lower README render hygiene, and roadmap/checkpoint alignment. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, live integration, or apply authority.
+HRCN v0.7 is a docs/context dry-run adapter design layer. It defines simulation boundaries and evidence requirements for future dry-runs. It does not create a loader, adapter, runtime bridge, dry-run executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

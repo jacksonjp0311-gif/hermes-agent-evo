@@ -1,0 +1,128 @@
+{
+  "adapter_is_not": [
+    "runtime implementation",
+    "dry-run executor implementation",
+    "loader",
+    "CMS import",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "adapter_purpose": "Design how future proposals and repair recommendations may be simulated without live mutation.",
+  "checkpoint": "Dry-Run Adapter Design",
+  "created_utc": "2026-06-04T22:52:36.285514+00:00",
+  "decision_rules": [
+    "No dry-run can apply itself.",
+    "No dry-run can mutate live runtime, dependencies, CMS, API config, secrets, or package state in v0.7.",
+    "No dry-run output can be treated as production validation.",
+    "No dry-run evidence can grant apply authority without a later apply gate.",
+    "A dry-run plan must define sandbox boundary, expected diff, evidence package, and rollback plan.",
+    "If the sandbox boundary is missing, classify as not_eligible.",
+    "If a dry-run touches runtime/dependency/CMS/API surfaces, classify as runtime_dry_run_candidate and require future authorization.",
+    "If an action attempts staging, commit, push, or live mutation, classify as blocked_apply_attempt."
+  ],
+  "dry_run_classes": {
+    "blocked_apply_attempt": {
+      "allowed_outputs": [
+        "blocked action note",
+        "apply-gate requirement"
+      ],
+      "meaning": "Any attempt to use dry-run as apply/write authority is blocked.",
+      "requires_human_authorization": true
+    },
+    "docs_only_simulation": {
+      "allowed_outputs": [
+        "expected docs diff",
+        "render checklist",
+        "validation checklist"
+      ],
+      "meaning": "Simulate documentation/context changes only.",
+      "requires_human_authorization": false
+    },
+    "not_eligible": {
+      "allowed_outputs": [
+        "blocked dry-run note"
+      ],
+      "meaning": "Proposal cannot enter dry-run design.",
+      "requires_human_authorization": false
+    },
+    "runtime_dry_run_candidate": {
+      "allowed_outputs": [
+        "runtime dry-run request",
+        "risk map",
+        "rollback requirements"
+      ],
+      "meaning": "Future runtime simulation candidate only; no runtime write in v0.7.",
+      "requires_human_authorization": true
+    },
+    "sandbox_file_simulation": {
+      "allowed_outputs": [
+        "sandbox plan",
+        "expected diff manifest",
+        "cleanup plan"
+      ],
+      "meaning": "Future simulation in a disposable sandbox only; no live repo mutation.",
+      "requires_human_authorization": true
+    },
+    "test_only_simulation": {
+      "allowed_outputs": [
+        "test command plan",
+        "expected evidence"
+      ],
+      "meaning": "Simulate tests or validation commands without editing runtime.",
+      "requires_human_authorization": false
+    }
+  },
+  "forbidden_v0_7_behaviors": [
+    "implement adapter",
+    "create runtime loader",
+    "create dry-run executor",
+    "execute repair",
+    "write to CMS",
+    "write to Hermes runtime",
+    "modify dependencies",
+    "create cms/ root folder",
+    "call external APIs",
+    "store secrets",
+    "stage commit or push as dry-run side effect",
+    "grant apply/write authority"
+  ],
+  "future_gate_sequence": [
+    "v0.7 dry-run adapter design",
+    "v0.8 apply-gate adapter design",
+    "v0.9 evidence package and benchmark harness",
+    "v1.0 governed Hermes-CMS nexus"
+  ],
+  "geometry": {
+    "authorization": "human-controlled transition boundary",
+    "dry_run_plan": "the simulation protocol without live mutation",
+    "evidence_package": "the artifacts required to evaluate simulation output",
+    "expected_diff": "the forecast of what would change",
+    "proposal": "the bounded change idea",
+    "rollback_plan": "the reversal requirement for any future apply gate",
+    "sandbox_boundary": "where the simulation may occur"
+  },
+  "non_claim_lock": "HRCN v0.7 is a docs/context dry-run adapter design layer. It defines simulation boundaries and evidence requirements for future dry-runs. It does not create a loader, adapter, runtime bridge, dry-run executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "previous_validated_anchor": "HRCN v0.6.1",
+  "primary_law": "A dry-run may simulate a change; it may not become the change.",
+  "repository": "hermes-agent-evo",
+  "required_dry_run_fields": [
+    "source",
+    "timestamp_utc",
+    "proposal_id",
+    "proposal_summary",
+    "target_surface",
+    "dry_run_class",
+    "sandbox_boundary",
+    "expected_diff",
+    "expected_evidence",
+    "forbidden_side_effects",
+    "validation_commands",
+    "rollback_plan",
+    "human_authorization_requirement"
+  ],
+  "schema": "HRCN-v0.7-dry-run-adapter-design",
+  "version": "HRCN v0.7"
+}
