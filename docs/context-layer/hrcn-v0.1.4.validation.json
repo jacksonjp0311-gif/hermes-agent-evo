@@ -5,6 +5,8 @@
     "docs/context-layer/cms-root-intake-plan.md",
     "docs/context-layer/hrcn-roadmap.md",
     "docs/context-layer/hrcn-runtime-evolution-boundary.md",
+    "docs/context-layer/hrcn-v0.1.4.validation.json",
+    "docs/context-layer/hrcn-v0.1.4.validation.md",
     "docs/context-layer/rcc-cms-hrcn.md"
   ],
   "api_write_authority_granted": false,
@@ -27,5 +29,7 @@
   "runtime_evolution_boundary_present": true,
   "schema": "HRCN-v0.1.4-runtime-boundary-cms-intake-validation",
   "timestamp_utc": "2026-06-04T19:10:20.850990+00:00",
+  "validation_refresh_note": "Closed post-push evidence hygiene residue by adding the v0.1.4 validation JSON and MD artifacts to allowed_changed_paths.",
+  "validation_self_reference_closed": true,
   "version": "HRCN v0.1.4"
 }
