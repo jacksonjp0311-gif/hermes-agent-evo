@@ -1,4 +1,4 @@
-# Hermes Agent Rehydration Protocol — HRCN v0.7
+# Hermes Agent Rehydration Protocol — HRCN v0.8
 
 Status: docs/context/navigation protocol only.
 
@@ -73,6 +73,8 @@ Read:
 - `docs/context-layer/hrcn-v0.6.validation.json`
 - `docs/context-layer/hrcn-v0.7-dry-run-adapter-design.json`
 - `docs/context-layer/hrcn-v0.7.validation.json`
+- `docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.json`
+- `docs/context-layer/hrcn-v0.8.validation.json`
 - `git status --short`
 
 Recover:
@@ -223,6 +225,30 @@ Core rule:
 A dry-run may simulate a change; it may not become the change.
 ```
 
+### 11. Apply-Gate Adapter Design Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.json`
+- `docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.md`
+
+Recover:
+
+- apply-gate classes
+- required apply-gate fields
+- human authorization requirements
+- rollback plan requirements
+- validation plan requirements
+- evidence package requirements
+- staged-scope requirements
+- blocked live-apply behaviors
+
+Core rule:
+
+```text
+Apply is a gated transition, not an agent decision.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -241,4 +267,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v0.7 is a docs/context dry-run adapter design layer. It defines simulation boundaries and evidence requirements for future dry-runs. It does not create a loader, adapter, runtime bridge, dry-run executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.

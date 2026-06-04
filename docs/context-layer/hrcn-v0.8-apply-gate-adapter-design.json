@@ -1,0 +1,143 @@
+{
+  "adapter_is_not": [
+    "runtime implementation",
+    "apply executor implementation",
+    "loader",
+    "CMS import",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "adapter_purpose": "Design the gate required before any future write/apply transition can be requested.",
+  "apply_gate_classes": {
+    "blocked_live_apply": {
+      "allowed_outputs": [
+        "blocked live-apply note",
+        "required future gates"
+      ],
+      "meaning": "Any attempt to perform live apply/write during v0.8 is blocked.",
+      "requires_human_authorization": true
+    },
+    "cms_apply_candidate": {
+      "allowed_outputs": [
+        "CMS apply-gate request",
+        "memory authority requirements",
+        "provenance requirements"
+      ],
+      "meaning": "Future CMS/memory apply candidate; blocked from execution in v0.8.",
+      "requires_human_authorization": true
+    },
+    "dependency_apply_candidate": {
+      "allowed_outputs": [
+        "dependency risk note",
+        "lockfile requirements",
+        "rollback requirements"
+      ],
+      "meaning": "Future dependency/package apply candidate; blocked from execution in v0.8.",
+      "requires_human_authorization": true
+    },
+    "docs_apply_candidate": {
+      "allowed_outputs": [
+        "apply-gate request draft",
+        "docs validation checklist",
+        "rollback checklist"
+      ],
+      "meaning": "Future docs/context apply candidate only after exact paths, validation, and rollback are specified.",
+      "requires_human_authorization": true
+    },
+    "not_allowed": {
+      "allowed_outputs": [
+        "blocked apply note"
+      ],
+      "meaning": "Request cannot enter apply-gate review.",
+      "requires_human_authorization": false
+    },
+    "runtime_apply_candidate": {
+      "allowed_outputs": [
+        "runtime apply-gate request",
+        "risk map",
+        "rollback requirements",
+        "validation requirements"
+      ],
+      "meaning": "Future runtime apply candidate; blocked from execution in v0.8 and requires later authorized phase.",
+      "requires_human_authorization": true
+    },
+    "test_apply_candidate": {
+      "allowed_outputs": [
+        "test apply request draft",
+        "evidence checklist"
+      ],
+      "meaning": "Future test/validation apply candidate only after evidence and rollback are specified.",
+      "requires_human_authorization": true
+    }
+  },
+  "checkpoint": "Apply-Gate Adapter Design",
+  "created_utc": "2026-06-04T22:56:47.185524+00:00",
+  "decision_rules": [
+    "No apply request can authorize itself.",
+    "No apply request can mutate live runtime, dependencies, CMS, API config, secrets, package state, or docs in v0.8.",
+    "No dry-run output can become apply authority by itself.",
+    "No memory record can grant apply authority.",
+    "Human authorization must be explicit, scoped, and tied to an apply_request_id.",
+    "Rollback plan and validation plan are required before any future apply transition can be considered.",
+    "If target surface or allowed_paths are ambiguous, classify as not_allowed.",
+    "If any path outside staged_scope is included, classify as blocked_live_apply.",
+    "If evidence package is missing, classify as not_allowed.",
+    "If a request attempts staging, commit, push, or live mutation in v0.8, classify as blocked_live_apply."
+  ],
+  "forbidden_v0_8_behaviors": [
+    "implement adapter",
+    "create runtime loader",
+    "create dry-run executor",
+    "create apply executor",
+    "execute repair",
+    "write to CMS",
+    "write to Hermes runtime",
+    "modify dependencies",
+    "create cms/ root folder",
+    "call external APIs",
+    "store secrets",
+    "stage commit or push as apply side effect",
+    "grant live apply/write authority"
+  ],
+  "future_gate_sequence": [
+    "v0.8 apply-gate adapter design",
+    "v0.9 evidence package and benchmark harness",
+    "v1.0 governed Hermes-CMS nexus"
+  ],
+  "geometry": {
+    "apply_request": "the proposed write/apply transition",
+    "authority_classification": "the risk and surface classification for the request",
+    "evidence_package": "the artifacts required to evaluate the transition",
+    "human_authorization": "explicit authorization by the human operator",
+    "live_apply": "still blocked in v0.8",
+    "rollback_plan": "the reversible path if apply fails or is rejected",
+    "staged_scope": "the exact paths/surfaces allowed for a future apply attempt",
+    "validation_plan": "the commands/checks required before and after apply"
+  },
+  "non_claim_lock": "HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "previous_validated_anchor": "HRCN v0.7",
+  "primary_law": "Apply is a gated transition, not an agent decision.",
+  "repository": "hermes-agent-evo",
+  "required_apply_gate_fields": [
+    "source",
+    "timestamp_utc",
+    "apply_request_id",
+    "proposal_reference",
+    "dry_run_reference",
+    "target_surface",
+    "authority_classification",
+    "allowed_paths",
+    "blocked_paths",
+    "expected_diff",
+    "evidence_package",
+    "validation_plan",
+    "rollback_plan",
+    "human_authorization_record",
+    "post_apply_audit_plan"
+  ],
+  "schema": "HRCN-v0.8-apply-gate-adapter-design",
+  "version": "HRCN v0.8"
+}

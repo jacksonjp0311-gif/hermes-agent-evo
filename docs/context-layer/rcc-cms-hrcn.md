@@ -369,3 +369,30 @@ docs/context-layer/hrcn-v0.7.validation.md
 
 Non-claim lock: HRCN v0.7 is a docs/context dry-run adapter design layer. It defines simulation boundaries and evidence requirements for future dry-runs. It does not create a loader, adapter, runtime bridge, dry-run executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V07_DRY_RUN_END -->
+
+<!-- HRCN_V08_APPLY_GATE_START -->
+## HRCN v0.8 - Apply-Gate Adapter Design
+
+HRCN v0.8 defines the boundary for future apply/write transitions.
+
+```text
+Apply is a gated transition, not an agent decision.
+apply request is not apply authority
+human authorization must be explicit and scoped
+rollback plan must exist before future apply
+validation plan must exist before future apply
+evidence package must exist before future apply
+live apply remains blocked in v0.8
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.json
+docs/context-layer/hrcn-v0.8-apply-gate-adapter-design.md
+docs/context-layer/hrcn-v0.8.validation.json
+docs/context-layer/hrcn-v0.8.validation.md
+```
+
+Non-claim lock: HRCN v0.8 is a docs/context apply-gate adapter design layer. It defines the authorization, rollback, validation, evidence, and staged-scope requirements for future apply/write transitions. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V08_APPLY_GATE_END -->
