@@ -201,3 +201,6 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v0.9-evidence-package-benchmark-harness.md` | v0.9 human-readable evidence package and benchmark harness. |
 | `hrcn-v0.9.validation.json` | v0.9 validation artifact. |
 | `hrcn-v0.9.validation.md` | v0.9 validation report. |
+
+| `hrcn-v0.9.1-runtime-boundary-alignment.validation.json` | v0.9.1 runtime-boundary alignment validation artifact. |
+| `hrcn-v0.9.1-runtime-boundary-alignment.validation.md` | v0.9.1 runtime-boundary alignment validation report. |
