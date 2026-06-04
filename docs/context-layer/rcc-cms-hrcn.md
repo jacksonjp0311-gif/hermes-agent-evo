@@ -196,3 +196,25 @@ docs/context-layer/hrcn-v0.2.validation.md
 
 Non-claim lock: HRCN v0.2 is a read-only repository surface boundary map. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V02_SURFACE_BOUNDARY_CONTEXT_END -->
+
+
+<!-- HRCN_V023_RENDER_HYGIENE_START -->
+## HRCN v0.2.3 - README Render Hygiene and Bug/Lesson Closure
+
+HRCN v0.2.3 closes a public README rendering bug before v0.3.
+
+```text
+rendered README is an evidence surface
+mojibake is documentation drift
+validator failure means stop
+```
+
+Logged lessons:
+
+```text
+HRCN-L-009: README mojibake requires render-hygiene scans.
+HRCN-L-010: validator failure must stop add/commit/push flow.
+```
+
+Non-claim lock: HRCN v0.2.3 is a README render hygiene and bug/lesson closure layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V023_RENDER_HYGIENE_END -->
