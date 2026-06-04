@@ -1,0 +1,203 @@
+{
+  "checkpoint": "Coherence, Profile Compression, and Rehydration Protocol",
+  "non_claim_lock": "HRCN v0.1.3 is a docs/context/navigation coherence and compression layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "profile_lock": "Use the lightest sufficient governance profile. Do not over-govern simple surfaces or under-govern high-risk surfaces.",
+  "profiles": {
+    "compact": {
+      "description": "Compact mini README. Use for important but lower-risk docs/integration/support surfaces.",
+      "folders": [
+        "optional-skills",
+        "cron",
+        "acp_adapter",
+        "apps",
+        "docs",
+        "website"
+      ]
+    },
+    "full": {
+      "description": "Full SHATIE/RCC mini README. Use for load-bearing runtime, tool, provider, UI, validation, or governance surfaces.",
+      "folders": [
+        "agent",
+        "tools",
+        "skills",
+        "plugins",
+        "providers",
+        "gateway",
+        "hermes_cli",
+        "tui_gateway",
+        "ui-tui",
+        "web",
+        "scripts",
+        "tests",
+        "docs/context-layer"
+      ]
+    },
+    "pointer": {
+      "description": "Pointer-only mini README. Use for planning or asset surfaces where full governance would add overhead.",
+      "folders": [
+        "assets",
+        "plans",
+        ".plans"
+      ]
+    }
+  },
+  "schema": "HRCN-v0.1.3-profile-map",
+  "surface_roles": {
+    ".plans": {
+      "meridians": "planning",
+      "profile": "pointer",
+      "purpose": "Hidden/local planning documents when present.",
+      "sector": "docs",
+      "shell": "outer"
+    },
+    "acp_adapter": {
+      "meridians": "integration",
+      "profile": "compact",
+      "purpose": "ACP server integration surface.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "agent": {
+      "meridians": "runtime",
+      "profile": "full",
+      "purpose": "Agent internals: provider adapters, memory/context helpers, compression, and runtime utilities.",
+      "sector": "agent",
+      "shell": "inner"
+    },
+    "apps": {
+      "meridians": "desktop",
+      "profile": "compact",
+      "purpose": "Desktop/bootstrap/shared app surfaces.",
+      "sector": "ui",
+      "shell": "outer"
+    },
+    "assets": {
+      "meridians": "documentation",
+      "profile": "pointer",
+      "purpose": "README and local UX assets.",
+      "sector": "assets",
+      "shell": "outer"
+    },
+    "cron": {
+      "meridians": "scheduler",
+      "profile": "compact",
+      "purpose": "Scheduler and recurring job surfaces.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "docs": {
+      "meridians": "documentation",
+      "profile": "compact",
+      "purpose": "Internal and supplemental documentation.",
+      "sector": "docs",
+      "shell": "outer"
+    },
+    "docs/context-layer": {
+      "meridians": "source, governance, documentation",
+      "profile": "full",
+      "purpose": "Internal RCC/CMS/HRCN context and governance boundary layer.",
+      "sector": "context-layer",
+      "shell": "center"
+    },
+    "gateway": {
+      "meridians": "gateway",
+      "profile": "full",
+      "purpose": "Messaging gateway adapters and session routing.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "hermes_cli": {
+      "meridians": "cli",
+      "profile": "full",
+      "purpose": "CLI subcommands, setup/config flows, registry, skin engine, and distribution surfaces.",
+      "sector": "runtime",
+      "shell": "inner"
+    },
+    "optional-skills": {
+      "meridians": "skills",
+      "profile": "compact",
+      "purpose": "Optional and niche skill surfaces; not active by default.",
+      "sector": "agent",
+      "shell": "middle"
+    },
+    "plans": {
+      "meridians": "planning",
+      "profile": "pointer",
+      "purpose": "Planning documents when present.",
+      "sector": "docs",
+      "shell": "outer"
+    },
+    "plugins": {
+      "meridians": "provider, memory, context",
+      "profile": "full",
+      "purpose": "Plugin families for memory, providers, context engines, observability, platforms, and extensions.",
+      "sector": "extension",
+      "shell": "middle"
+    },
+    "providers": {
+      "meridians": "provider",
+      "profile": "full",
+      "purpose": "Provider abstractions and routing surfaces.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "scripts": {
+      "meridians": "validation, release",
+      "profile": "full",
+      "purpose": "Install, test, release, development, and utility scripts.",
+      "sector": "scripts",
+      "shell": "middle"
+    },
+    "skills": {
+      "meridians": "skills",
+      "profile": "full",
+      "purpose": "Bundled procedural skill surfaces.",
+      "sector": "agent",
+      "shell": "middle"
+    },
+    "tests": {
+      "meridians": "validation",
+      "profile": "full",
+      "purpose": "Pytest suite, fixtures, and regression surfaces.",
+      "sector": "tests",
+      "shell": "middle"
+    },
+    "tools": {
+      "meridians": "tools",
+      "profile": "full",
+      "purpose": "Built-in tools and terminal/environment backends.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "tui_gateway": {
+      "meridians": "tui",
+      "profile": "full",
+      "purpose": "Python JSON-RPC backend for the terminal UI.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "ui-tui": {
+      "meridians": "ui",
+      "profile": "full",
+      "purpose": "Ink/React terminal UI.",
+      "sector": "runtime",
+      "shell": "middle"
+    },
+    "web": {
+      "meridians": "web",
+      "profile": "full",
+      "purpose": "Dashboard/frontend app surface.",
+      "sector": "ui",
+      "shell": "outer"
+    },
+    "website": {
+      "meridians": "documentation",
+      "profile": "compact",
+      "purpose": "Public Docusaurus documentation site.",
+      "sector": "public",
+      "shell": "outer"
+    }
+  },
+  "timestamp_utc": "2026-06-04T18:50:45.748996+00:00",
+  "version": "HRCN v0.1.3"
+}

@@ -1,3 +1,5 @@
+
+
 <!-- HRCN_MINI_README_START -->
 # docs/context-layer
 
@@ -7,7 +9,9 @@ Internal RCC/CMS/HRCN context and governance boundary layer.
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Under HRCN v0.1.1, this README is a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Under HRCN v0.1.3, this README is a navigation and context surface only.
+
+Profile: `full`
 
 ## H - Hooks
 
@@ -16,6 +20,8 @@ Inbound hooks:
 - `README.md`
 - `AGENTS.md`
 - `docs/context-layer/rcc-cms-hrcn.md`
+- `docs/context-layer/hermes-agent-rehydration-protocol.md`
+- `docs/context-layer/hrcn-profile-map.json`
 
 Outbound hooks:
 
@@ -28,7 +34,7 @@ This folder may contain source files, docs, reports, schemas, scripts, UI assets
 
 ## T - Theory / Basis
 
-Governed by HRCN v0.1.1, RCC repository orientation, CMS permission discipline, and Hermes upstream development boundaries.
+Governed by HRCN v0.1.3, RCC repository orientation, CMS permission discipline, RCC-N profile-gated governance, and Hermes upstream development boundaries.
 
 ## I - Invariants
 
@@ -38,13 +44,14 @@ Governed by HRCN v0.1.1, RCC repository orientation, CMS permission discipline, 
 - Do not treat documentation as correctness.
 - Do not claim AGI, consciousness, sentience, autonomy, self-awareness, security, production readiness, or external validation.
 - Do not introduce secrets, API keys, local config, `.venv`, AppData files, session logs, or machine-local state.
+- Run the rehydration protocol before proposing runtime changes.
 - Update this mini README if folder purpose, files, routes, validation commands, or claim boundaries change.
 
 ## E - Examples
 
 Read this README before editing this folder.
 
-For HRCN v0.1.1 docs-only work, expected validation is:
+For HRCN v0.1.3 docs-only work, expected validation is:
 
 ```powershell
 git status --short
@@ -57,7 +64,7 @@ Sphere Position:
 - Shell: center
 - Meridian(s): source, governance, documentation
 - Sector: context-layer
-- Version / TTL: HRCN-v0.1.1 / 180 days
+- Version / TTL: HRCN-v0.1.3 / 180 days
 - Last Verified: 2026-06-04
 
 Local Role:
@@ -66,7 +73,7 @@ Local Role:
 
 Evidence Surface:
 
-- `docs/context-layer/rcc-cms-hrcn.validation.json`
+- `docs/context-layer/hrcn-v0.1.3.validation.json`
 
 Validation Surface:
 
@@ -88,10 +95,12 @@ Non-Claim Locks:
 - hermes_context_is_not_runtime_integration
 - agent_proposal_is_not_authority
 - human_authorization_remains_write_boundary
+- profile_adoption_is_not_validation
+- rehydration_is_not_authority
 
 Agent Route:
 
-- Read root `README.md`, `AGENTS.md`, `docs/context-layer/README.md`, `docs/context-layer/rcc-cms-hrcn.md`, then this README before editing.
+- Read root `README.md`, `AGENTS.md`, `docs/context-layer/README.md`, `docs/context-layer/rcc-cms-hrcn.md`, `docs/context-layer/hermes-agent-rehydration-protocol.md`, then this README before editing.
 
 Update Obligation:
 
@@ -113,21 +122,24 @@ git status --short
 Non-claim lock: navigation is not validation, but stale navigation is repository drift.
 <!-- MINI_README_UPDATE_RULE_END -->
 <!-- HRCN_MINI_README_END -->
-
 <!-- HRCN_CONTEXT_LAYER_ARTIFACTS_START -->
-## HRCN v0.1.2 Artifact Index
+## HRCN Artifact Index
 
 | Artifact | Role |
 |---|---|
 | `rcc-cms-hrcn.md` | Primary HRCN context contract. |
 | `cybernetic-lessons-injection.md` | Injected CMS/RCC-N lessons from Cybernetic Memory System. |
 | `hrcn-roadmap.md` | Current HRCN phase map and next anchor. |
-| `rcc-cms-hrcn.validation.json` | Latest README/mini README validation. |
-| `rcc-cms-hrcn.lesson-injection.validation.json` | Lesson injection validation. |
+| `hrcn-profile-map.json` | Machine-readable mini README profile map. |
+| `hrcn-profile-map.md` | Human-readable mini README profile map. |
+| `hermes-agent-rehydration-protocol.md` | Fresh-thread rehydration protocol. |
+| `rcc-cms-hrcn.validation.json` | v0.1.1 README/mini README validation. |
+| `rcc-cms-hrcn.lesson-injection.validation.json` | v0.1.2 lesson injection validation. |
+| `hrcn-v0.1.3.validation.json` | v0.1.3 coherence/compression/rehydration validation. |
 
 Lesson lock:
 
 ```text
-Cyber lessons must be logged before Hermes runtime bridge work begins.
+Cyber lessons and rehydration protocol must be read before Hermes runtime bridge work begins.
 ```
 <!-- HRCN_CONTEXT_LAYER_ARTIFACTS_END -->

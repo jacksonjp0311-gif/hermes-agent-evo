@@ -1,4 +1,4 @@
-# HRCN v0.1.1 — Hermes README and Mini README Surface Expansion
+# HRCN v0.1.3 — Hermes Coherence, Profile Compression, and Rehydration
 
 Status: internal docs/context/navigation layer only.
 
@@ -8,7 +8,7 @@ Repository: `hermes-agent-evo`
 
 This document defines the Hermes-side RCC/CMS/HRCN context layer after the first root README expansion and mini README pass.
 
-It is intentionally docs-only. It does not edit Hermes runtime code, prompts, tools, skills, providers, plugins, gateways, TUI, web runtime, dependencies, memory, API writes, or packaging files.
+It is intentionally docs-only. It does not edit Hermes runtime code, prompts, tools, skills, providers, plugins, gateways, TUI, web runtime, dependencies, memory, API writes, or packaging files. HRCN v0.1.3 adds profile-gated mini README compression and a rehydration protocol before HRCN v0.2 surface mapping.
 
 ## Division of Powers
 
@@ -23,7 +23,7 @@ Human  = write authorization boundary
 ## Primary Lock
 
 ```text
-HRCN v0.1.1 may expand documentation and mini README navigation, but may not mutate Hermes runtime or grant authority.
+HRCN v0.1.3 may expand documentation and mini README navigation, but may not mutate Hermes runtime or grant authority.
 ```
 
 ## Runtime Boundary
@@ -76,7 +76,7 @@ docs/context-layer/rcc-cms-hrcn.validation.json
 
 ## Non-Claim Lock
 
-HRCN v0.1.1 is a docs/context/navigation layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.1.3 is a docs/context/navigation layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 
 <!-- HRCN_LESSON_INJECTION_START -->
 ## HRCN v0.1.2 — Cyber/CMS/RCC-N Lesson Injection
@@ -111,3 +111,34 @@ Do not claim utility without baseline comparison and cost accounting.
 
 Non-claim lock: HRCN v0.1.2 is a docs/context/navigation lesson-injection layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_LESSON_INJECTION_END -->
+
+<!-- HRCN_V013_COHERENCE_START -->
+## HRCN v0.1.3 — Coherence, Profile Compression, and Rehydration
+
+New surfaces:
+
+- `docs/context-layer/hrcn-profile-map.json`
+- `docs/context-layer/hrcn-profile-map.md`
+- `docs/context-layer/hermes-agent-rehydration-protocol.md`
+- `docs/context-layer/hrcn-v0.1.3.validation.json`
+- `docs/context-layer/hrcn-v0.1.3.validation.md`
+
+Compression law:
+
+```text
+Use the lightest sufficient governance profile.
+Full mini README for load-bearing surfaces.
+Compact mini README for support/docs surfaces.
+Pointer mini README for low-risk planning/assets surfaces.
+```
+
+Rehydration law:
+
+```text
+No fresh-thread Hermes work may propose runtime, tool, skill, provider,
+gateway, memory, or apply/write changes until it completes identity,
+boundary, state, target, and authority scans.
+```
+
+Non-claim lock: HRCN v0.1.3 is a docs/context/navigation coherence and compression layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V013_COHERENCE_END -->

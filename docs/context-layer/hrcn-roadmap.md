@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v0.1.2 — Cyber/CMS/RCC-N Lesson Injection
+HRCN v0.1.3 — Coherence, Profile Compression, and Rehydration Protocol
 
 ## Phase Map
 
@@ -11,6 +11,7 @@ HRCN v0.1.2 — Cyber/CMS/RCC-N Lesson Injection
 | HRCN v0.1 | Hermes README/RCC Documentation Anchor | Docs only. |
 | HRCN v0.1.1 | README + Mini README Surface Expansion | Root README and mini READMEs only. |
 | HRCN v0.1.2 | Cyber/CMS/RCC-N Lesson Injection | Docs/context lesson injection only. |
+| HRCN v0.1.3 | Coherence, Profile Compression, and Rehydration Protocol | Docs/context profile gating and rehydration only. |
 | HRCN v0.2 | Hermes Surface Boundary Map | Read-only runtime map; no edits. |
 | HRCN v0.3 | Agent Rehydration Packet Contract | Context packet design; no loader. |
 | HRCN v0.4 | CMS Read-Only Bridge Design | Design only; no memory writes. |
@@ -27,4 +28,4 @@ HRCN v0.2 — Hermes Surface Boundary Map.
 
 ## Non-Claim Lock
 
-HRCN v0.1.2 is a docs/context/navigation lesson-injection layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.1.3 is a docs/context/navigation coherence and compression layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
