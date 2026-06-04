@@ -146,3 +146,8 @@ Lesson lock:
 Cyber lessons and rehydration protocol must be read before Hermes runtime bridge work begins.
 ```
 <!-- HRCN_CONTEXT_LAYER_ARTIFACTS_END -->
+
+| `hermes-surface-boundary-map.json` | Machine-readable HRCN v0.2 Hermes surface boundary map. |
+| `hermes-surface-boundary-map.md` | Human-readable HRCN v0.2 Hermes surface boundary map. |
+| `hrcn-v0.2.validation.json` | v0.2 surface-boundary validation artifact. |
+| `hrcn-v0.2.validation.md` | v0.2 surface-boundary validation report. |

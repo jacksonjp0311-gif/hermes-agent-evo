@@ -172,3 +172,27 @@ surface_map -> rehydration_packet -> read_only_bridge -> proposal_classification
 
 Non-claim lock: HRCN v0.1.4 is a docs/context planning and boundary layer. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V014_RUNTIME_CMS_INTAKE_END -->
+
+
+<!-- HRCN_V02_SURFACE_BOUNDARY_CONTEXT_START -->
+## HRCN v0.2 - Hermes Surface Boundary Map
+
+HRCN v0.2 is the first read-only authority map for Hermes surfaces.
+
+```text
+surface visibility != surface authority
+surface map != runtime mutation
+cms/ future target != CMS live authority
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hermes-surface-boundary-map.json
+docs/context-layer/hermes-surface-boundary-map.md
+docs/context-layer/hrcn-v0.2.validation.json
+docs/context-layer/hrcn-v0.2.validation.md
+```
+
+Non-claim lock: HRCN v0.2 is a read-only repository surface boundary map. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V02_SURFACE_BOUNDARY_CONTEXT_END -->
