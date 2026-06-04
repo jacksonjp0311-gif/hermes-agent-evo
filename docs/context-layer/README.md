@@ -209,3 +209,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v1.0-governed-hermes-cms-nexus-plan.md` | v1.0 human-readable governed Hermes-CMS nexus plan. |
 | `hrcn-v1.0.validation.json` | v1.0 validation artifact. |
 | `hrcn-v1.0.validation.md` | v1.0 validation report. |
+
+| `hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.json` | v1.0.1 machine-readable CMS read-only mirror authorization path. |
+| `hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.md` | v1.0.1 human-readable CMS read-only mirror authorization path. |
+| `hrcn-v1.0.1.validation.json` | v1.0.1 validation artifact. |
+| `hrcn-v1.0.1.validation.md` | v1.0.1 validation report. |

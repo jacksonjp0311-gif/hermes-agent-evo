@@ -455,3 +455,36 @@ HRCN v1.0.1 - CMS Read-Only Mirror Import Authorization Path
 
 Non-claim lock: HRCN v1.0 is a docs/context governed Hermes-CMS nexus planning layer. It defines the architecture, evidence gates, authority boundaries, and future CMS read-only mirror authorization path for nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V10_GOVERNED_NEXUS_END -->
+
+<!-- HRCN_V101_CMS_MIRROR_AUTH_START -->
+## HRCN v1.0.1 - CMS Read-Only Mirror Import Authorization Path
+
+HRCN v1.0.1 defines the authorization path for a future CMS read-only mirror/import.
+
+```text
+CMS may be mirrored only as evidence-bounded read-only context, never as immediate authority.
+source provenance must be recorded
+manifest must exist before copy
+secret scan must pass before copy
+rollback/removal plan must exist before copy
+human authorization must be explicit
+CMS mirror is not CMS authority
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.json
+docs/context-layer/hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.md
+docs/context-layer/hrcn-v1.0.1.validation.json
+docs/context-layer/hrcn-v1.0.1.validation.md
+```
+
+Next recommended phase:
+
+```text
+HRCN v1.0.2 - CMS Mirror Preflight Manifest and Secret-Scan Plan
+```
+
+Non-claim lock: HRCN v1.0.1 is a docs/context CMS read-only mirror import authorization path layer. It defines the gates required before a future CMS mirror/import can occur. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V101_CMS_MIRROR_AUTH_END -->

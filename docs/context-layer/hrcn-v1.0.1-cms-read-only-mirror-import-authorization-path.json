@@ -1,0 +1,126 @@
+{
+  "allowed_future_import_methods": {
+    "git_submodule": {
+      "initial_authority": "read_only",
+      "meaning": "Reference CMS as separately versioned source.",
+      "risk": "submodule discipline required"
+    },
+    "git_subtree": {
+      "initial_authority": "read_only",
+      "meaning": "Vendor CMS history into Hermes.",
+      "risk": "larger repo history"
+    },
+    "root_folder_copy_snapshot": {
+      "initial_authority": "read_only",
+      "meaning": "Copy CMS into cms/ as a snapshot after authorization.",
+      "risk": "simple but provenance must be explicit"
+    }
+  },
+  "authorization_is_not": [
+    "CMS copy",
+    "CMS import",
+    "runtime integration",
+    "loader",
+    "adapter",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "authorization_purpose": "Define the gates required before CMS can be copied or mirrored into Hermes as read-only context.",
+  "authorization_state": {
+    "cms_copy_allowed_in_v1_0_1": false,
+    "cms_folder_created_in_v1_0_1": false,
+    "cms_import_allowed_in_v1_0_1": false,
+    "current_phase": "authorization_path_only",
+    "future_initial_mode": "read_only_mirror_candidate",
+    "future_runtime_mode_allowed": false
+  },
+  "checkpoint": "CMS Read-Only Mirror Import Authorization Path",
+  "created_utc": "2026-06-04T23:28:09.643787+00:00",
+  "decision_rules": [
+    "No CMS copy may occur in v1.0.1.",
+    "No CMS import may occur in v1.0.1.",
+    "No cms/ root folder may be created in v1.0.1.",
+    "Future CMS copy must be read-only mirror candidate first.",
+    "Future CMS mirror cannot grant runtime, memory, API, repair, dry-run, apply, or autonomous authority.",
+    "If source provenance is missing, CMS copy remains blocked.",
+    "If secret scan is missing or fails, CMS copy remains blocked.",
+    "If rollback/removal plan is missing, CMS copy remains blocked.",
+    "If explicit human authorization is missing, CMS copy remains blocked."
+  ],
+  "disallowed_initial_authorities": [
+    "runtime integration",
+    "CMS write authority",
+    "memory write authority",
+    "API authority",
+    "repair apply authority",
+    "dry-run execution authority",
+    "apply authority",
+    "autonomous authority",
+    "security/production correctness claims"
+  ],
+  "future_gate_sequence": [
+    "v1.0.1 CMS read-only mirror import authorization path",
+    "v1.0.2 CMS mirror preflight manifest and secret-scan plan",
+    "v1.0.3 CMS read-only mirror copy with evidence package",
+    "v1.1 bounded CMS context packet",
+    "v1.2 permission bridge dry-run design"
+  ],
+  "non_claim_lock": "HRCN v1.0.1 is a docs/context CMS read-only mirror import authorization path layer. It defines the gates required before a future CMS mirror/import can occur. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "post_import_gate_sequence_future_only": [
+    "verify only cms/ target changed",
+    "verify no runtime/dependency/API files changed",
+    "verify CMS mirror is read-only context",
+    "verify no adapter/loader/writer/executor created",
+    "record manifest and hash summary",
+    "record secret scan result",
+    "record rollback/removal command",
+    "commit with evidence package"
+  ],
+  "pre_copy_gate_sequence": [
+    "verify Hermes repo root",
+    "verify clean Hermes working tree",
+    "verify CMS source exists",
+    "record CMS source provenance",
+    "produce pre-copy CMS manifest",
+    "run secret scan against CMS source",
+    "define target cms/ boundary",
+    "define rollback/removal plan",
+    "define post-import validation commands",
+    "create evidence package",
+    "receive explicit human authorization"
+  ],
+  "previous_validated_anchor": "HRCN v1.0",
+  "primary_law": "CMS may be mirrored only as evidence-bounded read-only context, never as immediate authority.",
+  "repository": "hermes-agent-evo",
+  "required_authorization_fields": [
+    "authorization_id",
+    "human_authorizer",
+    "timestamp_utc",
+    "source_type",
+    "source_location",
+    "source_commit_or_snapshot",
+    "target_root",
+    "import_method",
+    "pre_copy_manifest_plan",
+    "secret_scan_plan",
+    "license_provenance_note",
+    "read_only_boundary_statement",
+    "blocked_authority_statement",
+    "rollback_removal_plan",
+    "post_import_validation_commands",
+    "evidence_package_reference",
+    "explicit_authorization_phrase"
+  ],
+  "schema": "HRCN-v1.0.1-cms-read-only-mirror-import-authorization-path",
+  "source_candidates": {
+    "preferred_local_source": "C:/Users/jacks/OneDrive/Desktop/cybernetic-memory-system",
+    "preferred_remote_source": "https://github.com/jacksonjp0311-gif/cybernetic-memory-system",
+    "source_commit_or_snapshot_required": true,
+    "source_required_before_copy": true,
+    "target_future_root": "cms/"
+  },
+  "version": "HRCN v1.0.1"
+}
