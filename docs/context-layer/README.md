@@ -183,3 +183,6 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v0.6-repair-recommendation-adapter-design.md` | v0.6 human-readable repair recommendation adapter design. |
 | `hrcn-v0.6.validation.json` | v0.6 validation artifact. |
 | `hrcn-v0.6.validation.md` | v0.6 validation report. |
+
+| `hrcn-v0.6.1-readme-geometry-closure.validation.json` | v0.6.1 README geometry closure validation artifact. |
+| `hrcn-v0.6.1-readme-geometry-closure.validation.md` | v0.6.1 README geometry closure validation report. |

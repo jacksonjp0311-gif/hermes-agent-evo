@@ -55,6 +55,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v0.4 | Can CMS context be designed as read-only orientation without write authority? | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
 | HRCN v0.5 | Can memory visibility, use, proposal, dry-run, and apply authority be separated? | `docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json` |
 | HRCN v0.6 | Can repair recommendations be generated without repair execution or apply authority? | `docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json` |
+| HRCN v0.6.1 | Can README render hygiene and HRCN block placement be closed before dry-run design? | `docs/context-layer/hrcn-v0.6.1-readme-geometry-closure.validation.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -73,14 +74,14 @@ Hermes already supplies CLI/TUI, model routing, tools, skills, memory hooks, ter
 
 #### What this fork is not
 
-This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through HRCN v0.2, the fork remains documentation, navigation, profile compression, rehydration, runtime-evolution planning, CMS intake planning, and read-only surface boundary mapping only.
+This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through HRCN v0.6.1, the fork remains documentation, navigation, profile compression, rehydration, runtime-evolution planning, CMS intake planning, read-only surface mapping, packet/bridge/permission/recommendation design, and README geometry closure only.
 
 ### Current Public Metrics
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v0.6` |
-| Previous validated anchor | `HRCN v0.5` |
+| Current checkpoint | `HRCN v0.6.1` |
+| Previous validated anchor | `HRCN v0.6` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -91,7 +92,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v0.6.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v0.6.1-readme-geometry-closure.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -132,6 +133,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - Repair recommendation is not repair execution.
 - No repair recommendation grants staging, commit, push, runtime mutation, or apply authority.
 - A repair recommendation may describe a path; it may not apply the path.
+- README geometry must keep HRCN version blocks inside the HRCN context layer.
 
 ### Current HRCN Surface Lock
 
@@ -145,12 +147,12 @@ boundaries agree.
 <!-- HRCN_RUNTIME_EVOLUTION_BOUNDARY_START -->
 ### Current Runtime Boundary and Future Runtime Evolution
 
-HRCN v0.2 keeps the current repository state docs/context/read-only-map only, but it does not lock Hermes into docs-only forever.
+HRCN v0.6.1 keeps the current repository state docs/context/design-only, but it does not lock Hermes into docs-only forever.
 
 Current boundary:
 
 ```text
-HRCN v0.2 does not change Hermes runtime.
+HRCN v0.6.1 does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -264,6 +266,142 @@ Only README/context-layer documentation surfaces are writable in this phase. Run
 
 Non-claim lock: HRCN v0.2 is a read-only repository surface boundary map. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V02_SURFACE_BOUNDARY_END -->
+
+### HRCN Version Geometry Blocks
+
+<!-- HRCN_V03_AGENT_PACKET_START -->
+### HRCN v0.3 Agent Rehydration Packet Contract
+
+HRCN v0.3 defines the packet a future human or AI agent must load before proposing work.
+
+Current rule:
+
+```text
+A rehydration packet orients an agent; it does not authorize an agent.
+```
+
+Packet artifacts:
+
+```text
+docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json
+docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.md
+docs/context-layer/hrcn-v0.3.validation.json
+docs/context-layer/hrcn-v0.3.validation.md
+```
+
+v0.3 separates five things that must not collapse into one another:
+
+```text
+orientation packet
+proposal classification
+dry-run design
+apply/write authority
+human authorization
+```
+
+Non-claim lock: HRCN v0.3 does not create a loader, does not modify runtime, does not import CMS, does not grant API or CMS write authority, and does not prove safety, production readiness, autonomy, consciousness, sentience, AGI, ASI, or external validation.
+<!-- HRCN_V03_AGENT_PACKET_END -->
+
+<!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_START -->
+### HRCN v0.4 CMS Read-Only Bridge Design
+
+HRCN v0.4 defines how a future bridge may expose CMS context as read-only orientation.
+
+Current rule:
+
+```text
+A CMS bridge may inform Hermes; it may not command Hermes.
+```
+
+Bridge artifacts:
+
+```text
+docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json
+docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.md
+docs/context-layer/hrcn-v0.4.validation.json
+docs/context-layer/hrcn-v0.4.validation.md
+```
+
+v0.4 separates five things that must not collapse into one another:
+
+```text
+CMS context
+read-only orientation
+proposal classification
+apply/write authority
+human authorization
+```
+
+Non-claim lock: HRCN v0.4 does not create a loader, adapter, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
+<!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_END -->
+
+<!-- HRCN_V05_MEMORY_PERMISSION_START -->
+### HRCN v0.5 Memory Permission Adapter Design
+
+HRCN v0.5 defines the permission geometry a future memory adapter must obey.
+
+Current rule:
+
+```text
+Memory may surface context; permission determines use; humans authorize action.
+```
+
+Permission artifacts:
+
+```text
+docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json
+docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.md
+docs/context-layer/hrcn-v0.5.validation.json
+docs/context-layer/hrcn-v0.5.validation.md
+```
+
+v0.5 separates six things that must not collapse into one another:
+
+```text
+memory visibility
+permitted use
+proposal authority
+dry-run candidacy
+apply/write authority
+human authorization
+```
+
+Non-claim lock: HRCN v0.5 does not create a loader, adapter, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
+<!-- HRCN_V05_MEMORY_PERMISSION_END -->
+
+<!-- HRCN_V06_REPAIR_RECOMMENDATION_START -->
+### HRCN v0.6 Repair Recommendation Adapter Design
+
+HRCN v0.6 defines how future context may produce bounded repair recommendations without executing repairs.
+
+Current rule:
+
+```text
+A repair recommendation may describe a path; it may not apply the path.
+```
+
+Recommendation artifacts:
+
+```text
+docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json
+docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.md
+docs/context-layer/hrcn-v0.6.validation.json
+docs/context-layer/hrcn-v0.6.validation.md
+```
+
+v0.6 separates six things that must not collapse into one another:
+
+```text
+observation
+diagnosis
+recommendation
+dry-run candidacy
+apply-gate candidacy
+human authorization
+```
+
+Non-claim lock: HRCN v0.6 does not create a loader, adapter, repair executor, dry-run executor, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
+<!-- HRCN_V06_REPAIR_RECOMMENDATION_END -->
 
 ### Rehydration Protocol
 
@@ -446,7 +584,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v0.6 is a docs/context repair-recommendation adapter design layer. It defines recommendation classes and gates for future repair advice. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.6.1 is a README geometry closure layer. It repairs HRCN block placement, lower README render hygiene, and roadmap/checkpoint alignment. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, live integration, or apply authority.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
@@ -499,7 +637,7 @@ hermes update       # Update to the latest version
 hermes doctor       # Diagnose any issues
 ```
 
-ðŸ“– **[Full documentation →](https://hermes-agent.nousresearch.com/docs/)**
+📖 **[Full documentation →](https://hermes-agent.nousresearch.com/docs/)**
 
 ---
 
@@ -623,11 +761,11 @@ scripts/run_tests.sh
 
 ## Community
 
-- ðŸ’¬ [Discord](https://discord.gg/NousResearch)
-- Ã°Å¸“Å¡ [Skills Hub](https://agentskills.io)
-- ðŸ› [Issues](https://github.com/NousResearch/hermes-agent/issues)
-- ðŸ”Œ [computer-use-linux](https://github.com/avifenesh/computer-use-linux) — Linux desktop-control MCP server for Hermes and other MCP hosts, with AT-SPI accessibility trees, Wayland/X11 input, screenshots, and compositor window targeting.
-- ðŸ”Œ [HermesClaw](https://github.com/AaronWong1999/hermesclaw) — Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
+- 💬 [Discord](https://discord.gg/NousResearch)
+- 📚 [Skills Hub](https://agentskills.io)
+- 🐛 [Issues](https://github.com/NousResearch/hermes-agent/issues)
+- 🔌 [computer-use-linux](https://github.com/avifenesh/computer-use-linux) — Linux desktop-control MCP server for Hermes and other MCP hosts, with AT-SPI accessibility trees, Wayland/X11 input, screenshots, and compositor window targeting.
+- 🔌 [HermesClaw](https://github.com/AaronWong1999/hermesclaw) — Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
 
 ---
 
@@ -637,136 +775,3 @@ MIT — see [LICENSE](LICENSE).
 
 Built by [Nous Research](https://nousresearch.com).
 
-<!-- HRCN_V03_AGENT_PACKET_START -->
-### HRCN v0.3 Agent Rehydration Packet Contract
-
-HRCN v0.3 defines the packet a future human or AI agent must load before proposing work.
-
-Current rule:
-
-```text
-A rehydration packet orients an agent; it does not authorize an agent.
-```
-
-Packet artifacts:
-
-```text
-docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json
-docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.md
-docs/context-layer/hrcn-v0.3.validation.json
-docs/context-layer/hrcn-v0.3.validation.md
-```
-
-v0.3 separates five things that must not collapse into one another:
-
-```text
-orientation packet
-proposal classification
-dry-run design
-apply/write authority
-human authorization
-```
-
-Non-claim lock: HRCN v0.3 does not create a loader, does not modify runtime, does not import CMS, does not grant API or CMS write authority, and does not prove safety, production readiness, autonomy, consciousness, sentience, AGI, ASI, or external validation.
-<!-- HRCN_V03_AGENT_PACKET_END -->
-
-<!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_START -->
-### HRCN v0.4 CMS Read-Only Bridge Design
-
-HRCN v0.4 defines how a future bridge may expose CMS context as read-only orientation.
-
-Current rule:
-
-```text
-A CMS bridge may inform Hermes; it may not command Hermes.
-```
-
-Bridge artifacts:
-
-```text
-docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json
-docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.md
-docs/context-layer/hrcn-v0.4.validation.json
-docs/context-layer/hrcn-v0.4.validation.md
-```
-
-v0.4 separates five things that must not collapse into one another:
-
-```text
-CMS context
-read-only orientation
-proposal classification
-apply/write authority
-human authorization
-```
-
-Non-claim lock: HRCN v0.4 does not create a loader, adapter, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
-<!-- HRCN_V04_CMS_READ_ONLY_BRIDGE_END -->
-
-<!-- HRCN_V05_MEMORY_PERMISSION_START -->
-### HRCN v0.5 Memory Permission Adapter Design
-
-HRCN v0.5 defines the permission geometry a future memory adapter must obey.
-
-Current rule:
-
-```text
-Memory may surface context; permission determines use; humans authorize action.
-```
-
-Permission artifacts:
-
-```text
-docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.json
-docs/context-layer/hrcn-v0.5-memory-permission-adapter-design.md
-docs/context-layer/hrcn-v0.5.validation.json
-docs/context-layer/hrcn-v0.5.validation.md
-```
-
-v0.5 separates six things that must not collapse into one another:
-
-```text
-memory visibility
-permitted use
-proposal authority
-dry-run candidacy
-apply/write authority
-human authorization
-```
-
-Non-claim lock: HRCN v0.5 does not create a loader, adapter, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
-<!-- HRCN_V05_MEMORY_PERMISSION_END -->
-
-<!-- HRCN_V06_REPAIR_RECOMMENDATION_START -->
-### HRCN v0.6 Repair Recommendation Adapter Design
-
-HRCN v0.6 defines how future context may produce bounded repair recommendations without executing repairs.
-
-Current rule:
-
-```text
-A repair recommendation may describe a path; it may not apply the path.
-```
-
-Recommendation artifacts:
-
-```text
-docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json
-docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.md
-docs/context-layer/hrcn-v0.6.validation.json
-docs/context-layer/hrcn-v0.6.validation.md
-```
-
-v0.6 separates six things that must not collapse into one another:
-
-```text
-observation
-diagnosis
-recommendation
-dry-run candidacy
-apply-gate candidacy
-human authorization
-```
-
-Non-claim lock: HRCN v0.6 does not create a loader, adapter, repair executor, dry-run executor, runtime bridge, CMS folder, CMS writer, API writer, repair applier, or live integration.
-<!-- HRCN_V06_REPAIR_RECOMMENDATION_END -->

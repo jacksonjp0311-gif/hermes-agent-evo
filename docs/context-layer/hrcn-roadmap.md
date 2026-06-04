@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v0.6 - Repair Recommendation Adapter Design
+HRCN v0.6.1 - README Geometry Closure
 
 ## Phase Map
 
@@ -19,6 +19,7 @@ HRCN v0.6 - Repair Recommendation Adapter Design
 | HRCN v0.4 | CMS Read-Only Bridge Design | Design only; no memory writes, loader, adapter, or CMS import. |
 | HRCN v0.5 | Memory Permission Adapter Design | Permission matrix design only; no adapter implementation or apply authority. |
 | HRCN v0.6 | Repair Recommendation Adapter Design | Recommendation design only; no repair execution, dry-run executor, or apply authority. |
+| HRCN v0.6.1 | README Geometry Closure | Render hygiene and HRCN block placement closure; no runtime or adapter changes. |
 | HRCN v0.7 | Dry-Run Adapter Design | Simulation only. |
 | HRCN v0.8 | Apply-Gate Adapter Design | Human authorization and rollback requirements. |
 | HRCN v0.9 | Evidence Package and Benchmark Harness | Evidence contract. |
