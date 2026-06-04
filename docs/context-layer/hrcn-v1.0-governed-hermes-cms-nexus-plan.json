@@ -1,0 +1,181 @@
+{
+  "checkpoint": "Governed Hermes-CMS Nexus Planning",
+  "cms_read_only_mirror_authorization_path": {
+    "cms_copy_allowed_in_v1_0": false,
+    "future_disallowed_initial_authorities": [
+      "runtime integration",
+      "CMS write authority",
+      "memory write authority",
+      "API authority",
+      "repair apply authority",
+      "autonomous authority",
+      "security/production correctness claims"
+    ],
+    "future_import_mode": "read_only_mirror_candidate",
+    "future_required_inputs": [
+      "CMS source repository or local source path",
+      "import method decision",
+      "source commit/hash or snapshot identifier",
+      "file manifest before copy",
+      "license/provenance note",
+      "secret scan before copy",
+      "read-only boundary statement",
+      "blocked-authority statement",
+      "rollback/removal plan",
+      "post-import validation commands",
+      "human authorization"
+    ],
+    "next_recommended_phase": "HRCN v1.0.1 - CMS Read-Only Mirror Import Authorization Path"
+  },
+  "core_relation": {
+    "C": "Cybernetic Memory System governance layer",
+    "E": "Evidence package and benchmark harness",
+    "H": "Hermes Agent Evo action runtime",
+    "N": "HRCN bridge contract",
+    "R": "RCC/RCC-N repository orientation layer",
+    "U": "Human authorization boundary",
+    "formula": "Nexus = H o R o C o N o E o U",
+    "operational_order": "R -> C -> E -> N -> H -> U"
+  },
+  "created_utc": "2026-06-04T23:20:36.413772+00:00",
+  "decision_rules": [
+    "No nexus plan can authorize itself.",
+    "No nexus plan can copy CMS in v1.0.",
+    "No nexus plan can mutate live runtime, dependencies, CMS, API config, secrets, package state, or docs outside allowed paths.",
+    "No CMS mirror can become authority merely by existing.",
+    "No evidence package can grant runtime or apply authority without explicit later gate and human authorization.",
+    "The next CMS step must be read-only mirror authorization, not runtime integration.",
+    "If CMS provenance, manifest, secret scan, rollback, validation, or authorization is missing, CMS import remains blocked.",
+    "If a future request attempts live authority, classify as blocked_live_authority."
+  ],
+  "forbidden_v1_0_behaviors": [
+    "implement adapter",
+    "create runtime loader",
+    "create dry-run executor",
+    "create apply executor",
+    "create benchmark executor",
+    "execute repair",
+    "copy CMS folder",
+    "import CMS folder",
+    "write to CMS",
+    "write to Hermes runtime",
+    "modify dependencies",
+    "call external APIs",
+    "store secrets",
+    "stage commit or push as nexus side effect",
+    "grant live apply/write authority"
+  ],
+  "future_gate_sequence": [
+    "v1.0 governed Hermes-CMS nexus planning",
+    "v1.0.1 CMS read-only mirror import authorization path",
+    "v1.0.2 CMS mirror preflight manifest and secret-scan plan",
+    "v1.0.3 CMS read-only mirror copy with evidence package",
+    "v1.1 bounded context packet from CMS to Hermes",
+    "v1.2 permission bridge dry-run design"
+  ],
+  "nexus_is_not": [
+    "runtime implementation",
+    "loader",
+    "adapter",
+    "CMS copy",
+    "CMS import",
+    "CMS write authority",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "nexus_modes": {
+    "apply_gate_candidate": {
+      "allowed_now": false,
+      "meaning": "Future apply gate requiring explicit human authorization, rollback, validation, and evidence.",
+      "requires_next_phase": "future apply authorization only"
+    },
+    "context_packet_candidate": {
+      "allowed_now": false,
+      "meaning": "Future packet that lets Hermes read bounded CMS context.",
+      "requires_next_phase": "post-read-only-mirror validation"
+    },
+    "dry_run_bridge_candidate": {
+      "allowed_now": false,
+      "meaning": "Future bridge that simulates Hermes-CMS interaction.",
+      "requires_next_phase": "future sandbox/dry-run authorization"
+    },
+    "permission_bridge_candidate": {
+      "allowed_now": false,
+      "meaning": "Future bridge that classifies memory/context permission without writes.",
+      "requires_next_phase": "future adapter design after mirror validation"
+    },
+    "planning_only": {
+      "allowed_now": true,
+      "live_authority": false,
+      "meaning": "Design and documentation only."
+    },
+    "read_only_mirror_candidate": {
+      "allowed_now": false,
+      "meaning": "Future CMS folder mirror or imported snapshot, read-only and non-authoritative.",
+      "requires_next_phase": "HRCN v1.0.x CMS Read-Only Mirror Import Authorization Path"
+    },
+    "runtime_integration_candidate": {
+      "allowed_now": false,
+      "meaning": "Future live runtime bridge, currently blocked.",
+      "requires_next_phase": "not authorized by v1.0"
+    }
+  },
+  "nexus_purpose": "Define how Hermes, RCC, CMS, HRCN, evidence, rollback, and human authorization will coordinate before any live bridge exists.",
+  "nexus_surfaces": {
+    "cms_governance": {
+      "current_authority": "planned_read_only_mirror_candidate",
+      "role": "future governed memory and permission substrate",
+      "v1_0_write_authority": false
+    },
+    "evidence_harness": {
+      "current_authority": "evidence_gate_design",
+      "role": "binds claims/actions to artifacts",
+      "v1_0_write_authority": false
+    },
+    "hermes_runtime": {
+      "current_authority": "read_only_reference",
+      "role": "acts",
+      "v1_0_write_authority": false
+    },
+    "hrcn_bridge": {
+      "current_authority": "contract_design",
+      "role": "defines allowed transitions and boundaries",
+      "v1_0_write_authority": false
+    },
+    "human_director": {
+      "current_authority": "explicit_human_authorization_required",
+      "role": "authorizes dangerous transitions",
+      "v1_0_write_authority": true
+    },
+    "rcc_orientation": {
+      "current_authority": "docs_context",
+      "role": "orients repository context",
+      "v1_0_write_authority": false
+    }
+  },
+  "non_claim_lock": "HRCN v1.0 is a docs/context governed Hermes-CMS nexus planning layer. It defines the architecture, evidence gates, authority boundaries, and future CMS read-only mirror authorization path for nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "previous_validated_anchor": "HRCN v0.9.1",
+  "primary_law": "The nexus may coordinate; it may not self-authorize.",
+  "repository": "hermes-agent-evo",
+  "required_nexus_fields": [
+    "source",
+    "timestamp_utc",
+    "nexus_plan_id",
+    "validated_anchor",
+    "target_surface",
+    "evidence_reference",
+    "cms_import_gate_reference",
+    "authority_boundary",
+    "allowed_mode",
+    "blocked_mode",
+    "rollback_requirement",
+    "validation_requirement",
+    "human_authorization_requirement",
+    "promotion_decision"
+  ],
+  "schema": "HRCN-v1.0-governed-hermes-cms-nexus-plan",
+  "version": "HRCN v1.0"
+}

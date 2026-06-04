@@ -204,3 +204,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 
 | `hrcn-v0.9.1-runtime-boundary-alignment.validation.json` | v0.9.1 runtime-boundary alignment validation artifact. |
 | `hrcn-v0.9.1-runtime-boundary-alignment.validation.md` | v0.9.1 runtime-boundary alignment validation report. |
+
+| `hrcn-v1.0-governed-hermes-cms-nexus-plan.json` | v1.0 machine-readable governed Hermes-CMS nexus plan. |
+| `hrcn-v1.0-governed-hermes-cms-nexus-plan.md` | v1.0 human-readable governed Hermes-CMS nexus plan. |
+| `hrcn-v1.0.validation.json` | v1.0 validation artifact. |
+| `hrcn-v1.0.validation.md` | v1.0 validation report. |

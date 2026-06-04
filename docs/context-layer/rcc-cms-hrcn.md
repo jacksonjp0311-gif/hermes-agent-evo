@@ -422,3 +422,36 @@ docs/context-layer/hrcn-v0.9.validation.md
 
 Non-claim lock: HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V09_EVIDENCE_BENCHMARK_END -->
+
+<!-- HRCN_V10_GOVERNED_NEXUS_START -->
+## HRCN v1.0 - Governed Hermes-CMS Nexus Planning
+
+HRCN v1.0 defines the governed nexus boundary for future Hermes-CMS work.
+
+```text
+The nexus may coordinate; it may not self-authorize.
+Hermes acts
+RCC orients
+CMS governs
+HRCN bridges
+evidence bounds
+human authorization unlocks dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.0-governed-hermes-cms-nexus-plan.json
+docs/context-layer/hrcn-v1.0-governed-hermes-cms-nexus-plan.md
+docs/context-layer/hrcn-v1.0.validation.json
+docs/context-layer/hrcn-v1.0.validation.md
+```
+
+Next recommended phase:
+
+```text
+HRCN v1.0.1 - CMS Read-Only Mirror Import Authorization Path
+```
+
+Non-claim lock: HRCN v1.0 is a docs/context governed Hermes-CMS nexus planning layer. It defines the architecture, evidence gates, authority boundaries, and future CMS read-only mirror authorization path for nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V10_GOVERNED_NEXUS_END -->

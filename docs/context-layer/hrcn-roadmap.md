@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v0.9.1 - Runtime Boundary Alignment Closure
+HRCN v1.0 - Governed Hermes-CMS Nexus Planning
 
 ## Phase Map
 
@@ -24,17 +24,21 @@ HRCN v0.9.1 - Runtime Boundary Alignment Closure
 | HRCN v0.8 | Apply-Gate Adapter Design | Apply-gate design only; no apply executor, live mutation, or write authority. |
 | HRCN v0.9 | Evidence Package and Benchmark Harness | Evidence design only; no benchmark executor, CMS copy, live mutation, or write authority. |
 | HRCN v0.9.1 | Runtime Boundary Alignment Closure | Current-state wording closure before v1.0; no runtime, CMS copy, benchmark executor, or write authority. |
-| HRCN v1.0 | Governed Hermes-CMS Nexus Planning | Nexus planning only unless separately authorized. |
-| HRCN v1.0.x | CMS Read-Only Mirror Import Authorization Path | Future path; requires evidence gate, provenance, manifest, secret scan, rollback, validation, and human authorization. |
+| HRCN v1.0 | Governed Hermes-CMS Nexus Planning | Nexus planning only; no CMS copy, adapter, runtime mutation, or write authority. |
+| HRCN v1.0.1 | CMS Read-Only Mirror Import Authorization Path | Future authorization path; no live CMS authority. |
+| HRCN v1.0.2 | CMS Mirror Preflight Manifest and Secret-Scan Plan | Future manifest/preflight plan. |
+| HRCN v1.0.3 | CMS Read-Only Mirror Copy With Evidence Package | Future copy only after explicit authorization. |
+| HRCN v1.1 | Bounded CMS Context Packet | Future bounded read-only context packet. |
+| HRCN v1.2 | Permission Bridge Dry-Run Design | Future adapter/dry-run design only. |
 
 ## Next Anchor
 
-HRCN v1.0 - Governed Hermes-CMS Nexus Planning.
+HRCN v1.0.1 - CMS Read-Only Mirror Import Authorization Path.
 
 ## Near-Term CMS Import Boundary
 
-CMS is near, but not copied in v0.9.1. A future CMS read-only mirror/import step requires provenance, manifest, secret scan, read-only boundary, rollback/removal plan, validation commands, and explicit human authorization.
+CMS is now the next visible substrate, but v1.0 does not copy CMS. The next phase must authorize a read-only mirror/import path with provenance, manifest, secret scan, read-only boundary, rollback/removal plan, validation commands, and explicit human authorization.
 
 ## Non-Claim Lock
 
-HRCN v0.9 is a docs/context evidence package and benchmark harness design layer. It defines evidence artifacts, benchmark boundaries, audit requirements, and CMS import evidence gates for future nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v1.0 is a docs/context governed Hermes-CMS nexus planning layer. It defines the architecture, evidence gates, authority boundaries, and future CMS read-only mirror authorization path for nexus work. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
