@@ -197,7 +197,6 @@ docs/context-layer/hrcn-v0.2.validation.md
 Non-claim lock: HRCN v0.2 is a read-only repository surface boundary map. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V02_SURFACE_BOUNDARY_CONTEXT_END -->
 
-
 <!-- HRCN_V023_RENDER_HYGIENE_START -->
 ## HRCN v0.2.3 - README Render Hygiene and Bug/Lesson Closure
 
