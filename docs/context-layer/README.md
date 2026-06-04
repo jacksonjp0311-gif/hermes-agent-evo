@@ -178,3 +178,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v0.5-memory-permission-adapter-design.md` | v0.5 human-readable memory permission adapter design. |
 | `hrcn-v0.5.validation.json` | v0.5 validation artifact. |
 | `hrcn-v0.5.validation.md` | v0.5 validation report. |
+
+| `hrcn-v0.6-repair-recommendation-adapter-design.json` | v0.6 machine-readable repair recommendation adapter design. |
+| `hrcn-v0.6-repair-recommendation-adapter-design.md` | v0.6 human-readable repair recommendation adapter design. |
+| `hrcn-v0.6.validation.json` | v0.6 validation artifact. |
+| `hrcn-v0.6.validation.md` | v0.6 validation report. |

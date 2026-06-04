@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v0.5 - Memory Permission Adapter Design
+HRCN v0.6 - Repair Recommendation Adapter Design
 
 ## Phase Map
 
@@ -18,7 +18,7 @@ HRCN v0.5 - Memory Permission Adapter Design
 | HRCN v0.3 | Agent Rehydration Packet Contract | Context packet contract; no loader, runtime mutation, or CMS import. |
 | HRCN v0.4 | CMS Read-Only Bridge Design | Design only; no memory writes, loader, adapter, or CMS import. |
 | HRCN v0.5 | Memory Permission Adapter Design | Permission matrix design only; no adapter implementation or apply authority. |
-| HRCN v0.6 | Repair Recommendation Adapter Design | Recommendations only. |
+| HRCN v0.6 | Repair Recommendation Adapter Design | Recommendation design only; no repair execution, dry-run executor, or apply authority. |
 | HRCN v0.7 | Dry-Run Adapter Design | Simulation only. |
 | HRCN v0.8 | Apply-Gate Adapter Design | Human authorization and rollback requirements. |
 | HRCN v0.9 | Evidence Package and Benchmark Harness | Evidence contract. |
@@ -26,8 +26,8 @@ HRCN v0.5 - Memory Permission Adapter Design
 
 ## Next Anchor
 
-HRCN v0.6 - Repair Recommendation Adapter Design.
+HRCN v0.7 - Dry-Run Adapter Design.
 
 ## Non-Claim Lock
 
-HRCN v0.5 is a docs/context memory-permission adapter design layer. It defines permission classes and gates for future memory use. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.6 is a docs/context repair-recommendation adapter design layer. It defines recommendation classes and gates for future repair advice. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.

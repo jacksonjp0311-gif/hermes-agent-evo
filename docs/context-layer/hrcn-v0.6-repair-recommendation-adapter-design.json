@@ -1,0 +1,140 @@
+{
+  "adapter_is_not": [
+    "runtime implementation",
+    "repair engine implementation",
+    "loader",
+    "dry-run executor",
+    "CMS import",
+    "memory writer",
+    "repair applier",
+    "API writer",
+    "autonomous authority",
+    "production/security proof"
+  ],
+  "adapter_purpose": "Design how future memory/CMS/context may produce bounded repair recommendations without applying changes.",
+  "checkpoint": "Repair Recommendation Adapter Design",
+  "created_utc": "2026-06-04T22:31:37.728122+00:00",
+  "decision_rules": [
+    "No recommendation can apply itself.",
+    "No recommendation can stage, commit, push, or mutate files.",
+    "No recommendation can upgrade to dry-run without future dry-run phase authorization.",
+    "No recommendation can upgrade to apply/write without apply-gate authorization.",
+    "Runtime, dependency, CMS, API, secret, and package changes are blocked in v0.6.",
+    "If a recommendation touches dangerous surfaces, classify as blocked_runtime_repair or apply_gate_candidate.",
+    "Every recommendation must include evidence boundary, validation requirement, and rollback requirement.",
+    "If evidence is missing, classify as diagnostic or observe_only."
+  ],
+  "forbidden_v0_6_behaviors": [
+    "implement adapter",
+    "create runtime loader",
+    "execute repair",
+    "write to CMS",
+    "write to Hermes runtime",
+    "modify dependencies",
+    "create cms/ root folder",
+    "call external APIs",
+    "store secrets",
+    "run dry-run executor",
+    "grant apply/write authority"
+  ],
+  "future_gate_sequence": [
+    "v0.6 repair recommendation adapter design",
+    "v0.7 dry-run adapter design",
+    "v0.8 apply-gate adapter design",
+    "v0.9 evidence package and benchmark harness",
+    "v1.0 governed Hermes-CMS nexus"
+  ],
+  "geometry": {
+    "apply_candidate": "what remains blocked until apply-gate exists",
+    "authorization": "human-controlled transition boundary",
+    "diagnosis": "why it likely failed, with uncertainty",
+    "dry_run_candidate": "what may be simulated in a future phase",
+    "observation": "what failed or drifted",
+    "recommendation": "what could be changed"
+  },
+  "non_claim_lock": "HRCN v0.6 is a docs/context repair-recommendation adapter design layer. It defines recommendation classes and gates for future repair advice. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "previous_validated_anchor": "HRCN v0.5",
+  "primary_law": "A repair recommendation may describe a path; it may not apply the path.",
+  "recommendation_classes": {
+    "apply_gate_candidate": {
+      "allowed_outputs": [
+        "apply-gate request draft",
+        "rollback requirement",
+        "evidence requirement"
+      ],
+      "meaning": "Recommend that a change should later enter apply-gate review.",
+      "requires_human_authorization": true
+    },
+    "blocked_runtime_repair": {
+      "allowed_outputs": [
+        "blocked action note",
+        "required future gates"
+      ],
+      "meaning": "Runtime/dependency/CMS/API repair is out of phase and must not be applied.",
+      "requires_human_authorization": true
+    },
+    "diagnostic": {
+      "allowed_outputs": [
+        "diagnosis",
+        "uncertainty note",
+        "evidence gap"
+      ],
+      "meaning": "Describe probable cause and evidence boundary.",
+      "requires_human_authorization": false
+    },
+    "documentation_repair": {
+      "allowed_outputs": [
+        "docs repair recommendation",
+        "validation checklist"
+      ],
+      "meaning": "Recommend docs/context update only.",
+      "requires_human_authorization": false
+    },
+    "dry_run_recommendation": {
+      "allowed_outputs": [
+        "dry-run proposal"
+      ],
+      "meaning": "Recommend a future dry-run simulation but do not run it.",
+      "requires_human_authorization": true
+    },
+    "none": {
+      "allowed_outputs": [],
+      "meaning": "No recommendation should be made.",
+      "requires_human_authorization": false
+    },
+    "observe_only": {
+      "allowed_outputs": [
+        "observation note"
+      ],
+      "meaning": "Describe the observed condition without proposing repair.",
+      "requires_human_authorization": false
+    },
+    "test_recommendation": {
+      "allowed_outputs": [
+        "test plan",
+        "validation plan"
+      ],
+      "meaning": "Recommend tests or validation commands without editing runtime.",
+      "requires_human_authorization": false
+    }
+  },
+  "repository": "hermes-agent-evo",
+  "required_recommendation_fields": [
+    "source",
+    "timestamp_utc",
+    "observed_condition",
+    "diagnosis",
+    "recommendation_class",
+    "target_surface",
+    "authority_class",
+    "evidence_boundary",
+    "risk_level",
+    "allowed_output",
+    "blocked_output",
+    "required_validation",
+    "rollback_requirement",
+    "human_authorization_requirement"
+  ],
+  "schema": "HRCN-v0.6-repair-recommendation-adapter-design",
+  "version": "HRCN v0.6"
+}

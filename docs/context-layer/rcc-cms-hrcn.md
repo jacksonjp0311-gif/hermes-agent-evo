@@ -317,3 +317,29 @@ docs/context-layer/hrcn-v0.5.validation.md
 
 Non-claim lock: HRCN v0.5 is a docs/context memory-permission adapter design layer. It defines permission classes and gates for future memory use. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V05_MEMORY_PERMISSION_END -->
+
+<!-- HRCN_V06_REPAIR_RECOMMENDATION_START -->
+## HRCN v0.6 - Repair Recommendation Adapter Design
+
+HRCN v0.6 defines the boundary for future repair recommendations.
+
+```text
+A repair recommendation may describe a path; it may not apply the path.
+recommendation is not execution
+diagnosis is not validation
+dry-run candidacy is not dry-run execution
+apply-gate candidacy is not apply authority
+human authorization gates dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.json
+docs/context-layer/hrcn-v0.6-repair-recommendation-adapter-design.md
+docs/context-layer/hrcn-v0.6.validation.json
+docs/context-layer/hrcn-v0.6.validation.md
+```
+
+Non-claim lock: HRCN v0.6 is a docs/context repair-recommendation adapter design layer. It defines recommendation classes and gates for future repair advice. It does not create a loader, adapter, runtime bridge, CMS folder, memory writer, repair applier, API writer, dry-run executor, or live integration. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V06_REPAIR_RECOMMENDATION_END -->
