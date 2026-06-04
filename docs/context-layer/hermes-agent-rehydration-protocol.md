@@ -1,4 +1,4 @@
-# Hermes Agent Rehydration Protocol — HRCN v0.2.4
+# Hermes Agent Rehydration Protocol — HRCN v0.3
 
 Status: docs/context/navigation protocol only.
 
@@ -63,6 +63,8 @@ Read:
 - `docs/context-layer/hrcn-v0.1.4.validation.json`
 - `docs/context-layer/hrcn-v0.2.validation.json`
 - `docs/context-layer/hrcn-v0.2.4.public-surface-coherence.validation.json`
+- `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json`
+- `docs/context-layer/hrcn-v0.3.validation.json`
 - `git status --short`
 
 Recover:
@@ -104,6 +106,28 @@ Classify requested work:
 | `apply_write` | mutate runtime/dependency/bridge behavior | blocked |
 | `cms_intake` | add or activate CMS root/bridge surfaces | future phase |
 
+### 6. Packet Contract Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json`
+- `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.md`
+
+Recover:
+
+- packet required fields
+- authority class vocabulary
+- blocked actions
+- runtime mutation gate
+- human authorization requirement
+- non-claim lock
+
+Core rule:
+
+```text
+A rehydration packet orients an agent; it does not authorize an agent.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -122,4 +146,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v0.2.4 is a public-surface coherence recovery layer. It repairs README render hygiene, roadmap drift, rehydration drift, mini README boundary wording, and bug/lesson logs. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v0.3 is a docs/context packet-contract layer. It defines the packet a future agent must load before proposing work. It does not create a loader, modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.

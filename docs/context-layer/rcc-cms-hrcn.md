@@ -241,3 +241,28 @@ HRCN-L-012: every script begins with location/root verification.
 
 Non-claim lock: HRCN v0.2.4 is a public-surface coherence recovery layer. It repairs README render hygiene, roadmap drift, rehydration drift, mini README boundary wording, and bug/lesson logs. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V024_PUBLIC_SURFACE_COHERENCE_END -->
+
+<!-- HRCN_V03_AGENT_PACKET_START -->
+## HRCN v0.3 - Agent Rehydration Packet Contract
+
+HRCN v0.3 defines a bounded packet contract for future agent orientation.
+
+```text
+A rehydration packet orients an agent; it does not authorize an agent.
+packet contract is not a loader
+packet presence is not write authority
+classification precedes proposal
+human authorization gates dangerous transitions
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json
+docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.md
+docs/context-layer/hrcn-v0.3.validation.json
+docs/context-layer/hrcn-v0.3.validation.md
+```
+
+Non-claim lock: HRCN v0.3 is a docs/context packet-contract layer. It defines the packet a future agent must load before proposing work. It does not create a loader, modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+<!-- HRCN_V03_AGENT_PACKET_END -->

@@ -163,3 +163,8 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 
 | `hrcn-v0.2.3.render-hygiene.validation.json` | v0.2.3 README render hygiene and lesson-logging validation artifact. |
 | `hrcn-v0.2.3.render-hygiene.validation.md` | v0.2.3 README render hygiene and lesson-logging validation report. |
+
+| `hrcn-v0.3-agent-rehydration-packet-contract.json` | v0.3 machine-readable agent rehydration packet contract. |
+| `hrcn-v0.3-agent-rehydration-packet-contract.md` | v0.3 human-readable packet contract. |
+| `hrcn-v0.3.validation.json` | v0.3 validation artifact. |
+| `hrcn-v0.3.validation.md` | v0.3 validation report. |

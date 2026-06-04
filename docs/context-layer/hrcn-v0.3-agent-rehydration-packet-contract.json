@@ -1,0 +1,125 @@
+{
+  "authority_classes": {
+    "apply_write": {
+      "current_status": "blocked",
+      "meaning": "Mutate runtime, dependencies, bridge, tools, providers, UI, web, CMS, or package state."
+    },
+    "cms_intake": {
+      "current_status": "future phase",
+      "meaning": "Add, mirror, or activate CMS surfaces inside Hermes."
+    },
+    "docs_only": {
+      "current_status": "allowed when validation passes",
+      "meaning": "README/context/navigation edits."
+    },
+    "dry_run": {
+      "current_status": "future phase",
+      "meaning": "Simulate a proposed action without applying it."
+    },
+    "read_only_context": {
+      "current_status": "allowed",
+      "meaning": "Inspect, map, summarize, or classify surfaces."
+    }
+  },
+  "blocked_actions_in_v0_3": [
+    "create runtime loader",
+    "modify Hermes runtime source",
+    "modify dependencies",
+    "create or import cms/ root folder",
+    "grant CMS memory authority",
+    "grant API write authority",
+    "execute repair apply",
+    "store secrets",
+    "claim security, production readiness, autonomy, consciousness, sentience, AGI, ASI, or external validation"
+  ],
+  "checkpoint": "Agent Rehydration Packet Contract",
+  "created_utc": "2026-06-04T21:57:04.301949+00:00",
+  "non_claim_lock": "HRCN v0.3 is a docs/context packet-contract layer. It defines the packet a future agent must load before proposing work. It does not create a loader, modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, CMS folder state, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.",
+  "packet_is_not": [
+    "runtime loader",
+    "runtime authority",
+    "CMS authority",
+    "API write authority",
+    "security proof",
+    "production readiness proof",
+    "autonomy grant",
+    "AGI/ASI claim",
+    "external validation"
+  ],
+  "packet_purpose": "Orient a future human or AI agent before proposal, patch, dry-run, CMS bridge design, or apply/write action.",
+  "previous_validated_anchor": "HRCN v0.2.4",
+  "primary_law": "A rehydration packet orients an agent; it does not authorize an agent.",
+  "repository": "hermes-agent-evo",
+  "required_packet_fields": [
+    "schema",
+    "version",
+    "repository_identity",
+    "current_checkpoint",
+    "previous_validated_anchor",
+    "surface_boundary_map_digest",
+    "target_surface",
+    "target_surface_class",
+    "target_authority_class",
+    "phase_permission",
+    "read_set",
+    "blocked_actions",
+    "required_scans",
+    "required_validation",
+    "cms_intake_state",
+    "cms_authority_state",
+    "human_authorization_requirement",
+    "runtime_mutation_gate",
+    "rollback_requirement",
+    "evidence_contract",
+    "non_claim_lock"
+  ],
+  "required_scans": {
+    "authority_scan": [
+      "classify authority class",
+      "identify human authorization requirement",
+      "identify rollback requirement",
+      "identify evidence requirement"
+    ],
+    "boundary_scan": [
+      "docs/context-layer/hrcn-profile-map.json",
+      "docs/context-layer/hermes-surface-boundary-map.json",
+      "docs/context-layer/hermes-surface-boundary-map.md",
+      "docs/context-layer/hrcn-roadmap.md",
+      "target folder README.md"
+    ],
+    "identity_scan": [
+      "README.md",
+      "AGENTS.md",
+      "docs/context-layer/rcc-cms-hrcn.md"
+    ],
+    "state_scan": [
+      "docs/context-layer/hrcn-v0.2.validation.json",
+      "docs/context-layer/hrcn-v0.2.4.public-surface-coherence.validation.json",
+      "docs/context-layer/hrcn-v0.3.validation.json",
+      "git status --short"
+    ],
+    "target_scan": [
+      "target folder README.md",
+      "relevant source files",
+      "relevant tests",
+      "relevant docs",
+      "surface map entry for target"
+    ]
+  },
+  "runtime_mutation_gate": {
+    "required_before_any_runtime_mutation": [
+      "surface map",
+      "packet contract",
+      "read-only bridge design",
+      "proposal classifier",
+      "dry-run design",
+      "rollback coverage",
+      "evidence package",
+      "human authorization",
+      "post-action validation"
+    ],
+    "v0_3_runtime_mutation_allowed": false
+  },
+  "schema": "HRCN-v0.3-agent-rehydration-packet-contract",
+  "version": "HRCN v0.3"
+}
