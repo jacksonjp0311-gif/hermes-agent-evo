@@ -1,0 +1,33 @@
+{
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "apply_authority_granted": false,
+  "automatic_rollback_enabled": false,
+  "checks": {
+    "all_paths_within_scope": true,
+    "automatic_rollback_enabled": false,
+    "expected_base_commit_present": true,
+    "limited_apply_audit_ref_present": true,
+    "post_apply_validation_ref_present": true,
+    "rollback_packet_ref_present": true,
+    "self_authorization_enabled": false
+  },
+  "head": "f130adb09bdb34ec2b99444d2d3a97ebf5a5839b",
+  "manifest_id": "OPS-002-1-replay-rollback-20260605T122719Z",
+  "paths": [
+    "docs/context-layer/ops/OPS-002.1-cadence-surface-closure.md",
+    "docs/context-layer/ops/OPS-002.1-rollback-packet.json",
+    "docs/context-layer/ops/OPS-002-authority-boundary.md",
+    "docs/context-layer/ops/OPS-002-command-map.md",
+    "docs/context-layer/ops/OPS-002-morning-runbook.md",
+    "docs/context-layer/ops/OPS-002-rollback-plan.md",
+    "docs/context-layer/ops/OPS-002-validation-plan.md"
+  ],
+  "replayable": true,
+  "rollback_ready": true,
+  "schema": "HRCN-v1.8-replay-rollback-report",
+  "self_authorization_enabled": false,
+  "timestamp_utc": "2026-06-05T12:27:21.960932+00:00"
+}

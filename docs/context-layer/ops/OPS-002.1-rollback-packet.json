@@ -1,0 +1,36 @@
+{
+    "schema":  "HRCN-OPS-002.1-rollback-packet",
+    "operation":  "OPS-002.1",
+    "base_commit":  "f130adb09bdb34ec2b99444d2d3a97ebf5a5839b",
+    "rollback_scope":  [
+                           "docs/context-layer/ops/OPS-002*",
+                           "docs/context-layer/ops/OPS-002.1*"
+                       ],
+    "operations":  [
+                       {
+                           "operation":  "delete",
+                           "path":  "docs/context-layer/ops/OPS-002-command-map.md"
+                       },
+                       {
+                           "operation":  "delete",
+                           "path":  "docs/context-layer/ops/OPS-002-morning-runbook.md"
+                       },
+                       {
+                           "operation":  "delete",
+                           "path":  "docs/context-layer/ops/OPS-002-authority-boundary.md"
+                       },
+                       {
+                           "operation":  "delete",
+                           "path":  "docs/context-layer/ops/OPS-002-validation-plan.md"
+                       },
+                       {
+                           "operation":  "delete",
+                           "path":  "docs/context-layer/ops/OPS-002-rollback-plan.md"
+                       },
+                       {
+                           "operation":  "delete",
+                           "path":  "docs/context-layer/ops/OPS-002.1-cadence-surface-closure.md"
+                       }
+                   ],
+    "non_claim_lock":  "Rollback packet is not automatic rollback authority."
+}

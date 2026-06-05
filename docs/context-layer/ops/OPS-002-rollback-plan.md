@@ -1,9 +1,11 @@
 # OPS-002 Rollback Plan
 
-Rollback is docs/context-only:
+Rollback is docs/context-only.
 
-- delete OPS-002 files under docs/context-layer/ops/
-- delete OPS-002 generated ledger/report outputs if required
-- or revert the OPS-002 commit after push
+Options:
 
-No runtime, CMS, API, memory, or dependency rollback is required because OPS-002 does not touch those surfaces.
+1. Delete OPS-002 and OPS-002.1 files under docs/context-layer/ops/.
+2. Delete generated OPS-002.1 ledger/report files if needed.
+3. Revert the OPS-002.1 commit after push.
+
+No runtime, CMS, API, memory, or dependency rollback is required because OPS-002.1 does not touch those surfaces.

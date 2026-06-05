@@ -1,17 +1,16 @@
 # OPS-002 Authority Boundary
 
-OPS-002 does not widen authority.
+OPS-002 and OPS-002.1 do not widen authority.
 
-Allowed:
+Allowed surfaces:
 
 - docs/context-layer/ops/**
 - docs/context-layer/hrcn-v1.6-apply-ledger/**
 - docs/context-layer/hrcn-v1.7-operational-ledger/**
 - docs/context-layer/hrcn-v1.8-replay-ledger/**
-- docs/context-layer/hrcn-v1.9-operator-packets/**
 - docs/context-layer/hrcn-v2.0-nexus-reports/**
 
-Blocked:
+Blocked surfaces:
 
 - Hermes runtime mutation
 - cms/ write
@@ -21,4 +20,4 @@ Blocked:
 - autonomous authority
 - self-authorization
 
-Primary lock: operational cadence makes the governed path repeatable; it does not become permission.
+Primary lock: cadence is repeatability, not permission.
