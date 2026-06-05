@@ -1,0 +1,59 @@
+{
+    "schema":  "HRCN-OPS-005-provider-gated-first-model-run",
+    "operation":  "OPS-005",
+    "timestamp_utc":  "2026-06-05T13:37:44.3280253Z",
+    "base_commit":  "085bc051b2f5e842a21a906a79eb1fc9329f24d2",
+    "ops_004_2_prerequisite_passed":  true,
+    "human_authorization_phrase_matched":  true,
+    "provider_gate_passed":  false,
+    "expected_reply_seen":  false,
+    "provider_attempt_detected":  false,
+    "hermes_agent_exe_executed":  false,
+    "oneshot_executed":  true,
+    "prompt_class":  "tiny_exact_reply_no_tools_requested",
+    "model_call_attempted":  false,
+    "model_call_succeeded":  false,
+    "runtime_source_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "env_file_committed":  false,
+    "self_authorization":  false,
+    "command_results":  [
+                            {
+                                "label":  "hermes-version",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes.exe",
+                                             "--version"
+                                         ],
+                                "timeout_seconds":  60,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "Hermes Agent v0.15.1 (2026.5.29)\nProject: C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\nPython: 3.11.15\nOpenAI SDK: 2.24.0\nUp to date\n",
+                                "stderr":  "",
+                                "duration_seconds":  0.63
+                            },
+                            {
+                                "label":  "provider-gated-oneshot",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes.exe",
+                                             "--ignore-rules",
+                                             "--toolsets",
+                                             "none",
+                                             "-z",
+                                             "HRCN OPS-005 provider gate. Do not use tools. Do not browse. Do not inspect files. Reply exactly: HRCN OPS-005 OK"
+                                         ],
+                                "timeout_seconds":  240,
+                                "exit_code":  2,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "hermes -z: ignoring unknown --toolsets entries: none\nhermes -z: --toolsets did not contain any valid toolsets.\n",
+                                "duration_seconds":  1.463
+                            }
+                        ],
+    "next_recommended_operation":  "OPS-005.1 provider gate repair from redacted evidence",
+    "non_claim_lock":  "OPS-005 is a single human-authorized provider-gated model run. It does not grant ongoing provider authority, CMS write authority, memory write authority, API write authority, dependency mutation, runtime mutation, autonomous authority, production readiness, or self-authorization."
+}

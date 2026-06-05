@@ -1,0 +1,21 @@
+{
+    "schema":  "HRCN-OPS-005-final-evidence",
+    "operation":  "OPS-005",
+    "timestamp_utc":  "2026-06-05T13:37:44.3280253Z",
+    "base_commit":  "085bc051b2f5e842a21a906a79eb1fc9329f24d2",
+    "ops_004_2_prerequisite_passed":  true,
+    "human_authorization_phrase_matched":  true,
+    "provider_gate_passed":  false,
+    "expected_reply_seen":  false,
+    "model_call_attempted":  false,
+    "model_call_succeeded":  false,
+    "hermes_agent_exe_executed":  false,
+    "runtime_source_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "env_file_committed":  false,
+    "self_authorization":  false,
+    "non_claim_lock":  "OPS-005 records a single provider-gated run only and grants no ongoing provider, API, CMS, memory, dependency, runtime mutation, autonomous, or self-authorization authority."
+}
