@@ -1,0 +1,41 @@
+{
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "blocked_scope": [
+    "cms/**",
+    "runtime folders",
+    "dependency files",
+    "local secrets",
+    "external APIs"
+  ],
+  "created_authority": {
+    "operator_can_apply": false,
+    "operator_can_call_api": false,
+    "operator_can_rollback_automatically": false,
+    "operator_can_self_authorize": false,
+    "operator_can_widen_scope": false,
+    "operator_command_surface_created": true
+  },
+  "dependencies": {
+    "governed_operational_loop": "scripts/hrcn/governed_operational_loop_v1_7.py",
+    "limited_apply_executor": "scripts/hrcn/limited_apply_executor_v1_6.py",
+    "replay_rollback_hardening": "scripts/hrcn/replay_rollback_hardening_v1_8.py"
+  },
+  "mode": "local_human_operator_command_surface",
+  "next_recommended_phase": "HRCN v2.0 - Operational Hermes-CMS Nexus",
+  "non_claim_lock": "HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.",
+  "operator_commands": [
+    "status",
+    "gates",
+    "next-commands",
+    "make-packet-template"
+  ],
+  "previous_validated_anchor": "HRCN v1.8",
+  "primary_law": "An operator surface may make governed actions visible and selectable; it may not become the operator.",
+  "schema": "HRCN-v1.9-operator-dashboard-command-surface",
+  "timestamp_utc": "2026-06-05T10:18:24.931608+00:00",
+  "tool_path": "scripts/hrcn/operator_command_surface_v1_9.py",
+  "version": "HRCN v1.9"
+}

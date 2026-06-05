@@ -1,8 +1,8 @@
-# Hermes Agent Rehydration Protocol - Current through HRCN v1.8
+# Hermes Agent Rehydration Protocol - Current through HRCN v1.9
 
 Status: docs/context/navigation protocol only.
-Current HRCN state: HRCN v1.8.
-Next anchor: HRCN v1.9 - Operator Dashboard / Command Surface.
+Current HRCN state: HRCN v1.9.
+Next anchor: HRCN v2.0 - Operational Hermes-CMS Nexus.
 
 ## Purpose
 
@@ -96,6 +96,9 @@ Read:
 - `docs/context-layer/hrcn-v1.7.validation.json`
 - `docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json`
 - `docs/context-layer/hrcn-v1.8.validation.json`
+- `docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json`
+- `docs/context-layer/hrcn-v1.9.validation.json`
+- `scripts/hrcn/operator_command_surface_v1_9.py`
 - `scripts/hrcn/replay_rollback_hardening_v1_8.py`
 - `scripts/hrcn/governed_operational_loop_v1_7.py`
 - `scripts/hrcn/limited_apply_executor_v1_6.py`
@@ -543,4 +546,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
+HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.

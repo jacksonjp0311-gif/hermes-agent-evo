@@ -827,3 +827,30 @@ scripts/hrcn/replay_rollback_hardening_v1_8.py
 
 Non-claim lock: HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
 <!-- HRCN_V18_REPLAY_ROLLBACK_HARDENING_END -->
+
+<!-- HRCN_V19_OPERATOR_COMMAND_SURFACE_START -->
+## HRCN v1.9 - Operator Dashboard / Command Surface
+
+```text
+An operator surface may make governed actions visible and selectable; it may not become the operator.
+status command presents current state
+gates command presents required gates
+next-commands command presents manual command sequence
+make-packet-template prepares docs/context operation packet templates only
+operator_can_apply=false
+operator_can_self_authorize=false
+operator_can_call_api=false
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json
+docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.md
+docs/context-layer/hrcn-v1.9.validation.json
+docs/context-layer/hrcn-v1.9.validation.md
+scripts/hrcn/operator_command_surface_v1_9.py
+```
+
+Non-claim lock: HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
+<!-- HRCN_V19_OPERATOR_COMMAND_SURFACE_END -->

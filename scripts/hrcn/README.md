@@ -63,3 +63,19 @@ self-authorization disabled
 
 It does not automatically rollback and does not widen the v1.6/v1.7 scope.
 
+## HRCN v1.9 Operator Dashboard / Command Surface
+
+`operator_command_surface_v1_9.py` is the human-facing local command surface.
+
+Commands:
+
+```text
+--status
+--gates
+--next-commands
+--make-packet-template --summary "..." --target README.md
+```
+
+It can create packet templates under `docs/context-layer/hrcn-v1.9-operator-packets/`.
+It does not apply changes, rollback changes, call APIs, self-authorize, or widen scope.
+

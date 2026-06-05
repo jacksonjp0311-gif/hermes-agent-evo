@@ -74,6 +74,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.6 | Can Hermes create a bounded docs/context-only apply executor without granting self-authorization? | `docs/context-layer/hrcn-v1.6-limited-apply-executor.json` |
 | HRCN v1.7 | Can Hermes coordinate the governed operational loop without bypassing gates or widening scope? | `docs/context-layer/hrcn-v1.7-governed-operational-loop.json` |
 | HRCN v1.8 | Can Hermes harden governed operations with replay, audit, and rollback requirements? | `docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json` |
+| HRCN v1.9 | Can Hermes expose a human operator command surface without becoming the operator? | `docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -98,8 +99,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.8` |
-| Previous validated anchor | `HRCN v1.7` |
+| Current checkpoint | `HRCN v1.9` |
+| Previous validated anchor | `HRCN v1.8` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -110,7 +111,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.8.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.9.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -134,6 +135,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Limited apply executor | `docs/context-layer/hrcn-v1.6-limited-apply-executor.json` |
 | Governed operational loop | `docs/context-layer/hrcn-v1.7-governed-operational-loop.json` |
 | Replay and rollback hardening | `docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json` |
+| Operator dashboard / command surface | `docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json` |
 
 ### Core Law
 
@@ -211,7 +213,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.8 adds replay and rollback hardening; it does not change Hermes runtime.
+HRCN v1.9 adds a human operator command surface; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -1110,6 +1112,39 @@ post-apply validation evidence
 Non-claim lock: replay and rollback hardening validates operational recoverability; it does not automatically rollback, self-authorize, or widen scope.
 <!-- HRCN_V18_REPLAY_ROLLBACK_HARDENING_END -->
 
+<!-- HRCN_V19_OPERATOR_COMMAND_SURFACE_START -->
+### HRCN v1.9 Operator Dashboard / Command Surface
+
+HRCN v1.9 adds the local human operator command surface for governed docs/context operations.
+
+Current rule:
+
+```text
+An operator surface may make governed actions visible and selectable; it may not become the operator.
+```
+
+Operator artifacts:
+
+```text
+docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json
+docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.md
+docs/context-layer/hrcn-v1.9.validation.json
+docs/context-layer/hrcn-v1.9.validation.md
+scripts/hrcn/operator_command_surface_v1_9.py
+```
+
+Operator commands:
+
+```text
+status
+gates
+make-packet-template
+next-commands
+```
+
+Non-claim lock: the operator command surface presents and prepares governed actions; it does not apply, rollback, self-authorize, widen scope, or call APIs.
+<!-- HRCN_V19_OPERATOR_COMMAND_SURFACE_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -1291,7 +1326,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
+HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
