@@ -1,0 +1,30 @@
+{
+  "schema": "HRCN-OPS-019-apply-manifest",
+  "operation": "OPS-019",
+  "timestamp_utc": "2026-06-05T16:14:42.681423+00:00",
+  "apply_count": 3,
+  "apply_gated_loop_cadence_harness_passed": true,
+  "apply_scope": "docs_context_only",
+  "records": [
+    {
+      "apply_index": 1,
+      "source_dry_run": "OPS-018 dry-run-001",
+      "apply_executed": true,
+      "apply_scope": "docs_context_evidence_only"
+    },
+    {
+      "apply_index": 2,
+      "source_dry_run": "OPS-018 dry-run-002",
+      "apply_executed": true,
+      "apply_scope": "docs_context_evidence_only"
+    },
+    {
+      "apply_index": 3,
+      "source_dry_run": "OPS-018 dry-run-003",
+      "apply_executed": true,
+      "apply_scope": "docs_context_evidence_only"
+    }
+  ],
+  "next_recommended_operation": "OPS-020 bounded loop v0.2 seal",
+  "non_claim_lock": "Apply manifest records docs/context evidence only and grants no runtime/CMS/memory/API/dependency/autonomous authority."
+}

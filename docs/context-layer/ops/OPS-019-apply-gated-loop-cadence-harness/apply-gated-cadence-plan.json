@@ -1,0 +1,32 @@
+{
+  "schema": "HRCN-OPS-019-apply-gated-cadence-plan",
+  "operation": "OPS-019",
+  "timestamp_utc": "2026-06-05T16:14:42.306416+00:00",
+  "base_commit": "00d5d1fdcdd2fbc328e0b2a7638c34fc74ef45eb",
+  "release_tag": "hrcn-ops-v0.1.0",
+  "release_tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "human_authorization_phrase_matched": true,
+  "cadence_mode": "apply_gated_docs_context_only",
+  "source_operation": "OPS-018 dry-run-only loop cadence harness",
+  "apply_count": 3,
+  "allowed_actions": [
+    "read OPS-018 dry-run records",
+    "apply docs/context evidence for OPS-019",
+    "write OPS-019 apply-gated evidence",
+    "update README post-seal track",
+    "log lessons"
+  ],
+  "blocked_actions": [
+    "runtime mutation",
+    "CMS runtime execution",
+    "CMS write",
+    "memory write",
+    "API write",
+    "dependency mutation",
+    "environment file commit",
+    "provider/model call",
+    "autonomous operation",
+    "self-authorization"
+  ],
+  "non_claim_lock": "OPS-019 is apply-gated docs/context cadence only. It does not mutate runtime, execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, operate autonomously, or self-authorize."
+}

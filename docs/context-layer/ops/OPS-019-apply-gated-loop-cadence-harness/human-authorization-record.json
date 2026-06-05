@@ -1,0 +1,17 @@
+{
+  "schema": "HRCN-OPS-019-human-authorization-record",
+  "operation": "OPS-019",
+  "timestamp_utc": "2026-06-05T16:14:42.306416+00:00",
+  "required_phrase": "I AUTHORIZE HRCN OPS-019 APPLY GATED LOOP CADENCE HARNESS",
+  "phrase_matched": true,
+  "authorized_scope": "apply-gated docs/context evidence only",
+  "runtime_authority": false,
+  "cms_write_authority": false,
+  "memory_write_authority": false,
+  "api_write_authority": false,
+  "dependency_authority": false,
+  "provider_model_authority": false,
+  "autonomous_authority": false,
+  "self_authorization": false,
+  "non_claim_lock": "The authorization phrase permits one docs/context apply-gated cadence only."
+}

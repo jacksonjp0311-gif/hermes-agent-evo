@@ -1,0 +1,35 @@
+{
+  "schema": "HRCN-OPS-019-apply-record",
+  "operation": "OPS-019",
+  "apply_index": 2,
+  "timestamp_utc": "2026-06-05T16:14:42.680421+00:00",
+  "source_dry_run": "OPS-018 dry-run-002",
+  "source_dry_run_scope": "docs_context_simulation_only",
+  "apply_executed": true,
+  "apply_scope": "docs_context_evidence_only",
+  "applied_outputs": [
+    "OPS-019 apply-gated evidence",
+    "OPS-019 final evidence",
+    "README post-seal track update",
+    "lesson ledger additions"
+  ],
+  "blocked_surfaces_respected": [
+    "runtime source",
+    "CMS runtime",
+    "CMS write targets",
+    "memory stores",
+    "API configuration",
+    "dependency files",
+    "environment files"
+  ],
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "self_authorization": false,
+  "non_claim_lock": "This apply record is docs/context evidence only and grants no wider authority."
+}
