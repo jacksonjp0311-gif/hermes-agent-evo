@@ -1,0 +1,18 @@
+{
+  "schema": "HRCN-OPS-016-exit-criteria",
+  "operation": "OPS-016",
+  "criteria": {
+    "ops_015_prerequisite_passed": true,
+    "human_authorization_phrase_matched": true,
+    "observations_recorded": true,
+    "head_stable_across_observations": true,
+    "prior_evidence_present": true,
+    "proposal_generated": false,
+    "dry_run_executed": false,
+    "apply_executed": false,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true,
+    "all_dangerous_authority_flags_false": true
+  },
+  "next_allowed_operation": "OPS-017 proposal-only loop cadence harness"
+}

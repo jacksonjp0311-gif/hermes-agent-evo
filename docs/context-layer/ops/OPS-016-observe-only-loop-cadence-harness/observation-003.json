@@ -1,0 +1,45 @@
+{
+  "schema": "HRCN-OPS-016-observation",
+  "operation": "OPS-016",
+  "observation_index": 3,
+  "timestamp_utc": "2026-06-05T15:55:03.905282+00:00",
+  "head": "c9c9e0fe4f8b796e9c5660871873a7d9cfb31168",
+  "head_short": "c9c9e0fe4",
+  "git_status_short": "?? docs/context-layer/ops/OPS-016-observe-only-loop-cadence-harness/",
+  "prior_evidence_presence": [
+    {
+      "path": "docs/context-layer/ops/OPS-010-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1477
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-011-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1567
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-012-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1723
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-013-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1559
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-014-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1635
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-015-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1734
+    }
+  ],
+  "proposal_generated": false,
+  "dry_run_executed": false,
+  "apply_executed": false,
+  "non_claim_lock": "This observation is read-only telemetry and grants no authority."
+}
