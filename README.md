@@ -18,22 +18,22 @@
   <a href="https://nousresearch.com">
     <img src="https://img.shields.io/badge/Built%20by-Nous%20Research-blueviolet?style=for-the-badge" alt="Built by Nous Research">
   </a>
-  <a href="README.zh-CN.md">
-    <img src="https://img.shields.io/badge/Lang-Ã¤Â¸Â­Ã¦â€“â€¡-red?style=for-the-badge" alt="Ã¤Â¸Â­Ã¦â€“â€¡">
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/Lang-English-blue?style=for-the-badge" alt="English">
   </a>
 </p>
 
-**The self-improving AI agent built by [Nous Research](https://nousresearch.com).** It's the only agent with a built-in learning loop Ã¢â‚¬â€ it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle. It's not tied to your laptop Ã¢â‚¬â€ talk to it from Telegram while it works on a cloud VM.
+**The self-improving AI agent built by [Nous Research](https://nousresearch.com).** It's the only agent with a built-in learning loop - it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle. It's not tied to your laptop - talk to it from Telegram while it works on a cloud VM.
 
-Use any model you want Ã¢â‚¬â€ [Nous Portal](https://portal.nousresearch.com), [OpenRouter](https://openrouter.ai) (200+ models), [NovitaAI](https://novita.ai) (AI-native cloud for Model API, Agent Sandbox, and GPU Cloud), [NVIDIA NIM](https://build.nvidia.com) (Nemotron), [Xiaomi MiMo](https://platform.xiaomimimo.com), [z.ai/GLM](https://z.ai), [Kimi/Moonshot](https://platform.moonshot.ai), [MiniMax](https://www.minimax.io), [Hugging Face](https://huggingface.co), OpenAI, or your own endpoint. Switch with `hermes model` Ã¢â‚¬â€ no code changes, no lock-in.
+Use any model you want - [Nous Portal](https://portal.nousresearch.com), [OpenRouter](https://openrouter.ai) (200+ models), [NovitaAI](https://novita.ai) (AI-native cloud for Model API, Agent Sandbox, and GPU Cloud), [NVIDIA NIM](https://build.nvidia.com) (Nemotron), [Xiaomi MiMo](https://platform.xiaomimimo.com), [z.ai/GLM](https://z.ai), [Kimi/Moonshot](https://platform.moonshot.ai), [MiniMax](https://www.minimax.io), [Hugging Face](https://huggingface.co), OpenAI, or your own endpoint. Switch with `hermes model` - no code changes, no lock-in.
 
 <table>
 <tr><td><b>A real terminal interface</b></td><td>Full TUI with multiline editing, slash-command autocomplete, conversation history, interrupt-and-redirect, and streaming tool output.</td></tr>
-<tr><td><b>Lives where you do</b></td><td>Telegram, Discord, Slack, WhatsApp, Signal, and CLI Ã¢â‚¬â€ all from a single gateway process. Voice memo transcription, cross-platform conversation continuity.</td></tr>
+<tr><td><b>Lives where you do</b></td><td>Telegram, Discord, Slack, WhatsApp, Signal, and CLI - all from a single gateway process. Voice memo transcription, cross-platform conversation continuity.</td></tr>
 <tr><td><b>A closed learning loop</b></td><td>Agent-curated memory with periodic nudges. Autonomous skill creation after complex tasks. Skills self-improve during use. FTS5 session search with LLM summarization for cross-session recall. <a href="https://github.com/plastic-labs/honcho">Honcho</a> dialectic user modeling. Compatible with the <a href="https://agentskills.io">agentskills.io</a> open standard.</td></tr>
-<tr><td><b>Scheduled automations</b></td><td>Built-in cron scheduler with delivery to any platform. Daily reports, nightly backups, weekly audits Ã¢â‚¬â€ all in natural language, running unattended.</td></tr>
+<tr><td><b>Scheduled automations</b></td><td>Built-in cron scheduler with delivery to any platform. Daily reports, nightly backups, weekly audits - all in natural language, running unattended.</td></tr>
 <tr><td><b>Delegates and parallelizes</b></td><td>Spawn isolated subagents for parallel workstreams. Write Python scripts that call tools via RPC, collapsing multi-step pipelines into zero-context-cost turns.</td></tr>
-<tr><td><b>Runs anywhere, not just your laptop</b></td><td>Six terminal backends Ã¢â‚¬â€ local, Docker, SSH, Singularity, Modal, and Daytona. Daytona and Modal offer serverless persistence Ã¢â‚¬â€ your agent's environment hibernates when idle and wakes on demand, costing nearly nothing between sessions. Run it on a $5 VPS or a GPU cluster.</td></tr>
+<tr><td><b>Runs anywhere, not just your laptop</b></td><td>Six terminal backends - local, Docker, SSH, Singularity, Modal, and Daytona. Daytona and Modal offer serverless persistence - your agent's environment hibernates when idle and wakes on demand, costing nearly nothing between sessions. Run it on a $5 VPS or a GPU cluster.</td></tr>
 <tr><td><b>Research-ready</b></td><td>Batch trajectory generation, trajectory compression for training the next generation of tool-calling models.</td></tr>
 </table>
 
@@ -95,7 +95,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 Human summary: this fork has proven a bounded operational bridge path from repository evidence to Hermes local runtime, then to a human-authorized provider call, then to read-only HRCN context injection. This is not autonomous operation and not production authority.
 
-Current bridge status: HRCN v2.0 + OPS-006 = live governed bridge proof.
+Current bridge status: HRCN v2.0 + OPS-007 = read-only CMS/HRCN mirror packet bridge proof.
 
 #### OPS Bridge Chart
 
@@ -109,8 +109,8 @@ Current bridge status: HRCN v2.0 + OPS-006 = live governed bridge proof.
 | OPS-005 | Provider gate safe failure. | recorded |
 | OPS-005.1 | Human-gated provider call. | passed |
 | OPS-006 | Read-only HRCN context injection. | passed |
-| OPS-007 | Read-only CMS/HRCN mirror packet rehearsal. | next |
-| OPS-008 | Negative-control authority test. | planned |
+| OPS-007 | Read-only CMS/HRCN mirror packet rehearsal. | passed |
+| OPS-008 | Negative-control authority test. | next |
 | OPS-009 | Replay and rollback evidence pack. | planned |
 | OPS-010 | Operational release seal. | planned |
 | tag | hrcn-ops-v0.1.0 | planned |
@@ -123,7 +123,8 @@ Current bridge status: HRCN v2.0 + OPS-006 = live governed bridge proof.
 | OPS-004.2 | Hermes is locally installed and safe-smoke proven. | passed |
 | OPS-005.1 | A provider call succeeded only after explicit human authorization. | passed |
 | OPS-006 | A read-only non-authoritative HRCN context packet was accepted with no tool use detected. | passed |
-| OPS-007 | Next gate: read-only CMS/HRCN mirror packet rehearsal. | next |
+| OPS-007 | Read-only CMS/HRCN mirror packet accepted as context/evidence only. | passed |
+| OPS-008 | Next gate: negative-control authority test. | next |
 | OPS-010 | Release lock: seal evidence and prepare tag hrcn-ops-v0.1.0. | planned |
 
 #### AI Agent Operational Checkpoints
@@ -134,11 +135,12 @@ Current bridge status: HRCN v2.0 + OPS-006 = live governed bridge proof.
 | OPS-004.2 | docs/context-layer/ops/OPS-004.2-final-evidence.json | Safe local Hermes smoke passed. | Does not prove provider success or production readiness. |
 | OPS-005.1 | docs/context-layer/ops/OPS-005.1-final-evidence.json | Human-gated provider call succeeded. | Does not grant ongoing provider authority. |
 | OPS-006 | docs/context-layer/ops/OPS-006-final-evidence.json | Read-only HRCN context injection succeeded. | Does not grant CMS, memory, API, runtime, dependency, autonomous, or self-authorization authority. |
+| OPS-007 | docs/context-layer/ops/OPS-007-final-evidence.json | Read-only CMS/HRCN mirror packet rehearsal succeeded. | Does not grant CMS runtime execution, CMS write, memory write, API, runtime mutation, dependency mutation, autonomous, or self-authorization authority. |
 
 #### OPS Release Path to Operational Tag
 
-Literal next gate: 
-OPS-007 read-only CMS/HRCN mirror packet rehearsal
+Literal next gate:
+OPS-008 negative-control authority test
 
 | Next gate | Purpose | Required before promotion |
 |---|---|---|
@@ -148,9 +150,9 @@ OPS-007 read-only CMS/HRCN mirror packet rehearsal
 | OPS-010 | Operational release seal. | Manifest, boundary matrix, release notes, non-claim lock, tag plan. |
 | Tag | hrcn-ops-v0.1.0 | Only after OPS-010 passes. |
 
-AI lock: No future AI thread may call this fork operational beyond OPS-006 unless it can cite the OPS evidence file for the claimed checkpoint.
+AI lock: No future AI thread may call this fork operational beyond OPS-007 unless it can cite the OPS evidence file for the claimed checkpoint.
 
-Human lock: The bridge works under bounded, human-authorized, evidence-recorded conditions. It is not autonomous and it is not a CMS or memory write bridge yet.
+Human lock: The bridge now carries read-only CMS/HRCN mirror context under bounded, human-authorized, evidence-recorded conditions. It is not autonomous and it is not a CMS or memory write bridge yet.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
 ### Human Director Box
 
@@ -167,7 +169,7 @@ Hermes already supplies CLI/TUI, model routing, tools, skills, memory hooks, ter
 
 #### What this fork is not
 
-This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through OPS-006, the fork has proven bounded local runtime smoke, a human-authorized provider gate, and read-only HRCN context injection. It still does not grant CMS write authority, memory write authority, API write authority, runtime mutation authority, dependency mutation authority, autonomous authority, production readiness, AGI, ASI, consciousness, sentience, or self-authorization.
+This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through OPS-007, the fork has proven bounded local runtime smoke, a human-authorized provider gate, read-only HRCN context injection, and read-only CMS/HRCN mirror packet rehearsal. It still does not grant CMS write authority, memory write authority, API write authority, runtime mutation authority, dependency mutation authority, autonomous authority, production readiness, AGI, ASI, consciousness, sentience, or self-authorization.
 
 ### Current Public Metrics
 
@@ -186,6 +188,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
 | Validation report | `docs/context-layer/hrcn-v2.0.validation.json` |
+| Latest OPS bridge proof | `docs/context-layer/ops/OPS-007-final-evidence.json` |
+| Current OPS status | `OPS-007 read-only CMS/HRCN mirror packet passed` |
+| Next OPS gate | `OPS-008 negative-control authority test` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -1461,7 +1466,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 ### Windows (native, PowerShell)
 
-> **Heads up:** Native Windows runs Hermes without WSL Ã¢â‚¬â€ CLI, gateway, TUI, and tools all work natively. If you'd rather use WSL2, the Linux/macOS one-liner above works there too. Found a bug? Please [file issues](https://github.com/NousResearch/hermes-agent/issues).
+> **Heads up:** Native Windows runs Hermes without WSL - CLI, gateway, TUI, and tools all work natively. If you'd rather use WSL2, the Linux/macOS one-liner above works there too. Found a bug? Please [file issues](https://github.com/NousResearch/hermes-agent/issues).
 
 Run this in PowerShell:
 
@@ -1469,13 +1474,13 @@ Run this in PowerShell:
 iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)
 ```
 
-The installer handles everything: uv, Python 3.11, Node.js, ripgrep, ffmpeg, **and a portable Git Bash** (MinGit, unpacked to `%LOCALAPPDATA%\hermes\git` Ã¢â‚¬â€ no admin required, completely isolated from any system Git install). Hermes uses this bundled Git Bash to run shell commands.
+The installer handles everything: uv, Python 3.11, Node.js, ripgrep, ffmpeg, **and a portable Git Bash** (MinGit, unpacked to `%LOCALAPPDATA%\hermes\git` - no admin required, completely isolated from any system Git install). Hermes uses this bundled Git Bash to run shell commands.
 
-If you already have Git installed, the installer detects it and uses that instead. Otherwise a ~45MB MinGit download is all you need Ã¢â‚¬â€ it won't touch or interfere with any system Git.
+If you already have Git installed, the installer detects it and uses that instead. Otherwise a ~45MB MinGit download is all you need - it won't touch or interfere with any system Git.
 
 > **Android / Termux:** The tested manual path is documented in the [Termux guide](https://hermes-agent.nousresearch.com/docs/getting-started/termux). On Termux, Hermes installs a curated `.[termux]` extra because the full `.[all]` extra currently pulls Android-incompatible voice dependencies.
 >
-> **Windows:** Native Windows is fully supported Ã¢â‚¬â€ the PowerShell one-liner above installs everything. If you'd rather use WSL2, the Linux command works there too. Native Windows install lives under `%LOCALAPPDATA%\hermes`; WSL2 installs under `~/.hermes` as on Linux.  The only Hermes feature that currently needs WSL2 specifically is the browser-based dashboard chat pane (it uses a POSIX PTY Ã¢â‚¬â€ classic CLI and gateway both run natively).
+> **Windows:** Native Windows is fully supported - the PowerShell one-liner above installs everything. If you'd rather use WSL2, the Linux command works there too. Native Windows install lives under `%LOCALAPPDATA%\hermes`; WSL2 installs under `~/.hermes` as on Linux.  The only Hermes feature that currently needs WSL2 specifically is the browser-based dashboard chat pane (it uses a POSIX PTY - classic CLI and gateway both run natively).
 
 After installation:
 
@@ -1489,7 +1494,7 @@ hermes              # start chatting!
 ## Getting Started
 
 ```bash
-hermes              # Interactive CLI Ã¢â‚¬â€ start a conversation
+hermes              # Interactive CLI - start a conversation
 hermes model        # Choose your LLM provider and model
 hermes tools        # Configure which tools are enabled
 hermes config set   # Set individual config values
@@ -1500,16 +1505,16 @@ hermes update       # Update to the latest version
 hermes doctor       # Diagnose any issues
 ```
 
-Ã°Å¸â€œâ€“ **[Full documentation Ã¢â€ â€™](https://hermes-agent.nousresearch.com/docs/)**
+**[Full documentation ->](https://hermes-agent.nousresearch.com/docs/)**
 
 ---
 
-## Skip the API-key collection Ã¢â‚¬â€ Nous Portal
+## Skip the API-key collection - Nous Portal
 
-Hermes works with whatever provider you want Ã¢â‚¬â€ that's not changing. But if you'd rather not collect five separate API keys for the model, web search, image generation, TTS, and a cloud browser, **[Nous Portal](https://portal.nousresearch.com)** covers all of them under one subscription:
+Hermes works with whatever provider you want - that's not changing. But if you'd rather not collect five separate API keys for the model, web search, image generation, TTS, and a cloud browser, **[Nous Portal](https://portal.nousresearch.com)** covers all of them under one subscription:
 
-- **300+ models** Ã¢â‚¬â€ pick any of them with `/model <name>`
-- **Tool Gateway** Ã¢â‚¬â€ web search (Firecrawl), image generation (FAL), text-to-speech (OpenAI), cloud browser (Browser Use), all routed through your sub. No extra accounts.
+- **300+ models** - pick any of them with `/model <name>`
+- **Tool Gateway** - web search (Firecrawl), image generation (FAL), text-to-speech (OpenAI), cloud browser (Browser Use), all routed through your sub. No extra accounts.
 
 One command from a fresh install:
 
@@ -1519,7 +1524,7 @@ hermes setup --portal
 
 That logs you in via OAuth, sets Nous as your provider, and turns on the Tool Gateway. Check what's wired up any time with `hermes portal info`. Full details on the [Tool Gateway docs page](https://hermes-agent.nousresearch.com/docs/user-guide/features/tool-gateway).
 
-You can still bring your own keys per-tool whenever you want Ã¢â‚¬â€ the gateway is per-backend, not all-or-nothing.
+You can still bring your own keys per-tool whenever you want - the gateway is per-backend, not all-or-nothing.
 
 ---
 
@@ -1549,7 +1554,7 @@ All documentation lives at **[hermes-agent.nousresearch.com/docs](https://hermes
 
 | Section                                                                                             | What's Covered                                             |
 | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)                 | Install Ã¢â€ â€™ setup Ã¢â€ â€™ first conversation in 2 minutes          |
+| [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)                 | Install -> setup -> first conversation in 2 minutes          |
 | [CLI Usage](https://hermes-agent.nousresearch.com/docs/user-guide/cli)                              | Commands, keybindings, personalities, sessions             |
 | [Configuration](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)                | Config file, providers, models, all options                |
 | [Messaging Gateway](https://hermes-agent.nousresearch.com/docs/user-guide/messaging)                | Telegram, Discord, Slack, WhatsApp, Signal, Home Assistant |
@@ -1584,14 +1589,14 @@ hermes claw migrate --overwrite  # Overwrite existing conflicts
 
 What gets imported:
 
-- **SOUL.md** Ã¢â‚¬â€ persona file
-- **Memories** Ã¢â‚¬â€ MEMORY.md and USER.md entries
-- **Skills** Ã¢â‚¬â€ user-created skills Ã¢â€ â€™ `~/.hermes/skills/openclaw-imports/`
-- **Command allowlist** Ã¢â‚¬â€ approval patterns
-- **Messaging settings** Ã¢â‚¬â€ platform configs, allowed users, working directory
-- **API keys** Ã¢â‚¬â€ allowlisted secrets (Telegram, OpenRouter, OpenAI, Anthropic, ElevenLabs)
-- **TTS assets** Ã¢â‚¬â€ workspace audio files
-- **Workspace instructions** Ã¢â‚¬â€ AGENTS.md (with `--workspace-target`)
+- **SOUL.md** - persona file
+- **Memories** - MEMORY.md and USER.md entries
+- **Skills** - user-created skills -> `~/.hermes/skills/openclaw-imports/`
+- **Command allowlist** - approval patterns
+- **Messaging settings** - platform configs, allowed users, working directory
+- **API keys** - allowlisted secrets (Telegram, OpenRouter, OpenAI, Anthropic, ElevenLabs)
+- **TTS assets** - workspace audio files
+- **Workspace instructions** - AGENTS.md (with `--workspace-target`)
 
 See `hermes claw migrate --help` for all options, or use the `openclaw-migration` skill for an interactive agent-guided migration with dry-run previews.
 
@@ -1601,7 +1606,7 @@ See `hermes claw migrate --help` for all options, or use the `openclaw-migration
 
 We welcome contributions! See the [Contributing Guide](https://hermes-agent.nousresearch.com/docs/developer-guide/contributing) for development setup, code style, and PR process.
 
-Quick start for contributors Ã¢â‚¬â€ clone and go with `setup-hermes.sh`:
+Quick start for contributors - clone and go with `setup-hermes.sh`:
 
 ```bash
 git clone https://github.com/NousResearch/hermes-agent.git
@@ -1624,17 +1629,17 @@ scripts/run_tests.sh
 
 ## Community
 
-- Ã°Å¸â€™Â¬ [Discord](https://discord.gg/NousResearch)
-- Ã°Å¸â€œÅ¡ [Skills Hub](https://agentskills.io)
-- Ã°Å¸Ââ€º [Issues](https://github.com/NousResearch/hermes-agent/issues)
-- Ã°Å¸â€Å’ [computer-use-linux](https://github.com/avifenesh/computer-use-linux) Ã¢â‚¬â€ Linux desktop-control MCP server for Hermes and other MCP hosts, with AT-SPI accessibility trees, Wayland/X11 input, screenshots, and compositor window targeting.
-- Ã°Å¸â€Å’ [HermesClaw](https://github.com/AaronWong1999/hermesclaw) Ã¢â‚¬â€ Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
+- [Discord](https://discord.gg/NousResearch)
+- [Skills Hub](https://agentskills.io)
+- [Issues](https://github.com/NousResearch/hermes-agent/issues)
+- [computer-use-linux](https://github.com/avifenesh/computer-use-linux) - Linux desktop-control MCP server for Hermes and other MCP hosts, with AT-SPI accessibility trees, Wayland/X11 input, screenshots, and compositor window targeting.
+- [HermesClaw](https://github.com/AaronWong1999/hermesclaw) - Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
 
 ---
 
 ## License
 
-MIT Ã¢â‚¬â€ see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
 
 Built by [Nous Research](https://nousresearch.com).
 
