@@ -854,3 +854,31 @@ scripts/hrcn/operator_command_surface_v1_9.py
 
 Non-claim lock: HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
 <!-- HRCN_V19_OPERATOR_COMMAND_SURFACE_END -->
+
+<!-- HRCN_V20_OPERATIONAL_NEXUS_START -->
+## HRCN v2.0 - Operational Hermes-CMS Nexus
+
+```text
+Operational does not mean autonomous; operational means the full governed path is visible, bounded, auditable, and human-gated.
+operational_for_docs_context_governance=true
+human_operator_required=true
+runtime_integration_enabled=false
+cms_write_authority_granted=false
+memory_write_authority_granted=false
+api_write_authority_granted=false
+self_authorization_enabled=false
+autonomous_authority_granted=false
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.json
+docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.md
+docs/context-layer/hrcn-v2.0.validation.json
+docs/context-layer/hrcn-v2.0.validation.md
+scripts/hrcn/operational_nexus_status_v2_0.py
+```
+
+Non-claim lock: HRCN v2.0 seals Hermes-CMS as operational only for bounded docs/context governance. The operational nexus can report status across the CMS mirror/context packet, permission bridge, read-only bridge, dry-run contract, apply gate, limited apply executor, governed loop, replay/rollback hardening, and operator surface. It does not grant runtime mutation, CMS write authority, memory write authority, API authority, dependency mutation, autonomous authority, or self-authorization.
+<!-- HRCN_V20_OPERATIONAL_NEXUS_END -->

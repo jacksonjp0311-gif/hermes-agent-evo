@@ -1,8 +1,8 @@
-# Hermes Agent Rehydration Protocol - Current through HRCN v1.9
+# Hermes Agent Rehydration Protocol - Current through HRCN v2.0
 
 Status: docs/context/navigation protocol only.
-Current HRCN state: HRCN v1.9.
-Next anchor: HRCN v2.0 - Operational Hermes-CMS Nexus.
+Current HRCN state: HRCN v2.0.
+Next anchor: HRCN v2.1 - Runtime Adapter Readiness Boundary.
 
 ## Purpose
 
@@ -98,6 +98,9 @@ Read:
 - `docs/context-layer/hrcn-v1.8.validation.json`
 - `docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json`
 - `docs/context-layer/hrcn-v1.9.validation.json`
+- `docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.json`
+- `docs/context-layer/hrcn-v2.0.validation.json`
+- `scripts/hrcn/operational_nexus_status_v2_0.py`
 - `scripts/hrcn/operator_command_surface_v1_9.py`
 - `scripts/hrcn/replay_rollback_hardening_v1_8.py`
 - `scripts/hrcn/governed_operational_loop_v1_7.py`
@@ -546,4 +549,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
+HRCN v2.0 seals Hermes-CMS as operational only for bounded docs/context governance. The operational nexus can report status across the CMS mirror/context packet, permission bridge, read-only bridge, dry-run contract, apply gate, limited apply executor, governed loop, replay/rollback hardening, and operator surface. It does not grant runtime mutation, CMS write authority, memory write authority, API authority, dependency mutation, autonomous authority, or self-authorization.

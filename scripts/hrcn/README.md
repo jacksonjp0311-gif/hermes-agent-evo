@@ -79,3 +79,16 @@ Commands:
 It can create packet templates under `docs/context-layer/hrcn-v1.9-operator-packets/`.
 It does not apply changes, rollback changes, call APIs, self-authorize, or widen scope.
 
+## HRCN v2.0 Operational Nexus Status
+
+`operational_nexus_status_v2_0.py` reports whether the bounded Hermes-CMS governance stack is operational for docs/context governance.
+
+Commands:
+
+```text
+python scripts/hrcn/operational_nexus_status_v2_0.py --status
+python scripts/hrcn/operational_nexus_status_v2_0.py --write-report
+```
+
+It does not apply changes, rollback changes, call APIs, self-authorize, or widen scope.
+

@@ -1,0 +1,37 @@
+{
+  "blocked_authority": {
+    "api_write_authority_granted": false,
+    "autonomous_authority_granted": false,
+    "cms_write_authority_granted": false,
+    "dependency_mutation_authorized": false,
+    "memory_write_authority_granted": false,
+    "runtime_integration_enabled": false,
+    "self_authorization_enabled": false
+  },
+  "mode": "bounded_docs_context_operational_nexus",
+  "next_recommended_phase": "HRCN v2.1 - Runtime Adapter Readiness Boundary",
+  "non_claim_lock": "HRCN v2.0 seals Hermes-CMS as operational only for bounded docs/context governance. The operational nexus can report status across the CMS mirror/context packet, permission bridge, read-only bridge, dry-run contract, apply gate, limited apply executor, governed loop, replay/rollback hardening, and operator surface. It does not grant runtime mutation, CMS write authority, memory write authority, API authority, dependency mutation, autonomous authority, or self-authorization.",
+  "operational_claim": "Hermes-CMS is operational for bounded docs/context governance only.",
+  "operational_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "previous_validated_anchor": "HRCN v1.9",
+  "primary_law": "Operational does not mean autonomous; operational means the full governed path is visible, bounded, auditable, and human-gated.",
+  "required_chain": {
+    "apply_gate": "HRCN v1.5",
+    "bounded_cms_context_packet": "HRCN v1.1",
+    "cms_read_only_mirror": "HRCN v1.0.3",
+    "dry_run_contract": "HRCN v1.4",
+    "governed_operational_loop": "HRCN v1.7",
+    "limited_apply_executor": "HRCN v1.6",
+    "operator_command_surface": "HRCN v1.9",
+    "permission_bridge": "HRCN v1.2",
+    "read_only_bridge": "HRCN v1.3",
+    "replay_rollback_hardening": "HRCN v1.8"
+  },
+  "schema": "HRCN-v2.0-operational-hermes-cms-nexus",
+  "status_tool_path": "scripts/hrcn/operational_nexus_status_v2_0.py",
+  "timestamp_utc": "2026-06-05T10:25:27.004442+00:00",
+  "version": "HRCN v2.0"
+}

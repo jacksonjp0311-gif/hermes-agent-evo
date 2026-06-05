@@ -75,6 +75,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.7 | Can Hermes coordinate the governed operational loop without bypassing gates or widening scope? | `docs/context-layer/hrcn-v1.7-governed-operational-loop.json` |
 | HRCN v1.8 | Can Hermes harden governed operations with replay, audit, and rollback requirements? | `docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json` |
 | HRCN v1.9 | Can Hermes expose a human operator command surface without becoming the operator? | `docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json` |
+| HRCN v2.0 | Can Hermes-CMS be sealed as operational for bounded docs/context governance only? | `docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -99,8 +100,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.9` |
-| Previous validated anchor | `HRCN v1.8` |
+| Current checkpoint | `HRCN v2.0` |
+| Previous validated anchor | `HRCN v1.9` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -111,7 +112,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.9.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v2.0.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -136,6 +137,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Governed operational loop | `docs/context-layer/hrcn-v1.7-governed-operational-loop.json` |
 | Replay and rollback hardening | `docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json` |
 | Operator dashboard / command surface | `docs/context-layer/hrcn-v1.9-operator-dashboard-command-surface.json` |
+| Operational Hermes-CMS nexus | `docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.json` |
 
 ### Core Law
 
@@ -213,7 +215,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.9 adds a human operator command surface; it does not change Hermes runtime.
+HRCN v2.0 seals a bounded operational Hermes-CMS nexus; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -1145,6 +1147,52 @@ next-commands
 Non-claim lock: the operator command surface presents and prepares governed actions; it does not apply, rollback, self-authorize, widen scope, or call APIs.
 <!-- HRCN_V19_OPERATOR_COMMAND_SURFACE_END -->
 
+<!-- HRCN_V20_OPERATIONAL_NEXUS_START -->
+### HRCN v2.0 Operational Hermes-CMS Nexus
+
+HRCN v2.0 seals the bounded operational Hermes-CMS nexus.
+
+Current rule:
+
+```text
+Operational does not mean autonomous; operational means the full governed path is visible, bounded, auditable, and human-gated.
+```
+
+Operational nexus artifacts:
+
+```text
+docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.json
+docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.md
+docs/context-layer/hrcn-v2.0.validation.json
+docs/context-layer/hrcn-v2.0.validation.md
+scripts/hrcn/operational_nexus_status_v2_0.py
+```
+
+Operational scope:
+
+```text
+README.md
+docs/context-layer/**
+```
+
+Operational chain:
+
+```text
+CMS mirror/context
+bounded CMS packet
+permission bridge
+read-only bridge
+dry-run contract
+apply gate
+limited apply executor
+governed operational loop
+replay/rollback hardening
+operator command surface
+```
+
+Non-claim lock: operational means governed and bounded; it does not mean autonomous, runtime-integrated, or self-authorizing.
+<!-- HRCN_V20_OPERATIONAL_NEXUS_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -1326,7 +1374,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.9 adds a local operator command surface for governed docs/context operations. It can show status, gate readiness, bounded scope, and generate packet templates for human review. It does not apply changes, does not rollback automatically, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
+HRCN v2.0 seals Hermes-CMS as operational only for bounded docs/context governance. The operational nexus can report status across the CMS mirror/context packet, permission bridge, read-only bridge, dry-run contract, apply gate, limited apply executor, governed loop, replay/rollback hardening, and operator surface. It does not grant runtime mutation, CMS write authority, memory write authority, API authority, dependency mutation, autonomous authority, or self-authorization.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
