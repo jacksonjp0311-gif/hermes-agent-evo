@@ -1,0 +1,13 @@
+{
+  "schema": "HRCN-OPS-018-dry-run-cadence-summary",
+  "operation": "OPS-018",
+  "timestamp_utc": "2026-06-05T16:09:51.914314+00:00",
+  "dry_run_only_loop_cadence_harness_passed": true,
+  "dry_runs_executed": 3,
+  "apply_executed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "next_recommended_operation": "OPS-019 apply-gated loop cadence harness",
+  "non_claim_lock": "Dry-run-only summary proves simulation cadence only, not apply authority."
+}

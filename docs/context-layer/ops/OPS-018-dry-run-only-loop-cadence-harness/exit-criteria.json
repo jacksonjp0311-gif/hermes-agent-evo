@@ -1,0 +1,15 @@
+{
+  "schema": "HRCN-OPS-018-exit-criteria",
+  "operation": "OPS-018",
+  "criteria": {
+    "ops_017_prerequisite_passed": true,
+    "human_authorization_phrase_matched": true,
+    "dry_runs_executed": true,
+    "dry_run_only_loop_cadence_harness_passed": true,
+    "apply_executed": false,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true,
+    "all_dangerous_authority_flags_false": true
+  },
+  "next_allowed_operation": "OPS-019 apply-gated loop cadence harness"
+}
