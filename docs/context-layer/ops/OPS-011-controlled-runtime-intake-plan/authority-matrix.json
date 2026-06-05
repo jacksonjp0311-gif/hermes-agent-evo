@@ -1,0 +1,40 @@
+{
+  "schema": "HRCN-OPS-011-controlled-runtime-intake-authority-matrix",
+  "operation": "OPS-011",
+  "base_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "tag_name": "hrcn-ops-v0.1.0",
+  "tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "phase": "post_seal_controlled_intake_planning",
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "self_authorization": false,
+  "ongoing_provider_authority": false,
+  "authorized_now": [
+    "read sealed evidence",
+    "read README/context docs",
+    "write docs/context planning artifacts",
+    "update README post-seal roadmap",
+    "log lessons"
+  ],
+  "blocked_now": [
+    "runtime source edits",
+    "Hermes runtime integration",
+    "CMS runtime execution",
+    "CMS write",
+    "memory write",
+    "API write",
+    "dependency changes",
+    "environment file commits",
+    "autonomous operation",
+    "self-authorization"
+  ],
+  "non_claim_lock": "OPS-011 is a controlled runtime intake plan only. It does not put the cybernetic mind online, mutate runtime, write CMS/memory/API, change dependencies, or grant autonomous/self-authorized authority."
+}

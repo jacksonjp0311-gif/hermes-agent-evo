@@ -158,6 +158,31 @@ AI lock: No future AI thread may call this fork operational beyond OPS-010 unles
 
 Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refused false authority, has a replay/rollback evidence pack, and has an operational release seal under bounded, human-authorized, evidence-recorded conditions. It is not autonomous and it is not a CMS or memory write bridge yet.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
+<!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
+### Post-Seal Cybernetic-Memory Online Track
+
+Current post-seal state: OPS-011 controlled runtime intake plan passed.
+
+The HRCN OPS v0.1.0 proof is sealed. The next work is not unrestricted runtime integration; it is a controlled path toward cybernetic-memory operation under read-only context, dry-run, evidence, and human authorization boundaries.
+
+| Stage | Meaning | Status |
+|---|---|---:|
+| OPS-011 | Controlled runtime intake plan. | passed |
+| OPS-012 | Governed memory-read adapter rehearsal. | next |
+| OPS-013 | Human-gated dry-run bridge rehearsal. | planned |
+| OPS-014 | Limited apply rehearsal. | planned |
+| OPS-015 | First controlled cybernetic loop. | planned |
+
+Operational definition for the next phase:
+
+```text
+observe -> retrieve bounded context -> classify authority -> propose
+-> dry-run -> evidence -> human gate -> limited apply only if authorized
+```
+
+Post-seal lock: cybernetic-memory online work starts read-only. No runtime mutation, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization is granted by OPS-011.
+<!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 ### Human Director Box
 
 #### What this fork is
@@ -195,6 +220,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-010-final-evidence.json` |
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-011-final-evidence.json` |
+| Post-seal status | `OPS-011 controlled runtime intake plan passed` |
+| Next post-seal gate | `OPS-012 governed memory-read adapter rehearsal` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -286,6 +314,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - A rollback plan is not rollback execution; human review is required before any revert or push.
 - A release tag freezes a proof state; it does not widen authority.
 - OPS-010 release sealing is a promotion boundary, not runtime integration.
+- Post-seal runtime intake planning is not runtime integration.
+- Cybernetic-memory online work begins as read-only context rehearsal before any dry-run or apply path.
 
 ### Current HRCN Surface Lock
 
@@ -1414,6 +1444,8 @@ Gap classes:
 | HRCN-L-017 | Rollback plans can be mistaken for rollback execution. | A plan names a safe recovery path but does not itself perform a revert or validate a restored state. | Treat rollback notes as a human-reviewed plan only; any actual revert/push must be a separate authorized operation. |
 | HRCN-L-018 | Release sealing and tag creation needed one bounded operation. | A release seal without a tag fails to freeze the proof state, while a tag without a manifest fails to explain what is frozen. | OPS-010 must create release manifest, release notes, final boundary matrix, tag plan, final evidence, README alignment, and then push the tag. |
 | HRCN-L-019 | A release tag can be mistaken for production authority. | Tags make a repository state durable but do not validate security, correctness, runtime integration, CMS authority, or autonomy. | Every release tag must include a non-claim lock stating that the tag freezes evidence only and grants no new authority. |
+| HRCN-L-020 | After the release tag, the system needed a controlled intake plan before any online work. | A sealed bridge proof can create pressure to jump straight into runtime integration. | Post-seal evolution must begin with OPS-011 controlled runtime intake planning, not runtime mutation. |
+| HRCN-L-021 | Cybernetic-memory online language can be mistaken for autonomy. | Online operation sounds like continuous self-directed action unless bounded by authority classes. | Define online as observe, retrieve bounded context, classify authority, propose, dry-run, record evidence, and wait for human gate before apply/write. |
 
 ### HRCN Roadmap
 

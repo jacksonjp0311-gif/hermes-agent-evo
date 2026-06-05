@@ -1,0 +1,18 @@
+{
+  "schema": "HRCN-OPS-011-exit-criteria",
+  "operation": "OPS-011",
+  "criteria": {
+    "ops_010_seal_verified": true,
+    "release_tag_verified": true,
+    "controlled_runtime_intake_map_written": true,
+    "authority_matrix_written": true,
+    "runtime_intake_plan_written": true,
+    "cybernetic_online_roadmap_written": true,
+    "ops_012_contract_draft_written": true,
+    "risk_register_written": true,
+    "operator_readiness_checklist_written": true,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true
+  },
+  "next_allowed_operation": "OPS-012 governed memory-read adapter rehearsal"
+}

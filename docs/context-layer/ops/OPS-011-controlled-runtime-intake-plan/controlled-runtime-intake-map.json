@@ -1,0 +1,52 @@
+{
+  "schema": "HRCN-OPS-011-controlled-runtime-intake-map",
+  "operation": "OPS-011",
+  "base_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "tag_name": "hrcn-ops-v0.1.0",
+  "tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "goal": "Define the first controlled path from sealed HRCN bridge proof toward cybernetic-memory online operation.",
+  "controlled_path": [
+    {
+      "step": "OPS-011",
+      "name": "controlled runtime intake plan",
+      "status": "this_operation",
+      "authority": "docs_context_planning_only"
+    },
+    {
+      "step": "OPS-012",
+      "name": "governed memory-read adapter rehearsal",
+      "status": "next",
+      "authority": "read_only_context_rehearsal"
+    },
+    {
+      "step": "OPS-013",
+      "name": "human-gated dry-run bridge rehearsal",
+      "status": "planned",
+      "authority": "simulation_only"
+    },
+    {
+      "step": "OPS-014",
+      "name": "limited apply rehearsal",
+      "status": "planned",
+      "authority": "human_gated_docs_context_only"
+    },
+    {
+      "step": "OPS-015",
+      "name": "first controlled cybernetic loop",
+      "status": "planned",
+      "authority": "observe_retrieve_propose_dry_run_evidence_human_gate"
+    }
+  ],
+  "entry_conditions": [
+    "OPS-010 release seal passed",
+    "hrcn-ops-v0.1.0 tag exists locally and remotely",
+    "README aligned to OPS-010",
+    "all OPS-010 dangerous authority flags false"
+  ],
+  "exit_conditions": [
+    "OPS-011 artifacts written",
+    "README post-seal track visible",
+    "lessons logged",
+    "OPS-012 clearly identified as read-only memory/context rehearsal"
+  ]
+}

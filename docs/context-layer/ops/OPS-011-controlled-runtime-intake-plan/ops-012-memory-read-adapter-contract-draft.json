@@ -1,0 +1,25 @@
+{
+  "schema": "HRCN-OPS-012-memory-read-adapter-rehearsal-contract-draft",
+  "drafted_by": "OPS-011",
+  "next_operation": "OPS-012",
+  "purpose": "Rehearse a governed memory-read adapter without writing memory or executing CMS runtime.",
+  "input_surfaces_allowed": [
+    "README.md",
+    "docs/context-layer/**",
+    "cms/.hrcn-read-only-mirror.json",
+    "docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json"
+  ],
+  "outputs_allowed": [
+    "docs/context-layer/ops/OPS-012-*"
+  ],
+  "forbidden": [
+    "memory write",
+    "CMS write",
+    "API write",
+    "runtime mutation",
+    "dependency mutation",
+    "self-authorization",
+    "autonomous authority"
+  ],
+  "expected_result": "Hermes/HRCN can ingest bounded memory context as orientation only and produce an evidence packet with authority_granted=false."
+}
