@@ -1,8 +1,8 @@
-# Hermes Agent Rehydration Protocol - Current through HRCN v1.5
+# Hermes Agent Rehydration Protocol - Current through HRCN v1.6
 
 Status: docs/context/navigation protocol only.
-Current HRCN state: HRCN v1.5.
-Next anchor: HRCN v1.6 - Limited Apply Executor.
+Current HRCN state: HRCN v1.6.
+Next anchor: HRCN v1.7 - Governed Operational Loop.
 
 ## Purpose
 
@@ -90,6 +90,9 @@ Read:
 - `docs/context-layer/hrcn-v1.4.validation.json`
 - `docs/context-layer/hrcn-v1.5-apply-gate-contract.json`
 - `docs/context-layer/hrcn-v1.5.validation.json`
+- `docs/context-layer/hrcn-v1.6-limited-apply-executor.json`
+- `docs/context-layer/hrcn-v1.6.validation.json`
+- `scripts/hrcn/limited_apply_executor_v1_6.py`
 - `docs/context-layer/hrcn-v1.0.validation.json`
 - `docs/context-layer/hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.json`
 - `docs/context-layer/hrcn-v1.0.1.validation.json`
@@ -534,4 +537,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.5 defines the Apply-Gate Contract as documentation/context only. It specifies how a future apply candidate must bind a passed dry-run result, evidence package, rollback plan, human authorization record, scoped changed paths, validation plan, and secret scan before any future apply executor may be requested. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Apply-gate contract presence is not apply permission.
+HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.

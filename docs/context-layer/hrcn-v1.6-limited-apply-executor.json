@@ -1,0 +1,45 @@
+{
+  "allowed_apply_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "authorization_phrase": "I AUTHORIZE HRCN V1.6 LIMITED DOCS CONTEXT APPLY",
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "autonomous_authority_granted": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "memory_write_authority_granted": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "created_authority": {
+    "apply_authority_granted": false,
+    "apply_executor_created": true,
+    "automatic_apply_enabled": false,
+    "limited_apply_executor_created": true,
+    "self_authorization_enabled": false
+  },
+  "mode": "local_bounded_docs_context_executor_tool",
+  "next_recommended_phase": "HRCN v1.7 - Governed Operational Loop",
+  "non_claim_lock": "HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.",
+  "previous_validated_anchor": "HRCN v1.5",
+  "primary_law": "A limited apply executor may apply only an explicitly authorized docs/context packet; creating the executor does not grant use.",
+  "required_future_use_gates": [
+    "clean_worktree",
+    "expected_base_commit_match",
+    "bounded_apply_packet",
+    "explicit_authorization_phrase",
+    "evidence_package_ref",
+    "rollback_plan_ref",
+    "validation_plan_ref",
+    "secret_scan_required",
+    "post_apply_validation",
+    "audit_record"
+  ],
+  "schema": "HRCN-v1.6-limited-apply-executor",
+  "timestamp_utc": "2026-06-05T10:07:33.831656+00:00",
+  "tool_path": "scripts/hrcn/limited_apply_executor_v1_6.py",
+  "version": "HRCN v1.6"
+}

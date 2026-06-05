@@ -748,3 +748,30 @@ apply_executed=false
 
 Non-claim lock: HRCN v1.5 defines the Apply-Gate Contract as documentation/context only. It specifies how a future apply candidate must bind a passed dry-run result, evidence package, rollback plan, human authorization record, scoped changed paths, validation plan, and secret scan before any future apply executor may be requested. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Apply-gate contract presence is not apply permission.
 <!-- HRCN_V15_APPLY_GATE_CONTRACT_END -->
+
+<!-- HRCN_V16_LIMITED_APPLY_EXECUTOR_START -->
+## HRCN v1.6 - Limited Apply Executor
+
+```text
+A limited apply executor may apply only an explicitly authorized docs/context packet; creating the executor does not grant use.
+allowed scope = README.md + docs/context-layer/**
+executor requires explicit authorization phrase
+executor requires clean worktree
+executor requires expected base commit
+executor requires evidence, rollback, validation, and secret scan gates
+self_authorization_enabled=false
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.6-limited-apply-executor.json
+docs/context-layer/hrcn-v1.6-limited-apply-executor.md
+docs/context-layer/hrcn-v1.6.validation.json
+docs/context-layer/hrcn-v1.6.validation.md
+scripts/hrcn/limited_apply_executor_v1_6.py
+scripts/hrcn/README.md
+```
+
+Non-claim lock: HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.
+<!-- HRCN_V16_LIMITED_APPLY_EXECUTOR_END -->

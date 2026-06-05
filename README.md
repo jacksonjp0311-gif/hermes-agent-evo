@@ -71,6 +71,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.3 | Can Hermes define a read-only bridge prototype over the bounded CMS packet without runtime authority? | `docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json` |
 | HRCN v1.4 | Can Hermes define a dry-run harness contract that simulates without applying changes? | `docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json` |
 | HRCN v1.5 | Can Hermes define the apply gate that a future apply candidate must pass without applying now? | `docs/context-layer/hrcn-v1.5-apply-gate-contract.json` |
+| HRCN v1.6 | Can Hermes create a bounded docs/context-only apply executor without granting self-authorization? | `docs/context-layer/hrcn-v1.6-limited-apply-executor.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -95,8 +96,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.5` |
-| Previous validated anchor | `HRCN v1.4` |
+| Current checkpoint | `HRCN v1.6` |
+| Previous validated anchor | `HRCN v1.5` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -107,7 +108,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.5.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.6.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -128,6 +129,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS-Hermes read-only bridge prototype | `docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json` |
 | Dry-run execution harness contract | `docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json` |
 | Apply-gate contract | `docs/context-layer/hrcn-v1.5-apply-gate-contract.json` |
+| Limited apply executor | `docs/context-layer/hrcn-v1.6-limited-apply-executor.json` |
 
 ### Core Law
 
@@ -205,7 +207,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.5 adds an apply-gate contract; it does not change Hermes runtime.
+HRCN v1.6 adds a limited docs/context apply executor tool; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -998,6 +1000,38 @@ autonomous authority
 Non-claim lock: the apply gate contract is a future authorization boundary, not apply permission.
 <!-- HRCN_V15_APPLY_GATE_CONTRACT_END -->
 
+<!-- HRCN_V16_LIMITED_APPLY_EXECUTOR_START -->
+### HRCN v1.6 Limited Apply Executor
+
+HRCN v1.6 creates a bounded local executor tool for future human-authorized docs/context packets.
+
+Current rule:
+
+```text
+A limited apply executor may apply only an explicitly authorized docs/context packet; creating the executor does not grant use.
+```
+
+Executor artifacts:
+
+```text
+docs/context-layer/hrcn-v1.6-limited-apply-executor.json
+docs/context-layer/hrcn-v1.6-limited-apply-executor.md
+docs/context-layer/hrcn-v1.6.validation.json
+docs/context-layer/hrcn-v1.6.validation.md
+scripts/hrcn/limited_apply_executor_v1_6.py
+scripts/hrcn/README.md
+```
+
+Hard executor scope:
+
+```text
+README.md
+docs/context-layer/**
+```
+
+Non-claim lock: executor creation is not apply permission; future execution still requires human authorization and a bounded packet.
+<!-- HRCN_V16_LIMITED_APPLY_EXECUTOR_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -1179,7 +1213,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.5 defines the Apply-Gate Contract as documentation/context only. It specifies how a future apply candidate must bind a passed dry-run result, evidence package, rollback plan, human authorization record, scoped changed paths, validation plan, and secret scan before any future apply executor may be requested. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Apply-gate contract presence is not apply permission.
+HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
