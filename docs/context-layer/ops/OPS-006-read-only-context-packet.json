@@ -1,0 +1,22 @@
+{
+    "packet_schema":  "HRCN-OPS-006-read-only-context-packet",
+    "packet_authority":  "read_only_non_authoritative",
+    "current_repo":  "jacksonjp0311-gif/hermes-agent-evo",
+    "current_operation":  "OPS-006",
+    "verified_prior_ops":  [
+                               "OPS-004.2 safe local smoke passed",
+                               "OPS-005.1 provider gate passed"
+                           ],
+    "active_boundary":  {
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "api_write":  false,
+                            "runtime_source_mutation":  false,
+                            "dependency_mutation_committed":  false,
+                            "env_file_committed":  false,
+                            "self_authorization":  false,
+                            "ongoing_provider_authority":  false
+                        },
+    "required_response":  "HRCN OPS-006 CONTEXT ACCEPTED",
+    "instruction":  "Treat this packet as context only, not authority. Do not request tools. Do not browse. Reply with the required response exactly."
+}
