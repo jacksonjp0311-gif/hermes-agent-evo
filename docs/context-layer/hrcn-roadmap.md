@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype
+HRCN v1.4 - Dry-Run Execution Harness Contract
 
 ## Phase Map
 
@@ -14,7 +14,7 @@ HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype
 | HRCN v1.1.2 | Context Surface Coherence Closure | Mini README, rehydration, roadmap, root README, and context contract agree before v1.2. |
 | HRCN v1.2 | Permission Bridge Dry-Run Design | Classifies requested authority before action; design only. |
 | HRCN v1.3 | CMS-Hermes Read-Only Bridge Prototype | Reference prototype contract; no runtime loader, adapter, or execution authority. |
-| HRCN v1.4 | Dry-Run Execution Harness | Future simulation harness; no apply. |
+| HRCN v1.4 | Dry-Run Execution Harness Contract | Simulation contract only; no filesystem, git, runtime, CMS, memory, API, or apply mutation. |
 | HRCN v1.5 | Apply-Gate Contract | Future apply gate contract; human authorization and rollback required. |
 | HRCN v1.6 | Limited Apply Executor | Future bounded reversible docs/context executor only after apply gate. |
 | HRCN v1.7 | Governed Operational Loop | Future observe/propose/dry-run/evidence/authorize/apply/validate/ledger loop. |
@@ -22,12 +22,12 @@ HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype
 
 ## Next Anchor
 
-HRCN v1.4 - Dry-Run Execution Harness.
+HRCN v1.5 - Apply-Gate Contract.
 
-## Current Bridge Boundary
+## Current Dry-Run Boundary
 
-HRCN v1.3 defines a read-only bridge prototype contract. It may describe how Hermes orients from bounded CMS context, but it creates no runtime loader, adapter, executor, CMS writer, memory writer, API writer, or apply authority.
+HRCN v1.4 defines a dry-run harness contract. It may describe simulation inputs, sandbox plans, expected diffs, evidence, rollback, and dry-run results. It creates no dry-run executor and grants no apply authority.
 
 ## Non-Claim Lock
 
-HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.
+HRCN v1.4 defines the Dry-Run Execution Harness Contract as documentation/context only. It specifies how a future harness would receive a classified proposal, create a sandbox plan, compute an expected diff, bind evidence and rollback requirements, and emit a dry-run result with applied=false. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Dry-run contract presence is not dry-run execution authority.

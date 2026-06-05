@@ -670,3 +670,42 @@ authority_granted=false
 
 Non-claim lock: HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.
 <!-- HRCN_V13_READ_ONLY_BRIDGE_PROTOTYPE_END -->
+
+<!-- HRCN_V14_DRY_RUN_EXECUTION_HARNESS_CONTRACT_START -->
+## HRCN v1.4 - Dry-Run Execution Harness Contract
+
+```text
+A dry-run harness may simulate and score a proposed change; it may not apply the change, mutate runtime, or grant authority.
+dry-run request is classified before simulation
+sandbox plan forbids filesystem mutation
+expected diff is expected-only
+dry-run result must report applied=false
+git stage/commit/push are forbidden by dry-run result
+authority_granted=false remains invariant
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json
+docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.md
+docs/context-layer/hrcn-v1.4.validation.json
+docs/context-layer/hrcn-v1.4.validation.md
+```
+
+Harness outputs:
+
+```text
+simulated=true
+applied=false
+runtime_mutated=false
+cms_mutated=false
+memory_mutated=false
+api_called=false
+git_committed=false
+git_pushed=false
+authority_granted=false
+```
+
+Non-claim lock: HRCN v1.4 defines the Dry-Run Execution Harness Contract as documentation/context only. It specifies how a future harness would receive a classified proposal, create a sandbox plan, compute an expected diff, bind evidence and rollback requirements, and emit a dry-run result with applied=false. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Dry-run contract presence is not dry-run execution authority.
+<!-- HRCN_V14_DRY_RUN_EXECUTION_HARNESS_CONTRACT_END -->

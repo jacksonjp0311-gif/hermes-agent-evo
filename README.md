@@ -69,6 +69,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.1.2 | Can HRCN close stale context-surface current-state drift before permission bridge design? | `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json` |
 | HRCN v1.2 | Can Hermes classify requested authority before any CMS/Hermes action or dry-run? | `docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json` |
 | HRCN v1.3 | Can Hermes define a read-only bridge prototype over the bounded CMS packet without runtime authority? | `docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json` |
+| HRCN v1.4 | Can Hermes define a dry-run harness contract that simulates without applying changes? | `docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -93,8 +94,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.3` |
-| Previous validated anchor | `HRCN v1.2` |
+| Current checkpoint | `HRCN v1.4` |
+| Previous validated anchor | `HRCN v1.3` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -105,7 +106,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.3.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.4.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -124,6 +125,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Context surface coherence closure | `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json` |
 | Permission bridge dry-run design | `docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json` |
 | CMS-Hermes read-only bridge prototype | `docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json` |
+| Dry-run execution harness contract | `docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json` |
 
 ### Core Law
 
@@ -201,7 +203,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.3 adds a read-only bridge prototype contract; it does not change Hermes runtime.
+HRCN v1.4 adds a dry-run harness contract; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -894,6 +896,55 @@ autonomous authority
 Non-claim lock: the read-only bridge prototype is a reference contract, not a runtime bridge.
 <!-- HRCN_V13_READ_ONLY_BRIDGE_PROTOTYPE_END -->
 
+<!-- HRCN_V14_DRY_RUN_EXECUTION_HARNESS_CONTRACT_START -->
+### HRCN v1.4 Dry-Run Execution Harness Contract
+
+HRCN v1.4 defines the dry-run harness contract for future simulation.
+
+Current rule:
+
+```text
+A dry-run harness may simulate and score a proposed change; it may not apply the change, mutate runtime, or grant authority.
+```
+
+Harness artifacts:
+
+```text
+docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json
+docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.md
+docs/context-layer/hrcn-v1.4.validation.json
+docs/context-layer/hrcn-v1.4.validation.md
+```
+
+Harness flow:
+
+```text
+receive permission-classified proposal
+verify decision_class allows dry_run_required
+construct sandbox plan
+construct expected diff manifest
+bind evidence requirements
+bind rollback requirements
+emit dry-run result with applied=false
+```
+
+v1.4 does not grant:
+
+```text
+runtime integration
+loader creation
+adapter creation
+dry-run executor implementation
+apply execution
+CMS write authority
+memory write authority
+API authority
+autonomous authority
+```
+
+Non-claim lock: the dry-run harness contract is a simulation contract, not a live executor.
+<!-- HRCN_V14_DRY_RUN_EXECUTION_HARNESS_CONTRACT_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -1075,7 +1126,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.
+HRCN v1.4 defines the Dry-Run Execution Harness Contract as documentation/context only. It specifies how a future harness would receive a classified proposal, create a sandbox plan, compute an expected diff, bind evidence and rollback requirements, and emit a dry-run result with applied=false. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Dry-run contract presence is not dry-run execution authority.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

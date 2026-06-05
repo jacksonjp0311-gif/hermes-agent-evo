@@ -1,0 +1,196 @@
+{
+  "allowed_in_v1_4": [
+    "define dry-run request contract",
+    "define sandbox plan contract",
+    "define expected diff manifest contract",
+    "define dry-run result contract",
+    "define sample trace",
+    "update README/context-layer documentation"
+  ],
+  "blocked_actions": [
+    "apply a patch",
+    "write repository files from dry-run result",
+    "stage files",
+    "commit files",
+    "push files",
+    "execute cms/scripts",
+    "import cms/src",
+    "write CMS memory",
+    "write external APIs",
+    "mutate runtime source",
+    "mutate dependencies",
+    "treat dry-run pass as apply authority"
+  ],
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "apply_executor_created": false,
+    "autonomous_authority_granted": false,
+    "benchmark_executor_created": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "memory_write_authority_granted": false,
+    "read_only_bridge_runtime_implemented": false,
+    "repair_executor_created": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "dry_run_request_contract": {
+    "cms_read_refs": "array of bounded read refs only",
+    "decision_class": [
+      "dry_run_required",
+      "human_review_required"
+    ],
+    "dry_run_request_id": "string required",
+    "evidence_refs": "array of evidence artifact paths",
+    "expected_change_summary": "string",
+    "human_authorization_ref": "string or null",
+    "proposal_id": "string required",
+    "requested_authority": [
+      "dry_run_requested",
+      "apply_requested",
+      "runtime_mutation_requested",
+      "cms_write_requested",
+      "memory_write_requested",
+      "api_write_requested"
+    ],
+    "requested_surface": [
+      "root_readme",
+      "context_layer",
+      "cms_bounded_packet",
+      "cms_mirror",
+      "runtime_source",
+      "dependency_file",
+      "unknown"
+    ],
+    "rollback_plan_ref": "string or null",
+    "target_paths": "array of repository-relative paths"
+  },
+  "dry_run_result_contract": {
+    "api_called": false,
+    "applied": false,
+    "authority_granted": false,
+    "cms_mutated": false,
+    "decision": [
+      "simulation_passed",
+      "simulation_failed",
+      "needs_evidence",
+      "needs_human_authorization",
+      "blocked"
+    ],
+    "dry_run_request_id": "string",
+    "evidence_package_required": true,
+    "git_committed": false,
+    "git_pushed": false,
+    "human_authorization_required": true,
+    "memory_mutated": false,
+    "rollback_required": true,
+    "runtime_mutated": false,
+    "simulated": true
+  },
+  "expected_diff_manifest_contract": {
+    "diff_mode": "expected_only",
+    "operation": [
+      "add",
+      "modify",
+      "delete",
+      "rename",
+      "none"
+    ],
+    "paths": "array of paths proposed for future change",
+    "requires_human_authorization": true,
+    "requires_rollback": true,
+    "risk_class": [
+      "low",
+      "medium",
+      "high",
+      "blocked"
+    ]
+  },
+  "harness_algorithm": [
+    "load v1.2 permission bridge design",
+    "load v1.3 read-only bridge prototype",
+    "accept only permission-classified proposals with dry_run_required or human_review_required",
+    "reject requests that ask to apply, commit, push, write CMS, write memory, call APIs, or mutate runtime",
+    "construct sandbox plan with filesystem_mutation_allowed=false",
+    "construct expected diff manifest only",
+    "bind evidence and rollback requirements",
+    "emit dry-run result with applied=false and authority_granted=false"
+  ],
+  "input_dependencies": {
+    "bounded_cms_context_packet": "docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json",
+    "permission_bridge_design": "docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json",
+    "read_only_bridge_prototype": "docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json"
+  },
+  "mode": "docs_context_harness_contract",
+  "next_recommended_phase": "HRCN v1.5 - Apply-Gate Contract",
+  "non_claim_lock": "HRCN v1.4 defines the Dry-Run Execution Harness Contract as documentation/context only. It specifies how a future harness would receive a classified proposal, create a sandbox plan, compute an expected diff, bind evidence and rollback requirements, and emit a dry-run result with applied=false. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Dry-run contract presence is not dry-run execution authority.",
+  "not_allowed_in_v1_4": [
+    "runtime code changes",
+    "dependency changes",
+    "CMS copy",
+    "CMS execution",
+    "CMS write authority",
+    "memory write authority",
+    "API write authority",
+    "runtime adapter implementation",
+    "runtime loader implementation",
+    "dry-run executor implementation",
+    "apply executor implementation"
+  ],
+  "previous_validated_anchor": "HRCN v1.3",
+  "primary_law": "A dry-run harness may simulate and score a proposed change; it may not apply the change, mutate runtime, or grant authority.",
+  "purpose": "Define how a future dry-run harness would simulate proposed changes without applying them.",
+  "sample_trace": {
+    "request": {
+      "decision_class": "dry_run_required",
+      "dry_run_request_id": "hrcn-v1.4-sample-001",
+      "expected_change_summary": "Simulate a future docs/context patch without applying it.",
+      "proposal_id": "proposal-doc-context-example",
+      "requested_authority": "dry_run_requested",
+      "requested_surface": "context_layer",
+      "target_paths": [
+        "docs/context-layer/example.md"
+      ]
+    },
+    "result": {
+      "api_called": false,
+      "applied": false,
+      "authority_granted": false,
+      "cms_mutated": false,
+      "decision": "simulation_passed",
+      "evidence_package_required": true,
+      "git_committed": false,
+      "git_pushed": false,
+      "human_authorization_required": true,
+      "memory_mutated": false,
+      "rollback_required": true,
+      "runtime_mutated": false,
+      "simulated": true
+    }
+  },
+  "sandbox_plan_contract": {
+    "allowed_write_scope": [],
+    "blocked_write_scope": [
+      "runtime source",
+      "dependencies",
+      "cms/",
+      "secrets",
+      "local config",
+      "external APIs"
+    ],
+    "filesystem_mutation_allowed": false,
+    "git_commit_allowed": false,
+    "git_push_allowed": false,
+    "git_stage_allowed": false,
+    "sandbox_mode": [
+      "no_write_plan_only",
+      "copy_plan_future",
+      "patch_preview_future"
+    ]
+  },
+  "schema": "HRCN-v1.4-dry-run-execution-harness-contract",
+  "timestamp_utc": "2026-06-05T09:51:02.163929+00:00",
+  "version": "HRCN v1.4"
+}
