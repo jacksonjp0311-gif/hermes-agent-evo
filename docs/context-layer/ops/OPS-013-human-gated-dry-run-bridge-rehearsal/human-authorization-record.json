@@ -1,0 +1,10 @@
+{
+  "schema": "HRCN-OPS-013-human-authorization-record",
+  "operation": "OPS-013",
+  "timestamp_utc": "2026-06-05T15:38:32.769616+00:00",
+  "required_phrase": "I AUTHORIZE HRCN OPS-013 DRY RUN BRIDGE REHEARSAL",
+  "phrase_matched": true,
+  "authorized_scope": "dry-run evidence only",
+  "apply_authority_granted": false,
+  "non_claim_lock": "The authorization phrase permits one dry-run rehearsal only. It does not grant apply/write authority."
+}

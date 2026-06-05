@@ -1,0 +1,30 @@
+{
+  "schema": "HRCN-OPS-013-simulated-diff-manifest",
+  "operation": "OPS-013",
+  "timestamp_utc": "2026-06-05T15:38:32.769616+00:00",
+  "dry_run_only": true,
+  "apply_executed": false,
+  "candidate_next_operation": "OPS-014 limited apply rehearsal",
+  "simulated_changes": [
+    {
+      "path": "README.md",
+      "operation": "would_update_post_seal_track",
+      "description": "Would mark OPS-014 as passed and OPS-015 as next only if OPS-014 is separately authorized and succeeds."
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-014-limited-apply-rehearsal/*",
+      "operation": "would_create_evidence",
+      "description": "Would create an apply packet, apply-gate evidence, rollback note, and final evidence only in OPS-014."
+    }
+  ],
+  "blocked_changes": [
+    "runtime source edits",
+    "CMS runtime execution",
+    "CMS write",
+    "memory write",
+    "API write",
+    "dependency mutation",
+    "environment file commit"
+  ],
+  "non_claim_lock": "This manifest is a dry-run simulation. No listed candidate change is applied by OPS-013."
+}

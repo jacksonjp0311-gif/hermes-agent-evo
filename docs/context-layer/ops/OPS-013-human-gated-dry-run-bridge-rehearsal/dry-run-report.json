@@ -1,0 +1,15 @@
+{
+  "schema": "HRCN-OPS-013-dry-run-report",
+  "operation": "OPS-013",
+  "timestamp_utc": "2026-06-05T15:38:32.769616+00:00",
+  "ops_012_prerequisite_passed": true,
+  "human_authorization_phrase_matched": true,
+  "memory_orientation_loaded": true,
+  "dry_run_proposal_written": true,
+  "simulated_diff_manifest_written": true,
+  "dry_run_passed": true,
+  "authority_granted": false,
+  "apply_executed": false,
+  "next_recommended_operation": "OPS-014 limited apply rehearsal",
+  "non_claim_lock": "The dry-run report proves proposal simulation only. It does not execute apply or grant write authority."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "HRCN-OPS-013-exit-criteria",
+  "operation": "OPS-013",
+  "criteria": {
+    "ops_012_prerequisite_passed": true,
+    "human_authorization_phrase_matched": true,
+    "memory_orientation_loaded": true,
+    "dry_run_proposal_written": true,
+    "simulated_diff_manifest_written": true,
+    "dry_run_passed": true,
+    "authority_granted": false,
+    "apply_executed": false,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true
+  },
+  "next_allowed_operation": "OPS-014 limited apply rehearsal"
+}

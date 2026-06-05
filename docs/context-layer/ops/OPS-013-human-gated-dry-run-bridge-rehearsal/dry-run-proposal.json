@@ -1,0 +1,42 @@
+{
+  "schema": "HRCN-OPS-013-dry-run-proposal",
+  "operation": "OPS-013",
+  "timestamp_utc": "2026-06-05T15:38:32.769616+00:00",
+  "base_commit": "9036a2a14f4bcb93964a5723d534a1583eae16d0",
+  "release_tag": "hrcn-ops-v0.1.0",
+  "release_tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "human_authorization_phrase_matched": true,
+  "proposal_title": "Prepare OPS-014 limited apply rehearsal as docs/context-only operation",
+  "input_basis": [
+    "OPS-012 memory orientation summary",
+    "OPS-012 bounded read inventory",
+    "OPS-012 adapter authority matrix",
+    "README post-seal track"
+  ],
+  "proposed_action": {
+    "target_operation": "OPS-014",
+    "mode": "limited_apply_rehearsal",
+    "allowed_scope": [
+      "README.md",
+      "docs/context-layer/ops/**"
+    ],
+    "blocked_scope": [
+      "runtime source",
+      "cms runtime",
+      "cms write",
+      "memory write",
+      "api write",
+      "dependency files",
+      "environment files"
+    ],
+    "intended_outputs": [
+      "OPS-014 apply packet",
+      "OPS-014 apply-gate evidence",
+      "OPS-014 rollback note",
+      "OPS-014 final evidence"
+    ]
+  },
+  "authority_granted": false,
+  "apply_executed": false,
+  "non_claim_lock": "This proposal is dry-run evidence only and grants no apply/write authority."
+}
