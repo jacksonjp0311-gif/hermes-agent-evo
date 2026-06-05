@@ -1,0 +1,220 @@
+{
+  "allowed_in_v1_2": [
+    "design permission request schema",
+    "design permission response schema",
+    "design decision classes",
+    "design evidence requirements",
+    "design rollback requirement flags",
+    "design human authorization flags",
+    "update README/context-layer documentation",
+    "validate duplicate artifact-index rows"
+  ],
+  "blocked_actions": [
+    "import cms/src as Hermes runtime",
+    "execute cms/scripts",
+    "treat CMS outputs as permission grants",
+    "write CMS memory",
+    "write external APIs",
+    "apply repairs",
+    "create runtime adapters",
+    "create runtime loaders",
+    "mutate dependencies",
+    "commit local secrets or machine state"
+  ],
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "apply_executor_created": false,
+    "autonomous_authority_granted": false,
+    "benchmark_executor_created": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "memory_write_authority_granted": false,
+    "repair_executor_created": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "classification_contract": {
+    "allowed_next_phase": "string or null",
+    "authority_granted": false,
+    "blocked_actions": "array of strings",
+    "decision_class": [
+      "observe_only",
+      "read_only_context",
+      "summarize_evidence",
+      "dry_run_required",
+      "human_review_required",
+      "blocked"
+    ],
+    "dry_run_required": "boolean",
+    "evidence_required": "boolean",
+    "human_authorization_required": "boolean",
+    "reason": "string",
+    "rollback_required": "boolean"
+  },
+  "classification_rules": [
+    {
+      "decision_class": "observe_only",
+      "dry_run_required": false,
+      "evidence_required": false,
+      "human_authorization_required": false,
+      "rollback_required": false,
+      "when": {
+        "requested_authority": [
+          "none"
+        ],
+        "requested_surface": [
+          "root_readme",
+          "context_layer"
+        ]
+      }
+    },
+    {
+      "decision_class": "read_only_context",
+      "dry_run_required": false,
+      "evidence_required": true,
+      "human_authorization_required": false,
+      "rollback_required": false,
+      "when": {
+        "requested_authority": [
+          "read_context"
+        ],
+        "requested_surface": [
+          "cms_bounded_packet",
+          "cms_mirror",
+          "context_layer"
+        ]
+      }
+    },
+    {
+      "decision_class": "summarize_evidence",
+      "dry_run_required": false,
+      "evidence_required": true,
+      "human_authorization_required": false,
+      "rollback_required": false,
+      "when": {
+        "requested_authority": [
+          "summarize",
+          "classify"
+        ],
+        "requested_surface": [
+          "cms_bounded_packet",
+          "cms_mirror",
+          "context_layer"
+        ]
+      }
+    },
+    {
+      "decision_class": "dry_run_required",
+      "dry_run_required": true,
+      "evidence_required": true,
+      "human_authorization_required": true,
+      "rollback_required": true,
+      "when": {
+        "requested_authority": [
+          "dry_run_requested"
+        ]
+      }
+    },
+    {
+      "decision_class": "human_review_required",
+      "dry_run_required": true,
+      "evidence_required": true,
+      "human_authorization_required": true,
+      "rollback_required": true,
+      "when": {
+        "requested_authority": [
+          "apply_requested",
+          "runtime_mutation_requested",
+          "cms_write_requested",
+          "memory_write_requested",
+          "api_write_requested"
+        ]
+      }
+    },
+    {
+      "decision_class": "blocked",
+      "dry_run_required": false,
+      "evidence_required": true,
+      "human_authorization_required": true,
+      "rollback_required": false,
+      "when": {
+        "requested_authority": [
+          "api_write_requested",
+          "memory_write_requested",
+          "cms_write_requested"
+        ],
+        "requested_surface": [
+          "secret_or_local_config"
+        ]
+      }
+    }
+  ],
+  "mode": "design_only",
+  "next_recommended_phase": "HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype",
+  "non_claim_lock": "HRCN v1.2 defines the Permission Bridge Dry-Run Design as a machine-readable contract for proposal classification, authority requests, evidence requirements, dry-run requirements, rollback requirements, and human authorization requirements. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Design presence is not execution authority.",
+  "not_allowed_in_v1_2": [
+    "runtime code changes",
+    "dependency changes",
+    "CMS copy",
+    "CMS execution",
+    "CMS write authority",
+    "memory write authority",
+    "API write authority",
+    "adapter implementation",
+    "loader implementation",
+    "dry-run executor implementation",
+    "apply executor implementation"
+  ],
+  "previous_validated_anchor": "HRCN v1.1.2",
+  "primary_law": "Permission bridge design classifies requested authority before action; it does not execute CMS, run dry-runs, apply repairs, or grant authority.",
+  "proposal_contract": {
+    "cms_read_refs": "array of bounded packet paths or CMS mirror paths; read-only only",
+    "evidence_refs": "array of evidence artifact paths",
+    "human_request_text": "string",
+    "non_claim_lock": "string required",
+    "proposal_id": "string required",
+    "proposal_type": [
+      "observe",
+      "read_context",
+      "summarize",
+      "repair_recommendation",
+      "dry_run_request",
+      "apply_request",
+      "runtime_change_request",
+      "dependency_change_request",
+      "external_api_request"
+    ],
+    "requested_authority": [
+      "none",
+      "read_context",
+      "summarize",
+      "classify",
+      "design_only",
+      "dry_run_requested",
+      "apply_requested",
+      "runtime_mutation_requested",
+      "cms_write_requested",
+      "memory_write_requested",
+      "api_write_requested"
+    ],
+    "requested_surface": [
+      "root_readme",
+      "context_layer",
+      "cms_mirror",
+      "cms_bounded_packet",
+      "runtime_source",
+      "tool_skill_provider_gateway",
+      "dependency_file",
+      "secret_or_local_config",
+      "external_api",
+      "unknown"
+    ],
+    "target_paths": "array of repository-relative paths"
+  },
+  "purpose": "Classify requested authority before any Hermes/CMS action can be proposed for dry-run or human review.",
+  "schema": "HRCN-v1.2-permission-bridge-dry-run-design",
+  "timestamp_utc": "2026-06-05T09:38:11.854441+00:00",
+  "version": "HRCN v1.2"
+}

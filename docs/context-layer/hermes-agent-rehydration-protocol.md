@@ -1,8 +1,8 @@
-# Hermes Agent Rehydration Protocol - Current through HRCN v1.1.2
+# Hermes Agent Rehydration Protocol - Current through HRCN v1.2
 
 Status: docs/context/navigation protocol only.
-Current HRCN state: HRCN v1.1.2.
-Next anchor: HRCN v1.2 - Permission Bridge Dry-Run Design.
+Current HRCN state: HRCN v1.2.
+Next anchor: HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype.
 
 ## Purpose
 
@@ -82,6 +82,8 @@ Read:
 - `docs/context-layer/hrcn-v1.0-governed-hermes-cms-nexus-plan.json`
 - `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json`
 - `docs/context-layer/hrcn-v1.1.2.validation.json`
+- `docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json`
+- `docs/context-layer/hrcn-v1.2.validation.json`
 - `docs/context-layer/hrcn-v1.0.validation.json`
 - `docs/context-layer/hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.json`
 - `docs/context-layer/hrcn-v1.0.1.validation.json`
@@ -418,6 +420,28 @@ Core rule:
 Context surfaces must agree on the current HRCN state before permission bridge design begins.
 ```
 
+### 19. Permission Bridge Design Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json`
+- `docs/context-layer/hrcn-v1.2.validation.json`
+
+Recover:
+
+- proposal contract fields
+- requested-surface classes
+- requested-authority classes
+- decision classes
+- evidence, rollback, dry-run, and human-authorization flags
+- blocked action list
+
+Core rule:
+
+```text
+Permission bridge design classifies requested authority before action; it does not execute CMS, run dry-runs, apply repairs, or grant authority.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -436,4 +460,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.1.2 closes documentation-surface coherence drift. The docs/context-layer mini README, rehydration protocol, roadmap, root README, and RCC-CMS-HRCN context now agree that the current state is HRCN v1.1.2, built on the HRCN v1.1 bounded CMS context packet and the HRCN v1.1.1 Python format technique lock. This closure does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
+HRCN v1.2 defines the Permission Bridge Dry-Run Design as a machine-readable contract for proposal classification, authority requests, evidence requirements, dry-run requirements, rollback requirements, and human authorization requirements. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Design presence is not execution authority.

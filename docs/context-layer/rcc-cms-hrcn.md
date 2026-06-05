@@ -599,3 +599,38 @@ docs/context-layer/hrcn-v1.1.2.validation.md
 
 Non-claim lock: HRCN v1.1.2 closes documentation-surface coherence drift. The docs/context-layer mini README, rehydration protocol, roadmap, root README, and RCC-CMS-HRCN context now agree that the current state is HRCN v1.1.2, built on the HRCN v1.1 bounded CMS context packet and the HRCN v1.1.1 Python format technique lock. This closure does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
 <!-- HRCN_V112_CONTEXT_SURFACE_COHERENCE_CLOSURE_END -->
+
+<!-- HRCN_V12_PERMISSION_BRIDGE_DRY_RUN_DESIGN_START -->
+## HRCN v1.2 - Permission Bridge Dry-Run Design
+
+```text
+Permission bridge design classifies requested authority before action; it does not execute CMS, run dry-runs, apply repairs, or grant authority.
+proposal_type is classified before action
+requested_surface is classified before action
+requested_authority is classified before action
+CMS refs remain read-only
+evidence, rollback, dry-run, and human authorization flags are explicit
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json
+docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.md
+docs/context-layer/hrcn-v1.2.validation.json
+docs/context-layer/hrcn-v1.2.validation.md
+```
+
+Decision classes:
+
+```text
+observe_only
+read_only_context
+summarize_evidence
+dry_run_required
+human_review_required
+blocked
+```
+
+Non-claim lock: HRCN v1.2 defines the Permission Bridge Dry-Run Design as a machine-readable contract for proposal classification, authority requests, evidence requirements, dry-run requirements, rollback requirements, and human authorization requirements. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Design presence is not execution authority.
+<!-- HRCN_V12_PERMISSION_BRIDGE_DRY_RUN_DESIGN_END -->
