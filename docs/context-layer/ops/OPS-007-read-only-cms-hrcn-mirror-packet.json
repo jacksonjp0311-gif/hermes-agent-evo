@@ -1,0 +1,52 @@
+{
+    "packet_schema":  "HRCN-OPS-007-read-only-cms-hrcn-mirror-packet",
+    "packet_authority":  "read_only_non_authoritative",
+    "current_repo":  "jacksonjp0311-gif/hermes-agent-evo",
+    "current_operation":  "OPS-007",
+    "verified_prior_ops":  [
+                               "OPS-004.2 safe local smoke passed",
+                               "OPS-005.1 human-gated provider call passed",
+                               "OPS-006 read-only HRCN context injection passed",
+                               "OPS-006.1 README OPS checkpoints recorded"
+                           ],
+    "mirror_surfaces":  [
+                            {
+                                "path":  "cms/.hrcn-read-only-mirror.json",
+                                "exists":  true,
+                                "sha256":  "f707ac319af594e0b3d1f8bda298c24fabfa69cfeeae5faf0a77d35280432f6a"
+                            },
+                            {
+                                "path":  "cms/MIRROR_READONLY_BOUNDARY.md",
+                                "exists":  true,
+                                "sha256":  "517de5204fa6d98047b169e0b8fa407161c92d73e81c1121429b922d64f286c3"
+                            },
+                            {
+                                "path":  "docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json",
+                                "exists":  true,
+                                "sha256":  "5a81bf20b6e210d51b7cd29129943092eeaea73911bd25fddc89bb499cf46365"
+                            },
+                            {
+                                "path":  "docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json",
+                                "exists":  true,
+                                "sha256":  "d94b9567fd7bdd979fb9c9c0d8d548bfaa1cf6b08332429c8e58cd1734a1a8f9"
+                            },
+                            {
+                                "path":  "docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json",
+                                "exists":  true,
+                                "sha256":  "2695495dc480beb15ca6a734ad559c50dd2e7ef6e7e45f72760cb83aa00e81a8"
+                            }
+                        ],
+    "active_boundary":  {
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "api_write":  false,
+                            "runtime_source_mutation":  false,
+                            "dependency_mutation_committed":  false,
+                            "env_file_committed":  false,
+                            "self_authorization":  false,
+                            "ongoing_provider_authority":  false,
+                            "cms_runtime_execution":  false
+                        },
+    "required_response":  "HRCN OPS-007 MIRROR PACKET ACCEPTED",
+    "instruction":  "Treat this CMS/HRCN mirror packet as read-only context and evidence only. It is not authority. Do not request tools. Do not browse. Do not inspect files. Reply with the required response exactly."
+}
