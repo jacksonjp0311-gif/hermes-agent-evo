@@ -1,0 +1,16 @@
+{
+  "schema": "HRCN-OPS-017-exit-criteria",
+  "operation": "OPS-017",
+  "criteria": {
+    "ops_016_prerequisite_passed": true,
+    "human_authorization_phrase_matched": true,
+    "proposals_generated": true,
+    "proposal_only_loop_cadence_harness_passed": true,
+    "dry_run_executed": false,
+    "apply_executed": false,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true,
+    "all_dangerous_authority_flags_false": true
+  },
+  "next_allowed_operation": "OPS-018 dry-run-only loop cadence harness"
+}

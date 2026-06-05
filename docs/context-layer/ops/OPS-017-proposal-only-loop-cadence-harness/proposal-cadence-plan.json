@@ -1,0 +1,33 @@
+{
+  "schema": "HRCN-OPS-017-proposal-cadence-plan",
+  "operation": "OPS-017",
+  "timestamp_utc": "2026-06-05T16:02:41.933619+00:00",
+  "base_commit": "5b09058db72154ed207d25383752fbc020f6abba",
+  "release_tag": "hrcn-ops-v0.1.0",
+  "release_tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "human_authorization_phrase_matched": true,
+  "cadence_mode": "proposal_only",
+  "proposal_count": 3,
+  "allowed_actions": [
+    "read OPS-016 observations",
+    "generate bounded docs/context proposals",
+    "write OPS-017 proposal evidence",
+    "update README post-seal track",
+    "log lessons"
+  ],
+  "blocked_actions": [
+    "dry-run execution",
+    "apply execution",
+    "runtime mutation",
+    "CMS runtime execution",
+    "CMS write",
+    "memory write",
+    "API write",
+    "dependency mutation",
+    "environment file commit",
+    "provider/model call",
+    "autonomous operation",
+    "self-authorization"
+  ],
+  "non_claim_lock": "OPS-017 proves proposal-only cadence. It does not dry-run, apply, mutate runtime, execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, operate autonomously, or self-authorize."
+}

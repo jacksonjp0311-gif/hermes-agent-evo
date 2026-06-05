@@ -1,0 +1,14 @@
+{
+  "schema": "HRCN-OPS-017-proposal-cadence-summary",
+  "operation": "OPS-017",
+  "timestamp_utc": "2026-06-05T16:02:42.375272+00:00",
+  "proposal_only_loop_cadence_harness_passed": true,
+  "proposals_generated": 3,
+  "dry_run_executed": false,
+  "apply_executed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "next_recommended_operation": "OPS-018 dry-run-only loop cadence harness",
+  "non_claim_lock": "Proposal-only summary proves planning cadence only, not dry-run or apply authority."
+}
