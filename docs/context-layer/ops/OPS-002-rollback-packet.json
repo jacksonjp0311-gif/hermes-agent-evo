@@ -1,7 +1,7 @@
 {
     "schema":  "HRCN-OPS-002-rollback-packet",
     "operation":  "OPS-002",
-    "base_commit":  "9de7fe12fb482371c145f9622d6214d5e91cff5a",
+    "base_commit":  "75b85118410ce5cac7d82068d014902bd1b73510",
     "rollback_scope":  [
                            "docs/context-layer/ops/OPS-002-*"
                        ],

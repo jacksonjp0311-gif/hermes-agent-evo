@@ -1,8 +1,8 @@
 # OPS-002 Operational Cadence
 
 - operation: OPS-002
-- base commit: 9de7fe12fb482371c145f9622d6214d5e91cff5a
-- timestamp utc: 20260605T121130Z
+- base commit: 75b85118410ce5cac7d82068d014902bd1b73510
+- timestamp utc: 20260605T121458Z
 - purpose: convert OPS-001 proof into repeatable morning operation
 - HRCN version: v2.0 sealed baseline
 - version churn: false

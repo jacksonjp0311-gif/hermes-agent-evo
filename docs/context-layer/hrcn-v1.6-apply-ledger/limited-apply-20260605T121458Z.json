@@ -1,12 +1,6 @@
 {
-  "allowed_scope": [
-    "README.md",
-    "docs/context-layer/**"
-  ],
-  "applied": false,
-  "authority_granted": false,
-  "mode": "apply",
-  "operation_count": 5,
+  "applied": true,
+  "authority_granted": true,
   "operations": [
     {
       "content": "# OPS-002 Operational Cadence\n\n- operation: OPS-002\n- base commit: 75b85118410ce5cac7d82068d014902bd1b73510\n- timestamp utc: 20260605T121458Z\n- purpose: convert OPS-001 proof into repeatable morning operation\n- HRCN version: v2.0 sealed baseline\n- version churn: false\n- runtime mutation: false\n- cms write: false\n- memory write: false\n- api write: false\n- dependency mutation: false\n\n## Cadence\n\n1. Confirm clean worktree.\n2. Pull/rebase latest main.\n3. Verify HRCN v2.0 validation.\n4. Verify OPS-001 evidence.\n5. Run operator status.\n6. Run nexus status.\n7. Choose one bounded docs/context task.\n8. Build packet.\n9. Apply only through governed limited apply.\n10. Write evidence, replay/rollback report, and final OPS record.\n\n## Rule\n\nVersions define authority. OPS runs prove capability. Patches repair tooling. Releases showcase stable milestones.\n",
@@ -40,9 +34,6 @@
     }
   ],
   "packet_id": "OPS-002-limited-apply-20260605T121458Z",
-  "schema": "HRCN-v1.6-limited-apply-plan"
-}
-{
-  "applied": true,
-  "audit_path": "docs\\context-layer\\hrcn-v1.6-apply-ledger\\limited-apply-20260605T121458Z.json"
+  "schema": "HRCN-v1.6-limited-apply-audit",
+  "timestamp_utc": "2026-06-05T12:14:58.951410+00:00"
 }
