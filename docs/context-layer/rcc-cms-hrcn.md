@@ -709,3 +709,42 @@ authority_granted=false
 
 Non-claim lock: HRCN v1.4 defines the Dry-Run Execution Harness Contract as documentation/context only. It specifies how a future harness would receive a classified proposal, create a sandbox plan, compute an expected diff, bind evidence and rollback requirements, and emit a dry-run result with applied=false. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Dry-run contract presence is not dry-run execution authority.
 <!-- HRCN_V14_DRY_RUN_EXECUTION_HARNESS_CONTRACT_END -->
+
+<!-- HRCN_V15_APPLY_GATE_CONTRACT_START -->
+## HRCN v1.5 - Apply-Gate Contract
+
+```text
+Apply is a gated human-authorized transition, not an agent decision and not a dry-run result.
+dry-run pass is not apply authority
+human authorization record is required
+rollback plan is required
+validation plan is required
+secret scan is required
+scoped changed paths are required
+authority_granted=false remains invariant
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.5-apply-gate-contract.json
+docs/context-layer/hrcn-v1.5-apply-gate-contract.md
+docs/context-layer/hrcn-v1.5.validation.json
+docs/context-layer/hrcn-v1.5.validation.md
+```
+
+Gate outputs:
+
+```text
+gate_decision
+missing_requirements
+allowed_future_executor_scope
+requires_clean_worktree
+requires_rebase_before_apply
+requires_secret_scan
+authority_granted=false
+apply_executed=false
+```
+
+Non-claim lock: HRCN v1.5 defines the Apply-Gate Contract as documentation/context only. It specifies how a future apply candidate must bind a passed dry-run result, evidence package, rollback plan, human authorization record, scoped changed paths, validation plan, and secret scan before any future apply executor may be requested. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Apply-gate contract presence is not apply permission.
+<!-- HRCN_V15_APPLY_GATE_CONTRACT_END -->

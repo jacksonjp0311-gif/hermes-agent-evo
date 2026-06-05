@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v1.4 - Dry-Run Execution Harness Contract
+HRCN v1.5 - Apply-Gate Contract
 
 ## Phase Map
 
@@ -15,19 +15,19 @@ HRCN v1.4 - Dry-Run Execution Harness Contract
 | HRCN v1.2 | Permission Bridge Dry-Run Design | Classifies requested authority before action; design only. |
 | HRCN v1.3 | CMS-Hermes Read-Only Bridge Prototype | Reference prototype contract; no runtime loader, adapter, or execution authority. |
 | HRCN v1.4 | Dry-Run Execution Harness Contract | Simulation contract only; no filesystem, git, runtime, CMS, memory, API, or apply mutation. |
-| HRCN v1.5 | Apply-Gate Contract | Future apply gate contract; human authorization and rollback required. |
+| HRCN v1.5 | Apply-Gate Contract | Defines future apply candidate gate; no apply executor or apply authority. |
 | HRCN v1.6 | Limited Apply Executor | Future bounded reversible docs/context executor only after apply gate. |
 | HRCN v1.7 | Governed Operational Loop | Future observe/propose/dry-run/evidence/authorize/apply/validate/ledger loop. |
 | HRCN v2.0 | Operational Hermes-CMS Nexus | Future operational nexus only after all prior gates validate. |
 
 ## Next Anchor
 
-HRCN v1.5 - Apply-Gate Contract.
+HRCN v1.6 - Limited Apply Executor.
 
-## Current Dry-Run Boundary
+## Current Apply Boundary
 
-HRCN v1.4 defines a dry-run harness contract. It may describe simulation inputs, sandbox plans, expected diffs, evidence, rollback, and dry-run results. It creates no dry-run executor and grants no apply authority.
+HRCN v1.5 defines the gate that a future apply candidate must pass. It creates no apply executor, applies no patch, grants no write authority, and does not treat dry-run success as permission.
 
 ## Non-Claim Lock
 
-HRCN v1.4 defines the Dry-Run Execution Harness Contract as documentation/context only. It specifies how a future harness would receive a classified proposal, create a sandbox plan, compute an expected diff, bind evidence and rollback requirements, and emit a dry-run result with applied=false. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Dry-run contract presence is not dry-run execution authority.
+HRCN v1.5 defines the Apply-Gate Contract as documentation/context only. It specifies how a future apply candidate must bind a passed dry-run result, evidence package, rollback plan, human authorization record, scoped changed paths, validation plan, and secret scan before any future apply executor may be requested. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Apply-gate contract presence is not apply permission.

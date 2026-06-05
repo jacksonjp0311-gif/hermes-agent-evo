@@ -1,0 +1,196 @@
+{
+  "allowed_in_v1_5": [
+    "define apply candidate contract",
+    "define apply gate decision contract",
+    "define required gate checks",
+    "define future limited executor scope classes",
+    "define sample trace",
+    "update README/context-layer documentation"
+  ],
+  "apply_candidate_contract": {
+    "apply_candidate_id": "string required",
+    "authority_granted": false,
+    "dry_run_decision": [
+      "simulation_passed"
+    ],
+    "dry_run_result_ref": "path required",
+    "evidence_package_ref": "path required",
+    "expected_diff_manifest_ref": "path required",
+    "human_authorization_ref": "path required",
+    "proposal_id": "string required",
+    "requested_authority": [
+      "apply_requested",
+      "runtime_mutation_requested",
+      "cms_write_requested",
+      "memory_write_requested",
+      "api_write_requested"
+    ],
+    "requested_surface": [
+      "root_readme",
+      "context_layer",
+      "runtime_source",
+      "dependency_file",
+      "cms_mirror",
+      "unknown"
+    ],
+    "rollback_plan_ref": "path required",
+    "scoped_changed_paths": "array of paths explicitly authorized for future apply",
+    "secret_scan_required": true,
+    "target_paths": "array of repository-relative paths",
+    "validation_plan_ref": "path required"
+  },
+  "apply_gate_decision_contract": {
+    "allowed_future_executor_scope": [
+      "docs_context_only",
+      "none"
+    ],
+    "apply_candidate_id": "string",
+    "apply_executed": false,
+    "authority_granted": false,
+    "gate_decision": [
+      "eligible_for_future_limited_apply_executor",
+      "needs_more_evidence",
+      "needs_rollback_plan",
+      "needs_human_authorization",
+      "blocked"
+    ],
+    "missing_requirements": "array",
+    "requires_clean_worktree": true,
+    "requires_post_apply_rollback_record": true,
+    "requires_post_apply_validation": true,
+    "requires_rebase_before_apply": true,
+    "requires_secret_scan": true
+  },
+  "blocked_actions": [
+    "apply a patch now",
+    "create apply executor",
+    "stage files based on apply gate",
+    "commit files based on apply gate",
+    "push files based on apply gate",
+    "execute cms/scripts",
+    "import cms/src",
+    "write CMS memory",
+    "write external APIs",
+    "mutate runtime source",
+    "mutate dependencies",
+    "treat apply-gate eligibility as apply authority",
+    "treat human review required as human authorization received"
+  ],
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "apply_executor_created": false,
+    "autonomous_authority_granted": false,
+    "benchmark_executor_created": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "memory_write_authority_granted": false,
+    "read_only_bridge_runtime_implemented": false,
+    "repair_executor_created": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "input_dependencies": {
+    "bounded_cms_context_packet": "docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json",
+    "dry_run_harness_contract": "docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json",
+    "permission_bridge_design": "docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json",
+    "read_only_bridge_prototype": "docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json"
+  },
+  "mode": "docs_context_apply_gate_contract",
+  "next_recommended_phase": "HRCN v1.6 - Limited Apply Executor",
+  "non_claim_lock": "HRCN v1.5 defines the Apply-Gate Contract as documentation/context only. It specifies how a future apply candidate must bind a passed dry-run result, evidence package, rollback plan, human authorization record, scoped changed paths, validation plan, and secret scan before any future apply executor may be requested. It does not implement a runtime loader, adapter, dry-run executor, apply executor, benchmark executor, repair executor, CMS writer, memory writer, API writer, live integration, or apply authority. Apply-gate contract presence is not apply permission.",
+  "not_allowed_in_v1_5": [
+    "runtime code changes",
+    "dependency changes",
+    "CMS copy",
+    "CMS execution",
+    "CMS write authority",
+    "memory write authority",
+    "API write authority",
+    "runtime adapter implementation",
+    "runtime loader implementation",
+    "dry-run executor implementation",
+    "apply executor implementation"
+  ],
+  "previous_validated_anchor": "HRCN v1.4",
+  "primary_law": "Apply is a gated human-authorized transition, not an agent decision and not a dry-run result.",
+  "purpose": "Define the gates that must exist before any future apply executor may be requested.",
+  "required_gate_checks": [
+    "dry_run_result_ref exists",
+    "dry_run_result reports simulated=true",
+    "dry_run_result reports applied=false",
+    "dry_run_result reports authority_granted=false",
+    "expected_diff_manifest_ref exists",
+    "evidence_package_ref exists",
+    "rollback_plan_ref exists",
+    "validation_plan_ref exists",
+    "human_authorization_ref exists",
+    "secret_scan_required=true",
+    "scoped_changed_paths is non-empty and explicit",
+    "no unbounded wildcard path scope",
+    "no local secrets or machine state"
+  ],
+  "sample_trace": {
+    "candidate": {
+      "apply_candidate_id": "hrcn-v1.5-sample-001",
+      "authority_granted": false,
+      "dry_run_decision": "simulation_passed",
+      "proposal_id": "proposal-doc-context-example",
+      "requested_authority": "apply_requested",
+      "requested_surface": "context_layer",
+      "scoped_changed_paths": [
+        "README.md",
+        "docs/context-layer/example.md"
+      ],
+      "secret_scan_required": true
+    },
+    "decision": {
+      "allowed_future_executor_scope": "docs_context_only",
+      "apply_executed": false,
+      "authority_granted": false,
+      "gate_decision": "eligible_for_future_limited_apply_executor"
+    }
+  },
+  "schema": "HRCN-v1.5-apply-gate-contract",
+  "scope_rules": {
+    "api_write_candidate": {
+      "default_decision": "blocked",
+      "reason": "API write authority is not granted."
+    },
+    "cms_write_candidate": {
+      "default_decision": "blocked",
+      "reason": "CMS mirror remains read-only; CMS write authority is not granted."
+    },
+    "docs_context_only_candidate": {
+      "allowed_future_scope": [
+        "README.md",
+        "docs/context-layer/**"
+      ],
+      "disallowed_future_scope": [
+        "agent/**",
+        "tools/**",
+        "skills/**",
+        "plugins/**",
+        "providers/**",
+        "gateway/**",
+        "hermes_cli/**",
+        "tui_gateway/**",
+        "ui-tui/**",
+        "web/**",
+        "cms/**",
+        "pyproject.toml",
+        "uv.lock",
+        "package.json",
+        "package-lock.json",
+        ".env*"
+      ]
+    },
+    "runtime_candidate": {
+      "default_decision": "blocked",
+      "reason": "runtime changes require later phases and explicit human authorization."
+    }
+  },
+  "timestamp_utc": "2026-06-05T09:57:01.240407+00:00",
+  "version": "HRCN v1.5"
+}
