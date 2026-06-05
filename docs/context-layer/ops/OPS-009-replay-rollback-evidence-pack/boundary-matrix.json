@@ -1,0 +1,25 @@
+{
+  "schema": "HRCN-OPS-009-boundary-matrix",
+  "operation": "OPS-009",
+  "base_commit": "4b7c2743ae6e6bc422645ce9f3990551befd700c",
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "self_authorization": false,
+  "ongoing_provider_authority": false,
+  "rollback_executed": false,
+  "replay_pack_only": true,
+  "authorized_scope": [
+    "README.md",
+    "docs/context-layer/ops/**",
+    "docs/context-layer/hrcn-v2.0-nexus-reports/**"
+  ],
+  "non_claim_lock": "OPS-009 is a replay/rollback evidence pack only. It does not execute rollback, mutate runtime, write CMS/memory/API, change dependencies, or grant autonomous/self-authorized authority."
+}

@@ -1,0 +1,17 @@
+b35faf1dc7b743244edc6adb3b41bd49df050fd3495b3a82fa812465cab18950  README.md
+e17d51a7b1b60332a2a69f973f238d0f37ea7f302028a46724e84c10cc91ff93  docs/context-layer/ops/OPS-003-final-evidence.json
+a1eb02e06066d823f6d7942d94cde033896217e644196427826c7da1c384825e  docs/context-layer/ops/OPS-004.2-final-evidence.json
+759443b0593eea00439480a3bd7518d02156eb335eb9592026d98fba843b66ed  docs/context-layer/ops/OPS-005.1-final-evidence.json
+e32f9110d7745d964604c00a7841a8307de565052f7a7a12f94cf5ebda0b88c1  docs/context-layer/ops/OPS-006-final-evidence.json
+39f9bc02fea2977f155a832712c66cb8e5f149b13e777cf5321295718298feae  docs/context-layer/ops/OPS-006.1-no-herestring-readme-validation-repair.json
+aaf02e133414b325d56911215ed12237b18363d749138a805d63e156a814d434  docs/context-layer/ops/OPS-007-final-evidence.json
+19457bd4876f6caa856746d0334e65df604c3b645a552add1ab5be17144224bc  docs/context-layer/ops/OPS-008-final-evidence.json
+f9cd7a046dc06ace80a3401cdc909e0fb3d3e90096f8cf5b57cb7529eb520846  docs/context-layer/ops/OPS-008.1-readme-lessons-alignment.json
+0ea2a87b55adeb694e8610e9693d4379c030cb8083471c9e6533feab09d78f47  docs/context-layer/ops/README-english-badge-render-hygiene-repair-v2-after-OPS-007.json
+4e6b35fb654dae0b60b196293add2f9833988c1759bf3ebfaeffdbc0512d4f43  docs/context-layer/hrcn-v2.0-operational-hermes-cms-nexus.json
+270bfdff5837435b86a69a921d50223aeeced610ea3089fd9bfcf0737b26a6a5  docs/context-layer/hrcn-v2.0.validation.json
+a63923c99cf657f99defc2a89bbe965c73da9bb868b434b4688ac284cd61fa1b  scripts/hrcn/operational_nexus_status_v2_0.py
+7dcdeef771a4781f20c908cdd78bf1e9b7f270b314b16a84f25544b19f456c65  docs/context-layer/ops/OPS-009-replay-rollback-evidence-pack/boundary-matrix.json
+3973f6665cc4639cee2e263455af9ba8a18b22990ea3fe1dd97ba94d883ba1a1  docs/context-layer/ops/OPS-009-replay-rollback-evidence-pack/replay-instructions.md
+7aba081ba430b431c04e6eeb3ff51f1d0f1500022c17316099ae9e7e43bfbbb4  docs/context-layer/ops/OPS-009-replay-rollback-evidence-pack/rollback-notes.md
+9f3b88373ae063084d1ff04429d4d47560fa1d0ac6941b9b8e85dd72d2c870d3  docs/context-layer/ops/OPS-009-replay-rollback-evidence-pack/evidence-index.json

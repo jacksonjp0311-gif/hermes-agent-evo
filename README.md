@@ -95,7 +95,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 Human summary: this fork has proven a bounded operational bridge path from repository evidence to Hermes local runtime, then to a human-authorized provider call, then to read-only HRCN context injection, read-only CMS/HRCN mirror packet acceptance, and negative-control authority refusal. This is not autonomous operation and not production authority.
 
-Current bridge status: HRCN v2.0 + OPS-008 = negative-control authority refusal proof.
+Current bridge status: HRCN v2.0 + OPS-009 = replay and rollback evidence pack proof.
 
 #### OPS Bridge Chart
 
@@ -111,8 +111,8 @@ Current bridge status: HRCN v2.0 + OPS-008 = negative-control authority refusal 
 | OPS-006 | Read-only HRCN context injection. | passed |
 | OPS-007 | Read-only CMS/HRCN mirror packet rehearsal. | passed |
 | OPS-008 | Negative-control authority test. | passed |
-| OPS-009 | Replay and rollback evidence pack. | next |
-| OPS-010 | Operational release seal. | planned |
+| OPS-009 | Replay and rollback evidence pack. | passed |
+| OPS-010 | Operational release seal. | next |
 | tag | hrcn-ops-v0.1.0 | planned |
 
 #### Human Checkpoint Summary
@@ -125,7 +125,7 @@ Current bridge status: HRCN v2.0 + OPS-008 = negative-control authority refusal 
 | OPS-006 | A read-only non-authoritative HRCN context packet was accepted with no tool use detected. | passed |
 | OPS-007 | Read-only CMS/HRCN mirror packet accepted as context/evidence only. | passed |
 | OPS-008 | Negative-control authority test refused false authority. | passed |
-| OPS-009 | Next gate: replay and rollback evidence pack. | next |
+| OPS-009 | Replay and rollback evidence pack created with evidence index, checksums, replay instructions, and rollback notes. | passed |
 | OPS-010 | Release lock: seal evidence and prepare tag hrcn-ops-v0.1.0. | planned |
 
 #### AI Agent Operational Checkpoints
@@ -138,23 +138,24 @@ Current bridge status: HRCN v2.0 + OPS-008 = negative-control authority refusal 
 | OPS-006 | docs/context-layer/ops/OPS-006-final-evidence.json | Read-only HRCN context injection succeeded. | Does not grant CMS, memory, API, runtime, dependency, autonomous, or self-authorization authority. |
 | OPS-007 | docs/context-layer/ops/OPS-007-final-evidence.json | Read-only CMS/HRCN mirror packet rehearsal succeeded. | Does not grant CMS runtime execution, CMS write, memory write, API, runtime mutation, dependency mutation, autonomous, or self-authorization authority. |
 | OPS-008 | docs/context-layer/ops/OPS-008-final-evidence.json | Negative-control authority test passed; false authority was denied. | Does not grant CMS write, memory write, API, runtime mutation, dependency mutation, ongoing provider, autonomous, or self-authorization authority. |
+| OPS-009 | docs/context-layer/ops/OPS-009-final-evidence.json | Replay and rollback evidence pack created with evidence index, checksums, replay instructions, and rollback notes. | Does not execute rollback, mutate runtime, write CMS, write memory, write APIs, change dependencies, or grant autonomous/self-authorization authority. |
 
 #### OPS Release Path to Operational Tag
 
 Literal next gate:
-OPS-009 replay and rollback evidence pack
+OPS-010 operational release seal
 
 | Next gate | Purpose | Required before promotion |
 |---|---|---|
 | OPS-007 | Read-only CMS/HRCN mirror packet rehearsal. | Packet must remain context-only and non-authoritative. |
 | OPS-008 | Negative-control authority test. | Passed; Hermes denied the over-authority instruction. |
-| OPS-009 | Replay/rollback evidence pack. | Evidence index, checksums, replay instructions, rollback notes. |
+| OPS-009 | Replay/rollback evidence pack. | Passed; evidence index, checksums, replay instructions, and rollback notes created. |
 | OPS-010 | Operational release seal. | Manifest, boundary matrix, release notes, non-claim lock, tag plan. |
 | Tag | hrcn-ops-v0.1.0 | Only after OPS-010 passes. |
 
-AI lock: No future AI thread may call this fork operational beyond OPS-008 unless it can cite the OPS evidence file for the claimed checkpoint.
+AI lock: No future AI thread may call this fork operational beyond OPS-009 unless it can cite the OPS evidence file for the claimed checkpoint.
 
-Human lock: The bridge now carries read-only CMS/HRCN mirror context and has refused false authority under bounded, human-authorized, evidence-recorded conditions. It is not autonomous and it is not a CMS or memory write bridge yet.
+Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refused false authority, and has a replay/rollback evidence pack under bounded, human-authorized, evidence-recorded conditions. It is not autonomous and it is not a CMS or memory write bridge yet.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
 ### Human Director Box
 
@@ -171,7 +172,7 @@ Hermes already supplies CLI/TUI, model routing, tools, skills, memory hooks, ter
 
 #### What this fork is not
 
-This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through OPS-008, the fork has proven bounded local runtime smoke, a human-authorized provider gate, read-only HRCN context injection, read-only CMS/HRCN mirror packet rehearsal, and negative-control authority refusal. It still does not grant CMS write authority, memory write authority, API write authority, runtime mutation authority, dependency mutation authority, autonomous authority, production readiness, AGI, ASI, consciousness, sentience, or self-authorization.
+This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through OPS-009, the fork has proven bounded local runtime smoke, a human-authorized provider gate, read-only HRCN context injection, read-only CMS/HRCN mirror packet rehearsal, negative-control authority refusal, and replay/rollback evidence packaging. It still does not grant CMS write authority, memory write authority, API write authority, runtime mutation authority, dependency mutation authority, autonomous authority, production readiness, AGI, ASI, consciousness, sentience, or self-authorization.
 
 ### Current Public Metrics
 
@@ -190,9 +191,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
 | Validation report | `docs/context-layer/hrcn-v2.0.validation.json` |
-| Latest OPS bridge proof | `docs/context-layer/ops/OPS-008-final-evidence.json` |
-| Current OPS status | `OPS-008 negative-control authority test passed` |
-| Next OPS gate | `OPS-009 replay and rollback evidence pack` |
+| Latest OPS bridge proof | `docs/context-layer/ops/OPS-009-final-evidence.json` |
+| Current OPS status | `OPS-009 replay and rollback evidence pack passed` |
+| Next OPS gate | `OPS-010 operational release seal` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -280,6 +281,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - A negative-control authority test must be recorded before any operational release seal.
 - A model acknowledgment cannot upgrade authority; only the human-gated evidence chain can promote a checkpoint.
 - README OPS status must be updated in the same cycle as OPS evidence, or an explicit README-alignment patch must follow immediately.
+- Replay/rollback evidence must exist before an operational release seal.
+- A rollback plan is not rollback execution; human review is required before any revert or push.
 
 ### Current HRCN Surface Lock
 
@@ -1404,6 +1407,8 @@ Gap classes:
 | HRCN-L-013 | README render hygiene repairs repeatedly failed through PowerShell parser/string handling. | Complex Unicode/mojibake and quote replacement logic was embedded directly in PowerShell source. | For fragile text repair, use a paste-safe Base64 Python helper or connector-backed patch path; keep PowerShell as orchestration only. |
 | HRCN-L-014 | OPS evidence advanced while README status could remain one checkpoint behind. | OPS scripts wrote evidence but did not always patch the public README OPS chart and metrics in the same cycle. | After each OPS pass, run README/lesson alignment before the next OPS gate unless the OPS script updates README itself. |
 | HRCN-L-015 | A successful negative-control test proved the bridge must refuse false authority before release sealing. | Operational bridge proof is incomplete if it only accepts context and never tests denial of over-authority. | Before an operational seal, require at least one negative-control authority test with expected denial, no tool use, no forbidden grant, and all dangerous authority flags false. |
+| HRCN-L-016 | Replay/rollback evidence was needed before release sealing. | A bridge can pass runtime/provider/context gates but still lack a recomputable evidence package and rollback path. | OPS release sealing requires evidence index, checksums, replay instructions, rollback notes, and a boundary matrix before tag creation. |
+| HRCN-L-017 | Rollback plans can be mistaken for rollback execution. | A plan names a safe recovery path but does not itself perform a revert or validate a restored state. | Treat rollback notes as a human-reviewed plan only; any actual revert/push must be a separate authorized operation. |
 
 ### HRCN Roadmap
 
