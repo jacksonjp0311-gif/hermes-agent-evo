@@ -576,3 +576,26 @@ docs/context-layer/hrcn-v1.1.1.validation.md
 
 Non-claim lock: HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
 <!-- HRCN_V111_PYTHON_FORMAT_TECHNIQUE_LOCK_END -->
+
+<!-- HRCN_V112_CONTEXT_SURFACE_COHERENCE_CLOSURE_START -->
+## HRCN v1.1.2 - Context Surface Coherence Closure
+
+```text
+Context surfaces must agree on the current HRCN state before permission bridge design begins.
+docs/context-layer README current boundary = HRCN v1.1.2
+rehydration protocol current state = HRCN v1.1.2
+roadmap current = HRCN v1.1.2
+next anchor = HRCN v1.2
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json
+docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.md
+docs/context-layer/hrcn-v1.1.2.validation.json
+docs/context-layer/hrcn-v1.1.2.validation.md
+```
+
+Non-claim lock: HRCN v1.1.2 closes documentation-surface coherence drift. The docs/context-layer mini README, rehydration protocol, roadmap, root README, and RCC-CMS-HRCN context now agree that the current state is HRCN v1.1.2, built on the HRCN v1.1 bounded CMS context packet and the HRCN v1.1.1 Python format technique lock. This closure does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
+<!-- HRCN_V112_CONTEXT_SURFACE_COHERENCE_CLOSURE_END -->

@@ -66,6 +66,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.0.3 | Can CMS be copied as a read-only evidence mirror without runtime authority? | `docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json` |
 | HRCN v1.1 | Can the mirrored CMS be compressed into a bounded read-only context packet for Hermes orientation? | `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json` |
 | HRCN v1.1.1 | Can HRCN restore the readable Python-backed all-one coding format after paste-safe Base64 transport? | `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json` |
+| HRCN v1.1.2 | Can HRCN close stale context-surface current-state drift before permission bridge design? | `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -90,8 +91,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.1.1` |
-| Previous validated anchor | `HRCN v1.1` |
+| Current checkpoint | `HRCN v1.1.2` |
+| Previous validated anchor | `HRCN v1.1.1` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -102,7 +103,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.1.1.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.1.2.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -118,6 +119,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS mirror root | `cms/` |
 | Bounded CMS context packet | `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json` |
 | Python format technique lock | `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json` |
+| Context surface coherence closure | `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json` |
 
 ### Core Law
 
@@ -195,7 +197,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.1.1 adds a Python format technique lock; it does not change Hermes runtime.
+HRCN v1.1.2 closes context-surface coherence drift; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -755,6 +757,43 @@ Base64     = optional paste-safe transport wrapper only
 Non-claim lock: the coding style lock is a repository-governance rule, not a runtime bridge.
 <!-- HRCN_V111_PYTHON_FORMAT_TECHNIQUE_LOCK_END -->
 
+<!-- HRCN_V112_CONTEXT_SURFACE_COHERENCE_CLOSURE_START -->
+### HRCN v1.1.2 Context Surface Coherence Closure
+
+HRCN v1.1.2 closes the remaining documentation-surface drift before HRCN v1.2.
+
+Current rule:
+
+```text
+Context surfaces must agree on the current HRCN state before permission bridge design begins.
+```
+
+Closure repairs:
+
+```text
+docs/context-layer/README.md current boundary updated from stale v0.2.4 wording
+rehydration protocol title/current-state updated to current-through v1.1.2
+v1.1/v1.1.1/v1.1.2 evidence added to state-scan/index surfaces
+root README, roadmap, RCC-CMS-HRCN context, and validation surfaces aligned
+```
+
+v1.1.2 does not grant:
+
+```text
+runtime integration
+loader creation
+adapter creation
+CMS write authority
+memory write authority
+API authority
+dry-run execution authority
+apply authority
+autonomous authority
+```
+
+Non-claim lock: this coherence closure is a documentation-surface alignment patch, not a runtime bridge.
+<!-- HRCN_V112_CONTEXT_SURFACE_COHERENCE_CLOSURE_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -936,7 +975,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
+HRCN v1.1.2 closes documentation-surface coherence drift. The docs/context-layer mini README, rehydration protocol, roadmap, root README, and RCC-CMS-HRCN context now agree that the current state is HRCN v1.1.2, built on the HRCN v1.1 bounded CMS context packet and the HRCN v1.1.1 Python format technique lock. This closure does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

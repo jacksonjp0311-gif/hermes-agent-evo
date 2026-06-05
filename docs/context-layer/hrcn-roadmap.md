@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v1.1.1 - Python Format + Codex Style Technique Lock
+HRCN v1.1.2 - Context Surface Coherence Closure
 
 ## Phase Map
 
@@ -11,6 +11,7 @@ HRCN v1.1.1 - Python Format + Codex Style Technique Lock
 | HRCN v1.0.3 | CMS Read-Only Mirror Copy With Evidence Package | CMS copied under `cms/` as read-only context/evidence only. |
 | HRCN v1.1 | Bounded CMS Context Packet | Bounded read-only packet from CMS mirror into Hermes context; no loader or authority. |
 | HRCN v1.1.1 | Python Format + Codex Style Technique Lock | Readable all-one script format restored; Python writer/validator role locked. |
+| HRCN v1.1.2 | Context Surface Coherence Closure | Mini README, rehydration, roadmap, root README, and context contract agree before v1.2. |
 | HRCN v1.2 | Permission Bridge Dry-Run Design | Future adapter/dry-run design only. |
 | HRCN v1.3 | CMS-Hermes Read-Only Bridge Prototype | Future prototype; no write authority by default. |
 | HRCN v1.4 | Dry-Run Execution Harness | Future simulation harness; no apply. |
@@ -23,10 +24,10 @@ HRCN v1.1.1 - Python Format + Codex Style Technique Lock
 
 HRCN v1.2 - Permission Bridge Dry-Run Design.
 
-## Current Coding Boundary
+## Current Context Boundary
 
-The canonical HRCN coding format is readable PowerShell orchestration with an embedded Python writer/validator engine. Base64 wrappers are allowed only as a paste-safe transport shell, not as the source standard.
+The root README, docs/context-layer mini README, rehydration protocol, roadmap, RCC-CMS-HRCN context, and validation artifacts now agree on HRCN v1.1.2 as the current checkpoint. CMS remains a read-only mirror and bounded context packet only.
 
 ## Non-Claim Lock
 
-HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
+HRCN v1.1.2 closes documentation-surface coherence drift. The docs/context-layer mini README, rehydration protocol, roadmap, root README, and RCC-CMS-HRCN context now agree that the current state is HRCN v1.1.2, built on the HRCN v1.1 bounded CMS context packet and the HRCN v1.1.1 Python format technique lock. This closure does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
