@@ -1,0 +1,13 @@
+{
+  "schema": "HRCN-OPS-012-adapter-rehearsal-report",
+  "operation": "OPS-012",
+  "timestamp_utc": "2026-06-05T15:33:18.748067+00:00",
+  "contract_verified": true,
+  "mirror_marker_verified": true,
+  "bounded_context_packet_verified": true,
+  "required_read_files_present": true,
+  "hashes_matched": true,
+  "memory_context_ingested": true,
+  "authority_granted": false,
+  "next_recommended_operation": "OPS-013 human-gated dry-run bridge rehearsal"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "HRCN-OPS-012-exit-criteria",
+  "operation": "OPS-012",
+  "criteria": {
+    "ops_011_prerequisite_passed": true,
+    "contract_verified": true,
+    "mirror_marker_verified": true,
+    "bounded_context_packet_verified": true,
+    "required_read_files_present": true,
+    "hashes_matched": true,
+    "memory_context_ingested": true,
+    "authority_granted": false,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true
+  },
+  "next_allowed_operation": "OPS-013 human-gated dry-run bridge rehearsal"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "HRCN-OPS-012-memory-read-adapter-authority-matrix",
+  "operation": "OPS-012",
+  "base_commit": "075317526ff300606cfd7093168fcaaa39bc9c74",
+  "release_tag": "hrcn-ops-v0.1.0",
+  "release_tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "adapter_mode": "read_only_memory_context_rehearsal",
+  "memory_context_ingested": true,
+  "authority_granted": false,
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "self_authorization": false,
+  "ongoing_provider_authority": false,
+  "allowed_input_surfaces": [
+    "README.md",
+    "docs/context-layer/**",
+    "cms/.hrcn-read-only-mirror.json",
+    "docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json"
+  ],
+  "outputs_allowed": [
+    "docs/context-layer/ops/OPS-012-*"
+  ],
+  "non_claim_lock": "OPS-012 rehearses read-only memory/context intake only. It does not write memory, execute CMS runtime, mutate runtime, call a provider/model, write APIs, change dependencies, grant autonomy, or self-authorize."
+}

@@ -1,0 +1,134 @@
+{
+  "schema": "HRCN-OPS-012-memory-orientation-summary",
+  "operation": "OPS-012",
+  "timestamp_utc": "2026-06-05T15:33:18.748067+00:00",
+  "summary": "CMS memory/context surfaces were ingested as read-only orientation only.",
+  "source_summaries": [
+    {
+      "path": "cms/MIRROR_READONLY_BOUNDARY.md",
+      "exists": true,
+      "sha256": "517de5204fa6d98047b169e0b8fa407161c92d73e81c1121429b922d64f286c3",
+      "observed_terms": [
+        "apply",
+        "authority",
+        "evidence",
+        "memory",
+        "read-only",
+        "rollback"
+      ],
+      "chars_read": 747,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/README_90_SECONDS.md",
+      "exists": true,
+      "sha256": "92800172518b19ab06133ccf0123115436037ca19d16a686c1b9e87085088bb7",
+      "observed_terms": [
+        "evidence",
+        "memory",
+        "validation"
+      ],
+      "chars_read": 1090,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/AGENTS.md",
+      "exists": true,
+      "sha256": "84c9a7e8959abceb95a5387875d93b46c3ca8e4507af3550ce13e645b0fe9482",
+      "observed_terms": [
+        "memory",
+        "validation"
+      ],
+      "chars_read": 1228,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/docs/context/THREAD_REHYDRATION_PROTOCOL.md",
+      "exists": true,
+      "sha256": "7bd2fe225c432875df350e40b479acf08f91930d5db8abd63331bc4b400a2765",
+      "observed_terms": [
+        "memory",
+        "validation"
+      ],
+      "chars_read": 2083,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/docs/context/validation_surface.md",
+      "exists": true,
+      "sha256": "2cc7befca47fe64e326c1ff7900a0c9032cd17eb106c97d732f6ad673aa43f37",
+      "observed_terms": [
+        "validation"
+      ],
+      "chars_read": 872,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/docs/roadmap/CMS_ROADMAP.md",
+      "exists": true,
+      "sha256": "657c1439b4390bd57a6ab53ef6648d225781ec896e0133f3433e8621b61a323a",
+      "observed_terms": [
+        "apply",
+        "authority",
+        "dry-run",
+        "evidence",
+        "human",
+        "memory",
+        "permission",
+        "validation"
+      ],
+      "chars_read": 2131,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/outputs/cms/hermes_cms_context.json",
+      "exists": true,
+      "sha256": "0ed22aba93ca918743bc8a6b157a4d306263093cdcc13f5da53fd43bb2fb06f2",
+      "observed_terms": [
+        "apply",
+        "authority",
+        "dry-run",
+        "evidence",
+        "human",
+        "memory",
+        "permission",
+        "validation"
+      ],
+      "chars_read": 2450,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/outputs/agent_governance/latest_rcc_cms_orientation_packet.json",
+      "exists": true,
+      "sha256": "e05efd9adf662bdf5fad27b6a39953931d42680d80ce05e626f1909d01767eb9",
+      "observed_terms": [
+        "authority",
+        "evidence",
+        "human",
+        "memory",
+        "permission",
+        "validation"
+      ],
+      "chars_read": 1241,
+      "summary": "read as bounded orientation only"
+    },
+    {
+      "path": "cms/outputs/state/latest_cms_state.json",
+      "exists": true,
+      "sha256": "bc2e912784c6d76b1ba1814e7d78d157fcfed12f076810d57e2de3dde755589a",
+      "observed_terms": [
+        "memory"
+      ],
+      "chars_read": 466,
+      "summary": "read as bounded orientation only"
+    }
+  ],
+  "derived_orientation": {
+    "cms_role": "governed memory, evidence, repair, dry-run, apply-gate, rollback, and permission boundary surface",
+    "hermes_role": "actor/runtime body that may be oriented by bounded context but is not commanded by memory",
+    "hrcn_role": "bridge contract that keeps context separate from authority",
+    "active_rule": "memory may orient; permission determines use; humans authorize action"
+  },
+  "authority_granted": false,
+  "non_claim_lock": "The orientation summary is not a command, permission grant, runtime integration, memory write, CMS write, API write, dependency mutation, autonomous action, or self-authorization."
+}

@@ -161,15 +161,15 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-011 controlled runtime intake plan passed.
+Current post-seal state: OPS-012 governed memory-read adapter rehearsal passed.
 
-The HRCN OPS v0.1.0 proof is sealed. The next work is not unrestricted runtime integration; it is a controlled path toward cybernetic-memory operation under read-only context, dry-run, evidence, and human authorization boundaries.
+The HRCN OPS v0.1.0 proof is sealed. The system has now rehearsed read-only memory/context ingestion without granting memory write, CMS write, API write, runtime mutation, dependency mutation, autonomous authority, or self-authorization.
 
 | Stage | Meaning | Status |
 |---|---|---:|
 | OPS-011 | Controlled runtime intake plan. | passed |
-| OPS-012 | Governed memory-read adapter rehearsal. | next |
-| OPS-013 | Human-gated dry-run bridge rehearsal. | planned |
+| OPS-012 | Governed memory-read adapter rehearsal. | passed |
+| OPS-013 | Human-gated dry-run bridge rehearsal. | next |
 | OPS-014 | Limited apply rehearsal. | planned |
 | OPS-015 | First controlled cybernetic loop. | planned |
 
@@ -180,8 +180,9 @@ observe -> retrieve bounded context -> classify authority -> propose
 -> dry-run -> evidence -> human gate -> limited apply only if authorized
 ```
 
-Post-seal lock: cybernetic-memory online work starts read-only. No runtime mutation, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization is granted by OPS-011.
+Post-seal lock: memory can orient the bridge, but memory cannot authorize action. No runtime mutation, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization is granted by OPS-012.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 ### Human Director Box
 
@@ -220,9 +221,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-010-final-evidence.json` |
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-011-final-evidence.json` |
-| Post-seal status | `OPS-011 controlled runtime intake plan passed` |
-| Next post-seal gate | `OPS-012 governed memory-read adapter rehearsal` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-012-final-evidence.json` |
+| Post-seal status | `OPS-012 governed memory-read adapter rehearsal passed` |
+| Next post-seal gate | `OPS-013 human-gated dry-run bridge rehearsal` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -316,6 +317,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - OPS-010 release sealing is a promotion boundary, not runtime integration.
 - Post-seal runtime intake planning is not runtime integration.
 - Cybernetic-memory online work begins as read-only context rehearsal before any dry-run or apply path.
+- Memory context can orient proposals; it cannot authorize proposals.
+- OPS-012 memory-read rehearsal is not CMS execution or memory write.
 
 ### Current HRCN Surface Lock
 
@@ -1446,6 +1449,8 @@ Gap classes:
 | HRCN-L-019 | A release tag can be mistaken for production authority. | Tags make a repository state durable but do not validate security, correctness, runtime integration, CMS authority, or autonomy. | Every release tag must include a non-claim lock stating that the tag freezes evidence only and grants no new authority. |
 | HRCN-L-020 | After the release tag, the system needed a controlled intake plan before any online work. | A sealed bridge proof can create pressure to jump straight into runtime integration. | Post-seal evolution must begin with OPS-011 controlled runtime intake planning, not runtime mutation. |
 | HRCN-L-021 | Cybernetic-memory online language can be mistaken for autonomy. | Online operation sounds like continuous self-directed action unless bounded by authority classes. | Define online as observe, retrieve bounded context, classify authority, propose, dry-run, record evidence, and wait for human gate before apply/write. |
+| HRCN-L-022 | Memory-read rehearsal needed to prove orientation without permission. | Reading memory context can be confused with granting action authority. | Every memory-read rehearsal must emit authority_granted=false and keep CMS write, memory write, API write, runtime mutation, dependency mutation, and self-authorization false. |
+| HRCN-L-023 | Hash-verified bounded reads prevent silent context drift. | A memory adapter can accidentally ingest unbounded or changed surfaces. | Read adapters must compare declared and computed hashes for required bounded read files before producing orientation evidence. |
 
 ### HRCN Roadmap
 
