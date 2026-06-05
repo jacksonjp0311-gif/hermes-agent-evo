@@ -521,3 +521,36 @@ Remove-Item -Recurse -Force .\cms
 
 Non-claim lock: HRCN v1.0.3 copies CMS as a read-only mirror evidence snapshot under cms/. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The cms/ mirror is context and evidence only until later explicitly authorized bridge phases.
 <!-- HRCN_V103_CMS_MIRROR_COPY_END -->
+
+<!-- HRCN_V11_BOUNDED_CMS_CONTEXT_PACKET_START -->
+## HRCN v1.1 - Bounded CMS Context Packet
+
+The mirrored `cms/` folder is now compressed into a bounded read-only context packet for Hermes orientation.
+
+```text
+A bounded CMS context packet orients Hermes; it does not authorize Hermes.
+packet is not a loader
+packet is not an adapter
+packet is not a dry-run executor
+packet is not an apply executor
+packet is not permission
+packet is not authority
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json
+docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.md
+docs/context-layer/hrcn-v1.1.validation.json
+docs/context-layer/hrcn-v1.1.validation.md
+```
+
+Next anchor:
+
+```text
+HRCN v1.2 - Permission Bridge Dry-Run Design
+```
+
+Non-claim lock: HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.
+<!-- HRCN_V11_BOUNDED_CMS_CONTEXT_PACKET_END -->

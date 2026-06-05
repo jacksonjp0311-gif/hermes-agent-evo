@@ -350,6 +350,28 @@ Core rule:
 A CMS mirror is readable evidence, not executable authority.
 ```
 
+### 16. Bounded CMS Context Packet Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json`
+- `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.md`
+- `docs/context-layer/hrcn-v1.1.validation.json`
+
+Recover:
+
+- bounded CMS read set
+- blocked runtime roots
+- blocked authority table
+- packet use rules
+- next permission bridge design target
+
+Core rule:
+
+```text
+A bounded CMS context packet orients Hermes; it does not authorize Hermes.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -368,4 +390,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.0.3 copies CMS as a read-only mirror evidence snapshot under cms/. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The cms/ mirror is context and evidence only until later explicitly authorized bridge phases.
+HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.

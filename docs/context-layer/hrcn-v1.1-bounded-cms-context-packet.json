@@ -1,0 +1,601 @@
+{
+  "allowed_read_classes": [
+    "boundary",
+    "orientation",
+    "rehydration",
+    "index",
+    "roadmap",
+    "lineage",
+    "contract",
+    "schema",
+    "evidence",
+    "decision",
+    "memory",
+    "dry_run",
+    "apply_gate",
+    "state"
+  ],
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "apply_executor_created": false,
+    "autonomous_authority_granted": false,
+    "benchmark_executor_created": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "live_runtime_integration_created": false,
+    "memory_write_authority_granted": false,
+    "repair_executor_created": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "blocked_runtime_roots": [
+    "cms/src/",
+    "cms/scripts/",
+    "cms/tests/"
+  ],
+  "bounded_read_set": [
+    {
+      "bytes": 747,
+      "exists": true,
+      "path": "cms/MIRROR_READONLY_BOUNDARY.md",
+      "read_class": "boundary",
+      "required": true,
+      "role": "mirror boundary and blocked-authority law",
+      "sha256": "517de5204fa6d98047b169e0b8fa407161c92d73e81c1121429b922d64f286c3"
+    },
+    {
+      "bytes": 740,
+      "exists": true,
+      "path": "cms/.hrcn-read-only-mirror.json",
+      "read_class": "boundary",
+      "required": true,
+      "role": "machine-readable mirror marker",
+      "sha256": "f707ac319af594e0b3d1f8bda298c24fabfa69cfeeae5faf0a77d35280432f6a"
+    },
+    {
+      "bytes": 86366,
+      "exists": true,
+      "path": "cms/README.md",
+      "read_class": "orientation",
+      "required": true,
+      "role": "CMS public orientation",
+      "sha256": "c269ad159a1da8fd617ee06bd5bd49cf071591baf87f00bef75e7e0e965e460d"
+    },
+    {
+      "bytes": 1133,
+      "exists": true,
+      "path": "cms/README_90_SECONDS.md",
+      "read_class": "orientation",
+      "required": true,
+      "role": "short CMS operator orientation",
+      "sha256": "92800172518b19ab06133ccf0123115436037ca19d16a686c1b9e87085088bb7"
+    },
+    {
+      "bytes": 1275,
+      "exists": true,
+      "path": "cms/AGENTS.md",
+      "read_class": "orientation",
+      "required": true,
+      "role": "CMS agent-facing operating rules",
+      "sha256": "84c9a7e8959abceb95a5387875d93b46c3ca8e4507af3550ce13e645b0fe9482"
+    },
+    {
+      "bytes": 2159,
+      "exists": true,
+      "path": "cms/docs/context/THREAD_REHYDRATION_PROTOCOL.md",
+      "read_class": "rehydration",
+      "required": true,
+      "role": "CMS rehydration protocol",
+      "sha256": "7bd2fe225c432875df350e40b479acf08f91930d5db8abd63331bc4b400a2765"
+    },
+    {
+      "bytes": 1075,
+      "exists": true,
+      "path": "cms/docs/context/repository_context_index.json",
+      "read_class": "index",
+      "required": true,
+      "role": "CMS context index",
+      "sha256": "979ffcc849ed377bc79ba1d803e385f1d93a1fef1bb774d1124845b438397e83"
+    },
+    {
+      "bytes": 1044,
+      "exists": true,
+      "path": "cms/docs/context/rcc_nexus_index.json",
+      "read_class": "index",
+      "required": true,
+      "role": "RCC nexus index",
+      "sha256": "d7694d10f31f85f6eab3fea4d0b87fa0d2e8380727ad373b0ea7d0e85f36373e"
+    },
+    {
+      "bytes": 872,
+      "exists": true,
+      "path": "cms/docs/context/validation_surface.md",
+      "read_class": "evidence",
+      "required": true,
+      "role": "CMS validation surface summary",
+      "sha256": "2cc7befca47fe64e326c1ff7900a0c9032cd17eb106c97d732f6ad673aa43f37"
+    },
+    {
+      "bytes": 2193,
+      "exists": true,
+      "path": "cms/docs/roadmap/CMS_ROADMAP.md",
+      "read_class": "roadmap",
+      "required": true,
+      "role": "CMS roadmap",
+      "sha256": "657c1439b4390bd57a6ab53ef6648d225781ec896e0133f3433e8621b61a323a"
+    },
+    {
+      "bytes": 569,
+      "exists": true,
+      "path": "cms/docs/versions/VERSION_REGISTRY.md",
+      "read_class": "lineage",
+      "required": true,
+      "role": "CMS version registry",
+      "sha256": "e8d47022dbb941e73203672424f16bc120a1e268233473d39bedcc896f6abc3f"
+    },
+    {
+      "bytes": 2504,
+      "exists": true,
+      "path": "cms/outputs/cms/hermes_cms_context.json",
+      "read_class": "orientation",
+      "required": false,
+      "role": "Hermes-facing CMS context packet from CMS source",
+      "sha256": "0ed22aba93ca918743bc8a6b157a4d306263093cdcc13f5da53fd43bb2fb06f2"
+    },
+    {
+      "bytes": 1275,
+      "exists": true,
+      "path": "cms/outputs/agent_governance/latest_rcc_cms_orientation_packet.json",
+      "read_class": "orientation",
+      "required": false,
+      "role": "RCC/CMS orientation packet",
+      "sha256": "e05efd9adf662bdf5fad27b6a39953931d42680d80ce05e626f1909d01767eb9"
+    },
+    {
+      "bytes": 14021,
+      "exists": true,
+      "path": "cms/outputs/agent_governance/latest_agent_governance_kernel_bundle.json",
+      "read_class": "governance",
+      "required": false,
+      "role": "agent governance kernel bundle",
+      "sha256": "16e894227abe94e080668eba703be6c1dbf6a71ad36cdeb91b211f549e29ab04"
+    },
+    {
+      "bytes": 3415,
+      "exists": true,
+      "path": "cms/outputs/evidence/latest_evidence_package.json",
+      "read_class": "evidence",
+      "required": false,
+      "role": "latest CMS evidence package",
+      "sha256": "253b9924b529af1aa21d9c558b869323e76f4a21eb3231898e9dd1a37d680f2c"
+    },
+    {
+      "bytes": 5707,
+      "exists": true,
+      "path": "cms/outputs/memory/latest_candidate_memory_actions.json",
+      "read_class": "memory",
+      "required": false,
+      "role": "candidate memory action output",
+      "sha256": "d42e6bcf5af14fd13cd034af2142de1a33a196a7bb3c1533aa16bcc6a853fc07"
+    },
+    {
+      "bytes": 3165,
+      "exists": true,
+      "path": "cms/outputs/decision/latest_runtime_decision.json",
+      "read_class": "decision",
+      "required": false,
+      "role": "latest CMS runtime decision artifact",
+      "sha256": "589917bce2f85585fae949ccd5ab589c9b31c3b0c5f0b552353ed6e13a772288"
+    },
+    {
+      "bytes": 2732,
+      "exists": true,
+      "path": "cms/outputs/loop/latest_authorized_repair_dry_run.json",
+      "read_class": "dry_run",
+      "required": false,
+      "role": "authorized repair dry-run evidence",
+      "sha256": "86254b5fe40006b28e09ac6ed34cc7a12999ba870c130ff8d91f586ff8f3a6bd"
+    },
+    {
+      "bytes": 3965,
+      "exists": true,
+      "path": "cms/outputs/loop/latest_authorized_repair_apply_gate.json",
+      "read_class": "apply_gate",
+      "required": false,
+      "role": "authorized repair apply-gate evidence",
+      "sha256": "d30a408a3a7946f12303129d6237cb3503796ed372051b80cf0d89e24ab0a187"
+    },
+    {
+      "bytes": 3985,
+      "exists": true,
+      "path": "cms/outputs/loop/latest_authorized_apply_packet_diff_manifest.json",
+      "read_class": "apply_gate",
+      "required": false,
+      "role": "apply packet diff manifest",
+      "sha256": "3f11850c21d91f4f9c79476623ca9d82f8c1457aea37c0d8b88f53d38772ea37"
+    },
+    {
+      "bytes": 3291,
+      "exists": true,
+      "path": "cms/outputs/loop/latest_authorized_dry_apply_sandbox.json",
+      "read_class": "dry_run",
+      "required": false,
+      "role": "dry apply sandbox evidence",
+      "sha256": "86ff20512a9f261eef8fe96781cab1d0de267dd19d88411b3397617ec19c1a2d"
+    },
+    {
+      "bytes": 480,
+      "exists": true,
+      "path": "cms/outputs/state/latest_cms_state.json",
+      "read_class": "state",
+      "required": false,
+      "role": "latest CMS state summary",
+      "sha256": "bc2e912784c6d76b1ba1814e7d78d157fcfed12f076810d57e2de3dde755589a"
+    },
+    {
+      "bytes": 1163,
+      "exists": true,
+      "path": "cms/configs/alignment/multilevel_alignment_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "b5535b3300e5831c93d09cde3f080f7431d91ad63e4abf4267ab11119885af8b"
+    },
+    {
+      "bytes": 183,
+      "exists": true,
+      "path": "cms/configs/cms_default.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "01a0d74fb56a91a10d9ea37fada16e8300dd6c4b77ac054d514f38aff9df0a11"
+    },
+    {
+      "bytes": 1004,
+      "exists": true,
+      "path": "cms/configs/controls/negative_control_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "388a3010e0d7bb61525ee1dd8783c90b7fb02cb8d3f3bf80516764fbc5e49580"
+    },
+    {
+      "bytes": 279,
+      "exists": true,
+      "path": "cms/configs/decision/runtime_decision_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "40c9c31b2b73f913f10ea36540d1f0b84c5b2872055b6c760423da7776ae5488"
+    },
+    {
+      "bytes": 2142,
+      "exists": true,
+      "path": "cms/configs/feedback/feedback_lifecycle_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "f2288bbf4d89703415e58c5c2e1bd4da93f9af56ca87464b5d2cb66591cb11a0"
+    },
+    {
+      "bytes": 3253,
+      "exists": true,
+      "path": "cms/configs/geometry/reflective_git_geometry_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "fbf2e4d26c571fbc1a0ba17058d7bbe47a34cee507f06c7deae4032b2a672d44"
+    },
+    {
+      "bytes": 1135,
+      "exists": true,
+      "path": "cms/configs/loop/cybernetic_memory_loop_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "adf27c0eb87d17a4b870abfce69e52c4ac200e8640c061d45b99f75a3cb29c89"
+    },
+    {
+      "bytes": 743,
+      "exists": true,
+      "path": "cms/configs/loop/loop_drift_pressure_contract_v0_4_2.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "87f884bb11142b91e515b2b4216ef4ab9ed412ed97a122ab93d6f875cd09aa6f"
+    },
+    {
+      "bytes": 661,
+      "exists": true,
+      "path": "cms/configs/loop/loop_repair_recommendation_contract_v0_4_3.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "82cabb81f0b5019b215e98e06f321c86b80d0318e3ec053cab8e3531f0803c5c"
+    },
+    {
+      "bytes": 984,
+      "exists": true,
+      "path": "cms/configs/memory/candidate_action_contract_v0_4_1.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "9f260b4f7b7fd29b4c97dd0830b2dde596f8f967546f65ab863bf4f2deaec2b5"
+    },
+    {
+      "bytes": 1050,
+      "exists": true,
+      "path": "cms/configs/memory/promotion_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "61c2f3ef40cdf7ae371717689c16539ae9e363161d6efa5e1693622e2529dcc7"
+    },
+    {
+      "bytes": 1212,
+      "exists": true,
+      "path": "cms/configs/metrics/cms_metric_contracts_v0_2.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "3c4c7932fc22bc34f40a2a50870362f38fe6df073e093d2c40a43f0a2a589f78"
+    },
+    {
+      "bytes": 80,
+      "exists": true,
+      "path": "cms/configs/profiles/cms_core.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "c22fa0d3176f4f98bb86ad0d1025fcbef05840ae6e45a9ac9d275df0517e690d"
+    },
+    {
+      "bytes": 80,
+      "exists": true,
+      "path": "cms/configs/profiles/cms_full.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "43e79a83bb04e665344eb97dc879baf3ef9ca1bd31d6540f7c15b707013baefb"
+    },
+    {
+      "bytes": 80,
+      "exists": true,
+      "path": "cms/configs/profiles/cms_lite.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "007191b131bea9000b6e8385f7f52a1840a84a91ccc4b828b7d2167c5d7c2890"
+    },
+    {
+      "bytes": 84,
+      "exists": true,
+      "path": "cms/configs/profiles/cms_research.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "d771e8563a3db2ebec68a05e3e72ffb860481fe63e65093c7c162efc30e92124"
+    },
+    {
+      "bytes": 1928,
+      "exists": true,
+      "path": "cms/configs/rehydration/thread_rehydration_contract.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "f60aab6bf0af6322c2938288ba8129ca9255de3c65a44e95591bab8b89640384"
+    },
+    {
+      "bytes": 632,
+      "exists": true,
+      "path": "cms/configs/rehydration/thread_rehydration_score_contract_v0_4_1.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "b0da25711291d624c9ebb4b260ca5276ea7145ff233b9bbe522ff7f2eb50cb8a"
+    },
+    {
+      "bytes": 95,
+      "exists": true,
+      "path": "cms/configs/seeds/baseline_utility_seed.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "01691ae6763482503abd4e07263329d6c237d6de37bdc2e9d6b1774a1375738c"
+    },
+    {
+      "bytes": 98,
+      "exists": true,
+      "path": "cms/configs/seeds/cms_lite_self_audit_seed.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "8cbb1dc3e186a08701b1ddfcb8f27fb375045249d70761d7e6a546bc9964865f"
+    },
+    {
+      "bytes": 97,
+      "exists": true,
+      "path": "cms/configs/seeds/feedback_lifecycle_seed.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "d9c7d10270a3ba71864bf454f3847f5424e5470836ca108034794940d4a7f133"
+    },
+    {
+      "bytes": 95,
+      "exists": true,
+      "path": "cms/configs/seeds/memory_promotion_seed.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "02468120765bfbf4aac0c3563d4285aff1992721389e50fa68556c8a1c41d80c"
+    },
+    {
+      "bytes": 99,
+      "exists": true,
+      "path": "cms/configs/seeds/public_surface_drift_seed.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "ca6e62c7efc77ce5f17b16d0aae81a25fc725a00cd618f3d6cebbd0c4c427865"
+    },
+    {
+      "bytes": 95,
+      "exists": true,
+      "path": "cms/configs/seeds/readme_rcc_drift_seed.json",
+      "read_class": "contract",
+      "required": false,
+      "role": "CMS configuration contract",
+      "sha256": "f531fe84bb097a67ea0af4175a559b380f9f77317aacb0452b44f8d6db1c1710"
+    },
+    {
+      "bytes": 596,
+      "exists": true,
+      "path": "cms/schemas/agent_governance_context.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "cd00518dd2ec7ca9870787a0e086cf3dd37dae4e839cbfae9374c93c25642f05"
+    },
+    {
+      "bytes": 773,
+      "exists": true,
+      "path": "cms/schemas/authorized_apply_packet_diff_manifest.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "8cae3ae06561565a09a9add6cbe81d66dbb1d93981c8ea4b33806bbdcb0296b0"
+    },
+    {
+      "bytes": 739,
+      "exists": true,
+      "path": "cms/schemas/authorized_dry_apply_sandbox.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "99eade149726a2091f57ecaaada98f5424c9063525db1b5d8741db35ed39bd9c"
+    },
+    {
+      "bytes": 764,
+      "exists": true,
+      "path": "cms/schemas/authorized_repair_apply_gate.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "dbc3521cf7990526ae7a340b25581c6e96da4788c010c9eb615d3aa737471688"
+    },
+    {
+      "bytes": 608,
+      "exists": true,
+      "path": "cms/schemas/authorized_repair_dry_run.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "54cec7027866f456d4870ad37c7e0e4a54670f487ab6cb6c44a697373d3d3805"
+    },
+    {
+      "bytes": 1164,
+      "exists": true,
+      "path": "cms/schemas/candidate_memory_action.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "6e2ece8817c004aa17e52aa971b8fb039619e0b1c6b52547fc2a17909b4cea23"
+    },
+    {
+      "bytes": 1370,
+      "exists": true,
+      "path": "cms/schemas/feedback_item.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "3f7abffb19ecc4d242804a347377a84cdcbbc0051c0843694ed79c2f03ee36ef"
+    },
+    {
+      "bytes": 1124,
+      "exists": true,
+      "path": "cms/schemas/loop_drift_pressure.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "ada224501d71fb841fe7efa1f6ac8518411593860c7370b2f050c7e9d95534fe"
+    },
+    {
+      "bytes": 596,
+      "exists": true,
+      "path": "cms/schemas/loop_repair_recommendation.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "4e277be5cff40b055d69fcc8a0be16ff1249e9694b1875d01efe90c5524bd5f1"
+    },
+    {
+      "bytes": 1195,
+      "exists": true,
+      "path": "cms/schemas/reflective_git_node.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "40c7fc5c579734b5e249db5fc81a398f78be705efa81601dd1a4a14c470bf3a1"
+    },
+    {
+      "bytes": 610,
+      "exists": true,
+      "path": "cms/schemas/repair_closure_plan.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "fbaf2ed90181ce53d1c4802fb3feb521ea4a955a3745f9175ba638e6b83b1862"
+    },
+    {
+      "bytes": 923,
+      "exists": true,
+      "path": "cms/schemas/thread_rehydration_scan.schema.json",
+      "read_class": "schema",
+      "required": false,
+      "role": "CMS schema contract",
+      "sha256": "376f4478bf8b73d1cf7f29a9141c76afb1255bac5c661e3b1acf8ad1490ea392"
+    }
+  ],
+  "mirror_inventory": {
+    "total_bytes": 3595722,
+    "total_file_count": 714
+  },
+  "mode": "bounded_read_only_context_packet",
+  "next_recommended_phase": "HRCN v1.2 - Permission Bridge Dry-Run Design",
+  "non_claim_lock": "HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.",
+  "packet_inventory": {
+    "bounded_read_file_count": 58,
+    "bounded_read_total_bytes": 170447,
+    "required_missing": []
+  },
+  "packet_use_rules": [
+    "Hermes may use this packet for orientation, retrieval hints, route selection, and evidence-bounded summaries.",
+    "Hermes may not execute files from cms/ because they appear in this packet.",
+    "Hermes may not treat CMS outputs as permission grants.",
+    "Hermes may not write to CMS, memory, API surfaces, runtime, or dependencies from this packet.",
+    "Future dry-run or apply work requires separate HRCN phases, evidence, rollback, validation, and human authorization."
+  ],
+  "previous_validated_anchor": "HRCN v1.0.3",
+  "primary_law": "A bounded CMS context packet orients Hermes; it does not authorize Hermes.",
+  "repository": "hermes-agent-evo",
+  "schema": "HRCN-v1.1-bounded-cms-context-packet",
+  "source_mirror": {
+    "boundary_path": "cms/MIRROR_READONLY_BOUNDARY.md",
+    "marker_path": "cms/.hrcn-read-only-mirror.json",
+    "mirror_mode": "read_only_mirror_snapshot",
+    "source_git": {
+      "branch": "main",
+      "commit": "d650f4f3dd397ebe49e3fb7a38959bda1af72415",
+      "is_git_repo": true,
+      "remote_origin": "https://github.com/jacksonjp0311-gif/cybernetic-memory-system.git",
+      "status_short": ""
+    },
+    "source_path": "C:\\Users\\jacks\\OneDrive\\Desktop\\cybernetic-memory-system",
+    "target_root": "cms/"
+  },
+  "timestamp_utc": "2026-06-05T00:13:24.340011+00:00",
+  "version": "HRCN v1.1"
+}

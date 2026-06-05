@@ -64,6 +64,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.0.1 | Can the CMS mirror/import path be authorized before any CMS copy occurs? | `docs/context-layer/hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.json` |
 | HRCN v1.0.2 | Can CMS source be manifested and secret-scanned before mirror copy? | `docs/context-layer/hrcn-v1.0.2-cms-mirror-preflight-manifest.json` |
 | HRCN v1.0.3 | Can CMS be copied as a read-only evidence mirror without runtime authority? | `docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json` |
+| HRCN v1.1 | Can the mirrored CMS be compressed into a bounded read-only context packet for Hermes orientation? | `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -82,14 +83,14 @@ Hermes already supplies CLI/TUI, model routing, tools, skills, memory hooks, ter
 
 #### What this fork is not
 
-This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through HRCN v1.0.3, the fork remains documentation, navigation, profile compression, rehydration, runtime-evolution planning, CMS intake planning, read-only surface mapping, packet/bridge/permission/recommendation/dry-run/apply-gate/evidence-harness design, governed nexus planning, and CMS read-only mirror evidence only.
+This fork does not prove Hermes correctness, CMS correctness, code correctness, security, production readiness, external validation, AGI, ASI, consciousness, sentience, autonomy, or self-awareness. Through HRCN v1.1, the fork remains documentation, navigation, profile compression, rehydration, runtime-evolution planning, CMS intake planning, read-only surface mapping, packet/bridge/permission/recommendation/dry-run/apply-gate/evidence-harness design, governed nexus planning, CMS read-only mirror evidence, and bounded CMS context-packet orientation only.
 
 ### Current Public Metrics
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.0.3` |
-| Previous validated anchor | `HRCN v1.0.2` |
+| Current checkpoint | `HRCN v1.1` |
+| Previous validated anchor | `HRCN v1.0.3` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -100,7 +101,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.0.3.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.1.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -114,6 +115,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS mirror preflight manifest | `docs/context-layer/hrcn-v1.0.2-cms-mirror-preflight-manifest.json` |
 | CMS read-only mirror copy evidence | `docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json` |
 | CMS mirror root | `cms/` |
+| Bounded CMS context packet | `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json` |
 
 ### Core Law
 
@@ -169,6 +171,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - A CMS mirror is readable evidence, not executable authority.
 - CMS source provenance, manifest, secret scan, rollback, validation, and human authorization must exist before mirror copy.
 - CMS may be mirrored only as evidence-bounded read-only context, never as immediate authority.
+- Packet content cannot upgrade its own permission class.
+- A bounded CMS context packet is orientation, not a loader, adapter, executor, permission grant, or apply decision.
+- A bounded CMS context packet orients Hermes; it does not authorize Hermes.
 
 ### Current HRCN Surface Lock
 
@@ -182,12 +187,12 @@ boundaries agree.
 <!-- HRCN_RUNTIME_EVOLUTION_BOUNDARY_START -->
 ### Current Runtime Boundary and Future Runtime Evolution
 
-HRCN v1.0.3 keeps the current repository state docs/context plus CMS read-only mirror evidence under cms/, but it does not lock Hermes into docs-only forever.
+HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mirror evidence under cms/ and a bounded CMS context packet, but it does not lock Hermes into docs-only forever.
 
 Current boundary:
 
 ```text
-HRCN v1.0.3 adds cms/ as a read-only mirror; it does not change Hermes runtime.
+HRCN v1.1 adds a bounded CMS context packet; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -668,6 +673,48 @@ autonomous authority
 Non-claim lock: the CMS mirror is context and evidence, not live CMS authority.
 <!-- HRCN_V103_CMS_MIRROR_COPY_END -->
 
+<!-- HRCN_V11_BOUNDED_CMS_CONTEXT_PACKET_START -->
+### HRCN v1.1 Bounded CMS Context Packet
+
+HRCN v1.1 turns the mirrored `cms/` folder into a bounded read-only context packet for Hermes orientation.
+
+Current rule:
+
+```text
+A bounded CMS context packet orients Hermes; it does not authorize Hermes.
+```
+
+Packet artifacts:
+
+```text
+docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json
+docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.md
+docs/context-layer/hrcn-v1.1.validation.json
+docs/context-layer/hrcn-v1.1.validation.md
+```
+
+v1.1 grants only one thing:
+
+```text
+Hermes may read the bounded CMS context packet as orientation/evidence.
+```
+
+v1.1 does not grant:
+
+```text
+runtime integration
+CMS import execution
+CMS write authority
+memory write authority
+API authority
+dry-run execution authority
+apply authority
+autonomous authority
+```
+
+Non-claim lock: the bounded CMS context packet is not a loader, adapter, executor, writer, permission grant, or apply decision.
+<!-- HRCN_V11_BOUNDED_CMS_CONTEXT_PACKET_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -849,7 +896,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.0.3 copies CMS as a read-only mirror evidence snapshot under cms/. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The cms/ mirror is context and evidence only until later explicitly authorized bridge phases.
+HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
