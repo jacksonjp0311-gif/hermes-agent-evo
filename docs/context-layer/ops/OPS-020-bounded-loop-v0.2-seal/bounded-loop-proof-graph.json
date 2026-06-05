@@ -1,0 +1,113 @@
+{
+  "schema": "HRCN-OPS-020-bounded-loop-proof-graph",
+  "operation": "OPS-020",
+  "timestamp_utc": "2026-06-05T16:20:00.956995+00:00",
+  "base_commit": "b8664f27bf9105778104784d81e2357294cd57f5",
+  "previous_tag": "hrcn-ops-v0.1.0",
+  "previous_tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "new_tag": "hrcn-ops-v0.2.0",
+  "graph": [
+    {
+      "node": "OPS-010",
+      "capability": "operational release seal",
+      "authority_denied": [
+        "runtime",
+        "CMS write",
+        "memory write",
+        "API write",
+        "autonomy"
+      ]
+    },
+    {
+      "node": "OPS-011",
+      "capability": "controlled runtime intake plan",
+      "authority_denied": [
+        "runtime mutation",
+        "CMS write",
+        "memory write",
+        "API write"
+      ]
+    },
+    {
+      "node": "OPS-012",
+      "capability": "read-only memory orientation",
+      "authority_denied": [
+        "memory write",
+        "CMS write",
+        "authorization by memory"
+      ]
+    },
+    {
+      "node": "OPS-013",
+      "capability": "human-gated dry-run bridge",
+      "authority_denied": [
+        "apply execution"
+      ]
+    },
+    {
+      "node": "OPS-014",
+      "capability": "limited docs/context apply rehearsal",
+      "authority_denied": [
+        "runtime mutation",
+        "CMS write",
+        "memory write",
+        "API write"
+      ]
+    },
+    {
+      "node": "OPS-015",
+      "capability": "first controlled cybernetic loop",
+      "authority_denied": [
+        "autonomy",
+        "ongoing authority"
+      ]
+    },
+    {
+      "node": "OPS-016",
+      "capability": "observe-only cadence",
+      "authority_denied": [
+        "proposal",
+        "dry-run",
+        "apply"
+      ]
+    },
+    {
+      "node": "OPS-017",
+      "capability": "proposal-only cadence",
+      "authority_denied": [
+        "dry-run",
+        "apply"
+      ]
+    },
+    {
+      "node": "OPS-018",
+      "capability": "dry-run-only cadence",
+      "authority_denied": [
+        "apply"
+      ]
+    },
+    {
+      "node": "OPS-019",
+      "capability": "apply-gated docs/context cadence",
+      "authority_denied": [
+        "runtime mutation",
+        "CMS write",
+        "memory write",
+        "API write",
+        "dependency mutation",
+        "autonomy"
+      ]
+    },
+    {
+      "node": "OPS-020",
+      "capability": "bounded loop v0.2 seal",
+      "authority_denied": [
+        "new runtime authority",
+        "new write authority",
+        "self-authorization"
+      ]
+    }
+  ],
+  "loop_formula": "observe -> retrieve bounded context -> classify authority -> propose -> dry-run -> evidence -> human gate -> limited apply only if authorized",
+  "non_claim_lock": "The proof graph describes a bounded evidence loop only. It does not grant autonomy, runtime integration, CMS write, memory write, API write, dependency mutation, provider/model authority, or self-authorization."
+}

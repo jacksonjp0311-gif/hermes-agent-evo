@@ -161,9 +161,9 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-019 apply-gated loop cadence harness passed.
+Current post-seal state: OPS-020 bounded loop v0.2 seal passed.
 
-The HRCN OPS v0.1.0 proof is sealed. The system has now proven observe-only, proposal-only, dry-run-only, and apply-gated cadence as separate authority classes. Apply can now occur only as human-gated docs/context evidence, without runtime mutation, CMS write, memory write, API write, dependency mutation, provider/model call, autonomy, or self-authorization.
+The HRCN OPS v0.1.0 bridge proof is sealed, and HRCN OPS v0.2.0 now seals the bounded cybernetic evidence loop. The loop has proven observe-only, proposal-only, dry-run-only, and apply-gated docs/context cadence as separate authority classes.
 
 | Stage | Meaning | Status |
 |---|---|---:|
@@ -176,17 +176,19 @@ The HRCN OPS v0.1.0 proof is sealed. The system has now proven observe-only, pro
 | OPS-017 | Proposal-only loop cadence harness. | passed |
 | OPS-018 | Dry-run-only loop cadence harness. | passed |
 | OPS-019 | Apply-gated loop cadence harness. | passed |
-| OPS-020 | Bounded loop v0.2 seal. | next |
+| OPS-020 | Bounded loop v0.2 seal. | passed |
+| OPS-021 | Governed runtime bridge interface design. | next |
 
-Operational definition for the active bounded loop:
+Operational definition for the bounded loop:
 
 ```text
 observe -> retrieve bounded context -> classify authority -> propose
 -> dry-run -> evidence -> human gate -> limited apply only if authorized
 ```
 
-Post-seal lock: apply-gated cadence may apply docs/context evidence only after a human gate; it may not mutate runtime, write CMS, write memory, write APIs, change dependencies, call a provider/model, operate autonomously, or self-authorize.
+Post-seal lock: v0.2 seals the bounded loop proof only. It does not grant runtime mutation, CMS write, memory write, API write, dependency mutation, provider/model authority, autonomous authority, production readiness, or self-authorization.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -233,9 +235,10 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-010-final-evidence.json` |
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-019-final-evidence.json` |
-| Post-seal status | `OPS-019 apply-gated loop cadence harness passed` |
-| Next post-seal gate | `OPS-020 bounded loop v0.2 seal` |
+| Bounded loop tag | `hrcn-ops-v0.2.0` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-020-final-evidence.json` |
+| Post-seal status | `OPS-020 bounded loop v0.2 seal passed` |
+| Next post-seal gate | `OPS-021 governed runtime bridge interface design` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -345,6 +348,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - Simulation can show what would change without granting permission to change it.
 - Apply-gated cadence is docs/context evidence only unless a future operation separately authorizes wider scope.
 - Human apply authorization must name scope, source dry-run, blocked surfaces, and rollback note.
+- A bounded loop seal freezes evidence; it does not widen authority.
+- Runtime bridge design after v0.2 must begin as design-only, not implementation.
 
 ### Current HRCN Surface Lock
 
@@ -1491,6 +1496,8 @@ Gap classes:
 | HRCN-L-035 | Dry-run manifests must preserve blocked-scope visibility. | A dry-run without explicit blocked scope can hide what must not be touched. | Every dry-run record must list would_create, would_update, and would_not_touch surfaces before any apply-gated operation. |
 | HRCN-L-036 | Apply-gated cadence must remain docs/context-only until explicitly widened. | A successful apply cadence can be mistaken for runtime or CMS authority. | OPS-019 applies evidence only under docs_context_only scope and keeps runtime_source_mutation, cms_write, memory_write, api_write, and dependency_mutation_committed false. |
 | HRCN-L-037 | Apply requires a source dry-run and rollback note. | Applying without a prior simulation and recovery path breaks the governed loop. | Every apply-gated cadence must cite source dry-runs, write apply records, write an apply manifest, and include a rollback note. |
+| HRCN-L-038 | Bounded loop seals must freeze evidence, not widen authority. | After observe/propose/dry-run/apply cadence passes, it can be mistaken for autonomous operation. | OPS-020 tags the v0.2 proof while keeping runtime, CMS, memory, API, dependency, provider/model, autonomy, and self-authorization false. |
+| HRCN-L-039 | Runtime bridge evolution must restart with design-only boundaries. | A sealed evidence loop can create pressure to mutate runtime immediately. | The next track must begin with OPS-021 governed runtime bridge interface design, not runtime implementation. |
 
 ### HRCN Roadmap
 

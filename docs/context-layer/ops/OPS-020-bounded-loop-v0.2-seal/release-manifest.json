@@ -1,0 +1,102 @@
+{
+  "schema": "HRCN-OPS-020-release-manifest",
+  "operation": "OPS-020",
+  "timestamp_utc": "2026-06-05T16:20:00.956995+00:00",
+  "base_commit": "b8664f27bf9105778104784d81e2357294cd57f5",
+  "previous_tag": "hrcn-ops-v0.1.0",
+  "previous_tag_commit": "ec4567705cb1c32d00c936b5acbeb9ac2b41407a",
+  "new_tag": "hrcn-ops-v0.2.0",
+  "release_name": "HRCN OPS v0.2.0 bounded loop proof seal",
+  "sealed_scope": "bounded docs/context cybernetic evidence loop",
+  "proof_chain": [
+    "OPS-010 operational release seal",
+    "OPS-011 controlled runtime intake plan",
+    "OPS-012 governed memory-read adapter rehearsal",
+    "OPS-013 human-gated dry-run bridge rehearsal",
+    "OPS-014 limited apply rehearsal",
+    "OPS-015 first controlled cybernetic loop",
+    "OPS-016 observe-only loop cadence harness",
+    "OPS-017 proposal-only loop cadence harness",
+    "OPS-018 dry-run-only loop cadence harness",
+    "OPS-019 apply-gated loop cadence harness",
+    "OPS-020 bounded loop v0.2 seal"
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "6af55ec3e5a9169562891fe53abdbe50bf31b22601943fb6248f513a59f68820",
+      "size_bytes": 87208
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-010-final-evidence.json",
+      "sha256": "e7eb3b2cf68dcec2d312acee222715d7cf169d4ca28691eb788f85fec0c39cbc",
+      "size_bytes": 1477
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-011-final-evidence.json",
+      "sha256": "2ea816ba219cc87bc52c7472cb639a6f3425acee6ef640f878820d881f0318c9",
+      "size_bytes": 1567
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-012-final-evidence.json",
+      "sha256": "8f41428d019d225264785364d2ac667955cd1e040ab5dfe4675055aa5af001fd",
+      "size_bytes": 1723
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-013-final-evidence.json",
+      "sha256": "ac88751d0f1a8f9b814b73af0341ade5ec41276b8766b5d9dfd53e8b8c57843c",
+      "size_bytes": 1559
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-014-final-evidence.json",
+      "sha256": "be78afad0e7a8db0240218b14f449dc8fbdba70428fc2f037966b4d96b9d528a",
+      "size_bytes": 1635
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-015-final-evidence.json",
+      "sha256": "78e9d12f215e0913857d93d99fc34d421ced1a44654af434b91291e344f4883d",
+      "size_bytes": 1734
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-016-final-evidence.json",
+      "sha256": "23c5a14d66280defeaa8aeb85a1e6c6abb49372a36774391c99b246c6406b48a",
+      "size_bytes": 1811
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-017-final-evidence.json",
+      "sha256": "8f7dcce0d454a80d6359c2be48b9dfb79cec8b49f49d68783aab4415b21c3c67",
+      "size_bytes": 1780
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-018-final-evidence.json",
+      "sha256": "f25a5b5c73317764784ed2a49860af2b88d2a9010ef23e64442aab888c7a177d",
+      "size_bytes": 1799
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-019-final-evidence.json",
+      "sha256": "9ffd18553a3612c81281abb0819384dedc83e7f8ceae9dcb9df630539f91d699",
+      "size_bytes": 1892
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-016-observe-only-loop-cadence-harness/cadence-summary.json",
+      "sha256": "a9b1def42ba0026b898608658809654ac10cd8c7300a97d3067d295df1966510",
+      "size_bytes": 816
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-017-proposal-only-loop-cadence-harness/proposal-manifest.json",
+      "sha256": "122f46d423daae40fbd4f09db97d4af9245fd8b3ecdeb6e80c82fbc75e30e378",
+      "size_bytes": 1385
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-018-dry-run-only-loop-cadence-harness/dry-run-manifest.json",
+      "sha256": "96400488d36563cdebafcc91527c20f21ff1356b729d6ec71fe51b57e30a443c",
+      "size_bytes": 1055
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-019-apply-gated-loop-cadence-harness/apply-manifest.json",
+      "sha256": "742080a23a51d62d457c63f53c830b5794133d6af2e1b4a3fbcaa6b8f2ddd628",
+      "size_bytes": 956
+    }
+  ],
+  "non_claim_lock": "This release manifest seals evidence only and grants no runtime/CMS/memory/API/dependency/provider/model/autonomous/self-authorization authority."
+}
