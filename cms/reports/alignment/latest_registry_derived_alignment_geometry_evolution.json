@@ -1,0 +1,41 @@
+{
+  "current_checkpoint": "CMS-SA v0.4.2 - Loop Drift Pressure Metrics",
+  "current_version": "v0.4.2",
+  "files_rewritten": [
+    "scripts/validation/validate_surface_alignment_v0_3b2.py",
+    "src/cms/alignment/multilevel.py",
+    "scripts/alignment/emit_multilevel_alignment_v0_3b2.py",
+    "scripts/validation/validate_multilevel_alignment_v0_3b2.py",
+    "README.md"
+  ],
+  "mini_readmes_refreshed": [
+    "configs/alignment/README.md",
+    "src/cms/alignment/README.md",
+    "scripts/alignment/README.md",
+    "outputs/alignment/README.md",
+    "reports/alignment/README.md",
+    "configs/controls/README.md",
+    "src/cms/controls/README.md",
+    "scripts/controls/README.md",
+    "outputs/controls/README.md",
+    "reports/controls/README.md",
+    "configs/memory/README.md",
+    "src/cms/memory/README.md",
+    "scripts/memory/README.md",
+    "outputs/memory/README.md",
+    "reports/memory/README.md",
+    "configs/loop/README.md",
+    "src/cms/loop/README.md",
+    "scripts/loop/README.md",
+    "outputs/loop/README.md",
+    "reports/loop/README.md"
+  ],
+  "non_claim_lock": "Registry-derived alignment is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "previous_seal": "CMS-SA v0.4.1 - Per-Candidate Memory Action Schema and Thread Rehydration Tightening",
+  "previous_version": "v0.4.1",
+  "primary_repair": "validators now derive current/previous versions from registry and split preseal/postseal public-sync rules",
+  "schema": "CMS-SA-v0.4.2-registry-derived-alignment-geometry-evolution",
+  "seal_mode": "preseal",
+  "timestamp_utc": "2026-06-04T03:29:01.523252+00:00"
+}

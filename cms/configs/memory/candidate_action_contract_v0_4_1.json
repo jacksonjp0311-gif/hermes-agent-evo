@@ -1,0 +1,21 @@
+{
+  "non_claim_lock": "Candidate memory actions and rehydration scoring are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "primary_lock": "No promoted memory may influence the next cycle without a typed candidate-level action, downgrade boundary, evidence requirement, and rehydration-visible status.",
+  "purpose": "Convert summary-level memory promotion into typed per-candidate next-cycle actions.",
+  "required_candidate_fields": [
+    "candidate_id",
+    "memory_decision",
+    "allowed_next_action",
+    "blocked_actions",
+    "required_evidence_next",
+    "downgrade_visibility_required",
+    "observe_only_recheck_condition",
+    "source",
+    "evidence_utility",
+    "negative_control_passed",
+    "falsification_condition",
+    "non_claim_lock"
+  ],
+  "schema": "CMS-SA-v0.4.1-candidate-memory-action-contract",
+  "version": "v0.4.1"
+}

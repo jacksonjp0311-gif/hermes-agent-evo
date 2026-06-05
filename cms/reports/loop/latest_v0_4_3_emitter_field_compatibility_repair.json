@@ -1,0 +1,7 @@
+{
+  "non_claim_lock": "v0.4.3 emitter field compatibility repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "repair": "Markdown renderer now accepts taxonomy records using pressure_source / repair_class / allowed_repair_action.",
+  "schema": "CMS-SA-v0.4.3-emitter-field-compatibility-repair",
+  "timestamp_utc": "2026-06-04T03:47:59.522459+00:00"
+}

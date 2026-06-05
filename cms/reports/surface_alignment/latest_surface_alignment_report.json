@@ -1,0 +1,16 @@
+{
+  "current_version": "v0.5.1",
+  "errors": 0,
+  "findings": [],
+  "mini_readmes_checked": 20,
+  "non_claim_lock": "Surface alignment validates README and mini README currentness only. It does not prove code correctness.",
+  "passed": true,
+  "preseal_postseal_boundary": "surface alignment does not require release tag existence; public sync validates that after seal",
+  "previous_version": "v0.5.0",
+  "registry_derived": true,
+  "root_tokens_checked": 25,
+  "schema": "CMS-SA-v0.5.1-surface-alignment-validation",
+  "stale_tokens_checked": 3,
+  "warning_findings": [],
+  "warnings": 0
+}

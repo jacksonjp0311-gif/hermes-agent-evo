@@ -1,0 +1,21 @@
+{
+  "api_authority": false,
+  "apply_authority": false,
+  "cms_write_authority": false,
+  "created_utc": "2026-06-05T00:00:05.516089+00:00",
+  "memory_write_authority": false,
+  "mode": "read_only_mirror_snapshot",
+  "rollback_removal_command": "Remove-Item -Recurse -Force .\\cms",
+  "runtime_integration": false,
+  "schema": "HRCN-CMS-read-only-mirror-marker",
+  "source_git": {
+    "branch": "main",
+    "commit": "d650f4f3dd397ebe49e3fb7a38959bda1af72415",
+    "is_git_repo": true,
+    "remote_origin": "https://github.com/jacksonjp0311-gif/cybernetic-memory-system.git",
+    "status_short": ""
+  },
+  "source_path": "C:\\Users\\jacks\\OneDrive\\Desktop\\cybernetic-memory-system",
+  "target_root": "cms/",
+  "version": "HRCN v1.0.3"
+}

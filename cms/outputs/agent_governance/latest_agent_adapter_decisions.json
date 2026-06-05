@@ -1,0 +1,26 @@
+{
+  "adapter_hash": "ebd09d59cbc9fa82f079e8b7d760d2efa3db2b995c25e3bc96dc9e45d8086f57",
+  "created_at": "2026-06-04T16:08:53.470951+00:00",
+  "memory_candidate_adapter": [
+    {
+      "decision": "cms_decides_memory_status",
+      "future_influence_authority": false
+    }
+  ],
+  "non_claim_lock": "CMS-SA v0.5.0 agent governance outputs are repository-bound governance evidence and do not prove Hermes correctness, CMS correctness, code correctness, truth, AGI, consciousness, security, production readiness, external validation, autonomous patch safety, or autonomous write authority.",
+  "repair_proposal_adapter": [
+    {
+      "decision": "cms_decides_repair_class_and_dry_run_boundary",
+      "write_authority": false
+    }
+  ],
+  "schema": "CMS-SA-v0.5.0-agent-adapter-decisions",
+  "skill_candidate_adapter": [
+    {
+      "decision": "observe_only_until_evidence_and_tests",
+      "trusted_skill_authority": false
+    }
+  ],
+  "version": "v0.5.0",
+  "write_authority_granted": false
+}

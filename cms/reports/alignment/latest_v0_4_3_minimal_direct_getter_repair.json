@@ -1,0 +1,9 @@
+{
+  "changed": true,
+  "non_claim_lock": "v0.4.3 minimal direct getter repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "remaining_bad_loop_pressure_getter": false,
+  "schema": "CMS-SA-v0.4.3-minimal-direct-getter-repair",
+  "target": "src/cms/alignment/multilevel.py",
+  "timestamp_utc": "2026-06-04T03:53:00.802630+00:00"
+}

@@ -1,0 +1,71 @@
+{
+  "api_writes_performed": 0,
+  "created_at": "2026-06-04T16:08:41.772439+00:00",
+  "dry_apply_run_count": 1,
+  "dry_apply_sandbox_hash": "ee3f2a9a525f2b6b181dbf91512ac8991e2fb110bc84ff04e75906b83db4c88f",
+  "git_commits_performed": 0,
+  "git_pushes_performed": 0,
+  "live_target_writes_performed": 0,
+  "non_claim_lock": "Authorized dry-apply sandbox reports are repository-bound execution simulations and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "primary_lock": "No dry-apply sandbox may write live target surfaces. It may only simulate packet execution against virtual or copied targets, compare before/after hashes inside the sandbox, simulate rollback, preserve blocked actions, and emit validation evidence.",
+  "release_tags_created": 0,
+  "runs": [
+    {
+      "api_writes_performed": 0,
+      "apply_authority": false,
+      "blocked_actions_preserved": [
+        "runtime_code_patch",
+        "memory_promotion",
+        "release_tag_creation",
+        "api_write",
+        "autonomous_patch",
+        "target_surface_write",
+        "git_commit",
+        "git_push",
+        "silent_target_write",
+        "unreviewed_git_commit",
+        "unreviewed_git_push",
+        "live_target_write",
+        "production_apply"
+      ],
+      "diff_entry_count": 0,
+      "dry_apply_hash": "5af37ae755628091d4b6abc29f9c7e4bcb4df1ac5d50e61f391f7d990c0cce5d",
+      "dry_apply_run_id": "CMS-DRY-APPLY-25690b5022",
+      "git_commits_performed": 0,
+      "git_pushes_performed": 0,
+      "human_authorization_artifact_present": false,
+      "live_target_writes_performed": 0,
+      "non_claim_lock": "Authorized dry-apply sandbox reports are repository-bound execution simulations and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+      "packet_state": "blocked_missing_human_authorization_packet",
+      "post_apply_validation_required": [
+        "validate_surface_alignment",
+        "emit_multilevel_alignment",
+        "validate_multilevel_alignment",
+        "validate_public_sync"
+      ],
+      "pre_apply_validation_required": [
+        "validate_surface_alignment",
+        "emit_multilevel_alignment",
+        "validate_multilevel_alignment",
+        "validate_public_sync"
+      ],
+      "release_tags_created": 0,
+      "rollback_simulation": [],
+      "rollback_simulation_count": 0,
+      "rollback_simulation_passed": true,
+      "sandbox_operation_count": 0,
+      "sandbox_operations": [],
+      "sandbox_state": "simulated_no_live_writes",
+      "source_apply_gate_id": "CMS-APPLY-GATE-6319f003ce",
+      "source_apply_packet_id": "CMS-APPLY-PACKET-889d035eec",
+      "virtual_target_writes_performed": 0
+    }
+  ],
+  "schema": "CMS-SA-v0.4.8-authorized-apply-executor-dry-apply-sandbox",
+  "source_apply_packet_count": 1,
+  "source_apply_packet_manifest_hash": "2e378c2650c3aec9aa280dc8696d26a40adf1d0afb88f3741e6612cb41333f35",
+  "source_pressure_state": "stable",
+  "version": "v0.4.8",
+  "virtual_target_writes_performed": 0
+}

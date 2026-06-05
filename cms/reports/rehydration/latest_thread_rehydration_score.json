@@ -1,0 +1,15 @@
+{
+  "architecture_scan_complete": true,
+  "core_rule": "theory tells why; architecture tells how; runtime tells now",
+  "missing_surfaces": [],
+  "non_claim_lock": "Thread rehydration scoring is repository-bound and does not prove code correctness.",
+  "origin_scan_complete": true,
+  "passed": true,
+  "rehydration_hash": "8e2427a46e96559117e16ebbe4a2e16e3f5e5f81a2186d8d4667dedac3bda8bd",
+  "rehydration_score": 1.0,
+  "runtime_scan_complete": true,
+  "schema": "CMS-SA-v0.4.1-thread-rehydration-score",
+  "stale_surface_risks": [],
+  "version": "v0.4.1",
+  "version_ready": true
+}

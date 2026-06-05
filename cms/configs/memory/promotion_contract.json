@@ -1,0 +1,23 @@
+{
+  "decision_states": [
+    "promote_memory",
+    "downgrade_memory",
+    "observe_only",
+    "block_memory"
+  ],
+  "non_claim_lock": "Memory promotion is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "promotion_rule": "A memory candidate may promote only when evidence utility is sufficient, negative controls pass, runtime decision is not blocking, downgrade path is declared, falsification condition is declared, and non-claim locks are preserved.",
+  "purpose": "Convert repository-bound feedback/control evidence into downgrade-safe memory promotion decisions.",
+  "required_inputs": [
+    "feedback_id",
+    "evidence_utility",
+    "negative_control_passed",
+    "runtime_decision_state",
+    "downgrade_path",
+    "falsification_condition",
+    "non_claim_lock"
+  ],
+  "schema": "CMS-SA-v0.3b5-memory-promotion-contract",
+  "title": "CMS-SA v0.3b5 - Memory Promotion Kernel",
+  "version": "v0.3b5"
+}

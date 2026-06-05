@@ -1,0 +1,10 @@
+{
+  "changed": true,
+  "non_claim_lock": "v0.4.3 future import order repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "remaining_bad_loop_pressure_getter": false,
+  "remaining_future_import": false,
+  "schema": "CMS-SA-v0.4.3-future-import-order-repair",
+  "target": "src/cms/alignment/multilevel.py",
+  "timestamp_utc": "2026-06-04T03:55:05.300886+00:00"
+}

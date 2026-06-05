@@ -1,0 +1,63 @@
+{
+  "api_writes_performed": 0,
+  "dirty_residual_entries": [
+    " M outputs/evidence/latest_evidence_package.json",
+    " M outputs/metrics/latest_metric_evaluation.json",
+    " M outputs/state/latest_observation_manifest.json",
+    " M reports/evidence/latest_evidence_package.json",
+    " M reports/metric_contracts/latest_metric_evaluation.json",
+    " M reports/metric_contracts/latest_metric_evaluation.md",
+    " M reports/runtime_observation/latest_observation_manifest.json",
+    " M reports/runtime_observation/latest_observation_manifest.md"
+  ],
+  "dry_apply_run_count": 1,
+  "dry_apply_sandbox_passed": true,
+  "final_evidence_report_passed": true,
+  "final_evidence_report_present": true,
+  "final_postpush_report_passed": true,
+  "final_postpush_report_present": true,
+  "git_commits_performed_by_sandbox": 0,
+  "git_pushes_performed_by_sandbox": 0,
+  "law": "Anchor -> Bind -> Snapshot -> Commit -> Push -> Check -> Return",
+  "lessons_preserved": [
+    "method_wrapper_is_governance_not_cosmetic",
+    "dry_apply_sandbox_is_not_live_execution",
+    "live_target_writes_must_remain_zero",
+    "final_postpush_artifacts_must_be_committed_after_generation",
+    "final_verifier_residue_must_be_committed_or_discarded"
+  ],
+  "live_target_writes_performed": 0,
+  "loop_drift_pressure": 0.14,
+  "non_claim_lock": "v0.4.8 residual artifact closure is repository-bound evidence hygiene and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "present_residual_paths": [
+    "outputs/evidence/latest_evidence_package.json",
+    "outputs/metrics/latest_metric_evaluation.json",
+    "outputs/state/latest_observation_manifest.json",
+    "reports/evidence/latest_evidence_package.json",
+    "reports/metric_contracts/latest_metric_evaluation.json",
+    "reports/metric_contracts/latest_metric_evaluation.md",
+    "reports/runtime_observation/latest_observation_manifest.json",
+    "reports/runtime_observation/latest_observation_manifest.md"
+  ],
+  "public_sync_passed": true,
+  "reason": "Final post-commit verification refreshed evidence, metric, and observation artifacts after the final evidence push.",
+  "release_tag_status": "present_and_ancestor_of_head",
+  "release_tags_created_by_sandbox": 0,
+  "runtime_decision": "promote",
+  "schema": "CMS-SA-v0.4.8-residual-artifact-closure-report",
+  "stability_state": "stable_green_loop",
+  "status_before": [
+    " M outputs/evidence/latest_evidence_package.json",
+    " M outputs/metrics/latest_metric_evaluation.json",
+    " M outputs/state/latest_observation_manifest.json",
+    " M reports/evidence/latest_evidence_package.json",
+    " M reports/metric_contracts/latest_metric_evaluation.json",
+    " M reports/metric_contracts/latest_metric_evaluation.md",
+    " M reports/runtime_observation/latest_observation_manifest.json",
+    " M reports/runtime_observation/latest_observation_manifest.md"
+  ],
+  "threshold": 0.25,
+  "timestamp_utc": "2026-06-04T04:50:34.928273+00:00",
+  "version": "v0.4.8"
+}

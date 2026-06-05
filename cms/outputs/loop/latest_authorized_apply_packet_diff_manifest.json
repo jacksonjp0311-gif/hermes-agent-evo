@@ -1,0 +1,83 @@
+{
+  "api_writes_performed": 0,
+  "apply_packet_count": 1,
+  "apply_packet_manifest_hash": "2e378c2650c3aec9aa280dc8696d26a40adf1d0afb88f3741e6612cb41333f35",
+  "created_at": "2026-06-04T16:08:41.601022+00:00",
+  "diff_manifest_count": 1,
+  "diff_manifest_ledger": [
+    {
+      "apply_packet_id": "CMS-APPLY-PACKET-889d035eec",
+      "diff_entry_count": 0,
+      "diff_state": "blocked_no_authorized_diff",
+      "non_claim_lock": "Authorized apply packets and diff manifests are repository-bound authorization evidence and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+      "rollback_entry_count": 0,
+      "source_apply_gate_id": "CMS-APPLY-GATE-6319f003ce",
+      "target_writes_performed": 0
+    }
+  ],
+  "git_commits_performed": 0,
+  "git_pushes_performed": 0,
+  "non_claim_lock": "Authorized apply packets and diff manifests are repository-bound authorization evidence and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "packets": [
+    {
+      "api_writes_performed": 0,
+      "apply_authority": false,
+      "apply_packet_hash": "57fe25bbfff66e6058627c9d4ebe3c14d839821c57dcf608d1b38fb2567cb66d",
+      "apply_packet_id": "CMS-APPLY-PACKET-889d035eec",
+      "blocked_actions_preserved": [
+        "runtime_code_patch",
+        "memory_promotion",
+        "release_tag_creation",
+        "api_write",
+        "autonomous_patch",
+        "target_surface_write",
+        "git_commit",
+        "git_push",
+        "silent_target_write",
+        "unreviewed_git_commit",
+        "unreviewed_git_push"
+      ],
+      "diff_entry_count": 0,
+      "diff_manifest": [],
+      "exact_diff_entries_declared": false,
+      "git_commits_performed": 0,
+      "git_pushes_performed": 0,
+      "human_authorization_artifact_id": null,
+      "human_authorization_artifact_present": false,
+      "non_claim_lock": "Authorized apply packets and diff manifests are repository-bound authorization evidence and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+      "packet_state": "blocked_missing_human_authorization_packet",
+      "post_apply_validation_required": [
+        "validate_surface_alignment",
+        "emit_multilevel_alignment",
+        "validate_multilevel_alignment",
+        "validate_public_sync"
+      ],
+      "pre_apply_validation_required": [
+        "validate_surface_alignment",
+        "emit_multilevel_alignment",
+        "validate_multilevel_alignment",
+        "validate_public_sync"
+      ],
+      "release_tags_created": 0,
+      "repair_class": "REGISTRY_REPAIR",
+      "rollback_binds_every_diff": true,
+      "rollback_entries": [],
+      "rollback_entry_count": 0,
+      "source_apply_gate_id": "CMS-APPLY-GATE-6319f003ce",
+      "source_dry_run_id": "CMS-DRYRUN-c78d107b05",
+      "source_plan_id": "CMS-PLAN-c3c9530c24",
+      "source_recommendation_id": "CMS-RR-3d8ebfb363",
+      "target_writes_performed": 0,
+      "target_writes_requested": []
+    }
+  ],
+  "passed": true,
+  "primary_lock": "No apply packet may authorize a repair unless it references a validated apply gate, includes a human authorization artifact, declares exact diff entries for every target write, binds rollback entries one-to-one with diff entries, preserves blocked actions, and passes pre-apply validation.",
+  "release_tags_created": 0,
+  "schema": "CMS-SA-v0.4.7-authorized-apply-packet-and-diff-manifest",
+  "source_apply_gate_count": 1,
+  "source_apply_gate_hash": "eaccd18fa45a9e553acb0d668bfca4a67c952bececc0c0c25ba79f91e55a0df0",
+  "source_pressure_state": "stable",
+  "target_writes_performed": 0,
+  "version": "v0.4.7"
+}

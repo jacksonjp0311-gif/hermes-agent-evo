@@ -1,0 +1,158 @@
+{
+  "schema": "CMS-SA-v0.3b-feedback-lifecycle-report",
+  "version": "v0.3b",
+  "item_count": 3,
+  "class_counts": {
+    "CMS-FB-A": 3
+  },
+  "observables": [
+    "R",
+    "E",
+    "V",
+    "L",
+    "D",
+    "F",
+    "N",
+    "S",
+    "C",
+    "A"
+  ],
+  "items": [
+    {
+      "id": "CMS-FB-001",
+      "source": "v0.3a2 boundary",
+      "summary": "Separate geometry emission from read-only geometry validation.",
+      "route": {
+        "shell": "middle",
+        "meridian": "validation",
+        "sector": "geometry",
+        "files": [
+          "scripts/geometry/emit_reflective_git_geometry.py",
+          "scripts/validation/validate_reflective_git_geometry_v0_3.py"
+        ]
+      },
+      "observables": {
+        "R": 1,
+        "E": 1,
+        "V": 1,
+        "L": 1,
+        "D": 1,
+        "F": 1,
+        "N": 1,
+        "S": 1,
+        "C": 1,
+        "A": 1
+      },
+      "score": 1.0,
+      "classification": "CMS-FB-A",
+      "lifecycle_state": "promotion_candidate",
+      "evidence": [
+        "reports/geometry/latest_reflective_git_geometry_validation.json",
+        "reports/public_sync/latest_public_sync_report.md"
+      ],
+      "validator_binding": [
+        "python scripts/geometry/emit_reflective_git_geometry.py",
+        "python scripts/validation/validate_reflective_git_geometry_v0_3.py"
+      ],
+      "downgrade_path": "If read-only preservation fails, downgrade to CMS-FB-B and block API-readiness promotion.",
+      "negative_control": "Report-refresh commits are excluded from semantic geometry nodes.",
+      "surrogate_or_dry_run": "Run geometry validation after a report-refresh commit without re-emitting geometry.",
+      "falsification_condition": "Validator changes outputs/geometry/latest_reflective_git_geometry.json or reports/geometry/latest_reflective_git_geometry.json.",
+      "non_claim_lock": "This feedback item validates repository-bound geometry behavior only."
+    },
+    {
+      "id": "CMS-FB-002",
+      "source": "PCE v3.5 integration",
+      "summary": "Require scored lifecycle classification before feedback promotion.",
+      "route": {
+        "shell": "center",
+        "meridian": "memory",
+        "sector": "feedback",
+        "files": [
+          "configs/feedback/feedback_lifecycle_contract.json",
+          "schemas/feedback_item.schema.json"
+        ]
+      },
+      "observables": {
+        "R": 1,
+        "E": 1,
+        "V": 1,
+        "L": 1,
+        "D": 1,
+        "F": 1,
+        "N": 1,
+        "S": 1,
+        "C": 1,
+        "A": 1
+      },
+      "score": 1.0,
+      "classification": "CMS-FB-A",
+      "lifecycle_state": "promotion_candidate",
+      "evidence": [
+        "configs/feedback/feedback_lifecycle_contract.json",
+        "schemas/feedback_item.schema.json"
+      ],
+      "validator_binding": [
+        "python scripts/validation/validate_feedback_lifecycle_v0_3b.py"
+      ],
+      "downgrade_path": "If negative controls or falsification conditions are absent, downgrade to CMS-FB-B or CMS-FB-C.",
+      "negative_control": "Feedback items lacking evidence or validator binding must not promote.",
+      "surrogate_or_dry_run": "Construct a weak feedback item and verify classification downgrades.",
+      "falsification_condition": "A feedback item promotes without required observables.",
+      "non_claim_lock": "PCE-style scoring improves feedback governance; it does not prove external truth."
+    },
+    {
+      "id": "CMS-FB-003",
+      "source": "two-way API readiness",
+      "summary": "API observe/propose/write phases must remain separated.",
+      "route": {
+        "shell": "outer",
+        "meridian": "safety",
+        "sector": "api",
+        "files": [
+          "README.md",
+          "docs/versions/v0_3b/cms_sa_v0_3b_feedback_lifecycle_engine.md"
+        ]
+      },
+      "observables": {
+        "R": 1,
+        "E": 1,
+        "V": 1,
+        "L": 1,
+        "D": 1,
+        "F": 1,
+        "N": 1,
+        "S": 1,
+        "C": 1,
+        "A": 1
+      },
+      "score": 1.0,
+      "classification": "CMS-FB-A",
+      "lifecycle_state": "promotion_candidate",
+      "evidence": [
+        "README.md",
+        "configs/feedback/feedback_lifecycle_contract.json"
+      ],
+      "validator_binding": [
+        "python scripts/validation/validate_feedback_lifecycle_v0_3b.py",
+        "python scripts/validate_release.py"
+      ],
+      "downgrade_path": "If API write authority is implied without authorization, downgrade or reject.",
+      "negative_control": "An observe-only API action must not write repository files.",
+      "surrogate_or_dry_run": "Generate a dry-run patch proposal without commit/push.",
+      "falsification_condition": "An observe or classify phase mutates source, evidence, or Git state outside allowed reports.",
+      "non_claim_lock": "API readiness is not autonomous write authority or production security."
+    }
+  ],
+  "api_boundary": {
+    "observe": "read-only",
+    "classify": "read-only plus report emission",
+    "propose": "draft/diff/evidence only",
+    "validate": "read-only over target artifacts except validation reports",
+    "authorize": "human or constrained automation gate",
+    "write": "explicit write phase only",
+    "seal": "commit, push, tag, public sync"
+  },
+  "core_rule": "No feedback item may promote to memory, release, or API-write status without route classification, evidence, validator binding, lifecycle state, downgrade path, falsification condition, and non-claim lock.",
+  "non_claim_lock": "Feedback lifecycle governance improves repository alignment and API-readiness. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness."
+}

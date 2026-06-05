@@ -1,0 +1,21 @@
+{
+  "lessons_added": [
+    "validation order is part of system geometry",
+    "preseal release_tag_missing is public_sync_phase:preseal_tag_pending",
+    "pressure refresh must occur before multilevel alignment",
+    "dry-run is not write authority",
+    "bounded self-healing is not autonomous mutation"
+  ],
+  "non_claim_lock": "README lesson alignment is repository-bound documentation and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "schema": "CMS-SA-v0.4.5-readme-lessons-alignment-patch",
+  "target": "README.md",
+  "threshold": {
+    "headroom_percent": 32.8,
+    "loop_drift_pressure": 0.168,
+    "state": "green_with_repair_recommendation",
+    "threshold": 0.25,
+    "threshold_usage_percent": 67.2
+  },
+  "timestamp_utc": "2026-06-04T04:19:23.944690+00:00"
+}

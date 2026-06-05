@@ -1,0 +1,17 @@
+{
+  "api_writes_performed": 0,
+  "dry_apply_run_count": 1,
+  "dry_apply_sandbox_hash": "ee3f2a9a525f2b6b181dbf91512ac8991e2fb110bc84ff04e75906b83db4c88f",
+  "errors": 0,
+  "findings": [],
+  "git_commits_performed": 0,
+  "git_pushes_performed": 0,
+  "live_target_writes_performed": 0,
+  "non_claim_lock": "Authorized dry-apply sandbox validation is repository-bound and does not prove code correctness.",
+  "passed": true,
+  "primary_lock": "No dry-apply sandbox may write live target surfaces. It may only simulate packet execution against virtual or copied targets, compare before/after hashes inside the sandbox, simulate rollback, preserve blocked actions, and emit validation evidence.",
+  "release_tags_created": 0,
+  "schema": "CMS-SA-v0.4.8-authorized-dry-apply-sandbox-validation",
+  "source_pressure_state": "stable",
+  "virtual_target_writes_performed": 0
+}

@@ -1,0 +1,13 @@
+{
+  "repository": "cybernetic-memory-system",
+  "profile": "CMS-Core",
+  "k_cms": 1.0,
+  "d_cms": 0.0,
+  "a_cms": 1.0,
+  "release_allowed": true,
+  "feedback_items": 0,
+  "orphan_feedback": 0,
+  "promoted_memory": 0,
+  "release_hold_reasons": [],
+  "artifacts": "C:\\Users\\jacks\\OneDrive\\Desktop\\cybernetic-memory-system\\outputs"
+}

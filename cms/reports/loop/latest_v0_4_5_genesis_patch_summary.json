@@ -1,0 +1,24 @@
+{
+  "added": [
+    "src/cms/loop/repair_dry_run.py",
+    "scripts/loop/emit_authorized_repair_dry_run_v0_4_5.py",
+    "scripts/validation/validate_authorized_repair_dry_run_v0_4_5.py",
+    "tests/test_authorized_repair_dry_run_v0_4_5.py",
+    "schemas/authorized_repair_dry_run.schema.json"
+  ],
+  "checkpoint": "CMS-SA v0.4.5 - Authorized Repair Dry-Run Executor",
+  "current_version": "v0.4.5",
+  "non_claim_lock": "Authorized repair dry-runs are repository-bound simulations and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "previous_version": "v0.4.4",
+  "primary_lock": "No repair dry-run may write target surfaces unless explicit human authorization, dry-run diff, rollback path, touched-surface boundary, blocked-action preservation, and required validation evidence are declared.",
+  "schema": "CMS-SA-v0.4.5-genesis-patch-summary",
+  "threshold": {
+    "headroom": 0.44,
+    "loop_drift_pressure": 0.14,
+    "state": "stable_green_loop",
+    "threshold": 0.25,
+    "threshold_usage": 0.56
+  },
+  "timestamp_utc": "2026-06-04T04:13:54.181089+00:00"
+}

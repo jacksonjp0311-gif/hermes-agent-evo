@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "architecture_scan": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "non_claim_lock": {
+      "type": "string"
+    },
+    "origin_scan": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "runtime_state_scan": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "const": "CMS-SA-v0.4.0-thread-rehydration-scan"
+    },
+    "version": {
+      "const": "v0.4.0"
+    },
+    "version_readiness_lock": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "origin_scan",
+    "architecture_scan",
+    "runtime_state_scan",
+    "version_readiness_lock",
+    "non_claim_lock"
+  ],
+  "title": "CMS Thread Rehydration Scan",
+  "type": "object"
+}

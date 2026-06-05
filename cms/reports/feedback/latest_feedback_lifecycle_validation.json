@@ -1,0 +1,25 @@
+{
+  "schema": "CMS-SA-v0.3b-feedback-lifecycle-validation",
+  "passed": true,
+  "errors": 0,
+  "warnings": 0,
+  "findings": [],
+  "item_count": 3,
+  "class_counts": {
+    "CMS-FB-A": 3
+  },
+  "observables": [
+    "R",
+    "E",
+    "V",
+    "L",
+    "D",
+    "F",
+    "N",
+    "S",
+    "C",
+    "A"
+  ],
+  "api_boundary_present": true,
+  "non_claim_lock": "Feedback lifecycle validation checks repository-bound feedback governance only. It does not prove code correctness."
+}

@@ -1,0 +1,30 @@
+{
+  "$id": "CMS-SA-v0.4.5-authorized-repair-dry-run",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "api_writes_performed": {
+      "const": 0
+    },
+    "commits_performed": {
+      "const": 0
+    },
+    "schema": {
+      "const": "CMS-SA-v0.4.5-authorized-repair-dry-run-executor"
+    },
+    "target_writes_performed": {
+      "const": 0
+    },
+    "version": {
+      "const": "v0.4.5"
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "dry_runs",
+    "passed",
+    "primary_lock",
+    "non_claim_lock"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "CMS-SA-v0.3b3-runtime-decision-contract",
+  "version": "v0.3b3",
+  "allowed_decisions": [
+    "promote",
+    "block",
+    "downgrade",
+    "observe_only"
+  ],
+  "non_claim_lock": "Decision contracts are repository-bound and do not prove correctness."
+}

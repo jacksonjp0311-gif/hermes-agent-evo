@@ -1,0 +1,9 @@
+{
+  "schema": "CMS-SA-v0.1-default-config",
+  "profile": "CMS-Core",
+  "thresholds": {
+    "feedback_quality": 0.8,
+    "memory_promotion": 0.8,
+    "release_admissibility": 1.0
+  }
+}

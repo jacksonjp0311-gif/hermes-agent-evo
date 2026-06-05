@@ -488,3 +488,36 @@ HRCN v1.0.2 - CMS Mirror Preflight Manifest and Secret-Scan Plan
 
 Non-claim lock: HRCN v1.0.1 is a docs/context CMS read-only mirror import authorization path layer. It defines the gates required before a future CMS mirror/import can occur. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
 <!-- HRCN_V101_CMS_MIRROR_AUTH_END -->
+
+<!-- HRCN_V103_CMS_MIRROR_COPY_START -->
+## HRCN v1.0.3 - CMS Read-Only Mirror Copy With Evidence Package
+
+CMS now exists under `cms/` as a read-only evidence mirror.
+
+```text
+A CMS mirror is readable evidence, not executable authority.
+CMS mirror is not runtime integration
+CMS mirror is not CMS write authority
+CMS mirror is not memory write authority
+CMS mirror is not API authority
+CMS mirror is not apply authority
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.0.2-cms-mirror-preflight-manifest.json
+docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json
+docs/context-layer/hrcn-v1.0.3.validation.json
+cms/MIRROR_READONLY_BOUNDARY.md
+cms/.hrcn-read-only-mirror.json
+```
+
+Rollback:
+
+```powershell
+Remove-Item -Recurse -Force .\cms
+```
+
+Non-claim lock: HRCN v1.0.3 copies CMS as a read-only mirror evidence snapshot under cms/. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The cms/ mirror is context and evidence only until later explicitly authorized bridge phases.
+<!-- HRCN_V103_CMS_MIRROR_COPY_END -->

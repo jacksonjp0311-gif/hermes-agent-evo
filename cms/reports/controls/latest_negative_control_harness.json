@@ -1,0 +1,117 @@
+{
+  "control_count": 5,
+  "controls": [
+    {
+      "control_class": "positive_control",
+      "control_id": "NC-001-positive-promote",
+      "description": "A clean validator-bound state may promote.",
+      "downgrade_path": "none",
+      "expected_decision": "promote",
+      "falsification_condition": "Fails if a clean positive control cannot promote.",
+      "input_signals": {
+        "all_required_surfaces_passed": true,
+        "downgrade_required": false,
+        "evidence_incomplete": false,
+        "false_promote_attempt": false,
+        "required_validator_failed": false
+      },
+      "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observed_decision": "promote",
+      "passed": true
+    },
+    {
+      "control_class": "negative_control",
+      "control_id": "NC-002-required-validator-block",
+      "description": "A missing or failed required validator must block promotion.",
+      "downgrade_path": "repair_required_validator_surface",
+      "expected_decision": "block",
+      "falsification_condition": "Fails if a required validator failure can still promote.",
+      "input_signals": {
+        "all_required_surfaces_passed": false,
+        "downgrade_required": false,
+        "evidence_incomplete": false,
+        "false_promote_attempt": false,
+        "required_validator_failed": true
+      },
+      "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observed_decision": "block",
+      "passed": true
+    },
+    {
+      "control_class": "false_promote_control",
+      "control_id": "NC-003-false-promote-rejected",
+      "description": "False promote attempts must be rejected even if other surface language looks confident.",
+      "downgrade_path": "reject_false_promote_and_require_replay",
+      "expected_decision": "block",
+      "falsification_condition": "Fails if false_promote_attempt yields promote.",
+      "input_signals": {
+        "all_required_surfaces_passed": true,
+        "downgrade_required": false,
+        "evidence_incomplete": false,
+        "false_promote_attempt": true,
+        "required_validator_failed": false
+      },
+      "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observed_decision": "block",
+      "passed": true
+    },
+    {
+      "control_class": "downgrade_control",
+      "control_id": "NC-004-downgrade-preserved",
+      "description": "Weak but useful cases must downgrade instead of being erased or promoted.",
+      "downgrade_path": "preserve_as_downgraded_feedback_item",
+      "expected_decision": "downgrade",
+      "falsification_condition": "Fails if downgrade-required case promotes or disappears.",
+      "input_signals": {
+        "all_required_surfaces_passed": false,
+        "downgrade_required": true,
+        "evidence_incomplete": false,
+        "false_promote_attempt": false,
+        "required_validator_failed": false
+      },
+      "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observed_decision": "downgrade",
+      "passed": true
+    },
+    {
+      "control_class": "observe_only_control",
+      "control_id": "NC-005-observe-only",
+      "description": "Incomplete evidence should remain observable but non-promotional.",
+      "downgrade_path": "hold_for_more_evidence",
+      "expected_decision": "observe_only",
+      "falsification_condition": "Fails if incomplete evidence promotes.",
+      "input_signals": {
+        "all_required_surfaces_passed": false,
+        "downgrade_required": false,
+        "evidence_incomplete": true,
+        "false_promote_attempt": false,
+        "required_validator_failed": false
+      },
+      "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observed_decision": "observe_only",
+      "passed": true
+    }
+  ],
+  "downgrade_preserved": true,
+  "false_promote_rejected": true,
+  "harness_hash": "839cfdcac84c7d6d703adc8751c00af308c47d1d49b071021448c14a57c8d1a9",
+  "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "observe_only_preserved": true,
+  "observed_classes": [
+    "downgrade_control",
+    "false_promote_control",
+    "negative_control",
+    "observe_only_control",
+    "positive_control"
+  ],
+  "passed": true,
+  "required_classes": [
+    "downgrade_control",
+    "false_promote_control",
+    "negative_control",
+    "observe_only_control",
+    "positive_control"
+  ],
+  "schema": "CMS-SA-v0.3b4-negative-control-harness",
+  "version": "v0.3b4"
+}

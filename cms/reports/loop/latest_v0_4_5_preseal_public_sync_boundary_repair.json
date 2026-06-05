@@ -1,0 +1,9 @@
+{
+  "expected_pressure_effect": "public sync preseal boundary should remain a warning under threshold instead of BLOCK_RELEASE pressure.",
+  "non_claim_lock": "v0.4.5 preseal public-sync boundary repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "repair": "Treat missing release tag with matching registry/head/readme during preseal as public_sync_phase:preseal_tag_pending instead of validation_failures:public_sync.",
+  "schema": "CMS-SA-v0.4.5-preseal-public-sync-boundary-repair",
+  "target": "src/cms/loop/drift_pressure.py",
+  "timestamp_utc": "2026-06-04T04:15:59.737222+00:00"
+}

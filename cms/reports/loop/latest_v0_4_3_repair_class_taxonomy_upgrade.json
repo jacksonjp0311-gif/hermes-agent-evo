@@ -1,0 +1,20 @@
+{
+  "legacy_finding_mapped": "public_sync_preseal_pending_until_v0_4_2_tag",
+  "non_claim_lock": "v0.4.3 repair-class taxonomy upgrade is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "primary_lock": "No repair recommendation may write, promote, or seal a change unless it declares pressure source, repair class, allowed action, blocked action, required validation, and non-claim boundary.",
+  "repair_classes": [
+    "NO_REPAIR",
+    "SURFACE_REPAIR",
+    "REGISTRY_REPAIR",
+    "VALIDATOR_REPAIR",
+    "REPORT_REFRESH",
+    "MEMORY_ACTION_REPAIR",
+    "REHYDRATION_REPAIR",
+    "DOWNGRADE_RECOMMENDATION",
+    "BLOCK_RELEASE",
+    "HUMAN_REVIEW_REQUIRED"
+  ],
+  "schema": "CMS-SA-v0.4.3-repair-class-taxonomy-upgrade",
+  "timestamp_utc": "2026-06-04T03:46:34.207246+00:00"
+}

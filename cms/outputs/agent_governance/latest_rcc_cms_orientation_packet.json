@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-06-04T16:08:53.470951+00:00",
+  "high_risk_surfaces": [
+    "agent loop",
+    "tool execution",
+    "skill creation / skill update",
+    "memory implementation",
+    "provider routing",
+    "messaging gateway",
+    "terminal backends",
+    "dependency pins",
+    "install/update scripts",
+    "auth/config/secrets"
+  ],
+  "mode": "read_only",
+  "non_claim_lock": "CMS-SA v0.5.0 agent governance outputs are repository-bound governance evidence and do not prove Hermes correctness, CMS correctness, code correctness, truth, AGI, consciousness, security, production readiness, external validation, autonomous patch safety, or autonomous write authority.",
+  "orientation": {
+    "cms": "memory_repair_permission_governor",
+    "hermes": "future_actor_runtime",
+    "human": "write_boundary",
+    "rcc": "map_and_route_boundary"
+  },
+  "orientation_hash": "a71786bc75a22bcb0d344253665b179a54e94a6a60b22d8b406ec7f68bf6f1ff",
+  "repository": "cybernetic-memory-system",
+  "safe_current_surfaces": [
+    "README.md",
+    "AGENTS.md",
+    "RCC.md",
+    "docs/rcc/*.md",
+    "reports/agent_governance/*.json",
+    "outputs/cms/hermes_cms_context.json"
+  ],
+  "schema": "CMS-SA-v0.5.0-rcc-cms-repository-orientation-packet"
+}

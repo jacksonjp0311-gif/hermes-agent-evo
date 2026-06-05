@@ -1,0 +1,19 @@
+{
+  "authorization_phrase_received": true,
+  "checkpoint": "CMS Mirror Preflight Manifest and Secret-Scan Plan",
+  "cms_copy_performed_by_v1_0_2": false,
+  "docs_only_before_copy": true,
+  "manifest_created": true,
+  "next_recommended_phase": "HRCN v1.0.3 - CMS Read-Only Mirror Copy With Evidence Package",
+  "passed": true,
+  "pre_copy_file_count": 712,
+  "pre_copy_total_bytes": 3594235,
+  "previous_validated_anchor": "HRCN v1.0.1",
+  "repository": "hermes-agent-evo",
+  "schema": "HRCN-v1.0.2-validation",
+  "secret_scan_passed": true,
+  "source_exists": true,
+  "source_git_commit": "d650f4f3dd397ebe49e3fb7a38959bda1af72415",
+  "timestamp_utc": "2026-06-05T00:00:05.516089+00:00",
+  "version": "HRCN v1.0.2"
+}

@@ -1,0 +1,13 @@
+{
+  "control_count": 5,
+  "downgrade_preserved": true,
+  "errors": 0,
+  "false_promote_rejected": true,
+  "findings": [],
+  "harness_hash": "839cfdcac84c7d6d703adc8751c00af308c47d1d49b071021448c14a57c8d1a9",
+  "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness.",
+  "observe_only_preserved": true,
+  "passed": true,
+  "schema": "CMS-SA-v0.3b4-negative-control-validation",
+  "version": "v0.3b4"
+}

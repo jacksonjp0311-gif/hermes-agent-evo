@@ -1,0 +1,19 @@
+{
+  "schema": "CMS-SA-v0.2b3c-public-sync-stable",
+  "passed": true,
+  "errors": 0,
+  "warnings": 0,
+  "findings": [],
+  "warning_findings": [],
+  "registry_current_version": "v0.5.1",
+  "head_origin_match": true,
+  "readme_checkpoint_present": true,
+  "release_tag": "v0.5.1",
+  "release_tag_status": "present_and_ancestor_of_head",
+  "release_tag_exists": true,
+  "release_tag_is_ancestor_of_head": true,
+  "stable_evidence_boundary": true,
+  "volatile_commit_hashes_omitted": true,
+  "policy": "Committed public-sync reports omit volatile commit hashes. Runtime validation still checks HEAD/origin agreement and release-tag ancestry.",
+  "non_claim_lock": "Public sync validation checks repository-state agreement but does not prove runtime correctness, truth, AGI, consciousness, production readiness, security, or external validation."
+}

@@ -1,0 +1,8 @@
+{
+  "errors": 0,
+  "findings": [],
+  "non_claim_lock": "Thread rehydration score validation is repository-bound and does not prove code correctness.",
+  "passed": true,
+  "schema": "CMS-SA-v0.4.1-thread-rehydration-score-validation",
+  "version": "v0.4.1"
+}

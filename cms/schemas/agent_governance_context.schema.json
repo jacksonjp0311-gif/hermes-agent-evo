@@ -1,0 +1,27 @@
+{
+  "$id": "CMS-SA-v0.5.0-agent-governance-context",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "cms_write_integration_active": {
+      "const": false
+    },
+    "mode": {
+      "const": "read_only"
+    },
+    "runtime_code_changes_allowed": {
+      "const": false
+    },
+    "schema": {
+      "const": "HRCN-v1.0-hermes-cms-context"
+    }
+  },
+  "required": [
+    "schema",
+    "mode",
+    "runtime_code_changes_allowed",
+    "cms_write_integration_active",
+    "blocked_actions",
+    "non_claim_lock"
+  ],
+  "type": "object"
+}

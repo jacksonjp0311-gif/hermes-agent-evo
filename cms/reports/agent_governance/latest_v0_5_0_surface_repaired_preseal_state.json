@@ -1,0 +1,36 @@
+{
+  "agent_governance_passed": true,
+  "apply_authority_granted": false,
+  "classification_count": 4,
+  "law": "Anchor -> Diagnose -> Patch Surface -> Validate -> State -> Ledger -> Return",
+  "lessons_preserved": [
+    "surface_token_mismatch_is_not_kernel_failure",
+    "agent_governance_kernel_passed_before_surface_repair",
+    "root_readme_alignment_rows_are_required_governance_surface",
+    "agent_proposal_is_not_authority",
+    "read_only_context_is_not_runtime_integration"
+  ],
+  "mode": "preseal_surface_repaired",
+  "multilevel_alignment_passed": true,
+  "non_claim_lock": "v0.5.0 surface-repaired preseal state is repository-bound evidence and does not prove code correctness, Hermes correctness, CMS correctness, security, truth, AGI, consciousness, production readiness, or autonomous write authority.",
+  "passed": true,
+  "proposal_count": 4,
+  "public_sync_passed": false,
+  "release_tag_status": "missing",
+  "runtime_decision": "promote",
+  "runtime_decision_passed": true,
+  "schema": "CMS-SA-v0.5.0-surface-repaired-preseal-state",
+  "surface_alignment_passed": true,
+  "threshold": {
+    "headroom": 0.096,
+    "headroom_percent": 9.6,
+    "loop_drift_pressure": 0.226,
+    "state": "green_with_repair_recommendation",
+    "threshold": 0.25,
+    "threshold_usage": 0.904,
+    "threshold_usage_percent": 90.4
+  },
+  "timestamp_utc": "2026-06-04T16:05:02.986025+00:00",
+  "version": "v0.5.0",
+  "write_authority_granted": false
+}

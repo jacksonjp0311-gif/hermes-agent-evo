@@ -1,0 +1,14 @@
+{
+    "schema":  "CMS-SA-v0.2b1-public-anchor-directory-table-repair-report",
+    "version":  "v0.2b1",
+    "passed":  true,
+    "failures":  [
+
+                 ],
+    "repaired_failures":  [
+                              "missing inherited public README anchors",
+                              "directory rows not rendered as literal backticked path entries"
+                          ],
+    "next_anchor":  "CMS-SA v0.3 — Feedback Quality and Lifecycle Engine",
+    "non_claim_lock":  "public anchor repair is repository-bound"
+}

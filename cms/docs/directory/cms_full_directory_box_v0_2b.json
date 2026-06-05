@@ -1,0 +1,146 @@
+{
+    "schema":  "CMS-SA-v0.2b-full-directory-box",
+    "repository":  "cybernetic-memory-system",
+    "version":  "v0.2b",
+    "generated_at":  "2026-05-30T09:41:05.6264186-04:00",
+    "rows":  [
+                 {
+                     "path":  "src/cms/",
+                     "purpose":  "CMS runtime, CLI, observation, metrics, drift, evidence, validation, memory, planning, correction, schemas, artifacts, and utilities."
+                 },
+                 {
+                     "path":  "configs/metrics/",
+                     "purpose":  "Metric contract declarations for repository-bound measurement surfaces."
+                 },
+                 {
+                     "path":  "configs/seeds/",
+                     "purpose":  "Future seed/configuration inputs for CMS scenarios and runtime examples."
+                 },
+                 {
+                     "path":  "docs/context/",
+                     "purpose":  "Repository context indexes and RCC-N meaning/navigation maps."
+                 },
+                 {
+                     "path":  "docs/architecture/",
+                     "purpose":  "Software architecture contracts and architecture validation surfaces."
+                 },
+                 {
+                     "path":  "docs/protocols/",
+                     "purpose":  "Process protocols, operating rules, and governance procedures."
+                 },
+                 {
+                     "path":  "docs/theory/",
+                     "purpose":  "Theory and conceptual boundary documents."
+                 },
+                 {
+                     "path":  "docs/versions/",
+                     "purpose":  "Versioned CMS documents for each evolution layer."
+                 },
+                 {
+                     "path":  "docs/injections/",
+                     "purpose":  "Injection records showing what changed, why, and where."
+                 },
+                 {
+                     "path":  "docs/release_seals/",
+                     "purpose":  "Release seals for checkpointed repository states."
+                 },
+                 {
+                     "path":  "docs/roadmap/",
+                     "purpose":  "Current and future CMS development anchors."
+                 },
+                 {
+                     "path":  "docs/directory/",
+                     "purpose":  "Directory-box manifests, directory-lock reports, and public navigation rules."
+                 },
+                 {
+                     "path":  "rcc/nexus/",
+                     "purpose":  "RCC-N route maps, task routing, agent handoff, and local orientation surfaces."
+                 },
+                 {
+                     "path":  "scripts/rcc/",
+                     "purpose":  "README audit scanner, RCC-N checker, and navigation validation utilities."
+                 },
+                 {
+                     "path":  "scripts/validation/",
+                     "purpose":  "Architecture, runtime, directory, and release validation scripts."
+                 },
+                 {
+                     "path":  "outputs/state/",
+                     "purpose":  "Latest observation state emitted by the CMS runtime."
+                 },
+                 {
+                     "path":  "outputs/metrics/",
+                     "purpose":  "Latest metric evaluation artifacts."
+                 },
+                 {
+                     "path":  "outputs/drift/",
+                     "purpose":  "Latest CMS drift reports and K/D coherence measures."
+                 },
+                 {
+                     "path":  "outputs/evidence/",
+                     "purpose":  "Latest evidence packages emitted by the runtime."
+                 },
+                 {
+                     "path":  "outputs/lineage/",
+                     "purpose":  "Append-only lineage ledger entries for version continuity."
+                 },
+                 {
+                     "path":  "outputs/injections/",
+                     "purpose":  "Append-only injection ledger entries for repository evolution."
+                 },
+                 {
+                     "path":  "outputs/version_registry/",
+                     "purpose":  "Machine-readable version registry and next-anchor record."
+                 },
+                 {
+                     "path":  "outputs/directory/",
+                     "purpose":  "Machine-readable full directory box and validation reports."
+                 },
+                 {
+                     "path":  "reports/runtime_observation/",
+                     "purpose":  "Human-readable and JSON runtime observation reports."
+                 },
+                 {
+                     "path":  "reports/metric_contracts/",
+                     "purpose":  "Human-readable and JSON metric-contract reports."
+                 },
+                 {
+                     "path":  "reports/drift/",
+                     "purpose":  "Human-readable and JSON drift reports."
+                 },
+                 {
+                     "path":  "reports/evidence/",
+                     "purpose":  "Human-readable and JSON evidence package reports."
+                 },
+                 {
+                     "path":  "reports/readme/",
+                     "purpose":  "README and mini README audit reports."
+                 },
+                 {
+                     "path":  "reports/rcc_nexus/",
+                     "purpose":  "RCC-N navigation check reports."
+                 },
+                 {
+                     "path":  "reports/architecture/",
+                     "purpose":  "Architecture validation reports."
+                 },
+                 {
+                     "path":  "reports/directory/",
+                     "purpose":  "Directory box and durable surface validation reports."
+                 },
+                 {
+                     "path":  "reports/release/",
+                     "purpose":  "Release readiness reports and checkpoint validation outputs."
+                 },
+                 {
+                     "path":  "tests/",
+                     "purpose":  "Unit tests for runtime observation, metrics, drift, and evidence cycle."
+                 },
+                 {
+                     "path":  "examples/",
+                     "purpose":  "Future examples and walkthrough surfaces."
+                 }
+             ],
+    "rule":  "Any folder add/remove/rename/repurpose must update README Full Directory Box, affected mini README, context indexes, route map, and validation reports in the same commit.",
+    "non_claim_lock":  "Directory navigation is not code correctness."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "CMS-SA-v0.2-drift-report",
+  "drift": {
+    "goal_drift": 0.0,
+    "lock_drift": 0.0,
+    "route_drift": 0.0,
+    "validation_drift": 0.0,
+    "memory_drift": 0.0,
+    "correction_drift": 0.0,
+    "narrative_surface_drift": 0.0,
+    "public_surface_drift": 0.0
+  },
+  "D_CMS": 0.0,
+  "K_CMS": 1.0,
+  "findings": [],
+  "non_claim_lock": "low drift is not truth or code correctness"
+}

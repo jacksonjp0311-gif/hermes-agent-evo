@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "allowed_next_action": {
+      "type": "string"
+    },
+    "blocked_actions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "candidate_id": {
+      "type": "string"
+    },
+    "downgrade_visibility_required": {
+      "type": "boolean"
+    },
+    "memory_decision": {
+      "enum": [
+        "promote_memory",
+        "downgrade_memory",
+        "observe_only",
+        "block_memory"
+      ]
+    },
+    "non_claim_lock": {
+      "type": "string"
+    },
+    "observe_only_recheck_condition": {
+      "type": "string"
+    },
+    "rehydration_visible": {
+      "type": "boolean"
+    },
+    "required_evidence_next": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "memory_decision",
+    "allowed_next_action",
+    "blocked_actions",
+    "required_evidence_next",
+    "downgrade_visibility_required",
+    "observe_only_recheck_condition",
+    "rehydration_visible",
+    "non_claim_lock"
+  ],
+  "title": "CMS Candidate Memory Action v0.4.1",
+  "type": "object"
+}

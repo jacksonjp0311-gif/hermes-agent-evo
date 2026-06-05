@@ -1,0 +1,6 @@
+{
+  "schema": "CMS-SA-v0.1-release-validation",
+  "passed": true,
+  "missing": [],
+  "non_claim_lock": "validation is repository-bound and does not prove code correctness"
+}

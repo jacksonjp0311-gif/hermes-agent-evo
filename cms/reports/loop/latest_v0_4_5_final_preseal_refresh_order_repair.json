@@ -1,0 +1,16 @@
+{
+  "non_claim_lock": "v0.4.5 final preseal refresh-order repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "repair": "Refresh loop pressure before multilevel alignment and again after runtime decision; tolerate expected preseal public-sync release_tag_missing boundary.",
+  "schema": "CMS-SA-v0.4.5-final-preseal-refresh-order-repair",
+  "threshold": {
+    "headroom": 0.328,
+    "headroom_percent": 32.8,
+    "loop_drift_pressure": 0.168,
+    "state": "green_with_repair_recommendation",
+    "threshold": 0.25,
+    "threshold_usage": 0.672,
+    "threshold_usage_percent": 67.2
+  },
+  "timestamp_utc": "2026-06-04T04:17:39.529953+00:00"
+}

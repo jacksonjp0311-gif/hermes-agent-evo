@@ -1,0 +1,38 @@
+{
+  "schema": "CMS-SA-v0.2-metric-contract-set",
+  "contracts": [
+    {
+      "name": "required_surface_coverage",
+      "surface": "repository.required_surfaces",
+      "scale": "[0,1]",
+      "threshold": 1.0,
+      "decision_use": "block_if_below_threshold",
+      "non_claim_boundary": "surface coverage is not code correctness"
+    },
+    {
+      "name": "mini_readme_presence",
+      "surface": "repository.readme_surfaces",
+      "scale": "[0,1]",
+      "threshold": 1.0,
+      "decision_use": "warn_or_block_navigation_drift",
+      "non_claim_boundary": "navigation is not validation"
+    },
+    {
+      "name": "version_memory_presence",
+      "surface": "repository.version_memory",
+      "scale": "[0,1]",
+      "threshold": 1.0,
+      "decision_use": "block_if_missing_version_trace",
+      "non_claim_boundary": "version registry is not truth"
+    },
+    {
+      "name": "python_source_presence",
+      "surface": "repository.python_source",
+      "scale": "[0,1]",
+      "threshold": 0.01,
+      "decision_use": "inform_runtime_scaffold",
+      "non_claim_boundary": "source presence is not runtime correctness"
+    }
+  ],
+  "non_claim_lock": "metric contracts declare measurement surfaces only"
+}

@@ -1,0 +1,17 @@
+{
+  "metrics": [
+    "loop_drift_pressure",
+    "memory_action_drift",
+    "rehydration_gap_count",
+    "registry_status_drift",
+    "public_surface_delta",
+    "validator_expectation_drift",
+    "non_claim_lock_drift",
+    "report_surface_lag"
+  ],
+  "non_claim_lock": "Loop drift pressure metrics are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "primary_lock": "No green loop is considered stable if drift pressure exceeds the declared threshold without downgrade, warning, or repair recommendation.",
+  "schema": "CMS-SA-v0.4.2-loop-drift-pressure-contract",
+  "threshold": 0.25,
+  "version": "v0.4.2"
+}

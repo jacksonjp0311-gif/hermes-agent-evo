@@ -1,0 +1,31 @@
+{
+  "current_version": "v0.4.3",
+  "non_claim_lock": "v0.4.3 mini README propagation repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "previous_version": "v0.4.2",
+  "repair_reason": "surface alignment expected CMS-RCC-N-v0.4.3 across all declared mini README surfaces, but the initial v0.4.3 patch refreshed loop surfaces only",
+  "schema": "CMS-SA-v0.4.3-mini-readme-propagation-repair",
+  "surfaces_refreshed": [
+    "configs/alignment/README.md",
+    "configs/controls/README.md",
+    "configs/loop/README.md",
+    "configs/memory/README.md",
+    "outputs/alignment/README.md",
+    "outputs/controls/README.md",
+    "outputs/loop/README.md",
+    "outputs/memory/README.md",
+    "reports/alignment/README.md",
+    "reports/controls/README.md",
+    "reports/loop/README.md",
+    "reports/memory/README.md",
+    "scripts/alignment/README.md",
+    "scripts/controls/README.md",
+    "scripts/loop/README.md",
+    "scripts/memory/README.md",
+    "src/cms/alignment/README.md",
+    "src/cms/controls/README.md",
+    "src/cms/loop/README.md",
+    "src/cms/memory/README.md"
+  ],
+  "timestamp_utc": "2026-06-04T03:44:38.676480+00:00"
+}

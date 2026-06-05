@@ -1,0 +1,16 @@
+{
+  "checkpoint": "CMS-SA v0.4.2 - Loop Drift Pressure Metrics",
+  "non_claim_lock": "Validator expectation repair is repository-bound and does not prove code correctness.",
+  "passed": true,
+  "reason": "v0.4.2 local surfaces were correct, but alignment validators still expected v0.4.1 tokens.",
+  "repairs": {
+    "scripts/alignment/emit_multilevel_alignment_v0_3b2.py": 1,
+    "scripts/rcc/audit_readme_surface.py": 0,
+    "scripts/validation/validate_multilevel_alignment_v0_3b2.py": 2,
+    "scripts/validation/validate_readme_render_hygiene_v0_2b2.py": 0,
+    "scripts/validation/validate_surface_alignment_v0_3b2.py": 6,
+    "src/cms/alignment/multilevel.py": 1
+  },
+  "schema": "CMS-SA-v0.4.2-alignment-validator-expectation-repair",
+  "timestamp_utc": "2026-06-04T03:21:00.083806+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "core_rule": "theory tells why; architecture tells how; runtime tells now",
+  "non_claim_lock": "Candidate memory actions and rehydration scoring are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "required_fields": [
+    "origin_scan_complete",
+    "architecture_scan_complete",
+    "runtime_scan_complete",
+    "version_ready",
+    "missing_surfaces",
+    "stale_surface_risks",
+    "rehydration_score"
+  ],
+  "schema": "CMS-SA-v0.4.1-thread-rehydration-score-contract",
+  "version": "v0.4.1"
+}

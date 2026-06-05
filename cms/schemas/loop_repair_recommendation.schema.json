@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "non_claim_lock": {
+      "type": "string"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "recommendations": {
+      "type": "array"
+    },
+    "schema": {
+      "const": "CMS-SA-v0.4.3-loop-repair-recommendation-report"
+    },
+    "version": {
+      "const": "v0.4.3"
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "recommendations",
+    "passed",
+    "non_claim_lock"
+  ],
+  "title": "CMS-SA v0.4.3 Loop Repair Recommendation Report",
+  "type": "object"
+}

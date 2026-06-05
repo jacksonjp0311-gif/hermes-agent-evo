@@ -1,0 +1,10 @@
+{
+  "schema": "CMS-SA-v0.1-validation-report",
+  "release_allowed": true,
+  "release_hold_reasons": [],
+  "checks": {
+    "required_surfaces_present": true,
+    "feedback_lifecycle_present": true,
+    "non_claim_locks_present": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "alignment_passed": true,
+  "api_writes_performed": 0,
+  "apply_gate_count": 3,
+  "apply_gate_passed": true,
+  "dry_run_count": 3,
+  "dry_run_passed": true,
+  "git_commits_performed": 0,
+  "git_pushes_performed": 0,
+  "lessons_preserved": [
+    "validation_order_is_system_geometry",
+    "preseal_release_tag_missing_is_phase_boundary",
+    "pressure_refresh_before_alignment",
+    "dry_run_is_not_write_authority",
+    "apply_gate_is_not_apply_authority",
+    "rollback_required_before_apply"
+  ],
+  "mode": "preseal",
+  "non_claim_lock": "v0.4.6 seal reporting is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "release_tags_created": 0,
+  "rollback_ledger_count": 3,
+  "runtime_decision": "promote",
+  "runtime_decision_passed": true,
+  "schema": "CMS-SA-v0.4.6-seal-validation-summary",
+  "target_writes_performed": 0,
+  "threshold": {
+    "headroom": 0.328,
+    "headroom_percent": 32.8,
+    "loop_drift_pressure": 0.168,
+    "state": "green_with_repair_recommendation",
+    "threshold": 0.25,
+    "threshold_usage": 0.672,
+    "threshold_usage_percent": 67.2
+  },
+  "timestamp_utc": "2026-06-04T04:28:44.544928+00:00"
+}

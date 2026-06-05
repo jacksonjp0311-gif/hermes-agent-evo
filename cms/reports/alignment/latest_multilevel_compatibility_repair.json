@@ -1,0 +1,11 @@
+{
+  "non_claim_lock": "Multilevel compatibility repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "repairs": [
+    "restored_write_multilevel_alignment_report_export",
+    "normalized_src_cms_alignment_init_exports",
+    "alignment_runtime_order_repair_ready"
+  ],
+  "schema": "CMS-SA-v0.4.2-multilevel-compatibility-repair",
+  "timestamp_utc": "2026-06-04T03:32:55.536440+00:00"
+}

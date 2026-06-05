@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CMS Feedback Item",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "summary",
+    "route",
+    "observables",
+    "score",
+    "classification",
+    "lifecycle_state",
+    "evidence",
+    "validator_binding",
+    "downgrade_path",
+    "falsification_condition",
+    "non_claim_lock"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "source": { "type": "string" },
+    "summary": { "type": "string" },
+    "route": {
+      "type": "object",
+      "required": ["shell", "meridian", "sector"],
+      "properties": {
+        "shell": { "type": "string" },
+        "meridian": { "type": "string" },
+        "sector": { "type": "string" },
+        "files": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "observables": { "type": "object" },
+    "score": { "type": "number" },
+    "classification": { "type": "string" },
+    "lifecycle_state": { "type": "string" },
+    "evidence": { "type": "array", "items": { "type": "string" } },
+    "validator_binding": { "type": "array", "items": { "type": "string" } },
+    "downgrade_path": { "type": "string" },
+    "negative_control": { "type": "string" },
+    "surrogate_or_dry_run": { "type": "string" },
+    "falsification_condition": { "type": "string" },
+    "non_claim_lock": { "type": "string" }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "kernel_status": "agent_governance_kernel_passed_before_repair",
+  "non_claim_lock": "README surface repair is repository-bound documentation alignment and does not prove code correctness, Hermes correctness, CMS correctness, security, truth, AGI, consciousness, production readiness, or autonomous write authority.",
+  "passed": true,
+  "patched_rows": [
+    "| Current checkpoint | CMS-SA v0.5.0 |",
+    "| Previous seal | CMS-SA v0.4.8 |"
+  ],
+  "reason": "Root README was missing registry-derived table tokens required by surface alignment validation.",
+  "repair_class": "SURFACE_ALIGNMENT_REPAIR",
+  "schema": "CMS-SA-v0.5.0-readme-surface-alignment-repair",
+  "timestamp_utc": "2026-06-04T16:04:55.839215+00:00",
+  "version": "v0.5.0",
+  "write_authority_granted": false
+}

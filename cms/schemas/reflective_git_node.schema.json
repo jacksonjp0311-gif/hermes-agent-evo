@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CMS Reflective Git Node",
+  "type": "object",
+  "required": [
+    "commit_hash",
+    "short_hash",
+    "message",
+    "changed_files",
+    "surface_classes",
+    "shells",
+    "meridians",
+    "sectors",
+    "release_truth"
+  ],
+  "properties": {
+    "commit_hash": { "type": "string" },
+    "short_hash": { "type": "string" },
+    "parents": { "type": "array", "items": { "type": "string" } },
+    "tag": { "type": ["string", "null"] },
+    "message": { "type": "string" },
+    "changed_files": { "type": "array", "items": { "type": "string" } },
+    "surface_classes": { "type": "array", "items": { "type": "object" } },
+    "shells": { "type": "array", "items": { "type": "string" } },
+    "meridians": { "type": "array", "items": { "type": "string" } },
+    "sectors": { "type": "array", "items": { "type": "string" } },
+    "lesson_ids_detected": { "type": "array", "items": { "type": "string" } },
+    "validator_reports_touched": { "type": "array", "items": { "type": "string" } },
+    "evidence_reports_touched": { "type": "array", "items": { "type": "string" } },
+    "release_truth": { "type": "object" }
+  }
+}

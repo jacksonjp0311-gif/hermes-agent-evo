@@ -1,0 +1,20 @@
+{
+    "schema":  "CMS-SA-v0.2b-public-format-directory-box-lock-report",
+    "version":  "v0.2b",
+    "passed":  true,
+    "failures":  [
+
+                 ],
+    "locked_surfaces":  [
+                            "Human Director Box",
+                            "Current Public Metrics",
+                            "Agent Geometry Layer",
+                            "Process Alignment Layer",
+                            "AI Rule - Directory Box and Mini README Synchronization",
+                            "Full Directory Box",
+                            "Directory Box Validator",
+                            "README Audit public-format anchors"
+                        ],
+    "next_anchor":  "CMS-SA v0.3 — Feedback Quality and Lifecycle Engine",
+    "non_claim_lock":  "public format alignment is repository-bound"
+}

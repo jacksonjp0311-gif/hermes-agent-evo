@@ -1,0 +1,17 @@
+{
+  "apply_authority_granted": false,
+  "classification_count": 4,
+  "cms_write_integration_active": false,
+  "errors": 0,
+  "findings": [],
+  "memory_authority_granted": false,
+  "non_claim_lock": "Agent governance kernel validation is repository-bound and does not prove code correctness.",
+  "passed": true,
+  "primary_lock": "No agent proposal may become memory, skill, repair authority, dry-run authority, apply authority, or write authority unless CMS classifies the proposal, records evidence, preserves blocked actions, and emits a non-claim boundary.",
+  "proposal_count": 4,
+  "runtime_code_changes_allowed": false,
+  "schema": "CMS-SA-v0.5.0-agent-governance-kernel-validation",
+  "skill_trust_authority_granted": false,
+  "version": "v0.5.0",
+  "write_authority_granted": false
+}

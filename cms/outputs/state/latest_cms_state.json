@@ -1,0 +1,15 @@
+{
+  "schema": "CMS-SA-v0.1-observation-manifest",
+  "repository": "cybernetic-memory-system",
+  "profile": "CMS-Core",
+  "observed_at": "2026-05-30T13:15:14.196206+00:00",
+  "git_head": "63911696b76b4fe4b44f77db90d9ad1991c35262",
+  "file_count": 90,
+  "required_surfaces": {
+    "README.md": true,
+    "README_90_SECONDS.md": true,
+    "AGENTS.md": true,
+    "rcc/nexus/route_map.json": true,
+    "docs/architecture/cms_sa_v0_1_software_architecture.tex": true
+  }
+}

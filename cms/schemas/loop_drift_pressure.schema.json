@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "components": {
+      "type": "object"
+    },
+    "findings": {
+      "type": "array"
+    },
+    "loop_drift_pressure": {
+      "type": "number"
+    },
+    "non_claim_lock": {
+      "type": "string"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "pressure_hash": {
+      "type": "string"
+    },
+    "primary_lock": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "schema": {
+      "const": "CMS-SA-v0.4.2-loop-drift-pressure-report"
+    },
+    "stability_state": {
+      "type": "string"
+    },
+    "threshold": {
+      "type": "number"
+    },
+    "version": {
+      "const": "v0.4.2"
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "passed",
+    "threshold",
+    "loop_drift_pressure",
+    "components",
+    "stability_state",
+    "recommended_action",
+    "findings",
+    "primary_lock",
+    "pressure_hash",
+    "non_claim_lock"
+  ],
+  "title": "CMS-SA v0.4.2 Loop Drift Pressure Report",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "non_claim_lock": "Loop pressure repair recommendations are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "primary_lock": "No pressure finding should remain as raw signal; every finding must map to a typed repair recommendation or an explicit no-op stability record.",
+  "required_fields": [
+    "id",
+    "finding",
+    "action",
+    "phase",
+    "severity",
+    "validators",
+    "evidence",
+    "downgrade_path",
+    "status"
+  ],
+  "schema": "CMS-SA-v0.4.3-loop-repair-recommendation-contract",
+  "version": "v0.4.3"
+}

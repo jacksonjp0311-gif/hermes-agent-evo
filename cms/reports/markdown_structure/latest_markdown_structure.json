@@ -1,0 +1,9 @@
+{
+  "schema": "CMS-SA-v0.2b3a-markdown-structure",
+  "passed": true,
+  "errors": 0,
+  "findings": [],
+  "line_count": 1409,
+  "table_blocks": 15,
+  "non_claim_lock": "Markdown structure validation improves public rendering but does not prove runtime correctness."
+}

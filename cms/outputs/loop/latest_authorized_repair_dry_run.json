@@ -1,0 +1,57 @@
+{
+  "api_writes_performed": 0,
+  "commits_performed": 0,
+  "created_at": "2026-06-04T16:08:41.264784+00:00",
+  "dry_run_count": 1,
+  "dry_run_hash": "8f9ab75571e02b809fa1b5f49c3fb3d7a8e5bbcb346bf5c8ca2aee4ce4af5695",
+  "dry_runs": [
+    {
+      "blocked_actions_preserved": [
+        "runtime_code_patch",
+        "memory_promotion",
+        "release_tag_creation",
+        "api_write",
+        "autonomous_patch",
+        "target_surface_write",
+        "git_commit",
+        "git_push"
+      ],
+      "closure_state_after_dry_run": "planned_not_executed",
+      "closure_state_before": "planned_not_executed",
+      "dry_run_hash": "0feac7fa528bb2eeed649d476d7305ed74bc31639bd81827359445dbdaf5fa33",
+      "dry_run_id": "CMS-DRYRUN-c78d107b05",
+      "dry_run_state": "simulated_no_write",
+      "execution_mode": "dry_run_only",
+      "human_authorization_required_for_write": true,
+      "non_claim_lock": "Authorized repair dry-runs are repository-bound simulations and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+      "proposed_diff_manifest": [],
+      "repair_class": "REGISTRY_REPAIR",
+      "required_validation_evidence": [
+        "validate_surface_alignment",
+        "emit_multilevel_alignment",
+        "validate_multilevel_alignment",
+        "validate_public_sync"
+      ],
+      "rollback_path": "discard_dry_run_report_and_recompute_from_latest_validated_closure_plan",
+      "source_plan_id": "CMS-PLAN-c3c9530c24",
+      "source_recommendation_id": "CMS-RR-3d8ebfb363",
+      "target_surface_writes": [],
+      "touched_surface_boundary": [
+        "outputs/version_registry/cms_version_registry.json",
+        "outputs/roadmap/next_anchor.md",
+        "reports/public_sync"
+      ],
+      "write_authority": false
+    }
+  ],
+  "non_claim_lock": "Authorized repair dry-runs are repository-bound simulations and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "primary_lock": "No repair dry-run may write target surfaces unless explicit human authorization, dry-run diff, rollback path, touched-surface boundary, blocked-action preservation, and required validation evidence are declared.",
+  "schema": "CMS-SA-v0.4.5-authorized-repair-dry-run-executor",
+  "source_closure_hash": "bc6990899352ed2ac70687b05a7327460825152819c69295cee45b97958eb0f6",
+  "source_plan_count": 1,
+  "source_pressure_state": "stable",
+  "tags_created": 0,
+  "target_writes_performed": 0,
+  "version": "v0.4.5"
+}

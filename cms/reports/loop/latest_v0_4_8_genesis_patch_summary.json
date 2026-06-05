@@ -1,0 +1,30 @@
+{
+  "added": [
+    "src/cms/loop/repair_dry_apply_sandbox.py",
+    "scripts/loop/emit_authorized_dry_apply_sandbox_v0_4_8.py",
+    "scripts/validation/validate_authorized_dry_apply_sandbox_v0_4_8.py",
+    "tests/test_authorized_dry_apply_sandbox_v0_4_8.py",
+    "schemas/authorized_dry_apply_sandbox.schema.json"
+  ],
+  "checkpoint": "CMS-SA v0.4.8 - Authorized Apply Executor Dry-Apply Sandbox",
+  "current_version": "v0.4.8",
+  "learning_repairs": [
+    "added_v0_4_7_lessons_to_root_readme",
+    "advanced_stale_api_inactive_tokens_to_v0_4_8",
+    "added_authorized_dry_apply_sandbox_validation_surfaces",
+    "preserved_live_write_zero_authority_boundary"
+  ],
+  "non_claim_lock": "Authorized dry-apply sandboxes are repository-bound execution simulations and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "previous_version": "v0.4.7",
+  "primary_lock": "No dry-apply sandbox may write live target surfaces. It may only simulate packet execution against virtual or copied targets, compare before/after hashes inside the sandbox, simulate rollback, preserve blocked actions, and emit validation evidence.",
+  "schema": "CMS-SA-v0.4.8-genesis-patch-summary",
+  "threshold": {
+    "headroom": 0.44,
+    "loop_drift_pressure": 0.14,
+    "state": "stable_green_loop",
+    "threshold": 0.25,
+    "threshold_usage": 0.56
+  },
+  "timestamp_utc": "2026-06-04T04:43:54.073713+00:00"
+}

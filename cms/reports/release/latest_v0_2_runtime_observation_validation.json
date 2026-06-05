@@ -1,0 +1,7 @@
+{
+  "schema": "CMS-SA-v0.2-runtime-observation-validation",
+  "passed": true,
+  "missing": [],
+  "compile_failures": [],
+  "non_claim_lock": "runtime validation is repository-bound and does not prove correctness"
+}

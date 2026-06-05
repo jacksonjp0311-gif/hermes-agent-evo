@@ -1,0 +1,99 @@
+{
+  "action_hash": "9966f1fb234ff5b6aebeadcf9331d27bcc40456ddd536870c20ba330bb1ead56",
+  "actions": [
+    {
+      "allowed_next_action": "may_influence_next_cycle_after_rehydration_scan",
+      "blocked_actions": [
+        "external_truth_claim",
+        "autonomous_patch_write",
+        "api_write_without_authorization"
+      ],
+      "candidate_id": "CMS-MEM-001-runtime-decision-kernel",
+      "downgrade_path": "downgrade_to_decision_surface_observation_if_replay_hash_missing",
+      "downgrade_visibility_required": false,
+      "evidence_utility": 0.86,
+      "falsification_condition": "Fails if decision lacks validator aggregation, decision hash, or replay surface.",
+      "memory_decision": "promote_memory",
+      "negative_control_passed": true,
+      "non_claim_lock": "Memory promotion is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observe_only_recheck_condition": "not_applicable",
+      "rehydration_visible": true,
+      "required_evidence_next": "retain_replay_hash_control_hash_and_rehydration_visibility",
+      "source": "v0.3b3 runtime decision + replay ledger"
+    },
+    {
+      "allowed_next_action": "may_influence_next_cycle_after_rehydration_scan",
+      "blocked_actions": [
+        "external_truth_claim",
+        "autonomous_patch_write",
+        "api_write_without_authorization"
+      ],
+      "candidate_id": "CMS-MEM-002-negative-control-refusal",
+      "downgrade_path": "downgrade_to_control_observation_if_false_promote_rejection_missing",
+      "downgrade_visibility_required": false,
+      "evidence_utility": 0.91,
+      "falsification_condition": "Fails if false promote, downgrade, or observe-only controls are absent or fail.",
+      "memory_decision": "promote_memory",
+      "negative_control_passed": true,
+      "non_claim_lock": "Memory promotion is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observe_only_recheck_condition": "not_applicable",
+      "rehydration_visible": true,
+      "required_evidence_next": "retain_replay_hash_control_hash_and_rehydration_visibility",
+      "source": "v0.3b4 negative control and downgrade harness"
+    },
+    {
+      "allowed_next_action": "remain_visible_as_downgraded_boundary",
+      "blocked_actions": [
+        "external_truth_claim",
+        "autonomous_patch_write",
+        "api_write_without_authorization",
+        "direct_next_cycle_influence",
+        "silent_removal_from_memory_surface"
+      ],
+      "candidate_id": "CMS-MEM-003-paste-safe-execution",
+      "downgrade_path": "downgrade_to_operator_process_warning_if_file_run_boundary_not_preserved",
+      "downgrade_visibility_required": true,
+      "evidence_utility": 0.72,
+      "falsification_condition": "Fails if future patch flow combines preflight failure and write phase in one interactive paste.",
+      "memory_decision": "downgrade_memory",
+      "negative_control_passed": true,
+      "non_claim_lock": "Memory promotion is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observe_only_recheck_condition": "not_applicable",
+      "rehydration_visible": true,
+      "required_evidence_next": "new_repository_bound_evidence_required_before_promotion",
+      "source": "CMS-L-026 and CMS-L-027 failure ledger entries"
+    },
+    {
+      "allowed_next_action": "hold_for_future_evidence_recheck",
+      "blocked_actions": [
+        "external_truth_claim",
+        "autonomous_patch_write",
+        "api_write_without_authorization",
+        "direct_next_cycle_influence",
+        "promotion_without_new_evidence"
+      ],
+      "candidate_id": "CMS-MEM-004-incomplete-external-correlation",
+      "downgrade_path": "hold_as_observe_only_until_repository_bound_evidence_exists",
+      "downgrade_visibility_required": true,
+      "evidence_utility": 0.43,
+      "falsification_condition": "Fails if an external conceptual correlation is promoted without repo-bound artifacts and validators.",
+      "memory_decision": "observe_only",
+      "negative_control_passed": true,
+      "non_claim_lock": "Memory promotion is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "observe_only_recheck_condition": "Fails if an external conceptual correlation is promoted without repo-bound artifacts and validators.",
+      "rehydration_visible": true,
+      "required_evidence_next": "new_repository_bound_evidence_required_before_promotion",
+      "source": "external theory architecture correlation candidate"
+    }
+  ],
+  "candidate_action_count": 4,
+  "input_hashes": {
+    "loop_hash": "cd1b512902752ccd51784e731af93cccda449eae885ab6d00353c3a026a44ce3",
+    "memory_promotion_hash": "05fb031fcd78ce2e8b5b54bb71ca3602fd1bd472f160c4bd4278fc0254cf6605"
+  },
+  "non_claim_lock": "Candidate memory actions are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "primary_lock": "No promoted memory may influence the next cycle without a typed candidate-level action, downgrade boundary, evidence requirement, and rehydration-visible status.",
+  "schema": "CMS-SA-v0.4.1-candidate-memory-action-report",
+  "version": "v0.4.1"
+}

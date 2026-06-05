@@ -1,0 +1,15 @@
+{
+  "blocked_count": 0,
+  "candidate_count": 4,
+  "downgraded_count": 1,
+  "errors": 0,
+  "findings": [],
+  "non_claim_lock": "Memory promotion validation is repository-bound and does not prove code correctness.",
+  "observe_only_count": 1,
+  "passed": true,
+  "promoted_count": 2,
+  "promotion_hash": "05fb031fcd78ce2e8b5b54bb71ca3602fd1bd472f160c4bd4278fc0254cf6605",
+  "schema": "CMS-SA-v0.3b5-memory-promotion-validation",
+  "validation_mode": "summary_counts",
+  "version": "v0.3b5"
+}

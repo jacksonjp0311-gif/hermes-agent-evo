@@ -1,0 +1,14 @@
+{
+    "schema":  "CMS-SA-v0.1.2a-mini-readme-audit-repair-report",
+    "version":  "v0.1.2a",
+    "repaired_surfaces":  [
+                              "docs/theory/README.md",
+                              "src/cms/artifacts/README.md",
+                              "src/cms/utils/README.md"
+                          ],
+    "validation_failures":  [
+
+                            ],
+    "passed":  true,
+    "non_claim_lock":  "local validation is repository-bound"
+}

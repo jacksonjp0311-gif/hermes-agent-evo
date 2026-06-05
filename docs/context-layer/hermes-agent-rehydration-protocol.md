@@ -325,6 +325,31 @@ Core rule:
 CMS may be mirrored only as evidence-bounded read-only context, never as immediate authority.
 ```
 
+### 15. CMS Read-Only Mirror Scan
+
+Read:
+
+- `cms/MIRROR_READONLY_BOUNDARY.md`
+- `cms/.hrcn-read-only-mirror.json`
+- `docs/context-layer/hrcn-v1.0.2-cms-mirror-preflight-manifest.json`
+- `docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json`
+
+Recover:
+
+- CMS mirror source provenance
+- pre-copy manifest
+- secret scan result
+- read-only mirror boundary
+- rollback/removal command
+- blocked authority list
+- next bounded context packet path
+
+Core rule:
+
+```text
+A CMS mirror is readable evidence, not executable authority.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -343,4 +368,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.0.1 is a docs/context CMS read-only mirror import authorization path layer. It defines the gates required before a future CMS mirror/import can occur. It does not create a loader, adapter, runtime bridge, dry-run executor, apply executor, benchmark executor, CMS folder, CMS copy, memory writer, repair applier, API writer, live integration, or apply authority. It does not modify Hermes runtime behavior, prompts, tools, skills, plugins, providers, gateways, TUI, web runtime, package dependencies, memory authority, API write authority, CMS write authority, security posture, production readiness, autonomy, consciousness, sentience, AGI/ASI status, or external validation.
+HRCN v1.0.3 copies CMS as a read-only mirror evidence snapshot under cms/. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The cms/ mirror is context and evidence only until later explicitly authorized bridge phases.

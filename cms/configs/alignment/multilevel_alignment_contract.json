@@ -1,0 +1,30 @@
+{
+  "schema": "CMS-SA-v0.3b3-multilevel-alignment-contract",
+  "version": "v0.3b3",
+  "name": "Multi-Level Geometric Alignment Feedback Lock",
+  "core_rule": "No feedback item is valid unless it can be located in repository geometry and tied to evidence, validators, and current public surfaces.",
+  "layers": [
+    "root_readme",
+    "mini_readmes",
+    "route_maps",
+    "validators",
+    "reports",
+    "reflective_git_geometry",
+    "feedback_lifecycle",
+    "version_registry",
+    "public_sync",
+    "release_seal"
+  ],
+  "required_bindings": [
+    "feedback_to_route",
+    "route_to_files",
+    "files_to_geometry",
+    "feedback_to_validators",
+    "feedback_to_evidence",
+    "current_version_to_readme",
+    "current_version_to_registry",
+    "current_version_to_public_sync"
+  ],
+  "api_boundary": "API remains inactive. This layer strengthens internal runtime alignment only.",
+  "non_claim_lock": "Multi-level alignment improves repository-bound cybernetic runtime coherence. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness."
+}

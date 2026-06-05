@@ -1,0 +1,11 @@
+{
+  "schema": "CMS-SA-v0.5.1-readme-mini-repo-audit",
+  "passed": true,
+  "errors": 0,
+  "warnings": 0,
+  "accepted_checkpoint_pattern": "CMS-SA v0.5.1",
+  "missing_root_tokens": [],
+  "mini_readmes_missing_update_rule": [],
+  "release_gate_truth_enforced": true,
+  "non_claim_lock": "README audits improve context alignment but do not prove runtime correctness."
+}

@@ -1,0 +1,17 @@
+{
+  "added": [
+    "src/cms/loop/repair_closure.py",
+    "scripts/loop/emit_repair_closure_plan_v0_4_4.py",
+    "scripts/validation/validate_repair_closure_plan_v0_4_4.py",
+    "tests/test_repair_closure_plan_v0_4_4.py",
+    "schemas/repair_closure_plan.schema.json"
+  ],
+  "checkpoint": "CMS-SA v0.4.4 - Recommendation Execution Plan and Repair Closure Ledger",
+  "current_version": "v0.4.4",
+  "non_claim_lock": "Repair execution planning and closure ledgers are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "previous_version": "v0.4.3",
+  "primary_lock": "No repair recommendation may be marked closed unless it has a plan id, source recommendation id, declared execution mode, touched-surface boundary, required validation evidence, closure state, blocked-action preservation, and non-claim boundary.",
+  "schema": "CMS-SA-v0.4.4-genesis-patch-summary",
+  "timestamp_utc": "2026-06-04T04:03:41.628347+00:00"
+}

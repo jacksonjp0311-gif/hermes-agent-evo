@@ -1,0 +1,45 @@
+{
+  "schema": "CMS-SA-v0.3a-reflective-git-geometry-contract",
+  "version": "v0.3a",
+  "name": "Reflective Git Geometry Contract",
+  "core_law": "A commit is not only a change; it is a routed event in repository geometry.",
+  "secondary_law": "A repository learns when repeated routed events become constraints, validators, evidence surfaces, and future routing rules.",
+  "node_definition": {
+    "commit_hash": "Git commit hash.",
+    "short_hash": "Short Git hash.",
+    "parents": "Parent commit hashes.",
+    "tag": "Tag pointing to this commit, if any.",
+    "message": "Commit intent string.",
+    "changed_files": "Files changed by the commit.",
+    "surface_classes": "Path-derived route classifications.",
+    "shells": "center, inner, middle, outer.",
+    "meridians": "source, validation, evidence, drift, agent, safety, runtime, memory, release, documentation.",
+    "sectors": "core, schemas, runtime, validation, evidence, rcc, agent, examples, release, memory, documentation.",
+    "lesson_ids_detected": "CMS-L-* lesson IDs detected in commit message or changed files.",
+    "validator_reports_touched": "Validation report surfaces changed by commit.",
+    "evidence_reports_touched": "Evidence/output surfaces changed by commit.",
+    "release_truth": "Whether current validator state supports repository-bound release truth."
+  },
+  "surface_rules": [
+    { "pattern": "README.md", "shell": "outer", "meridian": "documentation", "sector": "public" },
+    { "pattern": "scripts/validation/", "shell": "middle", "meridian": "validation", "sector": "validator" },
+    { "pattern": "scripts/rcc/", "shell": "middle", "meridian": "agent", "sector": "rcc" },
+    { "pattern": "outputs/evidence/", "shell": "outer", "meridian": "evidence", "sector": "reports" },
+    { "pattern": "reports/", "shell": "outer", "meridian": "evidence", "sector": "reports" },
+    { "pattern": "outputs/version_registry/", "shell": "center", "meridian": "memory", "sector": "lineage" },
+    { "pattern": "outputs/lineage/", "shell": "center", "meridian": "memory", "sector": "lineage" },
+    { "pattern": "outputs/injections/", "shell": "center", "meridian": "memory", "sector": "lineage" },
+    { "pattern": "docs/release_seals/", "shell": "outer", "meridian": "release", "sector": "seal" },
+    { "pattern": "src/cms/", "shell": "inner", "meridian": "runtime", "sector": "core" },
+    { "pattern": "configs/", "shell": "center", "meridian": "source", "sector": "contract" },
+    { "pattern": "schemas/", "shell": "center", "meridian": "source", "sector": "schemas" },
+    { "pattern": "tests/", "shell": "middle", "meridian": "validation", "sector": "tests" }
+  ],
+  "rules": [
+    "No geometry-free commit interpretation.",
+    "Every geometry node must include commit, route, changed files, and release-truth context.",
+    "Geometry classification is repository orientation, not proof of correctness.",
+    "Feedback lifecycle v0.3b must attach feedback objects to Git geometry coordinates."
+  ],
+  "non_claim_lock": "Reflective Git geometry improves repository orientation, routing, and evidence traceability. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness."
+}

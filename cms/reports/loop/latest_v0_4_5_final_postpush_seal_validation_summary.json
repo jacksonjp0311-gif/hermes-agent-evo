@@ -1,0 +1,31 @@
+{
+  "alignment_passed": true,
+  "api_writes_performed": 0,
+  "commits_performed": 0,
+  "dry_run_count": 1,
+  "dry_run_passed": true,
+  "lessons_preserved": [
+    "validation_order_is_system_geometry",
+    "preseal_release_tag_missing_is_phase_boundary",
+    "pressure_refresh_before_alignment",
+    "dry_run_is_not_write_authority",
+    "bounded_self_healing_is_not_autonomous_mutation"
+  ],
+  "mode": "final_postpush",
+  "non_claim_lock": "v0.4.5 seal reporting is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "runtime_decision": "promote",
+  "runtime_decision_passed": true,
+  "schema": "CMS-SA-v0.4.5-seal-validation-summary",
+  "target_writes_performed": 0,
+  "threshold": {
+    "headroom": 0.44,
+    "headroom_percent": 44.0,
+    "loop_drift_pressure": 0.14,
+    "state": "stable_green_loop",
+    "threshold": 0.25,
+    "threshold_usage": 0.56,
+    "threshold_usage_percent": 56.0
+  },
+  "timestamp_utc": "2026-06-04T04:21:46.794769+00:00"
+}

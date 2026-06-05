@@ -1,0 +1,6 @@
+{
+  "schema": "CMS-SA-v0.1.2-architecture-contract-validation",
+  "passed": true,
+  "missing": [],
+  "non_claim_lock": "Architecture validation is not code correctness."
+}

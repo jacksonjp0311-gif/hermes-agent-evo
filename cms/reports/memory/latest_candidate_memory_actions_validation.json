@@ -1,0 +1,9 @@
+{
+  "candidate_action_count": 4,
+  "errors": 0,
+  "findings": [],
+  "non_claim_lock": "Candidate memory action validation is repository-bound and does not prove code correctness.",
+  "passed": true,
+  "schema": "CMS-SA-v0.4.1-candidate-memory-action-validation",
+  "version": "v0.4.1"
+}

@@ -1,0 +1,304 @@
+{
+  "current_checkpoint": "CMS-SA v0.5.1 - Public Governance Surface and Roadmap Backfill",
+  "current_version": "v0.5.1",
+  "latest_version": "v0.5.1",
+  "next_anchor": "HRCN v0.1 - Hermes README/RCC Documentation Anchor",
+  "non_claim_locks": {
+    "markdown_structure_is_not_code_correctness": true,
+    "public_sync_is_not_external_validation": true,
+    "release_seal_is_not_external_validation": true,
+    "version_registry_is_not_truth": true
+  },
+  "previous_seal": "CMS-SA v0.5.0 - Agent Governance Kernel Bridge",
+  "previous_version": "v0.5.0",
+  "purpose": "Record every CMS version as document, injection, state, ledger, release seal, next anchor, public status, and public sync state.",
+  "registry_backfill": {
+    "backfilled_through": "v0.5.1",
+    "non_claim_lock": "Registry backfill is repository memory hygiene and does not prove correctness.",
+    "reason": "Historical version list lagged behind current checkpoint and sealed evidence.",
+    "version": "v0.5.1"
+  },
+  "repository": "cybernetic-memory-system",
+  "schema": "CMS-SA-version-registry-v0.2b3a",
+  "updated_at": "2026-06-04T17:11:22.801271+00:00",
+  "versions": [
+    {
+      "class": "software_architecture_genesis",
+      "version": "v0.1"
+    },
+    {
+      "class": "lineage_injection_recorder_patch",
+      "version": "v0.1.1"
+    },
+    {
+      "class": "rcc_readme_mini_readme_enhancement",
+      "version": "v0.1.2"
+    },
+    {
+      "class": "mini_readme_audit_repair",
+      "version": "v0.1.2a"
+    },
+    {
+      "class": "runtime_observation_metric_contract_engine",
+      "version": "v0.2"
+    },
+    {
+      "class": "readme_audit_anchor_synchronization",
+      "version": "v0.2a"
+    },
+    {
+      "class": "public_format_directory_box_lock",
+      "version": "v0.2b"
+    },
+    {
+      "class": "public_anchor_directory_table_repair",
+      "version": "v0.2b1"
+    },
+    {
+      "class": "readme_render_hygiene_badge_status_guard",
+      "version": "v0.2b2"
+    },
+    {
+      "class": "readme_structure_public_sync_tau_lessons",
+      "version": "v0.2b3"
+    },
+    {
+      "class": "readme_structure_validator_repair_public_sync_phase_split",
+      "version": "v0.2b3a"
+    },
+    {
+      "lesson": "Relative path writes and line-by-line execution caused incomplete repair.",
+      "name": "Failed Stable Public Sync Attempt",
+      "next": "v0.2b3c",
+      "status": "failed-useful-tagged-layer",
+      "version": "v0.2b3b"
+    },
+    {
+      "name": "Root-Anchored Stable Public Sync Repair",
+      "next": "v0.3",
+      "non_claim_lock": "Repository-state sync is not runtime correctness.",
+      "previous": "v0.2b3b",
+      "status": "repair-layer",
+      "version": "v0.2b3c"
+    },
+    {
+      "name": "Validator Expectation Alignment",
+      "next": "v0.3",
+      "non_claim_lock": "Validator alignment is not runtime correctness.",
+      "previous": "v0.2b3c",
+      "status": "repair-layer",
+      "version": "v0.2b3d"
+    },
+    {
+      "name": "Release Gate Truth Enforcement",
+      "next": "v0.3",
+      "non_claim_lock": "Release-gate truth is not runtime correctness.",
+      "previous": "v0.2b3d",
+      "status": "repair-layer",
+      "version": "v0.2b3e"
+    },
+    {
+      "name": "Reflective Git Geometry Contract",
+      "next": "v0.3b",
+      "non_claim_lock": "Reflective Git geometry is not code correctness.",
+      "previous": "v0.2b3e",
+      "status": "geometry-contract-layer",
+      "version": "v0.3a"
+    },
+    {
+      "name": "Stable Reflective Geometry Evidence Boundary",
+      "next": "v0.3b",
+      "non_claim_lock": "Stable reflective geometry and API-readiness alignment are not code correctness.",
+      "previous": "v0.3a",
+      "status": "geometry-readme-api-alignment-repair",
+      "version": "v0.3a1"
+    },
+    {
+      "name": "Pure Geometry Validation Boundary",
+      "next": "v0.3b",
+      "non_claim_lock": "Pure validation boundary is not code correctness.",
+      "previous": "v0.3a1",
+      "status": "pure-validation-boundary",
+      "version": "v0.3a2"
+    },
+    {
+      "name": "Feedback Quality and Lifecycle Engine",
+      "next": "v0.3c",
+      "non_claim_lock": "Feedback lifecycle governance is not code correctness.",
+      "previous": "v0.3a2",
+      "status": "feedback-lifecycle-layer",
+      "version": "v0.3b"
+    },
+    {
+      "name": "README and Mini README Reflective Feedback Alignment Lock",
+      "next": "v0.3b2",
+      "non_claim_lock": "Surface alignment is not code correctness.",
+      "previous": "v0.3b",
+      "status": "surface-alignment-lock",
+      "version": "v0.3b1"
+    },
+    {
+      "name": "Surface Alignment Repair and File-Run Guard",
+      "next": "v0.3b2",
+      "non_claim_lock": "Surface alignment repair is not code correctness.",
+      "previous": "v0.3b1",
+      "status": "alignment-repair-layer",
+      "version": "v0.3b1a"
+    },
+    {
+      "name": "Multi-Level Geometric Alignment Feedback Lock",
+      "next": "v0.3b3",
+      "non_claim_lock": "Multi-level alignment is not code correctness.",
+      "previous": "v0.3b1a",
+      "status": "core-runtime-alignment-layer",
+      "version": "v0.3b2"
+    },
+    {
+      "name": "README Documentation Coherence Repair",
+      "next": "v0.3b3",
+      "non_claim_lock": "Documentation coherence is not code correctness.",
+      "previous": "v0.3b2a",
+      "status": "documentation-coherence-repair",
+      "version": "v0.3b2a1"
+    },
+    {
+      "name": "Surface Validator Compatibility Seal",
+      "next": "v0.3b3",
+      "non_claim_lock": "Documentation validator compatibility is not code correctness.",
+      "previous": "v0.3b2a1",
+      "status": "validator-compatibility-repair",
+      "version": "v0.3b2a2"
+    },
+    {
+      "name": "Version Token Normalization Seal",
+      "next": "v0.3b3",
+      "non_claim_lock": "Version token normalization is not code correctness.",
+      "previous": "v0.3b2a2",
+      "status": "version-token-repair",
+      "version": "v0.3b2a3"
+    },
+    {
+      "name": "Runtime Decision Kernel and Replay Ledger",
+      "next": "v0.3b4",
+      "non_claim_lock": "Runtime decisions are repository-bound and do not prove correctness.",
+      "previous": "v0.3b2a3",
+      "status": "runtime-decision-kernel",
+      "version": "v0.3b3"
+    },
+    {
+      "name": "Negative Control and Downgrade Harness",
+      "next": "v0.3b5",
+      "non_claim_lock": "Negative controls and downgrade preservation are repository-bound and do not prove correctness.",
+      "previous": "v0.3b3",
+      "status": "negative-control-downgrade-layer",
+      "version": "v0.3b4"
+    },
+    {
+      "name": "Memory Promotion Kernel",
+      "next": "v0.4.0",
+      "non_claim_lock": "Memory promotion is repository-bound and does not prove correctness.",
+      "previous": "v0.3b4",
+      "status": "memory-promotion-layer",
+      "version": "v0.3b5"
+    },
+    {
+      "checkpoint": "CMS-SA v0.4.0 - Cybernetic Memory Loop Genesis",
+      "lifecycle_status": {
+        "public_sync_passed": true,
+        "sealed": true,
+        "validated": true
+      },
+      "previous": "CMS-SA v0.3b5 - Memory Promotion Kernel",
+      "primary_report": "reports/loop/latest_cybernetic_memory_loop.md",
+      "status": "validated_sealed_public_sync_passed",
+      "version": "v0.4.0"
+    },
+    {
+      "checkpoint": "CMS-SA v0.4.1 - Per-Candidate Memory Action Schema and Thread Rehydration Tightening",
+      "lifecycle_status": {
+        "public_sync_passed": true,
+        "sealed": true,
+        "validated": true
+      },
+      "previous": "CMS-SA v0.4.0 - Cybernetic Memory Loop Genesis",
+      "primary_report": "reports/memory/latest_candidate_memory_actions.md",
+      "secondary_report": "reports/rehydration/latest_thread_rehydration_score.md",
+      "status": "validated_sealed_public_sync_passed",
+      "version": "v0.4.1"
+    },
+    {
+      "checkpoint": "CMS-SA v0.4.2 - Loop Drift Pressure Metrics",
+      "lifecycle_status": {
+        "public_sync_passed": true,
+        "sealed": true,
+        "validated": true
+      },
+      "previous": "CMS-SA v0.4.1 - Per-Candidate Memory Action Schema and Thread Rehydration Tightening",
+      "primary_report": "reports/loop/latest_loop_drift_pressure.md",
+      "status": "validated_sealed_public_sync_passed",
+      "version": "v0.4.2"
+    },
+    {
+      "checkpoint": "CMS-SA v0.4.3 - Loop Pressure Repair Recommendation Layer",
+      "non_claim_lock": "Loop pressure repair recommendations are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "previous": "CMS-SA v0.4.2 - Loop Drift Pressure Metrics",
+      "primary_report": "reports/loop/latest_loop_repair_recommendations.md",
+      "status": "preseal_development",
+      "version": "v0.4.3"
+    },
+    {
+      "name": "Recommendation Execution Plan and Repair Closure Ledger",
+      "next": "v0.4.5",
+      "non_claim_lock": "Repair closure planning is not autonomous repair authority.",
+      "previous": "v0.4.3",
+      "status": "preseal_development",
+      "version": "v0.4.4"
+    },
+    {
+      "name": "Authorized Repair Dry-Run Executor",
+      "next": "v0.4.6",
+      "non_claim_lock": "Dry-run execution is not write authorization.",
+      "previous": "v0.4.4",
+      "status": "preseal_development",
+      "version": "v0.4.5"
+    },
+    {
+      "name": "Authorized Repair Apply Gate and Rollback Ledger",
+      "next": "v0.4.7",
+      "non_claim_lock": "Apply gate authorization is not repair execution.",
+      "previous": "v0.4.5",
+      "status": "preseal_development",
+      "version": "v0.4.6"
+    },
+    {
+      "name": "Authorized Apply Packet Schema and Diff Manifest",
+      "next": "v0.4.8",
+      "non_claim_lock": "Apply packet schema is not repair execution.",
+      "previous": "v0.4.6",
+      "status": "preseal_development",
+      "version": "v0.4.7"
+    },
+    {
+      "name": "Authorized Apply Executor Dry-Apply Sandbox",
+      "next": "v0.4.9",
+      "non_claim_lock": "Dry-apply sandbox execution is not live repair execution.",
+      "previous": "v0.4.7",
+      "status": "preseal_development",
+      "version": "v0.4.8"
+    },
+    {
+      "name": "Agent Governance Kernel Bridge",
+      "next": "HRCN v0.1",
+      "non_claim_lock": "Agent governance context is not Hermes runtime integration.",
+      "previous": "v0.4.8",
+      "status": "preseal_development",
+      "version": "v0.5.0"
+    },
+    {
+      "name": "Public Governance Surface and Roadmap Backfill",
+      "non_claim_lock": "Version registry lineage improves repository continuity but is not truth, correctness, or external validation.",
+      "status": "public-governance-surface-backfill",
+      "version": "v0.5.1"
+    }
+  ]
+}

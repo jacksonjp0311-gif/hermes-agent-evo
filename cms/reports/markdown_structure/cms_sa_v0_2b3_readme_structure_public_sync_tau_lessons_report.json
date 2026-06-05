@@ -1,0 +1,20 @@
+{
+    "schema":  "CMS-SA-v0.2b3-readme-structure-public-sync-tau-lessons-report",
+    "version":  "v0.2b3",
+    "passed":  true,
+    "failures":  [
+
+                 ],
+    "embedded_lessons":  [
+                             "Repository Layers",
+                             "Historical Report Archive",
+                             "Nexus Echo Location",
+                             "Primary Nexus Files",
+                             "Gap Classes",
+                             "Law of Sufficient Form",
+                             "Markdown Structure Guard",
+                             "Public Sync Guard"
+                         ],
+    "next_anchor":  "CMS-SA v0.3 — Feedback Quality and Lifecycle Engine",
+    "non_claim_lock":  "README structure, public sync, and Tau lessons are repository-bound"
+}

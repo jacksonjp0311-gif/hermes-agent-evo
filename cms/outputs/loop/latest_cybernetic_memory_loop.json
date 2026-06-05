@@ -1,0 +1,49 @@
+{
+  "control_state": {
+    "downgrade_preserved": true,
+    "false_promote_rejected": true,
+    "observe_only_preserved": true
+  },
+  "core_law": "Memory is not storage; memory is controlled influence on the next cycle.",
+  "decision_state": "promote",
+  "input_hashes": {
+    "memory_promotion_hash": "05fb031fcd78ce2e8b5b54bb71ca3602fd1bd472f160c4bd4278fc0254cf6605",
+    "negative_control_hash": "839cfdcac84c7d6d703adc8751c00af308c47d1d49b071021448c14a57c8d1a9",
+    "runtime_decision_hash": "01883481ea39e3bd13f05ac2a5bf0af09ec35d3cef370d8be1f486fb0719093a"
+  },
+  "loop_chain": [
+    "observe",
+    "validate",
+    "decide",
+    "promote_or_downgrade",
+    "write_memory_state",
+    "emit_next_cycle_influence",
+    "validate_loop_report"
+  ],
+  "loop_closed": true,
+  "loop_hash": "cd1b512902752ccd51784e731af93cccda449eae885ab6d00353c3a026a44ce3",
+  "memory_counts": {
+    "candidate_count": 4,
+    "downgraded_count": 1,
+    "observe_only_count": 1,
+    "promoted_count": 2
+  },
+  "next_cycle_influence": {
+    "allowed": true,
+    "downgraded_candidate_count": 1,
+    "hard_boundary": "no_api_write_no_autonomous_patch_no_external_truth_claim",
+    "mode": "bounded_repository_influence",
+    "observe_only_candidate_count": 1,
+    "promoted_candidate_count": 2,
+    "rules": [
+      "promoted_memory_candidates_may_influence_next_cycle",
+      "downgraded_memory_candidates_must_remain_visible",
+      "observe_only_candidates_require_more_evidence",
+      "false_promote_controls_remain_active"
+    ]
+  },
+  "non_claim_lock": "The cybernetic memory loop is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "schema": "CMS-SA-v0.4.0-cybernetic-memory-loop",
+  "version": "v0.4.0"
+}

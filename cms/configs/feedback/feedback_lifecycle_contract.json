@@ -1,0 +1,44 @@
+{
+  "schema": "CMS-SA-v0.3b-feedback-lifecycle-contract",
+  "version": "v0.3b",
+  "name": "Feedback Quality and Lifecycle Engine",
+  "core_rule": "No feedback item may promote to memory, release, or API-write status without route classification, evidence, validator binding, lifecycle state, downgrade path, falsification condition, and non-claim lock.",
+  "pce_mapping": {
+    "candidate": "feedback_item",
+    "observable_scoring": "feedback_observables",
+    "classification": "CMS-FB-A through CMS-FB-E",
+    "downgrade_rejection": "lifecycle downgrade or reject state",
+    "negative_control": "null or rejected comparison case",
+    "surrogate_test": "dry-run or alternative route test",
+    "validated_claim": "bounded repository-scoped feedback outcome"
+  },
+  "observables": {
+    "R": "route_classified",
+    "E": "evidence_attached",
+    "V": "validator_bound",
+    "L": "lifecycle_state_defined",
+    "D": "downgrade_path_defined",
+    "F": "falsification_condition_defined",
+    "N": "negative_control_defined",
+    "S": "surrogate_or_dry_run_defined",
+    "C": "claim_boundary_defined",
+    "A": "authorization_boundary_defined"
+  },
+  "classes": {
+    "CMS-FB-A": "Promotion-ready feedback with full observables.",
+    "CMS-FB-B": "Actionable feedback with partial evidence requiring downgrade or human review.",
+    "CMS-FB-C": "Alternative valid route or non-promotional feedback.",
+    "CMS-FB-D": "Null or informational feedback; no action predicted.",
+    "CMS-FB-E": "Rejected or unsafe feedback claim."
+  },
+  "api_boundary": {
+    "observe": "read-only",
+    "classify": "read-only plus report emission",
+    "propose": "draft/diff/evidence only",
+    "validate": "read-only over target artifacts except validation reports",
+    "authorize": "human or constrained automation gate",
+    "write": "explicit write phase only",
+    "seal": "commit, push, tag, public sync"
+  },
+  "non_claim_lock": "Feedback lifecycle governance improves repository alignment and API-readiness. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness."
+}

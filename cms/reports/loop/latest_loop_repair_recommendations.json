@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-06-04T16:08:40.920733+00:00",
+  "dominant_pressure_source": "registry_status_drift",
+  "dominant_repair_class": "REGISTRY_REPAIR",
+  "loop_drift_pressure": 0.14,
+  "non_claim_lock": "Loop pressure repair recommendations are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "pressure_state": "stable",
+  "primary_lock": "No repair recommendation may write, promote, or seal a change unless it declares pressure source, repair class, allowed action, blocked action, required validation, and non-claim boundary.",
+  "recommendation_count": 1,
+  "recommendation_hash": "cfccabef8aa7e3b46725c02874fb83d5c526a4b73dc841a28da0f902efa47689",
+  "recommendations": [
+    {
+      "allowed_repair_action": "normalize_version_registry_lifecycle_previous_seal_or_next_anchor",
+      "blocked_actions": [
+        "runtime_code_patch",
+        "memory_promotion",
+        "release_tag_creation",
+        "api_write",
+        "autonomous_patch"
+      ],
+      "downgrade_path": "mark_version_preseal_or_pending_until_registry_agrees",
+      "id": "CMS-RR-3d8ebfb363",
+      "non_claim_lock": "Loop pressure repair recommendations are repository-bound and do not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+      "pressure_source": "registry_status_drift",
+      "pressure_state": "warning",
+      "repair_class": "REGISTRY_REPAIR",
+      "required_files": [],
+      "required_validation_stack": [
+        "validate_surface_alignment",
+        "emit_multilevel_alignment",
+        "validate_multilevel_alignment",
+        "validate_public_sync"
+      ],
+      "severity": "medium",
+      "source_kind": "component",
+      "source_value": 1.0,
+      "status": "repair_recommended"
+    }
+  ],
+  "schema": "CMS-SA-v0.4.3-loop-pressure-repair-recommendation",
+  "source_findings": [],
+  "source_pressure_hash": "46ad512abd076a80a218c7d9a4ad9f602cf79ee01170d73104eea0ede236defc",
+  "source_pressure_version": "v0.4.2",
+  "source_stability_state": "stable_green_loop",
+  "threshold": 0.25,
+  "unknown_findings": [],
+  "version": "v0.4.3"
+}

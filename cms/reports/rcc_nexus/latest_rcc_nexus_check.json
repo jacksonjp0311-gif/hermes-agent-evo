@@ -1,0 +1,11 @@
+{
+  "schema": "CMS-SA-v0.1.2-rcc-nexus-check",
+  "passed": true,
+  "errors": 0,
+  "warnings": 0,
+  "mini_readme_coverage": 1.0,
+  "major_dirs_checked": 29,
+  "missing_mini_readmes": [],
+  "missing_required": [],
+  "non_claim_lock": "RCC-N navigation is not validation."
+}

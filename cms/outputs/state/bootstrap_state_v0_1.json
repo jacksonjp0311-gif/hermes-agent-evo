@@ -1,0 +1,15 @@
+{
+    "schema":  "CMS-SA-v0.1-bootstrap-state",
+    "repository":  "cybernetic-memory-system",
+    "version":  "v0.1",
+    "profile":  "CMS-Core",
+    "created_at":  "2026-05-30T09:15:13.4032909-04:00",
+    "root":  "C:\\Users\\jacks\\OneDrive\\Desktop\\cybernetic-memory-system",
+    "status":  "architecture anchored and scaffolded",
+    "non_claim_locks":  {
+                            "feedback_is_not_truth":  true,
+                            "memory_is_not_consciousness":  true,
+                            "surface_alignment_is_not_code_correctness":  true,
+                            "validation_is_repository_bound":  true
+                        }
+}

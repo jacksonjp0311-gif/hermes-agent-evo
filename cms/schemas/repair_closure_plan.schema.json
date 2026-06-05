@@ -1,0 +1,31 @@
+{
+  "$id": "CMS-SA-v0.4.4-repair-closure-plan",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "closure_ledger": {
+      "type": "array"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "plans": {
+      "type": "array"
+    },
+    "schema": {
+      "const": "CMS-SA-v0.4.4-repair-execution-plan-and-closure-ledger"
+    },
+    "version": {
+      "const": "v0.4.4"
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "plans",
+    "closure_ledger",
+    "passed",
+    "primary_lock",
+    "non_claim_lock"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "core_law": "Memory is not storage; memory is controlled influence on the next cycle.",
+  "loop_chain": [
+    "observe",
+    "validate",
+    "decide",
+    "promote_or_downgrade",
+    "write_memory_state",
+    "emit_next_cycle_influence",
+    "validate_loop_report"
+  ],
+  "non_claim_lock": "The cybernetic memory loop is repository-bound. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "purpose": "Close the first repository-bound cybernetic memory loop by turning memory promotion output into next-cycle influence state.",
+  "required_inputs": [
+    "outputs/memory/latest_memory_promotion_report.json",
+    "outputs/decision/latest_runtime_decision.json",
+    "outputs/controls/latest_negative_control_harness.json"
+  ],
+  "required_outputs": [
+    "outputs/loop/latest_cybernetic_memory_loop.json",
+    "reports/loop/latest_cybernetic_memory_loop.md"
+  ],
+  "schema": "CMS-SA-v0.4.0-cybernetic-memory-loop-contract",
+  "title": "CMS-SA v0.4.0 - Cybernetic Memory Loop Genesis",
+  "version": "v0.4.0"
+}

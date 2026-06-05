@@ -1,0 +1,40 @@
+{
+  "alignment_passed": true,
+  "api_writes_performed": 0,
+  "apply_gate_count": 1,
+  "apply_gate_passed": true,
+  "dry_run_count": 1,
+  "dry_run_passed": true,
+  "git_commits_performed": 0,
+  "git_pushes_performed": 0,
+  "lessons_preserved": [
+    "validation_order_is_system_geometry",
+    "preseal_release_tag_missing_is_phase_boundary",
+    "pressure_refresh_before_alignment",
+    "dry_run_is_not_write_authority",
+    "apply_gate_is_not_apply_authority",
+    "rollback_required_before_apply",
+    "final_postpush_artifacts_must_be_committed_after_generation"
+  ],
+  "non_claim_lock": "v0.4.6 final evidence commit report is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "public_sync_passed": true,
+  "reason": "Final post-push evidence artifacts were created after the previous push and require a final report commit.",
+  "release_tag_status": "present_and_ancestor_of_head",
+  "release_tags_created": 0,
+  "rollback_ledger_count": 1,
+  "runtime_decision": "promote",
+  "runtime_decision_passed": true,
+  "schema": "CMS-SA-v0.4.6-final-evidence-commit-report",
+  "target_writes_performed": 0,
+  "threshold": {
+    "headroom": 0.44,
+    "headroom_percent": 44.0,
+    "loop_drift_pressure": 0.14,
+    "state": "stable_green_loop",
+    "threshold": 0.25,
+    "threshold_usage": 0.56,
+    "threshold_usage_percent": 56.0
+  },
+  "timestamp_utc": "2026-06-04T04:31:10.358252+00:00"
+}

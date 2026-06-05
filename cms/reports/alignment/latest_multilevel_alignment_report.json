@@ -1,0 +1,174 @@
+{
+  "api_boundary": "API remains inactive; this is internal runtime alignment only.",
+  "core_rule": "No feedback item is valid unless it can be located in repository geometry and tied to evidence, validators, current public surfaces, and declared phase boundary.",
+  "created_at": "2026-06-04T17:14:00.266555+00:00",
+  "current_registry_version": "v0.5.1",
+  "feedback_bindings": [],
+  "feedback_items_aligned": 3,
+  "feedback_items_checked": 3,
+  "findings": [],
+  "layers": {
+    "feedback_lifecycle": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "outputs/feedback/latest_feedback_lifecycle_report.json",
+        "reports/feedback/latest_feedback_lifecycle_report.json"
+      ]
+    },
+    "loop_drift_pressure": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "outputs/loop/latest_loop_drift_pressure.json",
+        "reports/loop/latest_loop_drift_pressure_validation.json"
+      ]
+    },
+    "memory_promotion": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "configs/memory/promotion_contract.json",
+        "src/cms/memory/promotion.py",
+        "scripts/memory/emit_memory_promotion_v0_3b5.py",
+        "scripts/validation/validate_memory_promotion_v0_3b5.py",
+        "outputs/memory/latest_memory_promotion_report.json",
+        "reports/memory/latest_memory_promotion_validation.json"
+      ]
+    },
+    "mini_readmes": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "configs/alignment/README.md",
+        "src/cms/alignment/README.md",
+        "scripts/alignment/README.md",
+        "outputs/alignment/README.md",
+        "reports/alignment/README.md",
+        "configs/feedback/README.md",
+        "src/cms/feedback/README.md",
+        "scripts/feedback/README.md",
+        "outputs/feedback/README.md",
+        "reports/feedback/README.md",
+        "configs/loop/README.md",
+        "src/cms/loop/README.md",
+        "scripts/loop/README.md",
+        "outputs/loop/README.md",
+        "reports/loop/README.md"
+      ]
+    },
+    "negative_controls": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "configs/controls/negative_control_contract.json",
+        "src/cms/controls/negative.py",
+        "scripts/controls/emit_negative_control_harness_v0_3b4.py",
+        "scripts/validation/validate_negative_control_harness_v0_3b4.py",
+        "outputs/controls/latest_negative_control_harness.json",
+        "reports/controls/latest_negative_control_validation.json"
+      ]
+    },
+    "public_sync": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "reports/public_sync/latest_public_sync_report.json"
+      ]
+    },
+    "reflective_git_geometry": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "outputs/geometry/latest_reflective_git_geometry.json",
+        "reports/geometry/latest_reflective_git_geometry.json"
+      ]
+    },
+    "release_seal": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "docs/release_seals/cms_sa_v0_4_2_release_seal.md",
+        "outputs/release_seals/cms_sa_v0_4_2_release_seal.md"
+      ]
+    },
+    "reports": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "reports/geometry/latest_reflective_git_geometry_validation.json",
+        "reports/feedback/latest_feedback_lifecycle_validation.json",
+        "reports/surface_alignment/latest_surface_alignment_report.json",
+        "reports/public_sync/latest_public_sync_report.json",
+        "reports/loop/latest_loop_drift_pressure_validation.json",
+        "outputs/release/latest_release_readiness.md"
+      ]
+    },
+    "root_readme": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "README.md"
+      ]
+    },
+    "route_maps": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "rcc/nexus/route_map.json",
+        "rcc/nexus/task_routing_matrix.md",
+        "docs/context/repository_context_index.json",
+        "docs/context/rcc_nexus_index.json"
+      ]
+    },
+    "validators": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "scripts/validation/validate_reflective_git_geometry_v0_3.py",
+        "scripts/validation/validate_feedback_lifecycle_v0_3b.py",
+        "scripts/validation/validate_surface_alignment_v0_3b2.py",
+        "scripts/validation/validate_multilevel_alignment_v0_3b2.py",
+        "scripts/validation/validate_public_sync_v0_2b3.py",
+        "scripts/validation/validate_loop_drift_pressure_v0_4_2.py"
+      ]
+    },
+    "version_registry": {
+      "missing_paths": [],
+      "passed": true,
+      "required_paths": [
+        "outputs/version_registry/cms_version_registry.json"
+      ]
+    }
+  },
+  "non_claim_lock": "Multi-level alignment improves repository-bound cybernetic runtime coherence. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "passed": true,
+  "pressure_findings": [],
+  "previous_registry_version": "v0.5.0",
+  "public_sync_phase": {
+    "accepted_for_current_phase": true,
+    "mode": "postseal",
+    "passed": true,
+    "phase_state": "postseal_passed",
+    "present": true,
+    "release_tag_exists": true,
+    "release_tag_is_ancestor_of_head": true,
+    "release_tag_status": "present_and_ancestor_of_head"
+  },
+  "schema": "CMS-SA-v0.5.1-multilevel-alignment-report",
+  "seal_mode": "postseal",
+  "temporal_boundary": "Preseal geometry allows public-sync tag absence as pressure. Postseal geometry requires public-sync pass and release-tag ancestry.",
+  "version": "v0.5.1",
+  "version_checks": {
+    "feedback_report_present": true,
+    "geometry_registry_version_matches": true,
+    "loop_drift_pressure_report_present": true,
+    "loop_drift_pressure_under_threshold": true,
+    "public_sync_accepted_for_current_phase": true,
+    "public_sync_report_present": true,
+    "readme_contains_current_version": true,
+    "readme_contains_previous_version": true,
+    "registry_current_version": "v0.5.1",
+    "surface_alignment_passed": true
+  }
+}

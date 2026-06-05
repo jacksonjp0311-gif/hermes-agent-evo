@@ -1,0 +1,10 @@
+{
+    "schema":  "CMS-SA-v0.1.1-lineage-validation",
+    "version":  "v0.1.1",
+    "passed":  true,
+    "missing":  [
+
+                ],
+    "next_anchor":  "CMS-SA v0.2 — Runtime Observation and Metric Contract Engine",
+    "non_claim_lock":  "validation is repository-bound"
+}

@@ -1,0 +1,47 @@
+{
+  "architecture_scan_targets": [
+    "docs/architecture/cms_sa_v0_1_software_architecture.tex",
+    "docs/architecture/",
+    "reports/architecture/",
+    "src/cms/README.md",
+    "AGENTS.md",
+    "README_90_SECONDS.md",
+    "docs/context/repository_context_index.json",
+    "docs/context/rcc_nexus_index.json",
+    "rcc/nexus/route_map.json",
+    "rcc/nexus/task_routing_matrix.md"
+  ],
+  "core_rule": "theory tells why; architecture tells how; runtime tells now",
+  "non_claim_lock": "Thread rehydration improves agent orientation and repository continuity. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "origin_scan_targets": [
+    "docs/theory/",
+    "docs/reflection/law_of_sufficient_form_v0_2b3.md",
+    "README.md",
+    "feedback and memory governance rules"
+  ],
+  "runtime_scan_targets": [
+    "README.md",
+    "outputs/version_registry/cms_version_registry.json",
+    "reports/public_sync/latest_public_sync_report.md",
+    "reports/decision/latest_runtime_decision_validation.md",
+    "reports/controls/latest_negative_control_validation.md",
+    "reports/memory/latest_memory_promotion_validation.md",
+    "outputs/memory/latest_memory_promotion_report.json",
+    "recent commits and tags"
+  ],
+  "schema": "CMS-SA-v0.4.0-thread-rehydration-contract",
+  "title": "Thread Rehydration Protocol",
+  "version": "v0.4.0",
+  "version_readiness_checks": [
+    "current README checkpoint",
+    "registry current version",
+    "registry next anchor",
+    "public sync status",
+    "runtime decision status",
+    "negative control status",
+    "memory promotion status",
+    "multi-level alignment status",
+    "stale-surface risk classification"
+  ],
+  "version_readiness_lock": "No fresh-thread versioning without Origin Scan, Architecture Scan, and Runtime State Scan."
+}

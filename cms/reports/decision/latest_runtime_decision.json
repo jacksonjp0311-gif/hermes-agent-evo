@@ -1,0 +1,92 @@
+{
+  "schema": "CMS-SA-v0.3b3-runtime-decision",
+  "version": "v0.3b3",
+  "decision": "promote",
+  "reason": "all_required_repository_bound_validation_surfaces_passed",
+  "next_allowed_action": "CMS-SA v0.3b4 - Negative Control and Downgrade Harness",
+  "required_failures": [],
+  "signals": [
+    {
+      "name": "readme_audit",
+      "path": "reports/readme/latest_readme_mini_repo_audit.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.5.1-readme-mini-repo-audit",
+      "errors": []
+    },
+    {
+      "name": "readme_render_hygiene",
+      "path": "reports/render_hygiene/latest_readme_render_hygiene.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.5.1-readme-render-hygiene",
+      "errors": []
+    },
+    {
+      "name": "markdown_structure",
+      "path": "reports/markdown_structure/latest_markdown_structure.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.2b3a-markdown-structure",
+      "errors": []
+    },
+    {
+      "name": "reflective_git_geometry",
+      "path": "reports/geometry/latest_reflective_git_geometry_validation.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.3a2-reflective-git-geometry-validation",
+      "errors": []
+    },
+    {
+      "name": "feedback_lifecycle",
+      "path": "reports/feedback/latest_feedback_lifecycle_validation.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.3b-feedback-lifecycle-validation",
+      "errors": []
+    },
+    {
+      "name": "surface_alignment",
+      "path": "reports/surface_alignment/latest_surface_alignment_report.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.5.1-surface-alignment-validation",
+      "errors": []
+    },
+    {
+      "name": "multilevel_alignment",
+      "path": "reports/alignment/latest_multilevel_alignment_validation.json",
+      "required": true,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.5.1-multilevel-alignment-validation",
+      "errors": []
+    },
+    {
+      "name": "public_sync",
+      "path": "reports/public_sync/latest_public_sync_report.json",
+      "required": false,
+      "present": true,
+      "passed": true,
+      "schema": "CMS-SA-v0.2b3c-public-sync-stable",
+      "errors": []
+    }
+  ],
+  "release_validator_direct_final_gate": true,
+  "git_state": {
+    "available": false,
+    "dirty": null,
+    "unexpected_dirty": [],
+    "ignored_untracked": [],
+    "note": "Git dirty state is intentionally handled by final release gates to avoid volatile latest-artifact loops."
+  },
+  "non_claim_lock": "Runtime decision checks repository-bound validation surfaces only. It does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "decision_hash": "b54a95f2ddc66bd8664e9c1d419c73a0efebe437d1e0b0bac6e8a6d2da16efd3"
+}

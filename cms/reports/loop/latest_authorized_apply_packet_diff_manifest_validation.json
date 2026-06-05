@@ -1,0 +1,17 @@
+{
+  "api_writes_performed": 0,
+  "apply_packet_count": 1,
+  "apply_packet_manifest_hash": "2e378c2650c3aec9aa280dc8696d26a40adf1d0afb88f3741e6612cb41333f35",
+  "diff_manifest_count": 1,
+  "errors": 0,
+  "findings": [],
+  "git_commits_performed": 0,
+  "git_pushes_performed": 0,
+  "non_claim_lock": "Authorized apply packet validation is repository-bound and does not prove code correctness.",
+  "passed": true,
+  "primary_lock": "No apply packet may authorize a repair unless it references a validated apply gate, includes a human authorization artifact, declares exact diff entries for every target write, binds rollback entries one-to-one with diff entries, preserves blocked actions, and passes pre-apply validation.",
+  "release_tags_created": 0,
+  "schema": "CMS-SA-v0.4.7-authorized-apply-packet-diff-manifest-validation",
+  "source_pressure_state": "stable",
+  "target_writes_performed": 0
+}

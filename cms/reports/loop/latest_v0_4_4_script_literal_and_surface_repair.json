@@ -1,0 +1,13 @@
+{
+  "non_claim_lock": "v0.4.4 surface propagation repair is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, autonomous repair authority, or real-world correctness.",
+  "passed": true,
+  "repaired": [
+    "scripts/loop/emit_repair_closure_plan_v0_4_4.py newline literals",
+    "scripts/validation/validate_repair_closure_plan_v0_4_4.py newline literals",
+    "README CMS-RCC-N-v0.4.4 / 180 days token",
+    "README API inactive token",
+    "20 mini README v0.4.4 propagation surfaces"
+  ],
+  "schema": "CMS-SA-v0.4.4-script-literal-and-surface-propagation-repair",
+  "timestamp_utc": "2026-06-04T04:06:05.507256+00:00"
+}

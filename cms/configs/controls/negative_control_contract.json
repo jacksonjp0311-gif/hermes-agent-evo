@@ -1,0 +1,21 @@
+{
+  "decision_states": [
+    "promote",
+    "block",
+    "downgrade",
+    "observe_only"
+  ],
+  "non_claim_lock": "Negative control validation is repository-bound and does not prove code correctness, truth, AGI, consciousness, production readiness, security, external validation, or real-world correctness.",
+  "promotion_rule": "Promotion is admissible only when positive controls pass, negative controls reject correctly, false promote attempts are blocked, downgrade controls preserve downgrade status, and observe-only controls remain non-promotional.",
+  "purpose": "Reject false promote states and preserve downgrade/observe-only cases before memory promotion.",
+  "required_control_classes": [
+    "positive_control",
+    "negative_control",
+    "false_promote_control",
+    "downgrade_control",
+    "observe_only_control"
+  ],
+  "schema": "CMS-SA-v0.3b4-negative-control-contract",
+  "title": "CMS-SA v0.3b4 - Negative Control and Downgrade Harness",
+  "version": "v0.3b4"
+}
