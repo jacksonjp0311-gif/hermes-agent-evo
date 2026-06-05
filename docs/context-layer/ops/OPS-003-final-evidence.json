@@ -1,0 +1,32 @@
+{
+    "schema":  "HRCN-OPS-003-runtime-readiness-final-evidence",
+    "operation":  "OPS-003",
+    "timestamp_utc":  "2026-06-05T13:03:14.5327998Z",
+    "base_commit":  "bc1cbd66d6300903034ce23aeb12cc8d6ebf5dc7",
+    "v2_0_prerequisite_passed":  true,
+    "ops_001_prerequisite_passed":  true,
+    "ops_002_prerequisite_passed":  true,
+    "ops_002_1_prerequisite_passed":  true,
+    "runtime_readiness_audit_written":  true,
+    "run_plan_written":  true,
+    "nexus_status_report_written":  true,
+    "python_ready_for_declared_range":  true,
+    "install_executed":  false,
+    "venv_created":  false,
+    "runtime_executed":  false,
+    "model_call_executed":  false,
+    "runtime_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation":  false,
+    "self_authorization":  false,
+    "changed_paths":  [
+                          "docs/context-layer/hrcn-v2.0-nexus-reports/operational-nexus-status-20260605T130314Z.json",
+                          "docs/context-layer/ops/OPS-003-nexus-status-output.txt",
+                          "docs/context-layer/ops/OPS-003-runtime-readiness-audit.json",
+                          "docs/context-layer/ops/OPS-003-runtime-readiness-audit.md",
+                          "docs/context-layer/ops/OPS-003-to-OPS-004-run-plan.md"
+                      ],
+    "non_claim_lock":  "OPS-003 audits readiness only. It does not install, run Hermes, call providers, mutate runtime, write CMS, write memory, write APIs, mutate dependencies, or grant autonomous authority."
+}

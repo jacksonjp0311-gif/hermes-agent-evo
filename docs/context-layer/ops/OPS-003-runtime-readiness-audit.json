@@ -1,0 +1,77 @@
+{
+    "schema":  "HRCN-OPS-003-runtime-readiness-audit",
+    "operation":  "OPS-003",
+    "timestamp_utc":  "2026-06-05T13:03:13.6276689Z",
+    "base_commit":  "bc1cbd66d6300903034ce23aeb12cc8d6ebf5dc7",
+    "project_name":  "hermes-agent",
+    "project_version":  "0.15.1",
+    "requires_python":  "\u003e=3.11,\u003c3.14",
+    "python_version_text":  "Python 3.12.2",
+    "python_ready_for_declared_range":  true,
+    "pyproject_present":  true,
+    "uv_lock_present":  true,
+    "readme_present":  true,
+    "run_agent_present":  true,
+    "hermes_cli_main_present":  true,
+    "acp_entry_present":  true,
+    "console_script_hermes_declared":  true,
+    "console_script_hermes_agent_declared":  true,
+    "console_script_hermes_acp_declared":  true,
+    "install_executed":  false,
+    "venv_created":  false,
+    "runtime_executed":  false,
+    "model_call_executed":  false,
+    "api_key_required_for_audit":  false,
+    "runtime_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation":  false,
+    "self_authorization":  false,
+    "command_results":  [
+                            {
+                                "label":  "python-version",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  "Python 3.12.2"
+                            },
+                            {
+                                "label":  "python-location",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  "C:\\Program Files\\Python312\\python.exe"
+                            },
+                            {
+                                "label":  "pip-version",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  "pip 26.1.1 from C:\\Users\\jacks\\AppData\\Roaming\\Python\\Python312\\site-packages\\pip (python 3.12)"
+                            },
+                            {
+                                "label":  "venv-module-check",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  "usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear]\r\n            [--upgrade] [--without-pip] [--prompt PROMPT] [--upgrade-deps]\r\n            ENV_DIR [ENV_DIR ...]\r\n\r\nCreates virtual Python environments in one or more target directories.\r\n\r\npositional arguments:\r\n  ENV_DIR               A directory to create the environment in.\r\n\r\noptions:\r\n  -h, --help            show this help message and exit\r\n  --system-site-packages\r\n                        Give the virtual environment access to the system\r\n                        site-packages dir.\r\n  --symlinks            Try to use symlinks rather than copies, when symlinks\r\n                        are not the default for the platform.\r\n  --copies              Try to use copies rather than symlinks, even when\r\n                        symlinks are the default for the platform.\r\n  --clear               Delete the contents of the environment directory if it\r\n                        already exists, before environment creation.\r\n  --upgrade             Upgrade the environment directory to use this version\r\n                        of Python, assuming Python has been upgraded in-place.\r\n  --without-pip         Skips installing or upgrading pip in the virtual\r\n                        environment (pip is bootstrapped by default)\r\n  --prompt PROMPT       Provides an alternative prompt prefix for this\r\n                        environment.\r\n  --upgrade-deps        Upgrade core dependencies (pip) to the latest version\r\n                        in PyPI\r\n\r\nOnce an environment has been created, you may wish to activate it, e.g. by\r\nsourcing an activate script in its bin directory."
+                            },
+                            {
+                                "label":  "python-import-tomllib-check",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]\r\ntomllib=ok"
+                            },
+                            {
+                                "label":  "git-head",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  "bc1cbd66d6300903034ce23aeb12cc8d6ebf5dc7"
+                            },
+                            {
+                                "label":  "git-status-short",
+                                "exit_code":  0,
+                                "ok":  true,
+                                "output":  ""
+                            }
+                        ],
+    "next_recommended_operation":  "OPS-004 local Hermes smoke run",
+    "non_claim_lock":  "OPS-003 audits runtime readiness only. It does not install dependencies, create a venv, run Hermes, call a model, mutate runtime code, write CMS, write memory, write APIs, mutate dependencies, self-authorize, or grant autonomous authority."
+}
