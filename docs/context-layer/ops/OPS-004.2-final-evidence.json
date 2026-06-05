@@ -1,0 +1,23 @@
+{
+    "schema":  "HRCN-OPS-004.2-final-evidence",
+    "operation":  "OPS-004.2",
+    "timestamp_utc":  "2026-06-05T13:29:25.4262351Z",
+    "base_commit":  "0921a0248af95f35df4eee2317448398ae6e515c",
+    "ops_003_prerequisite_passed":  true,
+    "ops_004_failure_evidence_present":  true,
+    "ops_004_1_failure_evidence_present":  true,
+    "smoke_passed":  true,
+    "provider_attempt_detected":  false,
+    "hermes_agent_exe_executed":  false,
+    "run_agent_import_probe_executed":  true,
+    "ensurepip_executed":  true,
+    "editable_install_executed":  true,
+    "model_call_executed":  false,
+    "runtime_source_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "self_authorization":  false,
+    "non_claim_lock":  "OPS-004.2 records safe local smoke repair evidence only and grants no provider, API, CMS, memory, dependency, runtime mutation, autonomous, or self-authorization authority."
+}

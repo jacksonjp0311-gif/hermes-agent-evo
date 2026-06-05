@@ -1,0 +1,154 @@
+{
+    "schema":  "HRCN-OPS-004.2-safe-local-smoke-repair",
+    "operation":  "OPS-004.2",
+    "timestamp_utc":  "2026-06-05T13:29:25.4262351Z",
+    "base_commit":  "0921a0248af95f35df4eee2317448398ae6e515c",
+    "repairs":  [
+                    "OPS-004",
+                    "OPS-004.1"
+                ],
+    "venv_policy":  ".venv is gitignored; using repo-local venv.",
+    "smoke_passed":  true,
+    "provider_attempt_detected":  false,
+    "hermes_agent_exe_executed":  false,
+    "run_agent_import_probe_executed":  true,
+    "ensurepip_executed":  true,
+    "editable_install_executed":  true,
+    "help_surfaces_executed":  true,
+    "model_call_executed":  false,
+    "runtime_source_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "self_authorization":  false,
+    "command_results":  [
+                            {
+                                "label":  "venv-python-version",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                             "--version"
+                                         ],
+                                "timeout_seconds":  60,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "Python 3.11.15\n",
+                                "stderr":  "",
+                                "duration_seconds":  0.036
+                            },
+                            {
+                                "label":  "ensurepip",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                             "-m",
+                                             "ensurepip",
+                                             "--upgrade"
+                                         ],
+                                "timeout_seconds":  240,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "Looking in links: c:\\Users\\jacks\\AppData\\Local\\Temp\\tmpkegftdg4\nProcessing c:\\users\\jacks\\appdata\\local\\temp\\tmpkegftdg4\\setuptools-79.0.1-py3-none-any.whl\nProcessing c:\\users\\jacks\\appdata\\local\\temp\\tmpkegftdg4\\pip-24.0-py3-none-any.whl\nInstalling collected packages: setuptools, pip\nSuccessfully installed pip-24.0 setuptools-79.0.1\n",
+                                "stderr":  "",
+                                "duration_seconds":  18.372
+                            },
+                            {
+                                "label":  "pip-version-after-ensurepip",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                             "-m",
+                                             "pip",
+                                             "--version"
+                                         ],
+                                "timeout_seconds":  60,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "pip 24.0 from C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Lib\\site-packages\\pip (python 3.11)\n\n",
+                                "stderr":  "",
+                                "duration_seconds":  0.715
+                            },
+                            {
+                                "label":  "pip-upgrade",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                             "-m",
+                                             "pip",
+                                             "install",
+                                             "--upgrade",
+                                             "pip"
+                                         ],
+                                "timeout_seconds":  300,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "Requirement already satisfied: pip in c:\\users\\jacks\\onedrive\\desktop\\hermes-agent-evo\\.venv\\lib\\site-packages (24.0)\nCollecting pip\n  Downloading pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)\nDownloading pip-26.1.2-py3-none-any.whl (1.8 MB)\n   ---------------------------------------- 1.8/1.8 MB 3.5 MB/s eta 0:00:00\nInstalling collected packages: pip\n  Attempting uninstall: pip\n    Found existing installation: pip 24.0\n    Uninstalling pip-24.0:\n      Successfully uninstalled pip-24.0\nSuccessfully installed pip-26.1.2\n",
+                                "stderr":  "",
+                                "duration_seconds":  9.109
+                            },
+                            {
+                                "label":  "editable-install",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                             "-m",
+                                             "pip",
+                                             "install",
+                                             "-e",
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo"
+                                         ],
+                                "timeout_seconds":  900,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "Obtaining file:///C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo\n  Installing build dependencies: started\n  Installing build dependencies: finished with status \u0027done\u0027\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status \u0027done\u0027\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status \u0027done\u0027\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status \u0027done\u0027\nRequirement already satisfied: openai==2.24.0 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (2.24.0)\nRequirement already satisfied: python-dotenv==1.2.2 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (1.2.2)\nRequirement already satisfied: fire==0.7.1 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (0.7.1)\nRequirement already satisfied: httpx==0.28.1 in .\\.venv\\Lib\\site-packages (from httpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (0.28.1)\nRequirement already satisfied: rich==14.3.3 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (14.3.3)\nRequirement already satisfied: tenacity==9.1.4 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (9.1.4)\nRequirement already satisfied: pyyaml==6.0.3 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (6.0.3)\nRequirement already satisfied: ruamel.yaml==0.18.17 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (0.18.17)\nRequirement already satisfied: requests==2.33.0 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (2.33.0)\nRequirement already satisfied: jinja2==3.1.6 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (3.1.6)\nRequirement already satisfied: pydantic==2.13.4 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (2.13.4)\nRequirement already satisfied: prompt_toolkit==3.0.52 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (3.0.52)\nRequirement already satisfied: croniter==6.0.0 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (6.0.0)\nRequirement already satisfied: PyJWT==2.12.1 in .\\.venv\\Lib\\site-packages (from PyJWT[crypto]==2.12.1-\u003ehermes-agent==0.15.1) (2.12.1)\nRequirement already satisfied: tzdata==2025.3 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (2025.3)\nRequirement already satisfied: psutil==7.2.2 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (7.2.2)\nRequirement already satisfied: pathspec==1.1.1 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (1.1.1)\nRequirement already satisfied: fastapi\u003c1,\u003e=0.104.0 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (0.136.3)\nRequirement already satisfied: uvicorn\u003c1,\u003e=0.24.0 in .\\.venv\\Lib\\site-packages (from uvicorn[standard]\u003c1,\u003e=0.24.0-\u003ehermes-agent==0.15.1) (0.49.0)\nRequirement already satisfied: pywinpty\u003c3,\u003e=2.0.0 in .\\.venv\\Lib\\site-packages (from hermes-agent==0.15.1) (2.0.15)\nRequirement already satisfied: python-dateutil in .\\.venv\\Lib\\site-packages (from croniter==6.0.0-\u003ehermes-agent==0.15.1) (2.9.0.post0)\nRequirement already satisfied: pytz\u003e2021.1 in .\\.venv\\Lib\\site-packages (from croniter==6.0.0-\u003ehermes-agent==0.15.1) (2026.2)\nRequirement already satisfied: termcolor in .\\.venv\\Lib\\site-packages (from fire==0.7.1-\u003ehermes-agent==0.15.1) (3.3.0)\nRequirement already satisfied: anyio in .\\.venv\\Lib\\site-packages (from httpx==0.28.1-\u003ehttpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (4.13.0)\nRequirement already satisfied: certifi in .\\.venv\\Lib\\site-packages (from httpx==0.28.1-\u003ehttpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (2026.5.20)\nRequirement already satisfied: httpcore==1.* in .\\.venv\\Lib\\site-packages (from httpx==0.28.1-\u003ehttpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (1.0.9)\nRequirement already satisfied: idna in .\\.venv\\Lib\\site-packages (from httpx==0.28.1-\u003ehttpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (3.18)\nRequirement already satisfied: socksio==1.* in .\\.venv\\Lib\\site-packages (from httpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (1.0.0)\nRequirement already satisfied: MarkupSafe\u003e=2.0 in .\\.venv\\Lib\\site-packages (from jinja2==3.1.6-\u003ehermes-agent==0.15.1) (3.0.3)\nRequirement already satisfied: distro\u003c2,\u003e=1.7.0 in .\\.venv\\Lib\\site-packages (from openai==2.24.0-\u003ehermes-agent==0.15.1) (1.9.0)\nRequirement already satisfied: jiter\u003c1,\u003e=0.10.0 in .\\.venv\\Lib\\site-packages (from openai==2.24.0-\u003ehermes-agent==0.15.1) (0.15.0)\nRequirement already satisfied: sniffio in .\\.venv\\Lib\\site-packages (from openai==2.24.0-\u003ehermes-agent==0.15.1) (1.3.1)\nRequirement already satisfied: tqdm\u003e4 in .\\.venv\\Lib\\site-packages (from openai==2.24.0-\u003ehermes-agent==0.15.1) (4.67.3)\nRequirement already satisfied: typing-extensions\u003c5,\u003e=4.11 in .\\.venv\\Lib\\site-packages (from openai==2.24.0-\u003ehermes-agent==0.15.1) (4.15.0)\nRequirement already satisfied: annotated-types\u003e=0.6.0 in .\\.venv\\Lib\\site-packages (from pydantic==2.13.4-\u003ehermes-agent==0.15.1) (0.7.0)\nRequirement already satisfied: pydantic-core==2.46.4 in .\\.venv\\Lib\\site-packages (from pydantic==2.13.4-\u003ehermes-agent==0.15.1) (2.46.4)\nRequirement already satisfied: typing-inspection\u003e=0.4.2 in .\\.venv\\Lib\\site-packages (from pydantic==2.13.4-\u003ehermes-agent==0.15.1) (0.4.2)\nRequirement already satisfied: wcwidth in .\\.venv\\Lib\\site-packages (from prompt_toolkit==3.0.52-\u003ehermes-agent==0.15.1) (0.7.0)\nRequirement already satisfied: cryptography\u003e=3.4.0 in .\\.venv\\Lib\\site-packages (from PyJWT[crypto]==2.12.1-\u003ehermes-agent==0.15.1) (48.0.0)\nRequirement already satisfied: charset_normalizer\u003c4,\u003e=2 in .\\.venv\\Lib\\site-packages (from requests==2.33.0-\u003ehermes-agent==0.15.1) (3.4.7)\nRequirement already satisfied: urllib3\u003c3,\u003e=1.26 in .\\.venv\\Lib\\site-packages (from requests==2.33.0-\u003ehermes-agent==0.15.1) (2.7.0)\nRequirement already satisfied: markdown-it-py\u003e=2.2.0 in .\\.venv\\Lib\\site-packages (from rich==14.3.3-\u003ehermes-agent==0.15.1) (4.2.0)\nRequirement already satisfied: pygments\u003c3.0.0,\u003e=2.13.0 in .\\.venv\\Lib\\site-packages (from rich==14.3.3-\u003ehermes-agent==0.15.1) (2.20.0)\nRequirement already satisfied: ruamel.yaml.clib\u003e=0.2.15 in .\\.venv\\Lib\\site-packages (from ruamel.yaml==0.18.17-\u003ehermes-agent==0.15.1) (0.2.15)\nRequirement already satisfied: starlette\u003e=0.46.0 in .\\.venv\\Lib\\site-packages (from fastapi\u003c1,\u003e=0.104.0-\u003ehermes-agent==0.15.1) (1.2.1)\nRequirement already satisfied: annotated-doc\u003e=0.0.2 in .\\.venv\\Lib\\site-packages (from fastapi\u003c1,\u003e=0.104.0-\u003ehermes-agent==0.15.1) (0.0.4)\nRequirement already satisfied: h11\u003e=0.16 in .\\.venv\\Lib\\site-packages (from httpcore==1.*-\u003ehttpx==0.28.1-\u003ehttpx[socks]==0.28.1-\u003ehermes-agent==0.15.1) (0.16.0)\nRequirement already satisfied: click\u003e=7.0 in .\\.venv\\Lib\\site-packages (from uvicorn\u003c1,\u003e=0.24.0-\u003euvicorn[standard]\u003c1,\u003e=0.24.0-\u003ehermes-agent==0.15.1) (8.4.1)\nRequirement already satisfied: colorama\u003e=0.4 in .\\.venv\\Lib\\site-packages (from uvicorn[standard]\u003c1,\u003e=0.24.0-\u003ehermes-agent==0.15.1) (0.4.6)\nRequirement already satisfied: httptools\u003e=0.8.0 in .\\.venv\\Lib\\site-packages (from uvicorn[standard]\u003c1,\u003e=0.24.0-\u003ehermes-agent==0.15.1) (0.8.0)\nRequirement already satisfied: watchfiles\u003e=0.20 in .\\.venv\\Lib\\site-packages (from uvicorn[standard]\u003c1,\u003e=0.24.0-\u003ehermes-agent==0.15.1) (1.2.0)\nRequirement already satisfied: websockets\u003e=10.4 in .\\.venv\\Lib\\site-packages (from uvicorn[standard]\u003c1,\u003e=0.24.0-\u003ehermes-agent==0.15.1) (16.0)\nRequirement already satisfied: cffi\u003e=2.0.0 in .\\.venv\\Lib\\site-packages (from cryptography\u003e=3.4.0-\u003ePyJWT[crypto]==2.12.1-\u003ehermes-agent==0.15.1) (2.0.0)\nRequirement already satisfied: pycparser in .\\.venv\\Lib\\site-packages (from cffi\u003e=2.0.0-\u003ecryptography\u003e=3.4.0-\u003ePyJWT[crypto]==2.12.1-\u003ehermes-agent==0.15.1) (3.0)\nRequirement already satisfied: mdurl~=0.1 in .\\.venv\\Lib\\site-packages (from markdown-it-py\u003e=2.2.0-\u003erich==14.3.3-\u003ehermes-agent==0.15.1) (0.1.2)\nRequirement already satisfied: six\u003e=1.5 in .\\.venv\\Lib\\site-packages (from python-dateutil-\u003ecroniter==6.0.0-\u003ehermes-agent==0.15.1) (1.17.0)\nBuilding wheels for collected packages: hermes-agent\n  Building editable for hermes-agent (pyproject.toml): started\n  Building editable for hermes-agent (pyproject.toml): finished with status \u0027done\u0027\n  Created wheel for hermes-agent: filename=hermes_agent-0.15.1-0.editable-py3-none-any.whl size=25067 sha256=9ab9560c53538a7e845d5b855621df26fea2ff4fa51d3c6fcd1ef31df1e0374f\n  Stored in directory: C:\\Users\\jacks\\AppData\\Local\\Temp\\pip-ephem-wheel-cache-dcpj903b\\wheels\\20\\61\\04\\26ef55c0f157a01428213f67815037cbeeaf28445c466fc853\nSuccessfully built hermes-agent\nInstalling collected packages: hermes-agent\n  Attempting uninstall: hermes-agent\n    Found existing installation: hermes-agent 0.15.1\n    Uninstalling hermes-agent-0.15.1:\n      Successfully uninstalled hermes-agent-0.15.1\nSuccessfully installed hermes-agent-0.15.1\n",
+                                "stderr":  "",
+                                "duration_seconds":  16.222
+                            },
+                            {
+                                "label":  "run-agent-import-probe",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                             "-c",
+                                             "import run_agent; print(\u0027run_agent import ok\u0027); print(hasattr(run_agent, \u0027main\u0027))"
+                                         ],
+                                "timeout_seconds":  120,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "run_agent import ok\nTrue\n",
+                                "stderr":  "",
+                                "duration_seconds":  1.994
+                            },
+                            {
+                                "label":  "hermes-help",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes.exe",
+                                             "--help"
+                                         ],
+                                "timeout_seconds":  180,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "usage: hermes [-h] [--version] [-z PROMPT] [-m MODEL] [--provider PROVIDER]\n              [-t TOOLSETS] [--resume SESSION] [--continue [SESSION_NAME]]\n              [--worktree] [--accept-hooks] [--skills SKILLS] [--yolo]\n              [--pass-session-id] [--ignore-user-config] [--ignore-rules]\n              [--tui] [--cli] [--dev]\n              {chat,model,fallback,secrets,migrate,gateway,proxy,lsp,setup,postinstall,whatsapp,slack,send,login,logout,auth,status,cron,webhook,portal,kanban,hooks,doctor,security,dump,debug,backup,checkpoints,import,config,pairing,skills,bundles,plugins,curator,memory,tools,computer-use,mcp,sessions,insights,claw,version,update,uninstall,acp,profile,completion,dashboard,desktop,gui,logs,prompt-size}\n              ...\n\nHermes Agent - AI assistant with tool-calling capabilities\n\npositional arguments:\n  {chat,model,fallback,secrets,migrate,gateway,proxy,lsp,setup,postinstall,whatsapp,slack,send,login,logout,auth,status,cron,webhook,portal,kanban,hooks,doctor,security,dump,debug,backup,checkpoints,import,config,pairing,skills,bundles,plugins,curator,memory,tools,computer-use,mcp,sessions,insights,claw,version,update,uninstall,acp,profile,completion,dashboard,desktop,gui,logs,prompt-size}\n                        Command to run\n    chat                Interactive chat with the agent\n    model               Select default model and provider\n    fallback            Manage fallback providers (tried when the primary\n                        model fails)\n    secrets             Manage external secret sources (Bitwarden Secrets\n                        Manager)\n    migrate             Migrate configuration for retired models or deprecated\n                        settings\n    gateway             Messaging gateway management\n    proxy               Local OpenAI-compatible proxy to OAuth providers\n    lsp                 Language Server Protocol management\n    setup               Interactive setup wizard\n    postinstall         Bootstrap non-Python deps for pip installs (node,\n                        browser, ripgrep, ffmpeg)\n    whatsapp            Set up WhatsApp integration\n    slack               Slack integration helpers (manifest generation, etc.)\n    send                Send a message to a configured platform (scripts, cron\n                        jobs, CI).\n    login               Authenticate with an inference provider\n    logout              Clear authentication for an inference provider\n    auth                Manage pooled provider credentials\n    status              Show status of all components\n    cron                Cron job management\n    webhook             Manage dynamic webhook subscriptions\n    portal              Set up Nous Portal (login, model pick, Tool Gateway);\n                        see also `portal info`\n    kanban              Multi-profile collaboration board (tasks, links,\n                        comments)\n    hooks               Inspect and manage shell-script hooks\n    doctor              Check configuration and dependencies\n    security            Supply-chain audit (OSV.dev) for venv, plugins, and\n                        MCP servers\n    dump                Dump setup summary for support/debugging\n    debug               Debug tools Ã¢â‚¬â€ upload logs and system info for support\n    backup              Back up Hermes home directory to a zip file\n    checkpoints         Inspect / prune / clear ~/.hermes/checkpoints/\n    import              Restore a Hermes backup from a zip file\n    config              View and edit configuration\n    pairing             Manage DM pairing codes for user authorization\n    skills              Search, install, configure, and manage skills\n    bundles             Create, list, and manage skill bundles (aliases for\n                        multiple skills)\n    plugins             Manage plugins Ã¢â‚¬â€ install, update, remove, list\n    curator             Background skill maintenance (curator) Ã¢â‚¬â€ status, run,\n                        pause, pin\n    memory              Configure external memory provider\n    tools               Configure which tools are enabled per platform\n    computer-use        Manage the Computer Use (cua-driver) backend (macOS)\n    mcp                 Manage MCP servers and run Hermes as an MCP server\n    sessions            Manage session history (list, rename, export, prune,\n                        delete)\n    insights            Show usage insights and analytics\n    claw                OpenClaw migration tools\n    version             Show version information\n    update              Update Hermes Agent to the latest version\n    uninstall           Uninstall Hermes Agent\n    acp                 Run Hermes Agent as an ACP (Agent Client Protocol)\n                        server\n    profile             Manage profiles Ã¢â‚¬â€ multiple isolated Hermes instances\n    completion          Print shell completion script (bash, zsh, or fish)\n    dashboard           Start the web UI dashboard\n    desktop (gui)       Build and launch the native desktop app\n    logs                View and filter Hermes log files\n    prompt-size         Show a byte breakdown of the system prompt + tool\n                        schemas\n\noptions:\n  -h, --help            show this help message and exit\n  --version, -V         Show version and exit\n  -z PROMPT, --oneshot PROMPT\n                        One-shot mode: send a single prompt and print ONLY the\n                        final response text to stdout. No banner, no spinner,\n                        no tool previews, no session_id line. Tools, memory,\n                        rules, and AGENTS.md in the CWD are loaded as normal;\n                        approvals are auto-bypassed. Intended for scripts /\n                        pipes.\n  -m MODEL, --model MODEL\n                        Model override for this invocation (e.g.\n                        anthropic/claude-sonnet-4.6). Applies to -z/--oneshot\n                        and --tui. Also settable via HERMES_INFERENCE_MODEL\n                        env var.\n  --provider PROVIDER   Provider override for this invocation (e.g.\n                        openrouter, anthropic). Applies to -z/--oneshot and\n                        --tui. The persistent provider lives in config.yaml\n                        under model.provider Ã¢â‚¬â€ use `hermes setup` or edit the\n                        file to change it.\n  -t TOOLSETS, --toolsets TOOLSETS\n                        Comma-separated toolsets to enable for this\n                        invocation. Applies to -z/--oneshot and --tui.\n  --resume SESSION, -r SESSION\n                        Resume a previous session by ID or title\n  --continue [SESSION_NAME], -c [SESSION_NAME]\n                        Resume a session by name, or the most recent if no\n                        name given\n  --worktree, -w        Run in an isolated git worktree (for parallel agents)\n  --accept-hooks        Auto-approve any unseen shell hooks declared in\n                        config.yaml without a TTY prompt. Equivalent to\n                        HERMES_ACCEPT_HOOKS=1 or hooks_auto_accept: true in\n                        config.yaml. Use on CI / headless runs that can\u0027t\n                        prompt.\n  --skills SKILLS, -s SKILLS\n                        Preload one or more skills for the session (repeat\n                        flag or comma-separate)\n  --yolo                Bypass all dangerous command approval prompts (use at\n                        your own risk)\n  --pass-session-id     Include the session ID in the agent\u0027s system prompt\n  --ignore-user-config  Ignore ~/.hermes/config.yaml and fall back to built-in\n                        defaults (credentials in .env are still loaded)\n  --ignore-rules        Skip auto-injection of AGENTS.md, SOUL.md,\n                        .cursorrules, memory, and preloaded skills\n  --tui                 Launch the modern TUI instead of the classic REPL\n  --cli                 Force the classic prompt_toolkit REPL (overrides\n                        display.interface=tui)\n  --dev                 With --tui: run TypeScript sources via tsx (skip dist\n                        build)\n\nExamples:\n    hermes                        Start interactive chat\n    hermes chat -q \"Hello\"        Single query mode\n    hermes --tui                  Launch the modern TUI (or set display.interface: tui)\n    hermes --cli                  Force the classic REPL (overrides display.interface: tui)\n    hermes -c                     Resume the most recent session\n    hermes -c \"my project\"        Resume a session by name (latest in lineage)\n    hermes --resume \u003csession_id\u003e  Resume a specific session by ID\n    hermes setup                  Run setup wizard\n    hermes logout                 Clear stored authentication\n    hermes auth add \u003cprovider\u003e    Add a pooled credential\n    hermes auth list              List pooled credentials\n    hermes auth remove \u003cp\u003e \u003ct\u003e    Remove pooled credential by index, id, or label\n    hermes auth reset \u003cprovider\u003e  Clear exhaustion status for a provider\n    hermes model                  Select default model\n    hermes fallback [list]        Show fallback provider chain\n    hermes fallback add           Add a fallback provider (same picker as `hermes model`)\n    hermes fallback remove        Remove a fallback provider from the chain\n    hermes config                 View configuration\n    hermes config edit            Edit config in $EDITOR\n    hermes config set model gpt-4 Set a config value\n    hermes gateway                Run messaging gateway\n    hermes -s hermes-agent-dev,github-auth\n    hermes -w                     Start in isolated git worktree\n    hermes gateway install        Install gateway background service\n    hermes sessions list          List past sessions\n    hermes sessions browse        Interactive session picker\n    hermes sessions rename ID T   Rename/title a session\n    hermes logs                   View agent.log (last 50 lines)\n    hermes logs -f                Follow agent.log in real time\n    hermes logs errors            View errors.log\n    hermes logs --since 1h        Lines from the last hour\n    hermes debug share             Upload debug report for support\n    hermes update                 Update to latest version\n    hermes dashboard              Start web UI dashboard (port 9119)\n    hermes dashboard --stop       Stop running dashboard processes\n    hermes dashboard --status     List running dashboard processes\n\nFor more help on a command:\n    hermes \u003ccommand\u003e --help\n",
+                                "stderr":  "",
+                                "duration_seconds":  0.654
+                            },
+                            {
+                                "label":  "hermes-acp-help",
+                                "argv":  [
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes-acp.exe",
+                                             "--help"
+                                         ],
+                                "timeout_seconds":  120,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "stdout":  "usage: hermes-acp [-h] [--version] [--check] [--setup] [--setup-browser]\n                  [--yes]\n\nRun Hermes Agent as an ACP stdio server.\n\noptions:\n  -h, --help       show this help message and exit\n  --version        Print Hermes version and exit\n  --check          Verify ACP dependencies and adapter imports, then exit\n  --setup          Run interactive Hermes provider/model setup for ACP\n                   terminal auth\n  --setup-browser  Install agent-browser + Playwright Chromium into\n                   ~/.hermes/node/ for browser tool support. Idempotent.\n  --yes, -y        Accept all prompts (currently used by --setup-browser to\n                   skip the ~400 MB Chromium download confirmation).\n",
+                                "stderr":  "",
+                                "duration_seconds":  0.229
+                            }
+                        ],
+    "next_recommended_operation":  "OPS-005 provider-gated first model run",
+    "non_claim_lock":  "OPS-004.2 is a safe local smoke repair only. It does not prove production readiness, security, provider success, CMS integration, memory authority, API authority, autonomy, or self-authorization."
+}
