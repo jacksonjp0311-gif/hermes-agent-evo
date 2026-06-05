@@ -1,0 +1,25 @@
+{
+  "schema": "HRCN-OPS-008-readme-lessons-alignment",
+  "operation": "OPS-008.1-readme-lessons-alignment",
+  "timestamp_utc": "2026-06-05T15:00:52.428317+00:00",
+  "base_commit": "af663ac03d45bdfc5d5afc945b1a01730683a81c",
+  "purpose": "Update README OPS chart, public metrics, AI checkpoint table, core laws, and AI failure learning ledger after OPS-008 passed.",
+  "ops_008_prerequisite_passed": true,
+  "readme_status_aligned_to_ops_008": true,
+  "lessons_logged": [
+    "HRCN-L-013",
+    "HRCN-L-014",
+    "HRCN-L-015"
+  ],
+  "next_recommended_operation": "OPS-009 replay and rollback evidence pack",
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "runtime_source_mutation": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "self_authorization": false,
+  "non_claim_lock": "OPS-008.1 updates README/documentation surfaces only. It grants no provider, API, CMS, memory, dependency, runtime mutation, autonomous, production, or self-authorization authority."
+}
