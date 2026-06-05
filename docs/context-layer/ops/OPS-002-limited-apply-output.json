@@ -1,0 +1,48 @@
+{
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "applied": false,
+  "authority_granted": false,
+  "mode": "apply",
+  "operation_count": 5,
+  "operations": [
+    {
+      "content": "# OPS-002 Operational Cadence\n\n- operation: OPS-002\n- base commit: 9de7fe12fb482371c145f9622d6214d5e91cff5a\n- timestamp utc: 20260605T121130Z\n- purpose: convert OPS-001 proof into repeatable morning operation\n- HRCN version: v2.0 sealed baseline\n- version churn: false\n- runtime mutation: false\n- cms write: false\n- memory write: false\n- api write: false\n- dependency mutation: false\n\n## Cadence\n\n1. Confirm clean worktree.\n2. Pull/rebase latest main.\n3. Verify HRCN v2.0 validation.\n4. Verify OPS-001 evidence.\n5. Run operator status.\n6. Run nexus status.\n7. Choose one bounded docs/context task.\n8. Build packet.\n9. Apply only through governed limited apply.\n10. Write evidence, replay/rollback report, and final OPS record.\n\n## Rule\n\nVersions define authority. OPS runs prove capability. Patches repair tooling. Releases showcase stable milestones.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-002-operational-cadence.md",
+      "sha256": "adb31939597d63486f7e8a8482eb45878863044d500f6ed6507b13b3b216aa1f"
+    },
+    {
+      "content": "# OPS-002 Authority Boundary\n\nOPS-002 does not widen authority.\n\nAllowed:\n\n- docs/context-layer/ops/**\n- docs/context-layer/hrcn-v1.6-apply-ledger/**\n- docs/context-layer/hrcn-v1.7-operational-ledger/**\n- docs/context-layer/hrcn-v1.8-replay-ledger/**\n- docs/context-layer/hrcn-v1.9-operator-packets/**\n- docs/context-layer/hrcn-v2.0-nexus-reports/**\n\nBlocked:\n\n- Hermes runtime mutation\n- cms/ write\n- memory write\n- API write\n- dependency mutation\n- autonomous authority\n- self-authorization\n\nPrimary lock: operational cadence makes the governed path repeatable; it does not become permission.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-002-authority-boundary.md",
+      "sha256": "431ece0f4b9b2f6e970a5cac52ce080b872fbebb6f4cdafe8bc567578cd47c7e"
+    },
+    {
+      "content": "# OPS-002 Validation Plan\n\nValidation checks:\n\n- HRCN v2.0 validation exists and passed.\n- OPS-001 final evidence exists and passed.\n- operator status command runs.\n- nexus status command runs.\n- limited apply creates OPS-002 docs/context files.\n- governed loop writes ledger.\n- replay/rollback writes report.\n- final evidence records all authority flags false.\n- staged secret scan passes.\n- final git status is clean.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-002-validation-plan.md",
+      "sha256": "c99bbd5fb5e1fd55faf8404c8d0ba3012167fe5ed7bc1ec4f2c8933905e73b0f"
+    },
+    {
+      "content": "# OPS-002 Rollback Plan\n\nRollback is docs/context-only:\n\n- delete OPS-002 files under docs/context-layer/ops/\n- delete OPS-002 generated ledger/report outputs if required\n- or revert the OPS-002 commit after push\n\nNo runtime, CMS, API, memory, or dependency rollback is required because OPS-002 does not touch those surfaces.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-002-rollback-plan.md",
+      "sha256": "6f0b58aeb94e285b30e68cc4727d97826e4473acff7828cf0625c6c47b55aead"
+    },
+    {
+      "content": "{\r\n    \"schema\":  \"HRCN-OPS-002-rollback-packet\",\r\n    \"operation\":  \"OPS-002\",\r\n    \"base_commit\":  \"9de7fe12fb482371c145f9622d6214d5e91cff5a\",\r\n    \"rollback_scope\":  [\r\n                           \"docs/context-layer/ops/OPS-002-*\"\r\n                       ],\r\n    \"operations\":  [\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-002-operational-cadence.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-002-authority-boundary.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-002-validation-plan.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-002-rollback-plan.md\"\r\n                       }\r\n                   ],\r\n    \"non_claim_lock\":  \"Rollback packet is not automatic rollback authority.\"\r\n}\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-002-rollback-packet.json",
+      "sha256": "8e3aecd17a4c14fa7208ad8400124cea0a05e7bd1d3698b9bea2a83bbf98c984"
+    }
+  ],
+  "packet_id": "OPS-002-limited-apply-20260605T121130Z",
+  "schema": "HRCN-v1.6-limited-apply-plan"
+}
+{
+  "applied": true,
+  "audit_path": "docs\\context-layer\\hrcn-v1.6-apply-ledger\\limited-apply-20260605T121131Z.json"
+}

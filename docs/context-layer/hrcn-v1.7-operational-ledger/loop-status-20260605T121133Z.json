@@ -1,0 +1,33 @@
+{
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "apply_authority_granted": false,
+  "automatic_apply_enabled": false,
+  "head": "9de7fe12fb482371c145f9622d6214d5e91cff5a",
+  "loop_steps": [
+    "observe",
+    "propose",
+    "classify",
+    "dry_run",
+    "evidence",
+    "authorize",
+    "limited_apply",
+    "validate",
+    "ledger"
+  ],
+  "next_allowed_action": "prepare_v1_6_limited_apply_packet_after_human_authorization",
+  "packet_id": "OPS-002-governed-loop-20260605T121130Z",
+  "requires_human_authorization": true,
+  "schema": "HRCN-v1.7-governed-loop-status",
+  "self_authorization_enabled": false,
+  "target_paths": [
+    "docs/context-layer/ops/OPS-002-authority-boundary.md",
+    "docs/context-layer/ops/OPS-002-operational-cadence.md",
+    "docs/context-layer/ops/OPS-002-rollback-packet.json",
+    "docs/context-layer/ops/OPS-002-rollback-plan.md",
+    "docs/context-layer/ops/OPS-002-validation-plan.md"
+  ],
+  "timestamp_utc": "2026-06-05T12:11:33.046915+00:00"
+}
