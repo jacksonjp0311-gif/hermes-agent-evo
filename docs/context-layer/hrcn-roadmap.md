@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v1.7 - Governed Operational Loop
+HRCN v1.8 - Replay and Rollback Hardening
 
 ## Phase Map
 
@@ -16,18 +16,18 @@ HRCN v1.7 - Governed Operational Loop
 | HRCN v1.5 | Apply-Gate Contract | Defines future apply candidate gate; no apply executor or apply authority. |
 | HRCN v1.6 | Limited Apply Executor | Bounded local executor for README.md and docs/context-layer/** only; no self-authorization. |
 | HRCN v1.7 | Governed Operational Loop | Coordinates observe/propose/classify/dry-run/evidence/authorize/limited-apply/validate/ledger without bypassing gates. |
-| HRCN v1.8 | Replay and Rollback Hardening | Future replayable audit and rollback assurance for governed loop operations. |
+| HRCN v1.8 | Replay and Rollback Hardening | Requires replay manifest, audit chain, rollback packet, operation hashes, and validation evidence. |
 | HRCN v1.9 | Operator Dashboard / Command Surface | Future human-facing operation panel or packet surface. |
 | HRCN v2.0 | Operational Hermes-CMS Nexus | Future operational nexus only after all prior gates validate. |
 
 ## Next Anchor
 
-HRCN v1.8 - Replay and Rollback Hardening.
+HRCN v1.9 - Operator Dashboard / Command Surface.
 
-## Current Operational Boundary
+## Current Replay/Rollback Boundary
 
-HRCN v1.7 coordinates the governed operational loop but cannot self-authorize, widen the v1.6 executor scope, mutate runtime, write CMS, write memory, call APIs, or change dependencies.
+HRCN v1.8 hardens the governed loop with replay and rollback evidence. It does not automatically rollback, self-authorize, widen scope, mutate runtime, write CMS, write memory, call APIs, or change dependencies.
 
 ## Non-Claim Lock
 
-HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.
+HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.

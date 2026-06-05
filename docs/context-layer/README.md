@@ -9,12 +9,12 @@ Internal RCC/CMS/HRCN context and governance boundary layer.
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: HRCN v0.1.3. Current repository boundary: HRCN v1.7. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: HRCN v0.1.3. Current repository boundary: HRCN v1.8. This README remains a navigation and context surface only.
 
 ## HRCN Boundary Note
 
 Profile source: HRCN v0.1.3.
-Current repository boundary: HRCN v1.7.
+Current repository boundary: HRCN v1.8.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, or apply/write authority is not granted by this README.
 
@@ -41,7 +41,7 @@ This folder may contain source files, docs, reports, schemas, scripts, UI assets
 
 ## T - Theory / Basis
 
-Profile inherited from HRCN v0.1.3. Current repository boundary is HRCN v1.7, with RCC repository orientation, CMS read-only mirror evidence, bounded CMS context-packet orientation, Python-backed HRCN script-format discipline, and Hermes upstream development boundaries.
+Profile inherited from HRCN v0.1.3. Current repository boundary is HRCN v1.8, with RCC repository orientation, CMS read-only mirror evidence, bounded CMS context-packet orientation, Python-backed HRCN script-format discipline, and Hermes upstream development boundaries.
 
 ## I - Invariants
 
@@ -71,7 +71,7 @@ Sphere Position:
 - Shell: center
 - Meridian(s): source, governance, documentation
 - Sector: context-layer
-- Version / TTL: HRCN-v1.7 boundary / inherits HRCN-v0.1.3 profile / 180 days
+- Version / TTL: HRCN-v1.8 boundary / inherits HRCN-v0.1.3 profile / 180 days
 - Last Verified: 2026-06-04
 
 Local Role:
@@ -82,7 +82,7 @@ Evidence Surface:
 
 - `docs/context-layer/hrcn-v0.1.3.validation.json` (profile source)
 - `docs/context-layer/hermes-surface-boundary-map.json` (current boundary)
-- `docs/context-layer/hrcn-v1.7.validation.json` (current governed operational loop validation)
+- `docs/context-layer/hrcn-v1.8.validation.json` (current replay and rollback hardening validation)
 
 Validation Surface:
 
@@ -242,3 +242,6 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `hrcn-v1.7-governed-operational-loop.json` | HRCN v1.7 governed operational loop. |
 | `hrcn-v1.7.validation.json` | HRCN v1.7 validation artifact. |
 | `../../scripts/hrcn/governed_operational_loop_v1_7.py` | Bounded docs/context operational loop controller. |
+| `hrcn-v1.8-replay-rollback-hardening.json` | HRCN v1.8 replay and rollback hardening. |
+| `hrcn-v1.8.validation.json` | HRCN v1.8 validation artifact. |
+| `../../scripts/hrcn/replay_rollback_hardening_v1_8.py` | Replay and rollback hardening checker. |

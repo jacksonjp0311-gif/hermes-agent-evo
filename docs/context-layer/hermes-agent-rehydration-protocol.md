@@ -1,8 +1,8 @@
-# Hermes Agent Rehydration Protocol - Current through HRCN v1.7
+# Hermes Agent Rehydration Protocol - Current through HRCN v1.8
 
 Status: docs/context/navigation protocol only.
-Current HRCN state: HRCN v1.7.
-Next anchor: HRCN v1.8 - Replay and Rollback Hardening.
+Current HRCN state: HRCN v1.8.
+Next anchor: HRCN v1.9 - Operator Dashboard / Command Surface.
 
 ## Purpose
 
@@ -94,6 +94,9 @@ Read:
 - `docs/context-layer/hrcn-v1.6.validation.json`
 - `docs/context-layer/hrcn-v1.7-governed-operational-loop.json`
 - `docs/context-layer/hrcn-v1.7.validation.json`
+- `docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json`
+- `docs/context-layer/hrcn-v1.8.validation.json`
+- `scripts/hrcn/replay_rollback_hardening_v1_8.py`
 - `scripts/hrcn/governed_operational_loop_v1_7.py`
 - `scripts/hrcn/limited_apply_executor_v1_6.py`
 - `docs/context-layer/hrcn-v1.0.validation.json`
@@ -540,4 +543,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.
+HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.

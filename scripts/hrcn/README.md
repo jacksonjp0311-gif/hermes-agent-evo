@@ -44,3 +44,22 @@ observe -> propose -> classify -> dry-run -> evidence -> authorize -> limited ap
 
 It validates an HRCN-v1.7 operation packet and may write a docs/context ledger status. It does not apply changes by itself and does not widen the v1.6 executor scope.
 
+## HRCN v1.8 Replay and Rollback Hardening
+
+`replay_rollback_hardening_v1_8.py` validates replay/rollback manifests for governed docs/context operations.
+
+It checks:
+
+```text
+expected base commit
+operation hashes
+allowed scope
+limited apply audit ref
+rollback packet ref
+post-apply validation ref
+automatic rollback disabled
+self-authorization disabled
+```
+
+It does not automatically rollback and does not widen the v1.6/v1.7 scope.
+

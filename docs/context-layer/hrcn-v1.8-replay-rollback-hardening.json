@@ -1,0 +1,54 @@
+{
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "blocked_authority": {
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "automatic_rollback_enabled": false,
+    "autonomous_authority_granted": false,
+    "cms_write_authority_granted": false,
+    "memory_write_authority_granted": false,
+    "runtime_integration_created": false,
+    "self_authorization_enabled": false
+  },
+  "governed_loop_dependency": "scripts/hrcn/governed_operational_loop_v1_7.py",
+  "hardening_checks": [
+    "expected_base_commit_present",
+    "operation_before_after_hashes_present",
+    "all_paths_within_scope",
+    "limited_apply_audit_ref_present",
+    "rollback_packet_ref_present",
+    "post_apply_validation_ref_present",
+    "replay_report_available",
+    "automatic_rollback_disabled",
+    "self_authorization_disabled"
+  ],
+  "limited_apply_executor_dependency": "scripts/hrcn/limited_apply_executor_v1_6.py",
+  "mode": "replay_rollback_hardening",
+  "next_recommended_phase": "HRCN v1.9 - Operator Dashboard / Command Surface",
+  "non_claim_lock": "HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.",
+  "previous_validated_anchor": "HRCN v1.7",
+  "primary_law": "A governed operation is not operationally safe until it can be replayed, audited, and rolled back within its authorized scope.",
+  "replay_rollback_manifest_schema": {
+    "expected_base_commit": "string required",
+    "limited_apply_audit_ref": "path required",
+    "manifest_id": "string required",
+    "operations": [
+      {
+        "after_sha256": "string required",
+        "before_sha256": "string required",
+        "operation": "add|modify|delete",
+        "path": "README.md or docs/context-layer/**"
+      }
+    ],
+    "post_apply_validation_ref": "path required",
+    "rollback_packet_ref": "path required",
+    "schema": "HRCN-v1.8-replay-rollback-manifest"
+  },
+  "schema": "HRCN-v1.8-replay-rollback-hardening",
+  "timestamp_utc": "2026-06-05T10:15:32.070106+00:00",
+  "tool_path": "scripts/hrcn/replay_rollback_hardening_v1_8.py",
+  "version": "HRCN v1.8"
+}

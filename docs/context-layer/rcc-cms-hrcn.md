@@ -800,3 +800,30 @@ scripts/hrcn/governed_operational_loop_v1_7.py
 
 Non-claim lock: HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.
 <!-- HRCN_V17_GOVERNED_OPERATIONAL_LOOP_END -->
+
+<!-- HRCN_V18_REPLAY_ROLLBACK_HARDENING_START -->
+## HRCN v1.8 - Replay and Rollback Hardening
+
+```text
+A governed operation is not operationally safe until it can be replayed, audited, and rolled back within its authorized scope.
+expected_base_commit required
+operation before/after hashes required
+limited-apply audit required
+rollback packet required
+post-apply validation evidence required
+automatic_rollback_enabled=false
+self_authorization_enabled=false
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.8-replay-rollback-hardening.json
+docs/context-layer/hrcn-v1.8-replay-rollback-hardening.md
+docs/context-layer/hrcn-v1.8.validation.json
+docs/context-layer/hrcn-v1.8.validation.md
+scripts/hrcn/replay_rollback_hardening_v1_8.py
+```
+
+Non-claim lock: HRCN v1.8 adds replay and rollback hardening for the governed docs/context loop. It defines how ledger entries, limited-apply audits, expected base commits, operation hashes, rollback packets, and replay manifests are checked before an operation is trusted. It does not perform automatic rollback, does not self-authorize, does not widen v1.6 scope, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, and does not call APIs.
+<!-- HRCN_V18_REPLAY_ROLLBACK_HARDENING_END -->
