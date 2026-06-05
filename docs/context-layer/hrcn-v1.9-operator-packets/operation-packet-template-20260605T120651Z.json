@@ -1,0 +1,32 @@
+{
+  "automatic_apply_enabled": false,
+  "automatic_rollback_enabled": false,
+  "created_by": "HRCN v1.9 operator command surface",
+  "created_utc": "2026-06-05T12:06:51.690993+00:00",
+  "expected_base_commit": "19430b6436f574e6ac8aeceb4c231dd1f65e2102",
+  "loop_steps": [
+    "observe",
+    "propose",
+    "classify",
+    "dry_run",
+    "evidence",
+    "authorize",
+    "limited_apply",
+    "validate",
+    "ledger"
+  ],
+  "next_manual_steps": [
+    "review packet",
+    "prepare dry-run/evidence package",
+    "prepare v1.6 limited apply packet if authorized",
+    "run v1.8 replay/rollback hardening after any future apply"
+  ],
+  "packet_id": "hrcn-v1.9-template-20260605T120651Z",
+  "requires_human_authorization": true,
+  "schema": "HRCN-v1.7-governed-operation-packet",
+  "self_authorization_enabled": false,
+  "summary": "OPS-001 bounded operational proof docs/context operation",
+  "target_paths": [
+    "docs/context-layer/ops/OPS-001-operational-proof.md"
+  ]
+}

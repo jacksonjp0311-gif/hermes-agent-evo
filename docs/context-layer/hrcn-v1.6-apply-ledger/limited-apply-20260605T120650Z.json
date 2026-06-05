@@ -1,0 +1,45 @@
+{
+  "applied": true,
+  "authority_granted": true,
+  "operations": [
+    {
+      "content": "# OPS-001 Operational Proof\n\n- operation: OPS-001\n- base commit: 19430b6436f574e6ac8aeceb4c231dd1f65e2102\n- timestamp utc: 20260605T120650Z\n- scope: README.md, docs/context-layer/**\n- result: first bounded operational proof run\n- runtime mutation: false\n- cms write: false\n- memory write: false\n- api write: false\n- dependency mutation: false\n\n## Proof Chain\n\nv1.9 operator surface\nv1.7 governed operational loop\nv1.6 limited docs/context apply\nv1.8 replay/rollback hardening\nv2.0 operational nexus status\n\nNon-claim lock: OPS-001 proves the bounded docs/context governance path can run locally. It does not grant runtime, CMS, API, dependency, or autonomous authority.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-001-operational-proof.md",
+      "sha256": "5462cb8a0318c26f1fea323701abf4ba87c3d8951fbeb2b2b8efac941506aeb1"
+    },
+    {
+      "content": "# OPS-001 Evidence Package\n\n- HRCN v2.0 validation: docs/context-layer/hrcn-v2.0.validation.json\n- Base commit: 19430b6436f574e6ac8aeceb4c231dd1f65e2102\n- Operation id: OPS-001\n\nExpected evidence:\n\n- limited apply audit\n- operator outputs\n- governed loop ledger\n- replay/rollback report\n- nexus status report\n- final evidence JSON\n\nBoundary:\n\n- README.md + docs/context-layer/** only\n- no runtime mutation\n- no cms write\n- no API write\n- no dependency mutation\n- no autonomous authority\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-001-evidence-package.md",
+      "sha256": "e548cd15741880ceb17b3d6cfa033e4d48be49bd979cbf78121228b6e3ffb689"
+    },
+    {
+      "content": "# OPS-001 Rollback Plan\n\nRollback is docs/context-only:\n\n- delete OPS-001 evidence files and generated OPS-001 ledger/report files\n- or revert the OPS-001 commit after push\n\nNo runtime, CMS, API, or dependency rollback is required because OPS-001 does not touch those surfaces.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-001-rollback-plan.md",
+      "sha256": "30ac4bcc3234686deff1843b26737c891b8542970a961a64676fa6a6e37f66d0"
+    },
+    {
+      "content": "# OPS-001 Validation Plan\n\n1. Verify HRCN v2.0 validation passed.\n2. Run v1.6 limited apply executor.\n3. Run v1.9 operator status/gates/next-commands.\n4. Run v1.7 governed loop ledger.\n5. Run v1.8 replay/rollback check.\n6. Run v2.0 operational nexus status report.\n7. Confirm docs/context-only changed paths.\n8. Run staged secret scan before commit.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-001-validation-plan.md",
+      "sha256": "d7bae9e07b881558f1c1177434fea228e00a3b846fa095b705693a998ff4441e"
+    },
+    {
+      "content": "# OPS-001 Post-Apply Validation\n\nExpected post-apply evidence exists and changed paths remain docs/context-only.\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-001-post-apply-validation.md",
+      "sha256": "4cd764b2171344924d3f89622f11c146a28b10559f217363f8fd8958f3c3f60d"
+    },
+    {
+      "content": "{\r\n    \"schema\":  \"HRCN-OPS-001-rollback-packet\",\r\n    \"operation\":  \"OPS-001\",\r\n    \"base_commit\":  \"19430b6436f574e6ac8aeceb4c231dd1f65e2102\",\r\n    \"rollback_scope\":  [\r\n                           \"docs/context-layer/ops/OPS-001-*\"\r\n                       ],\r\n    \"operations\":  [\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-001-operational-proof.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-001-evidence-package.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-001-rollback-plan.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-001-validation-plan.md\"\r\n                       },\r\n                       {\r\n                           \"operation\":  \"delete\",\r\n                           \"path\":  \"docs/context-layer/ops/OPS-001-post-apply-validation.md\"\r\n                       }\r\n                   ],\r\n    \"non_claim_lock\":  \"Rollback packet is not automatic rollback authority.\"\r\n}\n",
+      "operation": "add",
+      "path": "docs/context-layer/ops/OPS-001-rollback-packet.json",
+      "sha256": "a523bb500acdd4f7862bbf7da6f170f02e57852549721d04c1560d9e3f314259"
+    }
+  ],
+  "packet_id": "OPS-001-limited-apply-20260605T120650Z",
+  "schema": "HRCN-v1.6-limited-apply-audit",
+  "timestamp_utc": "2026-06-05T12:06:50.810272+00:00"
+}
