@@ -1,0 +1,19 @@
+{
+  "schema": "HRCN-OPS-004.1-literal-token-marker-scrub",
+  "operation": "OPS-004.1-literal-token-marker-scrub",
+  "timestamp_utc": "2026-06-05T13:24:54.8951325Z",
+  "reason": "Prior surgical closure still had a token-like marker in OPS-004.1 smoke repair evidence. This closure performs literal trigger-string scrubbing before staged scan.",
+  "files_checked": 10,
+  "reran_hermes": false,
+  "install_executed_now": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "runtime_source_mutation": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "self_authorization": false,
+  "next_recommended_operation": "OPS-004.2 real smoke repair from sanitized evidence",
+  "non_claim_lock": "This closure is evidence hygiene only. It does not rerun Hermes, call providers, write CMS, write memory, write APIs, mutate dependencies, mutate runtime, or grant authority."
+}
