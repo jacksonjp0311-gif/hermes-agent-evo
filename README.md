@@ -68,6 +68,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.1.1 | Can HRCN restore the readable Python-backed all-one coding format after paste-safe Base64 transport? | `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json` |
 | HRCN v1.1.2 | Can HRCN close stale context-surface current-state drift before permission bridge design? | `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json` |
 | HRCN v1.2 | Can Hermes classify requested authority before any CMS/Hermes action or dry-run? | `docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json` |
+| HRCN v1.3 | Can Hermes define a read-only bridge prototype over the bounded CMS packet without runtime authority? | `docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -92,8 +93,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.2` |
-| Previous validated anchor | `HRCN v1.1.2` |
+| Current checkpoint | `HRCN v1.3` |
+| Previous validated anchor | `HRCN v1.2` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -104,7 +105,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.2.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.3.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -122,6 +123,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Python format technique lock | `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json` |
 | Context surface coherence closure | `docs/context-layer/hrcn-v1.1.2-context-surface-coherence-closure.json` |
 | Permission bridge dry-run design | `docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json` |
+| CMS-Hermes read-only bridge prototype | `docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json` |
 
 ### Core Law
 
@@ -199,7 +201,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.2 adds permission bridge dry-run design; it does not change Hermes runtime.
+HRCN v1.3 adds a read-only bridge prototype contract; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -844,6 +846,54 @@ autonomous authority
 Non-claim lock: the permission bridge is design-only; it is not a loader, adapter, executor, writer, permission grant, or apply decision.
 <!-- HRCN_V12_PERMISSION_BRIDGE_DRY_RUN_DESIGN_END -->
 
+<!-- HRCN_V13_READ_ONLY_BRIDGE_PROTOTYPE_START -->
+### HRCN v1.3 CMS-Hermes Read-Only Bridge Prototype
+
+HRCN v1.3 defines a read-only bridge prototype contract between Hermes and bounded CMS context.
+
+Current rule:
+
+```text
+A read-only bridge may translate bounded CMS context into Hermes orientation; it may not command Hermes or execute CMS.
+```
+
+Prototype artifacts:
+
+```text
+docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json
+docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.md
+docs/context-layer/hrcn-v1.3.validation.json
+docs/context-layer/hrcn-v1.3.validation.md
+```
+
+Prototype flow:
+
+```text
+receive bridge request
+classify requested authority using HRCN v1.2
+allow only bounded read refs from HRCN v1.1 packet
+resolve evidence/context summaries
+return orientation packet with authority_granted=false
+```
+
+v1.3 does not grant:
+
+```text
+runtime integration
+loader creation
+adapter creation
+CMS execution
+dry-run execution
+apply execution
+CMS write authority
+memory write authority
+API authority
+autonomous authority
+```
+
+Non-claim lock: the read-only bridge prototype is a reference contract, not a runtime bridge.
+<!-- HRCN_V13_READ_ONLY_BRIDGE_PROTOTYPE_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -1025,7 +1075,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.2 defines the Permission Bridge Dry-Run Design as a machine-readable contract for proposal classification, authority requests, evidence requirements, dry-run requirements, rollback requirements, and human authorization requirements. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Design presence is not execution authority.
+HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

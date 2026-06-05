@@ -1,0 +1,142 @@
+{
+  "allowed_in_v1_3": [
+    "define read-only bridge request contract",
+    "define read-only bridge response contract",
+    "define reference algorithm",
+    "define sample trace",
+    "update README/context-layer documentation",
+    "validate bounded read-set restrictions"
+  ],
+  "blocked_actions": [
+    "import cms/src as Hermes runtime",
+    "execute cms/scripts",
+    "load cms/tests as runtime validation authority",
+    "create Hermes runtime adapter",
+    "create Hermes runtime loader",
+    "treat CMS outputs as commands",
+    "treat CMS outputs as permission grants",
+    "write CMS memory",
+    "write external APIs",
+    "apply repairs",
+    "mutate dependencies"
+  ],
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "apply_executor_created": false,
+    "autonomous_authority_granted": false,
+    "benchmark_executor_created": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "memory_write_authority_granted": false,
+    "read_only_bridge_runtime_implemented": false,
+    "repair_executor_created": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "bridge_request_contract": {
+    "bridge_request_id": "string required",
+    "cms_read_refs": "array of paths that must exist in the v1.1 bounded read set",
+    "evidence_refs": "array of docs/context-layer or cms evidence paths",
+    "human_request_text": "string",
+    "proposal_id": "string optional",
+    "requested_authority": [
+      "none",
+      "read_context",
+      "summarize",
+      "classify"
+    ],
+    "requested_operation": [
+      "orient",
+      "resolve_context_refs",
+      "summarize_evidence",
+      "classify_permission"
+    ],
+    "requested_surface": [
+      "cms_bounded_packet",
+      "cms_mirror",
+      "context_layer"
+    ]
+  },
+  "bridge_response_contract": {
+    "apply_executed": false,
+    "authority_granted": false,
+    "blocked_actions": "array",
+    "bridge_request_id": "string",
+    "cms_executed": false,
+    "decision_class": [
+      "observe_only",
+      "read_only_context",
+      "summarize_evidence",
+      "blocked"
+    ],
+    "dry_run_executed": false,
+    "evidence_summary": "string",
+    "resolved_read_refs": "array",
+    "runtime_mutated": false,
+    "unresolved_read_refs": "array"
+  },
+  "input_dependencies": {
+    "bounded_cms_context_packet": "docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json",
+    "cms_mirror_marker": "cms/.hrcn-read-only-mirror.json",
+    "cms_read_only_boundary": "cms/MIRROR_READONLY_BOUNDARY.md",
+    "permission_bridge_design": "docs/context-layer/hrcn-v1.2-permission-bridge-dry-run-design.json"
+  },
+  "mode": "docs_context_reference_prototype",
+  "next_recommended_phase": "HRCN v1.4 - Dry-Run Execution Harness",
+  "non_claim_lock": "HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.",
+  "not_allowed_in_v1_3": [
+    "runtime code changes",
+    "dependency changes",
+    "CMS copy",
+    "CMS execution",
+    "CMS write authority",
+    "memory write authority",
+    "API write authority",
+    "runtime adapter implementation",
+    "runtime loader implementation",
+    "dry-run executor implementation",
+    "apply executor implementation"
+  ],
+  "previous_validated_anchor": "HRCN v1.2",
+  "primary_law": "A read-only bridge may translate bounded CMS context into Hermes orientation; it may not command Hermes or execute CMS.",
+  "prototype_algorithm": [
+    "load HRCN v1.1 bounded CMS context packet",
+    "load HRCN v1.2 permission bridge design",
+    "reject any requested authority outside none/read_context/summarize/classify",
+    "reject any cms_read_ref outside v1.1 bounded_read_set",
+    "reject cms/src, cms/scripts, cms/tests, dependency, secret, and runtime roots",
+    "map request to observe_only/read_only_context/summarize_evidence/blocked",
+    "return bridge response with authority_granted=false"
+  ],
+  "purpose": "Describe how Hermes may read bounded CMS context and return orientation without execution authority.",
+  "sample_trace": {
+    "request": {
+      "bridge_request_id": "hrcn-v1.3-sample-001",
+      "cms_read_refs": [
+        "cms/MIRROR_READONLY_BOUNDARY.md",
+        "cms/docs/roadmap/CMS_ROADMAP.md"
+      ],
+      "requested_authority": "read_context",
+      "requested_operation": "resolve_context_refs",
+      "requested_surface": "cms_bounded_packet"
+    },
+    "response": {
+      "apply_executed": false,
+      "authority_granted": false,
+      "cms_executed": false,
+      "decision_class": "read_only_context",
+      "dry_run_executed": false,
+      "resolved_read_refs": [
+        "cms/MIRROR_READONLY_BOUNDARY.md",
+        "cms/docs/roadmap/CMS_ROADMAP.md"
+      ],
+      "runtime_mutated": false,
+      "unresolved_read_refs": []
+    }
+  },
+  "schema": "HRCN-v1.3-cms-hermes-read-only-bridge-prototype",
+  "timestamp_utc": "2026-06-05T09:43:04.807124+00:00",
+  "version": "HRCN v1.3"
+}

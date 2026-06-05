@@ -2,7 +2,7 @@
 
 ## Current
 
-HRCN v1.2 - Permission Bridge Dry-Run Design
+HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype
 
 ## Phase Map
 
@@ -13,7 +13,7 @@ HRCN v1.2 - Permission Bridge Dry-Run Design
 | HRCN v1.1.1 | Python Format + Codex Style Technique Lock | Readable all-one script format restored; Python writer/validator role locked. |
 | HRCN v1.1.2 | Context Surface Coherence Closure | Mini README, rehydration, roadmap, root README, and context contract agree before v1.2. |
 | HRCN v1.2 | Permission Bridge Dry-Run Design | Classifies requested authority before action; design only. |
-| HRCN v1.3 | CMS-Hermes Read-Only Bridge Prototype | Future prototype; no write authority by default. |
+| HRCN v1.3 | CMS-Hermes Read-Only Bridge Prototype | Reference prototype contract; no runtime loader, adapter, or execution authority. |
 | HRCN v1.4 | Dry-Run Execution Harness | Future simulation harness; no apply. |
 | HRCN v1.5 | Apply-Gate Contract | Future apply gate contract; human authorization and rollback required. |
 | HRCN v1.6 | Limited Apply Executor | Future bounded reversible docs/context executor only after apply gate. |
@@ -22,12 +22,12 @@ HRCN v1.2 - Permission Bridge Dry-Run Design
 
 ## Next Anchor
 
-HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype.
+HRCN v1.4 - Dry-Run Execution Harness.
 
-## Current Permission Boundary
+## Current Bridge Boundary
 
-HRCN v1.2 defines how proposals should be classified before any action. It is design only. It creates no loader, adapter, dry-run executor, apply executor, CMS writer, memory writer, API writer, or runtime integration.
+HRCN v1.3 defines a read-only bridge prototype contract. It may describe how Hermes orients from bounded CMS context, but it creates no runtime loader, adapter, executor, CMS writer, memory writer, API writer, or apply authority.
 
 ## Non-Claim Lock
 
-HRCN v1.2 defines the Permission Bridge Dry-Run Design as a machine-readable contract for proposal classification, authority requests, evidence requirements, dry-run requirements, rollback requirements, and human authorization requirements. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Design presence is not execution authority.
+HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.

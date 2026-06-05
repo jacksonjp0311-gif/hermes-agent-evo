@@ -634,3 +634,39 @@ blocked
 
 Non-claim lock: HRCN v1.2 defines the Permission Bridge Dry-Run Design as a machine-readable contract for proposal classification, authority requests, evidence requirements, dry-run requirements, rollback requirements, and human authorization requirements. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Design presence is not execution authority.
 <!-- HRCN_V12_PERMISSION_BRIDGE_DRY_RUN_DESIGN_END -->
+
+<!-- HRCN_V13_READ_ONLY_BRIDGE_PROTOTYPE_START -->
+## HRCN v1.3 - CMS-Hermes Read-Only Bridge Prototype
+
+```text
+A read-only bridge may translate bounded CMS context into Hermes orientation; it may not command Hermes or execute CMS.
+bridge requests are read-only
+CMS refs must be inside the v1.1 bounded read set
+v1.2 permission classes classify requested authority
+responses return authority_granted=false
+CMS is not executed
+Hermes runtime is not mutated
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.json
+docs/context-layer/hrcn-v1.3-cms-hermes-read-only-bridge-prototype.md
+docs/context-layer/hrcn-v1.3.validation.json
+docs/context-layer/hrcn-v1.3.validation.md
+```
+
+Prototype outputs:
+
+```text
+decision_class
+resolved_read_refs
+unresolved_read_refs
+evidence_summary
+blocked_actions
+authority_granted=false
+```
+
+Non-claim lock: HRCN v1.3 defines a CMS-Hermes Read-Only Bridge Prototype as a documentation/context reference contract only. The prototype may describe how Hermes reads the bounded CMS context packet and permission bridge design, resolves allowed read references, and emits an orientation response with authority_granted=false. It does not wire CMS into Hermes runtime, does not create a runtime loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. Bridge prototype presence is not bridge execution authority.
+<!-- HRCN_V13_READ_ONLY_BRIDGE_PROTOTYPE_END -->
