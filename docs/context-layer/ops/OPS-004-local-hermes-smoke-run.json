@@ -1,0 +1,132 @@
+{
+    "schema":  "HRCN-OPS-004-local-hermes-smoke-run",
+    "operation":  "OPS-004",
+    "timestamp_utc":  "2026-06-05T13:08:48.2385243Z",
+    "base_commit":  "084c1e42afc46ad2e992ef0f019b35a794300e31",
+    "venv_policy":  ".venv is gitignored; using repo-local venv for continuity.",
+    "venv_path":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv",
+    "smoke_passed":  false,
+    "install_executed":  true,
+    "venv_created_or_reused":  true,
+    "help_surfaces_executed":  true,
+    "model_call_executed":  false,
+    "provider_call_executed":  false,
+    "api_key_required_for_smoke":  false,
+    "runtime_source_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_file_mutation_committed":  false,
+    "self_authorization":  false,
+    "command_results":  [
+                            {
+                                "label":  "create-venv",
+                                "exe":  "python.exe",
+                                "args":  [
+                                             "-m",
+                                             "venv",
+                                             "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv"
+                                         ],
+                                "timeout_seconds":  0,
+                                "exit_code":  0,
+                                "ok":  true,
+                                "timed_out":  false,
+                                "skipped":  true,
+                                "stdout":  "Existing venv reused.",
+                                "stderr":  ""
+                            },
+                            {
+                                "label":  "venv-python-version",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  60,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            },
+                            {
+                                "label":  "pip-upgrade",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  300,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            },
+                            {
+                                "label":  "editable-install",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  900,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            },
+                            {
+                                "label":  "pip-check",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\python.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  180,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            },
+                            {
+                                "label":  "hermes-help",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  120,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            },
+                            {
+                                "label":  "hermes-agent-help",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes-agent.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  120,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            },
+                            {
+                                "label":  "hermes-acp-help",
+                                "exe":  "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes-acp.exe",
+                                "args":  [
+
+                                         ],
+                                "timeout_seconds":  120,
+                                "exit_code":  1,
+                                "ok":  false,
+                                "timed_out":  false,
+                                "stdout":  "",
+                                "stderr":  "Cannot validate argument on parameter \u0027ArgumentList\u0027. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+                            }
+                        ],
+    "next_recommended_operation":  "OPS-004.1 smoke repair based on captured evidence",
+    "non_claim_lock":  "OPS-004 is a local help/smoke run only. It does not prove production readiness, security, correctness, CMS integration, API authority, memory authority, provider success, autonomy, or self-authorization."
+}

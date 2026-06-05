@@ -1,0 +1,28 @@
+{
+    "schema":  "HRCN-OPS-004-local-hermes-smoke-final-evidence",
+    "operation":  "OPS-004",
+    "timestamp_utc":  "2026-06-05T13:08:48.4395246Z",
+    "base_commit":  "084c1e42afc46ad2e992ef0f019b35a794300e31",
+    "v2_0_prerequisite_passed":  true,
+    "ops_001_prerequisite_passed":  true,
+    "ops_002_prerequisite_passed":  true,
+    "ops_002_1_prerequisite_passed":  true,
+    "ops_003_prerequisite_passed":  true,
+    "smoke_passed":  false,
+    "install_executed":  true,
+    "venv_created_or_reused":  true,
+    "runtime_help_executed":  true,
+    "model_call_executed":  false,
+    "provider_call_executed":  false,
+    "runtime_source_mutation":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "self_authorization":  false,
+    "changed_paths":  [
+                          "docs/context-layer/ops/OPS-004-local-hermes-smoke-run.json",
+                          "docs/context-layer/ops/OPS-004-local-hermes-smoke-run.md"
+                      ],
+    "non_claim_lock":  "OPS-004 executes local help/smoke surfaces only. It does not grant provider, API, CMS, memory, dependency, runtime mutation, autonomous, or self-authorization authority."
+}
