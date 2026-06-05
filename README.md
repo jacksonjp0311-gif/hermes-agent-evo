@@ -65,6 +65,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.0.2 | Can CMS source be manifested and secret-scanned before mirror copy? | `docs/context-layer/hrcn-v1.0.2-cms-mirror-preflight-manifest.json` |
 | HRCN v1.0.3 | Can CMS be copied as a read-only evidence mirror without runtime authority? | `docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json` |
 | HRCN v1.1 | Can the mirrored CMS be compressed into a bounded read-only context packet for Hermes orientation? | `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json` |
+| HRCN v1.1.1 | Can HRCN restore the readable Python-backed all-one coding format after paste-safe Base64 transport? | `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -89,8 +90,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.1` |
-| Previous validated anchor | `HRCN v1.0.3` |
+| Current checkpoint | `HRCN v1.1.1` |
+| Previous validated anchor | `HRCN v1.1` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -101,7 +102,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.1.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.1.1.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -116,6 +117,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS read-only mirror copy evidence | `docs/context-layer/hrcn-v1.0.3-cms-read-only-mirror-copy-evidence.json` |
 | CMS mirror root | `cms/` |
 | Bounded CMS context packet | `docs/context-layer/hrcn-v1.1-bounded-cms-context-packet.json` |
+| Python format technique lock | `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json` |
 
 ### Core Law
 
@@ -172,6 +174,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - CMS source provenance, manifest, secret scan, rollback, validation, and human authorization must exist before mirror copy.
 - CMS may be mirrored only as evidence-bounded read-only context, never as immediate authority.
 - Packet content cannot upgrade its own permission class.
+- PowerShell orchestrates; Python computes, writes, and validates; Base64 is transport only, not canonical source style.
 - A bounded CMS context packet is orientation, not a loader, adapter, executor, permission grant, or apply decision.
 - A bounded CMS context packet orients Hermes; it does not authorize Hermes.
 
@@ -192,7 +195,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.1 adds a bounded CMS context packet; it does not change Hermes runtime.
+HRCN v1.1.1 adds a Python format technique lock; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -715,6 +718,43 @@ autonomous authority
 Non-claim lock: the bounded CMS context packet is not a loader, adapter, executor, writer, permission grant, or apply decision.
 <!-- HRCN_V11_BOUNDED_CMS_CONTEXT_PACKET_END -->
 
+<!-- HRCN_V111_PYTHON_FORMAT_TECHNIQUE_LOCK_START -->
+### HRCN v1.1.1 Python Format + Codex Style Technique Lock
+
+HRCN v1.1.1 restores the readable coding surface after the paste-safe Base64
+transport wrapper obscured the actual source shape.
+
+Current rule:
+
+```text
+PowerShell orchestrates; Python computes, writes, and validates; Base64 is transport only, not canonical source style.
+```
+
+Canonical all-one script shape:
+
+```text
+0. Location-first root anchor
+1. Helper functions and boundary guards
+2. Python writer / validator engine
+3. Candidate text built in memory
+4. Validation before file writes
+5. Allowed-path boundary check
+6. Staged secret scan
+7. Commit / pull --rebase / push
+8. Return to root
+```
+
+Role split:
+
+```text
+PowerShell = orchestration, root verification, git, staging, push
+Python     = structured packets, evidence, hashes, validation, candidate writes
+Base64     = optional paste-safe transport wrapper only
+```
+
+Non-claim lock: the coding style lock is a repository-governance rule, not a runtime bridge.
+<!-- HRCN_V111_PYTHON_FORMAT_TECHNIQUE_LOCK_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -896,7 +936,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.
+HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 

@@ -554,3 +554,25 @@ HRCN v1.2 - Permission Bridge Dry-Run Design
 
 Non-claim lock: HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.
 <!-- HRCN_V11_BOUNDED_CMS_CONTEXT_PACKET_END -->
+
+<!-- HRCN_V111_PYTHON_FORMAT_TECHNIQUE_LOCK_START -->
+## HRCN v1.1.1 - Python Format + Codex Style Technique Lock
+
+```text
+PowerShell orchestrates; Python computes, writes, and validates; Base64 is transport only, not canonical source style.
+PowerShell remains the orchestrator.
+Python remains the structured writer / validator.
+Base64 remains transport only.
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json
+docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.md
+docs/context-layer/hrcn-v1.1.1.validation.json
+docs/context-layer/hrcn-v1.1.1.validation.md
+```
+
+Non-claim lock: HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.
+<!-- HRCN_V111_PYTHON_FORMAT_TECHNIQUE_LOCK_END -->

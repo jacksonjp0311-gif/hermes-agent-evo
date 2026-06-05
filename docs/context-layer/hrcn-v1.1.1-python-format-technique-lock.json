@@ -1,0 +1,55 @@
+{
+  "blocked_authority": {
+    "adapter_implemented": false,
+    "api_write_authority_granted": false,
+    "apply_authority_granted": false,
+    "apply_executor_created": false,
+    "autonomous_authority_granted": false,
+    "cms_write_authority_granted": false,
+    "dry_run_executor_created": false,
+    "memory_write_authority_granted": false,
+    "runtime_integration_created": false,
+    "runtime_loader_created": false
+  },
+  "canonical_script_shape": [
+    "location_first_root_anchor",
+    "helper_functions",
+    "clean_tree_gate",
+    "embedded_python_writer_validator_engine",
+    "candidate_text_built_in_memory",
+    "validation_before_write",
+    "allowed_path_boundary_check",
+    "staged_secret_scan",
+    "commit_pull_rebase_push",
+    "return_to_root"
+  ],
+  "next_recommended_phase": "HRCN v1.2 - Permission Bridge Dry-Run Design",
+  "non_claim_lock": "HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.",
+  "previous_validated_anchor": "HRCN v1.1",
+  "primary_law": "PowerShell orchestrates; Python computes, writes, and validates; Base64 is transport only, not canonical source style.",
+  "role_split": {
+    "base64": [
+      "paste_safe_transport_only",
+      "not_canonical_source_style"
+    ],
+    "powershell": [
+      "location",
+      "orchestration",
+      "git",
+      "staging",
+      "secret_scan",
+      "commit",
+      "push"
+    ],
+    "python": [
+      "structured_packets",
+      "evidence",
+      "hashes",
+      "validation",
+      "candidate_writes"
+    ]
+  },
+  "schema": "HRCN-v1.1.1-python-format-technique-lock",
+  "timestamp_utc": "2026-06-05T09:18:44.856660+00:00",
+  "version": "HRCN v1.1.1"
+}

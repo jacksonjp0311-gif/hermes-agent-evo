@@ -372,6 +372,26 @@ Core rule:
 A bounded CMS context packet orients Hermes; it does not authorize Hermes.
 ```
 
+### 17. Python Format Technique Scan
+
+Read:
+
+- `docs/context-layer/hrcn-v1.1.1-python-format-technique-lock.json`
+- `docs/context-layer/hrcn-v1.1.1.validation.json`
+
+Recover:
+
+- canonical all-one script shape
+- PowerShell/Python role split
+- Base64 transport-only rule
+- validation-before-write rule
+
+Core rule:
+
+```text
+PowerShell orchestrates; Python computes, writes, and validates; Base64 is transport only, not canonical source style.
+```
+
 ## Version-Readiness Lock
 
 ```text
@@ -390,4 +410,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.1 compresses selected CMS mirror surfaces into a bounded read-only context packet. It does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority. The packet is orientation and evidence only; permissions and human authorization remain external gates.
+HRCN v1.1.1 restores the readable all-one coding standard. Future HRCN scripts should be location-first, sectioned, PowerShell-orchestrated, and Python-backed for structured packet/evidence generation. Base64 wrappers may be used only as paste-safe transport shells; they must not become the canonical readable source. This release does not wire CMS into Hermes runtime, does not create a loader, adapter, writer, dry-run executor, apply executor, benchmark executor, repair executor, API writer, live integration, or apply authority.

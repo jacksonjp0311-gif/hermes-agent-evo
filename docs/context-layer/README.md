@@ -222,3 +222,5 @@ Cyber lessons and rehydration protocol must be read before Hermes runtime bridge
 | `cms/MIRROR_READONLY_BOUNDARY.md` | CMS mirror boundary marker. |
 | `hrcn-v1.1-bounded-cms-context-packet.json` | v1.1 bounded CMS context packet. |
 | `hrcn-v1.1.validation.json` | v1.1 validation artifact. |
+| `hrcn-v1.1.1-python-format-technique-lock.json` | v1.1.1 Python format and all-one script style lock. |
+| `hrcn-v1.1.1.validation.json` | v1.1.1 validation artifact. |
