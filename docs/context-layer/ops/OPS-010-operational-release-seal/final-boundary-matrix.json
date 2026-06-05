@@ -1,0 +1,28 @@
+{
+  "schema": "HRCN-OPS-010-final-boundary-matrix",
+  "operation": "OPS-010",
+  "tag_name": "hrcn-ops-v0.1.0",
+  "parent_commit": "c683a72fa555254564c93c5046339e943db26642",
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "rollback_executed": false,
+  "self_authorization": false,
+  "ongoing_provider_authority": false,
+  "tag_creation_planned_after_commit": true,
+  "tag_freezes_authority": false,
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/ops/**",
+    "docs/context-layer/hrcn-v2.0-nexus-reports/**"
+  ],
+  "sealed_claim": "HRCN v2.0 OPS-010 operational bridge proof for bounded docs/context governance only.",
+  "non_claim_lock": "A release seal and tag freeze a proof state. They do not widen authority, mutate runtime, write CMS/memory/API, change dependencies, or grant autonomous/self-authorized authority."
+}
