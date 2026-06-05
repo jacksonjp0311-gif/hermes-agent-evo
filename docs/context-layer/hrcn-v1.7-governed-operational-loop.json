@@ -1,0 +1,61 @@
+{
+  "allowed_scope": [
+    "README.md",
+    "docs/context-layer/**"
+  ],
+  "blocked_scope": [
+    "cms/**",
+    "Hermes runtime folders",
+    "dependency files",
+    "local secrets",
+    "external APIs"
+  ],
+  "created_authority": {
+    "governed_loop_controller_created": true,
+    "loop_can_call_api": false,
+    "loop_can_self_authorize": false,
+    "loop_can_touch_cms": false,
+    "loop_can_touch_runtime": false,
+    "loop_can_widen_scope": false
+  },
+  "limited_apply_executor_dependency": "scripts/hrcn/limited_apply_executor_v1_6.py",
+  "loop_steps": [
+    "observe",
+    "propose",
+    "classify",
+    "dry_run",
+    "evidence",
+    "authorize",
+    "limited_apply",
+    "validate",
+    "ledger"
+  ],
+  "loop_tool_path": "scripts/hrcn/governed_operational_loop_v1_7.py",
+  "mode": "bounded_docs_context_operational_loop",
+  "next_recommended_phase": "HRCN v1.8 - Replay and Rollback Hardening",
+  "non_claim_lock": "HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.",
+  "operation_packet_schema": {
+    "automatic_apply_enabled": false,
+    "loop_steps": [
+      "observe",
+      "propose",
+      "classify",
+      "dry_run",
+      "evidence",
+      "authorize",
+      "limited_apply",
+      "validate",
+      "ledger"
+    ],
+    "packet_id": "string required",
+    "requires_human_authorization": true,
+    "schema": "HRCN-v1.7-governed-operation-packet",
+    "self_authorization_enabled": false,
+    "target_paths": "non-empty list inside README.md or docs/context-layer/**"
+  },
+  "previous_validated_anchor": "HRCN v1.6",
+  "primary_law": "A governed operational loop may coordinate gates; it may not bypass them, self-authorize, or widen apply scope.",
+  "schema": "HRCN-v1.7-governed-operational-loop",
+  "timestamp_utc": "2026-06-05T10:12:08.211281+00:00",
+  "version": "HRCN v1.7"
+}

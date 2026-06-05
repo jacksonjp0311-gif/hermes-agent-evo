@@ -1,8 +1,8 @@
-# Hermes Agent Rehydration Protocol - Current through HRCN v1.6
+# Hermes Agent Rehydration Protocol - Current through HRCN v1.7
 
 Status: docs/context/navigation protocol only.
-Current HRCN state: HRCN v1.6.
-Next anchor: HRCN v1.7 - Governed Operational Loop.
+Current HRCN state: HRCN v1.7.
+Next anchor: HRCN v1.8 - Replay and Rollback Hardening.
 
 ## Purpose
 
@@ -92,6 +92,9 @@ Read:
 - `docs/context-layer/hrcn-v1.5.validation.json`
 - `docs/context-layer/hrcn-v1.6-limited-apply-executor.json`
 - `docs/context-layer/hrcn-v1.6.validation.json`
+- `docs/context-layer/hrcn-v1.7-governed-operational-loop.json`
+- `docs/context-layer/hrcn-v1.7.validation.json`
+- `scripts/hrcn/governed_operational_loop_v1_7.py`
 - `scripts/hrcn/limited_apply_executor_v1_6.py`
 - `docs/context-layer/hrcn-v1.0.validation.json`
 - `docs/context-layer/hrcn-v1.0.1-cms-read-only-mirror-import-authorization-path.json`
@@ -537,4 +540,4 @@ If a writer or validator fails, staging, commit, and push are forbidden.
 
 ## Non-Claim Lock
 
-HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.
+HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.

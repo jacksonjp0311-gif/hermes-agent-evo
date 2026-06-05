@@ -33,3 +33,14 @@ external APIs
 ```
 
 Non-claim lock: the tool existing in `scripts/hrcn/` does not grant permission to run it.
+
+## HRCN v1.7 Governed Operational Loop
+
+`governed_operational_loop_v1_7.py` coordinates the bounded operational loop:
+
+```text
+observe -> propose -> classify -> dry-run -> evidence -> authorize -> limited apply -> validate -> ledger
+```
+
+It validates an HRCN-v1.7 operation packet and may write a docs/context ledger status. It does not apply changes by itself and does not widen the v1.6 executor scope.
+

@@ -775,3 +775,28 @@ scripts/hrcn/README.md
 
 Non-claim lock: HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.
 <!-- HRCN_V16_LIMITED_APPLY_EXECUTOR_END -->
+
+<!-- HRCN_V17_GOVERNED_OPERATIONAL_LOOP_START -->
+## HRCN v1.7 - Governed Operational Loop
+
+```text
+A governed operational loop may coordinate gates; it may not bypass them, self-authorize, or widen apply scope.
+sequence = observe -> propose -> classify -> dry-run -> evidence -> authorize -> limited apply -> validate -> ledger
+allowed scope = README.md + docs/context-layer/**
+loop_self_authorization_enabled=false
+loop_automatic_apply_enabled=false
+loop_can_widen_v1_6_scope=false
+```
+
+Primary artifacts:
+
+```text
+docs/context-layer/hrcn-v1.7-governed-operational-loop.json
+docs/context-layer/hrcn-v1.7-governed-operational-loop.md
+docs/context-layer/hrcn-v1.7.validation.json
+docs/context-layer/hrcn-v1.7.validation.md
+scripts/hrcn/governed_operational_loop_v1_7.py
+```
+
+Non-claim lock: HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.
+<!-- HRCN_V17_GOVERNED_OPERATIONAL_LOOP_END -->

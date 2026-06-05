@@ -72,6 +72,7 @@ Human authorization unlocks dangerous transitions.
 | HRCN v1.4 | Can Hermes define a dry-run harness contract that simulates without applying changes? | `docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json` |
 | HRCN v1.5 | Can Hermes define the apply gate that a future apply candidate must pass without applying now? | `docs/context-layer/hrcn-v1.5-apply-gate-contract.json` |
 | HRCN v1.6 | Can Hermes create a bounded docs/context-only apply executor without granting self-authorization? | `docs/context-layer/hrcn-v1.6-limited-apply-executor.json` |
+| HRCN v1.7 | Can Hermes coordinate the governed operational loop without bypassing gates or widening scope? | `docs/context-layer/hrcn-v1.7-governed-operational-loop.json` |
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
@@ -96,8 +97,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 
 | Surface | Result |
 |---|---:|
-| Current checkpoint | `HRCN v1.6` |
-| Previous validated anchor | `HRCN v1.5` |
+| Current checkpoint | `HRCN v1.7` |
+| Previous validated anchor | `HRCN v1.6` |
 | Runtime code changed | `False` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
@@ -108,7 +109,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Runtime evolution boundary | `docs/context-layer/hrcn-runtime-evolution-boundary.md` |
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
-| Validation report | `docs/context-layer/hrcn-v1.6.validation.json` |
+| Validation report | `docs/context-layer/hrcn-v1.7.validation.json` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -130,6 +131,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Dry-run execution harness contract | `docs/context-layer/hrcn-v1.4-dry-run-execution-harness-contract.json` |
 | Apply-gate contract | `docs/context-layer/hrcn-v1.5-apply-gate-contract.json` |
 | Limited apply executor | `docs/context-layer/hrcn-v1.6-limited-apply-executor.json` |
+| Governed operational loop | `docs/context-layer/hrcn-v1.7-governed-operational-loop.json` |
 
 ### Core Law
 
@@ -207,7 +209,7 @@ HRCN v1.1 keeps the current repository state docs/context plus CMS read-only mir
 Current boundary:
 
 ```text
-HRCN v1.6 adds a limited docs/context apply executor tool; it does not change Hermes runtime.
+HRCN v1.7 adds a governed operational loop controller; it does not change Hermes runtime.
 ```
 
 Future boundary:
@@ -1032,6 +1034,43 @@ docs/context-layer/**
 Non-claim lock: executor creation is not apply permission; future execution still requires human authorization and a bounded packet.
 <!-- HRCN_V16_LIMITED_APPLY_EXECUTOR_END -->
 
+<!-- HRCN_V17_GOVERNED_OPERATIONAL_LOOP_START -->
+### HRCN v1.7 Governed Operational Loop
+
+HRCN v1.7 creates the governed operational loop controller for bounded docs/context operation.
+
+Current rule:
+
+```text
+A governed operational loop may coordinate gates; it may not bypass them, self-authorize, or widen apply scope.
+```
+
+Loop artifacts:
+
+```text
+docs/context-layer/hrcn-v1.7-governed-operational-loop.json
+docs/context-layer/hrcn-v1.7-governed-operational-loop.md
+docs/context-layer/hrcn-v1.7.validation.json
+docs/context-layer/hrcn-v1.7.validation.md
+scripts/hrcn/governed_operational_loop_v1_7.py
+```
+
+Loop sequence:
+
+```text
+observe -> propose -> classify -> dry-run -> evidence -> authorize -> limited apply -> validate -> ledger
+```
+
+Hard scope inherited from v1.6:
+
+```text
+README.md
+docs/context-layer/**
+```
+
+Non-claim lock: the loop coordinates gates only; it does not self-authorize or widen executor scope.
+<!-- HRCN_V17_GOVERNED_OPERATIONAL_LOOP_END -->
+
 ### Rehydration Protocol
 
 A fresh human or AI thread must complete five scans before proposing work:
@@ -1213,7 +1252,7 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 
 ### Non-Claim Lock
 
-HRCN v1.6 creates a local limited apply executor tool for future human-authorized README.md and docs/context-layer/** packets only. The executor is not run by this release, does not self-authorize, does not touch Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant apply authority merely by existing.
+HRCN v1.7 creates a governed operational loop controller for docs/context operations. The loop coordinates observe, propose, classify, dry-run planning, evidence, authorization, limited apply handoff, validation, and ledger stages. It does not widen v1.6 scope, does not self-authorize, does not mutate Hermes runtime, does not touch cms/, does not change dependencies, does not call APIs, and does not grant autonomous authority.
 <!-- HRCN_CONTEXT_LAYER_END -->
 ---
 
