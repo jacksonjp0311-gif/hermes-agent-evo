@@ -1,0 +1,24 @@
+{
+  "schema": "HRCN-OPS-014-applied-manifest",
+  "operation": "OPS-014",
+  "timestamp_utc": "2026-06-05T15:44:54.123830+00:00",
+  "base_commit": "392ed143ec8a5b7684bf22f3b7ad6ab1161fd194",
+  "dry_run_source": "OPS-013",
+  "limited_apply_rehearsal_passed": true,
+  "apply_executed": true,
+  "applied_scope": [
+    "README.md",
+    "docs/context-layer/ops/**"
+  ],
+  "blocked_scope_verified": [
+    "runtime source",
+    "cms runtime",
+    "CMS write",
+    "memory write",
+    "API write",
+    "dependency mutation",
+    "environment file commit"
+  ],
+  "next_recommended_operation": "OPS-015 first controlled cybernetic loop",
+  "non_claim_lock": "This manifest records docs/context apply only. It is not runtime integration, CMS write, memory write, API write, dependency mutation, autonomy, or self-authorization."
+}

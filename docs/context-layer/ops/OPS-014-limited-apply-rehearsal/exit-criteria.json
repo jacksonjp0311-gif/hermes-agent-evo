@@ -1,0 +1,20 @@
+{
+  "schema": "HRCN-OPS-014-exit-criteria",
+  "operation": "OPS-014",
+  "criteria": {
+    "ops_013_prerequisite_passed": true,
+    "human_authorization_phrase_matched": true,
+    "apply_gate_passed": true,
+    "limited_apply_rehearsal_passed": true,
+    "docs_context_apply_executed": true,
+    "runtime_source_mutation": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true
+  },
+  "next_allowed_operation": "OPS-015 first controlled cybernetic loop"
+}

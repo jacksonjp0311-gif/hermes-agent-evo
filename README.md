@@ -161,17 +161,17 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-013 human-gated dry-run bridge rehearsal passed.
+Current post-seal state: OPS-014 limited apply rehearsal passed.
 
-The HRCN OPS v0.1.0 proof is sealed. The system has now moved from read-only memory/context orientation into a human-gated dry-run bridge rehearsal. The proposed next action was simulated, not applied.
+The HRCN OPS v0.1.0 proof is sealed. The system has now completed a bounded chain from read-only memory/context orientation to human-gated dry-run to docs/context-only limited apply rehearsal.
 
 | Stage | Meaning | Status |
 |---|---|---:|
 | OPS-011 | Controlled runtime intake plan. | passed |
 | OPS-012 | Governed memory-read adapter rehearsal. | passed |
 | OPS-013 | Human-gated dry-run bridge rehearsal. | passed |
-| OPS-014 | Limited apply rehearsal. | next |
-| OPS-015 | First controlled cybernetic loop. | planned |
+| OPS-014 | Limited apply rehearsal. | passed |
+| OPS-015 | First controlled cybernetic loop. | next |
 
 Operational definition for the next phase:
 
@@ -180,8 +180,9 @@ observe -> retrieve bounded context -> classify authority -> propose
 -> dry-run -> evidence -> human gate -> limited apply only if authorized
 ```
 
-Post-seal lock: dry-run can propose and simulate; it cannot apply. No runtime mutation, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization is granted by OPS-013.
+Post-seal lock: limited apply is restricted to docs/context evidence and README alignment. No runtime mutation, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization is granted by OPS-014.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -222,9 +223,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-010-final-evidence.json` |
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-013-final-evidence.json` |
-| Post-seal status | `OPS-013 human-gated dry-run bridge rehearsal passed` |
-| Next post-seal gate | `OPS-014 limited apply rehearsal` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-014-final-evidence.json` |
+| Post-seal status | `OPS-014 limited apply rehearsal passed` |
+| Next post-seal gate | `OPS-015 first controlled cybernetic loop` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -322,6 +323,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - OPS-012 memory-read rehearsal is not CMS execution or memory write.
 - Dry-run bridges can propose and simulate; they cannot apply.
 - Human authorization for dry-run does not imply human authorization for apply.
+- Limited apply rehearsal may update docs/context evidence only under a separate human gate.
+- A docs/context apply is not runtime integration, CMS write, memory write, or API authority.
 
 ### Current HRCN Surface Lock
 
@@ -1456,6 +1459,8 @@ Gap classes:
 | HRCN-L-023 | Hash-verified bounded reads prevent silent context drift. | A memory adapter can accidentally ingest unbounded or changed surfaces. | Read adapters must compare declared and computed hashes for required bounded read files before producing orientation evidence. |
 | HRCN-L-024 | Human-gated dry-run must not be mistaken for apply permission. | A successful dry-run can create pressure to execute the proposal immediately. | Dry-run authorization and apply authorization must remain separate gates with separate evidence. |
 | HRCN-L-025 | Proposed diffs need a simulated manifest before apply rehearsal. | Without a simulated diff, the operator cannot see what would change before granting apply. | Every dry-run bridge must emit a simulated diff manifest, dry-run report, rollback preview, and authority matrix before OPS-014. |
+| HRCN-L-026 | Limited apply needs a narrower gate than dry-run. | Dry-run evidence can show what would change, but apply changes repo state even when docs-only. | OPS-014 requires a new human phrase, apply packet, apply-gate evidence, applied manifest, rollback note, and final evidence. |
+| HRCN-L-027 | Docs/context apply must remain visibly separate from runtime integration. | A successful apply rehearsal can be mistaken for code/runtime authority. | Every limited apply record must state runtime_source_mutation=false, cms_write=false, memory_write=false, api_write=false, and dependency_mutation_committed=false. |
 
 ### HRCN Roadmap
 
