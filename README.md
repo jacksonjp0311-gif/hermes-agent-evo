@@ -161,9 +161,9 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-014 limited apply rehearsal passed.
+Current post-seal state: OPS-015 first controlled cybernetic loop passed.
 
-The HRCN OPS v0.1.0 proof is sealed. The system has now completed a bounded chain from read-only memory/context orientation to human-gated dry-run to docs/context-only limited apply rehearsal.
+The HRCN OPS v0.1.0 proof is sealed. The system has now completed its first bounded cybernetic evidence loop: observe, retrieve bounded context, classify authority, propose, dry-run, record evidence, pass a human gate, and perform limited docs/context apply.
 
 | Stage | Meaning | Status |
 |---|---|---:|
@@ -171,17 +171,19 @@ The HRCN OPS v0.1.0 proof is sealed. The system has now completed a bounded chai
 | OPS-012 | Governed memory-read adapter rehearsal. | passed |
 | OPS-013 | Human-gated dry-run bridge rehearsal. | passed |
 | OPS-014 | Limited apply rehearsal. | passed |
-| OPS-015 | First controlled cybernetic loop. | next |
+| OPS-015 | First controlled cybernetic loop. | passed |
+| OPS-016 | Observe-only loop cadence harness. | next |
 
-Operational definition for the next phase:
+Operational definition for the active bounded loop:
 
 ```text
 observe -> retrieve bounded context -> classify authority -> propose
 -> dry-run -> evidence -> human gate -> limited apply only if authorized
 ```
 
-Post-seal lock: limited apply is restricted to docs/context evidence and README alignment. No runtime mutation, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization is granted by OPS-014.
+Post-seal lock: the cybernetic loop is evidence-bounded and human-gated. It is not autonomous and grants no runtime mutation, CMS write, memory write, API write, dependency mutation, ongoing provider authority, or self-authorization.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -223,9 +225,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-010-final-evidence.json` |
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-014-final-evidence.json` |
-| Post-seal status | `OPS-014 limited apply rehearsal passed` |
-| Next post-seal gate | `OPS-015 first controlled cybernetic loop` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-015-final-evidence.json` |
+| Post-seal status | `OPS-015 first controlled cybernetic loop passed` |
+| Next post-seal gate | `OPS-016 observe-only loop cadence harness` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -325,6 +327,8 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 - Human authorization for dry-run does not imply human authorization for apply.
 - Limited apply rehearsal may update docs/context evidence only under a separate human gate.
 - A docs/context apply is not runtime integration, CMS write, memory write, or API authority.
+- A controlled cybernetic loop is evidence-bounded and human-gated, not autonomous.
+- First-loop success does not grant ongoing provider authority or continuous self-directed operation.
 
 ### Current HRCN Surface Lock
 
@@ -1461,6 +1465,8 @@ Gap classes:
 | HRCN-L-025 | Proposed diffs need a simulated manifest before apply rehearsal. | Without a simulated diff, the operator cannot see what would change before granting apply. | Every dry-run bridge must emit a simulated diff manifest, dry-run report, rollback preview, and authority matrix before OPS-014. |
 | HRCN-L-026 | Limited apply needs a narrower gate than dry-run. | Dry-run evidence can show what would change, but apply changes repo state even when docs-only. | OPS-014 requires a new human phrase, apply packet, apply-gate evidence, applied manifest, rollback note, and final evidence. |
 | HRCN-L-027 | Docs/context apply must remain visibly separate from runtime integration. | A successful apply rehearsal can be mistaken for code/runtime authority. | Every limited apply record must state runtime_source_mutation=false, cms_write=false, memory_write=false, api_write=false, and dependency_mutation_committed=false. |
+| HRCN-L-028 | The first cybernetic loop must be evidence-bounded before it is automated. | A loop can appear operational once it observes, proposes, and applies docs/context evidence. | First-loop success must still require human gate, docs/context scope, all dangerous authority flags false, and no ongoing authority. |
+| HRCN-L-029 | Loop continuity is not the same as autonomy. | Repeated observe/propose/apply cycles could be mistaken for self-directed agency. | Future cadence must start observe-only and require explicit authorization before any write or apply phase. |
 
 ### HRCN Roadmap
 

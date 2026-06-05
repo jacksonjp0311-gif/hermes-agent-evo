@@ -1,0 +1,18 @@
+{
+  "schema": "HRCN-OPS-015-exit-criteria",
+  "operation": "OPS-015",
+  "criteria": {
+    "ops_014_prerequisite_passed": true,
+    "observation_recorded": true,
+    "bounded_context_retrieved": true,
+    "authority_classified": true,
+    "proposal_written": true,
+    "dry_run_passed": true,
+    "human_gate_matched": true,
+    "limited_apply_executed": true,
+    "readme_post_seal_track_written": true,
+    "lessons_logged": true,
+    "all_dangerous_authority_flags_false": true
+  },
+  "next_allowed_operation": "OPS-016 observe-only loop cadence harness"
+}

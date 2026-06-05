@@ -1,0 +1,14 @@
+{
+  "schema": "HRCN-OPS-015-proposal",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "proposal_title": "Complete first controlled cybernetic loop and prepare OPS-016 observe-only loop cadence",
+  "proposal": {
+    "finish_current_loop": true,
+    "write_final_evidence": true,
+    "update_readme": true,
+    "next_operation": "OPS-016 observe-only loop cadence harness",
+    "next_operation_scope": "observe_only_evidence_cadence"
+  },
+  "non_claim_lock": "Proposal is bounded to docs/context evidence and README alignment."
+}

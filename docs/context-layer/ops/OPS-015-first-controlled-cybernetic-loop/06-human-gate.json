@@ -1,0 +1,16 @@
+{
+  "schema": "HRCN-OPS-015-human-gate",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "required_phrase": "I AUTHORIZE HRCN OPS-015 FIRST CONTROLLED CYBERNETIC LOOP",
+  "phrase_matched": true,
+  "authorized_scope": "single controlled docs/context loop",
+  "write_authority": "docs_context_only_for_this_operation",
+  "runtime_authority": false,
+  "cms_write_authority": false,
+  "memory_write_authority": false,
+  "api_write_authority": false,
+  "dependency_authority": false,
+  "self_authorization": false,
+  "non_claim_lock": "The gate authorizes this docs/context loop only."
+}

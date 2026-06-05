@@ -1,0 +1,39 @@
+{
+  "schema": "HRCN-OPS-015-authority-classification",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "human_authorization_phrase_matched": true,
+  "loop_authority": "single_docs_context_controlled_loop",
+  "authority_granted": "docs_context_only_for_this_operation",
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "rollback_executed": false,
+  "self_authorization": false,
+  "ongoing_provider_authority": false,
+  "allowed_actions": [
+    "write OPS-015 evidence",
+    "update README post-seal track",
+    "log lessons",
+    "set OPS-016 as next planning gate"
+  ],
+  "blocked_actions": [
+    "mutate runtime",
+    "execute CMS runtime",
+    "write CMS",
+    "write memory",
+    "write API",
+    "change dependencies",
+    "commit environment files",
+    "call provider/model",
+    "self-authorize"
+  ],
+  "non_claim_lock": "Authority classification is scoped to one docs/context loop and grants no runtime/CMS/memory/API/dependency/autonomous authority."
+}

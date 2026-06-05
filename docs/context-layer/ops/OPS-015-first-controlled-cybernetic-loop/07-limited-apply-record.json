@@ -1,0 +1,26 @@
+{
+  "schema": "HRCN-OPS-015-limited-apply-record",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "limited_apply_executed": true,
+  "apply_scope": "docs_context_only",
+  "applied_outputs": [
+    "OPS-015 evidence files",
+    "README post-seal track update",
+    "lesson ledger additions"
+  ],
+  "runtime_source_mutation": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "env_file_committed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "rollback_executed": false,
+  "self_authorization": false,
+  "ongoing_provider_authority": false,
+  "non_claim_lock": "Limited apply means docs/context evidence and README alignment only."
+}

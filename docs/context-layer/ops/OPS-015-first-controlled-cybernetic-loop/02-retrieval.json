@@ -1,0 +1,52 @@
+{
+  "schema": "HRCN-OPS-015-retrieval",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "retrieved_context": [
+    {
+      "path": "README.md",
+      "exists": true,
+      "size_bytes": 83025,
+      "role": "bounded_context_for_first_controlled_loop"
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-012-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1723,
+      "role": "bounded_context_for_first_controlled_loop"
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-013-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1559,
+      "role": "bounded_context_for_first_controlled_loop"
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-014-final-evidence.json",
+      "exists": true,
+      "size_bytes": 1635,
+      "role": "bounded_context_for_first_controlled_loop"
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-012-governed-memory-read-adapter-rehearsal/memory-orientation-summary.json",
+      "exists": true,
+      "size_bytes": 4216,
+      "role": "bounded_context_for_first_controlled_loop"
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-013-human-gated-dry-run-bridge-rehearsal/dry-run-report.json",
+      "exists": true,
+      "size_bytes": 605,
+      "role": "bounded_context_for_first_controlled_loop"
+    },
+    {
+      "path": "docs/context-layer/ops/OPS-014-limited-apply-rehearsal/apply-gate-evidence.json",
+      "exists": true,
+      "size_bytes": 939,
+      "role": "bounded_context_for_first_controlled_loop"
+    }
+  ],
+  "memory_context_role": "orientation_only",
+  "authority_from_memory": false,
+  "non_claim_lock": "Retrieved context can orient the loop but cannot authorize action."
+}

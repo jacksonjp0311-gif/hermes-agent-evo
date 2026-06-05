@@ -1,0 +1,11 @@
+{
+  "schema": "HRCN-OPS-015-observation",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "base_commit": "5819c7ddce8f734f51b529aa7483ab4489c951ea",
+  "short_head": "5819c7ddc",
+  "git_status_short": "",
+  "observed_repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "observation_scope": "repo_state_and_prior_evidence_only",
+  "non_claim_lock": "Observation reads repository state only and grants no authority."
+}

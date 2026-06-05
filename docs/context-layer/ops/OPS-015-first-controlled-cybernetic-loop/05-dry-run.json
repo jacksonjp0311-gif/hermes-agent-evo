@@ -1,0 +1,26 @@
+{
+  "schema": "HRCN-OPS-015-dry-run",
+  "operation": "OPS-015",
+  "timestamp_utc": "2026-06-05T15:49:39.708440+00:00",
+  "dry_run_passed": true,
+  "would_write": [
+    "OPS-015 observation",
+    "OPS-015 retrieval",
+    "OPS-015 authority classification",
+    "OPS-015 proposal",
+    "OPS-015 dry-run",
+    "OPS-015 human gate",
+    "OPS-015 limited apply record",
+    "OPS-015 final evidence",
+    "README post-seal track"
+  ],
+  "would_not_write": [
+    "runtime source",
+    "CMS runtime",
+    "CMS memory stores",
+    "API configuration",
+    "dependency files",
+    "environment files"
+  ],
+  "non_claim_lock": "Dry-run confirms planned docs/context evidence only."
+}
