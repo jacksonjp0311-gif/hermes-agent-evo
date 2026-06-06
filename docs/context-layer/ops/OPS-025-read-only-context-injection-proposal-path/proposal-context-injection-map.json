@@ -1,0 +1,13 @@
+{
+  "schema": "HRCN-OPS-025-proposal-context-injection-map",
+  "operation": "OPS-025",
+  "timestamp_utc": "2026-06-06T13:17:08.616421+00:00",
+  "repair_note": "Test expectation repaired from read_only to READ ONLY/read-only to match actual bridge text.",
+  "runtime_mutation_scope": "agent/agent_init.py appends read-only HRCN context to ephemeral_system_prompt only when HERMES_HRCN_CONTEXT is enabled",
+  "environment_gate": "HERMES_HRCN_CONTEXT=1|true|yes|on|proposal",
+  "default_behavior_changed": false,
+  "context_target": "ephemeral_system_prompt",
+  "bridge_boundary_check_required": true,
+  "fails_closed_on_bridge_error": true,
+  "non_claim_lock": "OPS-025 injects read-only orientation into proposal context only. It grants no tool/write/provider/CMS/memory/API/autonomous authority."
+}

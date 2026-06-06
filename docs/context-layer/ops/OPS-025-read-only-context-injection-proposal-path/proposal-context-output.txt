@@ -1,0 +1,3 @@
+COMMAND: python -c import os; os.environ['HERMES_HRCN_CONTEXT']='1'; from agent.agent_init import _maybe_append_hrcn_context; text=_maybe_append_hrcn_context('proposal-root'); assert '[HRCN READ-ONLY RUNTIME CONTEXT]' in text; assert 'READ ONLY' in text; assert 'does not authorize tools' in text; print('read-only HRCN proposal context injection passed')
+RETURN CODE: 0
+read-only HRCN proposal context injection passed

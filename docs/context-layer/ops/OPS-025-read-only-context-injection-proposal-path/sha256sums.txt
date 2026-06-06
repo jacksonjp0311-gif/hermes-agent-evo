@@ -1,0 +1,6 @@
+90253b0adfcb4af202313b0fd51b7dca4c80b7154be65d63c49100b2e7d2dc50  agent/agent_init.py
+29f722f03016dd78ca2baea7ab5b698d8b41e085012e2697783e8fcfb064b653  tests/test_hrcn_context_injection_proposal_path.py
+56c363574993a2ce05a9a1307243114a1b336c988f68d3ec88725c51c927f253  docs/context-layer/ops/OPS-025-read-only-context-injection-proposal-path/test-output.txt
+d4562247ed608d16fca51493e68bd727fced4d1f2119af68dcb80bbe64ae43fe  docs/context-layer/ops/OPS-025-read-only-context-injection-proposal-path/proposal-context-output.txt
+87d0db648cb389d483c0f66db8e371307fa5d1e878175ce465b852511364cb25  docs/context-layer/ops/OPS-025-read-only-context-injection-proposal-path/proposal-context-injection-map.json
+5bd8718ddfd812387033449528aa5c97e2d54c1a3c871f8c081182b24a5dd39d  docs/context-layer/ops/OPS-025-read-only-context-injection-proposal-path/authority-matrix.json

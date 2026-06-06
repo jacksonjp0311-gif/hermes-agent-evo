@@ -27,6 +27,7 @@ import threading
 import time
 import uuid
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 from urllib.parse import urlparse, parse_qs, urlunparse
 
@@ -132,6 +133,43 @@ def _merge_custom_provider_extra_body(agent, custom_providers: List[Dict[str, An
     overrides["extra_body"] = merged_extra_body
     agent.request_overrides = overrides
 
+
+def _hrcn_context_injection_enabled() -> bool:
+    return (os.environ.get("HERMES_HRCN_CONTEXT") or "").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+        "proposal",
+    }
+
+
+def _maybe_append_hrcn_context(ephemeral_system_prompt: str | None) -> str | None:
+    if not _hrcn_context_injection_enabled():
+        return ephemeral_system_prompt
+
+    try:
+        import hrcn_runtime_bridge as _hrcn_bridge
+
+        repo_root = Path(__file__).resolve().parent.parent
+        _hrcn_bridge.assert_read_only_boundary(repo_root)
+        context = _hrcn_bridge.format_context_for_prompt(repo_root)
+    except Exception as exc:
+        logger.warning("HRCN context injection skipped: %s", exc)
+        return ephemeral_system_prompt
+
+    block = (
+        "\n\n[HRCN READ-ONLY RUNTIME CONTEXT]\n"
+        + context
+        + "\n[/HRCN READ-ONLY RUNTIME CONTEXT]\n"
+        + "This context is orientation only. It does not authorize tools, writes, "
+        + "CMS, memory, API calls, dependency changes, autonomy, or self-authorization.\n"
+    )
+    if ephemeral_system_prompt:
+        if "[HRCN READ-ONLY RUNTIME CONTEXT]" in ephemeral_system_prompt:
+            return ephemeral_system_prompt
+        return ephemeral_system_prompt + block
+    return block.strip()
 
 def init_agent(
     agent,
@@ -260,7 +298,7 @@ def init_agent(
     agent.save_trajectories = save_trajectories
     agent.verbose_logging = verbose_logging
     agent.quiet_mode = quiet_mode
-    agent.ephemeral_system_prompt = ephemeral_system_prompt
+    agent.ephemeral_system_prompt = _maybe_append_hrcn_context(ephemeral_system_prompt)
     agent.platform = platform  # "cli", "telegram", "discord", "whatsapp", etc.
     agent._user_id = user_id  # Platform user identifier (gateway sessions)
     agent._user_id_alt = user_id_alt  # Optional stable alternate platform identifier

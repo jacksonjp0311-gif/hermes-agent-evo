@@ -161,9 +161,9 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-024 negative-control bridge authority refusal passed.
+Current post-seal state: OPS-025 read-only context injection into Hermes proposal path passed.
 
-HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only runtime bridge. OPS-023 exposed read-only bridge status through Hermes status/startup surfaces. OPS-024 proves the bridge refuses forged or drifted authority flags.
+HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only runtime bridge. OPS-023 exposed status. OPS-024 proved authority refusal. OPS-025 allows the agent proposal path to receive read-only HRCN orientation through an explicit environment gate.
 
 | Stage | Meaning | Status |
 |---|---|---:|
@@ -171,7 +171,8 @@ HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the r
 | OPS-022 | Read-only HRCN runtime bridge module. | passed |
 | OPS-023 | Wire read-only bridge status into Hermes startup/status path. | passed |
 | OPS-024 | Negative-control bridge authority refusal. | passed |
-| OPS-025 | Read-only context injection into Hermes proposal path. | next |
+| OPS-025 | Read-only context injection into Hermes proposal path. | passed |
+| OPS-026 | Proposal-context negative-control and v0.3 seal prep. | next |
 
 Operational bridge target:
 
@@ -179,12 +180,13 @@ Operational bridge target:
 Hermes runtime
 -> read HRCN bounded-loop status
 -> refuse authority drift
--> expose read-only context/status
+-> optionally inject read-only HRCN orientation into proposal context
 -> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: OPS-024 proves refusal behavior only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: OPS-025 is opt-in read-only context injection only via `HERMES_HRCN_CONTEXT`. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -236,9 +238,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-024-final-evidence.json` |
-| Post-seal status | `OPS-024 negative-control bridge authority refusal passed` |
-| Next post-seal gate | `OPS-025 read-only context injection into Hermes proposal path` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-025-final-evidence.json` |
+| Post-seal status | `OPS-025 read-only context injection into Hermes proposal path passed` |
+| Next post-seal gate | `OPS-026 proposal-context negative-control and v0.3 seal prep` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -1773,3 +1775,15 @@ Built by [Nous Research](https://nousresearch.com).
 | HRCN-L-047 | Runtime bridges must fail closed on forged authority. | Read-only status visibility is not enough unless forged CMS/memory/API/autonomy flags are rejected. | OPS-024 adds negative controls proving the bridge raises on forbidden authority flags. |
 
 | HRCN-L-048 | Live read-only evidence and forged evidence must both be tested. | A bridge can pass live state while accepting bad packets in edge cases. | OPS-024 tests both live read-only acceptance and fake-repo forged-authority rejection. |
+
+- HRCN proposal-path context injection must remain opt-in and read-only.
+
+- HRCN context orientation cannot grant tools, writes, provider calls, CMS writes, memory writes, API writes, autonomy, or self-authorization.
+
+- HRCN text assertions must match the bridge output surface: `READ ONLY` display plus read-only prose, not an internal enum spelling unless that enum is present.
+
+| HRCN-L-049 | Proposal-path integration must be opt-in before default enablement. | Injecting governance context into every turn can alter behavior and surprise existing users/scripts. | OPS-025 uses `HERMES_HRCN_CONTEXT` as an explicit gate and leaves default behavior unchanged. |
+
+| HRCN-L-050 | Read-only context must be appended only after bridge boundary verification. | Prompt context can become an authority channel if forged evidence is accepted. | OPS-025 calls the HRCN read-only boundary check before appending context and fails closed on bridge errors. |
+
+| HRCN-L-051 | Tests should assert the public context surface, not an internal enum spelling. | OPS-025 initially expected `read_only`, while the prompt context emits `READ ONLY` and read-only prose. | OPS-025 repair aligns assertions to the real proposal-context text surface. |
