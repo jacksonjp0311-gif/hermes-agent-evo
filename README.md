@@ -161,33 +161,30 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-020 bounded loop v0.2 seal passed.
+Current post-seal state: OPS-022 read-only HRCN runtime bridge module passed.
 
-The HRCN OPS v0.1.0 bridge proof is sealed, and HRCN OPS v0.2.0 now seals the bounded cybernetic evidence loop. The loop has proven observe-only, proposal-only, dry-run-only, and apply-gated docs/context cadence as separate authority classes.
+HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 begins operational runtime integration by adding a read-only HRCN bridge module that any Hermes surface can import without granting write/apply/tool authority.
 
 | Stage | Meaning | Status |
 |---|---|---:|
-| OPS-011 | Controlled runtime intake plan. | passed |
-| OPS-012 | Governed memory-read adapter rehearsal. | passed |
-| OPS-013 | Human-gated dry-run bridge rehearsal. | passed |
-| OPS-014 | Limited apply rehearsal. | passed |
-| OPS-015 | First controlled cybernetic loop. | passed |
-| OPS-016 | Observe-only loop cadence harness. | passed |
-| OPS-017 | Proposal-only loop cadence harness. | passed |
-| OPS-018 | Dry-run-only loop cadence harness. | passed |
-| OPS-019 | Apply-gated loop cadence harness. | passed |
 | OPS-020 | Bounded loop v0.2 seal. | passed |
-| OPS-021 | Governed runtime bridge interface design. | next |
+| OPS-021 | Governed runtime bridge interface design. | bypassed/design superseded by OPS-022 implementation path |
+| OPS-022 | Read-only HRCN runtime bridge module. | passed |
+| OPS-023 | Wire read-only bridge status into Hermes startup/status path. | next |
 
-Operational definition for the bounded loop:
+Operational bridge target:
 
 ```text
-observe -> retrieve bounded context -> classify authority -> propose
--> dry-run -> evidence -> human gate -> limited apply only if authorized
+Hermes CLI/TUI/web/agent/ACP surfaces
+-> import hrcn_runtime_bridge
+-> read HRCN bounded-loop status
+-> expose read-only context
+-> human-gated dry-run/apply only if separately authorized
 ```
 
-Post-seal lock: v0.2 seals the bounded loop proof only. It does not grant runtime mutation, CMS write, memory write, API write, dependency mutation, provider/model authority, autonomous authority, production readiness, or self-authorization.
+Post-seal lock: OPS-022 adds only a read-only runtime bridge module. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -236,9 +233,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-020-final-evidence.json` |
-| Post-seal status | `OPS-020 bounded loop v0.2 seal passed` |
-| Next post-seal gate | `OPS-021 governed runtime bridge interface design` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-022-final-evidence.json` |
+| Post-seal status | `OPS-022 read-only HRCN runtime bridge module passed` |
+| Next post-seal gate | `OPS-023 wire read-only bridge status into Hermes startup/status path` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -1745,3 +1742,15 @@ MIT - see [LICENSE](LICENSE).
 
 Built by [Nous Research](https://nousresearch.com).
 
+
+- Read-only HRCN runtime bridge modules may orient Hermes surfaces but cannot authorize actions.
+
+- Self-improvement begins as evidence-gated proposal/dry-run/apply, not autonomous code mutation.
+
+- Pytest config addopts must be neutralized for focused local bridge tests when optional pytest plugins are not installed.
+
+| HRCN-L-042 | Runtime integration should start with a read-only module, not a broad interface patch. | Hermes has multiple surfaces, so patching only one GUI would create drift. | OPS-022 adds one importable bridge module that CLI, TUI, web, agent, and ACP surfaces can consume later. |
+
+| HRCN-L-043 | Self-improvement must stay evidence-gated after runtime integration starts. | Runtime access can be mistaken for permission to mutate code autonomously. | The bridge exposes context and boundaries only; proposal, dry-run, and apply remain separate human-gated authority classes. |
+
+| HRCN-L-044 | Focused local tests must not depend on optional pytest plugins. | The initial OPS-022 run failed because pyproject addopts referenced pytest-timeout flags unavailable in the local environment. | OPS-022 repair runs focused tests with -o addopts= and records direct Python bridge assertions. |

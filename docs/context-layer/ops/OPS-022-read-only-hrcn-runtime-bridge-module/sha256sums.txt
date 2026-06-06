@@ -1,0 +1,8 @@
+536a216fe4adbc7f43fb0465c97f6f52acbcdfa54b79e7f50a2047a5128e5243  hrcn_runtime_bridge.py
+2e047dcaf7d0cc5ae068322e2926fe5a9b885c7be00db3b841419324c827e0f6  pyproject.toml
+67fe7164472461051f0b140040fb5b59bdcf4d0c1f349240ffad5ec15488e3cc  tests/test_hrcn_runtime_bridge.py
+865abac254b358b04be87b69e67fe3fe3cbb11b4530f3d36cec35a0e4ef66d4f  docs/context-layer/ops/OPS-022-read-only-hrcn-runtime-bridge-module/runtime-module-design.json
+a12b831d1bddf35da936b4caaa9e031bee771064ed78525ce147185647274c9a  docs/context-layer/ops/OPS-022-read-only-hrcn-runtime-bridge-module/authority-matrix.json
+59711b0293ab3e710928837e16b373441c901d7813fdfea5fca35ac7a27c0821  docs/context-layer/ops/OPS-022-read-only-hrcn-runtime-bridge-module/interface-integration-map.json
+adbe2239c46d588da8dfa722812365df753cedc3d93035475aabc5130e98c4e9  docs/context-layer/ops/OPS-022-read-only-hrcn-runtime-bridge-module/test-output.txt
+90dddc15fa397988377e07ec842bf41a90323d516016a9044dcd0ed4b1ac5f6f  docs/context-layer/ops/OPS-022-read-only-hrcn-runtime-bridge-module/test-evidence-repair.json

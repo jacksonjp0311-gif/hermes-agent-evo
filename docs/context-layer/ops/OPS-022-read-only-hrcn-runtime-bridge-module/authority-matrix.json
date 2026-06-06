@@ -1,10 +1,10 @@
 {
   "schema": "HRCN-OPS-022-authority-matrix",
   "operation": "OPS-022",
-  "timestamp_utc": "2026-06-06T12:21:57.546776+00:00",
+  "timestamp_utc": "2026-06-06T12:31:00.571929+00:00",
   "human_authorization_phrase_matched": true,
   "runtime_source_mutation": true,
-  "runtime_source_mutation_scope": "add hrcn_runtime_bridge.py and register it in pyproject.toml",
+  "runtime_source_mutation_scope": "already committed: add hrcn_runtime_bridge.py and register it in pyproject.toml",
   "bridge_mode": "read_only",
   "gui_integration_implemented": false,
   "startup_hook_implemented": false,
@@ -24,5 +24,5 @@
   "new_cms_authority_granted": false,
   "new_memory_authority_granted": false,
   "new_api_authority_granted": false,
-  "non_claim_lock": "The only runtime mutation is a read-only bridge module. No execution hook, write path, tool authority, provider authority, CMS write, memory write, API write, autonomy, or self-authorization is granted."
+  "non_claim_lock": "The only runtime mutation is the already committed read-only bridge module. No execution hook, write path, tool authority, provider authority, CMS write, memory write, API write, autonomy, or self-authorization is granted."
 }

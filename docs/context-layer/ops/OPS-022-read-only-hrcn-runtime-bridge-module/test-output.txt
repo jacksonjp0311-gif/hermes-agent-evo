@@ -1,4 +1,7 @@
-ERROR: usage: __main__.py [options] [file_or_dir] [file_or_dir] [...]
-__main__.py: error: unrecognized arguments: --timeout=30 --timeout-method=signal
-  inifile: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\pyproject.toml
-  rootdir: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo
+PYTEST COMMAND: python -m pytest -q -o addopts= tests/test_hrcn_runtime_bridge.py
+PYTEST RETURN CODE: 0
+....                                                                     [100%]
+4 passed in 1.24s
+
+DIRECT ASSERTION RETURN CODE: 0
+direct bridge assertions passed

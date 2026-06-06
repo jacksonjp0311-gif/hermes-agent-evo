@@ -1,0 +1,22 @@
+{
+  "schema": "HRCN-OPS-022-test-evidence-repair",
+  "operation": "OPS-022",
+  "repair_operation": "OPS-022.1",
+  "timestamp_utc": "2026-06-06T12:31:00.571929+00:00",
+  "base_commit": "2b750482b55fe9f558a8a03a9e1c0e4f1ca254ba",
+  "issue": "Initial test command inherited pytest addopts requiring pytest-timeout, which was unavailable in the local environment.",
+  "repair": "Run focused bridge tests with pytest addopts overridden using -o addopts=, plus direct Python read-only bridge assertions.",
+  "pytest_addopts_override_used": true,
+  "pytest_return_code": 0,
+  "direct_assertion_return_code": 0,
+  "focused_tests_passed": true,
+  "runtime_source_mutation": false,
+  "cms_write": false,
+  "memory_write": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "self_authorization": false,
+  "autonomous_authority": false
+}
