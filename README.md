@@ -161,29 +161,31 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-023 read-only bridge status wired into Hermes startup/status path passed.
+Current post-seal state: OPS-024 negative-control bridge authority refusal passed.
 
-HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only HRCN runtime bridge module. OPS-023 wires that bridge into Hermes status surfaces through `hermes hrcn status`, `hermes hrcn-status`, and optional compact startup display via `HERMES_HRCN_BRIDGE=1`.
+HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only runtime bridge. OPS-023 exposed read-only bridge status through Hermes status/startup surfaces. OPS-024 proves the bridge refuses forged or drifted authority flags.
 
 | Stage | Meaning | Status |
 |---|---|---:|
 | OPS-020 | Bounded loop v0.2 seal. | passed |
 | OPS-022 | Read-only HRCN runtime bridge module. | passed |
 | OPS-023 | Wire read-only bridge status into Hermes startup/status path. | passed |
-| OPS-024 | Negative-control bridge authority refusal. | next |
+| OPS-024 | Negative-control bridge authority refusal. | passed |
+| OPS-025 | Read-only context injection into Hermes proposal path. | next |
 
 Operational bridge target:
 
 ```text
-Hermes CLI/TUI/web/agent/ACP surfaces
--> import hrcn_runtime_bridge
+Hermes runtime
 -> read HRCN bounded-loop status
+-> refuse authority drift
 -> expose read-only context/status
--> human-gated dry-run/apply only if separately authorized
+-> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: OPS-023 exposes read-only status only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: OPS-024 proves refusal behavior only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -234,9 +236,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-023-final-evidence.json` |
-| Post-seal status | `OPS-023 read-only bridge status wired into Hermes startup/status path passed` |
-| Next post-seal gate | `OPS-024 negative-control bridge authority refusal` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-024-final-evidence.json` |
+| Post-seal status | `OPS-024 negative-control bridge authority refusal passed` |
+| Next post-seal gate | `OPS-025 read-only context injection into Hermes proposal path` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -1763,3 +1765,11 @@ Built by [Nous Research](https://nousresearch.com).
 | HRCN-L-045 | Runtime status wiring must be visible but non-authorizing. | A status command can be mistaken for a control channel. | OPS-023 exposes `hermes hrcn status` and optional startup display while keeping all write/tool/provider/CMS/memory/API/autonomy flags false. |
 
 | HRCN-L-046 | Startup bridge display should be opt-in at first. | Default startup changes can disrupt Hermes interfaces or scripts. | OPS-023 leaves normal behavior unchanged unless `HERMES_HRCN_BRIDGE=1` is set or an explicit HRCN status command is called. |
+
+- HRCN runtime bridge status must fail closed when any forbidden authority flag is true.
+
+- Negative-control refusal is mandatory before HRCN context can guide proposal paths.
+
+| HRCN-L-047 | Runtime bridges must fail closed on forged authority. | Read-only status visibility is not enough unless forged CMS/memory/API/autonomy flags are rejected. | OPS-024 adds negative controls proving the bridge raises on forbidden authority flags. |
+
+| HRCN-L-048 | Live read-only evidence and forged evidence must both be tested. | A bridge can pass live state while accepting bad packets in edge cases. | OPS-024 tests both live read-only acceptance and fake-repo forged-authority rejection. |

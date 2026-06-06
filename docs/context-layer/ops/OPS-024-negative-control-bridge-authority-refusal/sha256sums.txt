@@ -1,0 +1,5 @@
+3ea26770b98c886dad284de279a6c6133e95a2c56c45e6878ba51194d0eabe1b  tests/test_hrcn_runtime_bridge_negative_control.py
+bb956fa0bf1bbb97e53210f8f2c5eaa2d6c8f2bc34eb6b09da3ab845b4dddf15  docs/context-layer/ops/OPS-024-negative-control-bridge-authority-refusal/test-output.txt
+65272b13bfe0d89e83f099076b6ff69a6a13d84d867ce680d8dbebbeb10c22d1  docs/context-layer/ops/OPS-024-negative-control-bridge-authority-refusal/live-boundary-output.txt
+829db823b904bca90d073d91e83f846a858b3a3975f36b2095c9b52aad23cb1e  docs/context-layer/ops/OPS-024-negative-control-bridge-authority-refusal/negative-control-matrix.json
+04d4fb7e097a428068b48800767956bf7eded8c3b922b88bf0140e43be86182c  docs/context-layer/ops/OPS-024-negative-control-bridge-authority-refusal/authority-matrix.json

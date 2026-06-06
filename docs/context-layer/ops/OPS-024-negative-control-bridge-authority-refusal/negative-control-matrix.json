@@ -1,0 +1,45 @@
+{
+  "schema": "HRCN-OPS-024-negative-control-matrix",
+  "operation": "OPS-024",
+  "timestamp_utc": "2026-06-06T12:56:18.080752+00:00",
+  "negative_controls": [
+    {
+      "case": "cms_write_true",
+      "expected": "RuntimeError refusal",
+      "passed": true
+    },
+    {
+      "case": "memory_write_true",
+      "expected": "RuntimeError refusal",
+      "passed": true
+    },
+    {
+      "case": "api_write_true",
+      "expected": "RuntimeError refusal",
+      "passed": true
+    },
+    {
+      "case": "self_authorization_true",
+      "expected": "RuntimeError refusal",
+      "passed": true
+    },
+    {
+      "case": "autonomous_authority_true",
+      "expected": "RuntimeError refusal",
+      "passed": true
+    },
+    {
+      "case": "unsealed_evidence",
+      "expected": "RuntimeError refusal",
+      "passed": true
+    },
+    {
+      "case": "fully_read_only_evidence",
+      "expected": "accepted",
+      "passed": true
+    }
+  ],
+  "bridge_mode": "read_only",
+  "runtime_source_mutation": false,
+  "non_claim_lock": "OPS-024 proves refusal behavior in tests. It does not grant write/apply/tool/provider/CMS/memory/API/autonomous authority."
+}
