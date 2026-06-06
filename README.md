@@ -161,16 +161,16 @@ Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refuse
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-022 read-only HRCN runtime bridge module passed.
+Current post-seal state: OPS-023 read-only bridge status wired into Hermes startup/status path passed.
 
-HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 begins operational runtime integration by adding a read-only HRCN bridge module that any Hermes surface can import without granting write/apply/tool authority.
+HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only HRCN runtime bridge module. OPS-023 wires that bridge into Hermes status surfaces through `hermes hrcn status`, `hermes hrcn-status`, and optional compact startup display via `HERMES_HRCN_BRIDGE=1`.
 
 | Stage | Meaning | Status |
 |---|---|---:|
 | OPS-020 | Bounded loop v0.2 seal. | passed |
-| OPS-021 | Governed runtime bridge interface design. | bypassed/design superseded by OPS-022 implementation path |
 | OPS-022 | Read-only HRCN runtime bridge module. | passed |
-| OPS-023 | Wire read-only bridge status into Hermes startup/status path. | next |
+| OPS-023 | Wire read-only bridge status into Hermes startup/status path. | passed |
+| OPS-024 | Negative-control bridge authority refusal. | next |
 
 Operational bridge target:
 
@@ -178,12 +178,13 @@ Operational bridge target:
 Hermes CLI/TUI/web/agent/ACP surfaces
 -> import hrcn_runtime_bridge
 -> read HRCN bounded-loop status
--> expose read-only context
+-> expose read-only context/status
 -> human-gated dry-run/apply only if separately authorized
 ```
 
-Post-seal lock: OPS-022 adds only a read-only runtime bridge module. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: OPS-023 exposes read-only status only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -233,9 +234,9 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Current OPS status | `OPS-010 operational release seal passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-022-final-evidence.json` |
-| Post-seal status | `OPS-022 read-only HRCN runtime bridge module passed` |
-| Next post-seal gate | `OPS-023 wire read-only bridge status into Hermes startup/status path` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-023-final-evidence.json` |
+| Post-seal status | `OPS-023 read-only bridge status wired into Hermes startup/status path passed` |
+| Next post-seal gate | `OPS-024 negative-control bridge authority refusal` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -1754,3 +1755,11 @@ Built by [Nous Research](https://nousresearch.com).
 | HRCN-L-043 | Self-improvement must stay evidence-gated after runtime integration starts. | Runtime access can be mistaken for permission to mutate code autonomously. | The bridge exposes context and boundaries only; proposal, dry-run, and apply remain separate human-gated authority classes. |
 
 | HRCN-L-044 | Focused local tests must not depend on optional pytest plugins. | The initial OPS-022 run failed because pyproject addopts referenced pytest-timeout flags unavailable in the local environment. | OPS-022 repair runs focused tests with -o addopts= and records direct Python bridge assertions. |
+
+- Hermes status/startup surfaces may display HRCN bridge status only when read-only boundaries pass.
+
+- Optional startup visibility must remain operator-enabled and off by default.
+
+| HRCN-L-045 | Runtime status wiring must be visible but non-authorizing. | A status command can be mistaken for a control channel. | OPS-023 exposes `hermes hrcn status` and optional startup display while keeping all write/tool/provider/CMS/memory/API/autonomy flags false. |
+
+| HRCN-L-046 | Startup bridge display should be opt-in at first. | Default startup changes can disrupt Hermes interfaces or scripts. | OPS-023 leaves normal behavior unchanged unless `HERMES_HRCN_BRIDGE=1` is set or an explicit HRCN status command is called. |

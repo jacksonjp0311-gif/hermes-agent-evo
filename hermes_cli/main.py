@@ -470,6 +470,65 @@ from datetime import datetime
 from hermes_cli import __version__, __release_date__
 logger = logging.getLogger(__name__)
 
+# ---------------------------------------------------------------------------
+# HRCN read-only runtime bridge status
+# ---------------------------------------------------------------------------
+def _hrcn_bridge_enabled() -> bool:
+    return (os.environ.get("HERMES_HRCN_BRIDGE") or "").strip().lower() in {
+        "1", "true", "yes", "on", "status",
+    }
+
+
+def _print_hrcn_bridge_status(*, compact: bool = False) -> bool:
+    try:
+        import hrcn_runtime_bridge as _hrcn_bridge
+        _hrcn_bridge.assert_read_only_boundary(PROJECT_ROOT)
+        status = _hrcn_bridge.get_bridge_status(PROJECT_ROOT)
+    except Exception as exc:
+        if compact:
+            print(f"HRCN bridge: unavailable ({exc})")
+        else:
+            print("HRCN bridge: unavailable")
+            print(f"  Reason: {exc}")
+        return False
+
+    if compact:
+        print(f"HRCN bridge: {status.mode} / {status.sealed_anchor_tag}")
+        return True
+
+    print()
+    print("HRCN Runtime Bridge")
+    print(f"  Mode:      {status.mode}")
+    print(f"  Anchor:    {status.sealed_anchor_tag}")
+    print(f"  State:     {status.current_state}")
+    print(f"  Evidence:  {status.latest_evidence_path}")
+    print(f"  Next:      {status.next_recommended_operation}")
+    print("  Authority: read-only orientation; no tool/write/apply authority")
+    return True
+
+
+def _maybe_print_hrcn_bridge_startup_status() -> None:
+    if not _hrcn_bridge_enabled():
+        return
+    if sys.argv[1:] in (["hrcn", "status"], ["hrcn-status"]):
+        return
+    _print_hrcn_bridge_status(compact=True)
+
+
+def _try_hrcn_bridge_status_command(argv: list[str] | None = None) -> bool:
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv not in (["hrcn", "status"], ["hrcn-status"]):
+        return False
+    _print_hrcn_bridge_status(compact=False)
+    return True
+
+
+
+if _try_hrcn_bridge_status_command():
+    raise SystemExit(0)
+
+_maybe_print_hrcn_bridge_startup_status()
+
 
 def _is_termux_startup_environment(env: dict[str, str] | None = None) -> bool:
     """Import-safe Termux check for cold-start-sensitive CLI paths."""

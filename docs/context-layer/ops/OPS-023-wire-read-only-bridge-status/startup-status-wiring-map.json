@@ -1,0 +1,14 @@
+{
+  "schema": "HRCN-OPS-023-startup-status-wiring-map",
+  "operation": "OPS-023",
+  "timestamp_utc": "2026-06-06T12:49:17.988329+00:00",
+  "wiring": [
+    "hermes hrcn status",
+    "hermes hrcn-status",
+    "optional compact startup status via HERMES_HRCN_BRIDGE=1"
+  ],
+  "default_runtime_behavior_changed": false,
+  "operator_enabled_startup_status": true,
+  "bridge_mode": "read_only",
+  "non_claim_lock": "OPS-023 wires read-only bridge status visibility only. It grants no tool/write/apply/provider/CMS/memory/API/autonomous authority."
+}

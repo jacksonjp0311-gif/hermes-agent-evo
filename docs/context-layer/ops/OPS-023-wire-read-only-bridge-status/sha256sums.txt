@@ -1,0 +1,8 @@
+4eaab103f804ee841bef908a6f1d0e5d6936b196438607efd2caeb533be74a92  hermes_cli/main.py
+536a216fe4adbc7f43fb0465c97f6f52acbcdfa54b79e7f50a2047a5128e5243  hrcn_runtime_bridge.py
+67fe7164472461051f0b140040fb5b59bdcf4d0c1f349240ffad5ec15488e3cc  tests/test_hrcn_runtime_bridge.py
+5a588b00b53243b2258d9747b233aa40d91c9dacc78865917e3ff8d44116d4da  tests/test_hrcn_runtime_bridge_startup_status.py
+c92fdc80b74276e7c2dadfbd75ac1465f3f460bf7f14678dd68db4cf1795466a  docs/context-layer/ops/OPS-023-wire-read-only-bridge-status/test-output.txt
+743f6bf4b88b89dc93267d8ce4392a727acce2c6080c6af8d49964738306e607  docs/context-layer/ops/OPS-023-wire-read-only-bridge-status/hrcn-status-output.txt
+f875e14be51abba86c71ba9ca149b44e1b0236a287737a881130f1aa675a5d74  docs/context-layer/ops/OPS-023-wire-read-only-bridge-status/startup-status-wiring-map.json
+d8000db1ab438cf6d0cbdcb5f932918147eb32f0b03a5a794312aaf43d341bd9  docs/context-layer/ops/OPS-023-wire-read-only-bridge-status/authority-matrix.json

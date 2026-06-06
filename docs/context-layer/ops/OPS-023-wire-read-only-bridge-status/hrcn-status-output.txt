@@ -1,0 +1,9 @@
+COMMAND: python -m hermes_cli.main hrcn-status
+RETURN CODE: 0
+HRCN Runtime Bridge
+  Mode:      read_only
+  Anchor:    hrcn-ops-v0.2.0
+  State:     HRCN OPS v0.2.0 bounded loop sealed
+  Evidence:  docs\context-layer\ops\OPS-020-final-evidence.json
+  Next:      OPS-021 governed runtime bridge interface design
+  Authority: read-only orientation; no tool/write/apply authority
