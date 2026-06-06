@@ -1,0 +1,30 @@
+{
+  "schema": "HRCN-OPS-022-interface-integration-map",
+  "operation": "OPS-022",
+  "timestamp_utc": "2026-06-06T12:21:57.546776+00:00",
+  "bridge_module": "hrcn_runtime_bridge.py",
+  "intended_integration_points_next": [
+    {
+      "surface": "hermes CLI",
+      "entrypoint": "hermes_cli.main:main",
+      "planned_use": "display/read HRCN bridge status and context"
+    },
+    {
+      "surface": "Hermes agent runner",
+      "entrypoint": "run_agent:main",
+      "planned_use": "inject read-only HRCN prompt context after explicit enable flag"
+    },
+    {
+      "surface": "Hermes ACP adapter",
+      "entrypoint": "acp_adapter.entry:main",
+      "planned_use": "surface HRCN status to adapter context"
+    },
+    {
+      "surface": "Hermes web/dashboard GUI",
+      "entrypoint": "hermes_cli package web/dashboard surfaces",
+      "planned_use": "display HRCN status packet"
+    }
+  ],
+  "next_operation": "OPS-023 wire read-only bridge status into Hermes startup/status path",
+  "non_claim_lock": "This map is not wiring. It identifies the next integration points only."
+}

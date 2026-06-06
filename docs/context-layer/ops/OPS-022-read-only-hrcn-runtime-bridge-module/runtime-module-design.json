@@ -1,0 +1,24 @@
+{
+  "schema": "HRCN-OPS-022-runtime-module-design",
+  "operation": "OPS-022",
+  "timestamp_utc": "2026-06-06T12:21:57.546776+00:00",
+  "module": "hrcn_runtime_bridge.py",
+  "runtime_mutation_type": "add_read_only_module_and_register_py_module",
+  "interface_surfaces_supported": [
+    "CLI",
+    "TUI",
+    "web/dashboard GUI",
+    "agent runner",
+    "ACP adapter",
+    "plugins/tools that choose to import the bridge"
+  ],
+  "functions": [
+    "find_repo_root",
+    "load_hrcn_context",
+    "get_bridge_status",
+    "make_gui_context_packet",
+    "format_context_for_prompt",
+    "assert_read_only_boundary"
+  ],
+  "non_claim_lock": "OPS-022 adds a read-only bridge module only. It does not wire the bridge into Hermes startup or grant write/apply/tool authority."
+}
