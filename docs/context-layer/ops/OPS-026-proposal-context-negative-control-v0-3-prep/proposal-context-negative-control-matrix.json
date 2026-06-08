@@ -1,0 +1,38 @@
+{
+  "schema": "HRCN-OPS-026-proposal-context-negative-control-matrix",
+  "operation": "OPS-026",
+  "timestamp_utc": "2026-06-08T12:27:09.143191+00:00",
+  "negative_controls": [
+    {
+      "case": "bridge_boundary_raises",
+      "expected": "return original prompt",
+      "passed": true
+    },
+    {
+      "case": "context_formatter_raises",
+      "expected": "return original prompt",
+      "passed": true
+    },
+    {
+      "case": "unknown_env_value_write",
+      "expected": "context injection disabled",
+      "passed": true
+    },
+    {
+      "case": "non_authority_lock_present",
+      "expected": "orientation-only and no authorization",
+      "passed": true
+    },
+    {
+      "case": "duplicate_injection",
+      "expected": "no duplicate HRCN block",
+      "passed": true
+    }
+  ],
+  "default_behavior_changed": false,
+  "runtime_source_mutation": false,
+  "context_injection_env_gate": "HERMES_HRCN_CONTEXT",
+  "candidate_tag": "hrcn-ops-v0.3.0",
+  "next_recommended_operation": "OPS-027 v0.3 seal and tag",
+  "non_claim_lock": "OPS-026 proves proposal-context refusal and prepares v0.3 sealing. It grants no tool/write/provider/CMS/memory/API/autonomous authority."
+}

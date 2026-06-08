@@ -93,77 +93,49 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_START -->
 ### HRCN OPS Operational Bridge Status
 
-Human summary: this fork has proven a bounded operational bridge path from repository evidence to Hermes local runtime, then to a human-authorized provider call, then to read-only HRCN context injection, read-only CMS/HRCN mirror packet acceptance, negative-control authority refusal, replay/rollback evidence packaging, and operational release sealing. This is not autonomous operation and not production authority.
+Human summary: this fork has proven a bounded path from repository evidence to Hermes local runtime, human-authorized provider access, read-only context intake, read-only runtime bridge status, opt-in proposal-context orientation, negative-control refusal, replay/rollback evidence, and post-seal proposal-context safeguards. This is not autonomous operation and not production authority.
 
-Current bridge status: HRCN v2.0 + OPS-010 = operational release seal proof.
+Current bridge status: HRCN v2.0 + OPS-026 = read-only runtime/proposal bridge interconnected, negative-controlled, and prepared for v0.3 sealing.
 
 #### OPS Bridge Chart
 
 | Stage | Meaning | Status |
 |---|---|---:|
 | HRCN v2.0 | Bounded operational nexus. | sealed |
-| OPS-003 | Runtime readiness audit. | passed |
-| OPS-004 | Safe failure captured. | recorded |
-| OPS-004.1 | Evidence repair and unsafe surface lesson. | recorded |
-| OPS-004.2 | Safe local runtime smoke. | passed |
-| OPS-005 | Provider gate safe failure. | recorded |
-| OPS-005.1 | Human-gated provider call. | passed |
-| OPS-006 | Read-only HRCN context injection. | passed |
-| OPS-007 | Read-only CMS/HRCN mirror packet rehearsal. | passed |
-| OPS-008 | Negative-control authority test. | passed |
-| OPS-009 | Replay and rollback evidence pack. | passed |
 | OPS-010 | Operational release seal. | passed |
-| tag | hrcn-ops-v0.1.0 | release tag prepared by OPS-010 script |
+| OPS-020 | Bounded loop v0.2 seal. | passed |
+| OPS-022 | Read-only HRCN runtime bridge module. | passed |
+| OPS-023 | Read-only bridge visible through Hermes status/startup. | passed |
+| OPS-024 | Bridge authority-forgery negative controls. | passed |
+| OPS-025 | Opt-in read-only proposal-context injection. | passed |
+| OPS-026 | Proposal-context negative control and v0.3 seal prep. | passed |
+| next | OPS-027 v0.3 seal and tag. | next |
 
-#### Human Checkpoint Summary
+#### Current Runtime Boundary
 
-| Checkpoint | Human meaning | Status |
-|---|---|---:|
-| HRCN v2.0 | The governed nexus exists as a bounded docs/context surface. | sealed |
-| OPS-004.2 | Hermes is locally installed and safe-smoke proven. | passed |
-| OPS-005.1 | A provider call succeeded only after explicit human authorization. | passed |
-| OPS-006 | A read-only non-authoritative HRCN context packet was accepted with no tool use detected. | passed |
-| OPS-007 | Read-only CMS/HRCN mirror packet accepted as context/evidence only. | passed |
-| OPS-008 | Negative-control authority test refused false authority. | passed |
-| OPS-009 | Replay and rollback evidence pack created with evidence index, checksums, replay instructions, and rollback notes. | passed |
-| OPS-010 | Release lock: seal evidence and prepare tag hrcn-ops-v0.1.0. | passed |
+| Surface | Current state |
+|---|---|
+| Runtime code changed by post-seal HRCN work | `True` |
+| Default runtime behavior changed | `False` |
+| Runtime authority granted | `False` |
+| Context injection default enabled | `False` |
+| Context injection gate | `HERMES_HRCN_CONTEXT` |
+| Status/startup gate | `HERMES_HRCN_BRIDGE` |
+| Latest OPS proof | `docs/context-layer/ops/OPS-026-final-evidence.json` |
+| Current OPS status | `OPS-026 proposal-context negative-control and v0.3 seal prep passed` |
+| Next gate | `OPS-027 v0.3 seal and tag` |
 
-#### AI Agent Operational Checkpoints
+AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-026. OPS-026 is a negative-control and seal-prep checkpoint.
 
-| OPS | Evidence file | Proven result | Forbidden inference |
-|---|---|---|---|
-| OPS-003 | docs/context-layer/ops/OPS-003-final-evidence.json | Runtime readiness audit passed. | Does not install or execute Hermes. |
-| OPS-004.2 | docs/context-layer/ops/OPS-004.2-final-evidence.json | Safe local Hermes smoke passed. | Does not prove provider success or production readiness. |
-| OPS-005.1 | docs/context-layer/ops/OPS-005.1-final-evidence.json | Human-gated provider call succeeded. | Does not grant ongoing provider authority. |
-| OPS-006 | docs/context-layer/ops/OPS-006-final-evidence.json | Read-only HRCN context injection succeeded. | Does not grant CMS, memory, API, runtime, dependency, autonomous, or self-authorization authority. |
-| OPS-007 | docs/context-layer/ops/OPS-007-final-evidence.json | Read-only CMS/HRCN mirror packet rehearsal succeeded. | Does not grant CMS runtime execution, CMS write, memory write, API, runtime mutation, dependency mutation, autonomous, or self-authorization authority. |
-| OPS-008 | docs/context-layer/ops/OPS-008-final-evidence.json | Negative-control authority test passed; false authority was denied. | Does not grant CMS write, memory write, API, runtime mutation, dependency mutation, ongoing provider, autonomous, or self-authorization authority. |
-| OPS-009 | docs/context-layer/ops/OPS-009-final-evidence.json | Replay and rollback evidence pack created with evidence index, checksums, replay instructions, and rollback notes. | Does not execute rollback, mutate runtime, write CMS, write memory, write APIs, change dependencies, or grant autonomous/self-authorization authority. |
-| OPS-010 | docs/context-layer/ops/OPS-010-final-evidence.json | Operational release seal created with manifest, final boundary matrix, release notes, non-claim lock, and tag plan. | Does not grant production readiness, runtime integration, CMS write, memory write, API write, dependency mutation, autonomous authority, or self-authorization. |
-
-#### OPS Release Path to Operational Tag
-
-Literal next gate:
-Tag hrcn-ops-v0.1.0
-
-| Next gate | Purpose | Required before promotion |
-|---|---|---|
-| OPS-007 | Read-only CMS/HRCN mirror packet rehearsal. | Packet must remain context-only and non-authoritative. |
-| OPS-008 | Negative-control authority test. | Passed; Hermes denied the over-authority instruction. |
-| OPS-009 | Replay/rollback evidence pack. | Passed; evidence index, checksums, replay instructions, and rollback notes created. |
-| OPS-010 | Operational release seal. | Passed; manifest, boundary matrix, release notes, non-claim lock, and tag plan created. |
-| Tag | hrcn-ops-v0.1.0 | Pushed by the OPS-010 seal script after the seal commit succeeds. |
-
-AI lock: No future AI thread may call this fork operational beyond OPS-010 unless it can cite the OPS evidence file for the claimed checkpoint or the hrcn-ops-v0.1.0 tag.
-
-Human lock: The bridge now carries read-only CMS/HRCN mirror context, has refused false authority, has a replay/rollback evidence pack, and has an operational release seal under bounded, human-authorized, evidence-recorded conditions. It is not autonomous and it is not a CMS or memory write bridge yet.
+Human lock: Hermes may now receive read-only HRCN orientation in the proposal path only when explicitly enabled. Apply/write remains a separate human-gated transition.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
+
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-025 read-only context injection into Hermes proposal path passed.
+Current post-seal state: OPS-026 proposal-context negative-control and v0.3 seal prep passed.
 
-HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only runtime bridge. OPS-023 exposed status. OPS-024 proved authority refusal. OPS-025 allows the agent proposal path to receive read-only HRCN orientation through an explicit environment gate.
+HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only runtime bridge. OPS-023 exposed status. OPS-024 proved authority refusal. OPS-025 allowed explicit opt-in proposal-context orientation. OPS-026 proves that proposal-context orientation fails closed and prepares the v0.3 seal boundary.
 
 | Stage | Meaning | Status |
 |---|---|---:|
@@ -172,7 +144,8 @@ HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the r
 | OPS-023 | Wire read-only bridge status into Hermes startup/status path. | passed |
 | OPS-024 | Negative-control bridge authority refusal. | passed |
 | OPS-025 | Read-only context injection into Hermes proposal path. | passed |
-| OPS-026 | Proposal-context negative-control and v0.3 seal prep. | next |
+| OPS-026 | Proposal-context negative-control and v0.3 seal prep. | passed |
+| OPS-027 | v0.3 seal and tag. | next |
 
 Operational bridge target:
 
@@ -181,11 +154,13 @@ Hermes runtime
 -> read HRCN bounded-loop status
 -> refuse authority drift
 -> optionally inject read-only HRCN orientation into proposal context
+-> refuse proposal-context over-authority
 -> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: OPS-025 is opt-in read-only context injection only via `HERMES_HRCN_CONTEXT`. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: OPS-026 validates refusal and alignment only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -223,7 +198,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 |---|---:|
 | Current checkpoint | `HRCN v2.0` |
 | Previous validated anchor | `HRCN v1.9` |
-| Runtime code changed | `False` |
+| Runtime code changed | `True - post-seal read-only bridge/proposal-context hook; default behavior remains false` |
 | Dependency files changed by HRCN | `False` |
 | README pointer present | `True` |
 | Context layer doc | `docs/context-layer/rcc-cms-hrcn.md` |
@@ -234,13 +209,13 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
 | Validation report | `docs/context-layer/hrcn-v2.0.validation.json` |
-| Latest OPS bridge proof | `docs/context-layer/ops/OPS-010-final-evidence.json` |
-| Current OPS status | `OPS-010 operational release seal passed` |
+| Latest OPS bridge proof | `docs/context-layer/ops/OPS-026-final-evidence.json` |
+| Current OPS status | `OPS-026 proposal-context negative-control and v0.3 seal prep passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-025-final-evidence.json` |
-| Post-seal status | `OPS-025 read-only context injection into Hermes proposal path passed` |
-| Next post-seal gate | `OPS-026 proposal-context negative-control and v0.3 seal prep` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-026-final-evidence.json` |
+| Post-seal status | `OPS-026 proposal-context negative-control and v0.3 seal prep passed` |
+| Next post-seal gate | `OPS-027 v0.3 seal and tag` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
 | CMS read-only bridge design | `docs/context-layer/hrcn-v0.4-cms-read-only-bridge-design.json` |
@@ -1787,3 +1762,13 @@ Built by [Nous Research](https://nousresearch.com).
 | HRCN-L-050 | Read-only context must be appended only after bridge boundary verification. | Prompt context can become an authority channel if forged evidence is accepted. | OPS-025 calls the HRCN read-only boundary check before appending context and fails closed on bridge errors. |
 
 | HRCN-L-051 | Tests should assert the public context surface, not an internal enum spelling. | OPS-025 initially expected `read_only`, while the prompt context emits `READ ONLY` and read-only prose. | OPS-025 repair aligns assertions to the real proposal-context text surface. |
+
+- Post-seal runtime code has changed only for read-only bridge/status/proposal-context orientation.
+
+- Default Hermes behavior remains unchanged unless `HERMES_HRCN_BRIDGE` or `HERMES_HRCN_CONTEXT` is explicitly set.
+
+- Proposal-context HRCN orientation must fail closed on bridge boundary or formatter errors.
+
+| HRCN-L-052 | Runtime-code-changed metrics must distinguish source mutation from authority mutation. | OPS-025 made a runtime hook, so `Runtime code changed=False` became stale even though authority remained false. | OPS-026 aligns README metrics to `runtime code changed=True` while preserving `default behavior=False` and `authority=False`. |
+
+| HRCN-L-053 | Proposal-context injection needs its own negative controls after bridge negative controls. | A bridge can refuse forged evidence while the prompt-injection path still mishandles failures. | OPS-026 adds negative controls for bridge-boundary failure, formatter failure, unknown env values, non-authority lock, and duplicate injection. |

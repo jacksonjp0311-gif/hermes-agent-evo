@@ -1,0 +1,4 @@
+PYTEST COMMAND: python -m pytest -q -o addopts= tests/test_hrcn_runtime_bridge.py tests/test_hrcn_runtime_bridge_startup_status.py tests/test_hrcn_runtime_bridge_negative_control.py tests/test_hrcn_context_injection_proposal_path.py tests/test_hrcn_proposal_context_negative_control.py
+RETURN CODE: 0
+.......................                                                  [100%]
+23 passed in 1.57s
