@@ -1,0 +1,6 @@
+4ab5c4ae836e4b63887ca0809885e7102c410d0d9a94acfa71c44644b2ac4cc3  README.md
+5affbc2e6d70f045e49ccdf8bd8f28332287c2848b48525d6a396d97eba073ff  docs/context-layer/ops/OPS-027-final-evidence.json
+bd414c0da2fb0aadaa5d61ae4c7bb96603fef438cb46b5932ac29188002c47ca  docs/context-layer/ops/OPS-027-v0-3-seal-and-tag.md
+73e7445786da6dc65d8a10533efa321d22f6a33e66e2661816f475857dd37b29  docs/context-layer/ops/OPS-027-v0-3-seal-and-tag/py-compile-output.txt
+d62a5b99c95472da989c2098ac72d26fed4bdb64a5437dcc96995af905db2db0  docs/context-layer/ops/OPS-027-v0-3-seal-and-tag/focused-test-output.txt
+e75ac3a57a7f6b5d7c954d15f923d90f429fb348b1bd264467d22b9dc9d9797b  docs/context-layer/ops/OPS-027-v0-3-seal-and-tag/direct-rhp-hrcn-smoke-output.txt

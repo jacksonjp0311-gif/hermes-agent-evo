@@ -1,0 +1,4 @@
+COMMAND: python -m pytest -q -o addopts= tests/test_hrcn_runtime_bridge.py tests/test_hrcn_runtime_bridge_startup_status.py tests/test_hrcn_runtime_bridge_negative_control.py tests/test_hrcn_context_injection_proposal_path.py tests/test_hrcn_proposal_context_negative_control.py tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py
+RETURN CODE: 0
+....................................                                     [100%]
+36 passed in 2.45s

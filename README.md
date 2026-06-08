@@ -154,9 +154,9 @@ Human lock: RHP may orient Hermes only after explicit environment-gated activati
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_START -->
 ### HRCN OPS Operational Bridge Status
 
-Human summary: this fork has proven a bounded path from repository evidence to Hermes local runtime, human-authorized provider access, read-only context intake, read-only runtime bridge status, opt-in proposal-context orientation, negative-control refusal, replay/rollback evidence, and post-seal proposal-context safeguards. This is not autonomous operation and not production authority.
+Human summary: this fork has sealed HRCN OPS v0.3 as the evidence boundary for read-only runtime/proposal orientation. OPS remains the evidence ledger. RHP remains the active runtime-threshold track. This is not autonomous operation, not CMS write authority, and not production authority.
 
-Current bridge status: HRCN v2.0 + OPS-026 = read-only runtime/proposal bridge interconnected, negative-controlled, and prepared for v0.3 sealing.
+Current bridge status: HRCN v2.0 + OPS-027 = read-only runtime/proposal bridge sealed as v0.3. RHP-004 is the next alignment pass for the HRCN bridge evidence anchor.
 
 #### OPS Bridge Chart
 
@@ -170,7 +170,8 @@ Current bridge status: HRCN v2.0 + OPS-026 = read-only runtime/proposal bridge i
 | OPS-024 | Bridge authority-forgery negative controls. | passed |
 | OPS-025 | Opt-in read-only proposal-context injection. | passed |
 | OPS-026 | Proposal-context negative control and v0.3 seal prep. | passed |
-| next | OPS-027 v0.3 seal and tag. | next |
+| OPS-027 | HRCN v0.3 seal and tag. | passed |
+| next | RHP-004 align HRCN bridge evidence anchor after v0.3 seal. | next |
 
 #### Current Runtime Boundary
 
@@ -180,23 +181,26 @@ Current bridge status: HRCN v2.0 + OPS-026 = read-only runtime/proposal bridge i
 | Default runtime behavior changed | `False` |
 | Runtime authority granted | `False` |
 | Context injection default enabled | `False` |
-| Context injection gate | `HERMES_HRCN_CONTEXT` |
+| HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
+| RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Status/startup gate | `HERMES_HRCN_BRIDGE` |
-| Latest OPS proof | `docs/context-layer/ops/OPS-026-final-evidence.json` |
-| Current OPS status | `OPS-026 proposal-context negative-control and v0.3 seal prep passed` |
-| Next gate | `OPS-027 v0.3 seal and tag` |
+| Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
+| Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
+| Candidate tag | `hrcn-ops-v0.3.0` |
+| Next gate | `RHP-004 align HRCN bridge evidence anchor after v0.3 seal` |
 
-AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-026. OPS-026 is a negative-control and seal-prep checkpoint.
+AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027. OPS-027 is a seal/tag checkpoint.
 
-Human lock: Hermes may now receive read-only HRCN orientation in the proposal path only when explicitly enabled. Apply/write remains a separate human-gated transition.
+Human lock: OPS v0.3 is sealed as evidence. RHP remains the active runtime-threshold track. Apply/write remains a separate human-gated transition.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
+
 
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-026 proposal-context negative-control and v0.3 seal prep passed.
+Current post-seal state: OPS-027 HRCN v0.3 seal and tag passed.
 
-HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the read-only runtime bridge. OPS-023 exposed status. OPS-024 proved authority refusal. OPS-025 allowed explicit opt-in proposal-context orientation. OPS-026 proves that proposal-context orientation fails closed and prepares the v0.3 seal boundary.
+OPS has now served its role as the HRCN evidence ledger through v0.3. RHP is the active runtime-threshold track for future origin-alignment and startup/proposal ordering work.
 
 | Stage | Meaning | Status |
 |---|---|---:|
@@ -206,21 +210,24 @@ HRCN OPS v0.2.0 sealed the bounded cybernetic evidence loop. OPS-022 added the r
 | OPS-024 | Negative-control bridge authority refusal. | passed |
 | OPS-025 | Read-only context injection into Hermes proposal path. | passed |
 | OPS-026 | Proposal-context negative-control and v0.3 seal prep. | passed |
-| OPS-027 | v0.3 seal and tag. | next |
+| OPS-027 | v0.3 seal and tag. | passed |
+| RHP-004 | Align HRCN bridge evidence anchor after v0.3 seal. | next |
 
 Operational bridge target:
 
 ```text
 Hermes runtime
+-> RHP origin alignment
 -> read HRCN bounded-loop status
 -> refuse authority drift
--> optionally inject read-only HRCN orientation into proposal context
+-> optionally inject read-only RHP/HRCN orientation into proposal context
 -> refuse proposal-context over-authority
 -> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: OPS-026 validates refusal and alignment only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: OPS-027 seals evidence only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
