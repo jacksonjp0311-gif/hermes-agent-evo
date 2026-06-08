@@ -1,0 +1,3 @@
+COMMAND: python -m py_compile rhp_runtime_bridge.py agent/agent_init.py tests/test_rhp_runtime_startup_smoke.py
+RETURN CODE: 0
+

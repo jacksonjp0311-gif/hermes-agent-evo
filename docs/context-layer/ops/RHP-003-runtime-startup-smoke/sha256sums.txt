@@ -1,0 +1,10 @@
+e1f9fdf434da31c7bea086df856d923e9ae22d8df0a217e7f1e3936c21b19b76  README.md
+5d3c1e86713dc0a2ef5b60f7f014c90971370d71390e9331129362020091cefb  rhp/README.md
+4c9631dbf15c508452b2acc77a6ffd1be00c28dff30e0a189c1245b4012a0589  agent/agent_init.py
+0e84c93d5ce483b4d4f375fa80fcb689f529216714b728f0cd5752f07a47e3e1  rhp_runtime_bridge.py
+626bc8dde4c5cf6c18eb5ae86b05e8ad738bcc88e47c781fb992b85949cb53a1  tests/test_rhp_runtime_startup_smoke.py
+4f88eafca1ace89ffda49310102a75874e26cb8c0dd81a3303301a13a24dbd7d  docs/context-layer/ops/RHP-003-final-evidence.json
+f51f7193e00c838bfcf51b808b57802b79bb2dc0029e5eabcc10e2511642318f  docs/context-layer/ops/RHP-003-runtime-startup-smoke.md
+db1eb4628c927ede1a9036dda06b061fb54b89077e3328ed22da1f296f64885a  docs/context-layer/ops/RHP-003-runtime-startup-smoke/py-compile-output.txt
+0ac02b7a9a33ff294de02dbd8ebc9cd5bc703715b02886e5bd9706be7f748c05  docs/context-layer/ops/RHP-003-runtime-startup-smoke/focused-test-output.txt
+a08d78788607b6e373b66aaeac294a06f60f1a5adcd61178b2770d21138228b9  docs/context-layer/ops/RHP-003-runtime-startup-smoke/direct-startup-smoke-output.txt
