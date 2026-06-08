@@ -1,0 +1,3 @@
+COMMAND: python -m py_compile hrcn_runtime_bridge.py rhp_runtime_bridge.py agent/agent_init.py tests/test_hrcn_runtime_bridge.py tests/test_hrcn_runtime_bridge_startup_status.py tests/test_hrcn_runtime_bridge_negative_control.py tests/test_hrcn_context_injection_proposal_path.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py
+RETURN CODE: 0
+

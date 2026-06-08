@@ -11,6 +11,10 @@ from pathlib import Path
 from typing import Any, Mapping
 
 
+EVIDENCE_FILENAME = "OPS-027-final-evidence.json"
+V0_3_TAG = "hrcn-ops-v0.3.0"
+PACKET_SCHEMA = "HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.3"
+
 FORBIDDEN_AUTHORITIES = {
     "provider_call_executed": False,
     "model_call_executed": False,
@@ -74,9 +78,13 @@ def _load_json(path: Path) -> dict[str, Any]:
     return data
 
 
+def _relative_posix(path: Path, root: Path) -> str:
+    return path.relative_to(root).as_posix()
+
+
 def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
     root = find_repo_root(repo_root)
-    evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+    evidence_path = root / "docs" / "context-layer" / "ops" / EVIDENCE_FILENAME
     if not evidence_path.is_file():
         raise FileNotFoundError(str(evidence_path))
 
@@ -85,7 +93,7 @@ def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
     if evidence.get("v0_3_seal_passed") is not True:
         raise RuntimeError("HRCN OPS v0.3 seal is not marked passed")
 
-    if evidence.get("tag_name") != "hrcn-ops-v0.3.0":
+    if evidence.get("tag_name") != V0_3_TAG:
         raise RuntimeError("HRCN OPS v0.3 tag mismatch")
 
     for key, expected in FORBIDDEN_AUTHORITIES.items():
@@ -94,7 +102,7 @@ def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
 
     return {
         "repo_root": str(root),
-        "latest_evidence_path": str(evidence_path.relative_to(root)),
+        "latest_evidence_path": _relative_posix(evidence_path, root),
         "evidence": evidence,
     }
 
@@ -107,13 +115,13 @@ def get_bridge_status(repo_root: str | Path | None = None) -> HRCNBridgeStatus:
         enabled=True,
         mode="read_only",
         repo_root=context["repo_root"],
-        sealed_anchor_tag=str(evidence.get("tag_name", "hrcn-ops-v0.3.0")),
+        sealed_anchor_tag=str(evidence.get("tag_name", V0_3_TAG)),
         current_state="HRCN OPS v0.3.0 read-only runtime/proposal bridge sealed",
         latest_evidence_path=context["latest_evidence_path"],
         next_recommended_operation=str(
             evidence.get(
                 "next_recommended_operation",
-                "RHP-004 align HRCN bridge evidence anchor after OPS-027 / v0.3 seal",
+                "RHP-004 repair test contract alignment before RHP-005 guard",
             )
         ),
         authority=FORBIDDEN_AUTHORITIES,
@@ -129,7 +137,7 @@ def get_bridge_status(repo_root: str | Path | None = None) -> HRCNBridgeStatus:
 def make_gui_context_packet(repo_root: str | Path | None = None) -> dict[str, Any]:
     status = get_bridge_status(repo_root)
     return {
-        "packet_schema": "HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.3",
+        "packet_schema": PACKET_SCHEMA,
         "bridge_status": status.as_dict(),
         "bounded_loop_formula": (
             "observe -> retrieve bounded context -> classify authority -> propose "

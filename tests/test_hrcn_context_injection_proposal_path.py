@@ -14,7 +14,8 @@ def test_hrcn_context_injection_appends_read_only_context(monkeypatch):
     assert text.startswith("base")
     assert "[HRCN READ-ONLY RUNTIME CONTEXT]" in text
     assert "HRCN Runtime Bridge: READ ONLY" in text
-    assert "hrcn-ops-v0.2.0" in text
+    assert "hrcn-ops-v0.3.0" in text
+    assert "OPS-027-final-evidence.json" in text
     assert "does not authorize tools" in text
 
 

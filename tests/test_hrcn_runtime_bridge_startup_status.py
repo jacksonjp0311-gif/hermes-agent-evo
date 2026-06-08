@@ -22,7 +22,7 @@ def test_hrcn_bridge_status_prints_read_only(capsys):
     mod = _load_main_module()
     assert mod._print_hrcn_bridge_status(compact=True) is True
     out = capsys.readouterr().out
-    assert "HRCN bridge: read_only / hrcn-ops-v0.2.0" in out
+    assert "HRCN bridge: read_only / hrcn-ops-v0.3.0" in out
 
 
 def test_hrcn_startup_status_respects_env(monkeypatch, capsys):
@@ -31,4 +31,4 @@ def test_hrcn_startup_status_respects_env(monkeypatch, capsys):
     monkeypatch.setattr(mod.sys, "argv", ["hermes"])
     mod._maybe_print_hrcn_bridge_startup_status()
     out = capsys.readouterr().out
-    assert "HRCN bridge: read_only / hrcn-ops-v0.2.0" in out
+    assert "HRCN bridge: read_only / hrcn-ops-v0.3.0" in out

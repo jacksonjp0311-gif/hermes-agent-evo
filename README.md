@@ -102,7 +102,7 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-001 | Create `/rhp` protocol substrate inside Hermes and add read-only proposal bridge. | passed |
 | RHP-002 | Add full `/rhp` mini README, failure-learning lock, and root README sync. | passed |
 | RHP-003 | Prove RHP + HRCN startup/proposal context order through a dedicated runtime smoke test. | passed |
-| RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal. | passed |
+| RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal and repair test-contract migration. | repaired |
 | RHP-005 | Install generated-source compile-check guard into future runtime-emitting All-One scripts. | next |
 | RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits. | planned |
 | RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | planned |
@@ -145,11 +145,13 @@ Hermes starts
 | RHP-L-002 | Failed bridge scripts must stop before commit/push and emit repair evidence. |
 | RHP-L-003 | New top-level folders must receive a full mini README and root README synchronization. |
 | RHP-L-004 | Evidence readers must treat only explicit `true` as dangerous authority drift; missing false fields are normalized forward. |
+| RHP-L-005 | Rehydration is orientation, not implementation coercion; code changes must preserve or deliberately migrate existing test contracts before commit. |
 
 AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-004.
 
 Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
+
 
 
 

@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-004. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-004 repair. This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-004.
+Current repository boundary: RHP-004 repair.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -138,6 +138,7 @@ git status --short
 | RHP-L-002 | The first RHP-001 attempt failed before commit/push and then recovered with a repair script. | Failed bridge scripts must stop before commit/push and emit repair evidence. |
 | RHP-L-003 | Adding `/rhp` created a new navigable surface. | Any new top-level folder must receive a full mini README and root README synchronization in the same version track. |
 | RHP-L-004 | RHP-002 initially treated missing authority-false evidence fields as drift. | Evidence readers must distinguish missing fields from explicit `true`; only explicit `true` is dangerous authority drift, while missing false fields are normalized forward. |
+| RHP-L-005 | RHP-004 aligned the runtime anchor while old tests still encoded the v0.2 contract, and the failed test output was committed. | Rehydration is orientation, not implementation coercion; version-anchor changes must migrate tests and hard-stop before commit when tests fail. |
 
 ## RCC Nexus Echo Location
 
@@ -146,7 +147,7 @@ Sphere Position:
 - Shell: inner
 - Meridian(s): rehydration, runtime, governance
 - Sector: rhp
-- Version / TTL: RHP-004 boundary / inherits RHP-001 substrate / 180 days
+- Version / TTL: RHP-004 repair boundary / inherits RHP-001 substrate / 180 days
 - Last Verified: 2026-06-08
 
 Local Role:
@@ -194,6 +195,8 @@ Non-Claim Locks:
 - repair_evidence_is_required_after_failure
 - folder_creation_requires_mini_readme
 - missing_false_evidence_fields_are_not_authority
+- rehydration_is_not_implementation_coercion
+- failed_tests_are_commit_blockers
 
 Agent Route:
 
