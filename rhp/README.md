@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-004 repair. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-005. This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-004 repair.
+Current repository boundary: RHP-005.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -32,6 +32,7 @@ Inbound hooks:
 - `docs/context-layer/ops/RHP-002-final-evidence.json`
 - `docs/context-layer/ops/RHP-003-final-evidence.json`
 - `docs/context-layer/ops/RHP-004-final-evidence.json`
+- `docs/context-layer/ops/RHP-005-final-evidence.json`
 
 Outbound hooks:
 
@@ -45,6 +46,7 @@ Outbound hooks:
 - `tests/test_rhp_hrcn_order.py`
 - `tests/test_rhp_runtime_startup_smoke.py`
 - `tests/test_rhp_004_hrcn_bridge_anchor_alignment.py`
+- `tests/test_rhp_generated_source_guard.py`
 - root README RHP Runtime Activation chart
 
 ## A - Artifacts
@@ -60,6 +62,7 @@ This folder contains the Hermes-local RHP protocol substrate:
 | `ledger/rhp_rehydration_ledger.jsonl` | Append-only RHP event ledger. |
 | `reports/` | Human-readable and machine-readable reports. |
 | `evidence/` | RHP-local evidence package. |
+| `generated_source_guard.py` | Dependency-free guard for generated Python and test-contract validation. |
 
 Runtime adapter lives outside this folder:
 
@@ -139,6 +142,7 @@ git status --short
 | RHP-L-003 | Adding `/rhp` created a new navigable surface. | Any new top-level folder must receive a full mini README and root README synchronization in the same version track. |
 | RHP-L-004 | RHP-002 initially treated missing authority-false evidence fields as drift. | Evidence readers must distinguish missing fields from explicit `true`; only explicit `true` is dangerous authority drift, while missing false fields are normalized forward. |
 | RHP-L-005 | RHP-004 aligned the runtime anchor while old tests still encoded the v0.2 contract, and the failed test output was committed. | Rehydration is orientation, not implementation coercion; version-anchor changes must migrate tests and hard-stop before commit when tests fail. |
+| RHP-L-006 | The repo began shaping AI coding behavior through rehydration, tests, and evidence geometry. | Shape is allowed only as bounded orientation; compile, tests, evidence, and human authorization remain stronger than style pressure. |
 
 ## RCC Nexus Echo Location
 
@@ -147,7 +151,7 @@ Sphere Position:
 - Shell: inner
 - Meridian(s): rehydration, runtime, governance
 - Sector: rhp
-- Version / TTL: RHP-004 repair boundary / inherits RHP-001 substrate / 180 days
+- Version / TTL: RHP-005 boundary / inherits RHP-001 substrate / 180 days
 - Last Verified: 2026-06-08
 
 Local Role:
@@ -160,6 +164,7 @@ Evidence Surface:
 - `docs/context-layer/ops/RHP-002-final-evidence.json`
 - `docs/context-layer/ops/RHP-003-final-evidence.json`
 - `docs/context-layer/ops/RHP-004-final-evidence.json`
+- `docs/context-layer/ops/RHP-005-final-evidence.json`
 - `rhp/origin_manifest.json`
 - `rhp/latest_alignment_report.json`
 - `rhp/latest_origin_certificate.json`

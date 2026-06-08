@@ -1,0 +1,3 @@
+COMMAND: python -m py_compile rhp/generated_source_guard.py tests/test_rhp_generated_source_guard.py rhp_runtime_bridge.py hrcn_runtime_bridge.py agent/agent_init.py
+RETURN CODE: 0
+

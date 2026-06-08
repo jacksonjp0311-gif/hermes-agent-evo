@@ -1,0 +1,26 @@
+COMMAND: python rhp/generated_source_guard.py --repo-root . --generated-python rhp/generated_source_guard.py --touched-paths rhp_runtime_bridge.py hrcn_runtime_bridge.py agent/agent_init.py --tests tests/test_rhp_generated_source_guard.py tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py --json
+RETURN CODE: 0
+{
+  "ok": true,
+  "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "generated_python": [
+    "rhp/generated_source_guard.py"
+  ],
+  "touched_runtime_python": [
+    "rhp_runtime_bridge.py",
+    "hrcn_runtime_bridge.py",
+    "agent/agent_init.py"
+  ],
+  "tests": [
+    "tests/test_rhp_generated_source_guard.py",
+    "tests/test_rhp_runtime_bridge.py",
+    "tests/test_rhp_context_injection.py",
+    "tests/test_rhp_hrcn_order.py",
+    "tests/test_rhp_runtime_startup_smoke.py",
+    "tests/test_rhp_004_hrcn_bridge_anchor_alignment.py"
+  ],
+  "py_compile_passed": true,
+  "focused_tests_passed": true,
+  "failed_reason": "",
+  "pytest_output": ".....................                                                    [100%]\n21 passed in 2.95s\n"
+}

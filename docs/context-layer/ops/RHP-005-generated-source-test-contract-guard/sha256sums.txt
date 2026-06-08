@@ -1,0 +1,9 @@
+3170fc13bd6eb242e0cf8020cd695f997bc0744ba34c5d35797ea84a54b3d005  README.md
+f0ef3dd8095e2c4efd48abe9ef6ecd97c82cbc4d3e7b73f2c44aa55df4d090e3  rhp/README.md
+7487a5e50156d2bd4db402a89a4c22614c0795342a13ef6ca66fdc777c5df332  rhp/generated_source_guard.py
+f13d2a29f4568fc03e91ef19189d079368c1ace1b9ea2d9889b5919f964f7911  tests/test_rhp_generated_source_guard.py
+709fb5e471a6d897e2ed0b666beb81819a72c2e6de0151a3878fcf1f7d3879b1  docs/context-layer/ops/RHP-005-final-evidence.json
+cbb12c4f1e4c8202a3e35c2f261bbb281b13e4181e79a2856507c98ceb039fea  docs/context-layer/ops/RHP-005-generated-source-test-contract-guard.md
+b929ecf15b24e36feb798e9da9d1f532ff629b9cd6be3fb76099628de841c790  docs/context-layer/ops/RHP-005-generated-source-test-contract-guard/py-compile-output.txt
+d247b4a9b44205ecf689d99a9cfa2c2a52a5d69f39c742c4765448e02cdd347b  docs/context-layer/ops/RHP-005-generated-source-test-contract-guard/focused-test-output.txt
+a895a8ad2a962d1da1839cb366fe56de7e9181e844d7c0b48e2d08965ce67293  docs/context-layer/ops/RHP-005-generated-source-test-contract-guard/guard-self-check-output.txt
