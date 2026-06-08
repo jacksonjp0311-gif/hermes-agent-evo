@@ -1,0 +1,49 @@
+{
+  "schema": "RHP-HERMES-origin-manifest-v0.1",
+  "operation": "RHP-001",
+  "repository": "jacksonjp0311-gif/hermes-agent-evo",
+  "local_root": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+  "timestamp_utc": "2026-06-08T13:08:20.191447+00:00",
+  "mode": "hermes-local-rhp-substrate",
+  "origin_surfaces": [
+    "README.md",
+    "pyproject.toml",
+    "hrcn_runtime_bridge.py",
+    "agent/agent_init.py",
+    "docs/context-layer/ops/OPS-026-final-evidence.json"
+  ],
+  "surface_hashes": {
+    "README.md": "77607dd0e61dad9c90ef4d0877a176986b435e21593a848bb762334214a4bfa0",
+    "pyproject.toml": "2e047dcaf7d0cc5ae068322e2926fe5a9b885c7be00db3b841419324c827e0f6",
+    "hrcn_runtime_bridge.py": "536a216fe4adbc7f43fb0465c97f6f52acbcdfa54b79e7f50a2047a5128e5243",
+    "agent/agent_init.py": "90253b0adfcb4af202313b0fd51b7dca4c80b7154be65d63c49100b2e7d2dc50",
+    "docs/context-layer/ops/OPS-026-final-evidence.json": "f523f0c3408b7f934e0cfe8afc1c5f4b73546410a579647b19698f7cf4d62fd3"
+  },
+  "surface_sizes": {
+    "README.md": 89759,
+    "pyproject.toml": 15364,
+    "hrcn_runtime_bridge.py": 5841,
+    "agent/agent_init.py": 85091,
+    "docs/context-layer/ops/OPS-026-final-evidence.json": 1992
+  },
+  "missing_surfaces": [],
+  "latest_ops_evidence": "docs/context-layer/ops/OPS-026-final-evidence.json",
+  "context_gate": "HERMES_RHP_CONTEXT",
+  "context_default_enabled": false,
+  "hrcn_interlock": "RHP context must inject before HRCN context.",
+  "blocked_scope": [
+    "Codex ingestion",
+    "CMS runtime execution",
+    "CMS write",
+    "memory write",
+    "memory promotion",
+    "API write",
+    "provider/model call",
+    "tool authority grant",
+    "dependency mutation",
+    "autonomy",
+    "self-authorization"
+  ],
+  "non_claim_lock": "RHP origin alignment is repository-bound orientation only. It does not prove truth, code correctness, security, production readiness, consciousness, AGI, autonomy, or write authority.",
+  "origin_hash": "88ac5a062a16a9cea1b882e3004d5c5f0a7ce895493d87d6a38243801215f384"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "RHP-001-final-evidence",
+  "operation": "RHP-001",
+  "timestamp_utc": "2026-06-08T13:14:24.388868+00:00",
+  "repair_pass": true,
+  "focused_tests_passed": true,
+  "direct_smoke_passed": true,
+  "rhp_before_hrcn_order_passed": true,
+  "compounding_permitted": false,
+  "codex_ingestion": false,
+  "non_claim_lock": "RHP-001 repair fixes generated Python string literals and completes read-only proposal-context tests. It grants no write authority, no CMS authority, no memory promotion, no Codex ingestion, no autonomy, and no self-authorization."
+}

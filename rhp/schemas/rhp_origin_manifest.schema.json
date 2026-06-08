@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RHP Hermes Origin Manifest v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "repository",
+    "origin_surfaces",
+    "surface_hashes",
+    "origin_hash",
+    "non_claim_lock"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "origin_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "surface_hashes": {
+      "type": "object"
+    },
+    "origin_hash": {
+      "type": "string"
+    },
+    "non_claim_lock": {
+      "type": "string"
+    }
+  }
+}

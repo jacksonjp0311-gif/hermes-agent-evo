@@ -1,0 +1,3 @@
+COMMAND: python -c import os; os.environ['HERMES_RHP_CONTEXT']='proposal'; os.environ['HERMES_HRCN_CONTEXT']='proposal'; from agent.agent_init import _maybe_append_rhp_context, _maybe_append_hrcn_context; text=_maybe_append_hrcn_context(_maybe_append_rhp_context('base')); assert '[RHP ORIGIN-ALIGNMENT CONTEXT]' in text; assert '[HRCN READ-ONLY RUNTIME CONTEXT]' in text; assert text.index('[RHP ORIGIN-ALIGNMENT CONTEXT]') < text.index('[HRCN READ-ONLY RUNTIME CONTEXT]'); print('RHP-001 repair smoke passed')
+RETURN CODE: 0
+RHP-001 repair smoke passed

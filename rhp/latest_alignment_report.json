@@ -1,0 +1,32 @@
+{
+  "schema": "RHP-HERMES-alignment-report-v0.1",
+  "operation": "RHP-001",
+  "timestamp_utc": "2026-06-08T13:08:20.191447+00:00",
+  "repository": "jacksonjp0311-gif/hermes-agent-evo",
+  "origin_hash": "88ac5a062a16a9cea1b882e3004d5c5f0a7ce895493d87d6a38243801215f384",
+  "distance_metric": "surface_presence_and_hash_manifest_v0",
+  "threshold_convention": "proposal-mode requires all declared origin surfaces present; compounding remains false",
+  "epsilon_0": 0.0,
+  "delta_before": 0.0,
+  "delta_after": 0.0,
+  "alignment_status": "proposal_aligned",
+  "continuation_permitted": true,
+  "compounding_permitted": false,
+  "validated_surfaces": [
+    "README.md",
+    "pyproject.toml",
+    "hrcn_runtime_bridge.py",
+    "agent/agent_init.py",
+    "docs/context-layer/ops/OPS-026-final-evidence.json"
+  ],
+  "missing_surfaces": [],
+  "drift_findings": [
+    {
+      "code": "RHP-DRIFT-HRCN-BRIDGE-OPS-ANCHOR",
+      "severity": "warning",
+      "message": "README current-state surface references OPS-026 while hrcn_runtime_bridge.py still loads OPS-020-final-evidence.json.",
+      "recommended_action": "Future HRCN/RHP pass should align runtime bridge latest evidence anchor after v0.3 sealing."
+    }
+  ],
+  "non_claim_lock": "RHP origin alignment is repository-bound orientation only. It does not prove truth, code correctness, security, production readiness, consciousness, AGI, autonomy, or write authority."
+}

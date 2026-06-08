@@ -90,6 +90,54 @@ Human authorization unlocks dangerous transitions.
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
+<!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
+### Rehydration Protocol Runtime Activation Track
+
+Human summary: this fork now contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP is the first runtime boot surface. It loads declared origin geometry, checks alignment, emits a proposal-mode origin certificate, and injects read-only origin context before HRCN authority context. This is not Codex ingestion, not CMS write authority, not memory promotion, not autonomous operation, and not production readiness.
+
+#### RHP Activation Chart
+
+| Stage | Meaning | Status |
+|---|---|---:|
+| RHP-001 | Create `/rhp` protocol substrate inside Hermes. | passed |
+| RHP-002 | Add read-only `rhp_runtime_bridge.py`. | passed |
+| RHP-003 | Add `HERMES_RHP_CONTEXT` proposal injection gate. | passed |
+| RHP-004 | Emit alignment report and proposal-mode origin certificate. | passed |
+| RHP-005 | Add fail-closed bridge/context negative controls. | passed |
+| RHP-006 | Prove RHP context loads before HRCN context. | passed |
+| RHP-007 | Runtime smoke test with RHP + HRCN enabled. | next |
+
+#### Runtime Boot Order
+
+```text
+Hermes starts
+→ /rhp origin manifest loads
+→ RHP bridge validates origin surfaces
+→ RHP context injects if HERMES_RHP_CONTEXT=proposal
+→ HRCN context injects if HERMES_HRCN_CONTEXT=proposal
+→ Hermes proposes only inside declared boundaries
+```
+
+#### Current Boundary
+
+| Surface | Current state |
+|---|---|
+| RHP substrate folder | `/rhp` |
+| RHP runtime bridge | `rhp_runtime_bridge.py` |
+| RHP context default enabled | `False` |
+| RHP context gate | `HERMES_RHP_CONTEXT` |
+| RHP compounding authority | `False` |
+| RHP write authority | `False` |
+| HRCN replacement | `False` |
+| CMS/Codex ingestion | `Blocked` |
+| Human authorization required for durable action | `True` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-001-final-evidence.json` |
+
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-001.
+
+Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
+<!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
+
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_START -->
 ### HRCN OPS Operational Bridge Status
 

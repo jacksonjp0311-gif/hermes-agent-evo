@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RHP Hermes Origin Certificate v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "certificate_id",
+    "alignment_status",
+    "mode",
+    "compounding_permission",
+    "certificate_hash"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string"
+    },
+    "certificate_id": {
+      "type": "string"
+    },
+    "alignment_status": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "compounding_permission": {
+      "type": "boolean"
+    },
+    "certificate_hash": {
+      "type": "string"
+    }
+  }
+}

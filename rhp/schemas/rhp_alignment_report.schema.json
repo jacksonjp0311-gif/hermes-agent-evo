@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RHP Hermes Alignment Report v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "alignment_status",
+    "continuation_permitted",
+    "compounding_permitted",
+    "drift_findings"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string"
+    },
+    "alignment_status": {
+      "type": "string"
+    },
+    "continuation_permitted": {
+      "type": "boolean"
+    },
+    "compounding_permitted": {
+      "type": "boolean"
+    },
+    "drift_findings": {
+      "type": "array"
+    }
+  }
+}

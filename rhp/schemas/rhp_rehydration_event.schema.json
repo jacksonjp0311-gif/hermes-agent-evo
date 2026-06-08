@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RHP Hermes Rehydration Event v0.1",
+  "type": "object",
+  "required": [
+    "schema",
+    "event_id",
+    "operation",
+    "origin_hash",
+    "event_hash"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "origin_hash": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string"
+    }
+  }
+}
