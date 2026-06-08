@@ -1,0 +1,13 @@
+d72d22ff3582a123759344353ad71843e0a57be56e70dcf984a389decad77f94  README.md
+ac6664f0e04abfeb846b854e2107a39faea451844c5d3045b6a54014dccb7570  rhp/README.md
+b3021c940bf9925d50c771fbd2df444d01a865e093db1692fc98d43a1aafeb97  rhp/alignment_guard.py
+1a3516a60cabd933a0bfe4ada02ff4d391ccd8520d716e251f2f9f073aa00384  rhp/apply_gate_negative_control.py
+a993df9d595e60dd1e6ddde8e66b824a109224cf93742af556c4f0b213ffda62  tests/test_rhp_alignment_guard.py
+789e1bee696f4ec4f67e4c2c629895987f0c4c473e93f23f5d48128b41ed6aa5  tests/test_rhp_008_apply_gate_negative_control.py
+f60b8c16b5a398a1af6d507e77eb0a08e5e5dab93ad18e2e7e49ae52bbdb2759  docs/context-layer/ops/RHP-008-final-evidence.json
+31fefe4ae6a9d5fb265799a5642e46f3aa0f736301337ccdd7686abf84ee684a  docs/context-layer/ops/RHP-008-apply-gate-negative-control-proof.md
+8f8133c5f16a8b6e65d1de668fa981f50965c03bb7ccb215bd11783e20f09045  docs/context-layer/ops/RHP-008-apply-gate-negative-control-proof/alignment-guard-preflight-output.txt
+1a8f32c065308aa4e9f3850069d4ce55e221fcff705ecfb83e98f0969f20558e  docs/context-layer/ops/RHP-008-apply-gate-negative-control-proof/py-compile-output.txt
+d6cdd1c44d0b178cfd3047494d4bd66e3365c84949809ed2e9c85fa4e32bf6e8  docs/context-layer/ops/RHP-008-apply-gate-negative-control-proof/apply-gate-negative-control-output.txt
+3efb6ad55e6c7bdd062c09911a44455036c5e8b4e8149d17202bc5b5ecbd421b  docs/context-layer/ops/RHP-008-apply-gate-negative-control-proof/focused-test-output.txt
+28d91370c5f683ec1336bfab7e25f0e2472a7d0e67af0fdd1507ccb1c62eefcc  docs/context-layer/ops/RHP-008-apply-gate-negative-control-proof/alignment-guard-final-output.txt

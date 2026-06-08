@@ -1,0 +1,121 @@
+RETURN CODE: 0
+{
+  "ok": true,
+  "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "proposal_loop_ok": true,
+  "human_apply_gate_present": false,
+  "attempted_escalations_count": 12,
+  "refused_escalations_count": 12,
+  "all_escalations_refused": true,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "memory_promotion": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "codex_ingestion": false,
+  "self_authorization": false,
+  "autonomous_authority": false,
+  "refusals": [
+    {
+      "attempted_action": "provider_call",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "provider_call_executed",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "model_call",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "model_call_executed",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "tool_use",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "tool_use_executed",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "cms_runtime_execution",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "cms_runtime_execution",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "cms_write",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "cms_write",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "memory_write",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "memory_write",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "memory_promotion",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "memory_promotion",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "api_write",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "api_write",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "dependency_mutation",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "dependency_mutation_committed",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "codex_ingestion",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "codex_ingestion",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "self_authorization",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "self_authorization",
+      "authority_value": false
+    },
+    {
+      "attempted_action": "autonomous_authority",
+      "allowed": false,
+      "human_apply_gate_present": false,
+      "reason": "proposal context is orientation only; missing separate human apply gate",
+      "authority_flag": "autonomous_authority",
+      "authority_value": false
+    }
+  ],
+  "non_claim_lock": "RHP-008 proves refusal only. It does not create an apply gate, does not execute a model/provider/tool call, does not run or write CMS, does not write or promote memory, does not write APIs, does not ingest Codex, and does not authorize autonomy or self-authorization."
+}

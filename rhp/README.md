@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-007. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-008. This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-007.
+Current repository boundary: RHP-008.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -86,11 +86,11 @@ Operationally:
 
 ```text
 Hermes starts
-â†’ /rhp origin manifest loads
-â†’ RHP bridge validates origin surfaces
-â†’ RHP context injects if HERMES_RHP_CONTEXT=proposal
-â†’ HRCN context injects if HERMES_HRCN_CONTEXT=proposal
-â†’ Hermes proposes only inside declared boundaries
+Ã¢â€ â€™ /rhp origin manifest loads
+Ã¢â€ â€™ RHP bridge validates origin surfaces
+Ã¢â€ â€™ RHP context injects if HERMES_RHP_CONTEXT=proposal
+Ã¢â€ â€™ HRCN context injects if HERMES_HRCN_CONTEXT=proposal
+Ã¢â€ â€™ Hermes proposes only inside declared boundaries
 ```
 
 RHP asks:
@@ -142,7 +142,7 @@ git status --short
 
 | Lesson | Finding | Rule |
 |---|---|---|
-| RHP-L-001 | Generated Python source broke because escaped newline handling crossed PowerShell â†’ Python â†’ Python boundaries. | Any All-One that emits runtime Python must run `python -m py_compile` on emitted files before pytest. |
+| RHP-L-001 | Generated Python source broke because escaped newline handling crossed PowerShell Ã¢â€ â€™ Python Ã¢â€ â€™ Python boundaries. | Any All-One that emits runtime Python must run `python -m py_compile` on emitted files before pytest. |
 | RHP-L-002 | The first RHP-001 attempt failed before commit/push and then recovered with a repair script. | Failed bridge scripts must stop before commit/push and emit repair evidence. |
 | RHP-L-003 | Adding `/rhp` created a new navigable surface. | Any new top-level folder must receive a full mini README and root README synchronization in the same version track. |
 | RHP-L-004 | RHP-002 initially treated missing authority-false evidence fields as drift. | Evidence readers must distinguish missing fields from explicit `true`; only explicit `true` is dangerous authority drift, while missing false fields are normalized forward. |
@@ -160,7 +160,7 @@ Sphere Position:
 - Shell: inner
 - Meridian(s): rehydration, runtime, governance
 - Sector: rhp
-- Version / TTL: RHP-007 proposal-loop proof boundary / inherits RHP-001 substrate / 180 days
+- Version / TTL: RHP-008 apply-gate negative-control boundary / inherits RHP-001 substrate / 180 days
 - Last Verified: 2026-06-08
 
 Local Role:
@@ -263,3 +263,14 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 - RHP-L-014: see root README Failure-Learning Lock.
 
 - proposal_loop_proof_is_not_model_execution
+
+
+## RHP-008 Apply-Gate Negative Control
+
+- `rhp/apply_gate_negative_control.py`
+- `tests/test_rhp_008_apply_gate_negative_control.py`
+- `docs/context-layer/ops/RHP-008-final-evidence.json`
+
+- RHP-L-015: Proposal context is not apply authority; negative controls must prove refusal before apply-gate work.
+
+- apply_gate_negative_control_refuses_escalation
