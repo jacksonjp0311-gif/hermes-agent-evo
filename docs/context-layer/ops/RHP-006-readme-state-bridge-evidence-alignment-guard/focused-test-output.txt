@@ -1,0 +1,17 @@
+COMMAND: python -m pytest -q -o addopts= tests/test_rhp_alignment_guard.py tests/test_rhp_generated_source_guard.py tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py tests/test_hrcn_runtime_bridge.py tests/test_hrcn_runtime_bridge_startup_status.py tests/test_hrcn_runtime_bridge_negative_control.py tests/test_hrcn_context_injection_proposal_path.py
+RETURN CODE: 1
+F.........................................                               [100%]
+================================== FAILURES ===================================
+___________ test_alignment_guard_accepts_current_repo_after_rhp006 ____________
+
+    def test_alignment_guard_accepts_current_repo_after_rhp006():
+        result = validate_alignment(Path.cwd())
+    
+>       assert result.ok is True
+E       AssertionError: assert False is True
+E        +  where False = AlignmentResult(ok=False, repo_root='C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo', checks={'previous_rhp005_...t_was_rhp006': True, 'authority_false': True, 'git_status_command_available': True}, failures=['latest_rhp006_passed']).ok
+
+tests\test_rhp_alignment_guard.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_rhp_alignment_guard.py::test_alignment_guard_accepts_current_repo_after_rhp006
+1 failed, 41 passed in 4.12s
