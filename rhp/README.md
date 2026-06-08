@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-006 repair. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-006.1. This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-006 repair.
+Current repository boundary: RHP-006.1.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -34,6 +34,7 @@ Inbound hooks:
 - `docs/context-layer/ops/RHP-004-final-evidence.json`
 - `docs/context-layer/ops/RHP-005-final-evidence.json`
 - `docs/context-layer/ops/RHP-006-final-evidence.json`
+- `docs/context-layer/ops/RHP-006-1-final-evidence.json`
 
 Outbound hooks:
 
@@ -131,8 +132,9 @@ Read this README before editing this folder.
 Expected validation when this folder or RHP runtime surfaces change:
 
 ```powershell
-python -m py_compile rhp_runtime_bridge.py agent/agent_init.py
-python -m pytest -q -o addopts= tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py
+python -m py_compile rhp_runtime_bridge.py hrcn_runtime_bridge.py agent/agent_init.py rhp/generated_source_guard.py rhp/alignment_guard.py
+python -m pytest -q -o addopts= tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py tests/test_rhp_generated_source_guard.py tests/test_rhp_alignment_guard.py
+python rhp/alignment_guard.py --repo-root . --json
 git status --short
 ```
 
@@ -148,6 +150,8 @@ git status --short
 | RHP-L-006 | The repo began shaping AI coding behavior through rehydration, tests, and evidence geometry. | Shape is allowed only as bounded orientation; compile, tests, evidence, and human authorization remain stronger than style pressure. |
 | RHP-L-007 | README, mini README, bridge state, and evidence can drift separately after rapid versioning. | A dedicated alignment guard must verify all public and runtime-facing state surfaces before future RHP commits. |
 | RHP-L-008 | RHP-006 guard correctly stopped, but manual continuation still committed red evidence. | After any guard failure, stop and run a repair seal; do not manually stage, commit, or push post-failure artifacts. |
+| RHP-L-009 | Root README public metrics and post-seal chart can drift even when RHP evidence is green. | Public metrics, post-seal chart, RHP chart, and latest evidence must close together before proposal-loop proof. |
+| RHP-L-010 | Failed partial attempts can leave dirty working-tree residue that blocks pull/retry. | A clean rerun may remove only known failed-attempt paths and must stop if unrelated dirty files remain. |
 
 ## RCC Nexus Echo Location
 
@@ -156,7 +160,7 @@ Sphere Position:
 - Shell: inner
 - Meridian(s): rehydration, runtime, governance
 - Sector: rhp
-- Version / TTL: RHP-006 repair boundary / inherits RHP-001 substrate / 180 days
+- Version / TTL: RHP-006.1 closure boundary / inherits RHP-001 substrate / 180 days
 - Last Verified: 2026-06-08
 
 Local Role:
@@ -171,6 +175,7 @@ Evidence Surface:
 - `docs/context-layer/ops/RHP-004-final-evidence.json`
 - `docs/context-layer/ops/RHP-005-final-evidence.json`
 - `docs/context-layer/ops/RHP-006-final-evidence.json`
+- `docs/context-layer/ops/RHP-006-1-final-evidence.json`
 - `rhp/origin_manifest.json`
 - `rhp/latest_alignment_report.json`
 - `rhp/latest_origin_certificate.json`
@@ -180,8 +185,9 @@ Evidence Surface:
 Validation Surface:
 
 ```powershell
-python -m py_compile rhp_runtime_bridge.py agent/agent_init.py
-python -m pytest -q -o addopts= tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py
+python -m py_compile rhp_runtime_bridge.py hrcn_runtime_bridge.py agent/agent_init.py rhp/generated_source_guard.py rhp/alignment_guard.py
+python -m pytest -q -o addopts= tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py tests/test_rhp_generated_source_guard.py tests/test_rhp_alignment_guard.py
+python rhp/alignment_guard.py --repo-root . --json
 git status --short
 ```
 
@@ -210,6 +216,8 @@ Non-Claim Locks:
 - failed_tests_are_commit_blockers
 - guard_failure_requires_repair_seal
 - post_failure_manual_commit_is_forbidden
+- public_metrics_must_match_latest_evidence
+- failed_partial_attempt_cleanup_is_scoped
 
 Agent Route:
 
@@ -229,8 +237,9 @@ When this folder's purpose, files, routes, evidence surfaces, validation command
 Required after changes:
 
 ```powershell
-python -m py_compile rhp_runtime_bridge.py agent/agent_init.py
-python -m pytest -q -o addopts= tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py
+python -m py_compile rhp_runtime_bridge.py hrcn_runtime_bridge.py agent/agent_init.py rhp/generated_source_guard.py rhp/alignment_guard.py
+python -m pytest -q -o addopts= tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py tests/test_rhp_generated_source_guard.py tests/test_rhp_alignment_guard.py
+python rhp/alignment_guard.py --repo-root . --json
 git status --short
 ```
 

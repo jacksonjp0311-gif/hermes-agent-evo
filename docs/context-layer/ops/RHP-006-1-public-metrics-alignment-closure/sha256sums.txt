@@ -1,0 +1,10 @@
+3a33cb605ba01d596f28750bc0e27094121b36d9c5d31c8970286b2a76b87744  README.md
+34c19b01b4b6cb318e95ec1df999060287e0c8184879b1d40279ecd381fb1040  rhp/README.md
+401499fee598fa6b43224a7450196a966cf1c1cfdfe8a33212bd3baa1d62c997  rhp/alignment_guard.py
+fcbdd6dd7357e235bf8ea45a056826eaf4eb54970d50063d5f00a4f589fa79eb  tests/test_rhp_alignment_guard.py
+b02d845a49db87017fff4db1ad17e3d2f7cb1e17c3b4d564cc54d777d24ffa30  docs/context-layer/ops/RHP-006-1-final-evidence.json
+b95ae6750ee2009a15dd8fb3669cc8393f5ddf2472c562c5f5166684d2462b7d  docs/context-layer/ops/RHP-006-1-public-metrics-alignment-closure.md
+e91bad9c054f49323341eb3d56e70274d33cb1b84955f5aff9278af0201c80e9  docs/context-layer/ops/RHP-006-1-public-metrics-alignment-closure/alignment-guard-preflight-output.txt
+082cff66ebdee98dbeadbe3c4cfef9954137f6f98ed8cf015bf9b804a84d3036  docs/context-layer/ops/RHP-006-1-public-metrics-alignment-closure/py-compile-output.txt
+dce3be89b7d14e613b6d3717062769fe5c70269981440d7315ee167008cbe042  docs/context-layer/ops/RHP-006-1-public-metrics-alignment-closure/focused-test-output.txt
+792a31b5f7346aefe0558034369ac6fb9816ea8b91748cacd9e0cecae7c680cd  docs/context-layer/ops/RHP-006-1-public-metrics-alignment-closure/alignment-guard-final-output.txt

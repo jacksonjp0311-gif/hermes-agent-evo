@@ -90,6 +90,30 @@ Human authorization unlocks dangerous transitions.
 
 Current public finding: Hermes provides the actor/runtime body. RCC provides repository orientation. CMS provides governed memory, repair, dry-run, apply-gate, rollback, evidence, and permission boundaries. HRCN is the bridge contract between those surfaces and human authorization.
 
+<!-- HERMES_CURRENT_PUBLIC_METRICS_START -->
+### Current Public Metrics
+
+| Metric | Current value |
+|---|---|
+| Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
+| Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
+| HRCN release tag | `hrcn-ops-v0.1.0` |
+| HRCN bounded loop tag | `hrcn-ops-v0.2.0` |
+| Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
+| Latest post-seal OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-006-1-final-evidence.json` |
+| Current RHP status | `RHP-006.1 public metrics alignment closure passed` |
+| Next RHP gate | `RHP-007 first governed RHP → HRCN → Hermes proposal-loop proof` |
+| Runtime source authority | `False` |
+| CMS write authority | `False` |
+| Memory promotion authority | `False` |
+| Codex ingestion authority | `False` |
+| Autonomous authority | `False` |
+| Human authorization required | `True` |
+
+Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
+<!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
+
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
 ### Rehydration Protocol Runtime Activation Track
 
@@ -105,6 +129,7 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal and repair test-contract migration. | repaired |
 | RHP-005 | Install generated-source and test-contract guard for future runtime-emitting All-One scripts. | passed |
 | RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits and repair self-reference failure. | repaired |
+| RHP-006.1 | Close public metrics and post-seal README alignment drift. | passed |
 | RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | next |
 
 #### Runtime Boot Order
@@ -138,7 +163,7 @@ Hermes starts
 | HRCN replacement | `False` |
 | CMS/Codex ingestion | `Blocked` |
 | Human authorization required for durable action | `True` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-006-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-006-1-final-evidence.json` |
 
 #### Failure-Learning Lock
 
@@ -152,11 +177,14 @@ Hermes starts
 | RHP-L-006 | A repo can shape AI behavior through local evidence, tests, and README geometry, but shape must remain bounded by compile/test/evidence gates. |
 | RHP-L-007 | README, mini README, bridge state, and latest evidence must agree before future RHP commits. |
 | RHP-L-008 | A guard can stop correctly, but manual continuation can still commit red evidence. | After any guard failure, run a repair seal; no post-failure manual staging/commit/push. |
+| RHP-L-009 | Public metrics can drift even when local RHP evidence is green. | Current public metrics, post-seal chart, RHP chart, and latest evidence must close together before proposal-loop proof. |
+| RHP-L-010 | Failed partial attempts can leave dirty working-tree residue that blocks pull/retry. | A clean rerun may remove only known failed-attempt paths and must stop if unrelated dirty files remain. |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-006.
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-006.1.
 
 Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
+
 
 
 
@@ -213,9 +241,9 @@ Human lock: OPS v0.3 is sealed as evidence. RHP remains the active runtime-thres
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: OPS-027 HRCN v0.3 seal and tag passed.
+Current post-seal state: RHP-006.1 public metrics alignment closure passed. HRCN OPS v0.3 is sealed; RHP is the active runtime-threshold track.
 
-OPS has now served its role as the HRCN evidence ledger through v0.3. RHP is the active runtime-threshold track for future origin-alignment and startup/proposal ordering work.
+OPS has now served its role as the HRCN evidence ledger through v0.3. RHP carries the live boot-order, rehydration, generated-source, test-contract, alignment-guard, and public-metrics alignment track.
 
 | Stage | Meaning | Status |
 |---|---|---:|
@@ -226,7 +254,14 @@ OPS has now served its role as the HRCN evidence ledger through v0.3. RHP is the
 | OPS-025 | Read-only context injection into Hermes proposal path. | passed |
 | OPS-026 | Proposal-context negative-control and v0.3 seal prep. | passed |
 | OPS-027 | v0.3 seal and tag. | passed |
-| RHP-004 | Align HRCN bridge evidence anchor after v0.3 seal. | next |
+| RHP-001 | Hermes-local rehydration substrate. | passed |
+| RHP-002 | Mini README and failure-learning lock. | passed |
+| RHP-003 | Runtime startup/proposal smoke. | passed |
+| RHP-004 | HRCN bridge anchor alignment and test-contract migration repair. | repaired |
+| RHP-005 | Generated-source and test-contract guard. | passed |
+| RHP-006 | README/state/bridge/evidence alignment guard and self-reference repair. | repaired |
+| RHP-006.1 | Public metrics and post-seal README alignment closure. | passed |
+| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | next |
 
 Operational bridge target:
 
@@ -240,8 +275,9 @@ Hermes runtime
 -> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: OPS-027 seals evidence only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: RHP-006.1 closes public README metrics drift only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
+
 
 
 
@@ -292,12 +328,12 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | CMS root intake plan | `docs/context-layer/cms-root-intake-plan.md` |
 | Surface boundary map | `docs/context-layer/hermes-surface-boundary-map.json` |
 | Validation report | `docs/context-layer/hrcn-v2.0.validation.json` |
-| Latest OPS bridge proof | `docs/context-layer/ops/OPS-026-final-evidence.json` |
-| Current OPS status | `OPS-026 proposal-context negative-control and v0.3 seal prep passed` |
+| Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
+| Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/OPS-026-final-evidence.json` |
-| Post-seal status | `OPS-026 proposal-context negative-control and v0.3 seal prep passed` |
+| Latest post-seal proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
+| Post-seal status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Next post-seal gate | `OPS-027 v0.3 seal and tag` |
 | Mini README profiles | `full / compact / pointer` |
 | Agent rehydration packet contract | `docs/context-layer/hrcn-v0.3-agent-rehydration-packet-contract.json` |
