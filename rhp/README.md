@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-003. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-004. This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-003.
+Current repository boundary: RHP-004.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -31,6 +31,7 @@ Inbound hooks:
 - `docs/context-layer/ops/RHP-001-final-evidence.json`
 - `docs/context-layer/ops/RHP-002-final-evidence.json`
 - `docs/context-layer/ops/RHP-003-final-evidence.json`
+- `docs/context-layer/ops/RHP-004-final-evidence.json`
 
 Outbound hooks:
 
@@ -43,6 +44,7 @@ Outbound hooks:
 - `tests/test_rhp_context_injection.py`
 - `tests/test_rhp_hrcn_order.py`
 - `tests/test_rhp_runtime_startup_smoke.py`
+- `tests/test_rhp_004_hrcn_bridge_anchor_alignment.py`
 - root README RHP Runtime Activation chart
 
 ## A - Artifacts
@@ -144,7 +146,7 @@ Sphere Position:
 - Shell: inner
 - Meridian(s): rehydration, runtime, governance
 - Sector: rhp
-- Version / TTL: RHP-003 boundary / inherits RHP-001 substrate / 180 days
+- Version / TTL: RHP-004 boundary / inherits RHP-001 substrate / 180 days
 - Last Verified: 2026-06-08
 
 Local Role:
@@ -156,6 +158,7 @@ Evidence Surface:
 - `docs/context-layer/ops/RHP-001-final-evidence.json`
 - `docs/context-layer/ops/RHP-002-final-evidence.json`
 - `docs/context-layer/ops/RHP-003-final-evidence.json`
+- `docs/context-layer/ops/RHP-004-final-evidence.json`
 - `rhp/origin_manifest.json`
 - `rhp/latest_alignment_report.json`
 - `rhp/latest_origin_certificate.json`

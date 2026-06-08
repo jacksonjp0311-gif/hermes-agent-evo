@@ -1,0 +1,347 @@
+COMMAND: python -m pytest -q -o addopts= tests/test_hrcn_runtime_bridge.py tests/test_hrcn_runtime_bridge_startup_status.py tests/test_hrcn_runtime_bridge_negative_control.py tests/test_hrcn_context_injection_proposal_path.py tests/test_hrcn_proposal_context_negative_control.py tests/test_rhp_runtime_bridge.py tests/test_rhp_context_injection.py tests/test_rhp_hrcn_order.py tests/test_rhp_runtime_startup_smoke.py tests/test_rhp_004_hrcn_bridge_anchor_alignment.py
+RETURN CODE: 1
+.FFF.FFFFFFFFF.F....................FF.                                  [100%]
+================================== FAILURES ===================================
+_________________ test_hrcn_bridge_status_exposes_v02_anchor __________________
+
+    def test_hrcn_bridge_status_exposes_v02_anchor():
+        status = bridge.get_bridge_status(Path.cwd())
+        assert status.enabled is True
+        assert status.mode == "read_only"
+>       assert status.sealed_anchor_tag == "hrcn-ops-v0.2.0"
+E       AssertionError: assert 'hrcn-ops-v0.3.0' == 'hrcn-ops-v0.2.0'
+E         
+E         - hrcn-ops-v0.2.0
+E         ?             ^
+E         + hrcn-ops-v0.3.0
+E         ?             ^
+
+tests\test_hrcn_runtime_bridge.py:14: AssertionError
+_________________ test_hrcn_context_packet_is_interface_safe __________________
+
+    def test_hrcn_context_packet_is_interface_safe():
+        packet = bridge.make_gui_context_packet(Path.cwd())
+>       assert packet["packet_schema"] == "HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.1"
+E       AssertionError: assert 'HRCN-GUI-RUN...T-PACKET-v0.3' == 'HRCN-GUI-RUN...T-PACKET-v0.1'
+E         
+E         - HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.1
+E         ?                                    ^
+E         + HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.3
+E         ?                                    ^
+
+tests\test_hrcn_runtime_bridge.py:25: AssertionError
+___________________ test_hrcn_prompt_context_contains_lock ____________________
+
+    def test_hrcn_prompt_context_contains_lock():
+        text = bridge.format_context_for_prompt(Path.cwd())
+        assert "HRCN Runtime Bridge: READ ONLY" in text
+>       assert "hrcn-ops-v0.2.0" in text
+E       AssertionError: assert 'hrcn-ops-v0.2.0' in 'HRCN Runtime Bridge: READ ONLY\nState: HRCN OPS v0.3.0 read-only runtime/proposal bridge sealed\nAnchor: hrcn-ops-v0....execution, CMS write, memory write, memory promotion, API write, dependency mutation, autonomy, or self-authorization.'
+
+tests\test_hrcn_runtime_bridge.py:34: AssertionError
+__________________ test_hrcn_bridge_status_prints_read_only ___________________
+
+capsys = <_pytest.capture.CaptureFixture object at 0x0000013943541DC0>
+
+    def test_hrcn_bridge_status_prints_read_only(capsys):
+        mod = _load_main_module()
+        assert mod._print_hrcn_bridge_status(compact=True) is True
+        out = capsys.readouterr().out
+>       assert "HRCN bridge: read_only / hrcn-ops-v0.2.0" in out
+E       AssertionError: assert 'HRCN bridge: read_only / hrcn-ops-v0.2.0' in 'HRCN bridge: read_only / hrcn-ops-v0.3.0\n'
+
+tests\test_hrcn_runtime_bridge_startup_status.py:25: AssertionError
+____________________ test_hrcn_startup_status_respects_env ____________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000013943541910>
+capsys = <_pytest.capture.CaptureFixture object at 0x00000139435F04A0>
+
+    def test_hrcn_startup_status_respects_env(monkeypatch, capsys):
+        mod = _load_main_module()
+        monkeypatch.setenv("HERMES_HRCN_BRIDGE", "1")
+        monkeypatch.setattr(mod.sys, "argv", ["hermes"])
+        mod._maybe_print_hrcn_bridge_startup_status()
+        out = capsys.readouterr().out
+>       assert "HRCN bridge: read_only / hrcn-ops-v0.2.0" in out
+E       AssertionError: assert 'HRCN bridge: read_only / hrcn-ops-v0.2.0' in 'HRCN bridge: read_only / hrcn-ops-v0.3.0\n'
+
+tests\test_hrcn_runtime_bridge_startup_status.py:34: AssertionError
+______________ test_negative_control_rejects_cms_write_authority ______________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_0')
+
+    def test_negative_control_rejects_cms_write_authority(tmp_path):
+        evidence = _valid_evidence()
+        evidence["cms_write"] = True
+        fake_root = _write_fake_repo(tmp_path, evidence)
+    
+        with pytest.raises(RuntimeError, match="cms_write"):
+>           bridge.get_bridge_status(fake_root)
+
+tests\test_hrcn_runtime_bridge_negative_control.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_0/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_rejects_0\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+____________ test_negative_control_rejects_memory_write_authority _____________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_1')
+
+    def test_negative_control_rejects_memory_write_authority(tmp_path):
+        evidence = _valid_evidence()
+        evidence["memory_write"] = True
+        fake_root = _write_fake_repo(tmp_path, evidence)
+    
+        with pytest.raises(RuntimeError, match="memory_write"):
+>           bridge.make_gui_context_packet(fake_root)
+
+tests\test_hrcn_runtime_bridge_negative_control.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:130: in make_gui_context_packet
+    status = get_bridge_status(repo_root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_1/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_rejects_1\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+______________ test_negative_control_rejects_api_write_authority ______________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_2')
+
+    def test_negative_control_rejects_api_write_authority(tmp_path):
+        evidence = _valid_evidence()
+        evidence["api_write"] = True
+        fake_root = _write_fake_repo(tmp_path, evidence)
+    
+        with pytest.raises(RuntimeError, match="api_write"):
+>           bridge.format_context_for_prompt(fake_root)
+
+tests\test_hrcn_runtime_bridge_negative_control.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:160: in format_context_for_prompt
+    packet = make_gui_context_packet(repo_root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hrcn_runtime_bridge.py:130: in make_gui_context_packet
+    status = get_bridge_status(repo_root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_2/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_rejects_2\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+______________ test_negative_control_rejects_self_authorization _______________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_3')
+
+    def test_negative_control_rejects_self_authorization(tmp_path):
+        evidence = _valid_evidence()
+        evidence["self_authorization"] = True
+        fake_root = _write_fake_repo(tmp_path, evidence)
+    
+        with pytest.raises(RuntimeError, match="self_authorization"):
+>           bridge.assert_read_only_boundary(fake_root)
+
+tests\test_hrcn_runtime_bridge_negative_control.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:176: in assert_read_only_boundary
+    status = get_bridge_status(repo_root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_3/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_rejects_3\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+_____________ test_negative_control_rejects_autonomous_authority ______________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_4')
+
+    def test_negative_control_rejects_autonomous_authority(tmp_path):
+        evidence = _valid_evidence()
+        evidence["autonomous_authority"] = True
+        fake_root = _write_fake_repo(tmp_path, evidence)
+    
+        with pytest.raises(RuntimeError, match="autonomous_authority"):
+>           bridge.assert_read_only_boundary(fake_root)
+
+tests\test_hrcn_runtime_bridge_negative_control.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:176: in assert_read_only_boundary
+    status = get_bridge_status(repo_root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_4/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_rejects_4\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+_______________ test_negative_control_rejects_unsealed_evidence _______________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_5')
+
+    def test_negative_control_rejects_unsealed_evidence(tmp_path):
+        evidence = _valid_evidence()
+        evidence["bounded_loop_v0_2_seal_passed"] = False
+        fake_root = _write_fake_repo(tmp_path, evidence)
+    
+        with pytest.raises(RuntimeError, match="not marked passed"):
+>           bridge.get_bridge_status(fake_root)
+
+tests\test_hrcn_runtime_bridge_negative_control.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_rejects_5/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_rejects_5\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+_________ test_negative_control_accepts_only_fully_read_only_evidence _________
+
+tmp_path = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_accepts_0')
+
+    def test_negative_control_accepts_only_fully_read_only_evidence(tmp_path):
+        fake_root = _write_fake_repo(tmp_path, _valid_evidence())
+>       status = bridge.get_bridge_status(fake_root)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_hrcn_runtime_bridge_negative_control.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+hrcn_runtime_bridge.py:103: in get_bridge_status
+    context = load_hrcn_context(repo_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo_root = WindowsPath('C:/Users/jacks/AppData/Local/Temp/pytest-of-jacks/pytest-10/test_negative_control_accepts_0/fake-hermes')
+
+    def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
+        root = find_repo_root(repo_root)
+        evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
+        if not evidence_path.is_file():
+>           raise FileNotFoundError(str(evidence_path))
+E           FileNotFoundError: C:\Users\jacks\AppData\Local\Temp\pytest-of-jacks\pytest-10\test_negative_control_accepts_0\fake-hermes\docs\context-layer\ops\OPS-027-final-evidence.json
+
+hrcn_runtime_bridge.py:81: FileNotFoundError
+____________ test_hrcn_context_injection_appends_read_only_context ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000139435AAA20>
+
+    def test_hrcn_context_injection_appends_read_only_context(monkeypatch):
+        monkeypatch.setenv("HERMES_HRCN_CONTEXT", "1")
+        text = _maybe_append_hrcn_context("base")
+    
+        assert text is not None
+        assert text.startswith("base")
+        assert "[HRCN READ-ONLY RUNTIME CONTEXT]" in text
+        assert "HRCN Runtime Bridge: READ ONLY" in text
+>       assert "hrcn-ops-v0.2.0" in text
+E       AssertionError: assert 'hrcn-ops-v0.2.0' in 'base\n\n[HRCN READ-ONLY RUNTIME CONTEXT]\nHRCN Runtime Bridge: READ ONLY\nState: HRCN OPS v0.3.0 read-only runtime/pr...y. It does not authorize tools, writes, CMS, memory, API calls, dependency changes, autonomy, or self-authorization.\n'
+
+tests\test_hrcn_context_injection_proposal_path.py:17: AssertionError
+_____________ test_hrcn_bridge_anchors_to_ops_027_after_v0_3_seal _____________
+
+    def test_hrcn_bridge_anchors_to_ops_027_after_v0_3_seal():
+        root = Path(__file__).resolve().parent.parent
+        context = hrcn.load_hrcn_context(root)
+>       assert context["latest_evidence_path"] == "docs/context-layer/ops/OPS-027-final-evidence.json"
+E       AssertionError: assert 'docs\\contex...evidence.json' == 'docs/context...evidence.json'
+E         
+E         - docs/context-layer/ops/OPS-027-final-evidence.json
+E         ?     ^             ^   ^
+E         + docs\context-layer\ops\OPS-027-final-evidence.json
+E         ?     ^             ^   ^
+
+tests\test_rhp_004_hrcn_bridge_anchor_alignment.py:9: AssertionError
+_________________ test_hrcn_bridge_status_reports_v0_3_state __________________
+
+    def test_hrcn_bridge_status_reports_v0_3_state():
+        root = Path(__file__).resolve().parent.parent
+        status = hrcn.get_bridge_status(root)
+        assert status.mode == "read_only"
+        assert status.sealed_anchor_tag == "hrcn-ops-v0.3.0"
+        assert status.current_state == "HRCN OPS v0.3.0 read-only runtime/proposal bridge sealed"
+>       assert status.latest_evidence_path == "docs/context-layer/ops/OPS-027-final-evidence.json"
+E       AssertionError: assert 'docs\\contex...evidence.json' == 'docs/context...evidence.json'
+E         
+E         - docs/context-layer/ops/OPS-027-final-evidence.json
+E         ?     ^             ^   ^
+E         + docs\context-layer\ops\OPS-027-final-evidence.json
+E         ?     ^             ^   ^
+
+tests\test_rhp_004_hrcn_bridge_anchor_alignment.py:20: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_hrcn_runtime_bridge.py::test_hrcn_bridge_status_exposes_v02_anchor
+FAILED tests/test_hrcn_runtime_bridge.py::test_hrcn_context_packet_is_interface_safe
+FAILED tests/test_hrcn_runtime_bridge.py::test_hrcn_prompt_context_contains_lock
+FAILED tests/test_hrcn_runtime_bridge_startup_status.py::test_hrcn_bridge_status_prints_read_only
+FAILED tests/test_hrcn_runtime_bridge_startup_status.py::test_hrcn_startup_status_respects_env
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_rejects_cms_write_authority
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_rejects_memory_write_authority
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_rejects_api_write_authority
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_rejects_self_authorization
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_rejects_autonomous_authority
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_rejects_unsealed_evidence
+FAILED tests/test_hrcn_runtime_bridge_negative_control.py::test_negative_control_accepts_only_fully_read_only_evidence
+FAILED tests/test_hrcn_context_injection_proposal_path.py::test_hrcn_context_injection_appends_read_only_context
+FAILED tests/test_rhp_004_hrcn_bridge_anchor_alignment.py::test_hrcn_bridge_anchors_to_ops_027_after_v0_3_seal
+FAILED tests/test_rhp_004_hrcn_bridge_anchor_alignment.py::test_hrcn_bridge_status_reports_v0_3_state
+15 failed, 24 passed in 2.29s

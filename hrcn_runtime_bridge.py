@@ -1,7 +1,7 @@
 # Read-only HRCN runtime bridge for Hermes.
 #
-# This module exposes the sealed HRCN bounded-loop state to Hermes runtime
-# surfaces without granting write/apply/tool/runtime authority.
+# This module exposes the sealed HRCN v0.3 runtime/proposal boundary to
+# Hermes runtime surfaces without granting write/apply/tool/runtime authority.
 
 from __future__ import annotations
 
@@ -19,6 +19,7 @@ FORBIDDEN_AUTHORITIES = {
     "cms_runtime_execution": False,
     "cms_write": False,
     "memory_write": False,
+    "memory_promotion": False,
     "api_write": False,
     "dependency_mutation_committed": False,
     "env_file_committed": False,
@@ -75,34 +76,52 @@ def _load_json(path: Path) -> dict[str, Any]:
 
 def load_hrcn_context(repo_root: str | Path | None = None) -> dict[str, Any]:
     root = find_repo_root(repo_root)
-    evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-020-final-evidence.json"
+    evidence_path = root / "docs" / "context-layer" / "ops" / "OPS-027-final-evidence.json"
     if not evidence_path.is_file():
         raise FileNotFoundError(str(evidence_path))
+
     evidence = _load_json(evidence_path)
-    if evidence.get("bounded_loop_v0_2_seal_passed") is not True:
-        raise RuntimeError("HRCN bounded loop v0.2 seal is not marked passed")
+
+    if evidence.get("v0_3_seal_passed") is not True:
+        raise RuntimeError("HRCN OPS v0.3 seal is not marked passed")
+
+    if evidence.get("tag_name") != "hrcn-ops-v0.3.0":
+        raise RuntimeError("HRCN OPS v0.3 tag mismatch")
+
     for key, expected in FORBIDDEN_AUTHORITIES.items():
         if evidence.get(key) is not expected:
             raise RuntimeError(f"HRCN authority boundary mismatch: {key}")
-    return {"repo_root": str(root), "latest_evidence_path": str(evidence_path.relative_to(root)), "evidence": evidence}
+
+    return {
+        "repo_root": str(root),
+        "latest_evidence_path": str(evidence_path.relative_to(root)),
+        "evidence": evidence,
+    }
 
 
 def get_bridge_status(repo_root: str | Path | None = None) -> HRCNBridgeStatus:
     context = load_hrcn_context(repo_root)
     evidence = context["evidence"]
+
     return HRCNBridgeStatus(
         enabled=True,
         mode="read_only",
         repo_root=context["repo_root"],
-        sealed_anchor_tag=str(evidence.get("new_tag", "hrcn-ops-v0.2.0")),
-        current_state="HRCN OPS v0.2.0 bounded loop sealed",
+        sealed_anchor_tag=str(evidence.get("tag_name", "hrcn-ops-v0.3.0")),
+        current_state="HRCN OPS v0.3.0 read-only runtime/proposal bridge sealed",
         latest_evidence_path=context["latest_evidence_path"],
-        next_recommended_operation=str(evidence.get("next_recommended_operation", "OPS-021 governed runtime bridge interface design")),
+        next_recommended_operation=str(
+            evidence.get(
+                "next_recommended_operation",
+                "RHP-004 align HRCN bridge evidence anchor after OPS-027 / v0.3 seal",
+            )
+        ),
         authority=FORBIDDEN_AUTHORITIES,
         non_claim_lock=(
             "HRCN runtime bridge is read-only. It provides orientation only and "
-            "does not authorize tools, runtime mutation, CMS write, memory write, "
-            "API write, dependency mutation, autonomy, or self-authorization."
+            "does not authorize tools, provider/model calls, runtime mutation, "
+            "CMS execution, CMS write, memory write, memory promotion, API write, "
+            "dependency mutation, autonomy, or self-authorization."
         ),
     )
 
@@ -110,11 +129,30 @@ def get_bridge_status(repo_root: str | Path | None = None) -> HRCNBridgeStatus:
 def make_gui_context_packet(repo_root: str | Path | None = None) -> dict[str, Any]:
     status = get_bridge_status(repo_root)
     return {
-        "packet_schema": "HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.1",
+        "packet_schema": "HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.3",
         "bridge_status": status.as_dict(),
-        "bounded_loop_formula": "observe -> retrieve bounded context -> classify authority -> propose -> dry-run -> evidence -> human gate -> limited apply only if authorized",
-        "allowed_runtime_use": ["display HRCN status", "include HRCN boundary summary in session context", "orient proposals to the sealed HRCN loop"],
-        "forbidden_runtime_use": ["grant tool authority", "grant provider/model authority", "mutate runtime source", "execute CMS runtime", "write CMS", "write memory", "write APIs", "change dependencies", "operate autonomously", "self-authorize"],
+        "bounded_loop_formula": (
+            "observe -> retrieve bounded context -> classify authority -> propose "
+            "-> dry-run -> evidence -> human gate -> limited apply only if authorized"
+        ),
+        "allowed_runtime_use": [
+            "display HRCN status",
+            "include HRCN boundary summary in session context",
+            "orient proposals to the sealed HRCN v0.3 loop",
+        ],
+        "forbidden_runtime_use": [
+            "grant tool authority",
+            "grant provider/model authority",
+            "mutate runtime source",
+            "execute CMS runtime",
+            "write CMS",
+            "write memory",
+            "promote memory",
+            "write APIs",
+            "change dependencies",
+            "operate autonomously",
+            "self-authorize",
+        ],
     }
 
 

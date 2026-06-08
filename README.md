@@ -102,8 +102,8 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-001 | Create `/rhp` protocol substrate inside Hermes and add read-only proposal bridge. | passed |
 | RHP-002 | Add full `/rhp` mini README, failure-learning lock, and root README sync. | passed |
 | RHP-003 | Prove RHP + HRCN startup/proposal context order through a dedicated runtime smoke test. | passed |
-| RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal. | next |
-| RHP-005 | Install generated-source compile-check guard into future runtime-emitting All-One scripts. | planned |
+| RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal. | passed |
+| RHP-005 | Install generated-source compile-check guard into future runtime-emitting All-One scripts. | next |
 | RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits. | planned |
 | RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | planned |
 
@@ -125,6 +125,8 @@ Hermes starts
 | RHP substrate folder | `/rhp` |
 | RHP mini README | `rhp/README.md` |
 | RHP runtime bridge | `rhp_runtime_bridge.py` |
+| HRCN runtime bridge anchor | `docs/context-layer/ops/OPS-027-final-evidence.json` |
+| HRCN bridge tag | `hrcn-ops-v0.3.0` |
 | RHP startup smoke test | `tests/test_rhp_runtime_startup_smoke.py` |
 | RHP context default enabled | `False` |
 | RHP context gate | `HERMES_RHP_CONTEXT` |
@@ -133,7 +135,7 @@ Hermes starts
 | HRCN replacement | `False` |
 | CMS/Codex ingestion | `Blocked` |
 | Human authorization required for durable action | `True` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-003-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-004-final-evidence.json` |
 
 #### Failure-Learning Lock
 
@@ -144,10 +146,11 @@ Hermes starts
 | RHP-L-003 | New top-level folders must receive a full mini README and root README synchronization. |
 | RHP-L-004 | Evidence readers must treat only explicit `true` as dangerous authority drift; missing false fields are normalized forward. |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-003.
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-004.
 
 Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
+
 
 
 
@@ -171,7 +174,8 @@ Current bridge status: HRCN v2.0 + OPS-027 = read-only runtime/proposal bridge s
 | OPS-025 | Opt-in read-only proposal-context injection. | passed |
 | OPS-026 | Proposal-context negative control and v0.3 seal prep. | passed |
 | OPS-027 | HRCN v0.3 seal and tag. | passed |
-| next | RHP-004 align HRCN bridge evidence anchor after v0.3 seal. | next |
+| RHP-004 | HRCN bridge evidence anchor aligned to OPS-027 / v0.3. | passed |
+| next | RHP-005 generated-source compile-check guard. | next |
 
 #### Current Runtime Boundary
 
@@ -187,7 +191,7 @@ Current bridge status: HRCN v2.0 + OPS-027 = read-only runtime/proposal bridge s
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Candidate tag | `hrcn-ops-v0.3.0` |
-| Next gate | `RHP-004 align HRCN bridge evidence anchor after v0.3 seal` |
+| Next gate | `RHP-005 generated-source compile-check guard` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027. OPS-027 is a seal/tag checkpoint.
 
