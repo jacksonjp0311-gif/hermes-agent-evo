@@ -3,8 +3,8 @@ from __future__ import annotations
 import argparse, json, subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
-LATEST_EVIDENCE = "docs/context-layer/ops/RHP-006-1-final-evidence.json"
-PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-006-final-evidence.json"
+LATEST_EVIDENCE = "docs/context-layer/ops/RHP-007-final-evidence.json"
+PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-006-1-final-evidence.json"
 HRCN_TAG = "hrcn-ops-v0.3.0"
 @dataclass(frozen=True)
 class AlignmentResult:
@@ -33,26 +33,23 @@ def validate_alignment(repo_root: str | Path | None = None, *, require_latest_pa
     root = find_repo_root(repo_root); failures=[]; checks={}; mode="final" if require_latest_passed else "preflight"
     readme=_read(root/"README.md"); rhp_readme=_read(root/"rhp"/"README.md"); hrcn_bridge=_read(root/"hrcn_runtime_bridge.py"); rhp_bridge=_read(root/"rhp_runtime_bridge.py")
     previous=_json(root/PREVIOUS_EVIDENCE); latest_path=root/LATEST_EVIDENCE; latest_exists=latest_path.is_file(); latest=_json(latest_path) if latest_exists else {}
-    checks["previous_rhp006_repair_passed"] = previous.get("repair_pass") is True and previous.get("py_compile_passed") is True and previous.get("focused_tests_passed") is True and previous.get("alignment_guard_self_check_passed") is True
+    checks["previous_rhp006_1_passed"] = previous.get("public_metrics_alignment_closure_passed") is True and previous.get("py_compile_passed") is True and previous.get("focused_tests_passed") is True and previous.get("alignment_guard_self_check_passed") is True
     checks["latest_evidence_exists"] = latest_exists
     checks["root_readme_latest_evidence"] = _contains(readme, LATEST_EVIDENCE)
-    checks["root_readme_rhp006_1_passed"] = _contains(readme, "| RHP-006.1 | Close public metrics and post-seal README alignment drift. | passed |")
-    checks["root_readme_next_rhp007"] = _contains(readme, "| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | next |")
-    checks["root_public_metrics_current_ops"] = _contains(readme, "| Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |")
-    checks["root_public_metrics_latest_rhp"] = _contains(readme, "| Latest RHP proof | `docs/context-layer/ops/RHP-006-1-final-evidence.json` |")
-    checks["post_seal_chart_rhp006_1"] = _contains(readme, "| RHP-006.1 | Public metrics and post-seal README alignment closure. | passed |")
-    checks["rhp_readme_latest_boundary"] = _contains(rhp_readme, "Current repository boundary: RHP-006.1.")
-    checks["rhp_readme_latest_evidence"] = _contains(rhp_readme, LATEST_EVIDENCE)
-    checks["rhp_readme_alignment_guard"] = _contains(rhp_readme, "alignment_guard.py")
+    checks["root_readme_rhp007_passed"] = _contains(readme, "| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | passed |")
+    checks["root_readme_next_rhp008"] = _contains(readme, "| RHP-008 | Proposal-loop negative-control and apply-gate boundary proof. | next |")
+    checks["root_public_metrics_latest_rhp"] = _contains(readme, "| Latest RHP proof | `docs/context-layer/ops/RHP-007-final-evidence.json` |")
+    checks["rhp_readme_latest_boundary"] = _contains(rhp_readme, "Current repository boundary: RHP-007.")
+    checks["rhp_readme_latest_evidence"] = _contains(rhp_readme, "RHP-007-final-evidence.json")
+    checks["rhp_readme_proposal_loop_proof"] = _contains(rhp_readme, "proposal_loop_proof.py")
     checks["hrcn_bridge_v03_anchor"] = _contains(hrcn_bridge, "OPS-027-final-evidence.json") and _contains(hrcn_bridge, HRCN_TAG)
     checks["rhp_bridge_read_only"] = _contains(rhp_bridge, "READ ONLY PROPOSAL ORIENTATION")
-    checks["rhp006_next_was_rhp007"] = previous.get("next_recommended_operation") == "RHP-007 first governed RHP to HRCN to Hermes proposal-loop proof"
-    checks["authority_false"] = all(latest.get(k) is False for k in ["provider_call_executed","model_call_executed","tool_use_executed","cms_runtime_execution","cms_write","memory_write","memory_promotion","api_write","dependency_mutation_committed","self_authorization","autonomous_authority"])
+    checks["authority_false"] = all(latest.get(k) is False for k in ["provider_call_executed","model_call_executed","tool_use_executed","cms_runtime_execution","cms_write","memory_write","memory_promotion","api_write","dependency_mutation_committed","self_authorization","autonomous_authority","codex_ingestion"])
     checks["git_status_command_available"] = _git_status_command_available(root)
     if require_latest_passed:
-        checks["latest_rhp006_1_passed"] = latest.get("schema")=="RHP-006.1-final-evidence" and latest.get("operation") in {"RHP-006.1","RHP-006-1"} and latest.get("public_metrics_alignment_closure_passed") is True and latest.get("public_metrics_alignment_passed") is True and latest.get("py_compile_passed") is True and latest.get("focused_tests_passed") is True and latest.get("alignment_guard_self_check_passed") is True and latest.get("readme_state_bridge_evidence_alignment_passed") is True
+        checks["latest_rhp007_passed"] = latest.get("schema")=="RHP-007-final-evidence" and latest.get("operation")=="RHP-007" and latest.get("governed_proposal_loop_proof_passed") is True and latest.get("rhp_before_hrcn_context_order") is True and latest.get("py_compile_passed") is True and latest.get("focused_tests_passed") is True and latest.get("proposal_loop_smoke_passed") is True and latest.get("alignment_guard_self_check_passed") is True
     else:
-        checks["latest_rhp006_1_has_boundary_shape"] = latest.get("schema")=="RHP-006.1-final-evidence" and latest.get("operation") in {"RHP-006.1","RHP-006-1"} and latest.get("failed_tests_are_commit_blockers") is True and latest.get("public_metrics_alignment_closure_passed") in {False, True}
+        checks["latest_rhp007_has_boundary_shape"] = latest.get("schema")=="RHP-007-final-evidence" and latest.get("operation")=="RHP-007" and latest.get("failed_tests_are_commit_blockers") is True
     for key, value in checks.items():
         if not value: failures.append(key)
     return AlignmentResult(ok=not failures, repo_root=str(root), mode=mode, checks=checks, failures=failures)

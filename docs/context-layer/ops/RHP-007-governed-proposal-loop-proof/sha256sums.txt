@@ -1,0 +1,13 @@
+23bbb415e27645ab2b1328d6c97fceae5bcc28b9cf11b6b058b124c417635027  README.md
+0a7cf398e1cec653eaf85298460edca2124af560468dba8cf5c8459485c52fc7  rhp/README.md
+6fcc63dcc47f29992401e92c27ffa7b4fe594a1e06741fe99e17ac2436e01469  rhp/alignment_guard.py
+f36457b1fd40b588c0894d4ef30c557171ff0167a1e83874e3deeea3598a1afe  rhp/proposal_loop_proof.py
+1ed3be6a8db8b6a6068aa4b16a75e08825ed2df16959d150115a129d72bd44b3  tests/test_rhp_alignment_guard.py
+36523fc87296c52157464a0656d8db935be8e75d6c64506d169dc79dc4536c2c  tests/test_rhp_007_governed_proposal_loop.py
+16fefdc42f2da6cb9d707b62a0bf3779384750296c603b568d845653be1b5d86  docs/context-layer/ops/RHP-007-final-evidence.json
+dfdfcb25c11bea62b86dd306ed8c6eba6cb0ba7ad06901a4a285fa42a092f98a  docs/context-layer/ops/RHP-007-governed-proposal-loop-proof.md
+8b80766b3d49c478b6a903814fb00bcb01fac6c9400da363172551769ee370d9  docs/context-layer/ops/RHP-007-governed-proposal-loop-proof/alignment-guard-preflight-output.txt
+1a8f32c065308aa4e9f3850069d4ce55e221fcff705ecfb83e98f0969f20558e  docs/context-layer/ops/RHP-007-governed-proposal-loop-proof/py-compile-output.txt
+f6e18f9cc4e33d0eeccec9f80a1cdebb724056b80b29398d8ef6a94d9271150a  docs/context-layer/ops/RHP-007-governed-proposal-loop-proof/proposal-loop-proof-output.txt
+a30b98546c17d8f202f5103d8def884afeeefc381dd5f4f96d6c0eb0e9158250  docs/context-layer/ops/RHP-007-governed-proposal-loop-proof/focused-test-output.txt
+be371368a659b00d5f8f53c18dc3c3279814cffd130b00fd7d66d3d0d7efeb9f  docs/context-layer/ops/RHP-007-governed-proposal-loop-proof/alignment-guard-final-output.txt

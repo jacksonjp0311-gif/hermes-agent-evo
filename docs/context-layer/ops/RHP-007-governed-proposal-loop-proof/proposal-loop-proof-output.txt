@@ -1,0 +1,24 @@
+RETURN CODE: 0
+{
+  "ok": true,
+  "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "rhp_packet_schema": "RHP-HERMES-RUNTIME-CONTEXT-PACKET-v0.1",
+  "hrcn_packet_schema": "HRCN-GUI-RUNTIME-CONTEXT-PACKET-v0.3",
+  "rhp_before_hrcn": true,
+  "proposal_context_contains_rhp": true,
+  "proposal_context_contains_hrcn": true,
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "memory_promotion": false,
+  "api_write": false,
+  "dependency_mutation_committed": false,
+  "codex_ingestion": false,
+  "self_authorization": false,
+  "autonomous_authority": false,
+  "forbidden_authority_all_false": true,
+  "non_claim_lock": "RHP-007 proves only the local read-only proposal-context order. It does not execute a model, call a provider, call tools, run CMS, write memory, promote memory, mutate runtime source, ingest Codex, operate autonomously, or self-authorize."
+}

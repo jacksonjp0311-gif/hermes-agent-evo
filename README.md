@@ -101,9 +101,9 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | HRCN bounded loop tag | `hrcn-ops-v0.2.0` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
 | Latest post-seal OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-006-1-final-evidence.json` |
-| Current RHP status | `RHP-006.1 public metrics alignment closure passed` |
-| Next RHP gate | `RHP-007 first governed RHP → HRCN → Hermes proposal-loop proof` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-007-final-evidence.json` |
+| Current RHP status | `RHP-007 first governed proposal-loop proof passed` |
+| Next RHP gate | `RHP-008 proposal-loop negative-control and apply-gate boundary proof` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -130,7 +130,8 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-005 | Install generated-source and test-contract guard for future runtime-emitting All-One scripts. | passed |
 | RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits and repair self-reference failure. | repaired |
 | RHP-006.1 | Close public metrics and post-seal README alignment drift. | passed |
-| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | next |
+| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | passed |
+| RHP-008 | Proposal-loop negative-control and apply-gate boundary proof. | next |
 
 #### Runtime Boot Order
 
@@ -152,10 +153,10 @@ Hermes starts
 | RHP runtime bridge | `rhp_runtime_bridge.py` |
 | RHP generated-source guard | `rhp/generated_source_guard.py` |
 | RHP alignment guard | `rhp/alignment_guard.py` |
+| RHP proposal-loop proof | `rhp/proposal_loop_proof.py` |
 | HRCN runtime bridge anchor | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | HRCN bridge tag | `hrcn-ops-v0.3.0` |
-| RHP startup smoke test | `tests/test_rhp_runtime_startup_smoke.py` |
-| RHP guard tests | `tests/test_rhp_generated_source_guard.py`, `tests/test_rhp_alignment_guard.py` |
+| RHP guard/proof tests | `tests/test_rhp_generated_source_guard.py`, `tests/test_rhp_alignment_guard.py`, `tests/test_rhp_007_governed_proposal_loop.py` |
 | RHP context default enabled | `False` |
 | RHP context gate | `HERMES_RHP_CONTEXT` |
 | RHP compounding authority | `False` |
@@ -163,7 +164,7 @@ Hermes starts
 | HRCN replacement | `False` |
 | CMS/Codex ingestion | `Blocked` |
 | Human authorization required for durable action | `True` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-006-1-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-007-final-evidence.json` |
 
 #### Failure-Learning Lock
 
@@ -179,8 +180,12 @@ Hermes starts
 | RHP-L-008 | A guard can stop correctly, but manual continuation can still commit red evidence. | After any guard failure, run a repair seal; no post-failure manual staging/commit/push. |
 | RHP-L-009 | Public metrics can drift even when local RHP evidence is green. | Current public metrics, post-seal chart, RHP chart, and latest evidence must close together before proposal-loop proof. |
 | RHP-L-010 | Failed partial attempts can leave dirty working-tree residue that blocks pull/retry. | A clean rerun may remove only known failed-attempt paths and must stop if unrelated dirty files remain. |
+| RHP-L-011 | Proposal-loop proof must exercise the real context injection helpers without model/provider/tool execution. | Prove order and authority boundaries locally before attempting dry-run/apply-gate work. |
+| RHP-L-012 | Proof harnesses run from subdirectories may lose access to root-level bridge modules. | Insert the repository root into `sys.path` before importing root-level runtime bridges. |
+| RHP-L-013 | Failed scripts can leave newly generated proof files as untracked residue. | Cleanup must remove only known failed-attempt untracked paths with `git clean` before retry. |
+| RHP-L-014 | Multi-line generated helper strings can fail before tests if nested quote strategy is fragile. | Use simpler generated strings and avoid fragile replacement of embedded markdown rows. |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-006.1.
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-007.
 
 Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
@@ -261,7 +266,7 @@ OPS has now served its role as the HRCN evidence ledger through v0.3. RHP carrie
 | RHP-005 | Generated-source and test-contract guard. | passed |
 | RHP-006 | README/state/bridge/evidence alignment guard and self-reference repair. | repaired |
 | RHP-006.1 | Public metrics and post-seal README alignment closure. | passed |
-| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | next |
+| RHP-007 | First governed RHP â†’ HRCN â†’ Hermes proposal-loop proof. | next |
 
 Operational bridge target:
 
