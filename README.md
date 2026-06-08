@@ -93,19 +93,19 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
 ### Rehydration Protocol Runtime Activation Track
 
-Human summary: this fork now contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP is the first runtime boot surface. It loads declared origin geometry, checks alignment, emits a proposal-mode origin certificate, and injects read-only origin context before HRCN authority context. This is not Codex ingestion, not CMS write authority, not memory promotion, not autonomous operation, and not production readiness.
+Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP is the first runtime boot-orientation surface. It loads declared origin geometry, checks alignment, emits a proposal-mode origin certificate, and injects read-only origin context before HRCN authority context. This is not Codex ingestion, not CMS write authority, not memory promotion, not autonomous operation, and not production readiness.
 
 #### RHP Activation Chart
 
 | Stage | Meaning | Status |
 |---|---|---:|
-| RHP-001 | Create `/rhp` protocol substrate inside Hermes. | passed |
-| RHP-002 | Add read-only `rhp_runtime_bridge.py`. | passed |
-| RHP-003 | Add `HERMES_RHP_CONTEXT` proposal injection gate. | passed |
-| RHP-004 | Emit alignment report and proposal-mode origin certificate. | passed |
-| RHP-005 | Add fail-closed bridge/context negative controls. | passed |
-| RHP-006 | Prove RHP context loads before HRCN context. | passed |
-| RHP-007 | Runtime smoke test with RHP + HRCN enabled. | next |
+| RHP-001 | Create `/rhp` protocol substrate inside Hermes and add read-only proposal bridge. | passed |
+| RHP-002 | Add full `/rhp` mini README, failure-learning lock, and root README sync. | passed |
+| RHP-003 | Runtime smoke test with RHP + HRCN enabled through the Hermes startup/proposal path. | next |
+| RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal. | planned |
+| RHP-005 | Install generated-source compile-check guard into future runtime-emitting All-One scripts. | planned |
+| RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits. | planned |
+| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | planned |
 
 #### Runtime Boot Order
 
@@ -123,6 +123,7 @@ Hermes starts
 | Surface | Current state |
 |---|---|
 | RHP substrate folder | `/rhp` |
+| RHP mini README | `rhp/README.md` |
 | RHP runtime bridge | `rhp_runtime_bridge.py` |
 | RHP context default enabled | `False` |
 | RHP context gate | `HERMES_RHP_CONTEXT` |
@@ -131,12 +132,22 @@ Hermes starts
 | HRCN replacement | `False` |
 | CMS/Codex ingestion | `Blocked` |
 | Human authorization required for durable action | `True` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-001-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-002-final-evidence.json` |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-001.
+#### Failure-Learning Lock
+
+| Lesson | Rule |
+|---|---|
+| RHP-L-001 | Runtime Python emitted by All-One scripts must pass `python -m py_compile` before pytest. |
+| RHP-L-002 | Failed bridge scripts must stop before commit/push and emit repair evidence. |
+| RHP-L-003 | New top-level folders must receive a full mini README and root README synchronization. |
+| RHP-L-004 | Evidence readers must treat only explicit `true` as dangerous authority drift; missing false fields are normalized forward. |
+
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-002.
 
 Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
+
 
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_START -->
 ### HRCN OPS Operational Bridge Status

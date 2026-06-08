@@ -1,0 +1,3 @@
+COMMAND: python -m py_compile rhp_runtime_bridge.py agent/agent_init.py
+RETURN CODE: 0
+
