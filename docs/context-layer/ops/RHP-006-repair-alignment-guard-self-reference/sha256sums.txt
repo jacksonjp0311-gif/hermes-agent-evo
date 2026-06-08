@@ -1,0 +1,10 @@
+d726b77ec51f98c8276143c320a1d844c33f2006a40314f1b0a7414c53f28125  README.md
+1533fbde5a8bd00141c3452a05591ac404bb3be32e63e2769c1d5c0289628f53  rhp/README.md
+b071ed032e03974e026fd1c829fe574b20edf76e8e1134c63b88131e4ff64c32  rhp/alignment_guard.py
+926a2814ee2603f8fbeb6dc77115f5ffdd67def50cc24643ff62b857763338bc  tests/test_rhp_alignment_guard.py
+14b09b986559fa67ec1d4ff9ba27498decbdef4db41c894344020f6e98bd20e4  docs/context-layer/ops/RHP-006-final-evidence.json
+0e954f93a61c11d0bde25740c0f913f84407395b1194833662a4678194a98e2e  docs/context-layer/ops/RHP-006-repair-alignment-guard-self-reference.md
+702399ed77793c8097f444962eaf5de4f7a1188a2f18e3e4aac2bc905d1002fd  docs/context-layer/ops/RHP-006-repair-alignment-guard-self-reference/alignment-guard-preflight-output.txt
+082cff66ebdee98dbeadbe3c4cfef9954137f6f98ed8cf015bf9b804a84d3036  docs/context-layer/ops/RHP-006-repair-alignment-guard-self-reference/py-compile-output.txt
+6998ab275e710c13b379bf23c7172d608a6c242020519168d4c5a87fc79043c1  docs/context-layer/ops/RHP-006-repair-alignment-guard-self-reference/focused-test-output.txt
+e233cf6969850ef4a5b3c52d9bcf3ba474145a11197636e24e96511986f20115  docs/context-layer/ops/RHP-006-repair-alignment-guard-self-reference/alignment-guard-final-output.txt

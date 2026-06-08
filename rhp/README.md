@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-006. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-006 repair. This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-006.
+Current repository boundary: RHP-006 repair.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -147,6 +147,7 @@ git status --short
 | RHP-L-005 | RHP-004 aligned the runtime anchor while old tests still encoded the v0.2 contract, and the failed test output was committed. | Rehydration is orientation, not implementation coercion; version-anchor changes must migrate tests and hard-stop before commit when tests fail. |
 | RHP-L-006 | The repo began shaping AI coding behavior through rehydration, tests, and evidence geometry. | Shape is allowed only as bounded orientation; compile, tests, evidence, and human authorization remain stronger than style pressure. |
 | RHP-L-007 | README, mini README, bridge state, and evidence can drift separately after rapid versioning. | A dedicated alignment guard must verify all public and runtime-facing state surfaces before future RHP commits. |
+| RHP-L-008 | RHP-006 guard correctly stopped, but manual continuation still committed red evidence. | After any guard failure, stop and run a repair seal; do not manually stage, commit, or push post-failure artifacts. |
 
 ## RCC Nexus Echo Location
 
@@ -155,7 +156,7 @@ Sphere Position:
 - Shell: inner
 - Meridian(s): rehydration, runtime, governance
 - Sector: rhp
-- Version / TTL: RHP-006 boundary / inherits RHP-001 substrate / 180 days
+- Version / TTL: RHP-006 repair boundary / inherits RHP-001 substrate / 180 days
 - Last Verified: 2026-06-08
 
 Local Role:
@@ -207,6 +208,8 @@ Non-Claim Locks:
 - missing_false_evidence_fields_are_not_authority
 - rehydration_is_not_implementation_coercion
 - failed_tests_are_commit_blockers
+- guard_failure_requires_repair_seal
+- post_failure_manual_commit_is_forbidden
 
 Agent Route:
 

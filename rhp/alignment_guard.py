@@ -2,13 +2,16 @@
 #
 # This guard verifies that the public README, /rhp mini README, bridge surfaces,
 # and latest evidence agree before future RHP commits.
+#
+# Two validation modes exist:
+# - preflight mode: validates structure before final evidence says passed.
+# - final mode: validates that latest evidence also records the green result.
 
 from __future__ import annotations
 
 import argparse
 import json
 import subprocess
-import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -24,6 +27,7 @@ HRCN_EVIDENCE = "docs/context-layer/ops/OPS-027-final-evidence.json"
 class AlignmentResult:
     ok: bool
     repo_root: str
+    mode: str
     checks: dict[str, bool] = field(default_factory=dict)
     failures: list[str] = field(default_factory=list)
 
@@ -31,6 +35,7 @@ class AlignmentResult:
         return {
             "ok": self.ok,
             "repo_root": self.repo_root,
+            "mode": self.mode,
             "checks": dict(self.checks),
             "failures": list(self.failures),
         }
@@ -61,16 +66,16 @@ def _contains(text: str, needle: str) -> bool:
     return needle in text
 
 
-def _git_status_clean(root: Path) -> bool:
+def _git_status_command_available(root: Path) -> bool:
     proc = subprocess.run(["git", "status", "--short"], cwd=str(root), text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    # During an operation the tree may be dirty; this guard checks coherence, not cleanliness.
     return proc.returncode == 0
 
 
-def validate_alignment(repo_root: str | Path | None = None) -> AlignmentResult:
+def validate_alignment(repo_root: str | Path | None = None, *, require_latest_passed: bool = True) -> AlignmentResult:
     root = find_repo_root(repo_root)
     failures: list[str] = []
     checks: dict[str, bool] = {}
+    mode = "final" if require_latest_passed else "preflight"
 
     readme = _read(root / "README.md")
     rhp_readme = _read(root / "rhp" / "README.md")
@@ -82,13 +87,16 @@ def validate_alignment(repo_root: str | Path | None = None) -> AlignmentResult:
     latest_exists = latest_path.is_file()
     latest = _json(latest_path) if latest_exists else {}
 
-    checks["previous_rhp005_passed"] = previous.get("py_compile_passed") is True and previous.get("focused_tests_passed") is True and previous.get("guard_self_check_passed") is True
+    checks["previous_rhp005_passed"] = (
+        previous.get("py_compile_passed") is True
+        and previous.get("focused_tests_passed") is True
+        and previous.get("guard_self_check_passed") is True
+    )
     checks["latest_evidence_exists"] = latest_exists
-    checks["latest_rhp006_passed"] = latest.get("py_compile_passed") is True and latest.get("focused_tests_passed") is True and latest.get("alignment_guard_self_check_passed") is True
     checks["root_readme_latest_evidence"] = _contains(readme, LATEST_EVIDENCE)
-    checks["root_readme_rhp006_passed"] = _contains(readme, "| RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits. | passed |")
+    checks["root_readme_rhp006_repaired"] = _contains(readme, "| RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits and repair self-reference failure. | repaired |")
     checks["root_readme_next_rhp007"] = _contains(readme, "| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | next |")
-    checks["rhp_readme_latest_boundary"] = _contains(rhp_readme, "Current repository boundary: RHP-006.")
+    checks["rhp_readme_latest_boundary"] = _contains(rhp_readme, "Current repository boundary: RHP-006 repair.")
     checks["rhp_readme_latest_evidence"] = _contains(rhp_readme, LATEST_EVIDENCE)
     checks["rhp_readme_alignment_guard"] = _contains(rhp_readme, "alignment_guard.py")
     checks["hrcn_bridge_v03_anchor"] = _contains(hrcn_bridge, "OPS-027-final-evidence.json") and _contains(hrcn_bridge, HRCN_TAG)
@@ -107,22 +115,38 @@ def validate_alignment(repo_root: str | Path | None = None) -> AlignmentResult:
         "self_authorization",
         "autonomous_authority",
     ])
-    checks["git_status_command_available"] = _git_status_clean(root)
+    checks["git_status_command_available"] = _git_status_command_available(root)
+
+    if require_latest_passed:
+        checks["latest_rhp006_passed"] = (
+            latest.get("repair_pass") is True
+            and latest.get("py_compile_passed") is True
+            and latest.get("focused_tests_passed") is True
+            and latest.get("alignment_guard_self_check_passed") is True
+            and latest.get("readme_state_bridge_evidence_alignment_passed") is True
+        )
+    else:
+        checks["latest_rhp006_has_boundary_shape"] = (
+            latest.get("schema") == "RHP-006-final-evidence"
+            and latest.get("operation") in {"RHP-006", "RHP-006-repair"}
+            and latest.get("failed_tests_are_commit_blockers") is True
+        )
 
     for key, value in checks.items():
         if not value:
             failures.append(key)
 
-    return AlignmentResult(ok=not failures, repo_root=str(root), checks=checks, failures=failures)
+    return AlignmentResult(ok=not failures, repo_root=str(root), mode=mode, checks=checks, failures=failures)
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="RHP README/state/bridge/evidence alignment guard")
     parser.add_argument("--repo-root", default=None)
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--preflight", action="store_true", help="do not require latest evidence to be marked passed yet")
     args = parser.parse_args(argv)
 
-    result = validate_alignment(args.repo_root)
+    result = validate_alignment(args.repo_root, require_latest_passed=not args.preflight)
     print(json.dumps(result.as_dict(), indent=2))
     return 0 if result.ok else 1
 
