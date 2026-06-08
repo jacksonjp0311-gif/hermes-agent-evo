@@ -1,0 +1,10 @@
+RETURN CODE: 0
+{
+  "ok": true,
+  "runner": "direct_python_focused_smoke_no_pytest",
+  "repo_root_anchored": true,
+  "boot_packet_ok": true,
+  "startup_context_packet_created": true,
+  "alignment_guard_preflight_green": true,
+  "authority_flags_false": true
+}

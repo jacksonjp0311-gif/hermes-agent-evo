@@ -7,14 +7,14 @@ Hermes-local Rehydration Protocol substrate: origin manifest, alignment report, 
 
 ## S - Specification
 
-This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-008. This README remains a navigation and context surface only.
+This folder participates in the Hermes repository according to its local role. Profile source: RHP-001. Current repository boundary: RHP-009.This README remains a navigation and context surface only.
 
 RHP is the first boot-orientation layer for Hermes-local origin alignment. It does not replace HRCN. RHP checks whether Hermes has loaded declared repository-origin surfaces before proposal work. HRCN continues to classify authority after RHP orientation.
 
 ## HRCN Boundary Note
 
 Profile source: RHP-001.
-Current repository boundary: RHP-008.
+Current repository boundary: RHP-009.
 This README is a navigation/context surface only.
 Runtime, dependency, CMS, API-write, memory-promotion, Codex-ingestion, provider/model, tool, autonomous, or apply/write authority is not granted by this README.
 
@@ -86,11 +86,11 @@ Operationally:
 
 ```text
 Hermes starts
-Ã¢â€ â€™ /rhp origin manifest loads
-Ã¢â€ â€™ RHP bridge validates origin surfaces
-Ã¢â€ â€™ RHP context injects if HERMES_RHP_CONTEXT=proposal
-Ã¢â€ â€™ HRCN context injects if HERMES_HRCN_CONTEXT=proposal
-Ã¢â€ â€™ Hermes proposes only inside declared boundaries
+ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ /rhp origin manifest loads
+ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ RHP bridge validates origin surfaces
+ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ RHP context injects if HERMES_RHP_CONTEXT=proposal
+ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ HRCN context injects if HERMES_HRCN_CONTEXT=proposal
+ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ Hermes proposes only inside declared boundaries
 ```
 
 RHP asks:
@@ -142,7 +142,7 @@ git status --short
 
 | Lesson | Finding | Rule |
 |---|---|---|
-| RHP-L-001 | Generated Python source broke because escaped newline handling crossed PowerShell Ã¢â€ â€™ Python Ã¢â€ â€™ Python boundaries. | Any All-One that emits runtime Python must run `python -m py_compile` on emitted files before pytest. |
+| RHP-L-001 | Generated Python source broke because escaped newline handling crossed PowerShell ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ Python ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ Python boundaries. | Any All-One that emits runtime Python must run `python -m py_compile` on emitted files before pytest. |
 | RHP-L-002 | The first RHP-001 attempt failed before commit/push and then recovered with a repair script. | Failed bridge scripts must stop before commit/push and emit repair evidence. |
 | RHP-L-003 | Adding `/rhp` created a new navigable surface. | Any new top-level folder must receive a full mini README and root README synchronization in the same version track. |
 | RHP-L-004 | RHP-002 initially treated missing authority-false evidence fields as drift. | Evidence readers must distinguish missing fields from explicit `true`; only explicit `true` is dangerous authority drift, while missing false fields are normalized forward. |
@@ -274,3 +274,20 @@ Non-claim lock: navigation is not validation, but stale navigation is repository
 - RHP-L-015: Proposal context is not apply authority; negative controls must prove refusal before apply-gate work.
 
 - apply_gate_negative_control_refuses_escalation
+
+
+## RHP-009 Runtime Boot Preflight Integration
+
+- `rhp/boot_preflight.py`
+- `tests/test_rhp_009_boot_preflight.py`
+- `docs/context-layer/ops/RHP-009-final-evidence.json`
+
+- RHP-L-016: Runtime boot integration must happen before interaction context assembly and remain read-only.
+
+- RHP-L-017: Init-time top-level bridge imports must be included in packaging metadata when explicit module lists are used.
+
+- boot_preflight_is_read_only
+
+- RHP-L-021: Direct proof scripts stored below docs must anchor the repository root into `sys.path` before importing repository packages.
+
+- RHP-L-022: Final evidence closure should rebuild evidence as an ordered object instead of mutating a fixed `ConvertFrom-Json` PSCustomObject.

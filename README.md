@@ -97,17 +97,15 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 |---|---|
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
-| HRCN release tag | `hrcn-ops-v0.1.0` |
-| HRCN bounded loop tag | `hrcn-ops-v0.2.0` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest post-seal OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-008-final-evidence.json` |
-| Current RHP status | `RHP-008 proposal-loop negative-control and apply-gate boundary proof passed` |
-| Next RHP gate | `RHP-009 human apply-gate dry-run contract proof` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-009-final-evidence.json` |
+| Current RHP status | `RHP-009 runtime boot preflight integration passed` |
+| Next RHP gate | `RHP-010 startup context packet launch wrapper proof` |
+| Runtime boot preflight | `Integrated into agent init when RHP/HRCN gates are active` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
-| Codex ingestion authority | `False` |
+| External ingestion authority | `False` |
 | Autonomous authority | `False` |
 | Human authorization required | `True` |
 
@@ -117,80 +115,57 @@ Public metrics lock: current public metrics must match latest OPS/RHP evidence b
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
 ### Rehydration Protocol Runtime Activation Track
 
-Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP is the first runtime boot-orientation surface. It loads declared origin geometry, checks alignment, emits a proposal-mode origin certificate, and injects read-only origin context before HRCN authority context. This is not Codex ingestion, not CMS write authority, not memory promotion, not autonomous operation, and not production readiness.
+Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP is now moving from optional proposal context toward runtime boot integration. The boot preflight is read-only: it verifies latest local evidence, bridge boundaries, and alignment before interaction context assembly. It does not grant write authority, tool authority, model/provider authority, CMS authority, memory authority, external ingestion authority, autonomy, or self-authorization.
 
 #### RHP Activation Chart
 
 | Stage | Meaning | Status |
 |---|---|---:|
-| RHP-001 | Create `/rhp` protocol substrate inside Hermes and add read-only proposal bridge. | passed |
-| RHP-002 | Add full `/rhp` mini README, failure-learning lock, and root README sync. | passed |
-| RHP-003 | Prove RHP + HRCN startup/proposal context order through a dedicated runtime smoke test. | passed |
-| RHP-004 | Align HRCN bridge evidence anchor after OPS-027 / v0.3 seal and repair test-contract migration. | repaired |
-| RHP-005 | Install generated-source and test-contract guard for future runtime-emitting All-One scripts. | passed |
-| RHP-006 | Add README/state/bridge/evidence alignment guard before future RHP commits and repair self-reference failure. | repaired |
-| RHP-006.1 | Close public metrics and post-seal README alignment drift. | passed |
-| RHP-007 | First governed RHP → HRCN → Hermes proposal-loop proof. | passed |
+| RHP-007 | First governed RHP Ã¢â€ â€™ HRCN Ã¢â€ â€™ Hermes proposal-loop proof. | passed |
 | RHP-008 | Proposal-loop negative-control and apply-gate boundary proof. | passed |
-| RHP-009 | Human apply-gate dry-run contract proof. | next |
+| RHP-009 | Runtime boot preflight integration. | passed |
+| RHP-010 | Startup context packet launch wrapper proof. | next |
 
 #### Runtime Boot Order
 
 ```text
 Hermes starts
-→ /rhp origin manifest loads
-→ RHP bridge validates origin surfaces
-→ RHP context injects if HERMES_RHP_CONTEXT=proposal
-→ HRCN context injects if HERMES_HRCN_CONTEXT=proposal
-→ Hermes proposes only inside declared boundaries
-→ apply/write remains blocked unless a separate human apply gate is present
+Ã¢â€ â€™ agent init begins
+Ã¢â€ â€™ RHP boot preflight runs if HERMES_RHP_BOOT_PREFLIGHT is enabled or RHP/HRCN context gates are active
+Ã¢â€ â€™ latest RHP evidence is checked
+Ã¢â€ â€™ HRCN read-only boundary is checked
+Ã¢â€ â€™ alignment guard is checked
+Ã¢â€ â€™ startup preflight packet is appended to context
+Ã¢â€ â€™ RHP context may append if HERMES_RHP_CONTEXT=proposal
+Ã¢â€ â€™ HRCN context may append if HERMES_HRCN_CONTEXT=proposal
+Ã¢â€ â€™ Hermes enters interaction mode already oriented
 ```
 
 #### Current Boundary
 
 | Surface | Current state |
 |---|---|
-| RHP substrate folder | `/rhp` |
-| RHP runtime bridge | `rhp_runtime_bridge.py` |
-| RHP alignment guard | `rhp/alignment_guard.py` |
-| RHP proposal-loop proof | `rhp/proposal_loop_proof.py` |
-| RHP apply-gate negative-control proof | `rhp/apply_gate_negative_control.py` |
-| HRCN runtime bridge anchor | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| HRCN bridge tag | `hrcn-ops-v0.3.0` |
-| RHP guard/proof tests | `tests/test_rhp_alignment_guard.py`, `tests/test_rhp_007_governed_proposal_loop.py`, `tests/test_rhp_008_apply_gate_negative_control.py` |
-| RHP context default enabled | `False` |
+| RHP boot preflight | `rhp/boot_preflight.py` |
+| Agent init integration | `agent/agent_init.py` |
+| RHP boot preflight gate | `HERMES_RHP_BOOT_PREFLIGHT` |
 | RHP context gate | `HERMES_RHP_CONTEXT` |
-| Human apply gate present | `False` |
-| RHP compounding authority | `False` |
-| RHP write authority | `False` |
-| HRCN replacement | `False` |
-| CMS/Codex ingestion | `Blocked` |
-| Human authorization required for durable action | `True` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-008-final-evidence.json` |
+| HRCN context gate | `HERMES_HRCN_CONTEXT` |
+| Real write authority | `False` |
+| CMS/memory authority | `False` |
+| External ingestion authority | `False` |
+| Autonomous authority | `False` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-009-final-evidence.json` |
 
 #### Failure-Learning Lock
 
 | Lesson | Rule |
 |---|---|
-| RHP-L-001 | Runtime Python emitted by All-One scripts must pass `python -m py_compile` before pytest. |
-| RHP-L-002 | Failed bridge scripts must stop before commit/push and emit repair evidence. |
-| RHP-L-003 | New top-level folders must receive a full mini README and root README synchronization. |
-| RHP-L-004 | Evidence readers must treat only explicit `true` as dangerous authority drift; missing false fields are normalized forward. |
-| RHP-L-005 | Rehydration is orientation, not implementation coercion; code changes must preserve or deliberately migrate existing test contracts before commit. |
-| RHP-L-006 | A repo can shape AI behavior through local evidence, tests, and README geometry, but shape must remain bounded by compile/test/evidence gates. |
-| RHP-L-007 | README, mini README, bridge state, and latest evidence must agree before future RHP commits. |
-| RHP-L-008 | A guard can stop correctly, but manual continuation can still commit red evidence. |
-| RHP-L-009 | Public metrics can drift even when local RHP evidence is green. |
-| RHP-L-010 | Failed partial attempts can leave dirty working-tree residue that blocks pull/retry. |
-| RHP-L-011 | Proposal-loop proof must exercise the real context injection helpers without model/provider/tool execution. |
-| RHP-L-012 | Proof harnesses run from subdirectories must insert repository root into `sys.path` before importing root-level runtime bridges. |
-| RHP-L-013 | Failed scripts can leave newly generated proof files as untracked residue; cleanup must remove only known failed-attempt paths. |
-| RHP-L-014 | Generated helper strings must avoid fragile nested quote strategies. |
-| RHP-L-015 | Proposal context is not apply authority. Negative controls must prove refusal of model/tool/CMS/memory/API/Codex/autonomy escalation before any apply-gate work. |
+| RHP-L-016 | Runtime boot integration must happen before interaction context assembly and remain read-only. |
+| RHP-L-017 | If an init-time module imports a top-level bridge, packaging must include that bridge or the installed console script can fail outside the source checkout. |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, Codex ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-008.
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-009.
 
-Human lock: RHP may orient Hermes only after explicit environment-gated activation. Apply/write remains separate and human-gated.
+Human lock: RHP may orient Hermes at boot only through read-only preflight. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
 
 
@@ -269,7 +244,7 @@ OPS has now served its role as the HRCN evidence ledger through v0.3. RHP carrie
 | RHP-005 | Generated-source and test-contract guard. | passed |
 | RHP-006 | README/state/bridge/evidence alignment guard and self-reference repair. | repaired |
 | RHP-006.1 | Public metrics and post-seal README alignment closure. | passed |
-| RHP-007 | First governed RHP Ã¢â€ â€™ HRCN Ã¢â€ â€™ Hermes proposal-loop proof. | next |
+| RHP-007 | First governed RHP ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ HRCN ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ Hermes proposal-loop proof. | next |
 
 Operational bridge target:
 
@@ -1899,3 +1874,7 @@ Built by [Nous Research](https://nousresearch.com).
 | HRCN-L-052 | Runtime-code-changed metrics must distinguish source mutation from authority mutation. | OPS-025 made a runtime hook, so `Runtime code changed=False` became stale even though authority remained false. | OPS-026 aligns README metrics to `runtime code changed=True` while preserving `default behavior=False` and `authority=False`. |
 
 | HRCN-L-053 | Proposal-context injection needs its own negative controls after bridge negative controls. | A bridge can refuse forged evidence while the prompt-injection path still mishandles failures. | OPS-026 adds negative controls for bridge-boundary failure, formatter failure, unknown env values, non-authority lock, and duplicate injection. |
+
+
+| RHP-L-021 | Direct proof scripts stored below docs must anchor the repository root into sys.path before importing repository packages. |
+| RHP-L-022 | Final evidence closure should rebuild evidence as an ordered object instead of mutating a fixed ConvertFrom-Json PSCustomObject. |
