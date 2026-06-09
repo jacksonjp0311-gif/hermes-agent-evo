@@ -1,4 +1,4 @@
-# RHP-009 runtime boot preflight integration.
+# RHP-012 safe boot failure mode and degraded startup status.
 from __future__ import annotations
 
 import json
@@ -48,6 +48,10 @@ class BootPreflightPacket:
     external_ingestion: bool
     non_claim_lock: str
     checks: dict[str, bool]
+    degraded: bool = False
+    degraded_reason: str = ""
+    degraded_reasons: list[str] | None = None
+    boot_status: str = "ok"
 
     def as_dict(self) -> dict[str, Any]:
         return dict(self.__dict__)
@@ -66,18 +70,33 @@ def _root_imports(root: Path) -> None:
     if root_str not in sys.path:
         sys.path.insert(0, root_str)
 
-def _read_json(path: Path) -> dict[str, Any]:
-    data = json.loads(path.read_text(encoding="utf-8"))
+def _read_json_or_empty(path: Path) -> tuple[dict[str, Any], str]:
+    if not path.is_file():
+        return {}, f"missing:{path.as_posix()}"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {}, f"invalid_json:{path.as_posix()}:{exc.__class__.__name__}"
     if not isinstance(data, dict):
-        raise ValueError(f"expected JSON object: {path}")
-    return data
+        return {}, f"not_object:{path.as_posix()}"
+    return data, ""
 
 def _env_enabled(name: str) -> bool:
     return (os.environ.get(name) or "").strip().lower() in {"1", "true", "yes", "on", "proposal"}
 
 def _git_status_available(root: Path) -> bool:
-    result = subprocess.run(["git", "status", "--short"], cwd=str(root), text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    return result.returncode == 0
+    try:
+        result = subprocess.run(
+            ["git", "status", "--short"],
+            cwd=str(root),
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            timeout=5,
+        )
+        return result.returncode == 0
+    except Exception:
+        return False
 
 def _status_value(status: Any, key: str, default: Any = None) -> Any:
     if isinstance(status, dict):
@@ -88,36 +107,8 @@ def _status_value(status: Any, key: str, default: Any = None) -> Any:
             return data.get(key, default)
     return getattr(status, key, default)
 
-def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPacket:
-    root = find_repo_root(repo_root)
-    _root_imports(root)
-
-    import hrcn_runtime_bridge
-    import rhp_runtime_bridge
-    from rhp.alignment_guard import validate_alignment
-
-    latest_path = root / LATEST_RHP_EVIDENCE
-    hrcn_path = root / HRCN_EVIDENCE
-    latest = _read_json(latest_path)
-
-    rhp_evidence_green = (
-        latest.get("schema") == "RHP-011-final-evidence"
-        and latest.get("operator_visible_startup_locks_passed") is True
-        and latest.get("operator_status_ascii_safe") is True
-        and latest.get("installed_launcher_visible_status_smoke_passed") is True
-        and latest.get("py_compile_passed") is True
-        and latest.get("focused_tests_passed") is True
-        and latest.get("alignment_guard_self_check_passed") is True
-        and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
-        and latest.get("external_ingestion") is False
-    )
-    rhp_runtime_bridge.assert_read_only_boundary(root)
-    hrcn_runtime_bridge.assert_read_only_boundary(root)
-    hrcn_status = hrcn_runtime_bridge.get_bridge_status(root)
-    hrcn_boundary_green = hrcn_path.is_file() and _status_value(hrcn_status, "mode") == "read_only"
-
-    alignment = validate_alignment(root, require_latest_passed=False)
-    false_flags = {
+def _false_flags() -> dict[str, bool]:
+    return {
         "provider_call_executed": False,
         "model_call_executed": False,
         "tool_use_executed": False,
@@ -131,18 +122,79 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
         "autonomous_authority": False,
         "external_ingestion": False,
     }
+
+def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPacket:
+    root = find_repo_root(repo_root)
+    _root_imports(root)
+
+    latest_path = root / LATEST_RHP_EVIDENCE
+    hrcn_path = root / HRCN_EVIDENCE
+    latest, latest_error = _read_json_or_empty(latest_path)
+
+    rhp_evidence_green = (
+        latest.get("schema") == "RHP-011-final-evidence"
+        and latest.get("operator_visible_startup_locks_passed") is True
+        and latest.get("operator_status_ascii_safe") is True
+        and latest.get("installed_launcher_visible_status_smoke_passed") is True
+        and latest.get("py_compile_passed") is True
+        and latest.get("focused_tests_passed") is True
+        and latest.get("alignment_guard_self_check_passed") is True
+        and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
+        and latest.get("external_ingestion") is False
+    )
+
+    false_flags = _false_flags()
+    degraded_reasons: list[str] = []
+    if latest_error:
+        degraded_reasons.append(latest_error)
+    if not rhp_evidence_green:
+        degraded_reasons.append("rhp_evidence_not_green")
+
+    hrcn_boundary_green = False
+    try:
+        import hrcn_runtime_bridge
+        import rhp_runtime_bridge
+        rhp_runtime_bridge.assert_read_only_boundary(root)
+        hrcn_runtime_bridge.assert_read_only_boundary(root)
+        hrcn_status = hrcn_runtime_bridge.get_bridge_status(root)
+        hrcn_boundary_green = hrcn_path.is_file() and _status_value(hrcn_status, "mode") == "read_only"
+        if not hrcn_boundary_green:
+            degraded_reasons.append("hrcn_boundary_not_green")
+    except Exception as exc:
+        degraded_reasons.append(f"hrcn_boundary_error:{exc.__class__.__name__}")
+
+    alignment_green = False
+    try:
+        from rhp.alignment_guard import validate_alignment
+        alignment = validate_alignment(root, require_latest_passed=False)
+        alignment_green = bool(alignment.ok)
+        if not alignment_green:
+            degraded_reasons.append("alignment_guard_not_green")
+    except Exception as exc:
+        degraded_reasons.append(f"alignment_guard_error:{exc.__class__.__name__}")
+
+    git_status_available = _git_status_available(root)
+    if not git_status_available:
+        degraded_reasons.append("git_status_unavailable")
+
     checks = {
         "repo_root_found": root.is_dir(),
         "latest_rhp_evidence_exists": latest_path.is_file(),
         "rhp_evidence_green": rhp_evidence_green,
         "hrcn_evidence_exists": hrcn_path.is_file(),
         "hrcn_boundary_green": hrcn_boundary_green,
-        "alignment_guard_green": alignment.ok,
-        "git_status_available": _git_status_available(root),
+        "alignment_guard_green": alignment_green,
+        "git_status_available": git_status_available,
         "authority_flags_false": all(value is False for value in false_flags.values()),
         "startup_context_packet_created": True,
     }
+    if not root.is_dir():
+        degraded_reasons.append("repo_root_not_found")
+
     ok = all(checks.values())
+    degraded = not ok
+    boot_status = "ok" if ok else "degraded"
+    degraded_reason = ";".join(degraded_reasons) if degraded_reasons else ""
 
     return BootPreflightPacket(
         ok=ok,
@@ -152,7 +204,7 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
         hrcn_evidence=HRCN_EVIDENCE,
         rhp_evidence_green=rhp_evidence_green,
         hrcn_boundary_green=hrcn_boundary_green,
-        alignment_guard_green=alignment.ok,
+        alignment_guard_green=alignment_green,
         rhp_context_gate="HERMES_RHP_CONTEXT",
         hrcn_context_gate="HERMES_HRCN_CONTEXT",
         rhp_context_requested=_env_enabled("HERMES_RHP_CONTEXT"),
@@ -160,11 +212,15 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
         startup_context_packet_created=True,
         checks=checks,
         non_claim_lock=(
-            "RHP-011.1 boot preflight is read-only startup orientation. "
-            "It verifies local evidence and boundary state before interaction context assembly. "
-            "It does not authorize provider/model/tool calls, writes, CMS runtime/write, "
-            "memory write/promotion, API writes, dependency mutation, external ingestion, autonomy, or self-authorization."
+            "RHP-012 boot preflight is safe read-only startup orientation. "
+            "Missing or invalid evidence degrades visible startup status instead of crashing or granting authority. "
+            "It does not authorize provider/model/tool calls, writes, CMS runtime/write, memory write/promotion, "
+            "API writes, dependency mutation, external ingestion, autonomy, or self-authorization."
         ),
+        degraded=degraded,
+        degraded_reason=degraded_reason,
+        degraded_reasons=degraded_reasons,
+        boot_status=boot_status,
         **false_flags,
     )
 
@@ -172,8 +228,11 @@ def format_boot_context_for_prompt(repo_root: str | Path | None = None) -> str:
     packet = run_boot_preflight(repo_root)
     data = packet.as_dict()
     compact = {
-        "schema": "RHP-BOOT-PREFLIGHT-PACKET-v0.2",
+        "schema": "RHP-BOOT-PREFLIGHT-PACKET-v0.3",
         "ok": data["ok"],
+        "boot_status": data["boot_status"],
+        "degraded": data["degraded"],
+        "degraded_reason": data["degraded_reason"],
         "boot_phase": data["boot_phase"],
         "latest_rhp_evidence": data["latest_rhp_evidence"],
         "rhp_evidence_green": data["rhp_evidence_green"],
@@ -195,7 +254,7 @@ def format_boot_context_for_prompt(repo_root: str | Path | None = None) -> str:
 def main() -> int:
     packet = run_boot_preflight()
     print(json.dumps(packet.as_dict(), indent=2, sort_keys=True))
-    return 0 if packet.ok else 1
+    return 0 if packet.ok else 2
 
 if __name__ == "__main__":
     raise SystemExit(main())

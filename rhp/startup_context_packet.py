@@ -1,4 +1,4 @@
-# RHP-011.1 startup context packet.
+# RHP-012 startup context packet.
 from __future__ import annotations
 
 import argparse
@@ -40,6 +40,8 @@ class StartupContextPacket:
     rhp_context_requested: bool
     hrcn_context_requested: bool
     boot_preflight_ok: bool
+    boot_preflight_degraded: bool
+    boot_preflight_degraded_reason: str
     startup_context_packet_created: bool
     provider_call_executed: bool
     model_call_executed: bool
@@ -96,7 +98,7 @@ def build_startup_context_packet(repo_root: str | Path | None = None) -> Startup
     ok = bool(boot.ok and launcher.exists() and native_hook_present and all(value is False for value in false_flags.values()))
     return StartupContextPacket(
         ok=ok,
-        schema="RHP-STARTUP-CONTEXT-PACKET-v0.3",
+        schema="RHP-STARTUP-CONTEXT-PACKET-v0.4",
         repo_root=str(root),
         installed_launcher_path=str(launcher),
         installed_launcher_exists=launcher.exists(),
@@ -109,11 +111,14 @@ def build_startup_context_packet(repo_root: str | Path | None = None) -> Startup
         boot_preflight_requested=_env_enabled("HERMES_RHP_BOOT_PREFLIGHT"),
         rhp_context_requested=_env_enabled("HERMES_RHP_CONTEXT"),
         hrcn_context_requested=_env_enabled("HERMES_HRCN_CONTEXT"),
-        boot_preflight_ok=boot.ok,
+        boot_preflight_ok=bool(boot.ok),
+        boot_preflight_degraded=bool(getattr(boot, "degraded", False)),
+        boot_preflight_degraded_reason=str(getattr(boot, "degraded_reason", "")),
         startup_context_packet_created=True,
         operator_visible_status=os.environ.get("HERMES_RHP_OPERATOR_STATUS", ""),
         non_claim_lock=(
-            "RHP-011.1 startup packet verifies the installed CLI path can carry read-only boot orientation and the gold-interface Rehydration Protocol strip. "
+            "RHP-012 startup packet verifies the installed CLI path can carry safe read-only boot orientation, "
+            "degraded startup status, and the gold-interface Rehydration Protocol strip. "
             "It does not execute Hermes autonomously, call providers/models/tools, write CMS or memory, write APIs, "
             "mutate dependencies, perform external ingestion, or self-authorize."
         ),
@@ -124,12 +129,12 @@ def packet_json(repo_root: str | Path | None = None) -> str:
     return json.dumps(build_startup_context_packet(repo_root).as_dict(), indent=2, sort_keys=True)
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Build RHP-010 startup context packet")
+    parser = argparse.ArgumentParser(description="Build RHP-012 startup context packet")
     parser.add_argument("--json", action="store_true")
     parser.parse_args(argv)
     packet = build_startup_context_packet()
     print(json.dumps(packet.as_dict(), indent=2, sort_keys=True))
-    return 0 if packet.ok else 1
+    return 0 if packet.ok else 2
 
 if __name__ == "__main__":
     raise SystemExit(main())

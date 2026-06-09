@@ -1,0 +1,12 @@
+8b1ee7d551a1e4feb7f4d21e294d7445998d1990340ffdf03db9b11722e4b944  README.md
+139dcb057b77358f22d875401ee07c945fe26c28a7c2b25c97e7b8270c15a756  rhp/README.md
+ce0519fb3ba0329e09ed73eb5c8e45e61f790411829889002d68e0fcc003c625  rhp/boot_preflight.py
+226eece070dac9e93501385731999a6831d9b1a0d16829d056b788ae50f3b770  rhp/operator_startup_status.py
+68e064b31a872cdf172b3e45235f25a91e04101d2a142b06f41ed81f1c3d3fc0  rhp/startup_context_packet.py
+4b3105e91a8651f8358b50a542ed4d36d3d49fb7483d50d97ba3389da133c4d8  rhp/alignment_guard.py
+4365d02516bfe60c821d625f852b26e25522207d57b2253627de353bb0355ba1  docs/context-layer/ops/RHP-012-final-evidence.json
+cadfa0e8f728060df5b88b95e36bbfd04d10d3b1c362ebb526216240a53e856d  docs/context-layer/ops/RHP-012-safe-boot-degraded-status.md
+2fa8c4d4a1eaae1b9715f3ab9d34e6acdc97b6ead8bdbe0301821e2aa6a581a9  docs/context-layer/ops/RHP-012-safe-boot-degraded-status/safe-boot-smoke-output.json
+6119f483f7eeac43d8b9d11a4012f097827312d38dd5bc20668610c9896fb362  docs/context-layer/ops/RHP-012-safe-boot-degraded-status/repair-v2-py-compile-output.txt
+670d95a8a30557040f53bc212625d9142e9e4de0077f2d74613a8624dc259595  docs/context-layer/ops/RHP-012-safe-boot-degraded-status/repair-v2-alignment-preflight-output.txt
+be96ddffaf2e957ee9528c6f44a78c57a8ae988943d1332e0791ebab991c3b42  docs/context-layer/ops/RHP-012-safe-boot-degraded-status/repair-v2-alignment-final-output.txt

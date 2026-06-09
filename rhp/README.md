@@ -352,3 +352,10 @@ RHP-011.2 aligns the root README, RHP README, alignment guard, public metrics, R
 Current runtime-visible strip remains RHP-011.1. Current repository evidence closure is RHP-011.2.
 
 Non-claim lock: RHP-011.2 is documentation/evidence hygiene only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
+
+
+## RHP-012 safe boot failure mode and degraded startup status
+
+RHP-012 ensures missing or invalid local evidence produces a visible degraded startup state instead of a crash, false-green state, or authority expansion.
+
+Runtime boundary: degraded startup status remains read-only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
