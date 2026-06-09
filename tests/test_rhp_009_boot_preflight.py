@@ -30,6 +30,6 @@ def test_rhp_009_boot_context_format_contains_compact_packet(monkeypatch):
     monkeypatch.setenv("HERMES_RHP_CONTEXT", "proposal")
     monkeypatch.setenv("HERMES_HRCN_CONTEXT", "proposal")
     text = format_boot_context_for_prompt(Path.cwd())
-    assert "RHP-BOOT-PREFLIGHT-PACKET-v0.1" in text
+    assert "RHP-BOOT-PREFLIGHT-PACKET-v0.3" in text
     assert '"ok": true' in text
     assert "external_ingestion" in text

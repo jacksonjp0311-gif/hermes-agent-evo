@@ -12,7 +12,7 @@ def test_rhp_011_operator_visible_status_lists_all_locks(monkeypatch):
     text = "\n".join(status.lines)
     assert status.ok is True
     assert "[OK] repo root found" in text
-    assert "[OK] RHP-010 evidence green" in text
+    assert "[OK] RHP evidence green" in text
     assert "[OK] HRCN boundary green" in text
     assert "[OK] alignment guard green" in text
     assert "[OK] startup packet created" in text
@@ -20,7 +20,7 @@ def test_rhp_011_operator_visible_status_lists_all_locks(monkeypatch):
     assert "[OK] external_ingestion=false" in text
     assert "[OK] provider/model/tool execution=false" in text
     assert "[OK] CMS/memory/API write=false" in text
-    assert "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010" in text
+    assert "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-012" in text
     assert text.isascii()
 
 def test_rhp_011_render_is_ascii_safe(monkeypatch):

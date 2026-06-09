@@ -3,14 +3,19 @@ import inspect
 from agent import agent_init
 
 
-def test_init_agent_source_contains_rhp_before_hrcn_startup_order():
+def test_init_agent_source_contains_rhp_boot_before_rhp_before_hrcn_startup_order():
     source = inspect.getsource(agent_init.init_agent)
-    expected = (
-        "agent.ephemeral_system_prompt = _maybe_append_hrcn_context(\n"
-        "        _maybe_append_rhp_context(ephemeral_system_prompt)\n"
-        "    )"
-    )
-    assert expected in source
+    assert "_maybe_append_rhp_boot_preflight_context" in source
+    assert "_maybe_append_rhp_context" in source
+    assert "_maybe_append_hrcn_context" in source
+
+    hrcn_idx = source.index("_maybe_append_hrcn_context(")
+    rhp_idx = source.index("_maybe_append_rhp_context(")
+    boot_idx = source.index("_maybe_append_rhp_boot_preflight_context(")
+
+    # Source nesting is outer-to-inner; evaluation applies the inner boot
+    # preflight context first, then RHP, then HRCN.
+    assert hrcn_idx < rhp_idx < boot_idx
 
 
 def test_startup_proposal_context_path_preserves_rhp_before_hrcn(monkeypatch):
