@@ -117,7 +117,7 @@ def get_available_skills() -> Dict[str, List[str]]:
 _UPDATE_CHECK_CACHE_SECONDS = 6 * 3600
 
 # Sentinel returned when we know an update exists but can't count commits
-# (e.g. nix-built hermes Ã¢â‚¬â€ no local git history to count against).
+# (e.g. nix-built hermes — no local git history to count against).
 UPDATE_AVAILABLE_NO_COUNT = -1
 
 _UPSTREAM_REPO_URL = "https://github.com/NousResearch/hermes-agent.git"
@@ -153,7 +153,7 @@ def _check_via_local_git(repo_dir: Path) -> Optional[int]:
             cwd=str(repo_dir),
         )
     except Exception:
-        pass  # Offline or timeout Ã¢â‚¬â€ use stale refs, that's fine
+        pass  # Offline or timeout — use stale refs, that's fine
 
     try:
         result = subprocess.run(
@@ -225,7 +225,7 @@ def check_for_updates() -> Optional[int]:
     cache_file = hermes_home / ".update_check"
     embedded_rev = os.environ.get("HERMES_REVISION") or None
 
-    # Read cache Ã¢â‚¬â€ invalidate if the embedded rev OR installed version has
+    # Read cache — invalidate if the embedded rev OR installed version has
     # changed since the last check. The version guard matters for pip installs:
     # `check_via_pypi()` compares against VERSION, so a `pip install --upgrade`
     # changes VERSION but leaves rev unchanged (both None), and without this
@@ -303,18 +303,18 @@ def get_git_banner_state(repo_dir: Optional[Path] = None) -> Optional[dict]:
     """Return upstream/local git hashes for the startup banner.
 
     For source installs and dev images this runs ``git rev-parse`` against
-    the active checkout.  When no checkout is available Ã¢â‚¬â€ the canonical case
+    the active checkout.  When no checkout is available — the canonical case
     is the published Docker image, which excludes ``.git`` from the build
-    context Ã¢â‚¬â€ we fall back to the baked-in build SHA (see
+    context — we fall back to the baked-in build SHA (see
     ``hermes_cli/build_info.py``) and return it as a frozen
     ``upstream == local`` state with ``ahead=0``.  A built image is by
     definition pinned to one commit, so "ahead" is always zero and the
-    banner correctly shows ``Ã‚Â· upstream <sha>`` with no carried-commits
+    banner correctly shows ``· upstream <sha>`` with no carried-commits
     annotation.
     """
     repo_dir = repo_dir or _resolve_repo_dir()
     if repo_dir is None:
-        # No git checkout Ã¢â‚¬â€ try the baked build SHA (Docker image path).
+        # No git checkout — try the baked build SHA (Docker image path).
         try:
             from hermes_cli.build_info import get_build_sha
             baked = get_build_sha(short=8)
@@ -362,7 +362,7 @@ _latest_release_cache: Optional[tuple] = None  # (tag, url) once resolved
 def get_latest_release_tag(repo_dir: Optional[Path] = None) -> Optional[tuple]:
     """Return ``(tag, release_url)`` for the latest git tag, or None.
 
-    Local-only Ã¢â‚¬â€ runs ``git describe --tags --abbrev=0`` against the
+    Local-only — runs ``git describe --tags --abbrev=0`` against the
     Hermes checkout. Cached per-process. Release URL always points at the
     canonical NousResearch/hermes-agent repo (forks don't get a link).
     """
@@ -372,7 +372,7 @@ def get_latest_release_tag(repo_dir: Optional[Path] = None) -> Optional[tuple]:
 
     repo_dir = repo_dir or _resolve_repo_dir()
     if repo_dir is None:
-        _latest_release_cache = ()  # falsy sentinel Ã¢â‚¬â€ skip future lookups
+        _latest_release_cache = ()  # falsy sentinel — skip future lookups
         return None
 
     try:
@@ -448,7 +448,7 @@ def get_update_result(timeout: float = 0.5) -> Optional[int]:
 # =========================================================================
 
 def _format_context_length(tokens: int) -> str:
-    """Format a token count for display (e.g. 128000 Ã¢â€ â€™ '128K', 1048576 Ã¢â€ â€™ '1M')."""
+    """Format a token count for display (e.g. 128000 → '128K', 1048576 → '1M')."""
     if tokens >= 1_000_000:
         val = tokens / 1_000_000
         rounded = round(val)
@@ -542,7 +542,7 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
     _, unavailable_toolsets = check_tool_availability(quiet=True)
     disabled_tools = set()
     # Tools whose toolset has a check_fn are lazy-initialized (e.g. honcho,
-    # homeassistant) Ã¢â‚¬â€ they show as unavailable at banner time because the
+    # homeassistant) — they show as unavailable at banner time because the
     # check hasn't run yet, but they aren't misconfigured.
     lazy_tools = set()
     for item in unavailable_toolsets:
@@ -724,7 +724,7 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
 
     right_lines.append(f"[dim {dim}]{' · '.join(summary_parts)}[/]")
 
-    # Update check Ã¢â‚¬â€ use prefetched result if available
+    # Update check — use prefetched result if available
     try:
         behind = get_update_result(timeout=0.5)
         if behind is not None and behind != 0:
@@ -747,7 +747,7 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
     except Exception:
         pass  # Never break the banner over an update check
 
-    # Pip-install warning Ã¢â‚¬â€ `pip install hermes-agent` is not the supported
+    # Pip-install warning — `pip install hermes-agent` is not the supported
     # install path (it exists on PyPI for internal/CI reasons, not end users).
     # Such installs miss the git checkout + installer-managed deps, so updates,
     # self-update, and issue triage don't behave correctly. Warn, don't block.
