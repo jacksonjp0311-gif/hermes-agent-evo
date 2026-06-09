@@ -43,7 +43,7 @@ Usage:
     hermes claw migrate --dry-run  # Preview migration without changes
 """
 
-# IMPORTANT: hermes_bootstrap must be the very first import ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it sets up
+# IMPORTANT: hermes_bootstrap must be the very first import — it sets up
 # UTF-8 stdio on Windows so print()/subprocess children don't hit
 # UnicodeEncodeError with non-ASCII characters.  No-op on POSIX.
 #
@@ -55,7 +55,7 @@ Usage:
 # ``.pth`` file still points at the old set of top-level modules.  Without
 # this guard, hermes crashes on import and the user can't run
 # ``hermes update`` to recover.  Missing the bootstrap means UTF-8 stdio
-# setup is skipped on Windows ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â degraded, not broken.  POSIX is unaffected.
+# setup is skipped on Windows — degraded, not broken.  POSIX is unaffected.
 try:
     import hermes_bootstrap  # noqa: F401
 except ModuleNotFoundError:
@@ -79,7 +79,7 @@ def _set_process_title() -> None:
          changes lldb/top but not ``ps aux``).
       4. No-op on Windows (the .exe name is already ``hermes.exe``).
     """
-    # Strategy 1: setproctitle (best ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â works on macOS, Linux, BSD)
+    # Strategy 1: setproctitle (best — works on macOS, Linux, BSD)
     try:
         import setproctitle  # type: ignore[import-untyped]
 
@@ -100,7 +100,7 @@ def _set_process_title() -> None:
         elif system == "Darwin":
             libc = ctypes.CDLL("libc.dylib", use_errno=True)
             libc.pthread_setname_np(b"hermes")
-        # Windows: the .exe name is already ``hermes.exe`` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â nothing to do.
+        # Windows: the .exe name is already ``hermes.exe`` — nothing to do.
     except Exception:
         pass
 
@@ -157,7 +157,7 @@ def _wants_tui_early(argv: "list[str] | None" = None) -> bool:
     return _config_default_interface_early() == "tui"
 
 
-# Mouse-tracking residue suppression ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â runs BEFORE every other import on the
+# Mouse-tracking residue suppression — runs BEFORE every other import on the
 # TUI hot path so the terminal stops emitting SGR/X10 mouse reports while the
 # Python launcher is still doing imports (ÃƒÂ¢Ã¢â‚¬Â°Ã‹â€ 100ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“300ms in cooked + echo mode,
 # before the Node TUI takes stdin into raw mode). During that window any
@@ -376,7 +376,7 @@ _rhp_native_boot_orientation_early()
 
 
 # ---------------------------------------------------------------------------
-# Profile override ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MUST happen before any hermes module import.
+# Profile override — MUST happen before any hermes module import.
 #
 # Many modules cache HERMES_HOME at import time (module-level constants).
 # We intercept --profile/-p from sys.argv here and set the env var so that
@@ -418,7 +418,7 @@ def _apply_profile_override() -> None:
     # parent directory name (e.g. ~/.hermes/profiles/coder or
     # /opt/data/profiles/coder).  If HERMES_HOME points to the hermes root
     # instead (e.g. systemd hardcodes HERMES_HOME=/root/.hermes), we must
-    # still read active_profile ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the user may have switched profiles via
+    # still read active_profile — the user may have switched profiles via
     # `hermes profile use` and the gateway should honour that choice.
     # See issue #22502.
     hermes_home_env = os.environ.get("HERMES_HOME", "")
@@ -479,14 +479,14 @@ from hermes_cli.env_loader import load_hermes_dotenv
 
 load_hermes_dotenv(project_env=PROJECT_ROOT / ".env")
 
-# Bridge security.redact_secrets from config.yaml ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ HERMES_REDACT_SECRETS env
+# Bridge security.redact_secrets from config.yaml → HERMES_REDACT_SECRETS env
 # var BEFORE hermes_logging imports agent.redact (which snapshots the flag at
 # module-import time). Without this, config.yaml's toggle is ignored because
 # the setup_logging() call below imports agent.redact, which reads the env var
-# exactly once. Env var in .env still wins ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â this is config.yaml fallback only.
+# exactly once. Env var in .env still wins — this is config.yaml fallback only.
 #
 # We also read network.force_ipv4 from the same yaml load to avoid two
-# separate config.yaml reads (saves ~17ms on every CLI startup ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the second
+# separate config.yaml reads (saves ~17ms on every CLI startup — the second
 # `load_config()` was doing a full deep-merge for one boolean lookup).
 _FORCE_IPV4_EARLY = False
 try:
@@ -510,7 +510,7 @@ try:
 except Exception:
     pass  # best-effort ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â redaction stays at default (enabled) on config errors
 
-# Initialize centralized file logging early ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â all `hermes` subcommands
+# Initialize centralized file logging early — all `hermes` subcommands
 # (chat, setup, gateway, config, etc.) write to agent.log + errors.log.
 # Dashboard entrypoints bootstrap with GUI mode so gui.log is always present
 # during GUI testing, including pre-dispatch startup failures.
@@ -529,7 +529,7 @@ except Exception:
     pass  # best-effort ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â don't crash the CLI if logging setup fails
 
 # Apply IPv4 preference early, before any HTTP clients are created.
-# We already determined whether to force IPv4 from the raw yaml read above ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â
+# We already determined whether to force IPv4 from the raw yaml read above —
 # this just calls the toggle without a redundant load_config() round trip.
 if _FORCE_IPV4_EARLY:
     try:
@@ -673,7 +673,7 @@ def _read_git_revision_fingerprint(repo_root: Path) -> str | None:
             packed_sha = _read_packed_ref(common_dir, ref)
             if packed_sha:
                 return f"git:{ref}:{packed_sha}"
-            # Ref name is known but unresolved ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â still stable across launches,
+            # Ref name is known but unresolved — still stable across launches,
             # and the version/release fallback in the caller will invalidate
             # after `hermes update`.
             return f"git:{ref}:unresolved"
@@ -786,7 +786,7 @@ def _has_any_provider_configured() -> bool:
     _has_hermes_config = _model_name and _model_name != _DEFAULT_MODEL
 
     # Check env vars (may be set by .env or shell).
-    # OPENAI_BASE_URL alone counts ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â local models (vLLM, llama.cpp, etc.)
+    # OPENAI_BASE_URL alone counts — local models (vLLM, llama.cpp, etc.)
     # often don't require an API key.
     from hermes_cli.auth import PROVIDER_REGISTRY
 
@@ -845,7 +845,7 @@ def _has_any_provider_configured() -> bool:
         except Exception:
             pass
 
-    # Check config.yaml ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â if model is a dict with an explicit provider set,
+    # Check config.yaml — if model is a dict with an explicit provider set,
     # the user has gone through setup (fresh installs have model as a plain
     # string).  Also covers custom endpoints that store api_key/base_url in
     # config rather than .env.
@@ -857,7 +857,7 @@ def _has_any_provider_configured() -> bool:
             return True
 
     # Check for Claude Code OAuth credentials (~/.claude/.credentials.json)
-    # Only count these if Hermes has been explicitly configured ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Claude Code
+    # Only count these if Hermes has been explicitly configured — Claude Code
     # being installed doesn't mean the user wants Hermes to use their tokens.
     if _has_hermes_config:
         try:
@@ -1078,7 +1078,7 @@ def _session_browse_picker(sessions: list) -> Optional[str]:
                 elif key == ord("q") and not search_text:
                     return
                 elif 32 <= key <= 126:
-                    # Printable character ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ add to search filter
+                    # Printable character → add to search filter
                     search_text += chr(key)
                     filtered = [s for s in sessions if _match(s, search_text)]
                     cursor = 0
@@ -1183,7 +1183,7 @@ def _exec_in_container(container_info: dict, cli_args: list):
         sys.exit(1)
 
     # Rootful containers (NixOS systemd service) are invisible to unprivileged
-    # users ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Podman uses per-user namespaces, Docker needs group access.
+    # users — Podman uses per-user namespaces, Docker needs group access.
     # Probe whether the runtime can see the container; if not, try via sudo.
     sudo_path = None
     probe = _probe_container(
@@ -1612,7 +1612,7 @@ def _find_bundled_tui(hermes_cli_dir: Path | None = None) -> Path | None:
 
 
 def _make_tui_argv(tui_dir: Path, tui_dev: bool) -> tuple[list[str], Path]:
-    """TUI: --dev ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ tsx src; else node dist (HERMES_TUI_DIR prebuilt or esbuild)."""
+    """TUI: --dev → tsx src; else node dist (HERMES_TUI_DIR prebuilt or esbuild)."""
     _ensure_tui_node()
 
     def _node_bin(bin: str) -> str:
@@ -1802,7 +1802,7 @@ def _read_cgroup_memory_limit() -> Optional[int]:
             continue
         # cgroup v1 reports "unlimited" as a huge value (often
         # 0x7FFFFFFFFFFFF000 ÃƒÂ¢Ã¢â‚¬Â°Ã‹â€  9.2 EB, sometimes PAGE_COUNTER_MAX). Anything
-        # at/above ~1 PB is effectively unconstrained ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â treat as no limit.
+        # at/above ~1 PB is effectively unconstrained — treat as no limit.
         if limit >= (1 << 50):
             return None
         return limit
@@ -1933,7 +1933,7 @@ def _launch_tui(
     # transcripts / reasoning blobs. We target 8GB on an unconstrained host,
     # but V8 is NOT cgroup-aware: in a memory-limited Docker/k8s container a
     # flat 8GB heap grows past the container limit and the cgroup OOM-killer
-    # SIGKILLs Node ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â running no JS handler, writing no breadcrumb, leaving the
+    # SIGKILLs Node — running no JS handler, writing no breadcrumb, leaving the
     # user with only a bare gateway `stdin EOF`. _resolve_tui_heap_mb() reads
     # the real cgroup limit and sizes the cap below it so V8 GCs/exits
     # gracefully (and the memory monitor's onCritical breadcrumb can fire)
@@ -2067,7 +2067,7 @@ def cmd_chat(args):
     continue_val = getattr(args, "continue_last", None)
     if continue_val and not getattr(args, "resume", None):
         if isinstance(continue_val, str):
-            # -c "session name" ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â resolve by title or ID
+            # -c "session name" — resolve by title or ID
             resolved = _resolve_session_by_name_or_id(continue_val)
             if resolved:
                 args.resume = resolved
@@ -2076,7 +2076,7 @@ def cmd_chat(args):
                 print("Use 'hermes sessions list' to see available sessions.")
                 sys.exit(1)
         else:
-            # -c with no argument ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â continue the most recent session
+            # -c with no argument — continue the most recent session
             source = "tui" if use_tui else "cli"
             last_id = _resolve_last_session(source=source)
             if not last_id and source == "tui":
@@ -2094,10 +2094,10 @@ def cmd_chat(args):
         resolved = _resolve_session_by_name_or_id(resume_val)
         if resolved:
             args.resume = resolved
-        # If resolution fails, keep the original value ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â _init_agent will
+        # If resolution fails, keep the original value — _init_agent will
         # report "Session not found" with the original input
 
-    # xAI retirement warning ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â one-shot, non-blocking, never fails startup
+    # xAI retirement warning — one-shot, non-blocking, never fails startup
     try:
         from hermes_cli.xai_retirement import (
             MIGRATION_GUIDE_URL,
