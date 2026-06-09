@@ -98,8 +98,8 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-012-final-evidence.json` |
-| Current RHP status | `RHP-012 safe boot failure mode and degraded startup status passed` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-012-1-final-evidence.json` |
+| Current RHP status | `RHP-012.1 CLI visible Rehydration Protocol text alignment passed` |
 | Next RHP gate | `RHP-013 operator dashboard and status packet normalization` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
@@ -202,6 +202,7 @@ RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010
 | RHP-L-041 | Scratch proof files must be either intentionally tracked or cleaned before the next RHP gate. |
 | RHP-L-042 | Missing or invalid evidence must produce degraded visible startup status, not a crash, false-green state, or authority expansion. |
 | RHP-L-043 | Safe boot negative controls must prove authority remains false while status degrades. |
+| RHP-L-044 | Runtime evidence text must not remain stale after evidence version advances; operator-visible status, banner strip, and startup packet labels must align. |
 
 AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-011.
 
@@ -230,6 +231,13 @@ degraded startup -> authority remains false
 ```
 
 Boundary: startup safety/status only. No provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
+
+
+#### RHP-012.1 CLI Visible Rehydration Text Alignment
+
+RHP-012.1 repairs the live CLI surface after RHP-012 sealed. The operator-visible startup text now reports `evidence=RHP-012`, exposes the Rehydration Protocol strip in the CLI stream, and preserves degraded/verified status without authority expansion.
+
+Boundary: display/text alignment only. No provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
 
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
 
@@ -279,8 +287,8 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-012 = read-only runtime-native 
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-012-final-evidence.json` |
-| Current RHP status | `RHP-012 safe boot failure mode and degraded startup status passed` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-012-1-final-evidence.json` |
+| Current RHP status | `RHP-012.1 CLI visible Rehydration Protocol text alignment passed` |
 | Next gate | `RHP-013 operator dashboard and status packet normalization` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-012.

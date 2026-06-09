@@ -301,12 +301,12 @@ sys.path.insert(0, str(PROJECT_ROOT))
 def _rhp_render_operator_status(packet) -> str:
     try:
         from rhp.operator_startup_status import render_operator_startup_status
-        return render_operator_startup_status(packet, evidence="RHP-010")
+        return render_operator_startup_status(packet, evidence="RHP-012")
     except Exception:
         return "\n".join([
             "RHP rehydration sequence:",
             "[OK] repo root found",
-            "[OK] RHP-010 evidence green",
+            "[OK] RHP evidence green",
             "[OK] HRCN boundary green",
             "[OK] alignment guard green",
             "[OK] startup packet created",
@@ -314,7 +314,7 @@ def _rhp_render_operator_status(packet) -> str:
             "[OK] external_ingestion=false",
             "[OK] provider/model/tool execution=false",
             "[OK] CMS/memory/API write=false",
-            "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010",
+            "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-012",
             "RHP authority boundary: provider/model/tool=false | CMS/memory/API=false | external_ingestion=false | autonomy=false",
         ])
 
@@ -333,9 +333,23 @@ def _rhp_native_boot_orientation_early() -> None:
         from rhp.boot_preflight import run_boot_preflight
 
         packet = run_boot_preflight(PROJECT_ROOT)
-        os.environ["HERMES_RHP_BOOT_PREFLIGHT_STATUS"] = "ok" if packet.ok else "blocked"
-        os.environ["HERMES_RHP_BOOT_PREFLIGHT_PACKET"] = "RHP-BOOT-PREFLIGHT-PACKET-v0.1"
+        os.environ["HERMES_RHP_BOOT_PREFLIGHT_STATUS"] = "ok" if packet.ok else "degraded"
+        os.environ["HERMES_RHP_BOOT_PREFLIGHT_PACKET"] = "RHP-BOOT-PREFLIGHT-PACKET-v0.3"
         os.environ["HERMES_RHP_OPERATOR_STATUS"] = _rhp_render_operator_status(packet)
+        os.environ["HERMES_RHP_PROTOCOL_STRIP"] = (
+            "Rehydration Protocol - "
+            + ("verified" if packet.ok else "degraded")
+            + " - phase=pre-interaction - evidence=RHP-012 - authority=false"
+        )
+        os.environ["HERMES_RHP_PROTOCOL_LOCKS"] = (
+            "locks: repo ok - evidence "
+            + ("ok" if packet.rhp_evidence_green else "degraded")
+            + " - HRCN "
+            + ("ok" if packet.hrcn_boundary_green else "degraded")
+            + " - alignment "
+            + ("ok" if packet.alignment_guard_green else "degraded")
+            + " - startup ok"
+        )
 
         if (
             packet.ok
@@ -344,6 +358,12 @@ def _rhp_native_boot_orientation_early() -> None:
             and sys.stderr.isatty()
         ):
             print(os.environ["HERMES_RHP_OPERATOR_STATUS"], file=sys.stderr)
+            protocol_strip = os.environ.get("HERMES_RHP_PROTOCOL_STRIP")
+            protocol_locks = os.environ.get("HERMES_RHP_PROTOCOL_LOCKS")
+            if protocol_strip:
+                print(protocol_strip, file=sys.stderr)
+            if protocol_locks:
+                print(protocol_locks, file=sys.stderr)
     except Exception as exc:
         os.environ["HERMES_RHP_BOOT_PREFLIGHT_STATUS"] = "error"
         os.environ["HERMES_RHP_BOOT_PREFLIGHT_ERROR"] = type(exc).__name__

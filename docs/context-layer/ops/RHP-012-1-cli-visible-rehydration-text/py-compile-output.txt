@@ -1,0 +1,4 @@
+PASS hermes_cli/main.py
+PASS hermes_cli/banner.py
+PASS rhp/alignment_guard.py
+PASS C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-012-1-cli-visible-rehydration-text\rhp_012_1_patch_cli_visible_text.py

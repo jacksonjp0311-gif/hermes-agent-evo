@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "checks": {
+    "main_evidence_rhp012": true,
+    "main_no_stale_evidence_rhp010": true,
+    "protocol_strip_env_present": true,
+    "protocol_locks_env_present": true,
+    "boot_packet_v03": true,
+    "banner_evidence_rhp012": true,
+    "banner_degraded_supported": true
+  }
+}

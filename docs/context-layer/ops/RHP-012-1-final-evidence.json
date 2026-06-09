@@ -1,0 +1,52 @@
+{
+    "schema":  "RHP-012.1-final-evidence",
+    "operation":  "RHP-012.1",
+    "timestamp_utc":  "2026-06-09T02:51:50.7438455Z",
+    "base_commit":  "2edc187f4e2361b4f3d7fa0f63457d93a54aeba3",
+    "human_authorization_phrase_matched":  true,
+    "previous_rhp012_passed":  true,
+    "cli_visible_text_alignment_passed":  true,
+    "stale_rhp010_visible_text_removed":  true,
+    "rehydration_protocol_strip_cli_stream_passed":  true,
+    "patch":  {
+                  "ok":  true,
+                  "main_changed":  true,
+                  "banner_changed":  true,
+                  "readme_changed":  true,
+                  "rhp_readme_changed":  true,
+                  "main_evidence_rhp012":  true,
+                  "protocol_strip_env_present":  true,
+                  "boot_packet_v03_present":  true,
+                  "banner_evidence_rhp012":  true,
+                  "lesson_044_present":  true
+              },
+    "smoke":  {
+                  "ok":  true,
+                  "checks":  {
+                                 "main_evidence_rhp012":  true,
+                                 "main_no_stale_evidence_rhp010":  true,
+                                 "protocol_strip_env_present":  true,
+                                 "protocol_locks_env_present":  true,
+                                 "boot_packet_v03":  true,
+                                 "banner_evidence_rhp012":  true,
+                                 "banner_degraded_supported":  true
+                             }
+              },
+    "py_compile_passed":  true,
+    "alignment_guard_self_check_passed":  true,
+    "failed_tests_are_commit_blockers":  true,
+    "next_recommended_operation":  "RHP-013 operator dashboard and status packet normalization",
+    "external_ingestion":  false,
+    "provider_call_executed":  false,
+    "model_call_executed":  false,
+    "tool_use_executed":  false,
+    "cms_runtime_execution":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "memory_promotion":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "self_authorization":  false,
+    "autonomous_authority":  false,
+    "non_claim_lock":  "RHP-012.1 aligns visible CLI Rehydration Protocol text only. It grants no provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, AGI/consciousness claim, or self-authorization."
+}

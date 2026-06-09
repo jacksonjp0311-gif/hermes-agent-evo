@@ -359,3 +359,10 @@ Non-claim lock: RHP-011.2 is documentation/evidence hygiene only. It does not gr
 RHP-012 ensures missing or invalid local evidence produces a visible degraded startup state instead of a crash, false-green state, or authority expansion.
 
 Runtime boundary: degraded startup status remains read-only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
+
+
+## RHP-012.1 CLI visible Rehydration Protocol text alignment
+
+RHP-012.1 aligns the live operator-visible CLI text with the RHP-012 evidence state. It removes stale `evidence=RHP-010` startup text and surfaces the Rehydration Protocol strip directly in the CLI stream.
+
+Boundary: display/text alignment only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.

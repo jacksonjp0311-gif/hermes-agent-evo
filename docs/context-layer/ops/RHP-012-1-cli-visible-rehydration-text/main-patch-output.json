@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "main_changed": true,
+  "banner_changed": true,
+  "readme_changed": true,
+  "rhp_readme_changed": true,
+  "main_evidence_rhp012": true,
+  "protocol_strip_env_present": true,
+  "boot_packet_v03_present": true,
+  "banner_evidence_rhp012": true,
+  "lesson_044_present": true
+}

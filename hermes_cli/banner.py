@@ -483,9 +483,9 @@ def _rhp_rehydration_protocol_lines() -> List[str]:
         return []
 
     verified = status == "ok" and "RHP rehydration complete: ok" in operator_status
-    state = "verified" if verified else ("degraded" if status in {"blocked", "error"} else "pending")
+    state = "verified" if verified else ("degraded" if status in {"blocked", "error", "degraded"} else "pending")
     phase = "pre-interaction" if "phase=pre-interaction" in operator_status else "startup"
-    evidence = "RHP-011.1" if verified else "RHP-011"
+    evidence = "RHP-012"
 
     blue = "#7DF9FF"
     purple = "#B388FF"
