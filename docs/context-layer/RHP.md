@@ -8,7 +8,7 @@ RHP is a proposed rehydration protocol for verifying repository state, runtime p
 
 - Repository: Hermes Agent
 - Version: 0.12.0
-- Current rehydrated baseline: `bfece1356`
+- Last verified rehydration baseline: `bfece1356`
 - Terminal stdout capture repair commit: `f959d9e43`
 - Previous clean anchor: `349d0da07`
 - `rhp_runtime_bridge.py`: absent
