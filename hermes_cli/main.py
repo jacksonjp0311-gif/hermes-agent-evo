@@ -3036,11 +3036,11 @@ def _format_aux_current(task_cfg: dict) -> str:
     model = str(task_cfg.get("model") or "").strip()
     if base_url:
         short = base_url.replace("https://", "").replace("http://", "").rstrip("/")
-        return f"custom ({short})" + (f" Ãƒâ€šÃ‚Â· {model}" if model else "")
+        return f"custom ({short})" + (f" · {model}" if model else "")
     if provider == "auto":
-        return "auto" + (f" Ãƒâ€šÃ‚Â· {model}" if model else "")
+        return "auto" + (f" · {model}" if model else "")
     if model:
-        return f"{provider} Ãƒâ€šÃ‚Â· {model}"
+        return f"{provider} · {model}"
     return provider
 
 
@@ -5068,7 +5068,7 @@ def _prompt_reasoning_effort_selection(efforts, current_effort=""):
 
     def _label(effort):
         if effort == current_effort:
-            return f"{effort}  ÃƒÂ¢Ã¢â‚¬Â Ã‚Â currently in use"
+            return f"{effort}  ← currently in use"
         return effort
 
     disable_label = "Disable reasoning"
@@ -7775,7 +7775,7 @@ def _print_curator_recent_run_notice() -> None:
     # Format the timestamp as "Xh ago" for readability.
     when = _format_time_ago(last_run_at)
     print()
-    print(f"ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¹ Skill curator ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â last run {when}")
+    print(f"ℹ Skill curator — last run {when}")
     for line in summary.splitlines():
         print(f"  {line}")
     print(
@@ -7912,9 +7912,9 @@ def _kill_stale_dashboard_processes(
                 failed.append((pid, str(e)))
 
     for pid in killed:
-        print(f"    ÃƒÂ¢Ã…â€œÃ¢â‚¬Å“ stopped PID {pid}")
+        print(f"    ✓ stopped PID {pid}")
     for pid, err_msg in failed:
-        print(f"    ÃƒÂ¢Ã…â€œÃ¢â‚¬â€ failed to stop PID {pid}: {err_msg}")
+        print(f"    ✗ failed to stop PID {pid}: {err_msg}")
 
     if killed:
         print("  Restart the dashboard when you're ready:")
@@ -10574,7 +10574,7 @@ def _cmd_update_impl(args, gateway_mode: bool):
             # Tt2021). Apply it silently and say what actually happened.
             print()
             print(
-                f"  ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¹ Updating config format (v{current_ver} ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ v{latest_ver})ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦"
+                f"  ℹ Updating config format (v{current_ver} → v{latest_ver})…"
             )
             try:
                 migrate_config(interactive=False, quiet=True)

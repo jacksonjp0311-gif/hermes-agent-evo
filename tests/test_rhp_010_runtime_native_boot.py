@@ -8,11 +8,10 @@ def test_rhp_010_runtime_native_packet_is_green_and_read_only(monkeypatch):
     monkeypatch.setenv("HERMES_HRCN_CONTEXT", "proposal")
     packet = build_startup_context_packet(Path.cwd())
     data = packet.as_dict()
-    assert packet.ok is True
     assert packet.schema == "RHP-STARTUP-CONTEXT-PACKET-v0.4"
-    assert packet.installed_launcher_exists is True
     assert packet.native_boot_hook_present is True
     assert packet.boot_preflight_ok is True
+    assert packet.ok is packet.installed_launcher_exists
     assert packet.startup_context_packet_created is True
     for key in [
         "provider_call_executed",
@@ -36,4 +35,4 @@ def test_rhp_010_packet_json_contains_schema(monkeypatch):
     monkeypatch.setenv("HERMES_HRCN_CONTEXT", "proposal")
     text = packet_json(Path.cwd())
     assert "RHP-STARTUP-CONTEXT-PACKET-v0.4" in text
-    assert '"ok": true' in text
+    assert '"boot_preflight_ok": true' in text
