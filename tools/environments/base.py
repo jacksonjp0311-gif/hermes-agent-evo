@@ -461,33 +461,35 @@ class BaseEnvironment(ABC):
         """
         output_chunks: list[str] = []
 
-        # Non-blocking drain via select().
+        # Drain stdout in a background thread.
         #
-        # The old pattern — ``for line in proc.stdout`` — blocks on
-        # ``readline()`` until the pipe reaches EOF.  When the user's command
-        # backgrounds a process (``cmd &``, ``setsid cmd & disown``, etc.),
-        # that backgrounded grandchild inherits the write-end of our stdout
-        # pipe via ``fork()``.  Even after ``bash`` itself exits, the pipe
-        # stays open because the grandchild still holds it — so the drain
-        # thread never returns and the tool hangs for the full lifetime of
-        # the grandchild (issue #8340: users reported indefinite hangs when
-        # restarting uvicorn with ``setsid ... & disown``).
+        # POSIX keeps the existing select()-based drain because it avoids
+        # hanging forever when a background grandchild inherits the stdout pipe.
         #
-        # The fix: select() with a short poll interval, and stop draining
-        # shortly after ``bash`` exits even if the pipe hasn't EOF'd yet.
-        # Any output the grandchild writes after that point goes to an
-        # orphaned pipe (harmless — the kernel reaps it when our end closes).
-        #
-        # Decoding: we ``os.read()`` raw bytes in fixed-size chunks (4096)
-        # so a single multibyte UTF-8 character can split across reads.  An
-        # incremental decoder buffers partial sequences across chunks, and
-        # ``errors="replace"`` mirrors the baseline ``TextIOWrapper`` (which
-        # was constructed with ``encoding="utf-8", errors="replace"`` on
-        # ``Popen``) so binary or mis-encoded output is preserved with
-        # U+FFFD substitution rather than clobbering the whole buffer.
+        # Windows cannot use select.select() reliably on subprocess pipe
+        # handles. On Windows, drain with blocking readline() inside this
+        # daemon thread. The main polling loop still owns timeout,
+        # interruption, process killing, and returncode semantics.
         decoder = codecs.getincrementaldecoder("utf-8")(errors="replace")
 
-        def _drain():
+        def _drain_windows():
+            if proc.stdout is None:
+                return
+            try:
+                while True:
+                    try:
+                        chunk = proc.stdout.readline()
+                    except (ValueError, OSError):
+                        break
+                    if chunk == "":
+                        break
+                    output_chunks.append(chunk)
+            except Exception:
+                pass
+
+        def _drain_posix():
+            if proc.stdout is None:
+                return
             fd = proc.stdout.fileno()
             idle_after_exit = 0
             try:
@@ -502,26 +504,28 @@ class BaseEnvironment(ABC):
                         except (ValueError, OSError):
                             break
                         if not chunk:
-                            break  # true EOF — all writers closed
+                            break  # true EOF; all writers closed
                         output_chunks.append(decoder.decode(chunk))
                         idle_after_exit = 0
                     elif proc.poll() is not None:
-                        # bash is gone and the pipe was idle for ~100ms.  Give
+                        # bash is gone and the pipe was idle for ~100ms. Give
                         # it two more cycles to catch any buffered tail, then
-                        # stop — otherwise we wait forever on a grandchild pipe.
+                        # stop; otherwise we wait forever on a grandchild pipe.
                         idle_after_exit += 1
                         if idle_after_exit >= 3:
                             break
             finally:
-                # Flush any bytes buffered mid-sequence.  With ``errors="replace"``
-                # this emits U+FFFD for any final incomplete sequence rather than
-                # raising.
+                # Flush any bytes buffered mid-sequence. With errors="replace"
+                # this emits U+FFFD for any final incomplete sequence rather
+                # than raising.
                 try:
                     tail = decoder.decode(b"", final=True)
                     if tail:
                         output_chunks.append(tail)
                 except Exception:
                     pass
+
+        _drain = _drain_windows if os.name == "nt" else _drain_posix
 
         drain_thread = threading.Thread(target=_drain, daemon=True)
         drain_thread.start()
