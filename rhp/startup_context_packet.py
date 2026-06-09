@@ -1,4 +1,4 @@
-# RHP-010 startup context packet.
+# RHP-011.1 startup context packet.
 from __future__ import annotations
 
 import argparse
@@ -96,7 +96,7 @@ def build_startup_context_packet(repo_root: str | Path | None = None) -> Startup
     ok = bool(boot.ok and launcher.exists() and native_hook_present and all(value is False for value in false_flags.values()))
     return StartupContextPacket(
         ok=ok,
-        schema="RHP-STARTUP-CONTEXT-PACKET-v0.2",
+        schema="RHP-STARTUP-CONTEXT-PACKET-v0.3",
         repo_root=str(root),
         installed_launcher_path=str(launcher),
         installed_launcher_exists=launcher.exists(),
@@ -113,7 +113,7 @@ def build_startup_context_packet(repo_root: str | Path | None = None) -> Startup
         startup_context_packet_created=True,
         operator_visible_status=os.environ.get("HERMES_RHP_OPERATOR_STATUS", ""),
         non_claim_lock=(
-            "RHP-010 runtime-native startup packet verifies the installed CLI path can carry read-only boot orientation. "
+            "RHP-011.1 startup packet verifies the installed CLI path can carry read-only boot orientation and the gold-interface Rehydration Protocol strip. "
             "It does not execute Hermes autonomously, call providers/models/tools, write CMS or memory, write APIs, "
             "mutate dependencies, perform external ingestion, or self-authorize."
         ),

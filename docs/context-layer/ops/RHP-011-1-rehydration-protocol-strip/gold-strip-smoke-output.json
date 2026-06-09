@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "rehydration_protocol_strip_passed": true,
+  "gold_interface_strip_smoke_passed": true,
+  "rendered_markup": "[bold #7DF9FF]Rehydration Protocol[/] [dim #B388FF]-[/] [#7DF9FF]verified[/] [dim #B388FF]-[/] [#7DF9FF]phase=pre-interaction[/] [dim #B388FF]-[/] [#7DF9FF]evidence=RHP-011.1[/] [dim #B388FF]-[/] [#7DF9FF]authority=false[/]\n[dim #9D4EDD]locks:[/] [#7DF9FF]repo ok[/] [dim #B388FF]-[/] [#7DF9FF]evidence ok[/] [dim #B388FF]-[/] [#7DF9FF]HRCN ok[/] [dim #B388FF]-[/] [#7DF9FF]alignment ok[/] [dim #B388FF]-[/] [#7DF9FF]startup ok[/]"
+}

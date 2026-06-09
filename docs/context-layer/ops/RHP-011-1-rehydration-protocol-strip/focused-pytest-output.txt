@@ -1,0 +1,4 @@
+pytest_required: false
+pytest_installed: false
+fallback: focused direct smoke
+RETURN CODE: 0

@@ -1,0 +1,81 @@
+RETURN CODE: 0
+EXE: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\.venv\Scripts\python.exe
+ARGS: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-011-1-rehydration-protocol-strip\rhp_011_1_context_truth_smoke.py
+STDOUT:
+{
+  "boot": {
+    "ok": true,
+    "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+    "boot_phase": "pre_interaction",
+    "latest_rhp_evidence": "docs/context-layer/ops/RHP-011-final-evidence.json",
+    "hrcn_evidence": "docs/context-layer/ops/OPS-027-final-evidence.json",
+    "rhp_evidence_green": true,
+    "hrcn_boundary_green": true,
+    "alignment_guard_green": true,
+    "rhp_context_gate": "HERMES_RHP_CONTEXT",
+    "hrcn_context_gate": "HERMES_HRCN_CONTEXT",
+    "rhp_context_requested": true,
+    "hrcn_context_requested": true,
+    "startup_context_packet_created": true,
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "self_authorization": false,
+    "autonomous_authority": false,
+    "external_ingestion": false,
+    "non_claim_lock": "RHP-011.1 boot preflight is read-only startup orientation. It verifies local evidence and boundary state before interaction context assembly. It does not authorize provider/model/tool calls, writes, CMS runtime/write, memory write/promotion, API writes, dependency mutation, external ingestion, autonomy, or self-authorization.",
+    "checks": {
+      "repo_root_found": true,
+      "latest_rhp_evidence_exists": true,
+      "rhp_evidence_green": true,
+      "hrcn_evidence_exists": true,
+      "hrcn_boundary_green": true,
+      "alignment_guard_green": true,
+      "git_status_available": true,
+      "authority_flags_false": true,
+      "startup_context_packet_created": true
+    }
+  },
+  "packet": {
+    "ok": true,
+    "schema": "RHP-STARTUP-CONTEXT-PACKET-v0.3",
+    "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+    "installed_launcher_path": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\.venv\\Scripts\\hermes.exe",
+    "installed_launcher_exists": true,
+    "native_boot_hook_file": "hermes_cli/main.py",
+    "native_boot_hook_present": true,
+    "boot_preflight_status": "",
+    "boot_preflight_gate": "HERMES_RHP_BOOT_PREFLIGHT",
+    "rhp_context_gate": "HERMES_RHP_CONTEXT",
+    "hrcn_context_gate": "HERMES_HRCN_CONTEXT",
+    "boot_preflight_requested": true,
+    "rhp_context_requested": true,
+    "hrcn_context_requested": true,
+    "boot_preflight_ok": true,
+    "startup_context_packet_created": true,
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "self_authorization": false,
+    "autonomous_authority": false,
+    "operator_visible_status": "",
+    "non_claim_lock": "RHP-011.1 startup packet verifies the installed CLI path can carry read-only boot orientation and the gold-interface Rehydration Protocol strip. It does not execute Hermes autonomously, call providers/models/tools, write CMS or memory, write APIs, mutate dependencies, perform external ingestion, or self-authorize."
+  },
+  "context_contains_v02": true
+}
+
+STDERR:
+

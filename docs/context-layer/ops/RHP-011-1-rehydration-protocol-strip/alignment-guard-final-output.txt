@@ -1,0 +1,29 @@
+RETURN CODE: 0
+EXE: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\.venv\Scripts\python.exe
+ARGS: rhp/alignment_guard.py --repo-root . --json
+STDOUT:
+{
+  "ok": true,
+  "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "mode": "final",
+  "checks": {
+    "previous_rhp011_passed": true,
+    "latest_evidence_exists": true,
+    "root_readme_latest_evidence": true,
+    "root_readme_rhp011_1_passed": true,
+    "root_readme_next_rhp012": true,
+    "rhp_readme_rehydration_protocol_strip": true,
+    "banner_rehydration_protocol_strip": true,
+    "banner_strip_inserted": true,
+    "boot_preflight_points_to_rhp011": true,
+    "startup_packet_mentions_rhp011_1": true,
+    "operator_status_exists": true,
+    "operator_status_hooked": true,
+    "ascii_safe_hook": true,
+    "latest_rhp011_1_passed": true
+  },
+  "failures": []
+}
+
+STDERR:
+

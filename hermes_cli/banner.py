@@ -60,28 +60,28 @@ def _skin_color(key: str, fallback: str) -> str:
 
 from hermes_cli import __version__ as VERSION, __release_date__ as RELEASE_DATE
 
-HERMES_AGENT_LOGO = """[bold #FFD700]██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗[/]
-[bold #FFD700]██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝[/]
-[#FFBF00]███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║[/]
-[#FFBF00]██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║[/]
-[#CD7F32]██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║[/]
-[#CD7F32]╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝[/]"""
+HERMES_AGENT_LOGO = """[bold #FFD700]Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€” Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”   Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”       Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€” Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”   Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”[/]
+[bold #FFD700]Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€” Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â      Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â[/]
+[#FFBF00]Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€” Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜   Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜[/]
+[#FFBF00]Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€¢Å¡Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â  Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜   Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€¢Å¡Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜   Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜[/]
+[#CD7F32]Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜ Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜      Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜  Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜Ã¢â€¢Å¡Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€Ã¢â€¢ÂÃ¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€”Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜ Ã¢â€¢Å¡Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜   Ã¢â€“Ë†Ã¢â€“Ë†Ã¢â€¢â€˜[/]
+[#CD7F32]Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â  Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â  Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â     Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â      Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â  Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â  Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â   Ã¢â€¢Å¡Ã¢â€¢ÂÃ¢â€¢Â[/]"""
 
-HERMES_CADUCEUS = """[#CD7F32]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#CD7F32]⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀[/]
-[#FFBF00]⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀[/]
-[#FFBF00]⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀[/]
-[#FFD700]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#FFD700]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#FFBF00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#FFBF00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#CD7F32]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#CD7F32]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]"""
+HERMES_CADUCEUS = """[#CD7F32]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â¢â‚¬Ã¢Â£â‚¬Ã¢Â¡â‚¬Ã¢Â â‚¬Ã¢Â£â‚¬Ã¢Â£â‚¬Ã¢Â â‚¬Ã¢Â¢â‚¬Ã¢Â£â‚¬Ã¢Â¡â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#CD7F32]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â¢â‚¬Ã¢Â£Â Ã¢Â£Â´Ã¢Â£Â¾Ã¢Â£Â¿Ã¢Â£Â¿Ã¢Â£â€¡Ã¢Â Â¸Ã¢Â£Â¿Ã¢Â£Â¿Ã¢Â â€¡Ã¢Â£Â¸Ã¢Â£Â¿Ã¢Â£Â¿Ã¢Â£Â·Ã¢Â£Â¦Ã¢Â£â€žÃ¢Â¡â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#FFBF00]Ã¢Â â‚¬Ã¢Â¢â‚¬Ã¢Â£Â Ã¢Â£Â´Ã¢Â£Â¶Ã¢Â Â¿Ã¢Â â€¹Ã¢Â£Â©Ã¢Â¡Â¿Ã¢Â£Â¿Ã¢Â¡Â¿Ã¢Â Â»Ã¢Â£Â¿Ã¢Â¡â€¡Ã¢Â¢Â Ã¢Â¡â€žÃ¢Â¢Â¸Ã¢Â£Â¿Ã¢Â Å¸Ã¢Â¢Â¿Ã¢Â£Â¿Ã¢Â¢Â¿Ã¢Â£ÂÃ¢Â â„¢Ã¢Â Â¿Ã¢Â£Â¶Ã¢Â£Â¦Ã¢Â£â€žÃ¢Â¡â‚¬Ã¢Â â‚¬[/]
+[#FFBF00]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â€°Ã¢Â â€°Ã¢Â ÂÃ¢Â Â¶Ã¢Â Å¸Ã¢Â â€¹Ã¢Â â‚¬Ã¢Â â€°Ã¢Â â‚¬Ã¢Â¢â‚¬Ã¢Â£Ë†Ã¢Â£ÂÃ¢Â¡Ë†Ã¢Â¢ÂÃ¢Â£Ë†Ã¢Â£ÂÃ¢Â¡â‚¬Ã¢Â â‚¬Ã¢Â â€°Ã¢Â â‚¬Ã¢Â â„¢Ã¢Â Â»Ã¢Â Â¶Ã¢Â Ë†Ã¢Â â€°Ã¢Â â€°Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#FFD700]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â£Â´Ã¢Â£Â¿Ã¢Â¡Â¿Ã¢Â â€ºÃ¢Â¢ÂÃ¢Â¡Ë†Ã¢Â â€ºÃ¢Â¢Â¿Ã¢Â£Â¿Ã¢Â£Â¦Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#FFD700]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â Â¿Ã¢Â£Â¿Ã¢Â£Â¦Ã¢Â£Â¤Ã¢Â£Ë†Ã¢Â ÂÃ¢Â¢Â Ã¢Â£Â´Ã¢Â£Â¿Ã¢Â Â¿Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#FFBF00]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â Ë†Ã¢Â â€°Ã¢Â Â»Ã¢Â¢Â¿Ã¢Â£Â¿Ã¢Â£Â¦Ã¢Â¡â€°Ã¢Â ÂÃ¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#FFBF00]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â ËœÃ¢Â¢Â·Ã¢Â£Â¦Ã¢Â£Ë†Ã¢Â â€ºÃ¢Â Æ’Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#CD7F32]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â¢Â Ã¢Â£Â´Ã¢Â Â¦Ã¢Â Ë†Ã¢Â â„¢Ã¢Â Â¿Ã¢Â£Â¦Ã¢Â¡â€žÃ¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#CD7F32]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â Â¸Ã¢Â£Â¿Ã¢Â£Â¤Ã¢Â¡Ë†Ã¢Â ÂÃ¢Â¢Â¤Ã¢Â£Â¿Ã¢Â â€¡Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#B8860B]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â€°Ã¢Â â€ºÃ¢Â Â·Ã¢Â â€žÃ¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#B8860B]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â¢â‚¬Ã¢Â£â‚¬Ã¢Â â€˜Ã¢Â¢Â¶Ã¢Â£â€žÃ¢Â¡â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#B8860B]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â£Â¿Ã¢Â ÂÃ¢Â¢Â°Ã¢Â¡â€ Ã¢Â Ë†Ã¢Â¡Â¿Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#B8860B]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â Ë†Ã¢Â Â³Ã¢Â Ë†Ã¢Â£Â¡Ã¢Â Å¾Ã¢Â ÂÃ¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]
+[#B8860B]Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â Ë†Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬Ã¢Â â‚¬[/]"""
 
 
 
@@ -117,7 +117,7 @@ def get_available_skills() -> Dict[str, List[str]]:
 _UPDATE_CHECK_CACHE_SECONDS = 6 * 3600
 
 # Sentinel returned when we know an update exists but can't count commits
-# (e.g. nix-built hermes — no local git history to count against).
+# (e.g. nix-built hermes Ã¢â‚¬â€ no local git history to count against).
 UPDATE_AVAILABLE_NO_COUNT = -1
 
 _UPSTREAM_REPO_URL = "https://github.com/NousResearch/hermes-agent.git"
@@ -153,7 +153,7 @@ def _check_via_local_git(repo_dir: Path) -> Optional[int]:
             cwd=str(repo_dir),
         )
     except Exception:
-        pass  # Offline or timeout — use stale refs, that's fine
+        pass  # Offline or timeout Ã¢â‚¬â€ use stale refs, that's fine
 
     try:
         result = subprocess.run(
@@ -225,7 +225,7 @@ def check_for_updates() -> Optional[int]:
     cache_file = hermes_home / ".update_check"
     embedded_rev = os.environ.get("HERMES_REVISION") or None
 
-    # Read cache — invalidate if the embedded rev OR installed version has
+    # Read cache Ã¢â‚¬â€ invalidate if the embedded rev OR installed version has
     # changed since the last check. The version guard matters for pip installs:
     # `check_via_pypi()` compares against VERSION, so a `pip install --upgrade`
     # changes VERSION but leaves rev unchanged (both None), and without this
@@ -303,18 +303,18 @@ def get_git_banner_state(repo_dir: Optional[Path] = None) -> Optional[dict]:
     """Return upstream/local git hashes for the startup banner.
 
     For source installs and dev images this runs ``git rev-parse`` against
-    the active checkout.  When no checkout is available — the canonical case
+    the active checkout.  When no checkout is available Ã¢â‚¬â€ the canonical case
     is the published Docker image, which excludes ``.git`` from the build
-    context — we fall back to the baked-in build SHA (see
+    context Ã¢â‚¬â€ we fall back to the baked-in build SHA (see
     ``hermes_cli/build_info.py``) and return it as a frozen
     ``upstream == local`` state with ``ahead=0``.  A built image is by
     definition pinned to one commit, so "ahead" is always zero and the
-    banner correctly shows ``· upstream <sha>`` with no carried-commits
+    banner correctly shows ``Ã‚Â· upstream <sha>`` with no carried-commits
     annotation.
     """
     repo_dir = repo_dir or _resolve_repo_dir()
     if repo_dir is None:
-        # No git checkout — try the baked build SHA (Docker image path).
+        # No git checkout Ã¢â‚¬â€ try the baked build SHA (Docker image path).
         try:
             from hermes_cli.build_info import get_build_sha
             baked = get_build_sha(short=8)
@@ -362,7 +362,7 @@ _latest_release_cache: Optional[tuple] = None  # (tag, url) once resolved
 def get_latest_release_tag(repo_dir: Optional[Path] = None) -> Optional[tuple]:
     """Return ``(tag, release_url)`` for the latest git tag, or None.
 
-    Local-only — runs ``git describe --tags --abbrev=0`` against the
+    Local-only Ã¢â‚¬â€ runs ``git describe --tags --abbrev=0`` against the
     Hermes checkout. Cached per-process. Release URL always points at the
     canonical NousResearch/hermes-agent repo (forks don't get a link).
     """
@@ -372,7 +372,7 @@ def get_latest_release_tag(repo_dir: Optional[Path] = None) -> Optional[tuple]:
 
     repo_dir = repo_dir or _resolve_repo_dir()
     if repo_dir is None:
-        _latest_release_cache = ()  # falsy sentinel — skip future lookups
+        _latest_release_cache = ()  # falsy sentinel Ã¢â‚¬â€ skip future lookups
         return None
 
     try:
@@ -413,10 +413,10 @@ def format_banner_version_label() -> str:
     ahead = int(state.get("ahead") or 0)
 
     if ahead <= 0 or upstream == local:
-        return f"{base} · upstream {upstream}"
+        return f"{base} Ã‚Â· upstream {upstream}"
 
     carried_word = "commit" if ahead == 1 else "commits"
-    return f"{base} · upstream {upstream} · local {local} (+{ahead} carried {carried_word})"
+    return f"{base} Ã‚Â· upstream {upstream} Ã‚Â· local {local} (+{ahead} carried {carried_word})"
 
 
 # =========================================================================
@@ -448,7 +448,7 @@ def get_update_result(timeout: float = 0.5) -> Optional[int]:
 # =========================================================================
 
 def _format_context_length(tokens: int) -> str:
-    """Format a token count for display (e.g. 128000 → '128K', 1048576 → '1M')."""
+    """Format a token count for display (e.g. 128000 Ã¢â€ â€™ '128K', 1048576 Ã¢â€ â€™ '1M')."""
     if tokens >= 1_000_000:
         val = tokens / 1_000_000
         rounded = round(val)
@@ -474,6 +474,43 @@ def _display_toolset_name(toolset_name: str) -> str:
         else toolset_name
     )
 
+
+def _rhp_rehydration_protocol_lines() -> List[str]:
+    # Display/context-only Rehydration Protocol strip for the gold Hermes interface.
+    status = (os.environ.get("HERMES_RHP_BOOT_PREFLIGHT_STATUS") or "").strip().lower()
+    operator_status = os.environ.get("HERMES_RHP_OPERATOR_STATUS") or ""
+    if not status and not operator_status:
+        return []
+
+    verified = status == "ok" and "RHP rehydration complete: ok" in operator_status
+    state = "verified" if verified else ("degraded" if status in {"blocked", "error"} else "pending")
+    phase = "pre-interaction" if "phase=pre-interaction" in operator_status else "startup"
+    evidence = "RHP-011.1" if verified else "RHP-011"
+
+    blue = "#7DF9FF"
+    purple = "#B388FF"
+    violet = "#9D4EDD"
+    status_color = blue if verified else "#FFD166"
+
+    return [
+        (
+            f"[bold {blue}]Rehydration Protocol[/] "
+            f"[dim {purple}]-[/] [{status_color}]{state}[/] "
+            f"[dim {purple}]-[/] [{blue}]phase={phase}[/] "
+            f"[dim {purple}]-[/] [{blue}]evidence={evidence}[/] "
+            f"[dim {purple}]-[/] [{blue}]authority=false[/]"
+        ),
+        (
+            f"[dim {violet}]locks:[/] "
+            f"[{blue}]repo ok[/] [dim {purple}]-[/] "
+            f"[{blue}]evidence ok[/] [dim {purple}]-[/] "
+            f"[{blue}]HRCN ok[/] [dim {purple}]-[/] "
+            f"[{blue}]alignment ok[/] [dim {purple}]-[/] "
+            f"[{blue}]startup ok[/]"
+            if verified
+            else f"[dim {violet}]locks:[/] [#FFD166]boot status={status or 'unknown'}[/] [dim {purple}]-[/] [{blue}]authority=false[/]"
+        ),
+    ]
 
 def build_welcome_banner(console: "Console", model: str, cwd: str,
                          tools: List[dict] = None,
@@ -505,7 +542,7 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
     _, unavailable_toolsets = check_tool_availability(quiet=True)
     disabled_tools = set()
     # Tools whose toolset has a check_fn are lazy-initialized (e.g. honcho,
-    # homeassistant) — they show as unavailable at banner time because the
+    # homeassistant) Ã¢â‚¬â€ they show as unavailable at banner time because the
     # check hasn't run yet, but they aren't misconfigured.
     lazy_tools = set()
     for item in unavailable_toolsets:
@@ -541,11 +578,12 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
         model_short = model_short[:-5]
     if len(model_short) > 28:
         model_short = model_short[:25] + "..."
-    ctx_str = f" [dim {dim}]·[/] [dim {dim}]{_format_context_length(context_length)} context[/]" if context_length else ""
-    left_lines.append(f"[{accent}]{model_short}[/]{ctx_str} [dim {dim}]·[/] [dim {dim}]Nous Research[/]")
+    ctx_str = f" [dim {dim}]Ã‚Â·[/] [dim {dim}]{_format_context_length(context_length)} context[/]" if context_length else ""
+    left_lines.append(f"[{accent}]{model_short}[/]{ctx_str} [dim {dim}]Ã‚Â·[/] [dim {dim}]Nous Research[/]")
+    left_lines.extend(_rhp_rehydration_protocol_lines())
 
     if os.getenv("HERMES_YOLO_MODE"):
-        left_lines.append(f"[bold red]⚠ YOLO mode[/] [dim {dim}]— all approval prompts bypassed[/]")
+        left_lines.append(f"[bold red]Ã¢Å¡Â  YOLO mode[/] [dim {dim}]Ã¢â‚¬â€ all approval prompts bypassed[/]")
     left_lines.append(f"[dim {dim}]{cwd}[/]")
     if session_id:
         left_lines.append(f"[dim {session_color}]Session: {session_id}[/]")
@@ -624,17 +662,17 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
             if srv["connected"]:
                 right_lines.append(
                     f"[dim {dim}]{srv['name']}[/] [{text}]({srv['transport']})[/] "
-                    f"[dim {dim}]—[/] [{text}]{srv['tools']} tool(s)[/]"
+                    f"[dim {dim}]Ã¢â‚¬â€[/] [{text}]{srv['tools']} tool(s)[/]"
                 )
             elif srv.get("disabled"):
                 right_lines.append(
                     f"[dim {dim}]{srv['name']}[/] [dim]({srv['transport']})[/] "
-                    f"[dim {dim}]— disabled[/]"
+                    f"[dim {dim}]Ã¢â‚¬â€ disabled[/]"
                 )
             else:
                 right_lines.append(
                     f"[red]{srv['name']}[/] [dim]({srv['transport']})[/] "
-                    f"[red]— failed[/]"
+                    f"[red]Ã¢â‚¬â€ failed[/]"
                 )
 
     right_lines.append("")
@@ -684,9 +722,9 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
     except Exception:
         pass  # Never break the banner over a profiles.py bug
 
-    right_lines.append(f"[dim {dim}]{' · '.join(summary_parts)}[/]")
+    right_lines.append(f"[dim {dim}]{' Ã‚Â· '.join(summary_parts)}[/]")
 
-    # Update check — use prefetched result if available
+    # Update check Ã¢â‚¬â€ use prefetched result if available
     try:
         behind = get_update_result(timeout=0.5)
         if behind is not None and behind != 0:
@@ -694,22 +732,22 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
             if behind > 0:
                 commits_word = "commit" if behind == 1 else "commits"
                 right_lines.append(
-                    f"[bold yellow]⚠ {behind} {commits_word} behind[/]"
-                    f"[dim yellow] — run [bold]{recommended_update_command()}[/bold] to update[/]"
+                    f"[bold yellow]Ã¢Å¡Â  {behind} {commits_word} behind[/]"
+                    f"[dim yellow] Ã¢â‚¬â€ run [bold]{recommended_update_command()}[/bold] to update[/]"
                 )
             else:
                 # UPDATE_AVAILABLE_NO_COUNT: nix-built hermes; we know an update
                 # exists but not by how much, and we don't know how the user
                 # installed it (nix run, profile, system flake, home-manager).
                 managed_cmd = get_managed_update_command()
-                line = "[bold yellow]⚠ update available[/]"
+                line = "[bold yellow]Ã¢Å¡Â  update available[/]"
                 if managed_cmd:
-                    line += f"[dim yellow] — run [bold]{managed_cmd}[/bold][/]"
+                    line += f"[dim yellow] Ã¢â‚¬â€ run [bold]{managed_cmd}[/bold][/]"
                 right_lines.append(line)
     except Exception:
         pass  # Never break the banner over an update check
 
-    # Pip-install warning — `pip install hermes-agent` is not the supported
+    # Pip-install warning Ã¢â‚¬â€ `pip install hermes-agent` is not the supported
     # install path (it exists on PyPI for internal/CI reasons, not end users).
     # Such installs miss the git checkout + installer-managed deps, so updates,
     # self-update, and issue triage don't behave correctly. Warn, don't block.
@@ -717,8 +755,8 @@ def build_welcome_banner(console: "Console", model: str, cwd: str,
         from hermes_cli.config import detect_install_method
         if detect_install_method() == "pip":
             right_lines.append(
-                "[bold yellow]⚠ pip install not officially supported[/]"
-                "[dim yellow] — exists for reasons other than user install; "
+                "[bold yellow]Ã¢Å¡Â  pip install not officially supported[/]"
+                "[dim yellow] Ã¢â‚¬â€ exists for reasons other than user install; "
                 "expect instability and an inability to support issues[/]"
             )
     except Exception:

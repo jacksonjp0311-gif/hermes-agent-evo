@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-LATEST_RHP_EVIDENCE = "docs/context-layer/ops/RHP-008-final-evidence.json"
+LATEST_RHP_EVIDENCE = "docs/context-layer/ops/RHP-011-final-evidence.json"
 HRCN_EVIDENCE = "docs/context-layer/ops/OPS-027-final-evidence.json"
 
 AUTHORITY_FALSE_KEYS = (
@@ -101,16 +101,16 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
     latest = _read_json(latest_path)
 
     rhp_evidence_green = (
-        latest.get("schema") == "RHP-008-final-evidence"
-        and latest.get("apply_gate_negative_control_passed") is True
-        and latest.get("proposal_loop_ok") is True
-        and latest.get("all_escalations_refused") is True
+        latest.get("schema") == "RHP-011-final-evidence"
+        and latest.get("operator_visible_startup_locks_passed") is True
+        and latest.get("operator_status_ascii_safe") is True
+        and latest.get("installed_launcher_visible_status_smoke_passed") is True
         and latest.get("py_compile_passed") is True
         and latest.get("focused_tests_passed") is True
         and latest.get("alignment_guard_self_check_passed") is True
         and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
+        and latest.get("external_ingestion") is False
     )
-
     rhp_runtime_bridge.assert_read_only_boundary(root)
     hrcn_runtime_bridge.assert_read_only_boundary(root)
     hrcn_status = hrcn_runtime_bridge.get_bridge_status(root)
@@ -160,7 +160,7 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
         startup_context_packet_created=True,
         checks=checks,
         non_claim_lock=(
-            "RHP-009 boot preflight is read-only startup orientation. "
+            "RHP-011.1 boot preflight is read-only startup orientation. "
             "It verifies local evidence and boundary state before interaction context assembly. "
             "It does not authorize provider/model/tool calls, writes, CMS runtime/write, "
             "memory write/promotion, API writes, dependency mutation, external ingestion, autonomy, or self-authorization."
@@ -172,7 +172,7 @@ def format_boot_context_for_prompt(repo_root: str | Path | None = None) -> str:
     packet = run_boot_preflight(repo_root)
     data = packet.as_dict()
     compact = {
-        "schema": "RHP-BOOT-PREFLIGHT-PACKET-v0.1",
+        "schema": "RHP-BOOT-PREFLIGHT-PACKET-v0.2",
         "ok": data["ok"],
         "boot_phase": data["boot_phase"],
         "latest_rhp_evidence": data["latest_rhp_evidence"],

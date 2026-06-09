@@ -98,8 +98,8 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-011-final-evidence.json` |
-| Current RHP status | `RHP-011 operator-visible startup lock sequence passed` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-011-1-final-evidence.json` |
+| Current RHP status | `RHP-011.1 gold interface Rehydration Protocol strip passed` |
 | Next RHP gate | `RHP-012 safe boot failure mode and degraded startup status` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
@@ -178,7 +178,7 @@ RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010
 | CMS/memory authority | `False` |
 | External ingestion authority | `False` |
 | Autonomous authority | `False` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-011-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-011-1-final-evidence.json` |
 
 #### Failure-Learning Lock
 
@@ -238,8 +238,8 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-010 = read-only runtime-native 
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-010-final-evidence.json` |
-| Current RHP status | `RHP-010 runtime-native boot interconnect passed` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-011-1-final-evidence.json` |
+| Current RHP status | `RHP-011.1 gold interface Rehydration Protocol strip passed` |
 | Next gate | `RHP-011 installed launcher smoke and operator-visible startup status` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-010.
@@ -251,7 +251,7 @@ Human lock: OPS v0.3 is sealed as evidence. RHP remains the active runtime-thres
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: RHP-010 runtime-native boot interconnect passed. HRCN OPS v0.3 is sealed; RHP is the active runtime-threshold track.
+Current post-seal state: RHP-011.1 gold interface Rehydration Protocol strip passed. HRCN OPS v0.3 is sealed; RHP is the active runtime-threshold track.
 
 OPS has served its role as the HRCN evidence ledger through v0.3. RHP carries the live boot-order, rehydration, generated-source, test-contract, alignment-guard, public-metrics, boot-preflight, startup-packet, and runtime-native entrypoint track.
 
@@ -285,7 +285,7 @@ Hermes executable
 -> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: RHP-010 adds runtime-native boot orientation only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: RHP-011.1 adds persistent gold-interface Rehydration Protocol visibility only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
 
 

@@ -1,0 +1,16 @@
+2601f02aedf9168c136464d447b3506b59108da50dbee7e10585b8423b77b5f2  README.md
+30640b97d577e31c7ebaf16b7bd919b16f912e3dff369680557a8a7a06c181ec  rhp/README.md
+465ca9ee9547dd7fce96b28e8f11dc4d70a46fd39c8c7b32530c0fca0f6fbcfb  hermes_cli/banner.py
+9d7600102cd2f7a2e78fd1dab81bdfc43e9e8598b9a85dabf4b06595fd5cb0c0  rhp/boot_preflight.py
+70f277a35b9ad645bc4bd4f77d2cfb2b60583b9ec49329b30e3bbc22f88407e3  rhp/startup_context_packet.py
+968a8459cf347bd62fe4aa5c1042126844c492767f3e7267756ad6a8160e2f6d  rhp/alignment_guard.py
+f5d85731cf0e6dd550270624160b0b80ed7b5c01e94739b069eeb463d07016ef  tests/test_rhp_011_1_rehydration_protocol_strip.py
+d73bbc86ff3132fc803fce9ab0950941f211e514503f5b414064ee99204725ff  docs/context-layer/ops/RHP-011-1-final-evidence.json
+04029ed0f05554b83d0eb107a951557ceabc6cb7f2705da61877ad5f9b76f254  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip.md
+0fcd88f03a0c6ba1581a22f40cc0033f6229d4db83c06b2f44e83c0bb4b86acf  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/py-compile-output.txt
+cef558fffb1fdf0ba4beca9a864809fb9bcbfa415475e7d404327c54a702b001  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/gold-strip-smoke-output.json
+12a943d1c460ee75ad01ecb66b8b3b3615f53e4eb0cd30b4ad16ed90c40651a7  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/context-truth-smoke-output.json
+3d5348180b80844e34c4d7a03b27e17ea612f508dd36bf344511e2b64eaecea2  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/focused-pytest-output.txt
+c055b2d042dfe2744f583daf27b58e1040c5b7f6cb6e0e20fdc64ebfa06f1bd1  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/focused-direct-smoke-output.json
+f181beb7ced37023f82cbe794f6815aa04e503a4ccab88eb13eb81192a577d7d  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/alignment-guard-preflight-output.txt
+f12f35534d16de33ad94d132be4dca28b93b0f992f94c80dc4febcc51fd959f0  docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/alignment-guard-final-output.txt

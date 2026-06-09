@@ -1,0 +1,25 @@
+=== COMPILE: hermes_cli/banner.py ===
+RETURN CODE: 0
+
+=== COMPILE: rhp/alignment_guard.py ===
+RETURN CODE: 0
+
+=== COMPILE: rhp/boot_preflight.py ===
+RETURN CODE: 0
+
+=== COMPILE: rhp/startup_context_packet.py ===
+RETURN CODE: 0
+
+=== COMPILE: rhp/operator_startup_status.py ===
+RETURN CODE: 0
+
+=== COMPILE: tests/test_rhp_011_1_rehydration_protocol_strip.py ===
+RETURN CODE: 0
+
+=== COMPILE: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-011-1-rehydration-protocol-strip\rhp_011_1_gold_strip_smoke.py ===
+RETURN CODE: 0
+
+=== COMPILE: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-011-1-rehydration-protocol-strip\rhp_011_1_context_truth_smoke.py ===
+RETURN CODE: 0
+
+RETURN CODE: 0
