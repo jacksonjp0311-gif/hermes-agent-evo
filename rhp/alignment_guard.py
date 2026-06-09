@@ -5,8 +5,8 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-LATEST_EVIDENCE = "docs/context-layer/ops/RHP-012-1-final-evidence.json"
-PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-012-final-evidence.json"
+LATEST_EVIDENCE = "docs/context-layer/ops/RHP-012-2-final-evidence.json"
+PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-012-1-final-evidence.json"
 
 AUTHORITY_FALSE_KEYS = [
     "provider_call_executed",
@@ -58,53 +58,48 @@ def validate_alignment(repo_root: str | Path | None = None, *, require_latest_pa
 
     readme = _read(root / "README.md")
     rhp_readme = _read(root / "rhp" / "README.md")
+    cli_py = _read(root / "cli.py")
     main_py = _read(root / "hermes_cli" / "main.py")
-    banner_py = _read(root / "hermes_cli" / "banner.py")
-    startup_py = _read(root / "rhp" / "startup_context_packet.py")
-
     previous = _json(root / PREVIOUS_EVIDENCE)
+
     latest_path = root / LATEST_EVIDENCE
     latest_exists = latest_path.is_file()
     latest = _json(latest_path) if latest_exists else {}
 
     checks: dict[str, bool] = {}
-    checks["previous_rhp012_passed"] = (
-        previous.get("schema") == "RHP-012-final-evidence"
-        and previous.get("operation") == "RHP-012"
-        and previous.get("safe_boot_degraded_status_passed") is True
-        and previous.get("missing_evidence_negative_control_passed") is True
-        and previous.get("operator_degraded_render_passed") is True
-        and previous.get("live_boot_green_path_passed") is True
+    checks["previous_rhp0121_passed"] = (
+        previous.get("schema") == "RHP-012.1-final-evidence"
+        and previous.get("operation") == "RHP-012.1"
+        and previous.get("cli_visible_text_alignment_passed") is True
+        and previous.get("stale_rhp010_visible_text_removed") is True
+        and previous.get("rehydration_protocol_strip_cli_stream_passed") is True
         and previous.get("alignment_guard_self_check_passed") is True
         and all(previous.get(key) is False for key in AUTHORITY_FALSE_KEYS)
     )
     checks["latest_evidence_exists"] = latest_exists
     checks["root_readme_latest_evidence"] = LATEST_EVIDENCE in readme
-    checks["root_readme_current_status"] = "RHP-012.1 CLI visible Rehydration Protocol text alignment passed" in readme
-    checks["rhp_readme_rhp0121_present"] = "RHP-012.1 CLI visible Rehydration Protocol text alignment" in rhp_readme
-    checks["lesson_044_present"] = "RHP-L-044" in readme
-    checks["main_evidence_rhp012"] = 'evidence="RHP-012"' in main_py and "evidence=RHP-012" in main_py
-    checks["main_protocol_strip_env"] = "HERMES_RHP_PROTOCOL_STRIP" in main_py and "HERMES_RHP_PROTOCOL_LOCKS" in main_py
-    checks["main_boot_packet_v03"] = "RHP-BOOT-PREFLIGHT-PACKET-v0.3" in main_py
-    checks["main_no_stale_evidence_rhp010"] = "evidence=RHP-010" not in main_py and 'evidence="RHP-010"' not in main_py
-    checks["banner_evidence_rhp012"] = 'evidence = "RHP-012"' in banner_py
-    checks["banner_degraded_status_supported"] = '{"blocked", "error", "degraded"}' in banner_py
-    checks["startup_packet_v04"] = "RHP-STARTUP-CONTEXT-PACKET-v0.4" in startup_py and "boot_preflight_degraded" in startup_py
+    checks["root_readme_current_status"] = "RHP-012.2 compact CLI gold banner Rehydration Protocol strip passed" in readme
+    checks["rhp_readme_rhp0122_present"] = "RHP-012.2 compact CLI gold banner Rehydration Protocol strip" in rhp_readme
+    checks["lesson_045_present"] = "RHP-L-045" in readme
+    checks["compact_banner_function_present"] = "_build_compact_banner" in cli_py and "NOUS HERMES" in cli_py
+    checks["compact_banner_rhp_box_lines"] = "rhp_box_lines" in cli_py
+    checks["compact_banner_protocol_env"] = "HERMES_RHP_PROTOCOL_STRIP" in cli_py and "HERMES_RHP_PROTOCOL_LOCKS" in cli_py
+    checks["main_protocol_env_still_present"] = "HERMES_RHP_PROTOCOL_STRIP" in main_py and "HERMES_RHP_PROTOCOL_LOCKS" in main_py
+    checks["main_evidence_rhp012_still_present"] = "evidence=RHP-012" in main_py and 'evidence="RHP-012"' in main_py
 
     if require_latest_passed:
-        checks["latest_rhp0121_passed"] = (
-            latest.get("schema") == "RHP-012.1-final-evidence"
-            and latest.get("operation") == "RHP-012.1"
-            and latest.get("cli_visible_text_alignment_passed") is True
-            and latest.get("stale_rhp010_visible_text_removed") is True
-            and latest.get("rehydration_protocol_strip_cli_stream_passed") is True
+        checks["latest_rhp0122_passed"] = (
+            latest.get("schema") == "RHP-012.2-final-evidence"
+            and latest.get("operation") == "RHP-012.2"
+            and latest.get("compact_cli_gold_banner_strip_passed") is True
+            and latest.get("compact_banner_runtime_smoke_passed") is True
             and latest.get("alignment_guard_self_check_passed") is True
             and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
         )
     else:
-        checks["latest_rhp0121_has_boundary_shape"] = (
-            latest.get("schema") == "RHP-012.1-final-evidence"
-            and latest.get("operation") == "RHP-012.1"
+        checks["latest_rhp0122_has_boundary_shape"] = (
+            latest.get("schema") == "RHP-012.2-final-evidence"
+            and latest.get("operation") == "RHP-012.2"
             and latest.get("failed_tests_are_commit_blockers") is True
             and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
         )

@@ -2909,11 +2909,27 @@ def _build_compact_banner() -> str:
     line1 = line1[:content_width].ljust(content_width)
     line2 = version_line[:content_width].ljust(content_width)
 
+    rhp_strip = (os.environ.get("HERMES_RHP_PROTOCOL_STRIP") or "").strip()
+    rhp_locks = (os.environ.get("HERMES_RHP_PROTOCOL_LOCKS") or "").strip()
+    rhp_box_lines = []
+    if rhp_strip:
+        rhp_box_lines.append(rhp_strip[:content_width].ljust(content_width))
+    if rhp_locks:
+        rhp_box_lines.append(rhp_locks[:content_width].ljust(content_width))
+
+    boxed_lines = [
+        f"[bold {border_color}]║[/] [{title_color}]{line1}[/] [bold {border_color}]║[/]",
+        f"[bold {border_color}]║[/] [dim {dim_color}]{line2}[/] [bold {border_color}]║[/]",
+    ]
+    for rhp_line in rhp_box_lines:
+        boxed_lines.append(
+            f"[bold {border_color}]║[/] [#7DF9FF]{rhp_line}[/] [bold {border_color}]║[/]"
+        )
+
     return (
         f"\n[bold {border_color}]╔{bar}╗[/]\n"
-        f"[bold {border_color}]║[/] [{title_color}]{line1}[/] [bold {border_color}]║[/]\n"
-        f"[bold {border_color}]║[/] [dim {dim_color}]{line2}[/] [bold {border_color}]║[/]\n"
-        f"[bold {border_color}]╚{bar}╝[/]\n"
+        + "\n".join(boxed_lines)
+        + f"\n[bold {border_color}]╚{bar}╝[/]\n"
     )
 
 

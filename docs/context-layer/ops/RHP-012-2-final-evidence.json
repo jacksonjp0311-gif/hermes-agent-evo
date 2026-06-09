@@ -1,0 +1,51 @@
+{
+    "schema":  "RHP-012.2-final-evidence",
+    "operation":  "RHP-012.2",
+    "timestamp_utc":  "2026-06-09T03:12:25.8503978Z",
+    "base_commit":  "a03a3b411b27b7edb66fb0cc5f18e3f272244c4e",
+    "human_authorization_phrase_matched":  true,
+    "previous_rhp0121_passed":  true,
+    "compact_cli_gold_banner_strip_passed":  true,
+    "compact_banner_runtime_smoke_passed":  true,
+    "patch":  {
+                  "ok":  true,
+                  "cli_changed":  true,
+                  "readme_changed":  true,
+                  "rhp_readme_changed":  true,
+                  "rhp_box_lines_present":  true,
+                  "protocol_strip_env_present":  true,
+                  "protocol_locks_env_present":  true,
+                  "compact_banner_target_present":  true,
+                  "latest_evidence_readme_present":  true,
+                  "lesson_045_present":  true
+              },
+    "smoke":  {
+                  "ok":  true,
+                  "checks":  {
+                                 "contains_rehydration_protocol":  true,
+                                 "contains_evidence_rhp012":  true,
+                                 "contains_locks":  true,
+                                 "contains_gold_banner_title":  true,
+                                 "contains_box_border":  true,
+                                 "source_has_rhp_box_lines":  true
+                             },
+                  "rendered_banner_excerpt":  "\n[bold #CD7F32]╔══════════════════════════════════════════════════════════════════════════════╗[/]\n[bold #CD7F32]║[/] [#FFD700]⚕ NOUS HERMES - AI Agent Framework                                        [/] [bold #CD7F32]║[/]\n[bold #CD7F32]║[/] [dim #B8860B]Hermes Agent vTEST (RHP-012.2)                                            [/] [bold #CD7F32]║[/]\n[bold #CD7F32]║[/] [#7DF9FF]Rehydration Protocol - verified - phase=pre-interaction - evidence=RHP-012[/] [bold #CD7F32]║[/]\n[bold #CD7F32]║[/] [#7DF9FF]locks: repo ok - evidence ok - HRCN ok - alignment ok - startup ok        [/] [bold #CD7F32]║[/]\n[bold #CD7F32]╚══════════════════════════════════════════════════════════════════════════════╝[/]\n"
+              },
+    "py_compile_passed":  true,
+    "alignment_guard_self_check_passed":  true,
+    "failed_tests_are_commit_blockers":  true,
+    "next_recommended_operation":  "RHP-013 operator dashboard and status packet normalization",
+    "external_ingestion":  false,
+    "provider_call_executed":  false,
+    "model_call_executed":  false,
+    "tool_use_executed":  false,
+    "cms_runtime_execution":  false,
+    "cms_write":  false,
+    "memory_write":  false,
+    "memory_promotion":  false,
+    "api_write":  false,
+    "dependency_mutation_committed":  false,
+    "self_authorization":  false,
+    "autonomous_authority":  false,
+    "non_claim_lock":  "RHP-012.2 binds the compact CLI gold banner to existing RHP display environment variables. It grants no provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, AGI/consciousness claim, or self-authorization."
+}

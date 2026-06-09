@@ -366,3 +366,10 @@ Runtime boundary: degraded startup status remains read-only. It does not grant p
 RHP-012.1 aligns the live operator-visible CLI text with the RHP-012 evidence state. It removes stale `evidence=RHP-010` startup text and surfaces the Rehydration Protocol strip directly in the CLI stream.
 
 Boundary: display/text alignment only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
+
+
+## RHP-012.2 compact CLI gold banner Rehydration Protocol strip
+
+RHP-012.2 binds the compact `$NOUS HERMES - AI Agent Framework` banner renderer in `cli.py` to the RHP Rehydration Protocol environment strip.
+
+Boundary: compact banner display only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.

@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "cli_changed": true,
+  "readme_changed": true,
+  "rhp_readme_changed": true,
+  "rhp_box_lines_present": true,
+  "protocol_strip_env_present": true,
+  "protocol_locks_env_present": true,
+  "compact_banner_target_present": true,
+  "latest_evidence_readme_present": true,
+  "lesson_045_present": true
+}

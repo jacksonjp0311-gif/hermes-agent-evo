@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "checks": {
+    "contains_rehydration_protocol": true,
+    "contains_evidence_rhp012": true,
+    "contains_locks": true,
+    "contains_gold_banner_title": true,
+    "contains_box_border": true,
+    "source_has_rhp_box_lines": true
+  },
+  "rendered_banner_excerpt": "\n[bold #CD7F32]\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557[/]\n[bold #CD7F32]\u2551[/] [#FFD700]\u2695 NOUS HERMES - AI Agent Framework                                        [/] [bold #CD7F32]\u2551[/]\n[bold #CD7F32]\u2551[/] [dim #B8860B]Hermes Agent vTEST (RHP-012.2)                                            [/] [bold #CD7F32]\u2551[/]\n[bold #CD7F32]\u2551[/] [#7DF9FF]Rehydration Protocol - verified - phase=pre-interaction - evidence=RHP-012[/] [bold #CD7F32]\u2551[/]\n[bold #CD7F32]\u2551[/] [#7DF9FF]locks: repo ok - evidence ok - HRCN ok - alignment ok - startup ok        [/] [bold #CD7F32]\u2551[/]\n[bold #CD7F32]\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d[/]\n"
+}

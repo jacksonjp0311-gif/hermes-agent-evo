@@ -1,0 +1,3 @@
+PASS cli.py
+PASS rhp/alignment_guard.py
+PASS C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-012-2-compact-cli-gold-banner-strip\rhp_012_2_patch_compact_banner.py
