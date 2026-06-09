@@ -5,8 +5,8 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-LATEST_EVIDENCE = "docs/context-layer/ops/RHP-011-1-final-evidence.json"
-PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-011-final-evidence.json"
+LATEST_EVIDENCE = "docs/context-layer/ops/RHP-011-2-final-evidence.json"
+PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-011-1-final-evidence.json"
 
 AUTHORITY_FALSE_KEYS = [
     "provider_call_executed",
@@ -81,19 +81,31 @@ def validate_alignment(repo_root: str | Path | None = None, *, require_latest_pa
     latest_exists = latest_path.is_file()
     latest = _json(latest_path) if latest_exists else {}
 
+    stale_forbidden = [
+        "RHP is the active runtime-threshold track and is current through RHP-010.",
+        "HRCN v2.0 + OPS-027 + RHP-010 = read-only runtime-native boot orientation through direct Hermes executable startup.",
+        "| RHP-011 | Installed launcher smoke and operator-visible startup status. | next |",
+        "| next | RHP-011 installed launcher smoke and operator-visible startup status. | next |",
+    ]
+
     checks: dict[str, bool] = {}
-    checks["previous_rhp011_passed"] = (
-        previous.get("schema") == "RHP-011-final-evidence"
-        and previous.get("operator_visible_startup_locks_passed") is True
-        and previous.get("operator_status_ascii_safe") is True
-        and previous.get("installed_launcher_visible_status_smoke_passed") is True
+    checks["previous_rhp011_1_passed"] = (
+        previous.get("schema") == "RHP-011.1-final-evidence"
+        and previous.get("operation") == "RHP-011.1"
+        and previous.get("rehydration_protocol_strip_passed") is True
+        and previous.get("gold_interface_strip_smoke_passed") is True
+        and previous.get("context_truth_alignment_passed") is True
         and previous.get("alignment_guard_self_check_passed") is True
+        and all(previous.get(key) is False for key in AUTHORITY_FALSE_KEYS)
     )
     checks["latest_evidence_exists"] = latest_exists
     checks["root_readme_latest_evidence"] = LATEST_EVIDENCE in readme
-    checks["root_readme_rhp011_1_passed"] = "RHP-011.1" in readme and "Rehydration Protocol" in readme
+    checks["root_readme_current_status"] = "RHP-011.2 README geometry and evidence hygiene closure passed" in readme
     checks["root_readme_next_rhp012"] = "RHP-012" in readme and "Safe boot failure mode" in readme
-    checks["rhp_readme_rehydration_protocol_strip"] = "Gold interface Rehydration Protocol strip" in rhp_readme
+    checks["root_readme_no_stale_rhp010_current"] = all(item not in readme for item in stale_forbidden)
+    checks["root_readme_rhp011_1_and_011_2_rows"] = "RHP-011.1 | Gold interface Rehydration Protocol strip" in readme and "RHP-011.2 | README geometry and evidence hygiene closure" in readme
+    checks["failure_lessons_036_to_041_present"] = all(f"RHP-L-0{n}" in readme for n in range(36, 42))
+    checks["rhp_readme_rhp011_2_present"] = "RHP-011.2 README geometry and evidence hygiene closure" in rhp_readme
     checks["banner_rehydration_protocol_strip"] = (
         "_rhp_rehydration_protocol_lines" in banner_py
         and "Rehydration Protocol" in banner_py
@@ -101,28 +113,25 @@ def validate_alignment(repo_root: str | Path | None = None, *, require_latest_pa
         and "#B388FF" in banner_py
     )
     checks["banner_strip_inserted"] = "left_lines.extend(_rhp_rehydration_protocol_lines())" in banner_py
-    checks["boot_preflight_points_to_rhp011"] = "docs/context-layer/ops/RHP-011-final-evidence.json" in boot_py
+    checks["boot_preflight_runtime_anchor_still_rhp011"] = "docs/context-layer/ops/RHP-011-final-evidence.json" in boot_py
     checks["startup_packet_mentions_rhp011_1"] = "RHP-011.1" in startup_py and "RHP-STARTUP-CONTEXT-PACKET-v0.3" in startup_py
-    checks["operator_status_exists"] = (root / "rhp" / "operator_startup_status.py").is_file()
     checks["operator_status_hooked"] = "_rhp_render_operator_status" in main_py and "RHP rehydration complete" in main_py
     checks["ascii_safe_hook"] = _managed_hook(main_py).isascii() and bool(_managed_hook(main_py))
 
     if require_latest_passed:
-        checks["latest_rhp011_1_passed"] = (
-            latest.get("schema") == "RHP-011.1-final-evidence"
-            and latest.get("operation") == "RHP-011.1"
-            and latest.get("rehydration_protocol_strip_passed") is True
-            and latest.get("gold_interface_strip_smoke_passed") is True
-            and latest.get("context_truth_alignment_passed") is True
-            and latest.get("py_compile_passed") is True
-            and latest.get("focused_tests_passed") is True
+        checks["latest_rhp011_2_passed"] = (
+            latest.get("schema") == "RHP-011.2-final-evidence"
+            and latest.get("operation") == "RHP-011.2"
+            and latest.get("readme_geometry_closure_passed") is True
+            and latest.get("evidence_hygiene_closure_passed") is True
+            and latest.get("progress_telemetry_contract_recorded") is True
             and latest.get("alignment_guard_self_check_passed") is True
             and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
         )
     else:
-        checks["latest_rhp011_1_has_boundary_shape"] = (
-            latest.get("schema") == "RHP-011.1-final-evidence"
-            and latest.get("operation") == "RHP-011.1"
+        checks["latest_rhp011_2_has_boundary_shape"] = (
+            latest.get("schema") == "RHP-011.2-final-evidence"
+            and latest.get("operation") == "RHP-011.2"
             and latest.get("failed_tests_are_commit_blockers") is True
             and all(latest.get(key) is False for key in AUTHORITY_FALSE_KEYS)
         )

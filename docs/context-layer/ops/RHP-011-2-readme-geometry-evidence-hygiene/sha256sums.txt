@@ -1,0 +1,10 @@
+b1e8edd302eda0464ec34c0e48f889a0ed223f2e50234d616d8d263ab2d2e64f  README.md
+c8342a94bbdeecce65626cde8a77712e5e5ebb8df3a43a34f8f6438629c96deb  rhp/README.md
+54372c3b8787d9bf0b081d813eb940c3b3c7861d8a631d7559ed9d5c5cdd63a1  rhp/alignment_guard.py
+4252521baf3867e7d212f18fd80dbedec332cba3cad0ba26c1d3ba18a842df27  docs/context-layer/ops/RHP-011-2-final-evidence.json
+7f20b0d3495d8e1b9046829a383bdc2dce26f5e921deccd5dfa3cb1b512af1c7  docs/context-layer/ops/RHP-011-2-readme-geometry-evidence-hygiene.md
+3f90f9bb66c787d617cb41ddced60e77ea4bf3552cfebad02ca73f053dbf5a5b  docs/context-layer/ops/RHP-011-2-readme-geometry-evidence-hygiene/readme-patch-output.json
+615636ed979f7ff789434223c928abe52cbcc6eca3dc96a2266088d8a28acfe9  docs/context-layer/ops/RHP-011-2-readme-geometry-evidence-hygiene/scratch-cleanup-output.json
+06b020bc5bec4bc45c5462bedc53de77166c39fa87fcee5a6983c6922b985745  docs/context-layer/ops/RHP-011-2-readme-geometry-evidence-hygiene/py-compile-output.txt
+b522b166d25ff4dd83022916f9bfdf1c7001db7b020bbbaefdf4999d691b93ed  docs/context-layer/ops/RHP-011-2-readme-geometry-evidence-hygiene/alignment-guard-preflight-output.txt
+46c4527e82a020ced535d162dfbed30326ae8e485201cfa7147f123cfcb899de  docs/context-layer/ops/RHP-011-2-readme-geometry-evidence-hygiene/alignment-guard-final-output.txt

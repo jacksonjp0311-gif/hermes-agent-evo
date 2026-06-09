@@ -1,0 +1,21 @@
+{
+    "ok":  true,
+    "removed_untracked_scratch":  [
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-01.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-02.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-03.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-04.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-05.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-06.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-07.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/compile-08.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/git-add-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/git-add-trigger-audit-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/git-commit-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/git-pull-rebase-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/git-push-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/git-reset-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/runner-sanity-output.txt",
+                                      "docs/context-layer/ops/RHP-011-1-rehydration-protocol-strip/rhp_011_1_boot_packet_diag.py"
+                                  ]
+}

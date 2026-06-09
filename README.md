@@ -98,8 +98,8 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-011-1-final-evidence.json` |
-| Current RHP status | `RHP-011.1 gold interface Rehydration Protocol strip passed` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-011-2-final-evidence.json` |
+| Current RHP status | `RHP-011.2 README geometry and evidence hygiene closure passed` |
 | Next RHP gate | `RHP-012 safe boot failure mode and degraded startup status` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
@@ -128,6 +128,8 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-009 | Runtime boot preflight integration. | passed |
 | RHP-010 | Runtime-native boot interconnect. | passed |
 | RHP-011 | Operator-visible startup lock sequence. | passed |
+| RHP-011.1 | Gold interface Rehydration Protocol strip. | passed |
+| RHP-011.2 | README geometry and evidence hygiene closure. | passed |
 | RHP-012 | Safe boot failure mode and degraded startup status. | next |
 
 #### Runtime Boot Order
@@ -189,10 +191,30 @@ RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010
 | RHP-L-031 | UI/dashboard surfaces should consume the same startup status packet as CLI startup to avoid divergent status truth. |
 | RHP-L-032 | ASCII render guards must scope to managed RHP output blocks unless the operation explicitly cleans the full upstream file. |
 | RHP-L-033 | When encoded banner text survives exact-string replacement, replace the whole managed hook region from markers instead of patching a single line. |
+| RHP-L-034 | Managed-region replacement must use marker-safe or regex-safe block replacement; PowerShell Split is not safe for source surgery. |
+| RHP-L-035 | Never commit raw broken-file debug captures unless they pass the same credential/trigger scan; prefer sanitized failure summaries. |
+| RHP-L-036 | Every All-One, smoke, repair, and seal script must include progress telemetry with percent, branch, command, output, timeout, and copy-back failure block. |
+| RHP-L-037 | Large generated scripts must run as files with `powershell.exe -NoProfile -ExecutionPolicy Bypass -File`, not as pasted interactive bodies. |
+| RHP-L-038 | PowerShell script runners must avoid `$Args` / `$args` parameter names because they collide with automatic variables and can erase argv surfaces. |
+| RHP-L-039 | Pytest absence is not a failing gate unless pytest is declared as a repo dependency; use focused direct smoke as the governed fallback. |
+| RHP-L-040 | External command runners must print `argv_count`, command, output path, and timeout before execution. |
+| RHP-L-041 | Scratch proof files must be either intentionally tracked or cleaned before the next RHP gate. |
 
 AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-011.
 
 Human lock: RHP may orient Hermes at boot only through read-only preflight and visible context packets. Apply/write remains separate and human-gated.
+
+#### RHP-011.2 Geometry Closure
+
+RHP-011.2 closes README geometry and evidence hygiene after the RHP-011.1 gold-interface Rehydration Protocol phase transition.
+
+```text
+RHP-011.1 made the runtime truth visible.
+RHP-011.2 makes the repository truth agree everywhere.
+```
+
+Boundary: documentation/evidence alignment only. No provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
+
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
 
 
@@ -206,9 +228,9 @@ Human lock: RHP may orient Hermes at boot only through read-only preflight and v
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_START -->
 ### HRCN OPS Operational Bridge Status
 
-Human summary: HRCN OPS v0.3 remains sealed as the evidence boundary for read-only runtime/proposal orientation. OPS is the historical bridge ledger. RHP is the active runtime-threshold track and is current through RHP-010.
+Human summary: HRCN OPS v0.3 remains sealed as the evidence boundary for read-only runtime/proposal orientation. OPS is the historical bridge ledger. RHP is the active runtime-threshold track and is current through RHP-011.2.
 
-Current bridge status: HRCN v2.0 + OPS-027 + RHP-010 = read-only runtime-native boot orientation through direct Hermes executable startup.
+Current bridge status: HRCN v2.0 + OPS-027 + RHP-011.2 = read-only runtime-native boot orientation with persistent Rehydration Protocol visibility through direct Hermes executable startup.
 
 #### OPS / RHP Bridge Chart
 
@@ -223,7 +245,10 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-010 = read-only runtime-native 
 | RHP-008 | Apply-gate negative-control proof. | passed |
 | RHP-009 | Runtime boot preflight integration. | passed |
 | RHP-010 | Runtime-native boot interconnect. | passed |
-| next | RHP-011 installed launcher smoke and operator-visible startup status. | next |
+| RHP-011 | Installed launcher smoke and operator-visible startup status. | passed |
+| RHP-011.1 | Gold interface Rehydration Protocol strip. | passed |
+| RHP-011.2 | README geometry and evidence hygiene closure. | passed |
+| next | RHP-012 safe boot failure mode and degraded startup status. | next |
 
 #### Current Runtime Boundary
 
@@ -238,11 +263,11 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-010 = read-only runtime-native 
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-011-1-final-evidence.json` |
-| Current RHP status | `RHP-011.1 gold interface Rehydration Protocol strip passed` |
-| Next gate | `RHP-011 installed launcher smoke and operator-visible startup status` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-011-2-final-evidence.json` |
+| Current RHP status | `RHP-011.2 README geometry and evidence hygiene closure passed` |
+| Next gate | `RHP-012 safe boot failure mode and degraded startup status` |
 
-AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-010.
+AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-011.2.
 
 Human lock: OPS v0.3 is sealed as evidence. RHP remains the active runtime-threshold track. Apply/write remains a separate human-gated transition.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
@@ -269,7 +294,10 @@ OPS has served its role as the HRCN evidence ledger through v0.3. RHP carries th
 | RHP-008 | Apply-gate negative-control proof. | passed |
 | RHP-009 | Runtime boot preflight integration. | passed |
 | RHP-010 | Runtime-native boot interconnect. | passed |
-| RHP-011 | Installed launcher smoke and operator-visible startup status. | next |
+| RHP-011 | Installed launcher smoke and operator-visible startup status. | passed |
+| RHP-011.1 | Gold interface Rehydration Protocol strip. | passed |
+| RHP-011.2 | README geometry and evidence hygiene closure. | passed |
+| RHP-012 | Safe boot failure mode and degraded startup status. | next |
 
 Operational bridge target:
 

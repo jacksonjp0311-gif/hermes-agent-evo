@@ -344,3 +344,11 @@ locks: repo ok - evidence ok - HRCN ok - alignment ok - startup ok
 ```
 
 Boundary: display/context only. No provider/model/tool calls, CMS writes, memory promotion, API writes, external ingestion, autonomy, or self-authorization.
+
+## RHP-011.2 README geometry and evidence hygiene closure
+
+RHP-011.2 aligns the root README, RHP README, alignment guard, public metrics, RHP activation chart, post-seal chart, failure-learning locks, and evidence hygiene after RHP-011.1.
+
+Current runtime-visible strip remains RHP-011.1. Current repository evidence closure is RHP-011.2.
+
+Non-claim lock: RHP-011.2 is documentation/evidence hygiene only. It does not grant provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
