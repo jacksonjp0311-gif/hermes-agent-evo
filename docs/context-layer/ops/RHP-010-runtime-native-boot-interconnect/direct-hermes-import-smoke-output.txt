@@ -1,0 +1,10 @@
+RETURN CODE: 0
+{
+  "ok": true,
+  "runner": "direct_hermes_cli_main_import_smoke",
+  "native_boot_status": "ok",
+  "boot_preflight_gate": "preflight",
+  "rhp_context_gate": "proposal",
+  "hrcn_context_gate": "proposal",
+  "packet": "RHP-BOOT-PREFLIGHT-PACKET-v0.1"
+}

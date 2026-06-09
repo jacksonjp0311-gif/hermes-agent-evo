@@ -1,0 +1,2 @@
+RETURN CODE: 1
+C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\.venv\Scripts\python.exe: No module named pytest

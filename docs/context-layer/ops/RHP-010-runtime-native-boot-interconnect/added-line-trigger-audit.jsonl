@@ -1,0 +1,3 @@
+{"file":"hermes_cli/main.py","reason":"git token prefix gho_","safe_self_pattern":false,"line":"            \"    ├óΓÇáΓÇÖ OAuth token (gho_*)          via `copilot login` or device code flow\""}
+{"file":"hermes_cli/main.py","reason":"git token prefix github_pat_","safe_self_pattern":false,"line":"        print(\"    ├óΓÇáΓÇÖ Fine-grained PAT (github_pat_*)  with Copilot Requests permission\")"}
+{"file":"hermes_cli/main.py","reason":"git token prefix ghp_","safe_self_pattern":false,"line":"        print(\"    ├ó┼ôΓÇö Classic PAT (ghp_*)          NOT supported by Copilot API\")"}

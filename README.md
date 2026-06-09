@@ -38,11 +38,11 @@ Use any model you want - [Nous Portal](https://portal.nousresearch.com), [OpenRo
 </table>
 
 <!-- HRCN_CONTEXT_LAYER_START -->
-## Codex / RCC-CMS-HRCN Context Layer
+## RCC-CMS-HRCN Runtime Governance Layer
 
-This fork includes an internal, docs-only Codex/RCC/CMS/HRCN governance layer for James Paul Jackson's Hermes work.
+This fork includes an internal RCC/CMS/HRCN governance layer for James Paul Jackson's Hermes work.
 
-The upstream Hermes product README above this section is preserved. This block is additive: it explains the fork's local governance context without changing Hermes runtime behavior.
+The upstream Hermes product README above this section is preserved. This block is additive: it explains the fork's local governance context and the read-only RHP/HRCN runtime-native boot-orientation path without granting runtime authority.
 
 ```text
 Hermes acts.
@@ -98,10 +98,11 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-009-final-evidence.json` |
-| Current RHP status | `RHP-009 runtime boot preflight integration passed` |
-| Next RHP gate | `RHP-010 startup context packet launch wrapper proof` |
-| Runtime boot preflight | `Integrated into agent init when RHP/HRCN gates are active` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-010-final-evidence.json` |
+| Current RHP status | `RHP-010 runtime-native boot interconnect passed` |
+| Next RHP gate | `RHP-011 installed launcher smoke and operator-visible startup status` |
+| Runtime-native boot hook | `hermes_cli/main.py` |
+| Startup context packet | `rhp/startup_context_packet.py` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -115,38 +116,41 @@ Public metrics lock: current public metrics must match latest OPS/RHP evidence b
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
 ### Rehydration Protocol Runtime Activation Track
 
-Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP is now moving from optional proposal context toward runtime boot integration. The boot preflight is read-only: it verifies latest local evidence, bridge boundaries, and alignment before interaction context assembly. It does not grant write authority, tool authority, model/provider authority, CMS authority, memory authority, external ingestion authority, autonomy, or self-authorization.
+Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP has crossed from optional proposal context into read-only runtime-native boot orientation. RHP-010 wires direct `.venv\Scripts\hermes.exe` startup through a read-only boot hook in `hermes_cli/main.py`. This still does not grant write authority, tool authority, model/provider authority, CMS authority, memory authority, external ingestion authority, autonomy, or self-authorization.
 
 #### RHP Activation Chart
 
 | Stage | Meaning | Status |
 |---|---|---:|
-| RHP-007 | First governed RHP Ã¢â€ â€™ HRCN Ã¢â€ â€™ Hermes proposal-loop proof. | passed |
+| RHP-007 | First governed RHP -> HRCN -> Hermes proposal-loop proof. | passed |
 | RHP-008 | Proposal-loop negative-control and apply-gate boundary proof. | passed |
 | RHP-009 | Runtime boot preflight integration. | passed |
-| RHP-010 | Startup context packet launch wrapper proof. | next |
+| RHP-010 | Runtime-native boot interconnect. | passed |
+| RHP-011 | Installed launcher smoke and operator-visible startup status. | next |
 
 #### Runtime Boot Order
 
 ```text
-Hermes starts
-Ã¢â€ â€™ agent init begins
-Ã¢â€ â€™ RHP boot preflight runs if HERMES_RHP_BOOT_PREFLIGHT is enabled or RHP/HRCN context gates are active
-Ã¢â€ â€™ latest RHP evidence is checked
-Ã¢â€ â€™ HRCN read-only boundary is checked
-Ã¢â€ â€™ alignment guard is checked
-Ã¢â€ â€™ startup preflight packet is appended to context
-Ã¢â€ â€™ RHP context may append if HERMES_RHP_CONTEXT=proposal
-Ã¢â€ â€™ HRCN context may append if HERMES_HRCN_CONTEXT=proposal
-Ã¢â€ â€™ Hermes enters interaction mode already oriented
+Hermes executable starts
+-> hermes_cli/main.py loads
+-> runtime-native RHP hook sets read-only orientation gates unless disabled
+-> RHP boot preflight checks latest local evidence
+-> HRCN read-only boundary is checked
+-> alignment guard is checked
+-> RHP/HRCN context gates are available before agent initialization
+-> agent_init appends read-only boot/context packets
+-> Hermes enters interaction mode already oriented
 ```
 
 #### Current Boundary
 
 | Surface | Current state |
 |---|---|
+| Runtime-native boot hook | `hermes_cli/main.py` |
 | RHP boot preflight | `rhp/boot_preflight.py` |
+| Startup context packet | `rhp/startup_context_packet.py` |
 | Agent init integration | `agent/agent_init.py` |
+| RHP native boot gate | `HERMES_RHP_NATIVE_BOOT` |
 | RHP boot preflight gate | `HERMES_RHP_BOOT_PREFLIGHT` |
 | RHP context gate | `HERMES_RHP_CONTEXT` |
 | HRCN context gate | `HERMES_HRCN_CONTEXT` |
@@ -154,7 +158,7 @@ Hermes starts
 | CMS/memory authority | `False` |
 | External ingestion authority | `False` |
 | Autonomous authority | `False` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-009-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-010-final-evidence.json` |
 
 #### Failure-Learning Lock
 
@@ -162,10 +166,20 @@ Hermes starts
 |---|---|
 | RHP-L-016 | Runtime boot integration must happen before interaction context assembly and remain read-only. |
 | RHP-L-017 | If an init-time module imports a top-level bridge, packaging must include that bridge or the installed console script can fail outside the source checkout. |
+| RHP-L-018 | Runtime bridge status readers must support both dict payloads and dataclass/object payloads before assuming `.get()`. |
+| RHP-L-019 | Runtime boot preflight must use preflight alignment mode during construction; final evidence alignment is checked after green evidence is written. |
+| RHP-L-020 | If the active installed runtime lacks pytest, focused verification may use a direct Python smoke runner that checks the same contracts without installing dependencies. |
+| RHP-L-021 | Direct proof scripts stored below docs must anchor the repository root into `sys.path` before importing repository packages. |
+| RHP-L-022 | Final evidence closure should rebuild evidence as an ordered object instead of mutating a fixed `ConvertFrom-Json` PSCustomObject. |
+| RHP-L-023 | README managed blocks must advance in the same cycle as runtime boot evidence; stale post-seal roadmap blocks are commit blockers. |
+| RHP-L-024 | Public boot-order charts must use ASCII-safe arrows or pass render-hygiene checks before commit. |
+| RHP-L-025 | A runtime-native boot hook may orient direct executable startup; it does not authorize autonomous execution or widen authority. |
+| RHP-L-026 | Runtime package scripts executed by file path must anchor the repository root into `sys.path` before absolute package imports. |
+| RHP-L-027 | Added-line trigger scans must distinguish literal detector self-patterns from concrete leaked credentials and emit exact-line audit evidence. |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-009.
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-010.
 
-Human lock: RHP may orient Hermes at boot only through read-only preflight. Apply/write remains separate and human-gated.
+Human lock: RHP may orient Hermes at boot only through read-only preflight and context packets. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
 
 
@@ -179,43 +193,43 @@ Human lock: RHP may orient Hermes at boot only through read-only preflight. Appl
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_START -->
 ### HRCN OPS Operational Bridge Status
 
-Human summary: this fork has sealed HRCN OPS v0.3 as the evidence boundary for read-only runtime/proposal orientation. OPS remains the evidence ledger. RHP remains the active runtime-threshold track. This is not autonomous operation, not CMS write authority, and not production authority.
+Human summary: HRCN OPS v0.3 remains sealed as the evidence boundary for read-only runtime/proposal orientation. OPS is the historical bridge ledger. RHP is the active runtime-threshold track and is current through RHP-010.
 
-Current bridge status: HRCN v2.0 + OPS-027 = read-only runtime/proposal bridge sealed as v0.3. RHP-004 is the next alignment pass for the HRCN bridge evidence anchor.
+Current bridge status: HRCN v2.0 + OPS-027 + RHP-010 = read-only runtime-native boot orientation through direct Hermes executable startup.
 
-#### OPS Bridge Chart
+#### OPS / RHP Bridge Chart
 
 | Stage | Meaning | Status |
 |---|---|---:|
-| HRCN v2.0 | Bounded operational nexus. | sealed |
-| OPS-010 | Operational release seal. | passed |
-| OPS-020 | Bounded loop v0.2 seal. | passed |
-| OPS-022 | Read-only HRCN runtime bridge module. | passed |
-| OPS-023 | Read-only bridge visible through Hermes status/startup. | passed |
-| OPS-024 | Bridge authority-forgery negative controls. | passed |
-| OPS-025 | Opt-in read-only proposal-context injection. | passed |
-| OPS-026 | Proposal-context negative control and v0.3 seal prep. | passed |
 | OPS-027 | HRCN v0.3 seal and tag. | passed |
 | RHP-004 | HRCN bridge evidence anchor aligned to OPS-027 / v0.3. | passed |
-| next | RHP-005 generated-source compile-check guard. | next |
+| RHP-005 | Generated-source and test-contract guard. | passed |
+| RHP-006 | README/state/bridge/evidence alignment guard. | repaired |
+| RHP-006.1 | Public metrics alignment closure. | passed |
+| RHP-007 | Governed proposal-loop proof. | passed |
+| RHP-008 | Apply-gate negative-control proof. | passed |
+| RHP-009 | Runtime boot preflight integration. | passed |
+| RHP-010 | Runtime-native boot interconnect. | passed |
+| next | RHP-011 installed launcher smoke and operator-visible startup status. | next |
 
 #### Current Runtime Boundary
 
 | Surface | Current state |
 |---|---|
-| Runtime code changed by post-seal HRCN work | `True` |
-| Default runtime behavior changed | `False` |
+| Runtime code changed by RHP boot-orientation work | `True` |
+| Default runtime authority changed | `False` |
 | Runtime authority granted | `False` |
-| Context injection default enabled | `False` |
+| Context injection default enabled by direct startup | `Read-only proposal orientation only` |
+| Native boot gate | `HERMES_RHP_NATIVE_BOOT` |
+| Boot preflight gate | `HERMES_RHP_BOOT_PREFLIGHT` |
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
-| Status/startup gate | `HERMES_HRCN_BRIDGE` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
-| Candidate tag | `hrcn-ops-v0.3.0` |
-| Next gate | `RHP-005 generated-source compile-check guard` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-010-final-evidence.json` |
+| Current RHP status | `RHP-010 runtime-native boot interconnect passed` |
+| Next gate | `RHP-011 installed launcher smoke and operator-visible startup status` |
 
-AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027. OPS-027 is a seal/tag checkpoint.
+AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-010.
 
 Human lock: OPS v0.3 is sealed as evidence. RHP remains the active runtime-threshold track. Apply/write remains a separate human-gated transition.
 <!-- HRCN_OPS_OPERATIONAL_BRIDGE_STATUS_END -->
@@ -224,18 +238,12 @@ Human lock: OPS v0.3 is sealed as evidence. RHP remains the active runtime-thres
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_START -->
 ### Post-Seal Cybernetic-Memory Online Track
 
-Current post-seal state: RHP-006.1 public metrics alignment closure passed. HRCN OPS v0.3 is sealed; RHP is the active runtime-threshold track.
+Current post-seal state: RHP-010 runtime-native boot interconnect passed. HRCN OPS v0.3 is sealed; RHP is the active runtime-threshold track.
 
-OPS has now served its role as the HRCN evidence ledger through v0.3. RHP carries the live boot-order, rehydration, generated-source, test-contract, alignment-guard, and public-metrics alignment track.
+OPS has served its role as the HRCN evidence ledger through v0.3. RHP carries the live boot-order, rehydration, generated-source, test-contract, alignment-guard, public-metrics, boot-preflight, startup-packet, and runtime-native entrypoint track.
 
 | Stage | Meaning | Status |
 |---|---|---:|
-| OPS-020 | Bounded loop v0.2 seal. | passed |
-| OPS-022 | Read-only HRCN runtime bridge module. | passed |
-| OPS-023 | Wire read-only bridge status into Hermes startup/status path. | passed |
-| OPS-024 | Negative-control bridge authority refusal. | passed |
-| OPS-025 | Read-only context injection into Hermes proposal path. | passed |
-| OPS-026 | Proposal-context negative-control and v0.3 seal prep. | passed |
 | OPS-027 | v0.3 seal and tag. | passed |
 | RHP-001 | Hermes-local rehydration substrate. | passed |
 | RHP-002 | Mini README and failure-learning lock. | passed |
@@ -244,21 +252,27 @@ OPS has now served its role as the HRCN evidence ledger through v0.3. RHP carrie
 | RHP-005 | Generated-source and test-contract guard. | passed |
 | RHP-006 | README/state/bridge/evidence alignment guard and self-reference repair. | repaired |
 | RHP-006.1 | Public metrics and post-seal README alignment closure. | passed |
-| RHP-007 | First governed RHP ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ HRCN ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ Hermes proposal-loop proof. | next |
+| RHP-007 | First governed RHP -> HRCN -> Hermes proposal-loop proof. | passed |
+| RHP-008 | Apply-gate negative-control proof. | passed |
+| RHP-009 | Runtime boot preflight integration. | passed |
+| RHP-010 | Runtime-native boot interconnect. | passed |
+| RHP-011 | Installed launcher smoke and operator-visible startup status. | next |
 
 Operational bridge target:
 
 ```text
-Hermes runtime
--> RHP origin alignment
+Hermes executable
+-> hermes_cli/main.py
+-> RHP native boot hook
+-> RHP boot preflight
+-> startup context packet
 -> read HRCN bounded-loop status
 -> refuse authority drift
--> optionally inject read-only RHP/HRCN orientation into proposal context
--> refuse proposal-context over-authority
+-> inject read-only RHP/HRCN orientation into proposal context
 -> proposal/dry-run/apply only if separately human-gated
 ```
 
-Post-seal lock: RHP-006.1 closes public README metrics drift only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
+Post-seal lock: RHP-010 adds runtime-native boot orientation only. It does not execute CMS, write CMS, write memory, write APIs, change dependencies, call a provider/model, grant tool authority, operate autonomously, or self-authorize.
 <!-- HRCN_POST_SEAL_CYBERNETIC_TRACK_END -->
 
 

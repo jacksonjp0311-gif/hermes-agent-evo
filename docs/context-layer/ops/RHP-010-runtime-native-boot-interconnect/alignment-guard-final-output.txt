@@ -1,0 +1,27 @@
+RETURN CODE: 0
+{
+  "ok": true,
+  "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "mode": "final",
+  "checks": {
+    "previous_rhp009_passed": true,
+    "latest_evidence_exists": true,
+    "root_readme_latest_evidence": true,
+    "root_readme_no_codex_header": true,
+    "root_readme_rhp010_passed": true,
+    "root_readme_next_rhp011": true,
+    "root_public_metrics_latest_rhp": true,
+    "root_readme_no_mojibake_in_managed_blocks": true,
+    "rhp_readme_latest_evidence": true,
+    "rhp_readme_runtime_native": true,
+    "native_hook_present": true,
+    "agent_init_boot_preflight_hook": true,
+    "startup_packet_exists": true,
+    "hrcn_bridge_v03_anchor": true,
+    "rhp_bridge_read_only": true,
+    "authority_false": true,
+    "git_status_command_available": true,
+    "latest_rhp010_passed": true
+  },
+  "failures": []
+}
