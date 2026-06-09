@@ -1,0 +1,21 @@
+=== COMPILE: hermes_cli/main.py ===
+
+=== COMPILE: agent/agent_init.py ===
+
+=== COMPILE: rhp/boot_preflight.py ===
+
+=== COMPILE: rhp/startup_context_packet.py ===
+
+=== COMPILE: rhp/operator_startup_status.py ===
+
+=== COMPILE: rhp/alignment_guard.py ===
+
+=== COMPILE: tests/test_rhp_alignment_guard.py ===
+
+=== COMPILE: tests/test_rhp_011_operator_visible_startup.py ===
+
+=== COMPILE: rhp_runtime_bridge.py ===
+
+=== COMPILE: hrcn_runtime_bridge.py ===
+
+RETURN CODE: 0

@@ -53,6 +53,7 @@ class StartupContextPacket:
     external_ingestion: bool
     self_authorization: bool
     autonomous_authority: bool
+    operator_visible_status: str
     non_claim_lock: str
 
     def as_dict(self) -> dict[str, Any]:
@@ -110,6 +111,7 @@ def build_startup_context_packet(repo_root: str | Path | None = None) -> Startup
         hrcn_context_requested=_env_enabled("HERMES_HRCN_CONTEXT"),
         boot_preflight_ok=boot.ok,
         startup_context_packet_created=True,
+        operator_visible_status=os.environ.get("HERMES_RHP_OPERATOR_STATUS", ""),
         non_claim_lock=(
             "RHP-010 runtime-native startup packet verifies the installed CLI path can carry read-only boot orientation. "
             "It does not execute Hermes autonomously, call providers/models/tools, write CMS or memory, write APIs, "

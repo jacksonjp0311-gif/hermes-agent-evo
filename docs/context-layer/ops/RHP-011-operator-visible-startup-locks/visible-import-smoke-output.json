@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "operator_visible_startup_locks_passed": true,
+  "operator_status_ascii_safe": true,
+  "installed_launcher_visible_status_smoke_passed": true,
+  "native_boot_status": "ok",
+  "rendered_stderr": "RHP rehydration sequence:\n[OK] repo root found\n[OK] RHP-010 evidence green\n[OK] HRCN boundary green\n[OK] alignment guard green\n[OK] startup packet created\n[OK] authority=false\n[OK] external_ingestion=false\n[OK] provider/model/tool execution=false\n[OK] CMS/memory/API write=false\nRHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010\nRHP authority boundary: provider/model/tool=false | CMS/memory/API=false | external_ingestion=false | autonomy=false\n"
+}

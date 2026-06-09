@@ -98,10 +98,11 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-010-final-evidence.json` |
-| Current RHP status | `RHP-010 runtime-native boot interconnect passed` |
-| Next RHP gate | `RHP-011 installed launcher smoke and operator-visible startup status` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-011-final-evidence.json` |
+| Current RHP status | `RHP-011 operator-visible startup lock sequence passed` |
+| Next RHP gate | `RHP-012 safe boot failure mode and degraded startup status` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
+| Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
@@ -116,7 +117,7 @@ Public metrics lock: current public metrics must match latest OPS/RHP evidence b
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
 ### Rehydration Protocol Runtime Activation Track
 
-Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP has crossed from optional proposal context into read-only runtime-native boot orientation. RHP-010 wires direct `.venv\Scripts\hermes.exe` startup through a read-only boot hook in `hermes_cli/main.py`. This still does not grant write authority, tool authority, model/provider authority, CMS authority, memory authority, external ingestion authority, autonomy, or self-authorization.
+Human summary: this fork contains a Hermes-local Rehydration Protocol substrate under `/rhp`. RHP now provides a runtime-native, operator-visible boot lock sequence. RHP-011 makes the locks visible to the human before interaction: evidence, HRCN boundary, alignment, startup packet, authority=false, external_ingestion=false, provider/model/tool=false, and CMS/memory/API=false.
 
 #### RHP Activation Chart
 
@@ -126,7 +127,8 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-008 | Proposal-loop negative-control and apply-gate boundary proof. | passed |
 | RHP-009 | Runtime boot preflight integration. | passed |
 | RHP-010 | Runtime-native boot interconnect. | passed |
-| RHP-011 | Installed launcher smoke and operator-visible startup status. | next |
+| RHP-011 | Operator-visible startup lock sequence. | passed |
+| RHP-012 | Safe boot failure mode and degraded startup status. | next |
 
 #### Runtime Boot Order
 
@@ -137,9 +139,26 @@ Hermes executable starts
 -> RHP boot preflight checks latest local evidence
 -> HRCN read-only boundary is checked
 -> alignment guard is checked
+-> operator-visible lock sequence is rendered
 -> RHP/HRCN context gates are available before agent initialization
 -> agent_init appends read-only boot/context packets
 -> Hermes enters interaction mode already oriented
+```
+
+#### Operator-Visible Lock Sequence
+
+```text
+RHP rehydration sequence:
+[OK] repo root found
+[OK] RHP-010 evidence green
+[OK] HRCN boundary green
+[OK] alignment guard green
+[OK] startup packet created
+[OK] authority=false
+[OK] external_ingestion=false
+[OK] provider/model/tool execution=false
+[OK] CMS/memory/API write=false
+RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-010
 ```
 
 #### Current Boundary
@@ -147,6 +166,7 @@ Hermes executable starts
 | Surface | Current state |
 |---|---|
 | Runtime-native boot hook | `hermes_cli/main.py` |
+| Operator-visible status | `rhp/operator_startup_status.py` |
 | RHP boot preflight | `rhp/boot_preflight.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
 | Agent init integration | `agent/agent_init.py` |
@@ -158,29 +178,21 @@ Hermes executable starts
 | CMS/memory authority | `False` |
 | External ingestion authority | `False` |
 | Autonomous authority | `False` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-010-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-011-final-evidence.json` |
 
 #### Failure-Learning Lock
 
 | Lesson | Rule |
 |---|---|
-| RHP-L-016 | Runtime boot integration must happen before interaction context assembly and remain read-only. |
-| RHP-L-017 | If an init-time module imports a top-level bridge, packaging must include that bridge or the installed console script can fail outside the source checkout. |
-| RHP-L-018 | Runtime bridge status readers must support both dict payloads and dataclass/object payloads before assuming `.get()`. |
-| RHP-L-019 | Runtime boot preflight must use preflight alignment mode during construction; final evidence alignment is checked after green evidence is written. |
-| RHP-L-020 | If the active installed runtime lacks pytest, focused verification may use a direct Python smoke runner that checks the same contracts without installing dependencies. |
-| RHP-L-021 | Direct proof scripts stored below docs must anchor the repository root into `sys.path` before importing repository packages. |
-| RHP-L-022 | Final evidence closure should rebuild evidence as an ordered object instead of mutating a fixed `ConvertFrom-Json` PSCustomObject. |
-| RHP-L-023 | README managed blocks must advance in the same cycle as runtime boot evidence; stale post-seal roadmap blocks are commit blockers. |
-| RHP-L-024 | Public boot-order charts must use ASCII-safe arrows or pass render-hygiene checks before commit. |
-| RHP-L-025 | A runtime-native boot hook may orient direct executable startup; it does not authorize autonomous execution or widen authority. |
-| RHP-L-026 | Runtime package scripts executed by file path must anchor the repository root into `sys.path` before absolute package imports. |
-| RHP-L-027 | Added-line trigger scans must distinguish literal detector self-patterns from concrete leaked credentials and emit exact-line audit evidence. |
-| RHP-L-028 | User-facing help text must not add live credential-prefix literals; use descriptive placeholders instead. |
+| RHP-L-029 | Runtime rehydration must be human-visible as a lock-by-lock startup sequence, not only an internal environment state. |
+| RHP-L-030 | Operator-visible startup output must be ASCII-safe unless terminal encoding is explicitly verified. |
+| RHP-L-031 | UI/dashboard surfaces should consume the same startup status packet as CLI startup to avoid divergent status truth. |
+| RHP-L-032 | ASCII render guards must scope to managed RHP output blocks unless the operation explicitly cleans the full upstream file. |
+| RHP-L-033 | When encoded banner text survives exact-string replacement, replace the whole managed hook region from markers instead of patching a single line. |
 
-AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-010.
+AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-011.
 
-Human lock: RHP may orient Hermes at boot only through read-only preflight and context packets. Apply/write remains separate and human-gated.
+Human lock: RHP may orient Hermes at boot only through read-only preflight and visible context packets. Apply/write remains separate and human-gated.
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
 
 
@@ -1893,3 +1905,6 @@ Built by [Nous Research](https://nousresearch.com).
 
 | RHP-L-021 | Direct proof scripts stored below docs must anchor the repository root into sys.path before importing repository packages. |
 | RHP-L-022 | Final evidence closure should rebuild evidence as an ordered object instead of mutating a fixed ConvertFrom-Json PSCustomObject. |
+
+
+RHP-L-034: Managed-region replacement should use regex over explicit start/end markers; PowerShell `.Split($marker, 2)` is not a safe delimiter split for block surgery.
