@@ -1,12 +1,12 @@
-b2e8744ee6ad9e97dc13782b3d16c190e15526a92330a91897ce8aaa3b2a651d  README.md
-151109ea172a2ea0d9fac6b318a9c3720034dc4d3dbacfd19c9bd32716eb3a8b  rhp/README.md
-64553b7b8040254e37c47b36c7d0557b063fac43f2fe4ccd49b3c205c0946944  hermes_cli/main.py
+2661e46534d5fae9a53d2e0cde5463e47614c9de81ed29e3fa4144f6866ebcea  README.md
+18cd50db6ce4abb0c3e93b941d5ed9cc462db8c3e428f6632971d28a7543468a  rhp/README.md
+e8865f741feff68769fa72c5454a554b7338ef46920f731ce0d1f1b718d22603  hermes_cli/main.py
 06d7c599162a1e39b66a8caff0428639440672617b79e73fdaeb6d79fa298f40  rhp/alignment_guard.py
 a85ddb94b5f10308e797494155adf13e55ba14f31ffc812c1d5bc02b201fa7bc  rhp/startup_context_packet.py
 a03422f9291a1c07cad803a3ae3f8113ead8395a204b9194b11e8345298f8003  tests/test_rhp_alignment_guard.py
 d2bf9626dac7e544f03b599fd6145090822391e70b329fbbf857949f9a1d7ce7  tests/test_rhp_010_runtime_native_boot.py
-18170cabda21fcd747168b1bc78a450d4dec13e7eac4a219a3326cbc65cd6489  docs/context-layer/ops/RHP-010-final-evidence.json
-6e20417fb46dbb9b5ed8099d76f09c51f78d0151d4367300d3b3b29904a5114a  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect.md
+57c2ac909a400c57491473a9839bcb097fd95bbc33d770bbab4eb5ea5db17c13  docs/context-layer/ops/RHP-010-final-evidence.json
+7c16905a9081a86b870da0730c6bd2ef7dc88d99ee2590d9d11ca3845cb037e1  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect.md
 b825eb37928cd09dbc56a5f84cb79fc666e342168fcc263b31beab5d1d7a95b2  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/alignment-guard-preflight-output.txt
 1a8f32c065308aa4e9f3850069d4ce55e221fcff705ecfb83e98f0969f20558e  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/py-compile-output.txt
 ab96b43ef2d7ec7e6b37636dc929a3044a4f2db16bd9f3e926054825214a8e2f  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/direct-hermes-import-smoke-output.txt
@@ -14,4 +14,4 @@ ab96b43ef2d7ec7e6b37636dc929a3044a4f2db16bd9f3e926054825214a8e2f  docs/context-l
 d47f53dd3177b93de7113c13eedc1a9ca9a52db3354da78c3592a63aae0d30d3  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/focused-test-output.txt
 5447cdf5c1748519ecf840efd3dfa2bef259c185a41315246774b748614878b8  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/pytest-probe-output.txt
 28fe19f7699587559b03e06e5c670c660560921ea5a603754e049291d333b6f1  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/alignment-guard-final-output.txt
-a97c1047ec3d1025a0ef3b5891c758346793883aef32e49457ef63f4106ee52f  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/added-line-trigger-audit.jsonl
+ea764e8436d7980913375120057873bae72f5d0e3928ada7543237b89597492f  docs/context-layer/ops/RHP-010-runtime-native-boot-interconnect/added-line-trigger-audit.jsonl

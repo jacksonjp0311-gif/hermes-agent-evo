@@ -5,6 +5,7 @@
 - startup context packet ok: true
 - startup packet import anchor repaired: true
 - trigger scan self-pattern resolved: true
+- user-facing token-prefix literals scrubbed: true
 - direct executable path target: `.venv\Scripts\hermes.exe`
 - hook file: `hermes_cli/main.py`
 - startup packet: `rhp/startup_context_packet.py`
@@ -18,6 +19,6 @@
 - self-authorization/autonomy: false
 - next: RHP-011 installed launcher smoke and operator-visible startup status
 
-## RHP-L-027
+## RHP-L-028
 
-Added-line trigger scans must distinguish literal detector self-patterns from concrete leaked credentials and emit exact-line audit evidence.
+User-facing help text must not add live credential-prefix literals; use descriptive placeholders instead.

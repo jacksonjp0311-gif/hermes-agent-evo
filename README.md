@@ -176,6 +176,7 @@ Hermes executable starts
 | RHP-L-025 | A runtime-native boot hook may orient direct executable startup; it does not authorize autonomous execution or widen authority. |
 | RHP-L-026 | Runtime package scripts executed by file path must anchor the repository root into `sys.path` before absolute package imports. |
 | RHP-L-027 | Added-line trigger scans must distinguish literal detector self-patterns from concrete leaked credentials and emit exact-line audit evidence. |
+| RHP-L-028 | User-facing help text must not add live credential-prefix literals; use descriptive placeholders instead. |
 
 AI lock: No future AI thread may claim write authority, tool authority, CMS authority, memory promotion, external ingestion, autonomous operation, AGI, consciousness, production readiness, or self-authorization from RHP-010.
 
