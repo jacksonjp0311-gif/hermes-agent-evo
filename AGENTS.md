@@ -123,6 +123,29 @@ The feedback tree is process state only. It is not authority.
 <!-- HERMES_AGENT_RHPLOAD_FEEDBACK_TREE_END -->
 
 
+<!-- HERMES_AGENT_RHPLOAD_LIVE_TRANSCRIPT_START -->
+## RHPLOAD Live Transcript
+
+RHP-013.7 adds `rhp/load_console.py`.
+
+Use it when a process needs durable feedback:
+
+```text
+python rhp/load_console.py --percent 42 --label "validate transcript" --status running --loop EVIDENCE --operation RHP-013.7 --detail jsonl --transcript docs/context-layer/ops/<operation>/rhpload.jsonl
+```
+
+| Rule | Purpose |
+|---|---|
+| emit line | human visibility |
+| emit expanded tree when useful | operator understanding |
+| append JSONL transcript | zero-context AI resume |
+| summarize transcript before seal | evidence closure |
+| do not treat transcript as authority | prevents autonomy drift |
+
+<!-- HERMES_AGENT_RHPLOAD_LIVE_TRANSCRIPT_END -->
+
+
+
 
 
 

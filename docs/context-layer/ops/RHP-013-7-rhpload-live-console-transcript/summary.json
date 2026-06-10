@@ -1,0 +1,11 @@
+{
+  "rhp_013_7_v2_passed": true,
+  "failed_run_repaired": true,
+  "failure_class": "tooling_escape_bug",
+  "rhpload_live_console_renderer_added": true,
+  "rhpload_live_schema": "RHPLOAD-LIVE-CONSOLE-TRANSCRIPT-v0.1",
+  "jsonl_transcript_supported": true,
+  "zero_context_resume_supported": true,
+  "focused_tests_passed": true,
+  "next": "RHP-013.8 loop registry enforcement + transcript-backed resume packet"
+}

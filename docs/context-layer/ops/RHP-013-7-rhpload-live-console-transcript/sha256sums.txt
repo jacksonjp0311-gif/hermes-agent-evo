@@ -1,0 +1,11 @@
+038f00e069a7d5b21840529338616183b7c4afa1696dd59c4040b6d25d5b20a4  README.md
+e1bf2317fa0678bf988b487f1c37865e46ea8c25091f9e7da7b63ad8e366d1a5  AGENTS.md
+30f92b0b096410fd50db921c87737ab9d7e70139bc7f176e73e760541ab21f73  rhp/README.md
+f61a528769fb3c86e3ad78dd9dc67cf694c4f992696bd38e49a3c0e68ff64f86  rhp/load_console.py
+0aebf15fece9198beeebd25131bafc282eabf0949c48ed1b9abcf74fe2dd2a0c  tests/test_rhp_013_7_load_console.py
+809d41c6c2b7b4f314c9fe483ee9b93bcab58ba1b00c7167564a1087b517066b  docs/context-layer/ops/RHP-013-7-final-evidence.json
+c301ce01855859b52c2886b4f21feddc6c5cb72a22b1e4abdca3f99f7e4d0a36  docs/context-layer/ops/RHP-013-7-rhpload-live-console-transcript.md
+3769d47643038de752b3a2e711c91a660331b37ebf7e1e17ce287cebabb2fd52  docs/context-layer/ops/RHP-013-7-rhpload-live-console-transcript/rhpload-transcript.jsonl
+c8fe2dab954a879dd3df0a23826e217c9ba9848aa5e9415197740bcc8d6430f7  docs/context-layer/ops/RHP-013-7-rhpload-live-console-transcript/rhpload-transcript-summary-output.txt
+584b23948d8e3e31b9f89f3321c72ae24098242e90cba4ace5d04bdc1e8fd674  docs/context-layer/ops/RHP-013-7-rhpload-live-console-transcript/py-compile-output.txt
+28bfd31121fc3609c76e4c47006b7d693c2b1d023cf0b5e3edbc2d8c5e6f8948  docs/context-layer/ops/RHP-013-7-rhpload-live-console-transcript/focused-test-output.txt
