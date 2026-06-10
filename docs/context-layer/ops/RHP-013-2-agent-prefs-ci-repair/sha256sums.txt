@@ -1,0 +1,9 @@
+53cc4173ff0028e53f50154906ccbf6d7fe04d0eb7f177753ae48553c6973f0f  README.md
+144abe251784abfa27ce5f5ffceb503b255f236577d940a8b232f65887c154bc  AGENTS.md
+83d3c1c7e815020618c5e04e33e3b5d702ac5c0d943a33162c315febb73e4c5d  rhp/README.md
+254658c76032c70bb8da9385dafc565fbecbc82be44ad319776e201d896ee2ec  tests/test_rhp_alignment_guard.py
+ca223bf39e9b0cca48860d11479738f80f1f60a6301efe8af65264c22bd12378  docs/context-layer/ops/RHP-013-2-final-evidence.json
+57e53fbc3fab6ce911880f2019627fc42ffca556ec87ce35c987c97b5d24e096  docs/context-layer/ops/RHP-013-2-agent-prefs-ci-repair.md
+ea7baa2a3638346fa84aaed3b34288c1dc3e8b666622cde218796dfaa40b40bf  docs/context-layer/ops/RHP-013-2-agent-prefs-ci-repair/reflective-coding-research-notes.md
+a0d34542ae83669a293cd58e954bb5f68fc622b76fd48aef6a581ead151734c7  docs/context-layer/ops/RHP-013-2-agent-prefs-ci-repair/py-compile-output.txt
+48aa346bf022c4087956b8838a8ccab48be9e94ce282f40128ea8be5c32a7a00  docs/context-layer/ops/RHP-013-2-agent-prefs-ci-repair/focused-test-output.txt

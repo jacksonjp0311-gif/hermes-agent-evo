@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState`. |
+| Next architecture target | `RHP-013.3 wire CLI/banner/operator surfaces to RuntimeBootState status`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -126,16 +126,19 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-1-final-evidence.json` |
-| Current RHP status | `RHP-013.1 RuntimeBootState v0.1 typed packet implemented` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-2-final-evidence.json` |
+| Current RHP status | `RHP-013.2 AI/agent preferences, reflective coding chart, load-status contract, and CI stale-test repair sealed` |
 | Previous RHP seal | `docs/context-layer/ops/RHP-013-1-final-evidence.json` |
-| Previous RHP status | `RHP-013.0 Evo README, All-One script lineage, and RuntimeBootState plan anchored` |
-| Next RHP gate | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState` |
+| Previous RHP status | `RHP-013.1 RuntimeBootState v0.1 typed packet implemented` |
+| Next RHP gate | `RHP-013.3 wire CLI/banner/operator surfaces to RuntimeBootState status` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
 | RuntimeBootState home | `rhp/startup_context_packet.py` |
 | RuntimeBootState schema | `RHP-RUNTIME-BOOT-STATE-v0.1` |
+| Agent coding guide | `AGENTS.md` |
+| Agent preference chart | `README.md#ai--agent-preferences-and-reflective-coding-enhancements` |
+| Load status contract | `RHPLOAD [000%..100%]` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -147,6 +150,58 @@ Public metrics lock: current public metrics must match latest OPS/RHP evidence b
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
 
 
+
+
+<!-- HERMES_AI_AGENT_PREFERENCES_ENHANCEMENTS_START -->
+## AI / Agent Preferences and Reflective Coding Enhancements
+
+This section teaches future AI assistants, coding agents, and human operators how James Paul Jackson wants this repository handled.
+
+It is appendable: future validated lessons may be added here when they improve coding accuracy, reduce drift, improve operator visibility, or strengthen evidence-bounded development.
+
+### Agent Preference Chart
+
+| Preference / Enhancement | Why it exists | Agent behavior required | Status / load indicator |
+|---|---|---|---|
+| Visible loading status | Long AI/coding operations feel opaque without progress. | Emit `RHPLOAD [000%..100%]` lines during multi-step work. | `RHPLOAD [010%] anchor repo root` |
+| Targeted rehydration first | Prevent stale assumptions and README drift. | Read latest GitHub `main`, README, AGENTS.md, latest RHP evidence, and target files before scripting. | `RHPLOAD [020%] load README + AGENTS.md` |
+| Minimal mutation | Over-broad edits create new failures. | Change the smallest surface that resolves the current gate. | `RHPLOAD [060%] plan minimal mutation` |
+| Test stale tests as surfaces | Failed CI can come from old tests, not broken runtime. | Repair tests when implementation evolved and evidence proves the new surface. | `RHPLOAD [080%] run focused tests` |
+| Evidence before claim | Claims must be backed by JSON, logs, hashes, or test output. | Write final evidence and cite it before calling a phase sealed. | `RHPLOAD [090%] write evidence` |
+| Inaction can be correct | Agents often over-edit. | If no mutation is required, say so and seal a no-op diagnostic instead of forcing code. | `status=no-op-valid` |
+| Runtime authority lock | This repo has many agent/provider surfaces. | Never imply provider/model/tool/CMS/memory/API/external-ingestion authority without explicit bounded evidence. | `authority=false` |
+| Appendable learning surface | The process should improve as failures reveal missing guards. | Add concise lessons to this section and AGENTS.md only after validation. | `lesson=validated` |
+
+### Load Status Contract
+
+Use this visible grammar in All-One scripts, long-running coding passes, and AI handoffs:
+
+```text
+RHPLOAD [000%] initialize runner | status=running
+RHPLOAD [010%] anchor repo root + pull origin/main | status=ok
+RHPLOAD [020%] load README.md + AGENTS.md | status=ok
+RHPLOAD [030%] load latest RHP evidence | status=ok
+RHPLOAD [040%] load target runtime/docs/test surfaces | status=ok
+RHPLOAD [050%] validate authority boundary | status=ok
+RHPLOAD [060%] plan minimal mutation | status=ok
+RHPLOAD [070%] apply bounded mutation | status=running
+RHPLOAD [080%] run compile/tests/guards | status=running
+RHPLOAD [090%] write evidence + hashes + staged secret scan | status=running
+RHPLOAD [100%] commit/push/return clean | status=ok
+```
+
+### How Future Agents May Add To This Section
+
+Add a new row only when all are true:
+
+1. A real failure, inefficiency, or operator need was observed.
+2. The lesson is specific enough to change future behavior.
+3. The lesson does not grant new authority.
+4. The lesson is reflected in AGENTS.md if it affects coding agents.
+5. Evidence is written under `docs/context-layer/ops/`.
+
+Boundary: this section teaches coding preferences and process enhancements. It is not a runtime authority grant and does not authorize provider/model/tool execution, CMS writes, memory promotion, API writes, external ingestion, autonomy, production-readiness claims, or self-authorization.
+<!-- HERMES_AI_AGENT_PREFERENCES_ENHANCEMENTS_END -->
 
 <!-- RHP_012_3_BUDGET_GUARD_START -->
 ### RHP-012.3 Compact Rehydration + Budget Guard
@@ -381,7 +436,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-012 = read-only runtime-native 
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Latest RHP proof | `docs/context-layer/ops/RHP-013-1-final-evidence.json` |
 | Current RHP status | `RHP-013.1 RuntimeBootState v0.1 typed packet implemented` |
-| Next gate | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState` |
+| Next gate | `RHP-013.3 wire CLI/banner/operator surfaces to RuntimeBootState status` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-012.
 

@@ -4,6 +4,46 @@ Instructions for AI coding assistants and developers working on the hermes-agent
 
 **Never give up on the right solution.**
 
+<!-- HERMES_AGENT_PREFERENCES_STATUS_START -->
+## AI / Agent Preferences and Load Status
+
+When you load this repository as a coding agent, show what is being loaded and the approximate percent complete. Keep instructions operational and minimal.
+
+### Required Load Status Grammar
+
+```text
+RHPLOAD [000%] initialize runner | status=running
+RHPLOAD [010%] anchor repo root + pull origin/main | status=ok
+RHPLOAD [020%] load README.md + AGENTS.md | status=ok
+RHPLOAD [030%] load latest RHP evidence | status=ok
+RHPLOAD [040%] load target runtime/docs/test surfaces | status=ok
+RHPLOAD [050%] validate authority boundary | status=ok
+RHPLOAD [060%] plan minimal mutation | status=ok
+RHPLOAD [070%] apply bounded mutation | status=running
+RHPLOAD [080%] run compile/tests/guards | status=running
+RHPLOAD [090%] write evidence + hashes + staged secret scan | status=running
+RHPLOAD [100%] commit/push/return clean | status=ok
+```
+
+### Agent Preference Chart
+
+| Preference | Required behavior |
+|---|---|
+| Rehydrate first | Load current `main`, README, AGENTS.md, latest RHP evidence, and target files before edits. |
+| Prefer small patches | Mutate the smallest surface that resolves the current gate. |
+| Treat tests as versioned surfaces | When code evolves, update stale tests with evidence instead of forcing old names forever. |
+| Show status | Use `RHPLOAD [percent] surface | status=value` for long-running work. |
+| Protect authority boundary | Do not claim provider/model/tool/CMS/memory/API/external-ingestion/autonomy authority without explicit evidence. |
+| Add lessons carefully | Add new preferences only after a validated failure or improvement and keep them concise. |
+
+### Append Rule
+
+Future agents may add to this section only when a validated evidence artifact is created under `docs/context-layer/ops/`.
+
+This section is an AI handoff accelerator, not a runtime authority grant.
+<!-- HERMES_AGENT_PREFERENCES_STATUS_END -->
+
+
 ## Development Environment
 
 ```bash

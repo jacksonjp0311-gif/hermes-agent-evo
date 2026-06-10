@@ -445,3 +445,17 @@ StartupContextPacket -> RuntimeBootState -> future shared CLI/banner/operator tr
 Boundary: RHP-013.1 adds a typed read-only state object and direct tests only. It does not wire new runtime consumers, call providers/models/tools, write CMS or memory, write APIs, perform external ingestion, grant autonomy, or self-authorize.
 <!-- RHP_013_1_RUNTIMEBOOTSTATE_END -->
 
+<!-- RHP_013_2_AGENT_PREF_STATUS_START -->
+### RHP-013.2 AI/Agent Preferences + Reflective Coding Status
+
+RHP-013.2 anchors an appendable AI/agent preference chart and visible load-status contract.
+
+```text
+RHPLOAD [000%..100%] what is loading | status=<running|ok|failed>
+```
+
+It also repairs stale CI expectations in `tests/test_rhp_alignment_guard.py` so the alignment guard tests match the RHP-013.1 keys.
+
+Next: `RHP-013.3 wire CLI/banner/operator surfaces to RuntimeBootState status`.
+<!-- RHP_013_2_AGENT_PREF_STATUS_END -->
+
