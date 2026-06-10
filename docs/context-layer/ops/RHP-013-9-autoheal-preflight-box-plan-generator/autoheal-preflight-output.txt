@@ -1,0 +1,35 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.autoheal_preflight --operation RHP-013.9 --json
+RETURN CODE: 0
+{
+  "schema": "RHP-AUTOHEAL-PREFLIGHT-v0.1",
+  "ok": true,
+  "status": "bounded_residue_detected",
+  "operation": "RHP-013.9",
+  "dirty_paths": [
+    "AGENTS.md",
+    "README.md",
+    "rhp/README.md",
+    "docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/",
+    "docs/context-layer/ops/RHP-013-9-final-evidence.json",
+    "rhp/autoheal_plan.py",
+    "rhp/autoheal_preflight.py",
+    "tests/test_rhp_013_9_autoheal_plan.py",
+    "tests/test_rhp_013_9_autoheal_preflight.py"
+  ],
+  "allowed_paths": [
+    "AGENTS.md",
+    "README.md",
+    "rhp/README.md",
+    "docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/",
+    "docs/context-layer/ops/RHP-013-9-final-evidence.json",
+    "rhp/autoheal_plan.py",
+    "rhp/autoheal_preflight.py",
+    "tests/test_rhp_013_9_autoheal_plan.py",
+    "tests/test_rhp_013_9_autoheal_preflight.py"
+  ],
+  "blocked_paths": [],
+  "action": "clean_bounded_residue_then_continue",
+  "verified": false,
+  "glyph": "[WARN]",
+  "non_claim_lock": "Autoheal preflight may classify and optionally clean bounded failed-attempt residue only. It grants no runtime, tool, CMS, memory, API, external-ingestion, autonomous, or self-authorization authority."
+}

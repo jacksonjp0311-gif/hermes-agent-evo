@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_013_9_autoheal_preflight.py tests/test_rhp_013_9_autoheal_plan.py
+RETURN CODE: 0
+......                                                                   [100%]
+6 passed in 0.45s

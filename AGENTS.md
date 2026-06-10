@@ -182,6 +182,38 @@ Rules:
 <!-- HERMES_AGENT_LOOP_REGISTRY_RESUME_END -->
 
 
+<!-- HERMES_AGENT_AUTOHEAL_PREFLIGHT_START -->
+## Autoheal Preflight Box
+
+RHP-013.9 adds:
+
+```text
+rhp/autoheal_preflight.py
+rhp/autoheal_plan.py
+```
+
+Every future All-One runner should perform AUTOHEAL-PREFLIGHT before pull/rebase:
+
+```text
+python -m rhp.autoheal_preflight --operation <operation> --json
+```
+
+Rules:
+
+| Rule | Purpose |
+|---|---|
+| inspect dirty state before pull | prevents rebase failure |
+| clean only operation allowlist residue | protects user work |
+| block unknown dirty paths | prevents destructive cleanup |
+| verify clean after cleanup | green-check closure |
+| plan before execute | bounded self-healing |
+| no authority change | prevents autonomy drift |
+
+Autoheal preflight is allowed to clean failed-attempt residue only inside the current operation allowlist. It must print the paths and verify `[OK]` before continuing.
+<!-- HERMES_AGENT_AUTOHEAL_PREFLIGHT_END -->
+
+
+
 
 
 

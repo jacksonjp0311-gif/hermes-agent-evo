@@ -1,0 +1,13 @@
+fc29afa1014b52cdc3f3d88364b1f4825ed78a1ac19e0a37d093412517a2f5d4  README.md
+68a8dc1f1082a2bcb06e3d61dfda01ba4e6916e26ee35ee9a9b707df82c8b82a  AGENTS.md
+53d98764174f7baf21ec0ee8b180c7cf59f1c0fe922ae9b4059e5fe1cd270bc0  rhp/README.md
+b820635d7503a4b2daf75ac8f5629d3f28b4f1fc4ff30b85f78342d30b5667f1  rhp/autoheal_preflight.py
+f18e4033354c9a0658c2adcb34c6b8c273d5b50a172707e03c7f94c970991a65  rhp/autoheal_plan.py
+74e88f44b0b96469175274161951cdbc30b7b7d609f8ffa798c02f321d1bee6f  tests/test_rhp_013_9_autoheal_preflight.py
+52a7d446568fef5adb1e3c7bf988a27f8d00afcacfd314d3f05c483a6657201e  tests/test_rhp_013_9_autoheal_plan.py
+000b8d0396b74490a7dd0517e6617e5dc8bdaa8e0d3dc30032368717352f82a7  docs/context-layer/ops/RHP-013-9-final-evidence.json
+03b7eb64482c6036176125b86ab2e6de9c21ae21a5e46b3cb83c609c436782da  docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator.md
+da53d1245f5fa70d4f138f7a80f0cf3d6c59ec02849e075c095849176c7223a3  docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/py-compile-output.txt
+c1add971b80d2a08ae26b3adca91249f2497d60f3599fe373a8daec9c9ca6e2d  docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/autoheal-preflight-output.txt
+2adf442b6b8bf3ea0c35d47bbd492c8db5d4f4f9e445f0f49a0b827ff92ee0a4  docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/autoheal-plan-output.txt
+2a89638cf95954fc753392090a68ce44f1e08e047fecadfbfe7664df8572512c  docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/focused-test-output.txt

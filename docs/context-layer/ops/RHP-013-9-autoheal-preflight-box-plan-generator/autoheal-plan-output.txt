@@ -1,0 +1,36 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.autoheal_plan --classification dirty_worktree_and_module_path_execution_bug --operation RHP-013.9 --json
+RETURN CODE: 0
+{
+  "schema": "RHP-AUTOHEAL-PLAN-v0.1",
+  "ok": true,
+  "classification": "dirty_worktree_and_module_path_execution_bug",
+  "repair_strategy": "bounded_residue_cleanup_before_rebase",
+  "loop": "AUTOHEAL-PLAN",
+  "attempt_budget": 1,
+  "allowed_paths": [
+    "README.md",
+    "AGENTS.md",
+    "rhp/README.md",
+    "rhp/autoheal_preflight.py",
+    "rhp/autoheal_plan.py",
+    "tests/test_rhp_013_9_*",
+    "docs/context-layer/ops/RHP-013-9*"
+  ],
+  "validation_commands": [
+    [
+      "python",
+      "-m",
+      "rhp.autoheal_preflight",
+      "--operation",
+      "RHP-013.9",
+      "--json"
+    ]
+  ],
+  "evidence_outputs": [
+    "docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/autoheal-preflight-output.txt"
+  ],
+  "mutation_allowed_now": false,
+  "commit_allowed_now": false,
+  "reason": "Clean only bounded failed-attempt residue, verify clean, then pull/rebase.",
+  "non_claim_lock": "Autoheal plans are plans only. They do not mutate files, execute repairs, commit, push, grant runtime/tool/CMS/memory/API/external-ingestion/autonomous/self-authorization authority, or bypass validation."
+}

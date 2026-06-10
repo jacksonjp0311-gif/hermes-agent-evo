@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/autoheal_preflight.py rhp/autoheal_plan.py tests/test_rhp_013_9_autoheal_preflight.py tests/test_rhp_013_9_autoheal_plan.py
+RETURN CODE: 0
+
