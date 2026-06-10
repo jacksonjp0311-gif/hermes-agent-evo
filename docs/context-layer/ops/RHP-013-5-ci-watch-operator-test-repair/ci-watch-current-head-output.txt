@@ -1,0 +1,1170 @@
+COMMAND: C:\Program Files\Python312\python.exe rhp/ci_watch.py --sha 772c054be66e57a6574d4e8a6c04dbe4b442eff6 --workflow Tests --json
+RETURN CODE: 1
+{
+  "ok": false,
+  "schema": "RHP-CI-WATCH-PACKET-v0.1",
+  "commit_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+  "classification": "red-actionable",
+  "run_count": 1,
+  "selected_run": {
+    "id": 27310780924,
+    "name": "Tests",
+    "node_id": "WFR_kwLOSxBsCc8AAAAGW9lx_A",
+    "head_branch": "main",
+    "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+    "path": ".github/workflows/tests.yml",
+    "display_title": "rhp: wire RHP-013.4 RuntimeBootState display",
+    "run_number": 12,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 289224186,
+    "check_suite_id": 73422194388,
+    "check_suite_node_id": "CS_kwDOSxBsCc8AAAARGE3G1A",
+    "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+    "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+    "pull_requests": [],
+    "created_at": "2026-06-10T22:35:51Z",
+    "updated_at": "2026-06-10T22:41:12Z",
+    "actor": {
+      "login": "jacksonjp0311-gif",
+      "id": 235741794,
+      "node_id": "U_kgDODg0iYg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/235741794?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jacksonjp0311-gif",
+      "html_url": "https://github.com/jacksonjp0311-gif",
+      "followers_url": "https://api.github.com/users/jacksonjp0311-gif/followers",
+      "following_url": "https://api.github.com/users/jacksonjp0311-gif/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jacksonjp0311-gif/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jacksonjp0311-gif/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jacksonjp0311-gif/subscriptions",
+      "organizations_url": "https://api.github.com/users/jacksonjp0311-gif/orgs",
+      "repos_url": "https://api.github.com/users/jacksonjp0311-gif/repos",
+      "events_url": "https://api.github.com/users/jacksonjp0311-gif/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jacksonjp0311-gif/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-06-10T22:35:51Z",
+    "triggering_actor": {
+      "login": "jacksonjp0311-gif",
+      "id": 235741794,
+      "node_id": "U_kgDODg0iYg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/235741794?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jacksonjp0311-gif",
+      "html_url": "https://github.com/jacksonjp0311-gif",
+      "followers_url": "https://api.github.com/users/jacksonjp0311-gif/followers",
+      "following_url": "https://api.github.com/users/jacksonjp0311-gif/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jacksonjp0311-gif/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jacksonjp0311-gif/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jacksonjp0311-gif/subscriptions",
+      "organizations_url": "https://api.github.com/users/jacksonjp0311-gif/orgs",
+      "repos_url": "https://api.github.com/users/jacksonjp0311-gif/repos",
+      "events_url": "https://api.github.com/users/jacksonjp0311-gif/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jacksonjp0311-gif/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/jobs",
+    "logs_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/logs",
+    "check_suite_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-suites/73422194388",
+    "artifacts_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/artifacts",
+    "cancel_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/cancel",
+    "rerun_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/workflows/289224186",
+    "head_commit": {
+      "id": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "tree_id": "a4479703ea536fa79438977aa1bac39b92ea51a3",
+      "message": "rhp: wire RHP-013.4 RuntimeBootState display",
+      "timestamp": "2026-06-10T22:35:43Z",
+      "author": {
+        "name": "James P Jackson",
+        "email": "jacksonjp0311@gmail.com"
+      },
+      "committer": {
+        "name": "James P Jackson",
+        "email": "jacksonjp0311@gmail.com"
+      }
+    },
+    "repository": {
+      "id": 1259367433,
+      "node_id": "R_kgDOSxBsCQ",
+      "name": "hermes-agent-evo",
+      "full_name": "jacksonjp0311-gif/hermes-agent-evo",
+      "private": false,
+      "owner": {
+        "login": "jacksonjp0311-gif",
+        "id": 235741794,
+        "node_id": "U_kgDODg0iYg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/235741794?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jacksonjp0311-gif",
+        "html_url": "https://github.com/jacksonjp0311-gif",
+        "followers_url": "https://api.github.com/users/jacksonjp0311-gif/followers",
+        "following_url": "https://api.github.com/users/jacksonjp0311-gif/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jacksonjp0311-gif/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jacksonjp0311-gif/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jacksonjp0311-gif/subscriptions",
+        "organizations_url": "https://api.github.com/users/jacksonjp0311-gif/orgs",
+        "repos_url": "https://api.github.com/users/jacksonjp0311-gif/repos",
+        "events_url": "https://api.github.com/users/jacksonjp0311-gif/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jacksonjp0311-gif/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo",
+      "description": "The agent that grows with you",
+      "fork": true,
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo",
+      "forks_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/forks",
+      "keys_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/teams",
+      "hooks_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/hooks",
+      "issue_events_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/events",
+      "assignees_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/tags",
+      "blobs_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/languages",
+      "stargazers_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/stargazers",
+      "contributors_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/contributors",
+      "subscribers_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/subscribers",
+      "subscription_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/subscription",
+      "commits_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/merges",
+      "archive_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/downloads",
+      "issues_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/labels{/name}",
+      "releases_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/deployments"
+    },
+    "head_repository": {
+      "id": 1259367433,
+      "node_id": "R_kgDOSxBsCQ",
+      "name": "hermes-agent-evo",
+      "full_name": "jacksonjp0311-gif/hermes-agent-evo",
+      "private": false,
+      "owner": {
+        "login": "jacksonjp0311-gif",
+        "id": 235741794,
+        "node_id": "U_kgDODg0iYg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/235741794?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jacksonjp0311-gif",
+        "html_url": "https://github.com/jacksonjp0311-gif",
+        "followers_url": "https://api.github.com/users/jacksonjp0311-gif/followers",
+        "following_url": "https://api.github.com/users/jacksonjp0311-gif/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jacksonjp0311-gif/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jacksonjp0311-gif/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jacksonjp0311-gif/subscriptions",
+        "organizations_url": "https://api.github.com/users/jacksonjp0311-gif/orgs",
+        "repos_url": "https://api.github.com/users/jacksonjp0311-gif/repos",
+        "events_url": "https://api.github.com/users/jacksonjp0311-gif/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jacksonjp0311-gif/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo",
+      "description": "The agent that grows with you",
+      "fork": true,
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo",
+      "forks_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/forks",
+      "keys_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/teams",
+      "hooks_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/hooks",
+      "issue_events_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/events",
+      "assignees_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/tags",
+      "blobs_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/languages",
+      "stargazers_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/stargazers",
+      "contributors_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/contributors",
+      "subscribers_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/subscribers",
+      "subscription_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/subscription",
+      "commits_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/merges",
+      "archive_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/downloads",
+      "issues_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/labels{/name}",
+      "releases_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/deployments"
+    }
+  },
+  "jobs": [
+    {
+      "id": 80680143392,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlKIA",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680143392",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680143392",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:55Z",
+      "completed_at": "2026-06-10T22:36:49Z",
+      "name": "e2e",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:57Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:57Z",
+          "completed_at": "2026-06-10T22:36:00Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:36:00Z",
+          "completed_at": "2026-06-10T22:36:00Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:36:00Z",
+          "completed_at": "2026-06-10T22:36:04Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:36:04Z",
+          "completed_at": "2026-06-10T22:36:05Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:05Z",
+          "completed_at": "2026-06-10T22:36:09Z"
+        },
+        {
+          "name": "Packaged-wheel i18n smoke test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:09Z",
+          "completed_at": "2026-06-10T22:36:24Z"
+        },
+        {
+          "name": "Run e2e tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:24Z",
+          "completed_at": "2026-06-10T22:36:46Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-06-10T22:36:46Z",
+          "completed_at": "2026-06-10T22:36:47Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-06-10T22:36:47Z",
+          "completed_at": "2026-06-10T22:36:47Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-06-10T22:36:47Z",
+          "completed_at": "2026-06-10T22:36:47Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680143392",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001125,
+      "runner_name": "GitHub Actions 1000001125",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680143426,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlKQg",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680143426",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680143426",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:54Z",
+      "completed_at": "2026-06-10T22:41:00Z",
+      "name": "test (5)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:56Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:56Z",
+          "completed_at": "2026-06-10T22:35:58Z"
+        },
+        {
+          "name": "Restore duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:35:58Z",
+          "completed_at": "2026-06-10T22:35:58Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:35:58Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:36:01Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:01Z",
+          "completed_at": "2026-06-10T22:36:02Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:02Z",
+          "completed_at": "2026-06-10T22:36:06Z"
+        },
+        {
+          "name": "Run tests (slice 5/6)",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:06Z",
+          "completed_at": "2026-06-10T22:40:58Z"
+        },
+        {
+          "name": "Upload per-slice durations",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-06-10T22:40:58Z",
+          "completed_at": "2026-06-10T22:40:58Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-06-10T22:40:58Z",
+          "completed_at": "2026-06-10T22:40:58Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-06-10T22:40:58Z",
+          "completed_at": "2026-06-10T22:40:58Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-06-10T22:40:58Z",
+          "completed_at": "2026-06-10T22:40:58Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680143426",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001128,
+      "runner_name": "GitHub Actions 1000001128",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680143430,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlKRg",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680143430",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680143430",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:54Z",
+      "completed_at": "2026-06-10T22:39:11Z",
+      "name": "test (6)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:56Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:56Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Restore duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:36:00Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:36:00Z",
+          "completed_at": "2026-06-10T22:36:02Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:02Z",
+          "completed_at": "2026-06-10T22:36:03Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:03Z",
+          "completed_at": "2026-06-10T22:36:07Z"
+        },
+        {
+          "name": "Run tests (slice 6/6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:07Z",
+          "completed_at": "2026-06-10T22:39:08Z"
+        },
+        {
+          "name": "Upload per-slice durations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-06-10T22:39:08Z",
+          "completed_at": "2026-06-10T22:39:09Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-06-10T22:39:09Z",
+          "completed_at": "2026-06-10T22:39:09Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-06-10T22:39:09Z",
+          "completed_at": "2026-06-10T22:39:09Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-06-10T22:39:09Z",
+          "completed_at": "2026-06-10T22:39:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680143430",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001126,
+      "runner_name": "GitHub Actions 1000001126",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680143469,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlKbQ",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680143469",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680143469",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:54Z",
+      "completed_at": "2026-06-10T22:40:23Z",
+      "name": "test (3)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:57Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:57Z",
+          "completed_at": "2026-06-10T22:36:00Z"
+        },
+        {
+          "name": "Restore duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:36:00Z",
+          "completed_at": "2026-06-10T22:36:01Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:36:01Z",
+          "completed_at": "2026-06-10T22:36:02Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:36:02Z",
+          "completed_at": "2026-06-10T22:36:04Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:04Z",
+          "completed_at": "2026-06-10T22:36:05Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:05Z",
+          "completed_at": "2026-06-10T22:36:09Z"
+        },
+        {
+          "name": "Run tests (slice 3/6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:09Z",
+          "completed_at": "2026-06-10T22:40:18Z"
+        },
+        {
+          "name": "Upload per-slice durations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-06-10T22:40:18Z",
+          "completed_at": "2026-06-10T22:40:20Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-06-10T22:40:20Z",
+          "completed_at": "2026-06-10T22:40:20Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-06-10T22:40:20Z",
+          "completed_at": "2026-06-10T22:40:20Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-06-10T22:40:20Z",
+          "completed_at": "2026-06-10T22:40:20Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680143469",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001127,
+      "runner_name": "GitHub Actions 1000001127",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680143579,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlK2w",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680143579",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680143579",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:54Z",
+      "completed_at": "2026-06-10T22:39:16Z",
+      "name": "test (1)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:57Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:57Z",
+          "completed_at": "2026-06-10T22:36:03Z"
+        },
+        {
+          "name": "Restore duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:36:03Z",
+          "completed_at": "2026-06-10T22:36:04Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:36:04Z",
+          "completed_at": "2026-06-10T22:36:04Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:36:04Z",
+          "completed_at": "2026-06-10T22:36:07Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:07Z",
+          "completed_at": "2026-06-10T22:36:08Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:08Z",
+          "completed_at": "2026-06-10T22:36:11Z"
+        },
+        {
+          "name": "Run tests (slice 1/6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:11Z",
+          "completed_at": "2026-06-10T22:39:12Z"
+        },
+        {
+          "name": "Upload per-slice durations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-06-10T22:39:12Z",
+          "completed_at": "2026-06-10T22:39:14Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-06-10T22:39:14Z",
+          "completed_at": "2026-06-10T22:39:14Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-06-10T22:39:14Z",
+          "completed_at": "2026-06-10T22:39:14Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-06-10T22:39:14Z",
+          "completed_at": "2026-06-10T22:39:14Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680143579",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001129,
+      "runner_name": "GitHub Actions 1000001129",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680143705,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlLWQ",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680143705",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680143705",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:54Z",
+      "completed_at": "2026-06-10T22:39:04Z",
+      "name": "test (4)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:56Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:56Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Restore duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:36:02Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:02Z",
+          "completed_at": "2026-06-10T22:36:03Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:03Z",
+          "completed_at": "2026-06-10T22:36:06Z"
+        },
+        {
+          "name": "Run tests (slice 4/6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:06Z",
+          "completed_at": "2026-06-10T22:39:02Z"
+        },
+        {
+          "name": "Upload per-slice durations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-06-10T22:39:02Z",
+          "completed_at": "2026-06-10T22:39:02Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-06-10T22:39:02Z",
+          "completed_at": "2026-06-10T22:39:03Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-06-10T22:39:03Z",
+          "completed_at": "2026-06-10T22:39:03Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-06-10T22:39:03Z",
+          "completed_at": "2026-06-10T22:39:03Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680143705",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001133,
+      "runner_name": "GitHub Actions 1000001133",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680144011,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyOlMiw",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680144011",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680144011",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:35:52Z",
+      "started_at": "2026-06-10T22:35:54Z",
+      "completed_at": "2026-06-10T22:40:33Z",
+      "name": "test (2)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:35:55Z",
+          "completed_at": "2026-06-10T22:35:56Z"
+        },
+        {
+          "name": "Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:35:56Z",
+          "completed_at": "2026-06-10T22:35:58Z"
+        },
+        {
+          "name": "Restore duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:35:58Z",
+          "completed_at": "2026-06-10T22:35:58Z"
+        },
+        {
+          "name": "Install ripgrep (prebuilt binary)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:35:58Z",
+          "completed_at": "2026-06-10T22:35:59Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:35:59Z",
+          "completed_at": "2026-06-10T22:36:01Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-06-10T22:36:01Z",
+          "completed_at": "2026-06-10T22:36:02Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-06-10T22:36:02Z",
+          "completed_at": "2026-06-10T22:36:05Z"
+        },
+        {
+          "name": "Run tests (slice 2/6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-06-10T22:36:05Z",
+          "completed_at": "2026-06-10T22:40:31Z"
+        },
+        {
+          "name": "Upload per-slice durations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-06-10T22:40:31Z",
+          "completed_at": "2026-06-10T22:40:32Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-06-10T22:40:32Z",
+          "completed_at": "2026-06-10T22:40:32Z"
+        },
+        {
+          "name": "Post Checkout code",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-06-10T22:40:32Z",
+          "completed_at": "2026-06-10T22:40:32Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-06-10T22:40:32Z",
+          "completed_at": "2026-06-10T22:40:32Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680144011",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001134,
+      "runner_name": "GitHub Actions 1000001134",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 80680911723,
+      "run_id": 27310780924,
+      "workflow_name": "Tests",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSxBsCc8AAAASyPUDaw",
+      "head_sha": "772c054be66e57a6574d4e8a6c04dbe4b442eff6",
+      "url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/actions/jobs/80680911723",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27310780924/job/80680911723",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-06-10T22:41:00Z",
+      "started_at": "2026-06-10T22:41:03Z",
+      "completed_at": "2026-06-10T22:41:10Z",
+      "name": "save-durations",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-06-10T22:41:03Z",
+          "completed_at": "2026-06-10T22:41:05Z"
+        },
+        {
+          "name": "Download all slice durations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-06-10T22:41:05Z",
+          "completed_at": "2026-06-10T22:41:06Z"
+        },
+        {
+          "name": "Merge into single durations file",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-06-10T22:41:06Z",
+          "completed_at": "2026-06-10T22:41:06Z"
+        },
+        {
+          "name": "Save merged duration cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-06-10T22:41:06Z",
+          "completed_at": "2026-06-10T22:41:07Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-06-10T22:41:07Z",
+          "completed_at": "2026-06-10T22:41:07Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/jacksonjp0311-gif/hermes-agent-evo/check-runs/80680911723",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001135,
+      "runner_name": "GitHub Actions 1000001135",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ],
+  "failure_summary": [
+    "test (5): status=completed conclusion=failure"
+  ],
+  "source": "github_actions",
+  "degraded": true,
+  "degraded_reason": "one or more workflow jobs failed",
+  "non_claim_lock": "RHP-013.5 CI Watch observes GitHub Actions status and classifies the result. It does not mutate repository state, rerun jobs, call providers/models/tools, write CMS or memory, write APIs beyond optional public GitHub read requests, perform external ingestion, grant autonomy, or self-authorize."
+}

@@ -82,6 +82,28 @@ When editing boot display surfaces, source truth from `RuntimeBootState` and kee
 Do not create a second boot truth source.
 <!-- HERMES_AGENT_RUNTIME_STATUS_LOOP_END -->
 
+<!-- HERMES_AGENT_CI_WATCH_LOOP_START -->
+## CI Watch Loop Automation
+
+RHP-013.5 adds `rhp/ci_watch.py`.
+
+Before repairing CI, run or reason through the CI Watch Loop:
+
+```text
+python rhp/ci_watch.py --sha <commit-sha> --workflow Tests --json
+```
+
+| Classification | Meaning | Allowed next loop |
+|---|---|---|
+| green | Latest selected run completed successfully. | Evidence or No-Op |
+| pending | Run exists but is queued or in progress. | Wait / CI Watch |
+| red-actionable | Failed run/job found. | CI Repair |
+| unknown | No run/API data available. | Diagnosis or manual screenshot evidence |
+
+Do not jump from unknown directly to mutation. If a legacy test expects an old RHP evidence string, classify it as stale test surface and repair the test with evidence.
+<!-- HERMES_AGENT_CI_WATCH_LOOP_END -->
+
+
 
 
 

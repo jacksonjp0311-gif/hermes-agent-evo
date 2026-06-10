@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-013.5 post-push CI watch loop evidence automation`. |
+| Next architecture target | `RHP-013.6 CI repair classifier + red-job artifact extraction`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -126,19 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
-| Current RHP status | `RHP-013.4 RuntimeBootState display wiring sealed` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-5-final-evidence.json` |
+| Current RHP status | `RHP-013.5 CI Watch Loop automation + stale operator-visible test repair sealed` |
 | Previous RHP seal | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
-| Previous RHP status | `RHP-013.3 operational loop boxes, AI takeover runbook, and stale README surface closure sealed` |
-| Next RHP gate | `RHP-013.5 post-push CI watch loop evidence automation` |
+| Previous RHP status | `RHP-013.4 RuntimeBootState display wiring sealed` |
+| Next RHP gate | `RHP-013.6 CI repair classifier + red-job artifact extraction` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
 | RuntimeBootState home | `rhp/startup_context_packet.py` |
 | RuntimeBootState schema | `RHP-RUNTIME-BOOT-STATE-v0.1` |
-| RuntimeBootState display wiring | `hermes_cli/main.py`, `hermes_cli/banner.py`, `rhp/operator_startup_status.py` |
-| Agent coding guide | `AGENTS.md` |
-| Operational loop boxes | `README.md#operational-loop-boxes-and-ai-takeover-runbook` |
+| CI Watch Loop tool | `rhp/ci_watch.py` |
 | Load status contract | `RHPLOAD [000%..100%]` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
@@ -149,6 +147,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
+
 
 
 
@@ -279,8 +278,25 @@ RuntimeBootState
 
 This is still read-only orientation. The display proves what loaded and which authority locks are false; it does not grant provider/model/tool, CMS, memory, API, external-ingestion, autonomous, or self-authorization authority.
 
-Next: `RHP-013.5 post-push CI watch loop evidence automation`.
+Next: `RHP-013.6 CI repair classifier + red-job artifact extraction`.
 <!-- HERMES_RHP_013_4_RUNTIME_DISPLAY_END -->
+
+<!-- HERMES_RHP_013_5_CI_WATCH_START -->
+### RHP-013.5 CI Watch Loop Automation + Operator Test Repair
+
+RHP-013.5 adds a local CI Watch Loop tool and repairs the stale operator-visible startup test that still expected `evidence=RHP-012`.
+
+```text
+commit SHA -> GitHub Actions runs -> selected Tests workflow -> jobs
+-> classification: green | pending | red-actionable | unknown
+-> evidence packet
+```
+
+The watch loop is observational. It does not rerun jobs, edit files without authorization, write remote state, or self-authorize repairs.
+
+Next: `RHP-013.6 CI repair classifier + red-job artifact extraction`.
+<!-- HERMES_RHP_013_5_CI_WATCH_END -->
+
 
 
 
@@ -507,7 +523,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | RHP-013.1 | RuntimeBootState v0.1 typed packet. | passed |
 | RHP-013.2 | AI/agent preferences and CI stale-test repair. | passed |
 | RHP-013.3 | Operational loop boxes and AI takeover runbook. | passed |
-| next | RHP-013.5 post-push CI watch loop evidence automation. | next |
+| next | RHP-013.6 CI repair classifier + red-job artifact extraction. | next |
 
 #### Current Runtime Boundary
 
@@ -524,7 +540,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Latest RHP proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Current RHP status | `RHP-013.3 operational loop boxes and AI takeover runbook sealed` |
-| Next gate | `RHP-013.5 post-push CI watch loop evidence automation` |
+| Next gate | `RHP-013.6 CI repair classifier + red-job artifact extraction` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-013.3.
 

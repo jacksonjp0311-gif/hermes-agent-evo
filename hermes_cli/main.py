@@ -301,7 +301,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 def _rhp_render_operator_status(packet) -> str:
     try:
         from rhp.operator_startup_status import render_operator_startup_status
-        return render_operator_startup_status(packet, evidence="RHP-013.4")
+        return render_operator_startup_status(packet, evidence="RHP-013.5")
     except Exception:
         return "\n".join([
             "RHP rehydration sequence:",
@@ -314,7 +314,7 @@ def _rhp_render_operator_status(packet) -> str:
             "[OK] external_ingestion=false",
             "[OK] provider/model/tool execution=false",
             "[OK] CMS/memory/API write=false",
-            "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-013.4",
+            "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-013.5",
             "RHP authority boundary: provider/model/tool=false | CMS/memory/API=false | external_ingestion=false | autonomy=false",
         ])
 

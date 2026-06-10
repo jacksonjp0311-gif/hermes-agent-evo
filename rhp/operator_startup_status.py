@@ -1,4 +1,4 @@
-# RHP-013.4 operator-visible startup status wired to RuntimeBootState.
+# RHP-013.5 operator-visible startup status wired to RuntimeBootState.
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -50,7 +50,7 @@ def _authority(data: dict[str, Any]) -> dict[str, bool]:
         return {key: bool(nested.get(key, False)) for key in AUTHORITY_KEYS}
     return {key: bool(data.get(key, False)) for key in AUTHORITY_KEYS}
 
-def build_operator_startup_status(packet: Any, *, evidence: str = "RHP-013.4") -> OperatorStartupStatus:
+def build_operator_startup_status(packet: Any, *, evidence: str = "RHP-013.5") -> OperatorStartupStatus:
     data = _data(packet)
     checks = data.get("checks") if isinstance(data.get("checks"), dict) else {}
     runtime_locks = data.get("locks") if isinstance(data.get("locks"), dict) else {}
@@ -104,10 +104,10 @@ def build_operator_startup_status(packet: Any, *, evidence: str = "RHP-013.4") -
         degraded=degraded,
         degraded_reason=degraded_reason,
         non_claim_lock=(
-            "RHP-013.4 displays RuntimeBootState-derived startup locks with degraded status when evidence or alignment is not green. "
+            "RHP-013.5 displays RuntimeBootState-derived startup locks with degraded status when evidence or alignment is not green. "
             "It does not authorize tools, provider/model calls, CMS writes, memory writes, API writes, external ingestion, autonomy, or self-authorization."
         ),
     )
 
-def render_operator_startup_status(packet: Any, *, evidence: str = "RHP-013.4") -> str:
+def render_operator_startup_status(packet: Any, *, evidence: str = "RHP-013.5") -> str:
     return "\n".join(build_operator_startup_status(packet, evidence=evidence).lines)

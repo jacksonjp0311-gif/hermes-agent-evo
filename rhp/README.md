@@ -470,7 +470,7 @@ select loop -> load required surfaces -> state authority boundary -> mutate smal
 
 Runtime wiring is still deferred.
 
-Next: `RHP-013.5 post-push CI watch loop evidence automation`.
+Next: `RHP-013.6 CI repair classifier + red-job artifact extraction`.
 <!-- RHP_013_3_LOOP_BOXES_END -->
 
 <!-- RHP_013_4_RUNTIME_DISPLAY_START -->
@@ -484,6 +484,18 @@ RuntimeBootState -> operator status -> protocol strip -> banner
 
 Authority remains false. Runtime display is not runtime permission.
 
-Next: `RHP-013.5 post-push CI watch loop evidence automation`.
+Next: `RHP-013.6 CI repair classifier + red-job artifact extraction`.
 <!-- RHP_013_4_RUNTIME_DISPLAY_END -->
+
+<!-- RHP_013_5_CI_WATCH_START -->
+### RHP-013.5 CI Watch Loop Automation + Operator Test Repair
+
+RHP-013.5 adds `rhp/ci_watch.py`, an observational GitHub Actions classifier, and repairs the stale RHP-011 operator-visible test expectation.
+
+```text
+green | pending | red-actionable | unknown
+```
+
+Next: `RHP-013.6 CI repair classifier + red-job artifact extraction`.
+<!-- RHP_013_5_CI_WATCH_END -->
 

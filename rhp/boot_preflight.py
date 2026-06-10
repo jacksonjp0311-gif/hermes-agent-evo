@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-LATEST_RHP_EVIDENCE = "docs/context-layer/ops/RHP-013-4-final-evidence.json"
+LATEST_RHP_EVIDENCE = "docs/context-layer/ops/RHP-013-5-final-evidence.json"
 HRCN_EVIDENCE = "docs/context-layer/ops/OPS-027-final-evidence.json"
 
 AUTHORITY_FALSE_KEYS = (
@@ -132,9 +132,10 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
     latest, latest_error = _read_json_or_empty(latest_path)
 
     rhp_evidence_green = (
-        latest.get("schema") == "RHP-013.4-final-evidence"
-        and latest.get("operation") == "RHP-013.4"
+        latest.get("schema") == "RHP-013.5-final-evidence"
+        and latest.get("operation") == "RHP-013.5"
         and latest.get("runtimebootstate_display_wired") is True
+        and latest.get("ci_watch_loop_automation_added") is True
         and latest.get("py_compile_passed") is True
         and latest.get("focused_tests_passed") is True
         and latest.get("alignment_guard_self_check_passed") is True
@@ -211,7 +212,7 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
         startup_context_packet_created=True,
         checks=checks,
         non_claim_lock=(
-            "RHP-013.4 boot preflight is safe read-only startup orientation wired to RuntimeBootState display evidence. "
+            "RHP-013.5 boot preflight is safe read-only startup orientation wired to RuntimeBootState display evidence. "
             "Missing or invalid evidence degrades visible startup status instead of crashing or granting authority. "
             "It does not authorize provider/model/tool calls, writes, CMS runtime/write, memory write/promotion, "
             "API writes, dependency mutation, external ingestion, autonomy, or self-authorization."
