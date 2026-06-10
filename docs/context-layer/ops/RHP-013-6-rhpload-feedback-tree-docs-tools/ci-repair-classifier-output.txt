@@ -1,0 +1,15 @@
+COMMAND: C:\Program Files\Python312\python.exe rhp/ci_repair_classifier.py --text AssertionError expected evidence=RHP-012 but got evidence=RHP-013.5 --json
+RETURN CODE: 0
+{
+  "ok": true,
+  "schema": "RHP-CI-REPAIR-CLASSIFIER-v0.1",
+  "classification": "stale_test_or_guard_surface",
+  "confidence": 0.88,
+  "reason": "Historical RHP evidence/key expectation detected.",
+  "recommended_loop": "CI-REPAIR",
+  "evidence_markers": [
+    "evidence=rhp-0?\\d+",
+    "expected.*rhp-"
+  ],
+  "non_claim_lock": "Diagnostic only. No mutation, rerun, tool authority, CMS/memory/API write, external ingestion, autonomy, or self-authorization."
+}

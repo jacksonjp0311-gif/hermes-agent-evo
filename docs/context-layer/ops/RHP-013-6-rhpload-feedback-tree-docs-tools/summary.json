@@ -1,0 +1,10 @@
+{
+  "rhp_013_6_passed": true,
+  "rhpload_feedback_tree_added": true,
+  "rhpload_feedback_schema": "RHPLOAD-FEEDBACK-TREE-v0.1",
+  "ci_repair_classifier_added": true,
+  "ci_repair_classifier_schema": "RHP-CI-REPAIR-CLASSIFIER-v0.1",
+  "zero_context_resume_supported": true,
+  "focused_tests_passed": true,
+  "next": "RHP-013.7 RHPLOAD live console renderer + evidence transcript"
+}

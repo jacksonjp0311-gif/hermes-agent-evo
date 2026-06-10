@@ -103,6 +103,26 @@ python rhp/ci_watch.py --sha <commit-sha> --workflow Tests --json
 Do not jump from unknown directly to mutation. If a legacy test expects an old RHP evidence string, classify it as stale test surface and repair the test with evidence.
 <!-- HERMES_AGENT_CI_WATCH_LOOP_END -->
 
+<!-- HERMES_AGENT_RHPLOAD_FEEDBACK_TREE_START -->
+## RHPLOAD Feedback Tree
+
+When a single `RHPLOAD [percent]` line is not enough, use the feedback tree.
+
+```text
+python rhp/load_feedback.py --loop CI-REPAIR --operation RHP-013.6 --percent 35
+```
+
+| Need | Use |
+|---|---|
+| zero-context handoff | JSON mode from `rhp/load_feedback.py --json` |
+| operator visibility | expanded ASCII tree |
+| CI red triage | `rhp/ci_repair_classifier.py` |
+| unknown failure | Diagnosis Loop before Mutation Loop |
+
+The feedback tree is process state only. It is not authority.
+<!-- HERMES_AGENT_RHPLOAD_FEEDBACK_TREE_END -->
+
+
 
 
 

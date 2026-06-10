@@ -1,0 +1,14 @@
+COMMAND: C:\Program Files\Python312\python.exe rhp/load_feedback.py --loop CI-REPAIR --operation RHP-013.6 --percent 35
+RETURN CODE: 0
+RHPLOAD [035%] loop=CI-REPAIR operation=RHP-013.6
+`- [035%] All-One execution | status=running | expanded feedback tree
+   +- [010%] Rehydrate | status=ok | repo root, branch, latest evidence
+   +- [020%] Select loop | status=ok | CI-REPAIR
+   +- [035%] Inspect target surfaces | status=running | README, AGENTS, RHP evidence, tests
+   +- [060%] Mutate bounded surface | status=pending | smallest valid patch
+   +- [080%] Validate | status=pending | compile, focused tests, alignment guard
+   +- [090%] Seal | status=pending | evidence, hashes, secret scan
+   `- [100%] Push and watch | status=pending | commit, push, CI watch
+feedback: expanded tree supports zero-context handoff
+feedback: JSON mode supports machine resume
+next: continue selected loop
