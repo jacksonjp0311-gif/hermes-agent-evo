@@ -1,0 +1,9 @@
+{
+  "operation": "RHP-013.0",
+  "root_readme_evo_identity_block": true,
+  "root_readme_public_metrics_updated": true,
+  "rhp_readme_plan_block": true,
+  "script_lineage_file": "docs/context-layer/ops/RHP-013-0-evo-readme-runtimebootstate-plan/all-one-script-lineage.md",
+  "runtimebootstate_plan_file": "docs/context-layer/ops/RHP-013-0-evo-readme-runtimebootstate-plan/runtimebootstate-v0-1-plan.md",
+  "runtimebootstate_implemented": false
+}

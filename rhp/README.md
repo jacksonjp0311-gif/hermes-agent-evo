@@ -412,3 +412,24 @@ Routine analysis should stay compact. Long outputs are allowed only when exact f
 RHP-012.3 seals CI/budget governance only. It grants no provider/model/tool authority, CMS authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claim, production-readiness claim, or self-authorization.
 <!-- RHP_012_3_BUDGET_GUARD_END -->
 
+<!-- RHP_013_0_EVO_PLAN_START -->
+### RHP-013.0 Evo README + All-One Script Lineage + RuntimeBootState Plan
+
+RHP-013.0 anchors the public meaning of `Evo` before RuntimeBootState implementation.
+
+```text
+Evo = governed cybernetic evolution, not autonomy.
+```
+
+| Surface | Status |
+|---|---:|
+| README Evo identity block | passed |
+| Public metrics aligned to RHP-013.0 | passed |
+| RHP-012.3 CI/budget seal preserved | passed |
+| All-One script lineage file | passed |
+| RuntimeBootState implemented | false |
+| Next RHP operation | `RHP-013.1 RuntimeBootState v0.1 implementation` |
+
+Boundary: RHP-013.0 is documentation, evidence, script-lineage, and roadmap alignment only. It does not edit runtime architecture, implement RuntimeBootState, grant provider/model/tool authority, grant CMS/memory/API authority, permit external ingestion, or authorize autonomy.
+<!-- RHP_013_0_EVO_PLAN_END -->
+

@@ -1,0 +1,8 @@
+{
+  "rhp_013_0_passed": true,
+  "evo_identity_block_added": true,
+  "script_lineage_file_added": true,
+  "runtimebootstate_plan_added": true,
+  "runtimebootstate_implemented": false,
+  "next": "RHP-013.1 RuntimeBootState v0.1 implementation"
+}

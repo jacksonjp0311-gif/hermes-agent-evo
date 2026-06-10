@@ -37,6 +37,34 @@ Use any model you want - [Nous Portal](https://portal.nousresearch.com), [OpenRo
 <tr><td><b>Research-ready</b></td><td>Batch trajectory generation, trajectory compression for training the next generation of tool-calling models.</td></tr>
 </table>
 
+<!-- HERMES_AGENT_EVO_IDENTITY_START -->
+## Hermes-Agent-Evo: Cybernetic Systems Upgrade
+
+This fork preserves the upstream Nous Research Hermes Agent product surface while adding a governed cybernetic evolution layer for James Paul Jackson's Hermes work.
+
+**What "Evo" means here:** Evo is not a claim of autonomy, consciousness, AGI, production readiness, or self-authorization. Evo means the repository is being upgraded into a governed cybernetic system: runtime capability plus repository orientation, evidence-bounded memory/governance, visible boot-state locks, CI closure, rollback-aware scripts, and human authorization gates.
+
+```text
+Hermes Agent          = capable actor runtime
+Hermes-Agent-Evo      = Hermes runtime + RHP/HRCN/CMS governance geometry
+Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> test -> authorize -> seal
+```
+
+### Evo Upgrade Surface
+
+| Surface | Upgrade |
+|---|---|
+| RHP | Runtime rehydration, startup evidence, visible lock sequence, degraded-safe boot status. |
+| HRCN | Read-only runtime/context governance boundary for Hermes/CMS/RCC surfaces. |
+| CMS | Governed memory and permission substrate, still bounded by read-only / dry-run / apply-gate phases. |
+| All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
+| CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
+| Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
+| Next architecture target | `RHP-013.1 RuntimeBootState v0.1 implementation`. |
+
+Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
+<!-- HERMES_AGENT_EVO_IDENTITY_END -->
+
 <!-- HRCN_CONTEXT_LAYER_START -->
 ## RCC-CMS-HRCN Runtime Governance Layer
 
@@ -98,12 +126,16 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-012-2-final-evidence.json` |
-| Current RHP status | `RHP-012.2 compact CLI gold banner Rehydration Protocol strip passed` |
-| Next RHP gate | `RHP-013 operator dashboard and status packet normalization` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-0-final-evidence.json` |
+| Current RHP status | `RHP-013.0 Evo README, All-One script lineage, and RuntimeBootState plan anchored` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-012-3-final-evidence.json` |
+| Previous RHP status | `RHP-012.3 CI closure and budget guard sealed` |
+| Next RHP gate | `RHP-013.1 RuntimeBootState v0.1 implementation` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
+| Planned RuntimeBootState home | `rhp/startup_context_packet.py` |
+| All-One script lineage | `docs/context-layer/ops/RHP-013-0-evo-readme-runtimebootstate-plan/all-one-script-lineage.md` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -113,6 +145,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
+
 
 <!-- RHP_012_3_BUDGET_GUARD_START -->
 ### RHP-012.3 Compact Rehydration + Budget Guard
@@ -333,9 +366,9 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-012 = read-only runtime-native 
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-012-2-final-evidence.json` |
-| Current RHP status | `RHP-012.2 compact CLI gold banner Rehydration Protocol strip passed` |
-| Next gate | `RHP-013 operator dashboard and status packet normalization` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-0-final-evidence.json` |
+| Current RHP status | `RHP-013.0 Evo README, script lineage, and RuntimeBootState plan anchored` |
+| Next gate | `RHP-013.1 RuntimeBootState v0.1 implementation` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-012.
 
