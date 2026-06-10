@@ -1,0 +1,11 @@
+f66b5c02f850b39de939fbeca0ff887f680fcdfbcdda02aefae00b6f315b7b61  README.md
+6baf8692608dd44de87f7acdf38210639f255764d2b4e99f96fd6a8eda6687c6  rhp/README.md
+18b839fd5c87bf49669c10fa817d8c04f85650e7a5b2b14a2439389e5ac97c0c  rhp/startup_context_packet.py
+c6503182dbbb94f8c4d6cca27cc9ad839dd991ef11fde39e895f948098f69b27  rhp/boot_preflight.py
+985b24876e3682a737664d672ad3ec781a90bea95785521b956633362e069c03  rhp/alignment_guard.py
+c2db0f2fc795c3fe2479a1eeed8b2cf3ea4cc44f52f32d8be617690d7fb9f902  tests/test_rhp_013_runtime_boot_state.py
+39c46248980b42e98823da71dced55eb262ade43eba8084c83a53ca6a5f5d468  docs/context-layer/ops/RHP-013-1-final-evidence.json
+3998b8f88da57aac943844f6b9dd5598fbd78a98665e2b1be67f17c4e58a1849  docs/context-layer/ops/RHP-013-1-runtimebootstate-v0-1.md
+70b049b4ca7a67b376c02edca3fef97e8b1918f49703098c751cee345a95cf09  docs/context-layer/ops/RHP-013-1-runtimebootstate-v0-1/py-compile-output.txt
+03c7a1f2a528012bc9026a12d86a5459ca695072491d39fa5d800e6559f4d07f  docs/context-layer/ops/RHP-013-1-runtimebootstate-v0-1/alignment-guard-output.txt
+5cc662b8f34168eb3875c2fc9aa8e0104388abd15ce28093b29fbf466e7d63cf  docs/context-layer/ops/RHP-013-1-runtimebootstate-v0-1/focused-test-output.txt

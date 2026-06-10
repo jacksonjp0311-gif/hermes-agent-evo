@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-LATEST_RHP_EVIDENCE = "docs/context-layer/ops/RHP-011-final-evidence.json"
+LATEST_RHP_EVIDENCE = "docs/context-layer/ops/RHP-013-1-final-evidence.json"
 HRCN_EVIDENCE = "docs/context-layer/ops/OPS-027-final-evidence.json"
 
 AUTHORITY_FALSE_KEYS = (
@@ -132,10 +132,9 @@ def run_boot_preflight(repo_root: str | Path | None = None) -> BootPreflightPack
     latest, latest_error = _read_json_or_empty(latest_path)
 
     rhp_evidence_green = (
-        latest.get("schema") == "RHP-011-final-evidence"
-        and latest.get("operator_visible_startup_locks_passed") is True
-        and latest.get("operator_status_ascii_safe") is True
-        and latest.get("installed_launcher_visible_status_smoke_passed") is True
+        latest.get("schema") == "RHP-013.1-final-evidence"
+        and latest.get("operation") == "RHP-013.1"
+        and latest.get("runtimebootstate_implemented") is True
         and latest.get("py_compile_passed") is True
         and latest.get("focused_tests_passed") is True
         and latest.get("alignment_guard_self_check_passed") is True

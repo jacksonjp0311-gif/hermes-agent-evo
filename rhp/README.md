@@ -427,9 +427,21 @@ Evo = governed cybernetic evolution, not autonomy.
 | Public metrics aligned to RHP-013.0 | passed |
 | RHP-012.3 CI/budget seal preserved | passed |
 | All-One script lineage file | passed |
-| RuntimeBootState implemented | false |
-| Next RHP operation | `RHP-013.1 RuntimeBootState v0.1 implementation` |
+| RuntimeBootState implemented | true |
+| Next RHP operation | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState` |
 
 Boundary: RHP-013.0 is documentation, evidence, script-lineage, and roadmap alignment only. It does not edit runtime architecture, implement RuntimeBootState, grant provider/model/tool authority, grant CMS/memory/API authority, permit external ingestion, or authorize autonomy.
 <!-- RHP_013_0_EVO_PLAN_END -->
+
+<!-- RHP_013_1_RUNTIMEBOOTSTATE_START -->
+#### RHP-013.1 RuntimeBootState v0.1
+
+RHP-013.1 adds the first typed `RuntimeBootState` packet in `rhp/startup_context_packet.py` and aligns boot preflight / alignment guard to the current RHP-013.1 evidence surface.
+
+```text
+StartupContextPacket -> RuntimeBootState -> future shared CLI/banner/operator truth
+```
+
+Boundary: RHP-013.1 adds a typed read-only state object and direct tests only. It does not wire new runtime consumers, call providers/models/tools, write CMS or memory, write APIs, perform external ingestion, grant autonomy, or self-authorize.
+<!-- RHP_013_1_RUNTIMEBOOTSTATE_END -->
 

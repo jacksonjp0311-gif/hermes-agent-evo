@@ -1,0 +1,12 @@
+{
+  "rhp_013_1_passed": true,
+  "runtimebootstate_implemented": true,
+  "runtimebootstate_schema": "RHP-RUNTIME-BOOT-STATE-v0.1",
+  "boot_preflight_aligned_to_rhp0131": true,
+  "alignment_guard_aligned_to_rhp0131": true,
+  "runtime_consumer_wiring_changed": false,
+  "py_compile_passed": true,
+  "focused_tests_passed": true,
+  "focused_test_mode": "pytest",
+  "next": "RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState"
+}

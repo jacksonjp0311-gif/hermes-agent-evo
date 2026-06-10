@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_013_runtime_boot_state.py tests/test_rhp_010_runtime_native_boot.py
+RETURN CODE: 0
+.....                                                                    [100%]
+5 passed in 0.96s

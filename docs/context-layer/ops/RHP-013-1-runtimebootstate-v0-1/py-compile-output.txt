@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/startup_context_packet.py rhp/boot_preflight.py rhp/alignment_guard.py tests/test_rhp_013_runtime_boot_state.py
+RETURN CODE: 0
+

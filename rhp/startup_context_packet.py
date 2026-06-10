@@ -61,6 +61,53 @@ class StartupContextPacket:
     def as_dict(self) -> dict[str, Any]:
         return dict(self.__dict__)
 
+RUNTIME_BOOT_STATE_SCHEMA = "RHP-RUNTIME-BOOT-STATE-v0.1"
+
+RUNTIME_AUTHORITY_FALSE_KEYS = (
+    "provider_call_executed",
+    "model_call_executed",
+    "tool_use_executed",
+    "cms_runtime_execution",
+    "cms_write",
+    "memory_write",
+    "memory_promotion",
+    "api_write",
+    "dependency_mutation_committed",
+    "external_ingestion",
+    "self_authorization",
+    "autonomous_authority",
+)
+
+@dataclass(frozen=True)
+class RuntimeBootState:
+    ok: bool
+    schema: str
+    evidence: str
+    repo_root: str
+    phase: str
+    status: str
+    degraded: bool
+    degraded_reason: str
+    entrypoint: str
+    interface: str
+    profile: str
+    session_id: str
+    boot_preflight_packet_schema: str
+    startup_context_packet_schema: str
+    boot_preflight_ok: bool
+    startup_packet_ok: bool
+    locks: dict[str, bool]
+    authority: dict[str, bool]
+    operator_status_text: str
+    protocol_strip: str
+    protocol_locks: list[str]
+    prompt_context_json: str
+    env: dict[str, str]
+    non_claim_lock: str
+
+    def as_dict(self) -> dict[str, Any]:
+        return dict(self.__dict__)
+
 def find_repo_root(start: str | Path | None = None) -> Path:
     current = Path(start or Path.cwd()).resolve()
     if current.is_file():
@@ -124,6 +171,100 @@ def build_startup_context_packet(repo_root: str | Path | None = None) -> Startup
         ),
         **false_flags,
     )
+
+def _selected_rhp_env() -> dict[str, str]:
+    names = (
+        "HERMES_RHP_NATIVE_BOOT",
+        "HERMES_RHP_BOOT_PREFLIGHT",
+        "HERMES_RHP_CONTEXT",
+        "HERMES_HRCN_CONTEXT",
+        "HERMES_RHP_BOOT_PREFLIGHT_STATUS",
+        "HERMES_RHP_OPERATOR_STATUS",
+        "HERMES_RHP_PROTOCOL_STRIP",
+        "HERMES_RHP_PROTOCOL_LOCKS",
+    )
+    return {name: os.environ.get(name, "") for name in names}
+
+def build_runtime_boot_state(
+    repo_root: str | Path | None = None,
+    *,
+    entrypoint: str = "hermes",
+    interface: str = "cli",
+    profile: str = "runtime",
+    session_id: str = "",
+) -> RuntimeBootState:
+    packet = build_startup_context_packet(repo_root)
+    root = find_repo_root(repo_root)
+    packet_data = packet.as_dict()
+    authority = {key: bool(packet_data.get(key, False)) for key in RUNTIME_AUTHORITY_FALSE_KEYS}
+    authority_false = all(value is False for value in authority.values())
+    locks = {
+        "repo_root_found": True,
+        "boot_preflight_ok": bool(packet.boot_preflight_ok),
+        "native_boot_hook_present": bool(packet.native_boot_hook_present),
+        "startup_context_packet_created": bool(packet.startup_context_packet_created),
+        "authority_false": authority_false,
+        "external_ingestion_false": authority.get("external_ingestion") is False,
+        "cms_memory_api_write_false": (
+            authority.get("cms_write") is False
+            and authority.get("memory_write") is False
+            and authority.get("api_write") is False
+        ),
+    }
+    failed_locks = [name for name, ok in locks.items() if ok is not True]
+    degraded = bool(packet.boot_preflight_degraded or failed_locks)
+    degraded_reason = packet.boot_preflight_degraded_reason or (", ".join(failed_locks) if failed_locks else "")
+    ok = bool(all(value is True for value in locks.values()) and not degraded)
+    status = "verified" if ok else "degraded"
+    protocol_locks = [f"{name}={str(value).lower()}" for name, value in locks.items()]
+    protocol_strip = f"RHP RuntimeBootState: {status} | phase=pre-interaction | evidence=RHP-013.1 | authority=false"
+    prompt_payload = {
+        "schema": RUNTIME_BOOT_STATE_SCHEMA,
+        "evidence": "RHP-013.1",
+        "phase": "pre-interaction",
+        "status": status,
+        "degraded": degraded,
+        "authority": authority,
+        "locks": locks,
+    }
+    return RuntimeBootState(
+        ok=ok,
+        schema=RUNTIME_BOOT_STATE_SCHEMA,
+        evidence="RHP-013.1",
+        repo_root=str(root),
+        phase="pre-interaction",
+        status=status,
+        degraded=degraded,
+        degraded_reason=degraded_reason,
+        entrypoint=entrypoint,
+        interface=interface,
+        profile=profile,
+        session_id=session_id,
+        boot_preflight_packet_schema="RHP-BOOT-PREFLIGHT-PACKET-v0.3",
+        startup_context_packet_schema=packet.schema,
+        boot_preflight_ok=bool(packet.boot_preflight_ok),
+        startup_packet_ok=bool(packet.startup_context_packet_created),
+        locks=locks,
+        authority=authority,
+        operator_status_text=packet.operator_visible_status,
+        protocol_strip=protocol_strip,
+        protocol_locks=protocol_locks,
+        prompt_context_json=json.dumps(prompt_payload, sort_keys=True),
+        env=_selected_rhp_env(),
+        non_claim_lock=(
+            "RHP-013.1 RuntimeBootState is a typed read-only boot truth packet. "
+            "It normalizes startup/preflight/operator/protocol state for future consumers. "
+            "It does not call providers/models/tools, write CMS or memory, write APIs, "
+            "perform external ingestion, grant autonomy, or self-authorize."
+        ),
+    )
+
+def runtime_boot_state_json(repo_root: str | Path | None = None) -> str:
+    return json.dumps(build_runtime_boot_state(repo_root).as_dict(), indent=2, sort_keys=True)
+
+def runtime_boot_state_from_env(repo_root: str | Path | None = None) -> RuntimeBootState:
+    return build_runtime_boot_state(repo_root)
+
 
 def packet_json(repo_root: str | Path | None = None) -> str:
     return json.dumps(build_startup_context_packet(repo_root).as_dict(), indent=2, sort_keys=True)

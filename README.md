@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-013.1 RuntimeBootState v0.1 implementation`. |
+| Next architecture target | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -126,16 +126,16 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-0-final-evidence.json` |
-| Current RHP status | `RHP-013.0 Evo README, All-One script lineage, and RuntimeBootState plan anchored` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-012-3-final-evidence.json` |
-| Previous RHP status | `RHP-012.3 CI closure and budget guard sealed` |
-| Next RHP gate | `RHP-013.1 RuntimeBootState v0.1 implementation` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-1-final-evidence.json` |
+| Current RHP status | `RHP-013.1 RuntimeBootState v0.1 typed packet implemented` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-013-1-final-evidence.json` |
+| Previous RHP status | `RHP-013.0 Evo README, All-One script lineage, and RuntimeBootState plan anchored` |
+| Next RHP gate | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
-| Planned RuntimeBootState home | `rhp/startup_context_packet.py` |
-| All-One script lineage | `docs/context-layer/ops/RHP-013-0-evo-readme-runtimebootstate-plan/all-one-script-lineage.md` |
+| RuntimeBootState home | `rhp/startup_context_packet.py` |
+| RuntimeBootState schema | `RHP-RUNTIME-BOOT-STATE-v0.1` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -145,6 +145,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
+
 
 
 <!-- RHP_012_3_BUDGET_GUARD_START -->
@@ -318,6 +319,18 @@ RHP-012.2 binds the compact `$NOUS HERMES - AI Agent Framework` banner in `cli.p
 
 Boundary: compact banner display only. No provider/model/tool authority, CMS write, memory promotion, API write, external ingestion, autonomy, or self-authorization.
 
+<!-- RHP_013_1_RUNTIMEBOOTSTATE_START -->
+#### RHP-013.1 RuntimeBootState v0.1
+
+RHP-013.1 adds the first typed `RuntimeBootState` packet in `rhp/startup_context_packet.py` and aligns boot preflight / alignment guard to the current RHP-013.1 evidence surface.
+
+```text
+StartupContextPacket -> RuntimeBootState -> future shared CLI/banner/operator truth
+```
+
+Boundary: RHP-013.1 adds a typed read-only state object and direct tests only. It does not wire new runtime consumers, call providers/models/tools, write CMS or memory, write APIs, perform external ingestion, grant autonomy, or self-authorize.
+<!-- RHP_013_1_RUNTIMEBOOTSTATE_END -->
+
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_END -->
 
 
@@ -366,9 +379,9 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-012 = read-only runtime-native 
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-0-final-evidence.json` |
-| Current RHP status | `RHP-013.0 Evo README, script lineage, and RuntimeBootState plan anchored` |
-| Next gate | `RHP-013.1 RuntimeBootState v0.1 implementation` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-1-final-evidence.json` |
+| Current RHP status | `RHP-013.1 RuntimeBootState v0.1 typed packet implemented` |
+| Next gate | `RHP-013.2 wire CLI/banner/operator surfaces to RuntimeBootState` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-012.
 
