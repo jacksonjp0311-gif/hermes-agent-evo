@@ -1,4 +1,4 @@
-# RHP-012 startup context packet.
+# RHP-013.4 startup context packet and RuntimeBootState.
 from __future__ import annotations
 
 import argparse
@@ -217,10 +217,10 @@ def build_runtime_boot_state(
     ok = bool(all(value is True for value in locks.values()) and not degraded)
     status = "verified" if ok else "degraded"
     protocol_locks = [f"{name}={str(value).lower()}" for name, value in locks.items()]
-    protocol_strip = f"RHP RuntimeBootState: {status} | phase=pre-interaction | evidence=RHP-013.1 | authority=false"
+    protocol_strip = f"RHP RuntimeBootState: {status} | phase=pre-interaction | evidence=RHP-013.4 | authority=false"
     prompt_payload = {
         "schema": RUNTIME_BOOT_STATE_SCHEMA,
-        "evidence": "RHP-013.1",
+        "evidence": "RHP-013.4",
         "phase": "pre-interaction",
         "status": status,
         "degraded": degraded,
@@ -230,7 +230,7 @@ def build_runtime_boot_state(
     return RuntimeBootState(
         ok=ok,
         schema=RUNTIME_BOOT_STATE_SCHEMA,
-        evidence="RHP-013.1",
+        evidence="RHP-013.4",
         repo_root=str(root),
         phase="pre-interaction",
         status=status,
@@ -252,7 +252,7 @@ def build_runtime_boot_state(
         prompt_context_json=json.dumps(prompt_payload, sort_keys=True),
         env=_selected_rhp_env(),
         non_claim_lock=(
-            "RHP-013.1 RuntimeBootState is a typed read-only boot truth packet. "
+            "RHP-013.4 RuntimeBootState is the typed read-only boot truth packet wired into operator and banner surfaces. "
             "It normalizes startup/preflight/operator/protocol state for future consumers. "
             "It does not call providers/models/tools, write CMS or memory, write APIs, "
             "perform external ingestion, grant autonomy, or self-authorize."

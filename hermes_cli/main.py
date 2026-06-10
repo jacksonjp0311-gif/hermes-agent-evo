@@ -301,7 +301,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 def _rhp_render_operator_status(packet) -> str:
     try:
         from rhp.operator_startup_status import render_operator_startup_status
-        return render_operator_startup_status(packet, evidence="RHP-012")
+        return render_operator_startup_status(packet, evidence="RHP-013.4")
     except Exception:
         return "\n".join([
             "RHP rehydration sequence:",
@@ -314,7 +314,7 @@ def _rhp_render_operator_status(packet) -> str:
             "[OK] external_ingestion=false",
             "[OK] provider/model/tool execution=false",
             "[OK] CMS/memory/API write=false",
-            "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-012",
+            "RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-013.4",
             "RHP authority boundary: provider/model/tool=false | CMS/memory/API=false | external_ingestion=false | autonomy=false",
         ])
 
@@ -330,26 +330,15 @@ def _rhp_native_boot_orientation_early() -> None:
     os.environ.setdefault("HERMES_HRCN_CONTEXT", "proposal")
 
     try:
-        from rhp.boot_preflight import run_boot_preflight
+        from rhp.startup_context_packet import build_runtime_boot_state
 
-        packet = run_boot_preflight(PROJECT_ROOT)
+        packet = build_runtime_boot_state(PROJECT_ROOT, entrypoint="hermes", interface=("tui" if _wants_tui_early() else "cli"), profile=os.environ.get("HERMES_PROFILE", "runtime"))
         os.environ["HERMES_RHP_BOOT_PREFLIGHT_STATUS"] = "ok" if packet.ok else "degraded"
-        os.environ["HERMES_RHP_BOOT_PREFLIGHT_PACKET"] = "RHP-BOOT-PREFLIGHT-PACKET-v0.3"
+        os.environ["HERMES_RHP_BOOT_PREFLIGHT_PACKET"] = packet.boot_preflight_packet_schema
+        os.environ["HERMES_RHP_RUNTIME_BOOT_STATE"] = packet.schema
         os.environ["HERMES_RHP_OPERATOR_STATUS"] = _rhp_render_operator_status(packet)
-        os.environ["HERMES_RHP_PROTOCOL_STRIP"] = (
-            "Rehydration Protocol - "
-            + ("verified" if packet.ok else "degraded")
-            + " - phase=pre-interaction - evidence=RHP-012 - authority=false"
-        )
-        os.environ["HERMES_RHP_PROTOCOL_LOCKS"] = (
-            "locks: repo ok - evidence "
-            + ("ok" if packet.rhp_evidence_green else "degraded")
-            + " - HRCN "
-            + ("ok" if packet.hrcn_boundary_green else "degraded")
-            + " - alignment "
-            + ("ok" if packet.alignment_guard_green else "degraded")
-            + " - startup ok"
-        )
+        os.environ["HERMES_RHP_PROTOCOL_STRIP"] = packet.protocol_strip
+        os.environ["HERMES_RHP_PROTOCOL_LOCKS"] = "locks: " + " - ".join(packet.protocol_locks)
 
         if (
             packet.ok

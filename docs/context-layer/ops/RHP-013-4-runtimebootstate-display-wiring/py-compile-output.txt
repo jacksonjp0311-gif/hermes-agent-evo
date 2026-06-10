@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/startup_context_packet.py rhp/boot_preflight.py rhp/alignment_guard.py rhp/operator_startup_status.py hermes_cli/main.py hermes_cli/banner.py tests/test_rhp_alignment_guard.py tests/test_rhp_013_runtime_boot_state.py tests/test_rhp_013_4_runtime_display.py
+RETURN CODE: 0
+

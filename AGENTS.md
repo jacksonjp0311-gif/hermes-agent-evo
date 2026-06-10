@@ -64,6 +64,25 @@ Before editing, choose exactly one loop and announce it with `RHPLOAD`.
 Agent rule: do not combine loops unless the user explicitly authorizes a combined operation and the evidence names each loop.
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_END -->
 
+<!-- HERMES_AGENT_RUNTIME_STATUS_LOOP_START -->
+## Runtime Status Loop Wiring
+
+RHP-013.4 makes the Runtime Status Loop operational.
+
+When editing boot display surfaces, source truth from `RuntimeBootState` and keep these outputs aligned:
+
+| Surface | Expected source |
+|---|---|
+| CLI early boot stderr | `build_runtime_boot_state()` |
+| Operator startup lines | `render_operator_startup_status(RuntimeBootState)` |
+| Banner protocol strip | `HERMES_RHP_PROTOCOL_STRIP` / `HERMES_RHP_PROTOCOL_LOCKS` |
+| Evidence label | latest RHP final evidence |
+| Authority boundary | nested `RuntimeBootState.authority` values all false |
+
+Do not create a second boot truth source.
+<!-- HERMES_AGENT_RUNTIME_STATUS_LOOP_END -->
+
+
 
 
 ## Development Environment

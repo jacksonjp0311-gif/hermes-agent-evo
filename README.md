@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status`. |
+| Next architecture target | `RHP-013.5 post-push CI watch loop evidence automation`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -126,18 +126,18 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-3-final-evidence.json` |
-| Current RHP status | `RHP-013.3 operational loop boxes, AI takeover runbook, and stale README surface closure sealed` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-013-2-final-evidence.json` |
-| Previous RHP status | `RHP-013.2 AI/agent preferences, reflective coding chart, load-status contract, and CI stale-test repair sealed` |
-| Next RHP gate | `RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
+| Current RHP status | `RHP-013.4 RuntimeBootState display wiring sealed` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
+| Previous RHP status | `RHP-013.3 operational loop boxes, AI takeover runbook, and stale README surface closure sealed` |
+| Next RHP gate | `RHP-013.5 post-push CI watch loop evidence automation` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
 | RuntimeBootState home | `rhp/startup_context_packet.py` |
 | RuntimeBootState schema | `RHP-RUNTIME-BOOT-STATE-v0.1` |
+| RuntimeBootState display wiring | `hermes_cli/main.py`, `hermes_cli/banner.py`, `rhp/operator_startup_status.py` |
 | Agent coding guide | `AGENTS.md` |
-| Agent preference chart | `README.md#ai--agent-preferences-and-reflective-coding-enhancements` |
 | Operational loop boxes | `README.md#operational-loop-boxes-and-ai-takeover-runbook` |
 | Load status contract | `RHPLOAD [000%..100%]` |
 | Runtime source authority | `False` |
@@ -149,6 +149,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
+
 
 
 
@@ -261,6 +262,27 @@ The word "takeover" here means procedural continuity, not autonomous authority. 
 Boundary: loop boxes teach procedure. They do not grant runtime authority, provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, production-readiness claims, or self-authorization.
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_END -->
 
+<!-- HERMES_RHP_013_4_RUNTIME_DISPLAY_START -->
+### RHP-013.4 RuntimeBootState Display Wiring
+
+RHP-013.4 wires the typed `RuntimeBootState` into the visible operator and banner surfaces.
+
+```text
+RuntimeBootState
+-> HERMES_RHP_RUNTIME_BOOT_STATE
+-> HERMES_RHP_OPERATOR_STATUS
+-> HERMES_RHP_PROTOCOL_STRIP
+-> HERMES_RHP_PROTOCOL_LOCKS
+-> CLI stderr boot status
+-> gold banner Rehydration Protocol strip
+```
+
+This is still read-only orientation. The display proves what loaded and which authority locks are false; it does not grant provider/model/tool, CMS, memory, API, external-ingestion, autonomous, or self-authorization authority.
+
+Next: `RHP-013.5 post-push CI watch loop evidence automation`.
+<!-- HERMES_RHP_013_4_RUNTIME_DISPLAY_END -->
+
+
 
 <!-- RHP_012_3_BUDGET_GUARD_START -->
 ### RHP-012.3 Compact Rehydration + Budget Guard
@@ -320,7 +342,7 @@ Human summary: this fork contains a Hermes-local Rehydration Protocol substrate 
 | RHP-013.1 | RuntimeBootState v0.1 typed packet. | passed |
 | RHP-013.2 | AI/agent preferences and CI stale-test repair. | passed |
 | RHP-013.3 | Operational loop boxes and AI takeover runbook. | passed |
-| RHP-013.4 | Wire CLI/banner/operator surfaces to RuntimeBootState status. | next |
+| RHP-013.4 | Wire CLI/banner/operator surfaces to RuntimeBootState status. | passed |
 
 #### Runtime Boot Order
 
@@ -342,7 +364,7 @@ Hermes executable starts
 ```text
 RHP rehydration sequence:
 [OK] repo root found
-[OK] RHP-013.3 evidence green
+[OK] RHP-013.4 evidence green
 [OK] HRCN boundary green
 [OK] alignment guard green
 [OK] startup packet created
@@ -350,7 +372,7 @@ RHP rehydration sequence:
 [OK] external_ingestion=false
 [OK] provider/model/tool execution=false
 [OK] CMS/memory/API write=false
-RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-013.3
+RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-013.4
 ```
 
 #### Current Boundary
@@ -370,7 +392,7 @@ RHP rehydration complete: ok | phase=pre-interaction | evidence=RHP-013.3
 | CMS/memory authority | `False` |
 | External ingestion authority | `False` |
 | Autonomous authority | `False` |
-| Latest RHP evidence | `docs/context-layer/ops/RHP-013-3-final-evidence.json` |
+| Latest RHP evidence | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 
 #### Failure-Learning Lock
 
@@ -485,7 +507,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | RHP-013.1 | RuntimeBootState v0.1 typed packet. | passed |
 | RHP-013.2 | AI/agent preferences and CI stale-test repair. | passed |
 | RHP-013.3 | Operational loop boxes and AI takeover runbook. | passed |
-| next | RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status. | next |
+| next | RHP-013.5 post-push CI watch loop evidence automation. | next |
 
 #### Current Runtime Boundary
 
@@ -500,9 +522,9 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | HRCN context injection gate | `HERMES_HRCN_CONTEXT` |
 | RHP context injection gate | `HERMES_RHP_CONTEXT` |
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-3-final-evidence.json` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Current RHP status | `RHP-013.3 operational loop boxes and AI takeover runbook sealed` |
-| Next gate | `RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status` |
+| Next gate | `RHP-013.5 post-push CI watch loop evidence automation` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-013.3.
 
@@ -538,7 +560,7 @@ OPS has served its role as the HRCN evidence ledger through v0.3. RHP carries th
 | RHP-013.1 | RuntimeBootState v0.1 typed packet. | passed |
 | RHP-013.2 | AI/agent preferences and CI stale-test repair. | passed |
 | RHP-013.3 | Operational loop boxes and AI takeover runbook. | passed |
-| RHP-013.4 | Wire CLI/banner/operator surfaces to RuntimeBootState status. | next |
+| RHP-013.4 | Wire CLI/banner/operator surfaces to RuntimeBootState status. | passed |
 
 Operational bridge target:
 
@@ -611,7 +633,7 @@ This fork does not prove Hermes correctness, CMS correctness, code correctness, 
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Release tag | `hrcn-ops-v0.1.0` |
 | Bounded loop tag | `hrcn-ops-v0.2.0` |
-| Latest post-seal proof | `docs/context-layer/ops/RHP-013-3-final-evidence.json` |
+| Latest post-seal proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Post-seal status | `RHP-013.3 operational loop boxes and AI takeover runbook sealed` |
 | Next post-seal gate | `RHP-013.4 RuntimeBootState display wiring` |
 | Mini README profiles | `full / compact / pointer` |

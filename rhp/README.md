@@ -470,6 +470,20 @@ select loop -> load required surfaces -> state authority boundary -> mutate smal
 
 Runtime wiring is still deferred.
 
-Next: `RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status`.
+Next: `RHP-013.5 post-push CI watch loop evidence automation`.
 <!-- RHP_013_3_LOOP_BOXES_END -->
+
+<!-- RHP_013_4_RUNTIME_DISPLAY_START -->
+### RHP-013.4 RuntimeBootState Display Wiring
+
+RHP-013.4 wires RuntimeBootState into operator-visible startup, CLI boot environment variables, and banner protocol display.
+
+```text
+RuntimeBootState -> operator status -> protocol strip -> banner
+```
+
+Authority remains false. Runtime display is not runtime permission.
+
+Next: `RHP-013.5 post-push CI watch loop evidence automation`.
+<!-- RHP_013_4_RUNTIME_DISPLAY_END -->
 

@@ -17,7 +17,7 @@ def test_rhp_013_runtime_boot_state_schema_and_boundary(monkeypatch):
 
     assert state.schema == RUNTIME_BOOT_STATE_SCHEMA
     assert state.schema == "RHP-RUNTIME-BOOT-STATE-v0.1"
-    assert state.evidence == "RHP-013.1"
+    assert state.evidence == "RHP-013.4"
     assert state.phase == "pre-interaction"
     assert state.startup_context_packet_schema == "RHP-STARTUP-CONTEXT-PACKET-v0.4"
     assert state.boot_preflight_packet_schema == "RHP-BOOT-PREFLIGHT-PACKET-v0.3"
@@ -34,7 +34,7 @@ def test_rhp_013_runtime_boot_state_schema_and_boundary(monkeypatch):
     assert state.authority["autonomous_authority"] is False
     assert state.authority["self_authorization"] is False
     assert "authority=false" in state.protocol_strip
-    assert "RHP-013.1" in state.protocol_strip
+    assert "RHP-013.4" in state.protocol_strip
     assert "RHP-RUNTIME-BOOT-STATE-v0.1" in state.prompt_context_json
     assert "locks" in data
 

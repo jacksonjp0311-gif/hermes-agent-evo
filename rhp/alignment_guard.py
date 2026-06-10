@@ -5,8 +5,8 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-LATEST_EVIDENCE = "docs/context-layer/ops/RHP-013-1-final-evidence.json"
-PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-013-0-final-evidence.json"
+LATEST_EVIDENCE = "docs/context-layer/ops/RHP-013-4-final-evidence.json"
+PREVIOUS_EVIDENCE = "docs/context-layer/ops/RHP-013-3-final-evidence.json"
 
 AUTHORITY_FALSE_KEYS = [
     "provider_call_executed",
@@ -62,42 +62,48 @@ def validate_alignment(repo_root: str | Path | None = None, *, require_latest_pa
     rhp_readme = _read(root / "rhp" / "README.md")
     startup_packet = _read(root / "rhp" / "startup_context_packet.py")
     boot_preflight = _read(root / "rhp" / "boot_preflight.py")
+    operator_status = _read(root / "rhp" / "operator_startup_status.py")
+    cli_main = _read(root / "hermes_cli" / "main.py")
+    banner = _read(root / "hermes_cli" / "banner.py")
     previous = _json(root / PREVIOUS_EVIDENCE)
     latest_path = root / LATEST_EVIDENCE
     latest_exists = latest_path.is_file()
     latest = _json(latest_path) if latest_exists else {}
 
     checks: dict[str, bool] = {}
-    checks["previous_rhp0130_passed"] = (
-        previous.get("schema") == "RHP-013.0-final-evidence"
-        and previous.get("operation") == "RHP-013.0"
-        and previous.get("evo_identity_block_added") is True
-        and previous.get("runtimebootstate_implemented") is False
+    checks["previous_rhp0133_passed"] = (
+        previous.get("schema") == "RHP-013.3-final-evidence"
+        and previous.get("operation") == "RHP-013.3"
+        and previous.get("operational_loop_boxes_added") is True
+        and previous.get("stale_readme_surfaces_repaired") is True
         and _false_authority(previous)
     )
     checks["latest_evidence_exists"] = latest_exists
     checks["root_readme_latest_evidence"] = LATEST_EVIDENCE in readme
-    checks["root_readme_current_status"] = "RHP-013.1 RuntimeBootState v0.1 typed packet implemented" in readme
-    checks["rhp_readme_rhp0131_present"] = "RHP-013.1 RuntimeBootState v0.1" in rhp_readme
+    checks["root_readme_current_status"] = "RHP-013.4 RuntimeBootState display wiring sealed" in readme
+    checks["rhp_readme_rhp0134_present"] = "RHP-013.4 RuntimeBootState Display Wiring" in rhp_readme
     checks["runtimebootstate_schema_present"] = "RHP-RUNTIME-BOOT-STATE-v0.1" in startup_packet
-    checks["runtimebootstate_builder_present"] = "def build_runtime_boot_state(" in startup_packet
+    checks["runtimebootstate_evidence_0134"] = "RHP-013.4" in startup_packet
     checks["boot_preflight_latest_evidence_present"] = LATEST_EVIDENCE in boot_preflight
+    checks["operator_status_evidence_0134"] = "RHP-013.4" in operator_status
+    checks["cli_uses_runtime_boot_state"] = "build_runtime_boot_state" in cli_main and "HERMES_RHP_RUNTIME_BOOT_STATE" in cli_main
+    checks["banner_evidence_0134"] = "RHP-013.4" in banner
 
     if require_latest_passed:
-        checks["latest_rhp0131_passed"] = (
-            latest.get("schema") == "RHP-013.1-final-evidence"
-            and latest.get("operation") == "RHP-013.1"
-            and latest.get("runtimebootstate_implemented") is True
+        checks["latest_rhp0134_passed"] = (
+            latest.get("schema") == "RHP-013.4-final-evidence"
+            and latest.get("operation") == "RHP-013.4"
+            and latest.get("runtimebootstate_display_wired") is True
             and latest.get("py_compile_passed") is True
             and latest.get("focused_tests_passed") is True
             and latest.get("alignment_guard_self_check_passed") is True
             and _false_authority(latest)
         )
     else:
-        checks["latest_rhp0131_has_boundary_shape"] = (
-            latest.get("schema") == "RHP-013.1-final-evidence"
-            and latest.get("operation") == "RHP-013.1"
-            and latest.get("runtimebootstate_implemented") is True
+        checks["latest_rhp0134_has_boundary_shape"] = (
+            latest.get("schema") == "RHP-013.4-final-evidence"
+            and latest.get("operation") == "RHP-013.4"
+            and latest.get("runtimebootstate_display_wired") is True
             and _false_authority(latest)
         )
 
