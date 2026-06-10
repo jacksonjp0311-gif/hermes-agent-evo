@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_014_1_operator_interface.py tests/test_rhp_014_1_warning_compressor.py tests/test_rhp_014_1_dev_loop_chart.py
+RETURN CODE: 0
+....                                                                     [100%]
+4 passed in 0.51s

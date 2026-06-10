@@ -1,0 +1,10 @@
+{
+  "rhp_014_1_passed": true,
+  "operator_interface_added": true,
+  "warning_compressor_added": true,
+  "dev_loop_chart_added": true,
+  "press_enter_to_close_removed_from_standard": true,
+  "return_to_root_required": true,
+  "focused_tests_passed": true,
+  "next": "RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run"
+}

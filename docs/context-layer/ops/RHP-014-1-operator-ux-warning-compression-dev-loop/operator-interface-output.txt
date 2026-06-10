@@ -1,0 +1,6 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.operator_interface --percent 89 --loop WARNING-COMPRESSOR --operation RHP-014.1 --title warning compressor box --status ok --detail warnings compressed --verified
+RETURN CODE: 0
+RHPLOAD [089%] loop=WARNING-COMPRESSOR operation=RHP-014.1 | status=ok [OK]
+`- warning compressor box
+   +- detail: warnings compressed
+   `- verified: true [OK]

@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`. |
+| Next architecture target | `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -130,7 +130,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Current RHP status | `RHP-013.5 CI Watch Loop automation + stale operator-visible test repair sealed` |
 | Previous RHP seal | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Previous RHP status | `RHP-013.4 RuntimeBootState display wiring sealed` |
-| Next RHP gate | `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run` |
+| Next RHP gate | `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
@@ -278,7 +278,7 @@ RuntimeBootState
 
 This is still read-only orientation. The display proves what loaded and which authority locks are false; it does not grant provider/model/tool, CMS, memory, API, external-ingestion, autonomous, or self-authorization authority.
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_013_4_RUNTIME_DISPLAY_END -->
 
 <!-- HERMES_RHP_013_5_CI_WATCH_START -->
@@ -294,7 +294,7 @@ commit SHA -> GitHub Actions runs -> selected Tests workflow -> jobs
 
 The watch loop is observational. It does not rerun jobs, edit files without authorization, write remote state, or self-authorize repairs.
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_013_5_CI_WATCH_END -->
 
 <!-- HERMES_RHP_013_6_RHPLOAD_FEEDBACK_START -->
@@ -326,7 +326,7 @@ assertion_failure_unknown
 unknown
 ```
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_013_6_RHPLOAD_FEEDBACK_END -->
 
 
@@ -345,7 +345,7 @@ RHPLOAD [042%] validate transcript | loop=EVIDENCE operation=RHP-013.7 | status=
 
 Transcript rule: every future All-One runner should be able to emit `RHPLOAD` lines, expanded feedback trees, and JSONL evidence events. This lets a zero-context AI resume from a transcript instead of guessing from terminal scrollback.
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_013_7_RHPLOAD_LIVE_END -->
 
 
@@ -378,7 +378,7 @@ NO-OP
 
 Autoheal rule: plan before mutation. `AUTOHEAL-PLAN` cannot mutate or commit. `AUTOHEAL-EXECUTE` has a one-attempt budget and may only run from an approved plan with allowlisted paths.
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_013_8_LOOP_REGISTRY_END -->
 
 
@@ -418,7 +418,7 @@ continue to pull/rebase
 
 RHP-013.9 also adds `RHP-AUTOHEAL-PLAN-v0.1`. The plan generator can propose bounded fixes, but it does not execute them.
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_013_9_AUTOHEAL_PREFLIGHT_END -->
 
 
@@ -444,8 +444,46 @@ The GitHub push sequence is now explicit:
 secret-scan -> current-script-gate -> commit -> pull-rebase -> push -> seal
 ```
 
-Next: `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_014_0_PUSH_GATE_END -->
+
+<!-- HERMES_RHP_014_1_OPERATOR_UX_START -->
+### RHP-014.1 Operator UX Compression + Dev Loop Tool Chart
+
+RHP-014.1 formalizes the PowerShell development loop used to evolve Hermes-Agent-Evo.
+
+Required future All-One sequence:
+
+```text
+AUTOHEAL-PREFLIGHT
+PULL-REBASE
+HUMAN-AUTHORIZATION
+OPERATION
+VALIDATION
+EVIDENCE
+SECRET-SCAN
+WARNING-COMPRESSOR
+CURRENT-SCRIPT-GATE
+GITHUB-PUSH-BOX
+RETURN-ROOT
+```
+
+Enhancement and tool chart:
+
+| Box | Tool | Purpose |
+|---|---|---|
+| AUTOHEAL-PREFLIGHT | `rhp/autoheal_preflight.py` | Clean bounded failed-attempt residue before pull/rebase. |
+| RESUME-PACKET | `rhp/resume_packet.py` | Resume from evidence and transcript without memory guessing. |
+| LOOP-REGISTRY | `rhp/loop_registry.py` | Enforce legal loops, attempt budgets, and mutation/commit permissions. |
+| CURRENT-SCRIPT-GATE | `rhp/current_script_gate.py` | Block push when active script and evidence mismatch. |
+| WARNING-COMPRESSOR | `rhp/warning_compressor.py` | Collapse noisy CRLF warning streams into one verified box. |
+| GITHUB-PUSH-BOX | `rhp/push_controller.py` | Compress commit/pull-rebase/push/seal into verified stages. |
+| OPERATOR-INTERFACE | `rhp/operator_interface.py` | Render stable human-facing boxes. |
+
+Interface rule: future scripts should compress noisy warning streams, avoid `Press Enter to close`, return to repo root, and end with a verified green seal.
+
+Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+<!-- HERMES_RHP_014_1_OPERATOR_UX_END -->
 
 
 
@@ -679,7 +717,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | RHP-013.1 | RuntimeBootState v0.1 typed packet. | passed |
 | RHP-013.2 | AI/agent preferences and CI stale-test repair. | passed |
 | RHP-013.3 | Operational loop boxes and AI takeover runbook. | passed |
-| next | RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run. | next |
+| next | RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run. | next |
 
 #### Current Runtime Boundary
 
@@ -696,7 +734,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Latest RHP proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Current RHP status | `RHP-013.3 operational loop boxes and AI takeover runbook sealed` |
-| Next gate | `RHP-014.1 CI red-job artifact extractor + autoheal executor dry-run` |
+| Next gate | `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-013.3.
 

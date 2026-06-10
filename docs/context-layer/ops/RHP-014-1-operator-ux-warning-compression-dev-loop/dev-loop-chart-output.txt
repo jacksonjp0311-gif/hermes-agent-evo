@@ -1,0 +1,11 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.dev_loop_chart
+RETURN CODE: 0
+| Box | Tool | Purpose |
+|---|---|---|
+| AUTOHEAL-PREFLIGHT | `rhp/autoheal_preflight.py` | clean bounded failed-attempt residue before pull/rebase |
+| RESUME-PACKET | `rhp/resume_packet.py` | zero-context resume from evidence and transcript |
+| LOOP-REGISTRY | `rhp/loop_registry.py` | legal loops, mutation/commit permissions, attempt budgets |
+| CURRENT-SCRIPT-GATE | `rhp/current_script_gate.py` | block push if active script and evidence mismatch |
+| WARNING-COMPRESSOR | `rhp/warning_compressor.py` | compress noisy CRLF warning streams into one box |
+| GITHUB-PUSH-BOX | `rhp/push_controller.py` | commit/pull-rebase/push/seal visibility |
+| OPERATOR-INTERFACE | `rhp/operator_interface.py` | render stable human-readable boxes |

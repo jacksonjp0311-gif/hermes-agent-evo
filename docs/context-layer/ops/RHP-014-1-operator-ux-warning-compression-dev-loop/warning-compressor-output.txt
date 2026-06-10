@@ -1,0 +1,9 @@
+COMMAND: python -m rhp.warning_compressor --text <sample>
+RETURN CODE: 0
+normal output
+RHPLOAD [089%] loop=WARNING-COMPRESSOR operation=RHP | status=ok [OK]
+`- warning compressor box
+   +- CRLF warnings compressed: 2
+   +- other warnings: 0
+   +- sample paths: README.md, AGENTS.md
+   `- verified: true [OK]

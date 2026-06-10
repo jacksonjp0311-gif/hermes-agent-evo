@@ -223,6 +223,42 @@ Rules:
 
 <!-- HERMES_AGENT_CURRENT_SCRIPT_PUSH_GATE_END -->
 
+<!-- HERMES_AGENT_DEV_LOOP_UX_START -->
+## PowerShell Dev Loop and Operator UX
+
+RHP-014.1 records the active development loop for future AI iteration.
+
+Required sequence:
+
+```text
+AUTOHEAL-PREFLIGHT -> PULL-REBASE -> HUMAN-AUTHORIZATION -> OPERATION -> VALIDATION -> EVIDENCE -> SECRET-SCAN -> WARNING-COMPRESSOR -> CURRENT-SCRIPT-GATE -> GITHUB-PUSH-BOX -> RETURN-ROOT
+```
+
+Tool chart:
+
+| Box | Tool | Purpose |
+|---|---|---|
+| AUTOHEAL-PREFLIGHT | `rhp/autoheal_preflight.py` | Clean bounded failed-attempt residue before pull/rebase. |
+| RESUME-PACKET | `rhp/resume_packet.py` | Resume from evidence and transcript without memory guessing. |
+| LOOP-REGISTRY | `rhp/loop_registry.py` | Enforce legal loops, attempt budgets, and mutation/commit permissions. |
+| CURRENT-SCRIPT-GATE | `rhp/current_script_gate.py` | Block push when active script and evidence mismatch. |
+| WARNING-COMPRESSOR | `rhp/warning_compressor.py` | Collapse noisy CRLF warning streams into one verified box. |
+| GITHUB-PUSH-BOX | `rhp/push_controller.py` | Compress commit/pull-rebase/push/seal into verified stages. |
+| OPERATOR-INTERFACE | `rhp/operator_interface.py` | Render stable human-facing boxes. |
+
+Rules for future All-One scripts:
+
+| Rule | Requirement |
+|---|---|
+| no terminal hold | do not use `Press Enter to close` |
+| return root | always end at repo root |
+| warning compression | CRLF warnings should collapse into one box |
+| push gate | do not push unless current-script gate is `[OK]` |
+| boxes stay current | README and AGENTS loop boxes must update every operation |
+| evidence first | no success claim without final evidence |
+
+<!-- HERMES_AGENT_DEV_LOOP_UX_END -->
+
 ## Autoheal Preflight Box
 
 RHP-013.9 adds:

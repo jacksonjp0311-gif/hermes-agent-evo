@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/operator_interface.py rhp/warning_compressor.py rhp/dev_loop_chart.py tests/test_rhp_014_1_operator_interface.py tests/test_rhp_014_1_warning_compressor.py tests/test_rhp_014_1_dev_loop_chart.py
+RETURN CODE: 0
+
