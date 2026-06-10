@@ -544,6 +544,7 @@ Next: `RHP-014.0 bounded autoheal executor`.
 <!-- RHP_013_8_LOOP_REGISTRY_END -->
 
 
+
 <!-- RHP_013_9_AUTOHEAL_PREFLIGHT_START -->
 ### RHP-013.9 Autoheal Preflight Box + Bounded Plan Generator
 
@@ -558,4 +559,5 @@ Purpose: detect failed-attempt residue before rebase, clean only bounded allowed
 
 Next: `RHP-014.0 bounded autoheal executor`.
 <!-- RHP_013_9_AUTOHEAL_PREFLIGHT_END -->
+
 

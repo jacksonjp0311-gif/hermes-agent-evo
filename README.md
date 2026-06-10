@@ -382,6 +382,7 @@ Next: `RHP-014.0 bounded autoheal executor`.
 <!-- HERMES_RHP_013_8_LOOP_REGISTRY_END -->
 
 
+
 <!-- HERMES_RHP_013_9_AUTOHEAL_PREFLIGHT_START -->
 ### RHP-013.9 Autoheal Preflight Box + Bounded Plan Generator
 
@@ -419,6 +420,7 @@ RHP-013.9 also adds `RHP-AUTOHEAL-PLAN-v0.1`. The plan generator can propose bou
 
 Next: `RHP-014.0 bounded autoheal executor`.
 <!-- HERMES_RHP_013_9_AUTOHEAL_PREFLIGHT_END -->
+
 
 
 

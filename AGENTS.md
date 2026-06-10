@@ -182,6 +182,7 @@ Rules:
 <!-- HERMES_AGENT_LOOP_REGISTRY_RESUME_END -->
 
 
+
 <!-- HERMES_AGENT_AUTOHEAL_PREFLIGHT_START -->
 ## Autoheal Preflight Box
 
@@ -211,6 +212,7 @@ Rules:
 
 Autoheal preflight is allowed to clean failed-attempt residue only inside the current operation allowlist. It must print the paths and verify `[OK]` before continuing.
 <!-- HERMES_AGENT_AUTOHEAL_PREFLIGHT_END -->
+
 
 
 

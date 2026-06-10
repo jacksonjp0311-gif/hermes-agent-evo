@@ -8,24 +8,14 @@ RETURN CODE: 0
   "dirty_paths": [
     "AGENTS.md",
     "README.md",
-    "rhp/README.md",
-    "docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/",
     "docs/context-layer/ops/RHP-013-9-final-evidence.json",
-    "rhp/autoheal_plan.py",
-    "rhp/autoheal_preflight.py",
-    "tests/test_rhp_013_9_autoheal_plan.py",
-    "tests/test_rhp_013_9_autoheal_preflight.py"
+    "rhp/README.md"
   ],
   "allowed_paths": [
     "AGENTS.md",
     "README.md",
-    "rhp/README.md",
-    "docs/context-layer/ops/RHP-013-9-autoheal-preflight-box-plan-generator/",
     "docs/context-layer/ops/RHP-013-9-final-evidence.json",
-    "rhp/autoheal_plan.py",
-    "rhp/autoheal_preflight.py",
-    "tests/test_rhp_013_9_autoheal_plan.py",
-    "tests/test_rhp_013_9_autoheal_preflight.py"
+    "rhp/README.md"
   ],
   "blocked_paths": [],
   "action": "clean_bounded_residue_then_continue",
