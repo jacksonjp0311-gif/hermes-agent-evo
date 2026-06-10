@@ -459,3 +459,17 @@ It also repairs stale CI expectations in `tests/test_rhp_alignment_guard.py` so 
 Next: `RHP-013.3 wire CLI/banner/operator surfaces to RuntimeBootState status`.
 <!-- RHP_013_2_AGENT_PREF_STATUS_END -->
 
+<!-- RHP_013_3_LOOP_BOXES_START -->
+### RHP-013.3 Operational Loop Boxes + AI Takeover Runbook
+
+RHP-013.3 anchors the loop registry future agents must use before editing.
+
+```text
+select loop -> load required surfaces -> state authority boundary -> mutate smallest surface -> validate -> evidence -> commit/push -> watch CI
+```
+
+Runtime wiring is still deferred.
+
+Next: `RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status`.
+<!-- RHP_013_3_LOOP_BOXES_END -->
+

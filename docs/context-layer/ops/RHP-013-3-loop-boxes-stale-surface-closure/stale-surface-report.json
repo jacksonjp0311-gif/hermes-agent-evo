@@ -1,0 +1,13 @@
+{
+  "schema": "RHP-STALE-SURFACE-SCAN-v0.1",
+  "operation": "RHP-013.3",
+  "findings_repaired": [
+    "Runtime Activation Track still marked RHP-013 as next after RHP-013.2",
+    "Operator-visible lock sequence still showed RHP-010 evidence",
+    "Current boundary still referenced RHP-011-1 evidence",
+    "HRCN OPS Operational Bridge still said current through RHP-012",
+    "Post-Seal Cybernetic-Memory Online Track still said RHP-011.1 current",
+    "Legacy public metrics still pointed to OPS-027 post-seal proof rather than current RHP proof"
+  ],
+  "remaining_risk": "README is very large and historical HRCN blocks may intentionally preserve old phase text. Future stale-surface scans should focus on current-state blocks, not historical evidence descriptions."
+}

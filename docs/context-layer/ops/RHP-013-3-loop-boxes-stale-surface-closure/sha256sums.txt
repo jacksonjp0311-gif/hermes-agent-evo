@@ -1,0 +1,8 @@
+92ba7b6ef52c32ba7fc8a5c0153445f314ff6dfec79014d135a36e110ea012bb  README.md
+4f2028d5932547fb00c2736d8c7dbdee331a3457269b89ef68fc95621212d5f3  AGENTS.md
+db6ce1efb7f7bdc8891c215c1324f53a0f278a139f7cef43f21bfdf3c346cb89  rhp/README.md
+67d5214aabb397508925edb180d885e3b3f92626ded4ca3bc537973b0ed6f6f6  docs/context-layer/ops/RHP-013-3-final-evidence.json
+1ae1c4588b6618a0de40a543439f5a74f4508ff7e494aba049587c053cc88c2c  docs/context-layer/ops/RHP-013-3-loop-boxes-stale-surface-closure.md
+114b21201dd4ee13182ad61a3a4e120861d8964604f61d1b2da1066b0185ecbd  docs/context-layer/ops/RHP-013-3-loop-boxes-stale-surface-closure/loop-registry.json
+dc48ef909f2db692e56c273917e5d7833d7c525b470de27b7babc33d121ba35b  docs/context-layer/ops/RHP-013-3-loop-boxes-stale-surface-closure/loop-registry.md
+26d5f04436c9f7b8ac09d85cc8b03ab55e66de9c324bac2c8e8c8a5eb1358620  docs/context-layer/ops/RHP-013-3-loop-boxes-stale-surface-closure/stale-surface-report.json

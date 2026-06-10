@@ -1,0 +1,9 @@
+{
+  "rhp_013_3_passed": true,
+  "operational_loop_boxes_added": true,
+  "ai_takeover_runbook_added": true,
+  "loop_registry_json_added": true,
+  "stale_readme_surfaces_repaired": true,
+  "runtime_progress_wiring_changed": false,
+  "next": "RHP-013.4 wire CLI/banner/operator surfaces to RuntimeBootState status"
+}

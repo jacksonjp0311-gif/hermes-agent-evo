@@ -1,0 +1,57 @@
+{
+  "schema": "RHP-LOOP-REGISTRY-v0.1",
+  "operation": "RHP-013.3",
+  "loops": [
+    {
+      "id": "rehydration",
+      "trigger": "new chat, stale context, branch drift, broken CI, explicit request",
+      "mutation_allowed": false
+    },
+    {
+      "id": "diagnosis",
+      "trigger": "failure log, red CI, broken script, stale docs",
+      "mutation_allowed": false
+    },
+    {
+      "id": "mutation",
+      "trigger": "human-authorized bounded change",
+      "mutation_allowed": true
+    },
+    {
+      "id": "evidence",
+      "trigger": "completion claim",
+      "mutation_allowed": true
+    },
+    {
+      "id": "ci_watch",
+      "trigger": "push complete or GitHub Actions red",
+      "mutation_allowed": false
+    },
+    {
+      "id": "ci_repair",
+      "trigger": "red CI with actionable failing file",
+      "mutation_allowed": true
+    },
+    {
+      "id": "learning",
+      "trigger": "validated failure or improvement lesson",
+      "mutation_allowed": true
+    },
+    {
+      "id": "runtime_status",
+      "trigger": "CLI/TUI/operator startup status",
+      "mutation_allowed": "deferred_to_RHP_013_4"
+    },
+    {
+      "id": "security_boundary",
+      "trigger": "untrusted issue/PR/workflow text can influence agent or script",
+      "mutation_allowed": true
+    },
+    {
+      "id": "no_op",
+      "trigger": "state already satisfies gate",
+      "mutation_allowed": false
+    }
+  ],
+  "authority_granted": false
+}
