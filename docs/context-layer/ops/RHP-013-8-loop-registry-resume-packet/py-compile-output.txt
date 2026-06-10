@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/loop_registry.py rhp/resume_packet.py tests/test_rhp_013_8_loop_registry.py tests/test_rhp_013_8_resume_packet.py
+RETURN CODE: 0
+

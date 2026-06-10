@@ -1,0 +1,32 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.resume_packet --repo-root . --json
+RETURN CODE: 0
+{
+  "schema": "RHP-RESUME-PACKET-v0.1",
+  "repo_root": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo",
+  "latest_evidence": "docs\\context-layer\\ops\\RHP-013-8-final-evidence.json",
+  "latest_operation": "RHP-013.8",
+  "latest_next": "RHP-013.9 bounded autoheal plan generator",
+  "latest_transcript": "docs\\context-layer\\ops\\RHP-013-7-rhpload-live-console-transcript\\rhpload-transcript.jsonl",
+  "transcript_event_count": 5,
+  "transcript_last_percent": 100,
+  "transcript_last_status": "ok",
+  "recommended_loop": "AUTOHEAL-PLAN",
+  "allowed_next_loops": [
+    "AUTOHEAL-EXECUTE",
+    "DIAGNOSIS"
+  ],
+  "authority": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Resume packets summarize state only. They grant no runtime, tool, CMS, memory, API, external-ingestion, autonomous, or self-authorization authority."
+}

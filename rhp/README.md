@@ -470,7 +470,7 @@ select loop -> load required surfaces -> state authority boundary -> mutate smal
 
 Runtime wiring is still deferred.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- RHP_013_3_LOOP_BOXES_END -->
 
 <!-- RHP_013_4_RUNTIME_DISPLAY_START -->
@@ -484,7 +484,7 @@ RuntimeBootState -> operator status -> protocol strip -> banner
 
 Authority remains false. Runtime display is not runtime permission.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- RHP_013_4_RUNTIME_DISPLAY_END -->
 
 <!-- RHP_013_5_CI_WATCH_START -->
@@ -496,7 +496,7 @@ RHP-013.5 adds `rhp/ci_watch.py`, an observational GitHub Actions classifier, an
 green | pending | red-actionable | unknown
 ```
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- RHP_013_5_CI_WATCH_END -->
 
 <!-- RHP_013_6_RHPLOAD_FEEDBACK_START -->
@@ -511,7 +511,7 @@ rhp/ci_repair_classifier.py
 
 Purpose: make process feedback explicit enough for a zero-context AI or human operator to resume safely.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- RHP_013_6_RHPLOAD_FEEDBACK_END -->
 
 
@@ -522,6 +522,24 @@ RHP-013.7 adds `rhp/load_console.py`.
 
 Purpose: every future RHP operation can produce human-readable load feedback and a machine-readable JSONL transcript.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- RHP_013_7_RHPLOAD_LIVE_END -->
+
+
+<!-- RHP_013_8_LOOP_REGISTRY_START -->
+### RHP-013.8 Loop Registry Enforcement + Transcript-Backed Resume Packet
+
+RHP-013.8 adds:
+
+```text
+rhp/loop_registry.py
+rhp/resume_packet.py
+```
+
+Purpose: make legal loops, autoheal attempt budgets, and zero-context resume packets machine-checkable.
+
+Execution rule: package tools that import `rhp.*` must be run with `python -m rhp.<tool>` from repo root.
+
+Next: `RHP-013.9 bounded autoheal plan generator`.
+<!-- RHP_013_8_LOOP_REGISTRY_END -->
 

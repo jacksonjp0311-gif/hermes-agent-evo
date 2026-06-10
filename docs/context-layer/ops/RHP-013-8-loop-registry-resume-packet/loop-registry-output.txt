@@ -1,0 +1,8 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.loop_registry --loop AUTOHEAL-EXECUTE --mutation-requested --commit-requested --attempt 1 --json
+RETURN CODE: 0
+{
+  "schema": "RHP-LOOP-REGISTRY-v0.1",
+  "loop": "AUTOHEAL-EXECUTE",
+  "ok": true,
+  "failures": []
+}

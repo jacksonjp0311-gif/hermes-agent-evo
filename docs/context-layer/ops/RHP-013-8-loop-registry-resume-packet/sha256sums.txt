@@ -1,0 +1,13 @@
+f20b1dab7fa520f6e1feca1510a95af10318a119a2d4729e0c3166c4575a6e37  README.md
+3a5f8f370e7035ce4b757b5f44606a03e943bbe7f55b39f7bd4834006a2bd310  AGENTS.md
+531a67686c42fb2bdf45e02e9669a40a0d1b0a28ce94a8004d7e9d61356195d0  rhp/README.md
+b7bf494876d49c6bfb9795d3c1710e88dfeb8f67a4cfd7c68ddf0e9b376267c8  rhp/loop_registry.py
+329de67443e6c7db7fdd9bde856ab5b0fba5ff9279c4fa8929b72afa5874250e  rhp/resume_packet.py
+e0a953537518e205fb0c277eec747be5cc1444fff1d869f9b1fe477a9e01789f  tests/test_rhp_013_8_loop_registry.py
+2ccd9ede39512daaab6ae449031a0a13cafdc3776b44af85dd9b33bff0089256  tests/test_rhp_013_8_resume_packet.py
+0264860f401e6e0253e5592160324a9b88571edcf4dda0559196ab6ad3875ed2  docs/context-layer/ops/RHP-013-8-final-evidence.json
+4808bd3b849817f401f517a4f14ee6ba2f053b5cd8a685569b33dea434e082bf  docs/context-layer/ops/RHP-013-8-loop-registry-resume-packet.md
+61646124de959c932d0f067caca14249b8ca90bdbfa68844e43c83c2de3e976d  docs/context-layer/ops/RHP-013-8-loop-registry-resume-packet/py-compile-output.txt
+8cd67f3836cf5b97380571ec1e4d3c0de91ad2b3595167de97c61396b3690b36  docs/context-layer/ops/RHP-013-8-loop-registry-resume-packet/loop-registry-output.txt
+e9a991aca9f27648e11deae9f5560e2818462cfa4f0ad044ecb398542aeebb45  docs/context-layer/ops/RHP-013-8-loop-registry-resume-packet/resume-packet-output.txt
+7c5328a1e24962791e0b52af1614b0f22d8a7789250e0f714e5cfd15aa0adfe5  docs/context-layer/ops/RHP-013-8-loop-registry-resume-packet/focused-test-output.txt

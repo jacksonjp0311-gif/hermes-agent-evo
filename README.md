@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-013.8 loop registry enforcement + transcript-backed resume packet`. |
+| Next architecture target | `RHP-013.9 bounded autoheal plan generator`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -130,7 +130,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Current RHP status | `RHP-013.5 CI Watch Loop automation + stale operator-visible test repair sealed` |
 | Previous RHP seal | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Previous RHP status | `RHP-013.4 RuntimeBootState display wiring sealed` |
-| Next RHP gate | `RHP-013.8 loop registry enforcement + transcript-backed resume packet` |
+| Next RHP gate | `RHP-013.9 bounded autoheal plan generator` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
@@ -278,7 +278,7 @@ RuntimeBootState
 
 This is still read-only orientation. The display proves what loaded and which authority locks are false; it does not grant provider/model/tool, CMS, memory, API, external-ingestion, autonomous, or self-authorization authority.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- HERMES_RHP_013_4_RUNTIME_DISPLAY_END -->
 
 <!-- HERMES_RHP_013_5_CI_WATCH_START -->
@@ -294,7 +294,7 @@ commit SHA -> GitHub Actions runs -> selected Tests workflow -> jobs
 
 The watch loop is observational. It does not rerun jobs, edit files without authorization, write remote state, or self-authorize repairs.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- HERMES_RHP_013_5_CI_WATCH_END -->
 
 <!-- HERMES_RHP_013_6_RHPLOAD_FEEDBACK_START -->
@@ -326,7 +326,7 @@ assertion_failure_unknown
 unknown
 ```
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- HERMES_RHP_013_6_RHPLOAD_FEEDBACK_END -->
 
 
@@ -345,8 +345,42 @@ RHPLOAD [042%] validate transcript | loop=EVIDENCE operation=RHP-013.7 | status=
 
 Transcript rule: every future All-One runner should be able to emit `RHPLOAD` lines, expanded feedback trees, and JSONL evidence events. This lets a zero-context AI resume from a transcript instead of guessing from terminal scrollback.
 
-Next: `RHP-013.8 loop registry enforcement + transcript-backed resume packet`.
+Next: `RHP-013.9 bounded autoheal plan generator`.
 <!-- HERMES_RHP_013_7_RHPLOAD_LIVE_END -->
+
+
+<!-- HERMES_RHP_013_8_LOOP_REGISTRY_START -->
+### RHP-013.8 Loop Registry Enforcement + Transcript-Backed Resume Packet
+
+RHP-013.8 adds the first bounded autoheal substrate without executing autoheal.
+
+```text
+RHPLOAD transcript + latest evidence
+-> rhp/resume_packet.py
+-> RHP-RESUME-PACKET-v0.1
+-> recommended_loop
+-> rhp/loop_registry.py
+-> allowed next loops and attempt budget
+```
+
+Legal loops are now explicit:
+
+```text
+REHYDRATION
+DIAGNOSIS
+CI-WATCH
+CI-REPAIR
+EVOLUTION
+AUTOHEAL-PLAN
+AUTOHEAL-EXECUTE
+NO-OP
+```
+
+Autoheal rule: plan before mutation. `AUTOHEAL-PLAN` cannot mutate or commit. `AUTOHEAL-EXECUTE` has a one-attempt budget and may only run from an approved plan with allowlisted paths.
+
+Next: `RHP-013.9 bounded autoheal plan generator`.
+<!-- HERMES_RHP_013_8_LOOP_REGISTRY_END -->
+
 
 
 
@@ -576,7 +610,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | RHP-013.1 | RuntimeBootState v0.1 typed packet. | passed |
 | RHP-013.2 | AI/agent preferences and CI stale-test repair. | passed |
 | RHP-013.3 | Operational loop boxes and AI takeover runbook. | passed |
-| next | RHP-013.8 loop registry enforcement + transcript-backed resume packet. | next |
+| next | RHP-013.9 bounded autoheal plan generator. | next |
 
 #### Current Runtime Boundary
 
@@ -593,7 +627,7 @@ Current bridge status: HRCN v2.0 + OPS-027 + RHP-013.3 = read-only runtime-nativ
 | Latest OPS proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Latest RHP proof | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
 | Current RHP status | `RHP-013.3 operational loop boxes and AI takeover runbook sealed` |
-| Next gate | `RHP-013.8 loop registry enforcement + transcript-backed resume packet` |
+| Next gate | `RHP-013.9 bounded autoheal plan generator` |
 
 AI lock: No future AI thread may claim runtime authority, CMS write authority, memory write authority, API write authority, autonomous authority, production readiness, sentience, consciousness, AGI, ASI, or self-authorization from OPS-027/RHP-013.3.
 

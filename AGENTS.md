@@ -145,6 +145,44 @@ python rhp/load_console.py --percent 42 --label "validate transcript" --status r
 <!-- HERMES_AGENT_RHPLOAD_LIVE_TRANSCRIPT_END -->
 
 
+<!-- HERMES_AGENT_LOOP_REGISTRY_RESUME_START -->
+## Loop Registry and Resume Packet
+
+RHP-013.8 adds:
+
+```text
+rhp/loop_registry.py
+rhp/resume_packet.py
+```
+
+Before continuing a zero-context task, build a resume packet:
+
+```text
+python -m rhp.resume_packet --repo-root . --json
+```
+
+Before mutation, validate the loop:
+
+```text
+python -m rhp.loop_registry --loop AUTOHEAL-PLAN --json
+python -m rhp.loop_registry --loop AUTOHEAL-EXECUTE --mutation-requested --commit-requested --attempt 1 --json
+```
+
+Rules:
+
+| Rule | Purpose |
+|---|---|
+| registry before repair | prevents free-form action |
+| transcript before resume | prevents memory guessing |
+| plan before execute | prevents reflexive mutation |
+| attempt budget | prevents infinite autoheal |
+| package-module execution | prevents `ModuleNotFoundError: rhp` |
+| authority flags stay false | prevents autonomy drift |
+
+<!-- HERMES_AGENT_LOOP_REGISTRY_RESUME_END -->
+
+
+
 
 
 

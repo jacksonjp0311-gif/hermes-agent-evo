@@ -1,0 +1,14 @@
+{
+  "rhp_013_8_v2_passed": true,
+  "failed_run_repaired": true,
+  "failure_class": "dirty_worktree_and_module_path_execution_bug",
+  "loop_registry_added": true,
+  "loop_registry_schema": "RHP-LOOP-REGISTRY-v0.1",
+  "resume_packet_added": true,
+  "resume_packet_schema": "RHP-RESUME-PACKET-v0.1",
+  "autoheal_plan_loop_defined": true,
+  "autoheal_execute_loop_defined": true,
+  "transcript_backed_resume_supported": true,
+  "focused_tests_passed": true,
+  "next": "RHP-013.9 bounded autoheal plan generator"
+}
