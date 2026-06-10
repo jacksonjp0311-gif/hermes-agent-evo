@@ -1,0 +1,8 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.current_script_gate --operation RHP-014.0 --expected-script RHP_014_0_CURRENT_SCRIPT_GATE_AUTOHEAL_PUSH_CONTROLLER_SINGLE_ALL_ONE.ps1 --actual-script RHP_014_0_CURRENT_SCRIPT_GATE_AUTOHEAL_PUSH_CONTROLLER_SINGLE_ALL_ONE.ps1 --evidence docs/context-layer/ops/RHP-014-0-final-evidence.json
+RETURN CODE: 0
+RHPLOAD [088%] loop=CURRENT-SCRIPT-GATE operation=RHP-014.0 | status=ok [OK]
+`- current script gate
+   +- expected: RHP_014_0_CURRENT_SCRIPT_GATE_AUTOHEAL_PUSH_CONTROLLER_SINGLE_ALL_ONE.ps1
+   +- actual: RHP_014_0_CURRENT_SCRIPT_GATE_AUTOHEAL_PUSH_CONTROLLER_SINGLE_ALL_ONE.ps1
+   +- evidence: RHP_014_0_CURRENT_SCRIPT_GATE_AUTOHEAL_PUSH_CONTROLLER_SINGLE_ALL_ONE.ps1
+   `- verified: true [OK]

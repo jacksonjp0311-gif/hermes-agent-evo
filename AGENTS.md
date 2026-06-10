@@ -184,6 +184,45 @@ Rules:
 
 
 <!-- HERMES_AGENT_AUTOHEAL_PREFLIGHT_START -->
+
+
+<!-- HERMES_AGENT_CURRENT_SCRIPT_PUSH_GATE_START -->
+## Current Script Gate and GitHub Push Box
+
+RHP-014.0 adds:
+
+```text
+rhp/current_script_gate.py
+rhp/push_controller.py
+```
+
+Required future push sequence:
+
+```text
+AUTOHEAL-PREFLIGHT
+OPERATION
+VALIDATION
+EVIDENCE
+SECRET-SCAN
+CURRENT-SCRIPT-GATE
+GITHUB-PUSH-BOX commit
+GITHUB-PUSH-BOX pull-rebase
+GITHUB-PUSH-BOX push
+GITHUB-PUSH-BOX seal
+```
+
+Rules:
+
+| Gate | Rule |
+|---|---|
+| current script gate | evidence `operator_script_name` must match active script |
+| miss | do not push |
+| bounded self-heal | repair only evidence/script identity mismatch inside current operation |
+| green check | continue only after `[OK] verified: true` |
+| push box | commit/pull-rebase/push must each verify `[OK]` |
+
+<!-- HERMES_AGENT_CURRENT_SCRIPT_PUSH_GATE_END -->
+
 ## Autoheal Preflight Box
 
 RHP-013.9 adds:
