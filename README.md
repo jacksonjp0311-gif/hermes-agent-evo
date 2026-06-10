@@ -114,6 +114,44 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
 
+<!-- RHP_012_3_BUDGET_GUARD_START -->
+### RHP-012.3 Compact Rehydration + Budget Guard
+
+Current status: RHP-012.3 seals the post-repair CI closure and installs compact-mode governance before RHP-013 RuntimeBootState work.
+
+#### Default Operating Mode
+
+| Rule | State |
+|---|---:|
+| Compact checkpoint by default | `True` |
+| Full rehydration by default | `False` |
+| Repo-wide scan requires reason | `True` |
+| Long Hermes trace must be summarized before re-feed | `True` |
+| Architecture evolution allowed while CI is red | `False` |
+| RuntimeBootState implemented here | `False` |
+| Next architecture target | `RHP-013 RuntimeBootState v0.1` |
+
+#### Full Rehydration Gate
+
+Full rehydration is permitted only for:
+
+1. cold start,
+2. major drift,
+3. branch reset,
+4. broken CI,
+5. explicit human authorization.
+
+Otherwise use a compact checkpoint: current commit, current phase, directly relevant files, exact failing tests or checks, and next bounded action.
+
+#### Output Budget Rule
+
+Routine analysis should stay compact. Long outputs are allowed only when exact failure logs, diffs, or evidence artifacts are necessary for repair or audit.
+
+#### Non-Claim Lock
+
+RHP-012.3 seals CI/budget governance only. It grants no provider/model/tool authority, CMS authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claim, production-readiness claim, or self-authorization.
+<!-- RHP_012_3_BUDGET_GUARD_END -->
+
 <!-- HERMES_RHP_RUNTIME_ACTIVATION_START -->
 ### Rehydration Protocol Runtime Activation Track
 

@@ -1,0 +1,91 @@
+{
+  "schema": "RHP-012.3-final-evidence",
+  "operation": "RHP-012.3",
+  "timestamp_utc": "2026-06-10T21:30:41.713091+00:00",
+  "base_commit": "a4cb47551e4d8cb708f71ecb079a4e9bbc938fcf",
+  "current_head": "a4cb47551e4d8cb708f71ecb079a4e9bbc938fcf",
+  "current_head_short": "a4cb47551",
+  "current_head_message": "test: align remaining CI slice expectations",
+  "ci_status_checked": true,
+  "ci_status_source": "github_actions_rest",
+  "tests_status": "success",
+  "lint_status": "success",
+  "nix_status": "success",
+  "docker_status": "skipped",
+  "workflow_runs": [
+    {
+      "name": "Build Skills Index",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27304138743",
+      "id": 27304138743
+    },
+    {
+      "name": "Skills Index Freshness Check",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27297526619",
+      "id": 27297526619
+    },
+    {
+      "name": "Docker Build and Publish",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618814",
+      "id": 27212618814
+    },
+    {
+      "name": "Lint (ruff + ty)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618831",
+      "id": 27212618831
+    },
+    {
+      "name": "Nix",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618944",
+      "id": 27212618944
+    },
+    {
+      "name": "Tests",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618779",
+      "id": 27212618779
+    }
+  ],
+  "authority_boundary_checked": true,
+  "latest_commit_authority_scan": {
+    "latest_commit_changed_files": [
+      "agent/agent_init.py",
+      "hermes_cli/main.py",
+      "tests/test_rhp_010_runtime_native_boot.py"
+    ],
+    "authority_sensitive_terms_seen_in_latest_patch": [
+      "provider_call_executed"
+    ],
+    "authority_patch_review_required": true
+  },
+  "budget_guard_added": true,
+  "compact_mode_default": true,
+  "full_rehydration_default": false,
+  "repo_wide_scan_requires_reason": true,
+  "long_trace_must_be_summarized": true,
+  "architecture_evolution_blocked_while_ci_red": true,
+  "runtime_boot_state_implemented": false,
+  "next_recommended_operation": "RHP-013 RuntimeBootState v0.1",
+  "provider_call_executed": false,
+  "model_call_executed": false,
+  "tool_use_executed": false,
+  "cms_runtime_execution": false,
+  "cms_write": false,
+  "memory_write": false,
+  "memory_promotion": false,
+  "api_write": false,
+  "external_ingestion": false,
+  "autonomous_authority": false,
+  "self_authorization": false,
+  "non_claim_lock": "RHP-012.3 seals CI/budget governance only. It grants no provider/model/tool authority, CMS authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claim, production-readiness claim, or self-authorization."
+}

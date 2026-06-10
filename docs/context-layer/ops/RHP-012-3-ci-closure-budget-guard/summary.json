@@ -1,0 +1,11 @@
+{
+  "rhp_012_3_passed": true,
+  "tests_status": "success",
+  "lint_status": "success",
+  "nix_status": "success",
+  "docker_status": "skipped",
+  "compact_mode_default": true,
+  "full_rehydration_default": false,
+  "runtime_boot_state_implemented": false,
+  "next": "RHP-013 RuntimeBootState v0.1"
+}

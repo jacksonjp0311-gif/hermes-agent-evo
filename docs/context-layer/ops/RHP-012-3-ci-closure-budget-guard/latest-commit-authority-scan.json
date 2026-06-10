@@ -1,0 +1,11 @@
+{
+  "latest_commit_changed_files": [
+    "agent/agent_init.py",
+    "hermes_cli/main.py",
+    "tests/test_rhp_010_runtime_native_boot.py"
+  ],
+  "authority_sensitive_terms_seen_in_latest_patch": [
+    "provider_call_executed"
+  ],
+  "authority_patch_review_required": true
+}

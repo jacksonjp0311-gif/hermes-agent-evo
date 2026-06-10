@@ -1,0 +1,6 @@
+628b129862996eefb3696368a58ae4576ced636b81ad8f5425c9823f2c9a1d62  README.md
+3179d4a30ff5f37b479ad5b1569c8bf0bb03d4e065fe412018a64606be1a6495  rhp/README.md
+b3d0b2727abbd98171429c7234404fd9fff7adfb6c0a8f9a9f8c49e37258a6cd  docs/context-layer/ops/RHP-012-3-final-evidence.json
+4ce87191f47c739c8332a66b4b19d1b307ed2a2daacc955920737b698859f902  docs/context-layer/ops/RHP-012-3-ci-closure-budget-guard.md
+a77dd9462c9f947ff580efe54a7e47a2306302cf8c90d2339feb1197a91fae09  docs/context-layer/ops/RHP-012-3-ci-closure-budget-guard/github-ci-status.json
+f86a5a4a433c5465548a21ee4b553547e7dce66feb0d703006cf6021635fccf8  docs/context-layer/ops/RHP-012-3-ci-closure-budget-guard/latest-commit-authority-scan.json

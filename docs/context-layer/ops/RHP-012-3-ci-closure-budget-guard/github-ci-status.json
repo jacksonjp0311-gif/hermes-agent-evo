@@ -1,0 +1,53 @@
+{
+  "ci_status_checked": true,
+  "ci_status_source": "github_actions_rest",
+  "ci_status_error": "",
+  "tests_status": "success",
+  "lint_status": "success",
+  "nix_status": "success",
+  "docker_status": "skipped",
+  "workflow_runs": [
+    {
+      "name": "Build Skills Index",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27304138743",
+      "id": 27304138743
+    },
+    {
+      "name": "Skills Index Freshness Check",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27297526619",
+      "id": 27297526619
+    },
+    {
+      "name": "Docker Build and Publish",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618814",
+      "id": 27212618814
+    },
+    {
+      "name": "Lint (ruff + ty)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618831",
+      "id": 27212618831
+    },
+    {
+      "name": "Nix",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618944",
+      "id": 27212618944
+    },
+    {
+      "name": "Tests",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27212618779",
+      "id": 27212618779
+    }
+  ]
+}
