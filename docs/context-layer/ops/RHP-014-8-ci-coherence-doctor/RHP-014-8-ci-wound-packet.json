@@ -1,0 +1,11 @@
+{
+  "schema": "RHP-014.8-CI-WOUND-PACKET-v0.1",
+  "operation": "RHP-014.8",
+  "observed_wound": "remote_ci_red_after_RHP_014_7",
+  "observed_from_user_screenshot": true,
+  "red_commit": "4985859b757575f290bec80e6689e4bcf96c8c3d",
+  "red_commit_short": "4985859b7",
+  "red_commit_message": "rhp: add RHP-014.7 operator dashboard bundle",
+  "classification": "remote_ci_wound_requires_coherence_doctor_before_autoheal",
+  "non_claim_lock": "Records CI wound only; no rerun, workflow mutation, repair execution, or authority."
+}

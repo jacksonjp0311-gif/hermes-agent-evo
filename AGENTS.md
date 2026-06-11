@@ -1654,3 +1654,7 @@ Failure classes should become bounded tools or display surfaces before any autoh
 
 Authority boundary remains human authorization through All-One.
 <!-- HERMES_AGENT_OPERATOR_DASHBOARD_BUNDLE_END -->
+
+<!-- RHP_014_8_CI_COHERENCE_DOCTOR -->
+RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remote red CI is treated as a wound until a later green commit proves closure. Next: RHP-014.9 Autoheal executor dry-run v0.1.
+<!-- /RHP_014_8_CI_COHERENCE_DOCTOR -->

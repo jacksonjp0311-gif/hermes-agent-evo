@@ -1,52 +1,10 @@
 {
-  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.4",
+  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.5",
   "ok": true,
-  "latest_operation": "RHP-014.7",
-  "latest_evidence": "docs/context-layer/ops/RHP-014-7-final-evidence.json",
-  "latest_commit_or_base": "3d89d9cce5a9c6b256526870b42fb3dacfcc1e79",
-  "next_operation": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
-  "active_sequence": [
-    "ENTRYPOINT-GATE",
-    "ROOT-ANCHOR",
-    "RESIDUE-MANAGER",
-    "AUTOHEAL-PREFLIGHT",
-    "PULL-REBASE",
-    "HUMAN-AUTHORIZATION",
-    "OPERATION",
-    "VALIDATION",
-    "EVIDENCE",
-    "BOUNDARY",
-    "SECRET-SCAN",
-    "CURRENT-SCRIPT-GATE",
-    "COMMAND-RUNNER",
-    "STREAM-COLLAPSE",
-    "RHPWAIT-FILL",
-    "ERROR-BOX",
-    "GITHUB-PUSH-BOX",
-    "HUMAN-UI-SUMMARY",
-    "RETURN-ROOT"
-  ],
-  "required_read_order": [
-    "docs/context-layer/latest-rhp.json",
-    "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
-    "docs/context-layer/all-one-script-contract.md",
-    "docs/context-layer/rhp_gate_checklist.md",
-    "README.md",
-    "AGENTS.md",
-    "rhp/README.md",
-    "docs/context-layer/ops/RHP-014-7-final-evidence.json",
-    "docs/context-layer/ops/RHP-014-7-operator-dashboard-bundle.json"
-  ],
-  "required_gates": [
-    "entrypoint must be file invocation",
-    "residue manager must classify failed-run residue",
-    "operator_script_name must match expected script",
-    "operation in evidence must match current operation",
-    "authority locks must remain false",
-    "unknown dirty paths must block",
-    "no push before current-script gate",
-    "RHPWAIT is display-only and separate from RHPLOAD audit grammar"
-  ],
+  "latest_operation": "RHP-014.8",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-8-final-evidence.json",
+  "latest_commit_or_base": "4985859b757575f290bec80e6689e4bcf96c8c3d",
+  "next_operation": "RHP-014.9 Autoheal executor dry-run v0.1",
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,
@@ -61,12 +19,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "roles": {
-    "Hermes": "agent/runtime surface and operator shell candidate",
-    "RHP": "governance, evidence, reconstruction, residue classification, safety gating, and dashboard geometry",
-    "All-One": "local human-authorized actuator",
-    "Evidence": "proof memory and zero-context replay surface",
-    "Human": "authorization boundary"
-  },
-  "non_claim_lock": "Zero-context rebuild reconstructs loop state only. It grants no provider/model/tool/CMS/memory/API/autonomous/self-authorization authority."
+  "non_claim_lock": "Zero-context rebuild grants no authority."
 }

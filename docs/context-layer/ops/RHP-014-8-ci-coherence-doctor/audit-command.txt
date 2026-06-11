@@ -1,0 +1,48 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.evidence_coherence_auditor --repo-root . --json --out-json C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-014-8-ci-coherence-doctor\evidence-coherence-audit.json
+RETURN CODE: 0
+{
+  "schema": "RHP-EVIDENCE-COHERENCE-AUDITOR-v0.1",
+  "ok": true,
+  "latest_operation": "RHP-014.8",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-8-final-evidence.json",
+  "next_operation": "RHP-014.9 Autoheal executor dry-run v0.1",
+  "checks": [
+    {
+      "name": "latest_pointer_exists",
+      "ok": true,
+      "detail": "docs\\context-layer\\latest-rhp.json"
+    },
+    {
+      "name": "latest_evidence_exists",
+      "ok": true,
+      "detail": "docs/context-layer/ops/RHP-014-8-final-evidence.json"
+    },
+    {
+      "name": "operation_alignment",
+      "ok": true,
+      "detail": "pointer=RHP-014.8 evidence=RHP-014.8"
+    },
+    {
+      "name": "next_alignment",
+      "ok": true,
+      "detail": "pointer=RHP-014.9 Autoheal executor dry-run v0.1 evidence=RHP-014.9 Autoheal executor dry-run v0.1"
+    },
+    {
+      "name": "validation_passed",
+      "ok": true,
+      "detail": "validation flag"
+    },
+    {
+      "name": "focused_tests_passed",
+      "ok": true,
+      "detail": "focused flag"
+    },
+    {
+      "name": "authority_locks_false",
+      "ok": true,
+      "detail": "{\"api_write\": false, \"autonomous_authority\": false, \"cms_runtime_execution\": false, \"cms_write\": false, \"dependency_mutation_committed\": false, \"external_ingestion\": false, \"memory_promotion\": false, \"memory_write\": false, \"model_call_executed\": false, \"provider_call_executed\": false, \"self_authorization\": false, \"tool_use_executed\": false}"
+    }
+  ],
+  "failures": [],
+  "non_claim_lock": "Audits recorded evidence only; no repair, CI rerun, workflow mutation, or authority."
+}

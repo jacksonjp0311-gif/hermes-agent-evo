@@ -1,0 +1,9 @@
+{
+  "rhp_014_8_passed": true,
+  "ci_red_wound_recorded": true,
+  "evidence_coherence_auditor_added": true,
+  "loop_state_added": true,
+  "rhploop_doctor_added": true,
+  "focused_tests_passed": true,
+  "next": "RHP-014.9 Autoheal executor dry-run v0.1"
+}

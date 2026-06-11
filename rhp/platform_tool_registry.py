@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse, json
 from typing import Any
 
-RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.3"
+RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.4"
 
 TOOLS = [
     {"tool": "local-paste-fallback", "box": "CI-INGEST-BOX", "status": "active", "authority": "local_file_read", "purpose": "accept copied CI logs/screenshots text as wound-packet input"},
@@ -15,6 +15,9 @@ TOOLS = [
     {"tool": "operator-dashboard-bundle", "box": "OPERATOR-DASHBOARD-BOX", "status": "active", "authority": "orientation_only", "purpose": "join evidence, transcript, wound, dry-run, residue, authority, tools, and geometry into one operator bundle"},
     {"tool": "loop-geometry", "box": "GEOMETRY-BOX", "status": "active", "authority": "orientation_only", "purpose": "make the RHP loop shape readable without granting autonomy"},
     {"tool": "rhpwait-fill-progress", "box": "UI-WAIT-BOX", "status": "active", "authority": "display_only", "purpose": "show single-line fill progress while RHPLOAD remains stable audit output"},
+    {"tool": "evidence-coherence-auditor", "box": "COHERENCE-AUDIT-BOX", "status": "active", "authority": "read_only_audit", "purpose": "verify pointer, evidence, validation flags, and authority locks agree"},
+    {"tool": "loop-state", "box": "LOOP-STATE-BOX", "status": "active", "authority": "status_only", "purpose": "render gate and CI state without executing repairs"},
+    {"tool": "rhploop-doctor", "box": "RHPLOOP-DOCTOR-BOX", "status": "active", "authority": "diagnosis_only", "purpose": "summarize coherence, CI wound, authority locks, and next action"},
 ]
 
 def registry() -> dict[str, Any]:

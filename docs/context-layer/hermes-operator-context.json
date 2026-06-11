@@ -1,25 +1,7 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.4",
-  "hermes_mode": "operator_shell_candidate",
-  "hermes_can": [
-    "display_dashboard",
-    "read_evidence",
-    "render_loop_geometry",
-    "ingest_local_ci_artifacts",
-    "propose_dry_run_plans",
-    "emit_operator_context"
-  ],
-  "hermes_cannot": [
-    "self_authorize",
-    "mutate_without_all_one",
-    "push_without_gates",
-    "write_memory_or_cms",
-    "call_providers_from_rhp",
-    "bypass_entrypoint_gate",
-    "bypass_residue_manager"
-  ],
-  "latest_operation": "RHP-014.7",
-  "next_operation": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.5",
+  "latest_operation": "RHP-014.8",
+  "next_operation": "RHP-014.9 Autoheal executor dry-run v0.1",
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,
@@ -34,5 +16,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Hermes operator context is read-only orientation. It grants no direct mutation or self-authorization authority."
+  "non_claim_lock": "Read-only orientation; no direct mutation or self-authorization."
 }

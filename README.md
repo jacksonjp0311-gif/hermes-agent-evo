@@ -2590,3 +2590,7 @@ Built by [Nous Research](https://nousresearch.com).
 
 
 RHP-L-034: Managed-region replacement should use regex over explicit start/end markers; PowerShell `.Split($marker, 2)` is not a safe delimiter split for block surgery.
+
+<!-- RHP_014_8_CI_COHERENCE_DOCTOR -->
+RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remote red CI is treated as a wound until a later green commit proves closure. Next: RHP-014.9 Autoheal executor dry-run v0.1.
+<!-- /RHP_014_8_CI_COHERENCE_DOCTOR -->

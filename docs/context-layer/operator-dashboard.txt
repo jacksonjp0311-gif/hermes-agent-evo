@@ -1,10 +1,8 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.7 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.8 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-014.7
-   +- next: RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor
-   +- evidence: docs/context-layer/ops/RHP-014-7-final-evidence.json
-   +- bundle: docs/context-layer/ops/RHP-014-7-operator-dashboard-bundle.json
-   +- geometry axes: evidence, transcript, wound, dry_run, residue, authority, tools, geometry
-   +- rhpwait: single-line fill display only
+   +- latest: RHP-014.8
+   +- next: RHP-014.9 Autoheal executor dry-run v0.1
+   +- evidence: docs/context-layer/ops/RHP-014-8-final-evidence.json
+   +- doctor: docs/context-layer/ops/RHP-014-8-ci-coherence-doctor/rhploop-doctor.json
    +- authority ok: true
    `- verified: true [OK]
