@@ -1,18 +1,20 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-016.4",
-  "next_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+  "latest_operation": "RHP-017.0",
+  "next_operation": "continue_bounded_evolution_after_named_subject_green",
   "hermes_can": [
-    "read_repair_ci_observation",
-    "explain_green_or_red_branch",
-    "wait_for_or_ingest_next_ci_result"
+    "read_ci_observation_loop_evidence",
+    "explain_commit_scoped_transition",
+    "route_next_legal_operation_from_transition_table",
+    "continue_bounded_evolution_after_named_subject_green"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "claim_current_operation_ci_without_observation"
+    "claim_current_operation_ci_without_observation",
+    "generalize_operator_observed_status_beyond_subject_commit"
   ],
   "authority_locks": {
     "provider_call_executed": false,
