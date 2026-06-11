@@ -1,12 +1,11 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.7 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.8 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.7
-   +- next: RHP-015.8 Wound taxonomy registry and proposal-carrying evidence scaffold
-   +- current head at operation start: f66ff54277d8dc5176f6e12854a4eed2f7b1e9ec
+   +- latest: RHP-015.8
+   +- next: RHP-015.9 Autoheal proposal planner integration and doctor surfaced wound queue
+   +- current head at operation start: ef64388aa90804701a3fdff6a77e1d9f58ca6097
    +- current head CI status: pending
-   +- current head integration closed: false
    +- state: REMOTE_PENDING
-   +- doctor cockpit: added
-   +- mutation allowed by doctor: false
+   +- active wound class: remote_ci_pending
+   +- proposal execution enabled: false
    +- authority ok: true
    `- verified: true [OK]

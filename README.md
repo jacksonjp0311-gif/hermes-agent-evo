@@ -2765,3 +2765,31 @@ REMOTE_RED -> wound packet before repair
 
 Doctor is read/classify/propose only. It does not mutate, rerun CI, call GitHub, execute autoheal, or grant authority.
 <!-- /RHP_015_7_DOCTOR_STATE_MACHINE -->
+
+<!-- RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
+### RHP-015.8 Wound Taxonomy Registry + Proposal-Carrying Evidence
+
+RHP-015.8 converts repeated failures into stable named wound classes and non-executing proposal packets.
+
+Wound law:
+
+```text
+Failure -> WoundClass -> ProposalPacket -> Human-authorized All-One
+```
+
+Proposal packets carry:
+
+```text
+wound_class
+subject
+allowed_paths
+blocked_paths
+test_commands
+risk_level
+rollback
+execution_enabled = false
+authority_granted = false
+```
+
+This keeps autoheal dry-run/proposal-only while making future repairs sharper and replayable.
+<!-- /RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->

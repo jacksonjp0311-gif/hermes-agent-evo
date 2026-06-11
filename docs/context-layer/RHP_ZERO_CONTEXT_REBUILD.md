@@ -1,23 +1,23 @@
 # RHP Zero-Context Rebuild Packet
 
-- schema: `RHP-ZERO-CONTEXT-REBUILD-v1.4`
+- schema: `RHP-ZERO-CONTEXT-REBUILD-v1.5`
 - ok: `True`
-- latest operation: `RHP-015.7`
-- latest evidence: `docs/context-layer/ops/RHP-015-7-final-evidence.json`
-- operation base commit: `f66ff54277d8dc5176f6e12854a4eed2f7b1e9ec`
-- observed previous sealed commit: `f66ff54277d8dc5176f6e12854a4eed2f7b1e9ec`
-- current head commit at operation start: `f66ff54277d8dc5176f6e12854a4eed2f7b1e9ec`
+- latest operation: `RHP-015.8`
+- latest evidence: `docs/context-layer/ops/RHP-015-8-final-evidence.json`
+- operation base commit: `ef64388aa90804701a3fdff6a77e1d9f58ca6097`
+- observed previous sealed commit: `ef64388aa90804701a3fdff6a77e1d9f58ca6097`
 - current head CI status: `pending`
 - current head integration closed: `False`
 - state machine state: `REMOTE_PENDING`
+- active wound class for CI state: `remote_ci_pending`
 - current operation commit: `unobservable-from-inside-same-commit`
-- next operation: `RHP-015.8 Wound taxonomy registry and proposal-carrying evidence scaffold`
+- next operation: `RHP-015.9 Autoheal proposal planner integration and doctor surfaced wound queue`
 
-## Doctor law
+## Wound taxonomy law
 
-- Doctor is read/classify/propose only.
-- Doctor grants no mutation authority.
-- Mutation still requires an exact human-authorized All-One.
-- Doctor must report worktree, evidence API, replay, CI subject state, next legal operation, and block reasons.
+- Repeated failure classes become stable wound classes.
+- Wound classes can produce proposal packets.
+- Proposal packets do not execute.
+- Execution remains human-authorized All-One only.
 
 Non-claim lock: Zero-context rebuild grants no authority.

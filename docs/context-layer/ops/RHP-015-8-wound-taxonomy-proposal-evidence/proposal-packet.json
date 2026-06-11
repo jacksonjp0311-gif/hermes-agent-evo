@@ -1,0 +1,36 @@
+{
+  "schema": "RHP-PROPOSAL-PACKET-v0.1",
+  "wound_class": "remote_ci_pending",
+  "wound": {
+    "severity": "medium",
+    "description": "Remote CI is pending/unknown for current head; do not claim green closure.",
+    "default_next": "wait_or_ingest_final_ci_status"
+  },
+  "subject": "commit:ef64388aa90804701a3fdff6a77e1d9f58ca6097",
+  "summary": "RHP-015.8 proposal scaffold: classify current CI/state condition without executing repair.",
+  "allowed_paths": [
+    "docs/context-layer/ops/RHP-015-8*",
+    "rhp/wound_taxonomy.py",
+    "rhp/proposal_packet.py"
+  ],
+  "blocked_paths": [
+    "* unless explicitly listed in allowed_paths"
+  ],
+  "test_commands": [
+    "python -m pytest -q -o addopts= tests/test_rhp_015_8_wound_taxonomy.py tests/test_rhp_015_8_proposal_packet.py"
+  ],
+  "risk_level": "low",
+  "rollback": "git restore scoped paths before commit; no post-seal mutation",
+  "execution_enabled": false,
+  "authority_required": "human_authorized_all_one_script",
+  "authority_granted": false,
+  "non_claim_lock": "Proposal packets carry repair intent only. They do not execute repair, rerun CI, mutate workflows, or grant authority.",
+  "validation": {
+    "ok": true,
+    "missing": [],
+    "wound_ok": true,
+    "authority_ok": true,
+    "paths_ok": true,
+    "tests_ok": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.8",
+  "operation": "RHP-015.8",
+  "group": "operation-commands",
+  "total": 8,
+  "ok": 8,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-015.7 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-015.8 starts from the already-published RHP-015.7 seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact current identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "wound-taxonomy-registry",
+      "heading": "Render wound taxonomy registry",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.wound_taxonomy --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-8-wound-taxonomy-proposal-evidence\\wound-taxonomy-registry.json",
+      "why": "Promote repeated failure classes into stable named wound classes.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\wound-taxonomy-registry.txt"
+    },
+    {
+      "stage": "proposal-packet",
+      "heading": "Render non-executing proposal packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.proposal_packet --wound-class remote_ci_pending --subject commit:ef64388aa90804701a3fdff6a77e1d9f58ca6097 --summary RHP-015.8 proposal scaffold: classify current CI/state condition without executing repair. --allowed-path docs/context-layer/ops/RHP-015-8* --allowed-path rhp/wound_taxonomy.py --allowed-path rhp/proposal_packet.py --test-command python -m pytest -q -o addopts= tests/test_rhp_015_8_wound_taxonomy.py tests/test_rhp_015_8_proposal_packet.py --risk-level low --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-8-wound-taxonomy-proposal-evidence\\proposal-packet.json",
+      "why": "Proposal carries allowed paths, tests, risk, rollback, and authority boundary; it does not execute.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\proposal-packet.txt"
+    },
+    {
+      "stage": "doctor-check",
+      "heading": "Run doctor with bounded operation dirty mode",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.rhpload_doctor --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-8-wound-taxonomy-proposal-evidence\\rhpload-doctor.json",
+      "why": "Confirm cockpit can classify state while this authorized operation is constructing bounded files.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\doctor-check.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.8 wound/proposal surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/wound_taxonomy.py rhp/proposal_packet.py tests/test_rhp_015_8_wound_taxonomy.py tests/test_rhp_015_8_proposal_packet.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run wound/proposal focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_8_wound_taxonomy.py tests/test_rhp_015_8_proposal_packet.py tests/test_rhp_015_7_state_machine.py tests/test_rhp_015_7_rhpload_doctor.py",
+      "why": "Prove wound taxonomy, proposal packet, doctor, and state machine before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-8-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

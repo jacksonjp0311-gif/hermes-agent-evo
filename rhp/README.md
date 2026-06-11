@@ -803,3 +803,16 @@ rhp/rhpload_doctor.py
 
 Boundary: these classify local protocol state only. They do not call GitHub, rerun CI, mutate workflows, execute autoheal, or grant authority.
 <!-- /RHP_015_7_DOCTOR_STATE_MACHINE -->
+
+<!-- RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
+### RHP-015.8 Wound Taxonomy Registry + Proposal-Carrying Evidence
+
+Adds:
+
+```text
+rhp/wound_taxonomy.py
+rhp/proposal_packet.py
+```
+
+Boundary: taxonomy and proposals classify/propose only. They do not execute repair, rerun CI, mutate workflows, or grant authority.
+<!-- /RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->

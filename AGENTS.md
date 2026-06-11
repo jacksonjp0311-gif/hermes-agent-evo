@@ -1694,3 +1694,7 @@ RHP-015.6 rule: every claim must have a subject, source, observation time, statu
 <!-- RHP_015_7_DOCTOR_STATE_MACHINE -->
 RHP-015.7 rule: before any new mutation, run/consult the doctor cockpit. It must report latest pointer, worktree cleanliness, evidence API status, replay status, current-head CI status, state-machine state, next legal operation, and mutation block reasons. Doctor is read-only and grants no authority.
 <!-- /RHP_015_7_DOCTOR_STATE_MACHINE -->
+
+<!-- RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
+RHP-015.8 rule: repeated failure classes belong in wound taxonomy. Proposal packets may carry repair intent, allowed paths, tests, risk, and rollback, but execution_enabled and authority_granted must remain false unless a future human-authorized All-One explicitly changes the boundary.
+<!-- /RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->

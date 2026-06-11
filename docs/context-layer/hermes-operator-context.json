@@ -1,18 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.4",
-  "latest_operation": "RHP-015.7",
-  "next_operation": "RHP-015.8 Wound taxonomy registry and proposal-carrying evidence scaffold",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.5",
+  "latest_operation": "RHP-015.8",
+  "next_operation": "RHP-015.9 Autoheal proposal planner integration and doctor surfaced wound queue",
   "hermes_can": [
-    "run_rhpload_doctor",
-    "classify_state_machine_state",
-    "recommend_next_legal_operation"
+    "classify_wound_class",
+    "render_proposal_packet",
+    "surface_wound_queue_to_doctor"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "claim_remote_ci_green_without_subject_commit"
+    "grant_authority_from_proposal_packet"
   ],
   "authority_locks": {
     "provider_call_executed": false,
