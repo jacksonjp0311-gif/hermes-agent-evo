@@ -1718,3 +1718,7 @@ RHP-016.2 rule: CI red states should become wound packets before repair. The bro
 <!-- RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
 RHP-016.3 rule: repair may patch the bounded browser supervisor import surface only. Do not claim remote CI green for the new repair commit until a later observation/reconciliation operation.
 <!-- /RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
+
+<!-- RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
+RHP-016.4 rule: repair commit CI observations must name the subject commit. Green reconciles that subject only; red becomes a re-wound route; pending remains wait-state.
+<!-- /RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->

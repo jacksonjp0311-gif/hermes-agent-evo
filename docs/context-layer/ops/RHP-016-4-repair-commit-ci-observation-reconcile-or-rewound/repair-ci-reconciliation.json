@@ -1,0 +1,20 @@
+{
+  "schema": "RHP-REPAIR-CI-RECONCILIATION-v0.1",
+  "claim": "repair_commit_ci_observation",
+  "subject_type": "git_commit",
+  "subject_commit": "cb5164265ef2df8ad894175bc56fc4b809ae5cea",
+  "prior_operation": "RHP-016.3",
+  "observed_ci_status": "pending",
+  "ci_source": "operator-provided",
+  "run_url": "",
+  "observed_at_utc": "2026-06-11T15:34:08.561063+00:00",
+  "repaired_wound_class": "browser_supervisor_websockets_dependency_api_drift",
+  "active_wound_class": "remote_ci_pending",
+  "state": "REPAIR_CI_PENDING",
+  "integration_closed": false,
+  "next_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+  "authority_granted": false,
+  "execution_enabled": false,
+  "remote_ci_rerun_executed": false,
+  "non_claim_lock": "Repair CI reconciliation scopes status to one subject commit only. It does not call GitHub, rerun CI, execute repair, mutate dependencies, or grant authority."
+}

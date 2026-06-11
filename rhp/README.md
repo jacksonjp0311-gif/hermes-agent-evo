@@ -870,3 +870,11 @@ Patches `tools/browser_supervisor.py` so `ClientConnection` is imported only und
 
 Boundary: no dependency pin change and no remote CI claim from inside the repair commit.
 <!-- /RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
+
+<!-- RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
+### RHP-016.4 Repair Commit CI Observation
+
+Adds `rhp/repair_ci_reconciliation.py`.
+
+Boundary: status observation only; no repair execution or remote CI claim for the new RHP-016.4 commit.
+<!-- /RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->

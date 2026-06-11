@@ -2882,3 +2882,18 @@ This keeps runtime use on `websockets.connect` while avoiding import-time depend
 
 Boundary: local repair only. Remote CI remains unknown until the new commit is observed after push.
 <!-- /RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
+
+<!-- RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
+### RHP-016.4 Repair Commit CI Observation
+
+RHP-016.4 observes the RHP-016.3 repair commit CI state and branches without overclaiming.
+
+```text
+subject_commit = cb5164265ef2df8ad894175bc56fc4b809ae5cea
+observed_ci_status = pending
+state = REPAIR_CI_PENDING
+integration_closed = false
+```
+
+Boundary: observation/reconciliation only. It does not rerun CI, execute repair, or grant authority.
+<!-- /RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
