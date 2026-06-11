@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse, json
 from typing import Any
 
-RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.5"
+RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.6"
 
 TOOLS = [
     {"tool": "local-paste-fallback", "box": "CI-INGEST-BOX", "status": "active", "authority": "local_file_read", "purpose": "accept copied CI logs/screenshots text as wound-packet input"},
@@ -21,6 +21,8 @@ TOOLS = [
     {"tool": "autoheal-executor-dry-run", "box": "AUTOHEAL-DRY-RUN-BOX", "status": "active", "authority": "proposal_only", "purpose": "plan bounded repairs without executing them"},
     {"tool": "rhpload-command-headings", "box": "COMMAND-HEADING-BOX", "status": "active", "authority": "display_only", "purpose": "show human-readable headings, command text, and reasons for every COMMAND box"},
     {"tool": "runtime-diagnosis-box", "box": "RUNTIME-DIAGNOSIS-BOX", "status": "active", "authority": "diagnosis_only", "purpose": "classify runtime failures into expandable diagnosis boxes with raw artifact pointers"},
+    {"tool": "autoheal-proposal-evaluator", "box": "AUTOHEAL-PROPOSAL-BOX", "status": "active", "authority": "proposal_only", "purpose": "evaluate CI wound repair proposals without executing them"},
+    {"tool": "ci-log-ingestion", "box": "CI-LOG-INGESTION-BOX", "status": "active", "authority": "read_only_ingestion", "purpose": "classify pasted or exported CI logs into wound surfaces"},
 ]
 
 def registry() -> dict[str, Any]:

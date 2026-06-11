@@ -1,10 +1,10 @@
 {
-  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.6",
+  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.7",
   "ok": true,
-  "latest_operation": "RHP-014.9",
-  "latest_evidence": "docs/context-layer/ops/RHP-014-9-final-evidence.json",
-  "latest_commit_or_base": "c4a9d75f658a6d029e9ee9e1b68c05bebfeb8132",
-  "next_operation": "RHP-015.0 Autoheal proposal evaluator + CI log ingestion",
+  "latest_operation": "RHP-015.0",
+  "latest_evidence": "docs/context-layer/ops/RHP-015-0-final-evidence.json",
+  "latest_commit_or_base": "49976691ca1cff470cb7bb0bfa72e106c0f5311e",
+  "next_operation": "RHP-015.1 CI green verification + autoheal proposal review",
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,
@@ -19,11 +19,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "new_operator_grammar": [
-    "RHPLOAD command heading",
-    "RHPLOAD command text",
-    "RHPLOAD why",
-    "RHPDIAG runtime diagnosis"
-  ],
   "non_claim_lock": "Zero-context rebuild grants no authority."
 }

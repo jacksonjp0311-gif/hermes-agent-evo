@@ -2598,3 +2598,7 @@ RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remot
 <!-- RHP_014_9_AUTOHEAL_DRY_RUN -->
 RHP-014.9 adds autoheal executor dry-run planning, RHPLOAD command headings, and RHPDIAG runtime diagnosis boxes. Autoheal execution remains disabled. Next: RHP-015.0 Autoheal proposal evaluator + CI log ingestion.
 <!-- /RHP_014_9_AUTOHEAL_DRY_RUN -->
+
+<!-- RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
+RHP-015.0 repairs the CI boot/alignment wound by making `rhp/alignment_guard.py` pointer-aware while preserving legacy RHP-013.5 check keys: `latest_rhp0135_has_boundary_shape` and `latest_rhp0135_passed`. It also adds read-only CI log ingestion and autoheal proposal evaluation. Autoheal execution remains disabled. Next: RHP-015.1 CI green verification + autoheal proposal review.
+<!-- /RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->

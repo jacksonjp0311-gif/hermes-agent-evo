@@ -1,0 +1,22 @@
+{
+  "schema": "RHP-015.0-CI-WOUND-PACKET-v0.2",
+  "operation": "RHP-015.0",
+  "source": "user-provided GitHub Actions logs plus failed local V1/V2/V3 attempts",
+  "failed_files": [
+    "tests/test_rhp_010_runtime_native_boot.py",
+    "tests/test_rhp_011_operator_visible_startup.py",
+    "tests/test_rhp_013_runtime_boot_state.py",
+    "tests/test_rhp_alignment_guard.py"
+  ],
+  "failure_classes": [
+    "boot_preflight_ok_false",
+    "operator_startup_degraded",
+    "root_readme_latest_evidence",
+    "root_readme_current_status",
+    "stale_evidence_key_surface",
+    "powershell_automatic_args_collision",
+    "powershell_parser_stray_token"
+  ],
+  "classification": "additive_compatibility_repair_required_for_alignment_guard_legacy_keys_plus_current_pointer",
+  "non_claim_lock": "Records CI wound only; no CI rerun, workflow mutation, autoheal execution, or authority."
+}

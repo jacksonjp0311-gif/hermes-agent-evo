@@ -1,0 +1,10 @@
+{
+  "rhp_015_0_passed": true,
+  "alignment_guard_pointer_aware": true,
+  "legacy_alignment_keys_preserved": true,
+  "boot_preflight_ci_wound_repaired": true,
+  "autoheal_proposal_evaluator_added": true,
+  "ci_log_ingestion_added": true,
+  "focused_tests_passed": true,
+  "next": "RHP-015.1 CI green verification + autoheal proposal review"
+}

@@ -1,0 +1,1 @@
+boot_preflight_ok is True root_readme_latest_evidence root_readme_current_status OperatorStartupStatus(ok=False tests/test_rhp_alignment_guard.py

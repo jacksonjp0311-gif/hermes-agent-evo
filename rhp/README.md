@@ -712,3 +712,11 @@ Adds `rhp/autoheal_executor_dry_run.py`, `rhp/rhpload_command_headings.py`, and 
 
 Boundary: proposes and diagnoses only. No repair execution, no workflow mutation, no CI rerun, no authority.
 <!-- /RHP_014_9_AUTOHEAL_DRY_RUN -->
+
+<!-- RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
+### RHP-015.0 CI Boot Alignment Repair
+
+Adds pointer-aware alignment guard behavior while preserving legacy boot keys. Adds `rhp/ci_log_ingestion.py` and `rhp/autoheal_proposal_evaluator.py`.
+
+Boundary: repair is human-authorized through All-One; CI ingestion is read-only; autoheal is proposal-only.
+<!-- /RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->

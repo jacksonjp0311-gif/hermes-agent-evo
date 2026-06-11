@@ -1,0 +1,13 @@
+{
+  "schema": "RHP-CI-LOG-INGESTION-v0.1",
+  "ok": true,
+  "failures": [
+    "alignment_guard_not_green",
+    "boot_preflight_ok_false",
+    "operator_startup_degraded",
+    "root_readme_current_status",
+    "root_readme_latest_evidence"
+  ],
+  "summary": "CI log ingestion classified known RHP startup/alignment wound surfaces.",
+  "non_claim_lock": "CI log ingestion reads pasted/exported logs only. It does not call GitHub, rerun CI, mutate files, or grant authority."
+}

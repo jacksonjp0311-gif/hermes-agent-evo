@@ -1662,3 +1662,7 @@ RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remot
 <!-- RHP_014_9_AUTOHEAL_DRY_RUN -->
 RHP-014.9 rule: every `loop=COMMAND` box should include a human heading, command text, and why field. Runtime failures should render as RHPDIAG boxes with raw artifact paths. Autoheal remains dry-run only.
 <!-- /RHP_014_9_AUTOHEAL_DRY_RUN -->
+
+<!-- RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
+RHP-015.0 lesson: evidence/check keys are API surfaces. New pointer-aware alignment must preserve legacy keys used by boot tests and future agents. Autoheal proposal remains dry-run only.
+<!-- /RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
