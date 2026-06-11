@@ -2735,3 +2735,33 @@ Replay law:
 latest-rhp -> final evidence -> command summaries -> dashboard -> next legal operation
 ```
 <!-- /RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
+
+<!-- RHP_015_7_DOCTOR_STATE_MACHINE -->
+### RHP-015.7 RHP Doctor Cockpit + Explicit State Machine
+
+RHP-015.7 adds a read-only operator cockpit and explicit state machine.
+
+Doctor answers:
+
+```text
+What is latest?
+Is worktree clean?
+Is evidence API compatible?
+Is replay complete?
+What is current-head CI status?
+What state is the loop in?
+What is the next legal operation?
+Can mutation happen?
+```
+
+State machine:
+
+```text
+NEW -> PREFLIGHT -> AUTHORIZED -> MUTATED -> VALIDATED -> SEALED_LOCAL -> PUSHED
+PUSHED -> REMOTE_PENDING | REMOTE_GREEN | REMOTE_RED
+REMOTE_GREEN -> RECONCILED
+REMOTE_RED -> wound packet before repair
+```
+
+Doctor is read/classify/propose only. It does not mutate, rerun CI, call GitHub, execute autoheal, or grant authority.
+<!-- /RHP_015_7_DOCTOR_STATE_MACHINE -->

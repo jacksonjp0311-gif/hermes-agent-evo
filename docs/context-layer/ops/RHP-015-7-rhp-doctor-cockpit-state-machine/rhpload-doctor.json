@@ -1,0 +1,46 @@
+{
+  "schema": "RHPLOAD-DOCTOR-v0.2",
+  "latest_operation": "RHP-015.6",
+  "latest_evidence": "docs/context-layer/ops/RHP-015-6-final-evidence.json",
+  "head": "f66ff54277d8dc5176f6e12854a4eed2f7b1e9ec",
+  "short_head": "f66ff5427",
+  "worktree_clean": false,
+  "dirty_paths": [
+    "rhp/rhpload_doctor.py",
+    "rhp/state_machine.py",
+    "tests/test_rhp_015_7_rhpload_doctor.py",
+    "tests/test_rhp_015_7_state_machine.py"
+  ],
+  "allow_operation_dirty": true,
+  "evidence_api_ok": true,
+  "replay_ok": true,
+  "local_validation_ok": true,
+  "current_head_ci_status": "pending",
+  "ci_source": "operator-provided",
+  "state": "REMOTE_PENDING",
+  "next_legal_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+  "can_mutate": false,
+  "blocked_reasons": [
+    "operation_bootstrap_dirty_allowed",
+    "remote_ci_not_final",
+    "human_all_one_authorization_required_for_mutation"
+  ],
+  "authority_required": "human_authorized_all_one_script",
+  "api_summary": {
+    "missing_pointer_required": [],
+    "missing_evidence_required": [],
+    "authority_not_false": [],
+    "deprecated_present": []
+  },
+  "replay_summary": {
+    "replay_completeness": 1.0,
+    "required": {
+      "latest_pointer": true,
+      "final_evidence": true,
+      "zero_context": true,
+      "operator_dashboard": true,
+      "command_summary": true
+    }
+  },
+  "non_claim_lock": "Doctor is read/classify/propose-only. It does not call GitHub, rerun CI, mutate files, execute repairs, or grant authority."
+}

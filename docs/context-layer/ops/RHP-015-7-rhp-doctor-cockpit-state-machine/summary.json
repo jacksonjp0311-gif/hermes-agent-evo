@@ -1,0 +1,13 @@
+{
+  "rhp_015_7_passed": true,
+  "rhpload_doctor_added": true,
+  "doctor_bootstrap_dirty_mode_added": true,
+  "state_machine_added": true,
+  "current_head_ci_status": "pending",
+  "state_machine_state": "REMOTE_PENDING",
+  "current_head_integration_closed": false,
+  "mutation_allowed_by_doctor": false,
+  "focused_tests_passed": true,
+  "summary_path": "docs/context-layer/ops/RHP-015-7-rhp-doctor-cockpit-state-machine/summary.json",
+  "next": "RHP-015.8 Wound taxonomy registry and proposal-carrying evidence scaffold"
+}

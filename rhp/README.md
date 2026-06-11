@@ -790,3 +790,16 @@ rhp/rhpload_replay.py
 
 Boundary: these tools validate and reconstruct local protocol evidence. They do not call GitHub, rerun CI, mutate workflows, execute autoheal, or grant authority.
 <!-- /RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
+
+<!-- RHP_015_7_DOCTOR_STATE_MACHINE -->
+### RHP-015.7 RHP Doctor Cockpit + Explicit State Machine
+
+Adds:
+
+```text
+rhp/state_machine.py
+rhp/rhpload_doctor.py
+```
+
+Boundary: these classify local protocol state only. They do not call GitHub, rerun CI, mutate workflows, execute autoheal, or grant authority.
+<!-- /RHP_015_7_DOCTOR_STATE_MACHINE -->

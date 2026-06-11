@@ -1,0 +1,83 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.7",
+  "operation": "RHP-015.7",
+  "group": "operation-commands",
+  "total": 9,
+  "ok": 9,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-015.6 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-015.7 starts from the already-published RHP-015.6 seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact current identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "rhpload-doctor",
+      "heading": "Run RHP doctor cockpit",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.rhpload_doctor --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-7-rhp-doctor-cockpit-state-machine\\rhpload-doctor.json",
+      "why": "Answer latest, worktree, evidence, replay, CI state, next legal operation, and mutation boundary.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\rhpload-doctor.txt"
+    },
+    {
+      "stage": "state-machine",
+      "heading": "Render explicit RHP state machine",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.state_machine --local-validation-ok --pushed --current-head-ci-status pending --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-7-rhp-doctor-cockpit-state-machine\\state-machine.json",
+      "why": "Make REMOTE_PENDING/REMOTE_GREEN/REMOTE_RED/RECONCILED state explicit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\state-machine.txt"
+    },
+    {
+      "stage": "evidence-api-gate",
+      "heading": "Run evidence API compatibility gate",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-7-rhp-doctor-cockpit-state-machine\\evidence-api-compatibility.json",
+      "why": "Ensure doctor layer still respects public evidence API.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\evidence-api-gate.txt"
+    },
+    {
+      "stage": "rhpload-replay-latest",
+      "heading": "Replay latest operation from evidence",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.rhpload_replay --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-7-rhp-doctor-cockpit-state-machine\\rhpload-replay-latest.json",
+      "why": "Ensure rehydration path remains reconstructable.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\rhpload-replay-latest.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.7 doctor/state surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/state_machine.py rhp/rhpload_doctor.py tests/test_rhp_015_7_state_machine.py tests/test_rhp_015_7_rhpload_doctor.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run doctor/state focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_7_state_machine.py tests/test_rhp_015_7_rhpload_doctor.py tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_6_rhpload_replay.py",
+      "why": "Prove doctor cockpit, explicit state machine, evidence API, and replay before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-7-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

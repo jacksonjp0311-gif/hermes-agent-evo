@@ -1690,3 +1690,7 @@ RHP-015.5 rule: context text surfaces must use real physical newlines, not liter
 <!-- RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
 RHP-015.6 rule: every claim must have a subject, source, observation time, status, and authority flag. Remote CI green must be scoped to a commit. Run evidence API compatibility and replay checks before sealing. Do not remove public evidence keys without an alias/deprecation path.
 <!-- /RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
+
+<!-- RHP_015_7_DOCTOR_STATE_MACHINE -->
+RHP-015.7 rule: before any new mutation, run/consult the doctor cockpit. It must report latest pointer, worktree cleanliness, evidence API status, replay status, current-head CI status, state-machine state, next legal operation, and mutation block reasons. Doctor is read-only and grants no authority.
+<!-- /RHP_015_7_DOCTOR_STATE_MACHINE -->
