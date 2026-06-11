@@ -1,0 +1,14 @@
+COMMAND: python -m rhp.ci_ingest --file <sample>
+RETURN CODE: 0
+{
+  "schema": "RHP-CI-INGEST-v0.1",
+  "ok": true,
+  "source_mode": "file",
+  "source_ref": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-014-4-ci-ingestion-source-router-human-ui\\sample-ci-log.txt",
+  "metadata": {
+    "bytes": 64
+  },
+  "non_claim_lock": "CI ingest packets normalize local or read-only CI artifacts only. They do not mutate CI, rerun workflows, write remote APIs, grant authority, or execute repairs.",
+  "normalized_text_preview": "FAILED tests/test_example.py\nAssertionError: expected RHP-014.3\n",
+  "normalized_text_length": 64
+}

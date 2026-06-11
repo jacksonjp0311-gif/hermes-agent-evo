@@ -1,0 +1,9 @@
+RHPLOAD [100%] HUMAN UI SUMMARY | operation=RHP-014.4 | status=ok [OK]
+`- operator dashboard
+   +- current: RHP-014.4
+   +- next: RHP-014.5 GitHub Actions job-summary annotations + SARIF/JUnit report planning
+   +- evidence: RHP-014.4-final-evidence
+   +- authority: self=False autonomous=False
+   +- wound: assertion_failure confidence=0.84
+   +- dry-run: would_mutate=False would_commit=False
+   `- verified: true [OK]

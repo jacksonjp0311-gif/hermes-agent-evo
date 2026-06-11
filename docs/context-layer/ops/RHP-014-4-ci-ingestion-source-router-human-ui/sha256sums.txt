@@ -1,0 +1,17 @@
+94c2a24ee06bfd577f2f34e5b693992aae3696c31189ddd31108595fb5b54f45  README.md
+703f5079fa608ab5f451eb425520a398ec7bb6ed8357d8997de1ca83f6cce59f  AGENTS.md
+8850d887af56c5e7a1f52ed1e11133bd383c533be69d987917ae510f5471e568  rhp/README.md
+f4aad4f9228cb226b78b624c5aa1b45075ba7e6cf6ec995e780128507c4cb61b  rhp/ci_ingest.py
+3cbbe7572b5c47eb8c0b95f3f80f31a90cda96129f30c08259f23f191f99ee61  rhp/ci_pipeline_bridge.py
+c431ecef7813b244bc2984feae2ea2bb0803b1a030b0553a8c4d6753bc18ce9e  rhp/platform_tool_registry.py
+23488130f66f446869a41b8733975a3370b053b4276b1fa59dc7d3bb419764c2  tests/test_rhp_014_4_ci_ingest.py
+4facaa9e17e90efb531571b4177e1ce7b9f0688d533e0cbe2cc2f9e743cdc9de  tests/test_rhp_014_4_ci_pipeline_bridge.py
+0c1253d3d30696fd727de949baec0dcc04b5d2e9dd82f1f577c6b27490c955cb  tests/test_rhp_014_4_platform_tool_registry.py
+9459c82d05784cf207e45e10eb5517601ed9f406092f9615a72b70d68e1c3c71  docs/context-layer/ops/RHP-014-4-final-evidence.json
+f233dd220eb6dadb24f9c5243f090c1bbcfa4a0ecee20e9e06bf97ba2d45128e  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui.md
+4020344d807391f20e39774f9ccd2f33b76e498702b3b0b65883c187e96e9de9  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui/py-compile-output.txt
+dc8eac26ded1717d55f7ec6b07639b9de66e6108abac8f5c27cb591ea6df1717  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui/ci-ingest-output.txt
+368c531b3e62a4f076cc4ebd187f359f73c7b0401be19202178d731c9e355c83  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui/github-json-ingest-output.txt
+36ff28aed0a94c4dbf81a56dc8e1783669e9dab7a4285e93a0d168c4b5bb2e79  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui/ci-pipeline-bridge-output.txt
+1090d4c275ebc5afb600dbfecf7d61a736c6045a4d70448b909ef81e088a9276  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui/platform-tool-registry-output.txt
+1226cc2ba64106ee47dc04a4323f67d8525567fbdf10821a61f025829f40e693  docs/context-layer/ops/RHP-014-4-ci-ingestion-source-router-human-ui/focused-test-output.txt

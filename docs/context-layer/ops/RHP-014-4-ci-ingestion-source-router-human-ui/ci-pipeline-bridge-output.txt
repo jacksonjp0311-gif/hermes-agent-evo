@@ -1,0 +1,12 @@
+COMMAND: python -m rhp.ci_pipeline_bridge ...
+RETURN CODE: 0
+{
+  "schema": "RHP-CI-PIPELINE-BRIDGE-v0.1",
+  "ok": true,
+  "classification": "assertion_failure",
+  "dry_run_ok": true,
+  "wound_packet": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-014-4-ci-ingestion-source-router-human-ui\\bridge\\wound-packet.json",
+  "autoheal_dry_run": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-014-4-ci-ingestion-source-router-human-ui\\bridge\\autoheal-dry-run.json",
+  "human_ui_summary": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-014-4-ci-ingestion-source-router-human-ui\\bridge\\human-ui-summary.txt",
+  "non_claim_lock": "Bridge creates packets and summaries only. It does not mutate, commit, push, call remote APIs, or execute repairs."
+}

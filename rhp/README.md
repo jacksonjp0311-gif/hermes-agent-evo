@@ -631,3 +631,19 @@ Purpose: convert CI artifacts into wound packets, then produce a non-mutating dr
 
 Next: `RHP-014.4 CI artifact ingestion from GitHub API + local paste fallback`.
 <!-- RHP_014_3_CI_WOUND_DRY_RUN_END -->
+
+<!-- RHP_014_4_CI_INGEST_START -->
+### RHP-014.4 CI Artifact Ingestion + Source Router + Human UI Bridge
+
+Adds:
+
+```text
+rhp/ci_ingest.py
+rhp/ci_pipeline_bridge.py
+rhp/platform_tool_registry.py
+```
+
+Purpose: ingest local or read-only CI artifacts, normalize them, and route them into wound packets, dry-run plans, and human UI summaries.
+
+Next: `RHP-014.5 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
+<!-- RHP_014_4_CI_INGEST_END -->

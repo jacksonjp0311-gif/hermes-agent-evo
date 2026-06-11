@@ -1,0 +1,14 @@
+{
+  "schema": "RHP-CI-WOUND-PACKET-v0.1",
+  "ok": true,
+  "classification": "assertion_failure",
+  "confidence": 0.84,
+  "source_kind": "ingested-ci",
+  "summary": "Test assertion failure requiring bounded diagnosis.",
+  "evidence_lines": [
+    "FAILED tests/test_example.py",
+    "AssertionError: expected RHP-014.3"
+  ],
+  "suggested_loop": "AUTOHEAL-PLAN",
+  "non_claim_lock": "CI wound packets classify CI artifacts only. They do not mutate files, call remote APIs, grant authority, or execute repairs."
+}

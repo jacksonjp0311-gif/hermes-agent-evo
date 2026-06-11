@@ -1516,6 +1516,37 @@ any user work outside the active/current operation allowlist
 <!-- HERMES_AGENT_RESIDUE_AWARE_STREAM_END -->
 
 <!-- HERMES_AGENT_CI_WOUND_DRY_RUN_START -->
+
+<!-- HERMES_AGENT_CI_INGEST_START -->
+## CI Artifact Ingestion Source Router
+
+RHP-014.4 adds:
+
+```text
+rhp/ci_ingest.py
+rhp/ci_pipeline_bridge.py
+rhp/platform_tool_registry.py
+```
+
+Ingestion order:
+
+```text
+1. local pasted text or local log file
+2. exported GitHub run/job JSON
+3. optional gh CLI read-only run view
+```
+
+Rules:
+
+| Rule | Requirement |
+|---|---|
+| local fallback first | system must work without network/API |
+| gh CLI optional | read-only only, no rerun/cancel/mutate |
+| normalized text | all sources become classifier text |
+| raw artifact | save source and normalized text in evidence |
+| dry-run only | no repair execution in this layer |
+
+<!-- HERMES_AGENT_CI_INGEST_END -->
 ## CI Wound Packets and Autoheal Dry-Run
 
 RHP-014.3 adds:

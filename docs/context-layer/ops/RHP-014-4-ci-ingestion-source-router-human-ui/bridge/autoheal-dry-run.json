@@ -1,0 +1,27 @@
+{
+  "schema": "RHP-AUTOHEAL-DRY-RUN-v0.1",
+  "ok": true,
+  "classification": "assertion_failure",
+  "would_mutate": false,
+  "would_commit": false,
+  "allowed_paths": [
+    "tests/<focused>",
+    "rhp/<focused>"
+  ],
+  "planned_steps": [
+    "extract exact assertion",
+    "identify source vs stale-test surface",
+    "propose smallest patch"
+  ],
+  "validation_commands": [
+    [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "<focused-test>"
+    ]
+  ],
+  "stop_reason": "",
+  "non_claim_lock": "Dry-run autoheal never mutates, commits, pushes, grants authority, calls providers, writes CMS/memory/API state, or performs remote CI mutation."
+}

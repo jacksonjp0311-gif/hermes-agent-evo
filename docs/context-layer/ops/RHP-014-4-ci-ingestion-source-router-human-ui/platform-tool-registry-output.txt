@@ -1,0 +1,9 @@
+COMMAND: python -m rhp.platform_tool_registry
+RETURN CODE: 0
+| Tool | Box | Status | Authority | Purpose |
+|---|---|---|---|---|
+| local-paste-fallback | CI-INGEST-BOX | active | local_file_read | accept copied CI logs/screenshots text as wound-packet input |
+| github-json-file | CI-INGEST-BOX | active | local_file_read | accept exported GitHub run/job JSON without network dependency |
+| gh-cli-run-view | CI-INGEST-BOX | optional_read_only | read_only_when_user_has_gh_auth | read workflow run metadata when GitHub CLI is installed |
+| github-actions-summary | CI-ANNOTATION-BOX | planned | ci_output_only | write RHPLOAD boxes into GitHub job summaries |
+| sarif-junit-export | MACHINE-REPORT-BOX | planned | evidence_only | emit parseable machine reports for CI and autoheal diagnosis |

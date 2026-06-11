@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_014_4_ci_ingest.py tests/test_rhp_014_4_ci_pipeline_bridge.py tests/test_rhp_014_4_platform_tool_registry.py
+RETURN CODE: 0
+......                                                                   [100%]
+6 passed in 0.56s

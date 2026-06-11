@@ -1,0 +1,16 @@
+{
+  "name": "Tests",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "name": "test",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "pytest",
+          "conclusion": "failure"
+        }
+      ]
+    }
+  ]
+}

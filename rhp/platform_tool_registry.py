@@ -1,0 +1,63 @@
+# RHP-014.4 platform tool registry.
+from __future__ import annotations
+import argparse, json
+from typing import Any
+
+RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.1"
+
+TOOLS = [
+    {
+        "tool": "local-paste-fallback",
+        "box": "CI-INGEST-BOX",
+        "status": "active",
+        "authority": "local_file_read",
+        "purpose": "accept copied CI logs/screenshots text as wound-packet input",
+    },
+    {
+        "tool": "github-json-file",
+        "box": "CI-INGEST-BOX",
+        "status": "active",
+        "authority": "local_file_read",
+        "purpose": "accept exported GitHub run/job JSON without network dependency",
+    },
+    {
+        "tool": "gh-cli-run-view",
+        "box": "CI-INGEST-BOX",
+        "status": "optional_read_only",
+        "authority": "read_only_when_user_has_gh_auth",
+        "purpose": "read workflow run metadata when GitHub CLI is installed",
+    },
+    {
+        "tool": "github-actions-summary",
+        "box": "CI-ANNOTATION-BOX",
+        "status": "planned",
+        "authority": "ci_output_only",
+        "purpose": "write RHPLOAD boxes into GitHub job summaries",
+    },
+    {
+        "tool": "sarif-junit-export",
+        "box": "MACHINE-REPORT-BOX",
+        "status": "planned",
+        "authority": "evidence_only",
+        "purpose": "emit parseable machine reports for CI and autoheal diagnosis",
+    },
+]
+
+def registry() -> dict[str, Any]:
+    return {"schema": RHP_PLATFORM_TOOL_REGISTRY_SCHEMA, "tools": TOOLS}
+
+def markdown_table() -> str:
+    rows = ["| Tool | Box | Status | Authority | Purpose |", "|---|---|---|---|---|"]
+    for item in TOOLS:
+        rows.append(f"| {item['tool']} | {item['box']} | {item['status']} | {item['authority']} | {item['purpose']} |")
+    return "\n".join(rows)
+
+def main(argv=None) -> int:
+    p = argparse.ArgumentParser(description="Render platform tool registry")
+    p.add_argument("--json", action="store_true")
+    args = p.parse_args(argv)
+    print(json.dumps(registry(), indent=2, ensure_ascii=False) if args.json else markdown_table())
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())

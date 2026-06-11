@@ -555,6 +555,33 @@ This is still dry-run only: no mutation, no commit, no remote CI action, no auto
 Next: `RHP-014.4 CI artifact ingestion from GitHub API + local paste fallback`.
 <!-- HERMES_RHP_014_3_CI_WOUND_DRY_RUN_END -->
 
+<!-- HERMES_RHP_014_4_CI_INGEST_START -->
+### RHP-014.4 CI Artifact Ingestion + Source Router + Human UI Bridge
+
+RHP-014.4 adds source ingestion before wound classification.
+
+```text
+local pasted text
+local log file
+exported GitHub JSON
+optional read-only gh run view
+-> RHP-CI-INGEST-v0.1
+-> RHP-CI-WOUND-PACKET-v0.1
+-> RHP-AUTOHEAL-DRY-RUN-v0.1
+-> HUMAN-UI-SUMMARY
+```
+
+Active sources:
+
+```text
+local-paste-fallback
+github-json-file
+gh-cli-run-view optional read-only
+```
+
+Next: `RHP-014.5 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
+<!-- HERMES_RHP_014_4_CI_INGEST_END -->
+
 
 
 

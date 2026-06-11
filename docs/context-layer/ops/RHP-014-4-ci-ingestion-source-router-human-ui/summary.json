@@ -1,0 +1,11 @@
+{
+  "rhp_014_4_passed": true,
+  "ci_ingest_added": true,
+  "ci_pipeline_bridge_added": true,
+  "platform_tool_registry_added": true,
+  "local_paste_fallback_supported": true,
+  "github_json_file_supported": true,
+  "gh_cli_optional_read_only_supported": true,
+  "focused_tests_passed": true,
+  "next": "RHP-014.5 GitHub Actions job-summary annotations + SARIF/JUnit report planning"
+}
