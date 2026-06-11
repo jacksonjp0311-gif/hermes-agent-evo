@@ -1,11 +1,11 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-017.1 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-017.2 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-017.1
-   +- next: observe_RHP_017_1_repair_commit_ci_with_ci_observation_loop
-   +- failed subject commit: 621e9954cb3fa5ecefb22f226ce1f20b73e5f00d
-   +- observed CI status: red
-   +- state: REPAIR_SEALED_LOCAL_REMOTE_UNKNOWN
-   +- integration closed: false
+   +- latest: RHP-017.2
+   +- next: continue_bounded_evolution_after_named_subject_green
+   +- subject commit: adebecbdb9e488efe66d47ac7806c358f81e688d
+   +- observed CI status: green
+   +- state: CI_RECONCILED_GREEN
+   +- integration closed: true
    +- current operation CI: unknown_until_next_observation
    +- authority ok: true
    `- verified: true [OK]

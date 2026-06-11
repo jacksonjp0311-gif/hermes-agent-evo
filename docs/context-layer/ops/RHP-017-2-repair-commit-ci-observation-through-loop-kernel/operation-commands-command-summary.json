@@ -1,0 +1,51 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-017.2",
+  "group": "operation-commands",
+  "total": 5,
+  "ok": 5,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe operation base/current repair commit",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-017.2 observes the current RHP-017.1 repair commit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-2-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile loop kernel and compatibility surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/ci_observation_loop.py rhp/evidence_api_compatibility_gate.py rhp/rhpload_doctor.py",
+      "why": "Catch syntax/import errors before sealing observation.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-2-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests-observer-surfaces",
+      "heading": "Run focused observer/compatibility tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -o addopts= tests/test_rhp_017_0_ci_observation_loop.py tests/test_rhp_017_1_evidence_api_authority_locks_alias.py tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_7_rhpload_doctor.py",
+      "why": "Prove loop kernel and evidence API surfaces remain compatible.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-2-python-streams\\focused-tests-observer-surfaces.txt"
+    },
+    {
+      "stage": "evidence-api-gate",
+      "heading": "Run evidence API compatibility gate after observation",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-017-2-repair-commit-ci-observation-through-loop-kernel\\evidence-api-gate-after-observation.json",
+      "why": "Prove latest pointer and final evidence shape remain compatible.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-2-python-streams\\evidence-api-gate.txt"
+    },
+    {
+      "stage": "rhpload-doctor",
+      "heading": "Run read-only RHP doctor after observation",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.doctor_cli --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-017-2-repair-commit-ci-observation-through-loop-kernel\\doctor-after-observation.json",
+      "why": "Prove cockpit remains read-only and compatible during operation dirt.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-2-python-streams\\rhpload-doctor.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

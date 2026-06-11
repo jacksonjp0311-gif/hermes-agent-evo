@@ -1,0 +1,80 @@
+{
+  "schema": "RHP-DOCTOR-CLI-v0.2",
+  "doctor": {
+    "schema": "RHPLOAD-DOCTOR-v0.2",
+    "latest_operation": "RHP-017.2",
+    "latest_evidence": "docs/context-layer/ops/RHP-017-2-final-evidence.json",
+    "head": "adebecbdb9e488efe66d47ac7806c358f81e688d",
+    "short_head": "adebecbdb",
+    "worktree_clean": false,
+    "dirty_paths": [
+      "ocs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+      "docs/context-layer/hermes-operator-context.json",
+      "docs/context-layer/latest-rhp.json",
+      "docs/context-layer/operator-dashboard.txt",
+      "docs/context-layer/rhp_zero_context_rebuild.json",
+      "docs/context-layer/ops/RHP-017-2-final-evidence.json",
+      "docs/context-layer/ops/RHP-017-2-repair-commit-ci-observation-through-loop-kernel/"
+    ],
+    "allow_operation_dirty": true,
+    "evidence_api_ok": true,
+    "replay_ok": true,
+    "local_validation_ok": true,
+    "current_head_ci_status": "pending",
+    "ci_source": "operator-provided",
+    "state": "REMOTE_PENDING",
+    "next_legal_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+    "can_mutate": false,
+    "blocked_reasons": [
+      "operation_bootstrap_dirty_allowed",
+      "remote_ci_not_final",
+      "human_all_one_authorization_required_for_mutation"
+    ],
+    "authority_required": "human_authorized_all_one_script",
+    "api_summary": {
+      "missing_pointer_required": [],
+      "missing_evidence_required": [],
+      "authority_not_false": [],
+      "deprecated_present": []
+    },
+    "replay_summary": {
+      "replay_completeness": 1.0,
+      "required": {
+        "latest_pointer": true,
+        "final_evidence": true,
+        "zero_context": true,
+        "operator_dashboard": true,
+        "command_summary": true
+      }
+    },
+    "non_claim_lock": "Doctor is read/classify/propose-only. It does not call GitHub, rerun CI, mutate files, execute repairs, or grant authority."
+  },
+  "allow_operation_dirty": true,
+  "human_summary": {
+    "latest_operation": "RHP-017.2",
+    "head": "adebecbdb9e488efe66d47ac7806c358f81e688d",
+    "worktree_clean": false,
+    "dirty_paths": [
+      "ocs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+      "docs/context-layer/hermes-operator-context.json",
+      "docs/context-layer/latest-rhp.json",
+      "docs/context-layer/operator-dashboard.txt",
+      "docs/context-layer/rhp_zero_context_rebuild.json",
+      "docs/context-layer/ops/RHP-017-2-final-evidence.json",
+      "docs/context-layer/ops/RHP-017-2-repair-commit-ci-observation-through-loop-kernel/"
+    ],
+    "allow_operation_dirty": true,
+    "evidence_api_ok": true,
+    "replay_ok": true,
+    "current_head_ci_status": "pending",
+    "state": "REMOTE_PENDING",
+    "next_legal_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+    "can_mutate": false,
+    "blocked_reasons": [
+      "operation_bootstrap_dirty_allowed",
+      "remote_ci_not_final",
+      "human_all_one_authorization_required_for_mutation"
+    ]
+  },
+  "non_claim_lock": "Doctor CLI wraps read-only doctor output. It does not call GitHub, rerun CI, mutate files, execute repair, or grant authority."
+}
