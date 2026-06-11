@@ -1,0 +1,47 @@
+{
+  "schema": "RHP-BROWSER-SUPERVISOR-WEBSOCKETS-PROPOSAL-v0.1",
+  "wound_class": "browser_supervisor_websockets_dependency_api_drift",
+  "wound": {
+    "severity": "high",
+    "description": "Remote browser supervisor CI failure caused by websockets dependency/API drift: missing websockets.proxy or uri.Proxy on installed package surface.",
+    "default_next": "bounded_dependency_or_compatibility_repair_proposal"
+  },
+  "subject": "commit:1b61c682805e7083e5c410af705898ed4a373102",
+  "summary": "Remote CI failure in tests/tools/test_browser_supervisor.py caused by websockets dependency/API drift: websockets.asyncio.client expects websockets.proxy / uri.Proxy but installed package surface does not provide them.",
+  "allowed_paths": [
+    "tools/browser_supervisor.py",
+    "tests/tools/test_browser_supervisor.py",
+    "pyproject.toml",
+    "requirements*.txt",
+    "uv.lock",
+    "poetry.lock",
+    "docs/context-layer/ops/RHP-016-2*"
+  ],
+  "blocked_paths": [
+    "* unless explicitly listed in allowed_paths"
+  ],
+  "test_commands": [
+    "python -m pytest tests/tools/test_browser_supervisor.py",
+    "python -m pytest -q -o addopts= tests/test_rhp_016_2_ci_wound_packet.py tests/test_rhp_016_2_browser_supervisor_websockets_proposal.py"
+  ],
+  "risk_level": "medium",
+  "rollback": "git restore scoped paths before commit; no post-seal mutation",
+  "execution_enabled": false,
+  "authority_required": "human_authorized_all_one_script",
+  "authority_granted": false,
+  "non_claim_lock": "This is a proposal only. It does not modify dependencies, patch browser supervisor code, rerun CI, execute repair, or grant authority.",
+  "run_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27355410501",
+  "repair_options": [
+    "Pin or align websockets dependency to a version exposing the expected proxy API.",
+    "Patch browser_supervisor import/use site to support the installed websockets API.",
+    "Add a small compatibility shim around websockets proxy imports."
+  ],
+  "validation": {
+    "ok": true,
+    "missing": [],
+    "wound_ok": true,
+    "authority_ok": true,
+    "paths_ok": true,
+    "tests_ok": true
+  }
+}

@@ -1710,3 +1710,7 @@ RHP-016.0 rule: green reconciliation must be commit-scoped. The observed subject
 <!-- RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
 RHP-016.1 rule: current commit CI observations must be commit-scoped. Doctor CLI is read-only; it may summarize state, but cannot mutate, rerun CI, execute autoheal, or grant authority.
 <!-- /RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
+
+<!-- RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
+RHP-016.2 rule: CI red states should become wound packets before repair. The browser supervisor websockets drift packet is proposal-only; dependency/code repair requires a fresh human-authorized All-One.
+<!-- /RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->

@@ -1,0 +1,12 @@
+{
+  "rhp_016_2_passed": true,
+  "ci_wound_packet_added": true,
+  "active_wound_class": "browser_supervisor_websockets_dependency_api_drift",
+  "failed_subject_commit": "1b61c682805e7083e5c410af705898ed4a373102",
+  "failed_test_file": "tests/tools/test_browser_supervisor.py",
+  "repro_command": "python -m pytest tests/tools/test_browser_supervisor.py",
+  "proposal_execution_enabled": false,
+  "proposal_authority_granted": false,
+  "focused_tests_passed": true,
+  "next": "RHP-016.3 Bounded browser supervisor websockets dependency/API repair"
+}

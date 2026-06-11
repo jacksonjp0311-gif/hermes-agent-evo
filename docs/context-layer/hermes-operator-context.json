@@ -1,18 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.8",
-  "latest_operation": "RHP-016.1",
-  "next_operation": "RHP-016.2 Replay hardening across RHP-015.x and RHP-016.x lineage",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.9",
+  "latest_operation": "RHP-016.2",
+  "next_operation": "RHP-016.3 Bounded browser supervisor websockets dependency/API repair",
   "hermes_can": [
-    "run_doctor_cli",
-    "read_ci_observation",
-    "explain_current_commit_ci_state"
+    "read_ci_wound_packet",
+    "read_browser_supervisor_websockets_proposal",
+    "explain_allowed_repair_paths"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "claim_current_operation_ci_without_observation"
+    "patch_dependency_without_authorization"
   ],
   "authority_locks": {
     "provider_call_executed": false,

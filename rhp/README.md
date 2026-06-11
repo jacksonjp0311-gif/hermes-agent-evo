@@ -854,3 +854,11 @@ rhp/doctor_cli.py
 
 Boundary: observation and CLI wrapper classify local/provided state only. They do not call GitHub, rerun CI, execute repair, mutate workflows, or grant authority.
 <!-- /RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
+
+<!-- RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
+### RHP-016.2 CI Wound Packet: Browser Supervisor Websockets Dependency/API Drift
+
+Adds `rhp/ci_wound_packet.py` and `rhp/browser_supervisor_websockets_proposal.py`.
+
+Boundary: packet and proposal only. No repair execution, CI rerun, dependency mutation, or authority grant.
+<!-- /RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->

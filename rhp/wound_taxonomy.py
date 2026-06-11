@@ -78,6 +78,11 @@ WOUND_CLASSES: dict[str, dict[str, Any]] = {
         "description": "Operation cannot be reconstructed from pointer, evidence, summaries, and dashboard.",
         "default_next": "repair_replay_artifact_graph",
     },
+    "browser_supervisor_websockets_dependency_api_drift": {
+        "severity": "high",
+        "description": "Remote browser supervisor CI failure caused by websockets dependency/API drift: missing websockets.proxy or uri.Proxy on installed package surface.",
+        "default_next": "bounded_dependency_or_compatibility_repair_proposal",
+    },
     "unknown_residue": {
         "severity": "high",
         "description": "Dirty path is not recognized as bounded operation residue.",

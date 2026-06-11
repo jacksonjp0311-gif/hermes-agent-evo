@@ -2851,3 +2851,17 @@ doctor_cli does not mutate
 doctor_cli does not grant authority
 ```
 <!-- /RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
+
+<!-- RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
+### RHP-016.2 CI Wound Packet: Browser Supervisor Websockets Dependency/API Drift
+
+RHP-016.2 records the remote CI failure as a typed wound packet and non-executing repair proposal.
+
+```text
+browser_supervisor_websockets_dependency_api_drift
+tests/tools/test_browser_supervisor.py
+python -m pytest tests/tools/test_browser_supervisor.py
+```
+
+Boundary: this operation records the wound and proposal only. It does not repair dependencies, patch code, rerun CI, or grant authority.
+<!-- /RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->

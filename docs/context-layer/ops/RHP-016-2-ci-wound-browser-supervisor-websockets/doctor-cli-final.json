@@ -1,0 +1,96 @@
+{
+  "schema": "RHP-DOCTOR-CLI-v0.2",
+  "doctor": {
+    "schema": "RHPLOAD-DOCTOR-v0.2",
+    "latest_operation": "RHP-016.2",
+    "latest_evidence": "docs/context-layer/ops/RHP-016-2-final-evidence.json",
+    "head": "709dbf4101e9e9e4f3b9f5888bdbca2592d181ed",
+    "short_head": "709dbf410",
+    "worktree_clean": false,
+    "dirty_paths": [
+      "GENTS.md",
+      "README.md",
+      "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+      "docs/context-layer/hermes-operator-context.json",
+      "docs/context-layer/latest-rhp.json",
+      "docs/context-layer/operator-dashboard.txt",
+      "docs/context-layer/rhp_zero_context_rebuild.json",
+      "rhp/README.md",
+      "rhp/wound_taxonomy.py",
+      "docs/context-layer/ops/RHP-016-2-ci-wound-browser-supervisor-websockets/",
+      "docs/context-layer/ops/RHP-016-2-final-evidence.json",
+      "rhp/browser_supervisor_websockets_proposal.py",
+      "rhp/ci_wound_packet.py",
+      "tests/test_rhp_016_2_browser_supervisor_websockets_proposal.py",
+      "tests/test_rhp_016_2_ci_wound_packet.py"
+    ],
+    "allow_operation_dirty": true,
+    "evidence_api_ok": true,
+    "replay_ok": true,
+    "local_validation_ok": true,
+    "current_head_ci_status": "red",
+    "ci_source": "github-actions-verified",
+    "state": "REMOTE_RED",
+    "next_legal_operation": "create_ci_wound_packet_before_repair",
+    "can_mutate": false,
+    "blocked_reasons": [
+      "operation_bootstrap_dirty_allowed",
+      "remote_ci_red_requires_wound_packet",
+      "human_all_one_authorization_required_for_mutation"
+    ],
+    "authority_required": "human_authorized_all_one_script",
+    "api_summary": {
+      "missing_pointer_required": [],
+      "missing_evidence_required": [],
+      "authority_not_false": [],
+      "deprecated_present": []
+    },
+    "replay_summary": {
+      "replay_completeness": 1.0,
+      "required": {
+        "latest_pointer": true,
+        "final_evidence": true,
+        "zero_context": true,
+        "operator_dashboard": true,
+        "command_summary": true
+      }
+    },
+    "non_claim_lock": "Doctor is read/classify/propose-only. It does not call GitHub, rerun CI, mutate files, execute repairs, or grant authority."
+  },
+  "allow_operation_dirty": true,
+  "human_summary": {
+    "latest_operation": "RHP-016.2",
+    "head": "709dbf4101e9e9e4f3b9f5888bdbca2592d181ed",
+    "worktree_clean": false,
+    "dirty_paths": [
+      "GENTS.md",
+      "README.md",
+      "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+      "docs/context-layer/hermes-operator-context.json",
+      "docs/context-layer/latest-rhp.json",
+      "docs/context-layer/operator-dashboard.txt",
+      "docs/context-layer/rhp_zero_context_rebuild.json",
+      "rhp/README.md",
+      "rhp/wound_taxonomy.py",
+      "docs/context-layer/ops/RHP-016-2-ci-wound-browser-supervisor-websockets/",
+      "docs/context-layer/ops/RHP-016-2-final-evidence.json",
+      "rhp/browser_supervisor_websockets_proposal.py",
+      "rhp/ci_wound_packet.py",
+      "tests/test_rhp_016_2_browser_supervisor_websockets_proposal.py",
+      "tests/test_rhp_016_2_ci_wound_packet.py"
+    ],
+    "allow_operation_dirty": true,
+    "evidence_api_ok": true,
+    "replay_ok": true,
+    "current_head_ci_status": "red",
+    "state": "REMOTE_RED",
+    "next_legal_operation": "create_ci_wound_packet_before_repair",
+    "can_mutate": false,
+    "blocked_reasons": [
+      "operation_bootstrap_dirty_allowed",
+      "remote_ci_red_requires_wound_packet",
+      "human_all_one_authorization_required_for_mutation"
+    ]
+  },
+  "non_claim_lock": "Doctor CLI wraps read-only doctor output. It does not call GitHub, rerun CI, mutate files, execute repair, or grant authority."
+}

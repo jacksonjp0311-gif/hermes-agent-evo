@@ -1,0 +1,24 @@
+{
+  "schema": "RHP-CI-WOUND-PACKET-v0.1",
+  "wound_class": "browser_supervisor_websockets_dependency_api_drift",
+  "subject_type": "git_commit",
+  "subject_commit": "1b61c682805e7083e5c410af705898ed4a373102",
+  "workflow": "Tests",
+  "run_url": "https://github.com/jacksonjp0311-gif/hermes-agent-evo/actions/runs/27355410501",
+  "failed_test_file": "tests/tools/test_browser_supervisor.py",
+  "repro_command": "python -m pytest tests/tools/test_browser_supervisor.py",
+  "source": "github-actions-verified",
+  "observed_at_utc": "2026-06-11T15:14:54.997349+00:00",
+  "root_cause": "Remote CI failure: websockets.asyncio.client expects websockets.proxy and uri.Proxy, but the installed websockets package surface does not provide them.",
+  "status": "open",
+  "ci_status": "red",
+  "integration_closed": false,
+  "authority_granted": false,
+  "execution_enabled": false,
+  "non_claim_lock": "CI wound packet records a remote CI failure only. It does not repair, rerun CI, mutate dependencies, or grant authority.",
+  "validation": {
+    "ok": true,
+    "missing": [],
+    "authority_ok": true
+  }
+}
