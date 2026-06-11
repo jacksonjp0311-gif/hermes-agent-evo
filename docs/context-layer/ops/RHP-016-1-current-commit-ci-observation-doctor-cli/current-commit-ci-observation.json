@@ -1,0 +1,15 @@
+{
+  "schema": "RHP-CI-OBSERVATION-v0.1",
+  "claim": "current_operation_ci_observation",
+  "subject_type": "git_commit",
+  "subject_commit": "1b61c682805e7083e5c410af705898ed4a373102",
+  "prior_operation": "RHP-016.0",
+  "ci_status": "pending",
+  "source": "operator-provided",
+  "observed_at_utc": "2026-06-11T15:06:14.123187+00:00",
+  "integration_closed": false,
+  "state": "REMOTE_PENDING",
+  "authority_granted": false,
+  "execution_enabled": false,
+  "non_claim_lock": "CI observation scopes status to one commit only. It does not call GitHub, rerun CI, mutate workflows, execute repair, or grant authority."
+}

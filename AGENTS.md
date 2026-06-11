@@ -1706,3 +1706,7 @@ RHP-015.9 rule: autoheal may plan, queue, and explain proposals, but execution_e
 <!-- RHP_016_0_GREEN_RECONCILIATION -->
 RHP-016.0 rule: green reconciliation must be commit-scoped. The observed subject commit can be marked integration-closed when CI is verified green, but the new RHP-016.0 commit remains unobserved until a later operation or external CI observation.
 <!-- /RHP_016_0_GREEN_RECONCILIATION -->
+
+<!-- RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
+RHP-016.1 rule: current commit CI observations must be commit-scoped. Doctor CLI is read-only; it may summarize state, but cannot mutate, rerun CI, execute autoheal, or grant authority.
+<!-- /RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->

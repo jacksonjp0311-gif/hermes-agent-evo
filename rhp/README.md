@@ -841,3 +841,16 @@ rhp/green_reconciliation.py
 
 Boundary: green reconciliation records a CI observation for one subject commit only. It does not call GitHub, rerun CI, execute repair, mutate workflows, or grant authority.
 <!-- /RHP_016_0_GREEN_RECONCILIATION -->
+
+<!-- RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
+### RHP-016.1 Current Commit CI Observation + Doctor CLI Wrapper
+
+Adds:
+
+```text
+rhp/ci_observation.py
+rhp/doctor_cli.py
+```
+
+Boundary: observation and CLI wrapper classify local/provided state only. They do not call GitHub, rerun CI, execute repair, mutate workflows, or grant authority.
+<!-- /RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->

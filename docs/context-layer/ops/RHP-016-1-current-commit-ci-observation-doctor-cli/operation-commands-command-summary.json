@@ -1,0 +1,67 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.1",
+  "operation": "RHP-016.1",
+  "group": "operation-commands",
+  "total": 7,
+  "ok": 7,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-016.0 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-016.1 observes the RHP-016.0 commit CI state.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact current identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "ci-observation",
+      "heading": "Create scoped CI observation packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.ci_observation --subject-commit 1b61c682805e7083e5c410af705898ed4a373102 --ci-status pending --source operator-provided --prior-operation RHP-016.0 --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-016-1-current-commit-ci-observation-doctor-cli\\current-commit-ci-observation.json",
+      "why": "A CI observation must name exactly which commit it describes.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\ci-observation.txt"
+    },
+    {
+      "stage": "doctor-cli",
+      "heading": "Run read-only doctor CLI wrapper",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.doctor_cli --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-016-1-current-commit-ci-observation-doctor-cli\\doctor-cli.json",
+      "why": "Expose a simple cockpit command without granting authority.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\doctor-cli.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-016.1 observation/doctor CLI surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/ci_observation.py rhp/doctor_cli.py tests/test_rhp_016_1_ci_observation.py tests/test_rhp_016_1_doctor_cli.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run current observation/doctor CLI focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_016_1_ci_observation.py tests/test_rhp_016_1_doctor_cli.py tests/test_rhp_016_0_green_reconciliation.py",
+      "why": "Prove CI observation, doctor CLI, and green reconciliation before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-1-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

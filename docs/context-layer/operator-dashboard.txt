@@ -1,11 +1,11 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-016.0 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-016.1 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-016.0
-   +- next: RHP-016.1 Current commit CI observation and doctor CLI wrapper
-   +- reconciled subject commit: 1fb6a62f178f7a9cf112fc44e939c2e8290a1451
-   +- reconciled subject CI status: green
-   +- reconciled subject state: RECONCILED
-   +- reconciled subject integration closed: true
+   +- latest: RHP-016.1
+   +- next: RHP-016.2 Replay hardening across RHP-015.x and RHP-016.x lineage
+   +- observed current commit: 1b61c682805e7083e5c410af705898ed4a373102
+   +- observed current commit CI status: pending
+   +- observed current commit state: REMOTE_PENDING
+   +- observed current commit integration closed: false
    +- current operation remote CI status: unknown_until_next_observation
    +- authority ok: true
    `- verified: true [OK]

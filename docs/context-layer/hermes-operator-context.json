@@ -1,11 +1,11 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.7",
-  "latest_operation": "RHP-016.0",
-  "next_operation": "RHP-016.1 Current commit CI observation and doctor CLI wrapper",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.8",
+  "latest_operation": "RHP-016.1",
+  "next_operation": "RHP-016.2 Replay hardening across RHP-015.x and RHP-016.x lineage",
   "hermes_can": [
-    "read_green_reconciliation",
-    "explain_subject_commit_ci_closure",
-    "run_doctor_after_new_ci_observation"
+    "run_doctor_cli",
+    "read_ci_observation",
+    "explain_current_commit_ci_state"
   ],
   "hermes_cannot": [
     "execute_autoheal",

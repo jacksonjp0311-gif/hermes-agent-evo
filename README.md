@@ -2831,3 +2831,23 @@ remote_ci_green(commit=X, source=github-actions-verified) -> integration_closed_
 
 The green claim applies only to the subject commit. The new reconciliation commit created by RHP-016.0 cannot claim its own remote CI state from inside itself.
 <!-- /RHP_016_0_GREEN_RECONCILIATION -->
+
+<!-- RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->
+### RHP-016.1 Current Commit CI Observation + Doctor CLI Wrapper
+
+RHP-016.1 observes the RHP-016.0 commit's own CI status and exposes a small read-only doctor CLI wrapper.
+
+Observation law:
+
+```text
+ci_status(commit=X, source=Y) must name X
+```
+
+Doctor CLI law:
+
+```text
+doctor_cli = read/classify/propose wrapper
+doctor_cli does not mutate
+doctor_cli does not grant authority
+```
+<!-- /RHP_016_1_CURRENT_COMMIT_OBSERVATION_DOCTOR_CLI -->

@@ -1,0 +1,15 @@
+{
+  "rhp_016_1_passed": true,
+  "ci_observation_added": true,
+  "doctor_cli_schema": "RHP-DOCTOR-CLI-v0.2",
+  "doctor_cli_added": true,
+  "doctor_cli_bootstrap_dirty_mode_added": true,
+  "doctor_cli_bootstrap_dirty_self_observation_repaired": true,
+  "observed_current_commit": "1b61c682805e7083e5c410af705898ed4a373102",
+  "observed_current_commit_ci_status": "pending",
+  "observed_current_commit_integration_closed": false,
+  "current_operation_remote_ci_status": "unknown_until_next_observation",
+  "focused_tests_passed": true,
+  "summary_path": "docs/context-layer/ops/RHP-016-1-current-commit-ci-observation-doctor-cli/summary.json",
+  "next": "RHP-016.2 Replay hardening across RHP-015.x and RHP-016.x lineage"
+}
