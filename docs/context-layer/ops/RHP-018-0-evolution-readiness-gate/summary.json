@@ -1,0 +1,14 @@
+{
+  "schema": "RHP-018.0-summary",
+  "operation": "RHP-018.0",
+  "operation_base_commit": "c7e947f56adf87c34f5ceb5bf1bce8fddcd3bc6e",
+  "readiness_state": "READY_INTEGRATED",
+  "readiness_decision": "allowed",
+  "candidate_operation_class": "governance_kernel_update",
+  "installed_command": "python -m rhp.evolution_readiness_gate --repo-root . --candidate-operation-class <class> --current-head-ci-status <status>",
+  "state": "READINESS_GATE_INSTALLED_REMOTE_UNKNOWN",
+  "integration_closed": false,
+  "next_legal_operation": "observe_RHP_018_0_readiness_gate_commit_ci_with_ci_observation_loop",
+  "current_operation_remote_ci_status": "unknown_until_next_observation",
+  "non_claim_lock": "RHP-018.0 installs a local evolution readiness classifier and RHPREADY box/command. It does not call GitHub, rerun CI, execute repairs, mutate dependencies, grant authority, or claim the current operation commit green."
+}

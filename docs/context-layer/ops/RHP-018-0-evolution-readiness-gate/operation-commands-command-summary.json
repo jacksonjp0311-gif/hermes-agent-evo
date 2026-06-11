@@ -1,0 +1,67 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-018.0",
+  "group": "operation-commands",
+  "total": 7,
+  "ok": 7,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe operation base commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-018.0 starts from the current RHP-017.2 seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile evolution readiness gate and tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/evolution_readiness_gate.py tests/test_rhp_018_0_evolution_readiness_gate.py",
+      "why": "Catch syntax/import issues before evidence sealing.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests-rhp-018-0",
+      "heading": "Run focused RHP-018.0 readiness gate tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -o addopts= tests/test_rhp_018_0_evolution_readiness_gate.py",
+      "why": "Prove readiness classifications and RHPREADY rendering.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\focused-tests-rhp-018-0.txt"
+    },
+    {
+      "stage": "focused-regression-rhp-governance",
+      "heading": "Run readiness + loop + evidence API regressions",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -o addopts= tests/test_rhp_018_0_evolution_readiness_gate.py tests/test_rhp_017_0_ci_observation_loop.py tests/test_rhp_017_1_evidence_api_authority_locks_alias.py tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_7_rhpload_doctor.py",
+      "why": "Keep loop kernel, compatibility gate, and doctor surfaces aligned.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\focused-regression-rhp-governance.txt"
+    },
+    {
+      "stage": "rhpready-command",
+      "heading": "Run RHPREADY command",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evolution_readiness_gate --repo-root . --candidate-operation-class governance_kernel_update --current-head-ci-status unknown --ci-source operator-provided --allow-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-0-evolution-readiness-gate\\readiness-gate-result.json --box-out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-0-evolution-readiness-gate\\RHPREADY.txt",
+      "why": "Emit boxed readiness decision and machine-readable gate result. During install, bounded operation dirt is allowed so the gate does not inspect the patient during surgery.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\rhpready-command.txt"
+    },
+    {
+      "stage": "evidence-api-gate",
+      "heading": "Run evidence API compatibility gate after readiness install",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-0-evolution-readiness-gate\\evidence-api-gate-after-readiness.json",
+      "why": "Prove latest pointer and final evidence shape remain compatible.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\evidence-api-gate.txt"
+    },
+    {
+      "stage": "rhpload-doctor",
+      "heading": "Run read-only RHP doctor after readiness install",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.doctor_cli --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-0-evolution-readiness-gate\\doctor-after-readiness.json",
+      "why": "Prove cockpit remains read-only and compatible during operation dirt.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-018-0-python-streams\\rhpload-doctor.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

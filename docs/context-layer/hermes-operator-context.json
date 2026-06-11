@@ -1,12 +1,12 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-017.2",
-  "next_operation": "continue_bounded_evolution_after_named_subject_green",
+  "latest_operation": "RHP-018.0",
+  "next_operation": "observe_RHP_018_0_readiness_gate_commit_ci_with_ci_observation_loop",
   "hermes_can": [
-    "read_ci_observation_loop_evidence",
-    "explain_commit_scoped_transition",
-    "route_next_legal_operation_from_transition_table",
-    "continue_bounded_evolution_after_named_subject_green"
+    "run_read_only_RHPREADY_command",
+    "classify_allowed_next_operation_classes",
+    "explain_evolution_readiness_gate",
+    "observe_RHP_018_0_commit_ci_through_loop_kernel"
   ],
   "hermes_cannot": [
     "execute_autoheal",

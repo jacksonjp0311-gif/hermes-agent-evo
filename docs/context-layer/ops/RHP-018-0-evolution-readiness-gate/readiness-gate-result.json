@@ -1,0 +1,47 @@
+{
+  "schema": "RHP-EVOLUTION-READINESS-GATE-v0.1",
+  "decision": "allowed",
+  "allowed": true,
+  "readiness_state": "READY_INTEGRATED",
+  "candidate_operation_class": "governance_kernel_update",
+  "allowed_operation_classes": [
+    "diagnostic",
+    "documentation_only",
+    "feature_evolution",
+    "governance_kernel_update",
+    "known_wound_repair",
+    "observe"
+  ],
+  "blocked_reasons": [],
+  "reason": "Latest named subject is green, integrated, and has no active wound.",
+  "next_legal_operation": "continue_bounded_evolution_after_named_subject_green",
+  "latest_operation": "RHP-017.2",
+  "latest_evidence": "docs/context-layer/ops/RHP-017-2-final-evidence.json",
+  "observed_ci_status": "green",
+  "active_wound_class": "no_active_wound",
+  "integration_closed": true,
+  "current_head_ci_status": "unknown",
+  "ci_source": "operator-provided",
+  "worktree_clean": false,
+  "dirty_paths": [
+    "rhp/evolution_readiness_gate.py",
+    "tests/test_rhp_018_0_evolution_readiness_gate.py"
+  ],
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "command": "python -m rhp.evolution_readiness_gate --repo-root . --candidate-operation-class <class> --current-head-ci-status <status>",
+  "box": "RHPREADY",
+  "non_claim_lock": "Evolution readiness gate classifies legal next operation classes only. It does not call GitHub, rerun CI, mutate files, execute repairs, or grant authority."
+}
