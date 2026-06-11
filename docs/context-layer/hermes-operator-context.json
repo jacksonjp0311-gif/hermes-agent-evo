@@ -1,11 +1,11 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.1",
-  "latest_operation": "RHP-015.4",
-  "next_operation": "RHP-015.5 CI wound packet if red, green seal if verified green, or wait-state if pending",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.2",
+  "latest_operation": "RHP-015.5",
+  "next_operation": "RHP-015.6 Evidence API compatibility gate and replay scaffold",
   "hermes_can": [
-    "ingest_operator_provided_ci_status",
-    "reconcile_green_seal",
-    "explain_seal_semantics"
+    "audit_render_hygiene",
+    "read_wait_state_packet",
+    "prepare_evidence_api_compatibility_gate"
   ],
   "hermes_cannot": [
     "execute_autoheal",

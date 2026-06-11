@@ -1,0 +1,60 @@
+{
+  "schema": "RHP-RENDER-HYGIENE-AUDITOR-v0.2",
+  "ok": true,
+  "checks": [
+    {
+      "file": "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+      "surface": "generated_context",
+      "severity": "ok",
+      "ok": true,
+      "literal_backslash_n_count": 0,
+      "physical_lines": 26,
+      "rule": "Generated operator/context surfaces must use physical line breaks, not literal escaped newline payloads."
+    },
+    {
+      "file": "docs/context-layer/operator-dashboard.txt",
+      "surface": "generated_context",
+      "severity": "ok",
+      "ok": true,
+      "literal_backslash_n_count": 0,
+      "physical_lines": 12,
+      "rule": "Generated operator/context surfaces must use physical line breaks, not literal escaped newline payloads."
+    },
+    {
+      "file": "README.md",
+      "surface": "documentation",
+      "severity": "ok",
+      "ok": true,
+      "literal_backslash_n_count": 0,
+      "allowed_doc_mentions": 0,
+      "unexpected_literal_backslash_n_count": 0,
+      "physical_lines": 2705,
+      "rule": "Documentation may mention literal `\\\\n`; generated context surfaces may not contain literal newline payload drift."
+    },
+    {
+      "file": "AGENTS.md",
+      "surface": "documentation",
+      "severity": "ok",
+      "ok": true,
+      "literal_backslash_n_count": 0,
+      "allowed_doc_mentions": 0,
+      "unexpected_literal_backslash_n_count": 0,
+      "physical_lines": 1688,
+      "rule": "Documentation may mention literal `\\\\n`; generated context surfaces may not contain literal newline payload drift."
+    },
+    {
+      "file": "rhp/README.md",
+      "surface": "documentation",
+      "severity": "ok",
+      "ok": true,
+      "literal_backslash_n_count": 0,
+      "allowed_doc_mentions": 1,
+      "unexpected_literal_backslash_n_count": 0,
+      "physical_lines": 777,
+      "rule": "Documentation may mention literal `\\\\n`; generated context surfaces may not contain literal newline payload drift."
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "non_claim_lock": "Render hygiene auditor reads local text surfaces only. It does not mutate files, call remote APIs, rerun CI, or grant authority."
+}\n

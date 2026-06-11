@@ -1,0 +1,67 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.5",
+  "operation": "RHP-015.5",
+  "group": "operation-commands",
+  "total": 7,
+  "ok": 7,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-015.4 sealed commit",
+      "command": "git rev-parse HEAD",
+      "why": "The next operation can now observe the previous operation's sealed commit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read short observed commit",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact observed identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read observed commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "wait-state-packet",
+      "heading": "Render wait-state packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.wait_state_packet --operation RHP-015.5 --observed-commit fe7c310e1cebb32e0b3b497231ed87cb254be992 --remote-ci-status green --next-operation RHP-015.6 Evidence API compatibility gate and replay scaffold --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-5-render-hygiene-wait-state-packet\\wait-state-packet.json",
+      "why": "Record pending/green/red branch without claiming green.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\wait-state-packet.txt"
+    },
+    {
+      "stage": "render-hygiene-audit",
+      "heading": "Audit render hygiene",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.render_hygiene_auditor --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-5-render-hygiene-wait-state-packet\\render-hygiene-audit.json",
+      "why": "Fail if text surfaces contain literal escaped newline drift.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\render-hygiene-audit.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.5 surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/render_hygiene_auditor.py rhp/wait_state_packet.py tests/test_rhp_015_5_render_hygiene_auditor.py tests/test_rhp_015_5_wait_state_packet.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run render hygiene and wait-state focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_5_render_hygiene_auditor.py tests/test_rhp_015_5_wait_state_packet.py tests/test_rhp_015_4_green_seal_reconciler.py",
+      "why": "Prove render hygiene and wait-state branch logic before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-5-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

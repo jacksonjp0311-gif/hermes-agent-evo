@@ -1,0 +1,11 @@
+{
+  "schema": "RHP-WAIT-STATE-PACKET-v0.1",
+  "operation": "RHP-015.5",
+  "observed_commit": "fe7c310e1cebb32e0b3b497231ed87cb254be992",
+  "remote_ci_status": "green",
+  "wait_state": false,
+  "green_seal_ready": true,
+  "wound_packet_required": false,
+  "next_operation": "RHP-015.6 Evidence API compatibility gate and replay scaffold",
+  "non_claim_lock": "Wait-state packet records a provided CI status only. It does not call GitHub, rerun CI, mutate workflows, or grant authority."
+}

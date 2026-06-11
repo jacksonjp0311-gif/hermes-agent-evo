@@ -1682,3 +1682,7 @@ RHP-015.3 rule: before proposing a new All-One, a future AI must read `docs/cont
 <!-- RHP_015_4_REMOTE_CI_GREEN_SEAL -->
 RHP-015.4 rule: separate local validation, operation base commit, previous sealed commit, current operation commit observation, and remote CI status. Do not store a self-referential sealed commit hash in the commit that defines it. Do not claim green unless remote CI status is verified green.
 <!-- /RHP_015_4_REMOTE_CI_GREEN_SEAL -->
+
+<!-- RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
+RHP-015.5 rule: context text surfaces must use real physical newlines, not literal `\n` render escapes. Run render hygiene audit before seal. Final JSON summaries should be closed/linked, not expanded in the operator console by default.
+<!-- /RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->

@@ -762,3 +762,16 @@ rhp/green_seal_reconciler.py
 
 Boundary: these ingest/reconcile operator- or connector-provided CI status only. They do not call GitHub, rerun CI, mutate workflows, or grant authority.
 <!-- /RHP_015_4_REMOTE_CI_GREEN_SEAL -->
+
+<!-- RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
+### RHP-015.5 Render Hygiene + Wait-State Packet
+
+Adds:
+
+```text
+rhp/render_hygiene_auditor.py
+rhp/wait_state_packet.py
+```
+
+Boundary: these audit/render local state only. They do not call GitHub, rerun CI, mutate workflows outside the current All-One, or grant authority.
+<!-- /RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->

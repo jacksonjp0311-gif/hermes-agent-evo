@@ -1,0 +1,9 @@
+{
+  "schema": "RHP-RENDER-HYGIENE-NORMALIZATION-v0.1",
+  "operation": "RHP-015.5",
+  "repairs": {
+    "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md": 20,
+    "docs/context-layer/operator-dashboard.txt": 11
+  },
+  "non_claim_lock": "Local text normalization only; no remote calls or authority."
+}

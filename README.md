@@ -2686,3 +2686,20 @@ integration_closed = local_validation_ok AND remote_ci_status == green
 
 If CI is unknown or pending, the protocol must not claim green. If CI is red, create a wound packet before repair.
 <!-- /RHP_015_4_REMOTE_CI_GREEN_SEAL -->
+
+<!-- RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
+### RHP-015.5 Render Hygiene + Wait-State Packet
+
+RHP-015.5 fixes the render-hygiene wound exposed by RHP-015.4: text surfaces must contain real line breaks, not literal `\n` escape sequences.
+
+It also records the CI branch without overclaiming:
+
+```text
+remote_ci_status = pending | unknown | green | red | cancelled | skipped
+wait_state = remote_ci_status in {pending, unknown}
+green_seal_ready = remote_ci_status == green
+wound_packet_required = remote_ci_status == red
+```
+
+Rule: final JSON summaries should be compressed behind `RHPDROP [closed]`; full JSON belongs in evidence files or raw indexes.
+<!-- /RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
