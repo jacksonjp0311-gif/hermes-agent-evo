@@ -1,0 +1,76 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.4",
+  "operation": "RHP-015.4",
+  "group": "operation-commands",
+  "total": 8,
+  "ok": 8,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Read operation base/current previous sealed commit",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-015.4 starts from the already-published RHP-015.3 seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact commit identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior state before reconciliation update.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "remote-ci-ingest",
+      "heading": "Ingest remote CI status packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.remote_ci_result_ingestion --status pending --commit 6f570783f8886c4e83e7b9798f8eedbab30a7f32 --source operator-provided --note RHP-015.4 operator/connector provided CI status; no GitHub rerun or workflow mutation. --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-4-remote-ci-result-ingestion-green-seal-reconciliation\\remote-ci-result-packet.json",
+      "why": "Record status without claiming what was not verified.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\remote-ci-ingest.txt"
+    },
+    {
+      "stage": "seal-semantics",
+      "heading": "Render seal semantics record",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.seal_semantics --operation RHP-015.4 --operation-base-commit 6f570783f8886c4e83e7b9798f8eedbab30a7f32 --previous-sealed-commit 6f570783f8886c4e83e7b9798f8eedbab30a7f32 --remote-ci-status pending --remote-ci-source operator-provided --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-4-remote-ci-result-ingestion-green-seal-reconciliation\\seal-semantics-record.json",
+      "why": "Split base, previous sealed, current observation, and CI status fields.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\seal-semantics.txt"
+    },
+    {
+      "stage": "green-seal-reconcile",
+      "heading": "Reconcile local validation with remote CI status",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.green_seal_reconciler --local-validation-ok --ci-status pending --previous-sealed-commit 6f570783f8886c4e83e7b9798f8eedbab30a7f32 --operation-base-commit 6f570783f8886c4e83e7b9798f8eedbab30a7f32 --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-4-remote-ci-result-ingestion-green-seal-reconciliation\\green-seal-reconciliation.json",
+      "why": "Only green CI plus local validation closes integration.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\green-seal-reconcile.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.4 reconciliation surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/remote_ci_result_ingestion.py rhp/seal_semantics.py rhp/green_seal_reconciler.py tests/test_rhp_015_4_remote_ci_result_ingestion.py tests/test_rhp_015_4_seal_semantics.py tests/test_rhp_015_4_green_seal_reconciler.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run green-seal reconciliation focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_4_remote_ci_result_ingestion.py tests/test_rhp_015_4_seal_semantics.py tests/test_rhp_015_4_green_seal_reconciler.py tests/test_rhp_015_3_ci_green_reconciler.py",
+      "why": "Prove the CI status split and seal semantics before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-4-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit",
+  "display_rule": "Repo compact summaries must be staged before commit; post-seal summaries must be volatile external."
+}

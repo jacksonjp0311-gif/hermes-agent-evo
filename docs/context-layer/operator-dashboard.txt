@@ -1,11 +1,1 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.3 | status=ok [OK]
-`- Hermes/RHP operator dashboard
-   +- latest: RHP-015.3
-   +- next: RHP-015.4 Remote CI result ingestion and green-seal reconciliation
-   +- added: rhp/operator_quickstart.py
-   +- added: rhp/ci_green_reconciler.py
-   +- added: rhp/readme_loop_auditor.py
-   +- added: docs/context-layer/AI_OPERATOR_QUICKSTART.md
-   +- remote CI: unknown until verified; do not claim green from local tests
-   +- authority ok: true
-   `- verified: true [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.4 | status=ok [OK]\n`- Hermes/RHP operator dashboard\n   +- latest: RHP-015.4\n   +- next: RHP-015.5 CI wound packet if red, green seal if verified green, or wait-state if pending\n   +- operation base commit: 6f570783f8886c4e83e7b9798f8eedbab30a7f32\n   +- previous sealed commit: 6f570783f8886c4e83e7b9798f8eedbab30a7f32\n   +- current operation commit: unobservable-from-inside-same-commit\n   +- remote CI status: pending\n   +- integration closed: false\n   +- authority ok: true\n   `- verified: true [OK]\n

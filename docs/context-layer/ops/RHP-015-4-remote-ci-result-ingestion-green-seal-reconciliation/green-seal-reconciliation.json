@@ -1,0 +1,10 @@
+{
+  "schema": "RHP-GREEN-SEAL-RECONCILER-v0.1",
+  "local_validation_ok": true,
+  "ci_status": "pending",
+  "previous_sealed_commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "operation_base_commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "integration_closed": false,
+  "next_action": "wait for CI or ingest a final status before green closure",
+  "non_claim_lock": "Green-seal reconciliation combines provided status and local evidence only. It does not call GitHub, rerun CI, mutate workflows, or grant authority."
+}

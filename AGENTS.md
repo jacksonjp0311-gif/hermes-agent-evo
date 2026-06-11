@@ -1678,3 +1678,7 @@ RHP-015.2 rule: repetitive command output must be compressed into `RHPDROP [clos
 <!-- RHP_015_3_OPERATOR_QUICKSTART -->
 RHP-015.3 rule: before proposing a new All-One, a future AI must read `docs/context-layer/AI_OPERATOR_QUICKSTART.md`, `latest-rhp.json`, zero-context rebuild, dashboard, AGENTS, README, and rhp/README. It must distinguish local seal from remote CI integration closure. It must not claim CI green from local tests.
 <!-- /RHP_015_3_OPERATOR_QUICKSTART -->
+
+<!-- RHP_015_4_REMOTE_CI_GREEN_SEAL -->
+RHP-015.4 rule: separate local validation, operation base commit, previous sealed commit, current operation commit observation, and remote CI status. Do not store a self-referential sealed commit hash in the commit that defines it. Do not claim green unless remote CI status is verified green.
+<!-- /RHP_015_4_REMOTE_CI_GREEN_SEAL -->

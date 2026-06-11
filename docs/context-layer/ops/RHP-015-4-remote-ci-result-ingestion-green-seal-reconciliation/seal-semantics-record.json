@@ -1,0 +1,19 @@
+{
+  "schema": "RHP-SEAL-SEMANTICS-v0.1",
+  "fields": {
+    "operation_base_commit": "HEAD before the current All-One mutation begins.",
+    "previous_sealed_commit": "Already-published commit that sealed the previous operation; knowable at the start of the next operation.",
+    "current_operation_commit": "Commit produced by the current operation; cannot be embedded into files inside that same commit without a self-referential hash paradox.",
+    "current_operation_commit_observed_by": "A later operation or external post-push observation can record the commit that sealed this operation.",
+    "remote_ci_status": "Remote integration status for a specific observed commit: unknown, pending, green, red, cancelled, or skipped."
+  },
+  "law": "A sealed RHP operation must distinguish local validation, operation base commit, previous sealed commit, current sealed commit observation, and remote CI result.",
+  "non_claim_lock": "Seal semantics are descriptive only. They do not mutate files, compute remote CI, or grant authority.",
+  "operation": "RHP-015.4",
+  "operation_base_commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "previous_sealed_commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "current_operation_commit": "unobservable-from-inside-same-commit",
+  "current_operation_commit_observed_by": "next-operation-or-external-post-push-observer",
+  "remote_ci_status": "pending",
+  "remote_ci_source": "operator-provided"
+}

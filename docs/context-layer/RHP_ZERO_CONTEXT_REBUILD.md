@@ -1,18 +1,1 @@
-# RHP Zero-Context Rebuild Packet
-
-- schema: `RHP-ZERO-CONTEXT-REBUILD-v1.0`
-- ok: `True`
-- latest operation: `RHP-015.3`
-- latest evidence: `docs/context-layer/ops/RHP-015-3-final-evidence.json`
-- latest commit/base: `d5203f3a8dee894b4f28bb8a0630fec1efce28b6`
-- next operation: `RHP-015.4 Remote CI result ingestion and green-seal reconciliation`
-
-## Rehydration law
-- Read `docs/context-layer/AI_OPERATOR_QUICKSTART.md` before building the next All-One.
-- Treat README, AGENTS, RHP README, latest pointer, evidence, dashboard, and zero-context as one coherence surface.
-- Do not claim remote CI green from local focused tests.
-- Use RHPDROP [closed] for repetitive command groups.
-- Repo compact summaries must be written before staging/commit; post-seal summaries must remain volatile external.
-- Preserve stable API/import/evidence surfaces additively.
-
-Non-claim lock: Zero-context rebuild grants no authority.
+# RHP Zero-Context Rebuild Packet\n\n- schema: `RHP-ZERO-CONTEXT-REBUILD-v1.1`\n- ok: `True`\n- latest operation: `RHP-015.4`\n- latest evidence: `docs/context-layer/ops/RHP-015-4-final-evidence.json`\n- operation base commit: `6f570783f8886c4e83e7b9798f8eedbab30a7f32`\n- previous sealed commit: `6f570783f8886c4e83e7b9798f8eedbab30a7f32`\n- current operation commit: `unobservable-from-inside-same-commit`\n- remote CI status: `pending`\n- integration closed: `False`\n- next operation: `RHP-015.5 CI wound packet if red, green seal if verified green, or wait-state if pending`\n\n## Green seal law\n- A current operation cannot embed its own final commit hash inside the same commit.\n- Record previous sealed commit and operation base commit now.\n- Record current operation commit from the next operation or external observer.\n- Integration closure requires local validation and verified remote CI green.\n\nNon-claim lock: Zero-context rebuild grants no authority.\n

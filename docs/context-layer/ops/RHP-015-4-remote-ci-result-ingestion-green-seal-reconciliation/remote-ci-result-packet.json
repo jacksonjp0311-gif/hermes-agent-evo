@@ -1,0 +1,12 @@
+{
+  "schema": "RHP-REMOTE-CI-RESULT-INGESTION-v0.1",
+  "status": "pending",
+  "commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "source": "operator-provided",
+  "note": "RHP-015.4 operator/connector provided CI status; no GitHub rerun or workflow mutation.",
+  "green": false,
+  "closed": false,
+  "requires_wound_packet": false,
+  "pending": true,
+  "non_claim_lock": "CI result ingestion records a provided CI status only. It does not call GitHub, rerun CI, mutate workflows, or grant authority."
+}

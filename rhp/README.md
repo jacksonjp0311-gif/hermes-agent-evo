@@ -748,3 +748,17 @@ rhp/readme_loop_auditor.py
 
 Boundary: these are read/render/audit surfaces only. They do not mutate without an All-One script, rerun CI, call GitHub, or grant authority.
 <!-- /RHP_015_3_OPERATOR_QUICKSTART -->
+
+<!-- RHP_015_4_REMOTE_CI_GREEN_SEAL -->
+### RHP-015.4 Remote CI Result Ingestion + Green-Seal Reconciliation
+
+Adds:
+
+```text
+rhp/remote_ci_result_ingestion.py
+rhp/seal_semantics.py
+rhp/green_seal_reconciler.py
+```
+
+Boundary: these ingest/reconcile operator- or connector-provided CI status only. They do not call GitHub, rerun CI, mutate workflows, or grant authority.
+<!-- /RHP_015_4_REMOTE_CI_GREEN_SEAL -->

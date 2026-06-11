@@ -1,0 +1,13 @@
+{
+  "rhp_015_4_passed": true,
+  "remote_ci_result_ingestion_added": true,
+  "seal_semantics_added": true,
+  "green_seal_reconciler_added": true,
+  "operation_base_commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "previous_sealed_commit": "6f570783f8886c4e83e7b9798f8eedbab30a7f32",
+  "current_operation_commit": "unobservable-from-inside-same-commit",
+  "remote_ci_status": "pending",
+  "integration_closed": false,
+  "focused_tests_passed": true,
+  "next": "RHP-015.5 CI wound packet if red, green seal if verified green, or wait-state if pending"
+}

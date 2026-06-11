@@ -2663,3 +2663,26 @@ Human authorizes.
 
 Remote CI is the integration truth surface. Local focused tests prove bounded local repair; they do not prove remote integration closure until CI is green.
 <!-- /RHP_015_3_OPERATOR_QUICKSTART -->
+
+<!-- RHP_015_4_REMOTE_CI_GREEN_SEAL -->
+### RHP-015.4 Remote CI Result Ingestion + Green-Seal Reconciliation
+
+RHP-015.4 separates four surfaces that were starting to blur:
+
+```text
+local_validation = focused local proof from the All-One
+operation_base_commit = HEAD before the current operation mutates the repo
+previous_sealed_commit = already-published commit from the previous operation
+remote_ci_status = unknown | pending | green | red | cancelled | skipped
+```
+
+A current operation cannot honestly embed its own final commit hash inside the same commit without a self-referential hash paradox. Therefore current-operation commit observation must come from the next operation or an external post-push observer.
+
+Green seal law:
+
+```text
+integration_closed = local_validation_ok AND remote_ci_status == green
+```
+
+If CI is unknown or pending, the protocol must not claim green. If CI is red, create a wound packet before repair.
+<!-- /RHP_015_4_REMOTE_CI_GREEN_SEAL -->
