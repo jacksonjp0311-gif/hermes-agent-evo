@@ -720,3 +720,9 @@ Adds pointer-aware alignment guard behavior while preserving legacy boot keys. A
 
 Boundary: repair is human-authorized through All-One; CI ingestion is read-only; autoheal is proposal-only.
 <!-- /RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
+
+<!-- RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
+### RHP-015.1 Autoheal Dry-Run API Compatibility
+
+Restores `RHP_AUTOHEAL_DRY_RUN_SCHEMA` and `dry_run_for_packet` for RHP-014.3/RHP-014.4 bridge tests while preserving the newer dry-run plan CLI. Boundary: compatibility only; autoheal execution remains disabled.
+<!-- /RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->

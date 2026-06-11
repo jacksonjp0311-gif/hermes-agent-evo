@@ -1,11 +1,11 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.7",
-  "latest_operation": "RHP-015.0",
-  "next_operation": "RHP-015.1 CI green verification + autoheal proposal review",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.8",
+  "latest_operation": "RHP-015.1",
+  "next_operation": "RHP-015.2 CI green verification and full RHP API surface audit",
   "hermes_can": [
-    "display_alignment_guard_repair",
-    "ingest_ci_logs_read_only",
-    "evaluate_autoheal_proposals"
+    "display_ci_wound",
+    "render_autoheal_dry_run",
+    "classify_api_surface_drift"
   ],
   "hermes_cannot": [
     "execute_autoheal",

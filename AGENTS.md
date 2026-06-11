@@ -1666,3 +1666,7 @@ RHP-014.9 rule: every `loop=COMMAND` box should include a human heading, command
 <!-- RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
 RHP-015.0 lesson: evidence/check keys are API surfaces. New pointer-aware alignment must preserve legacy keys used by boot tests and future agents. Autoheal proposal remains dry-run only.
 <!-- /RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
+
+<!-- RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
+RHP-015.1 lesson: import names are API surfaces. Do not replace `RHP_AUTOHEAL_DRY_RUN_SCHEMA` or `dry_run_for_packet`; extend them additively. Autoheal dry-run is proposal-only and must not mutate, commit, push, rerun CI, or self-authorize.
+<!-- /RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->

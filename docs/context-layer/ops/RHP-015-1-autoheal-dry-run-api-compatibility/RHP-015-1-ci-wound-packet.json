@@ -1,0 +1,17 @@
+{
+  "schema": "RHP-015.1-CI-WOUND-PACKET-v0.1",
+  "operation": "RHP-015.1",
+  "source": "GitHub Actions logs pasted by operator",
+  "failed_files": [
+    "tests/test_rhp_014_3_autoheal_executor_dry_run.py",
+    "tests/test_rhp_014_4_ci_pipeline_bridge.py"
+  ],
+  "failure_classes": [
+    "missing_legacy_symbol_RHP_AUTOHEAL_DRY_RUN_SCHEMA",
+    "missing_legacy_function_dry_run_for_packet",
+    "import_collection_failure",
+    "api_surface_replacement_instead_of_additive_compatibility"
+  ],
+  "classification": "autoheal_dry_run_api_compatibility",
+  "non_claim_lock": "Records CI wound only; no CI rerun, workflow mutation, autoheal execution, or authority."
+}

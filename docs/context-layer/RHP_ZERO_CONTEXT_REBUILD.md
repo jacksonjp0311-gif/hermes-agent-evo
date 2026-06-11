@@ -1,15 +1,16 @@
 # RHP Zero-Context Rebuild Packet
 
-- schema: `RHP-ZERO-CONTEXT-REBUILD-v0.7`
+- schema: `RHP-ZERO-CONTEXT-REBUILD-v0.8`
 - ok: `True`
-- latest operation: `RHP-015.0`
-- latest evidence: `docs/context-layer/ops/RHP-015-0-final-evidence.json`
-- latest commit/base: `49976691ca1cff470cb7bb0bfa72e106c0f5311e`
-- next operation: `RHP-015.1 CI green verification + autoheal proposal review`
+- latest operation: `RHP-015.1`
+- latest evidence: `docs/context-layer/ops/RHP-015-1-final-evidence.json`
+- latest commit/base: `f595e5576a1d6118bb3ac37b13a24cd3c713ed12`
+- next operation: `RHP-015.2 CI green verification and full RHP API surface audit`
 
-## Critical lesson
-- RHP evidence keys are API surfaces.
-- New pointer-aware geometry must preserve legacy boot/alignment keys.
-- Local scripts must fail closed on command invocation and parser errors.
+## Current loop lesson
+- Remote CI is the integration truth surface.
+- Legacy import names are API surfaces.
+- Autoheal remains proposal-only: compatibility does not grant execution.
+- README, AGENTS, RHP README, latest pointer, and dashboard must advance together.
 
 Non-claim lock: Zero-context rebuild grants no authority.

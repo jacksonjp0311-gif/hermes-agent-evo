@@ -2602,3 +2602,7 @@ RHP-014.9 adds autoheal executor dry-run planning, RHPLOAD command headings, and
 <!-- RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
 RHP-015.0 repairs the CI boot/alignment wound by making `rhp/alignment_guard.py` pointer-aware while preserving legacy RHP-013.5 check keys: `latest_rhp0135_has_boundary_shape` and `latest_rhp0135_passed`. It also adds read-only CI log ingestion and autoheal proposal evaluation. Autoheal execution remains disabled. Next: RHP-015.1 CI green verification + autoheal proposal review.
 <!-- /RHP_015_0_CI_BOOT_ALIGNMENT_REPAIR -->
+
+<!-- RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
+RHP-015.1 repairs the remote CI import wound by restoring the legacy `rhp.autoheal_executor_dry_run` API surface: `RHP_AUTOHEAL_DRY_RUN_SCHEMA` and `dry_run_for_packet`. The newer `build_plan`/Markdown dry-run surfaces remain, and autoheal execution stays disabled. Current loop status: RHP-015.1 sealed locally; remote CI remains the integration truth surface. Next: RHP-015.2 CI green verification and full RHP API surface audit.
+<!-- /RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->

@@ -1,9 +1,9 @@
 {
-  "schema": "RHP-LATEST-POINTER-v0.7",
-  "latest_operation": "RHP-015.0",
-  "latest_evidence": "docs/context-layer/ops/RHP-015-0-final-evidence.json",
-  "latest_commit_or_base": "49976691ca1cff470cb7bb0bfa72e106c0f5311e",
-  "next_operation": "RHP-015.1 CI green verification + autoheal proposal review",
+  "schema": "RHP-LATEST-POINTER-v0.8",
+  "latest_operation": "RHP-015.1",
+  "latest_evidence": "docs/context-layer/ops/RHP-015-1-final-evidence.json",
+  "latest_commit_or_base": "f595e5576a1d6118bb3ac37b13a24cd3c713ed12",
+  "next_operation": "RHP-015.2 CI green verification and full RHP API surface audit",
   "zero_context_rebuild": "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
   "authority_ok": true
 }

@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse, json
 from typing import Any
 
-RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.6"
+RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.7"
 
 TOOLS = [
     {"tool": "local-paste-fallback", "box": "CI-INGEST-BOX", "status": "active", "authority": "local_file_read", "purpose": "accept copied CI logs/screenshots text as wound-packet input"},
@@ -23,6 +23,7 @@ TOOLS = [
     {"tool": "runtime-diagnosis-box", "box": "RUNTIME-DIAGNOSIS-BOX", "status": "active", "authority": "diagnosis_only", "purpose": "classify runtime failures into expandable diagnosis boxes with raw artifact pointers"},
     {"tool": "autoheal-proposal-evaluator", "box": "AUTOHEAL-PROPOSAL-BOX", "status": "active", "authority": "proposal_only", "purpose": "evaluate CI wound repair proposals without executing them"},
     {"tool": "ci-log-ingestion", "box": "CI-LOG-INGESTION-BOX", "status": "active", "authority": "read_only_ingestion", "purpose": "classify pasted or exported CI logs into wound surfaces"},
+    {"tool": "autoheal-dry-run-api-compatibility", "box": "AUTOHEAL-DRY-RUN-API-BOX", "status": "active", "authority": "compatibility_only", "purpose": "preserve legacy dry-run API symbols while retaining proposal-only behavior"},
 ]
 
 def registry() -> dict[str, Any]:

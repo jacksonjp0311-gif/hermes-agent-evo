@@ -1,10 +1,10 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.0 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.1 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.0
-   +- next: RHP-015.1 CI green verification + autoheal proposal review
-   +- repair: alignment guard pointer-aware with legacy keys preserved
-   +- boot kernel: RHP-013.5 preserved
-   +- autoheal: proposal only
-   +- ci ingestion: read-only
+   +- latest: RHP-015.1
+   +- next: RHP-015.2 CI green verification and full RHP API surface audit
+   +- repair: autoheal dry-run legacy API compatibility
+   +- restored: RHP_AUTOHEAL_DRY_RUN_SCHEMA
+   +- restored: dry_run_for_packet
+   +- autoheal: dry-run/proposal only
    +- authority ok: true
    `- verified: true [OK]
