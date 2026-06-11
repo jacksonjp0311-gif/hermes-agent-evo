@@ -1698,3 +1698,7 @@ RHP-015.7 rule: before any new mutation, run/consult the doctor cockpit. It must
 <!-- RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
 RHP-015.8 rule: repeated failure classes belong in wound taxonomy. Proposal packets may carry repair intent, allowed paths, tests, risk, and rollback, but execution_enabled and authority_granted must remain false unless a future human-authorized All-One explicitly changes the boundary.
 <!-- /RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
+
+<!-- RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
+RHP-015.9 rule: autoheal may plan, queue, and explain proposals, but execution_enabled and authority_granted must remain false. The doctor may surface wound queues, but mutation still requires an exact human-authorized All-One.
+<!-- /RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->

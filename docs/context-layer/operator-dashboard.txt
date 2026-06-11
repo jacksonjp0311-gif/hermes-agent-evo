@@ -1,11 +1,12 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.8 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.9 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.8
-   +- next: RHP-015.9 Autoheal proposal planner integration and doctor surfaced wound queue
-   +- current head at operation start: ef64388aa90804701a3fdff6a77e1d9f58ca6097
+   +- latest: RHP-015.9
+   +- next: RHP-016.0 Green reconciliation or CI wound packet depending on current-head CI result
+   +- current head at operation start: f09b86e4152ef6257166647c6d02d2f67ca8e0f4
    +- current head CI status: pending
    +- state: REMOTE_PENDING
    +- active wound class: remote_ci_pending
+   +- wound queue open count: 1
    +- proposal execution enabled: false
    +- authority ok: true
    `- verified: true [OK]

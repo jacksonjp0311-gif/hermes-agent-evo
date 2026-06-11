@@ -2793,3 +2793,27 @@ authority_granted = false
 
 This keeps autoheal dry-run/proposal-only while making future repairs sharper and replayable.
 <!-- /RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
+
+<!-- RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
+### RHP-015.9 Autoheal Proposal Planner + Doctor-Surfaced Wound Queue
+
+RHP-015.9 connects wound taxonomy to non-executing autoheal proposal plans and a doctor-surfaced wound queue.
+
+Planner law:
+
+```text
+WoundClass + Subject + Status -> ProposalPlan
+ProposalPlan.execution_enabled = false
+ProposalPlan.authority_granted = false
+```
+
+Queue law:
+
+```text
+Doctor surfaces wounds and proposal packets.
+Doctor does not execute them.
+Human-authorized All-One remains the only write boundary.
+```
+
+This is the bridge from classification to repair planning without crossing into autonomous mutation.
+<!-- /RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->

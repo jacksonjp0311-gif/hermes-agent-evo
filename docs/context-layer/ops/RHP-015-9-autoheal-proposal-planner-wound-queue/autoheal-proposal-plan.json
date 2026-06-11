@@ -1,0 +1,46 @@
+{
+  "schema": "RHP-AUTOHEAL-PROPOSAL-PLANNER-v0.1",
+  "wound_class": "remote_ci_pending",
+  "subject": "commit:f09b86e4152ef6257166647c6d02d2f67ca8e0f4",
+  "current_head_ci_status": "pending",
+  "source": "operator-provided",
+  "proposal": {
+    "schema": "RHP-PROPOSAL-PACKET-v0.1",
+    "wound_class": "remote_ci_pending",
+    "wound": {
+      "severity": "medium",
+      "description": "Remote CI is pending/unknown for current head; do not claim green closure.",
+      "default_next": "wait_or_ingest_final_ci_status"
+    },
+    "subject": "commit:f09b86e4152ef6257166647c6d02d2f67ca8e0f4",
+    "summary": "Autoheal proposal planner selected remote_ci_pending for commit:f09b86e4152ef6257166647c6d02d2f67ca8e0f4; execution remains disabled.",
+    "allowed_paths": [
+      "docs/context-layer/ops/RHP-015-9*"
+    ],
+    "blocked_paths": [
+      "* unless explicitly listed in allowed_paths"
+    ],
+    "test_commands": [
+      "python -m pytest -q -o addopts= tests/test_rhp_015_9_autoheal_proposal_planner.py tests/test_rhp_015_9_wound_queue.py"
+    ],
+    "risk_level": "low",
+    "rollback": "git restore scoped paths before commit; no post-seal mutation",
+    "execution_enabled": false,
+    "authority_required": "human_authorized_all_one_script",
+    "authority_granted": false,
+    "non_claim_lock": "Proposal packets carry repair intent only. They do not execute repair, rerun CI, mutate workflows, or grant authority."
+  },
+  "proposal_validation": {
+    "ok": true,
+    "missing": [],
+    "wound_ok": true,
+    "authority_ok": true,
+    "paths_ok": true,
+    "tests_ok": true
+  },
+  "execution_enabled": false,
+  "authority_granted": false,
+  "planner_mode": "dry-run-proposal-only",
+  "next_action": "wait_or_ingest_final_ci_status",
+  "non_claim_lock": "Autoheal proposal planner creates proposal packets only. It does not execute repair, rerun CI, mutate workflows, or grant authority."
+}

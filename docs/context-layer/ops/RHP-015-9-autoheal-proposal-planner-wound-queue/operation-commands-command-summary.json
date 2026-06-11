@@ -1,0 +1,75 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.9",
+  "operation": "RHP-015.9",
+  "group": "operation-commands",
+  "total": 8,
+  "ok": 8,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-015.8 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-015.9 starts from the already-published RHP-015.8 seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact current identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "autoheal-proposal-plan",
+      "heading": "Render non-executing autoheal proposal plan",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.autoheal_proposal_planner --wound-class remote_ci_pending --subject commit:f09b86e4152ef6257166647c6d02d2f67ca8e0f4 --current-head-ci-status pending --source operator-provided --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-9-autoheal-proposal-planner-wound-queue\\autoheal-proposal-plan.json",
+      "why": "Convert active wound state into a proposal packet while execution remains disabled.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\autoheal-proposal-plan.txt"
+    },
+    {
+      "stage": "wound-queue",
+      "heading": "Render doctor-surfaced wound queue",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.wound_queue --current-head f09b86e4152ef6257166647c6d02d2f67ca8e0f4 --current-head-ci-status pending --source operator-provided --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-9-autoheal-proposal-planner-wound-queue\\wound-queue.json",
+      "why": "Surface active wound/proposal state for doctor/operator without executing repair.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\wound-queue.txt"
+    },
+    {
+      "stage": "doctor-check",
+      "heading": "Run doctor with bounded operation dirty mode",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.rhpload_doctor --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-9-autoheal-proposal-planner-wound-queue\\rhpload-doctor.json",
+      "why": "Confirm cockpit can classify state while this authorized operation is constructing bounded files.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\doctor-check.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.9 planner/queue surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/autoheal_proposal_planner.py rhp/wound_queue.py tests/test_rhp_015_9_autoheal_proposal_planner.py tests/test_rhp_015_9_wound_queue.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run planner/queue focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_9_autoheal_proposal_planner.py tests/test_rhp_015_9_wound_queue.py tests/test_rhp_015_8_wound_taxonomy.py tests/test_rhp_015_8_proposal_packet.py",
+      "why": "Prove proposal planner, wound queue, taxonomy, and proposal packets before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-9-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

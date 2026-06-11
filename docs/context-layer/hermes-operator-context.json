@@ -1,18 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.5",
-  "latest_operation": "RHP-015.8",
-  "next_operation": "RHP-015.9 Autoheal proposal planner integration and doctor surfaced wound queue",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.6",
+  "latest_operation": "RHP-015.9",
+  "next_operation": "RHP-016.0 Green reconciliation or CI wound packet depending on current-head CI result",
   "hermes_can": [
-    "classify_wound_class",
-    "render_proposal_packet",
-    "surface_wound_queue_to_doctor"
+    "plan_autoheal_proposal",
+    "surface_wound_queue",
+    "explain_proposal_packet"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "grant_authority_from_proposal_packet"
+    "grant_authority_from_wound_queue"
   ],
   "authority_locks": {
     "provider_call_executed": false,

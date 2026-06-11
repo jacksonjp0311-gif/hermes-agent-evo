@@ -816,3 +816,16 @@ rhp/proposal_packet.py
 
 Boundary: taxonomy and proposals classify/propose only. They do not execute repair, rerun CI, mutate workflows, or grant authority.
 <!-- /RHP_015_8_WOUND_TAXONOMY_PROPOSAL -->
+
+<!-- RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
+### RHP-015.9 Autoheal Proposal Planner + Doctor-Surfaced Wound Queue
+
+Adds:
+
+```text
+rhp/autoheal_proposal_planner.py
+rhp/wound_queue.py
+```
+
+Boundary: planner and queue produce proposal-carrying evidence only. They do not execute repair, rerun CI, mutate workflows, or grant authority.
+<!-- /RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->

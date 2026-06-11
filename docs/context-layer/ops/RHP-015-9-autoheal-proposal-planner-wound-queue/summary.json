@@ -1,0 +1,14 @@
+{
+  "rhp_015_9_passed": true,
+  "autoheal_proposal_planner_added": true,
+  "doctor_surfaced_wound_queue_added": true,
+  "active_wound_class_for_ci_state": "remote_ci_pending",
+  "wound_queue_open_count": 1,
+  "proposal_execution_enabled": false,
+  "proposal_authority_granted": false,
+  "current_head_ci_status": "pending",
+  "state_machine_state": "REMOTE_PENDING",
+  "focused_tests_passed": true,
+  "summary_path": "docs/context-layer/ops/RHP-015-9-autoheal-proposal-planner-wound-queue/summary.json",
+  "next": "RHP-016.0 Green reconciliation or CI wound packet depending on current-head CI result"
+}
