@@ -2,12 +2,12 @@
 
 - schema: `RHP-ZERO-CONTEXT-REBUILD-v2.1`
 - ok: `True`
-- latest operation: `RHP-018.0`
-- latest evidence: `docs/context-layer/ops/RHP-018-0-final-evidence.json`
-- subject commit: `c7e947f56adf87c34f5ceb5bf1bce8fddcd3bc6e`
-- observed CI status: `unknown`
-- state: `READINESS_GATE_INSTALLED_REMOTE_UNKNOWN`
+- latest operation: `RHP-018.1`
+- latest evidence: `docs/context-layer/ops/RHP-018-1-final-evidence.json`
+- subject commit: `ddb24363e2fac630e7527a2c9eab31e6df50db52`
+- observed CI status: `pending`
+- state: `CI_PENDING`
 - integration closed: `False`
-- next operation: `observe_RHP_018_0_readiness_gate_commit_ci_with_ci_observation_loop`
+- next operation: `wait_or_ingest_final_ci_status_before_green_claim`
 
 Non-claim lock: Zero-context rebuild grants no authority.

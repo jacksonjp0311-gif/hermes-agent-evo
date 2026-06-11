@@ -1,0 +1,13 @@
+{
+  "schema": "RHP-018.1-summary",
+  "operation": "RHP-018.1",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "observed_ci_status": "pending",
+  "ci_source": "operator-provided",
+  "state": "CI_PENDING",
+  "integration_closed": false,
+  "active_wound_class": "remote_ci_pending",
+  "next_legal_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+  "current_operation_remote_ci_status": "unknown_until_next_observation",
+  "non_claim_lock": "RHP-018.1 records one commit-scoped CI observation through the reusable loop kernel. It does not call GitHub, rerun CI, repair code, mutate dependencies, grant authority, or claim the current operation commit green."
+}

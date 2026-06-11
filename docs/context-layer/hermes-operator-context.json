@@ -1,12 +1,12 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.0",
-  "next_operation": "observe_RHP_018_0_readiness_gate_commit_ci_with_ci_observation_loop",
+  "latest_operation": "RHP-018.1",
+  "next_operation": "wait_or_ingest_final_ci_status_before_green_claim",
   "hermes_can": [
-    "run_read_only_RHPREADY_command",
-    "classify_allowed_next_operation_classes",
-    "explain_evolution_readiness_gate",
-    "observe_RHP_018_0_commit_ci_through_loop_kernel"
+    "read_ci_observation_loop_evidence",
+    "explain_commit_scoped_transition",
+    "route_next_legal_operation_from_transition_table",
+    "wait_for_or_ingest_next_ci_result"
   ],
   "hermes_cannot": [
     "execute_autoheal",
