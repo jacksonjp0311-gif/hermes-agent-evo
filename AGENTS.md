@@ -1658,3 +1658,7 @@ Authority boundary remains human authorization through All-One.
 <!-- RHP_014_8_CI_COHERENCE_DOCTOR -->
 RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remote red CI is treated as a wound until a later green commit proves closure. Next: RHP-014.9 Autoheal executor dry-run v0.1.
 <!-- /RHP_014_8_CI_COHERENCE_DOCTOR -->
+
+<!-- RHP_014_9_AUTOHEAL_DRY_RUN -->
+RHP-014.9 rule: every `loop=COMMAND` box should include a human heading, command text, and why field. Runtime failures should render as RHPDIAG boxes with raw artifact paths. Autoheal remains dry-run only.
+<!-- /RHP_014_9_AUTOHEAL_DRY_RUN -->

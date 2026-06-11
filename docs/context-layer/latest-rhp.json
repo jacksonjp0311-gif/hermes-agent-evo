@@ -1,9 +1,9 @@
 {
-  "schema": "RHP-LATEST-POINTER-v0.5",
-  "latest_operation": "RHP-014.8",
-  "latest_evidence": "docs/context-layer/ops/RHP-014-8-final-evidence.json",
-  "latest_commit_or_base": "4985859b757575f290bec80e6689e4bcf96c8c3d",
-  "next_operation": "RHP-014.9 Autoheal executor dry-run v0.1",
+  "schema": "RHP-LATEST-POINTER-v0.6",
+  "latest_operation": "RHP-014.9",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-9-final-evidence.json",
+  "latest_commit_or_base": "c4a9d75f658a6d029e9ee9e1b68c05bebfeb8132",
+  "next_operation": "RHP-015.0 Autoheal proposal evaluator + CI log ingestion",
   "zero_context_rebuild": "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
   "authority_ok": true
 }

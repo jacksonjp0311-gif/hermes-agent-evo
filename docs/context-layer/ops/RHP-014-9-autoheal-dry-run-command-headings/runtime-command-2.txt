@@ -1,0 +1,38 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.rhpload_command_headings --json
+RETURN CODE: 0
+{
+  "schema": "RHPLOAD-COMMAND-HEADINGS-v0.1",
+  "headings": {
+    "pull-rebase-preauth": {
+      "heading": "Pre-authorization sync with remote main",
+      "why": "Avoid building on a stale base before human authorization.",
+      "command": "git pull --rebase origin main"
+    },
+    "git-reset-index": {
+      "heading": "Reset index before staged boundary",
+      "why": "Ensure only current operation files are staged.",
+      "command": "git reset"
+    },
+    "git-add": {
+      "heading": "Stage allowed operation surfaces",
+      "why": "Commit only bounded RHP operation artifacts.",
+      "command": "git add -- <allowed paths>"
+    },
+    "commit": {
+      "heading": "Create local evidence commit",
+      "why": "Seal validated evidence into Git history before push.",
+      "command": "git commit -m <message>"
+    },
+    "pull-rebase": {
+      "heading": "Final remote integration before push",
+      "why": "Avoid non-fast-forward drift after local commit.",
+      "command": "git pull --rebase origin main"
+    },
+    "push": {
+      "heading": "Push sealed evidence to origin/main",
+      "why": "Publish the human-authorized bounded delta.",
+      "command": "git push origin main"
+    }
+  },
+  "non_claim_lock": "Command headings are display metadata only. They do not execute commands or grant authority."
+}

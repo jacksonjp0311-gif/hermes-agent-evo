@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse, json
 from typing import Any
 
-RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.4"
+RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.5"
 
 TOOLS = [
     {"tool": "local-paste-fallback", "box": "CI-INGEST-BOX", "status": "active", "authority": "local_file_read", "purpose": "accept copied CI logs/screenshots text as wound-packet input"},
@@ -18,6 +18,9 @@ TOOLS = [
     {"tool": "evidence-coherence-auditor", "box": "COHERENCE-AUDIT-BOX", "status": "active", "authority": "read_only_audit", "purpose": "verify pointer, evidence, validation flags, and authority locks agree"},
     {"tool": "loop-state", "box": "LOOP-STATE-BOX", "status": "active", "authority": "status_only", "purpose": "render gate and CI state without executing repairs"},
     {"tool": "rhploop-doctor", "box": "RHPLOOP-DOCTOR-BOX", "status": "active", "authority": "diagnosis_only", "purpose": "summarize coherence, CI wound, authority locks, and next action"},
+    {"tool": "autoheal-executor-dry-run", "box": "AUTOHEAL-DRY-RUN-BOX", "status": "active", "authority": "proposal_only", "purpose": "plan bounded repairs without executing them"},
+    {"tool": "rhpload-command-headings", "box": "COMMAND-HEADING-BOX", "status": "active", "authority": "display_only", "purpose": "show human-readable headings, command text, and reasons for every COMMAND box"},
+    {"tool": "runtime-diagnosis-box", "box": "RUNTIME-DIAGNOSIS-BOX", "status": "active", "authority": "diagnosis_only", "purpose": "classify runtime failures into expandable diagnosis boxes with raw artifact pointers"},
 ]
 
 def registry() -> dict[str, Any]:

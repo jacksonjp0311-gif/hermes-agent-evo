@@ -704,3 +704,11 @@ Next: `RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor`.
 <!-- RHP_014_8_CI_COHERENCE_DOCTOR -->
 RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remote red CI is treated as a wound until a later green commit proves closure. Next: RHP-014.9 Autoheal executor dry-run v0.1.
 <!-- /RHP_014_8_CI_COHERENCE_DOCTOR -->
+
+<!-- RHP_014_9_AUTOHEAL_DRY_RUN -->
+### RHP-014.9 Autoheal Dry-Run + Command Headings
+
+Adds `rhp/autoheal_executor_dry_run.py`, `rhp/rhpload_command_headings.py`, and `rhp/runtime_diagnosis_box.py`.
+
+Boundary: proposes and diagnoses only. No repair execution, no workflow mutation, no CI rerun, no authority.
+<!-- /RHP_014_9_AUTOHEAL_DRY_RUN -->

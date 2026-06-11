@@ -2594,3 +2594,7 @@ RHP-L-034: Managed-region replacement should use regex over explicit start/end m
 <!-- RHP_014_8_CI_COHERENCE_DOCTOR -->
 RHP-014.8 adds evidence_coherence_auditor, loop_state, and rhploop_doctor. Remote red CI is treated as a wound until a later green commit proves closure. Next: RHP-014.9 Autoheal executor dry-run v0.1.
 <!-- /RHP_014_8_CI_COHERENCE_DOCTOR -->
+
+<!-- RHP_014_9_AUTOHEAL_DRY_RUN -->
+RHP-014.9 adds autoheal executor dry-run planning, RHPLOAD command headings, and RHPDIAG runtime diagnosis boxes. Autoheal execution remains disabled. Next: RHP-015.0 Autoheal proposal evaluator + CI log ingestion.
+<!-- /RHP_014_9_AUTOHEAL_DRY_RUN -->

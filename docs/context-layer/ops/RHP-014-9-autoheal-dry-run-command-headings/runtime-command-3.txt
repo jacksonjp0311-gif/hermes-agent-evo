@@ -1,0 +1,11 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.runtime_diagnosis_box --stage example --text The expression after '&' in a pipeline element produced an object --raw example.txt --json
+RETURN CODE: 0
+{
+  "schema": "RHP-RUNTIME-DIAGNOSIS-BOX-v0.1",
+  "stage": "example",
+  "class": "powershell_command_invocation_collision",
+  "raw": "example.txt",
+  "summary": "The expression after '&' in a pipeline element produced an object",
+  "next": "inspect raw artifact, classify failure, repair bounded surface, rerun",
+  "non_claim_lock": "Runtime diagnosis boxes classify failures only. They do not repair, rerun CI, or grant authority."
+}

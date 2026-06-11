@@ -1,53 +1,57 @@
-# RHP-014.3 autoheal executor dry-run.
 from __future__ import annotations
-import argparse, json
-from dataclasses import dataclass, field
+import argparse
+import json
 from pathlib import Path
 from typing import Any
 
-RHP_AUTOHEAL_DRY_RUN_SCHEMA = "RHP-AUTOHEAL-DRY-RUN-v0.1"
+SCHEMA = "RHP-AUTOHEAL-EXECUTOR-DRY-RUN-v0.1"
+AUTH = ["provider_call_executed","model_call_executed","tool_use_executed","cms_runtime_execution","cms_write","memory_write","memory_promotion","api_write","dependency_mutation_committed","external_ingestion","autonomous_authority","self_authorization"]
 
-@dataclass(frozen=True)
-class DryRun:
-    schema: str
-    ok: bool
-    classification: str
-    would_mutate: bool
-    would_commit: bool
-    allowed_paths: list[str] = field(default_factory=list)
-    planned_steps: list[str] = field(default_factory=list)
-    validation_commands: list[list[str]] = field(default_factory=list)
-    stop_reason: str = ""
-    non_claim_lock: str = "Dry-run autoheal never mutates, commits, pushes, grants authority, calls providers, writes CMS/memory/API state, or performs remote CI mutation."
+def load_json(path: str | Path) -> dict[str, Any]:
+    return json.loads(Path(path).read_text(encoding="utf-8"))
 
-    def as_dict(self) -> dict[str, Any]:
-        return dict(self.__dict__)
+def build_plan(root: str | Path = ".", ci_status: str = "unknown") -> dict[str, Any]:
+    root_path = Path(root)
+    pointer = load_json(root_path / "docs" / "context-layer" / "latest-rhp.json")
+    evidence = load_json(root_path / str(pointer["latest_evidence"]))
+    authority = {key: bool(evidence.get(key, False)) for key in AUTH}
+    issues = []
+    if ci_status == "red" or evidence.get("ci_red_wound_observed") is True:
+        issues.append("remote_ci_red")
+    if not bool(evidence.get("validation_passed", False)):
+        issues.append("local_validation_not_confirmed")
+    if not all(value is False for value in authority.values()):
+        issues.append("authority_drift")
+    actions = [
+        {"step": "collect_ci_wound", "mode": "read_or_paste_only", "allowed": True, "executes": False},
+        {"step": "classify_failure", "mode": "diagnosis_only", "allowed": True, "executes": False},
+        {"step": "propose_patch", "mode": "proposal_only", "allowed": True, "executes": False},
+        {"step": "execute_patch", "mode": "blocked", "allowed": False, "executes": False},
+        {"step": "rerun_ci", "mode": "blocked", "allowed": False, "executes": False},
+    ]
+    return {"schema": SCHEMA, "operation": pointer.get("latest_operation"), "latest_evidence": pointer.get("latest_evidence"), "next_operation": pointer.get("next_operation"), "ci_status": ci_status, "issues": issues, "authority_ok": all(value is False for value in authority.values()), "autoheal_execution_enabled": False, "dry_run_only": True, "actions": actions, "recommendation": "Collect remote CI logs or copied failure text next; keep execution disabled until the dry-run plan is reviewed.", "non_claim_lock": "Autoheal dry-run proposes and classifies only. It does not mutate files, execute repairs, rerun CI, or grant authority."}
 
-def dry_run_for_packet(packet: dict[str, Any]) -> DryRun:
-    classification = str(packet.get("classification", "unknown"))
-    if classification == "no_failure_detected":
-        return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, True, classification, False, False, [], ["seal NO-OP evidence"], [], "")
-    if classification == "module_path_execution_bug":
-        return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, True, classification, False, False, ["AGENTS.md", "rhp/README.md"], ["switch direct file execution to python -m package execution", "add focused import test"], [["python", "-m", "py_compile", "rhp/resume_packet.py"]])
-    if classification == "current_script_identity_mismatch":
-        return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, True, classification, False, False, ["docs/context-layer/ops/<operation>-final-evidence.json"], ["block push", "repair evidence/script identity only if current operation owns the file", "rerun current-script gate"], [["python", "-m", "rhp.current_script_gate"]])
-    if classification == "stream_output_leak_or_crlf_noise":
-        return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, True, classification, False, False, ["rhp/stream_collapse.py", "rhp/command_runner.py"], ["wrap noisy command through command_runner", "write raw stream to evidence", "print only box"], [["python", "-m", "pytest", "-q", "tests/test_rhp_014_2_v3_stream_collapse_strict.py"]])
-    if classification == "stale_evidence_key_surface":
-        return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, True, classification, False, False, ["tests/*alignment*", "rhp/alignment_guard.py", "docs/context-layer/ops/*final-evidence.json"], ["update stale test/guard key expectation", "preserve authority=false keys", "rerun focused guard tests"], [["python", "-m", "pytest", "-q", "tests/test_rhp_alignment_guard.py"]])
-    if classification == "assertion_failure":
-        return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, True, classification, False, False, ["tests/<focused>", "rhp/<focused>"], ["extract exact assertion", "identify source vs stale-test surface", "propose smallest patch"], [["python", "-m", "pytest", "-q", "<focused-test>"]])
-    return DryRun(RHP_AUTOHEAL_DRY_RUN_SCHEMA, False, classification, False, False, [], ["return to DIAGNOSIS loop"], [], "no bounded dry-run plan exists")
+def render_markdown(plan: dict[str, Any]) -> str:
+    rows = ["| Step | Mode | Allowed | Executes |", "|---|---|---:|---:|"]
+    for action in plan["actions"]:
+        rows.append(f"| {action['step']} | `{action['mode']}` | `{action['allowed']}` | `{action['executes']}` |")
+    return "\n".join(["# RHP Autoheal Executor Dry-Run", "", f"Schema: `{plan['schema']}`", f"Operation: `{plan['operation']}`", f"CI status: `{plan['ci_status']}`", f"Autoheal execution enabled: `{plan['autoheal_execution_enabled']}`", f"Dry-run only: `{plan['dry_run_only']}`", "", *rows, "", f"Recommendation: {plan['recommendation']}", "", f"Non-claim lock: {plan['non_claim_lock']}", ""])
 
 def main(argv=None) -> int:
-    p = argparse.ArgumentParser(description="Generate dry-run autoheal plan from CI wound packet")
-    p.add_argument("--packet", required=True)
+    p = argparse.ArgumentParser(description="Build an RHP autoheal executor dry-run plan")
+    p.add_argument("--repo-root", default=".")
+    p.add_argument("--ci-status", default="unknown", choices=["green", "red", "unknown"])
     p.add_argument("--json", action="store_true")
-    args = p.parse_args(argv)
-    packet = json.loads(Path(args.packet).read_text(encoding="utf-8"))
-    dry = dry_run_for_packet(packet)
-    print(json.dumps(dry.as_dict(), indent=2, ensure_ascii=False))
-    return 0 if dry.ok else 1
+    p.add_argument("--out-json", default="")
+    p.add_argument("--out-md", default="")
+    a = p.parse_args(argv)
+    plan = build_plan(a.repo_root, a.ci_status)
+    if a.out_json:
+        out = Path(a.out_json); out.parent.mkdir(parents=True, exist_ok=True); out.write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if a.out_md:
+        out = Path(a.out_md); out.parent.mkdir(parents=True, exist_ok=True); out.write_text(render_markdown(plan), encoding="utf-8", newline="\n")
+    print(json.dumps(plan, indent=2, ensure_ascii=False) if a.json else render_markdown(plan))
+    return 0 if plan["authority_ok"] and plan["dry_run_only"] and not plan["autoheal_execution_enabled"] else 1
 
 if __name__ == "__main__":
     raise SystemExit(main())

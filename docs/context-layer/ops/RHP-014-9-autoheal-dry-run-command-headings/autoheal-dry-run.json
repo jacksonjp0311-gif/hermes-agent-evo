@@ -1,0 +1,47 @@
+{
+  "schema": "RHP-AUTOHEAL-EXECUTOR-DRY-RUN-v0.1",
+  "operation": "RHP-014.8",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-8-final-evidence.json",
+  "next_operation": "RHP-014.9 Autoheal executor dry-run v0.1",
+  "ci_status": "red",
+  "issues": [
+    "remote_ci_red"
+  ],
+  "authority_ok": true,
+  "autoheal_execution_enabled": false,
+  "dry_run_only": true,
+  "actions": [
+    {
+      "step": "collect_ci_wound",
+      "mode": "read_or_paste_only",
+      "allowed": true,
+      "executes": false
+    },
+    {
+      "step": "classify_failure",
+      "mode": "diagnosis_only",
+      "allowed": true,
+      "executes": false
+    },
+    {
+      "step": "propose_patch",
+      "mode": "proposal_only",
+      "allowed": true,
+      "executes": false
+    },
+    {
+      "step": "execute_patch",
+      "mode": "blocked",
+      "allowed": false,
+      "executes": false
+    },
+    {
+      "step": "rerun_ci",
+      "mode": "blocked",
+      "allowed": false,
+      "executes": false
+    }
+  ],
+  "recommendation": "Collect remote CI logs or copied failure text next; keep execution disabled until the dry-run plan is reviewed.",
+  "non_claim_lock": "Autoheal dry-run proposes and classifies only. It does not mutate files, execute repairs, rerun CI, or grant authority."
+}

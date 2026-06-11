@@ -1,7 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.5",
-  "latest_operation": "RHP-014.8",
-  "next_operation": "RHP-014.9 Autoheal executor dry-run v0.1",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.6",
+  "latest_operation": "RHP-014.9",
+  "next_operation": "RHP-015.0 Autoheal proposal evaluator + CI log ingestion",
+  "hermes_can": [
+    "display_command_headings",
+    "render_runtime_diagnosis",
+    "display_autoheal_dry_run"
+  ],
+  "hermes_cannot": [
+    "execute_autoheal",
+    "rerun_ci",
+    "self_authorize",
+    "mutate_without_all_one"
+  ],
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,

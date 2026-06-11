@@ -1,8 +1,9 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.8 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.9 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-014.8
-   +- next: RHP-014.9 Autoheal executor dry-run v0.1
-   +- evidence: docs/context-layer/ops/RHP-014-8-final-evidence.json
-   +- doctor: docs/context-layer/ops/RHP-014-8-ci-coherence-doctor/rhploop-doctor.json
+   +- latest: RHP-014.9
+   +- next: RHP-015.0 Autoheal proposal evaluator + CI log ingestion
+   +- autoheal: dry-run only
+   +- command headings: active
+   +- runtime diagnosis: active
    +- authority ok: true
    `- verified: true [OK]

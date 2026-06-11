@@ -1,0 +1,17 @@
+{
+  "schema": "RHP-014.9-DRY-RUN-PLAN-v0.1",
+  "operation": "RHP-014.9",
+  "autoheal_execution_enabled": false,
+  "allowed": [
+    "collect logs",
+    "classify failure",
+    "propose patch"
+  ],
+  "blocked": [
+    "execute patch",
+    "rerun CI",
+    "mutate workflow",
+    "self-authorize"
+  ],
+  "next": "RHP-015.0 Autoheal proposal evaluator + CI log ingestion"
+}

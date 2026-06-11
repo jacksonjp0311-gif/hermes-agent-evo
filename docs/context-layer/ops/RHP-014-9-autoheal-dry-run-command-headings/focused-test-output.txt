@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_014_9_autoheal_executor_dry_run.py tests/test_rhp_014_9_rhpload_command_headings.py tests/test_rhp_014_9_runtime_diagnosis_box.py
+RETURN CODE: 0
+.....                                                                    [100%]
+5 passed in 0.57s
