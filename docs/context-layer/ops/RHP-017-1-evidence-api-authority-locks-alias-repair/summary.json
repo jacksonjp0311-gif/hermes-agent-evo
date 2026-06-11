@@ -1,0 +1,12 @@
+{
+  "schema": "RHP-017.1-summary",
+  "operation": "RHP-017.1",
+  "failed_subject_commit": "621e9954cb3fa5ecefb22f226ce1f20b73e5f00d",
+  "observed_ci_status": "red",
+  "wound_class": "evidence_api_break",
+  "state": "REPAIR_SEALED_LOCAL_REMOTE_UNKNOWN",
+  "integration_closed": false,
+  "next_legal_operation": "observe_RHP_017_1_repair_commit_ci_with_ci_observation_loop",
+  "current_operation_remote_ci_status": "unknown_until_next_observation",
+  "non_claim_lock": "RHP-017.1 repairs evidence API compatibility only. It records the RHP-017.0 red CI wound, does not call GitHub, does not rerun remote CI, does not mutate dependencies, does not grant authority, and does not claim the current repair commit green."
+}

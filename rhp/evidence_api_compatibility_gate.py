@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-RHP_EVIDENCE_API_COMPATIBILITY_GATE_SCHEMA = "RHP-EVIDENCE-API-COMPATIBILITY-GATE-v0.1"
+RHP_EVIDENCE_API_COMPATIBILITY_GATE_SCHEMA = "RHP-EVIDENCE-API-COMPATIBILITY-GATE-v0.2"
 
 AUTHORITY_FIELDS = [
     "provider_call_executed",
@@ -21,6 +21,7 @@ AUTHORITY_FIELDS = [
     "autonomous_authority",
     "self_authorization",
 ]
+AUTHORITY_CONTAINER_FIELD = "authority_locks"
 
 PUBLIC_REQUIRED_LATEST_POINTER = [
     "schema",
@@ -47,6 +48,7 @@ PUBLIC_OPTIONAL_FINAL_EVIDENCE = [
     "remote_ci_status",
     "integration_closed",
     "wait_state",
+    "authority_locks",
 ]
 
 DEPRECATED_FIELDS = ["latest_commit_or_base"]
@@ -54,6 +56,29 @@ DEPRECATED_FIELDS = ["latest_commit_or_base"]
 
 def _check_required(data: dict[str, Any], required: list[str]) -> list[str]:
     return [field for field in required if field not in data]
+
+
+def _authority_locks(data: dict[str, Any]) -> dict[str, Any]:
+    locks = data.get(AUTHORITY_CONTAINER_FIELD)
+    return locks if isinstance(locks, dict) else {}
+
+
+def _has_authority_field(data: dict[str, Any], field: str) -> bool:
+    return field in data or field in _authority_locks(data)
+
+
+def _authority_value(data: dict[str, Any], field: str) -> Any:
+    if field in data:
+        return data.get(field)
+    return _authority_locks(data).get(field)
+
+
+def _missing_authority_fields(data: dict[str, Any]) -> list[str]:
+    return [field for field in AUTHORITY_FIELDS if not _has_authority_field(data, field)]
+
+
+def _authority_not_false(data: dict[str, Any]) -> list[str]:
+    return [field for field in AUTHORITY_FIELDS if _authority_value(data, field) is not False]
 
 
 def gate(repo_root: str | Path = ".", latest_pointer: str = "docs/context-layer/latest-rhp.json") -> dict[str, Any]:
@@ -65,9 +90,14 @@ def gate(repo_root: str | Path = ".", latest_pointer: str = "docs/context-layer/
 
     missing_pointer = _check_required(pointer, PUBLIC_REQUIRED_LATEST_POINTER)
     missing_evidence = _check_required(evidence, PUBLIC_REQUIRED_FINAL_EVIDENCE)
-    missing_authority = _check_required(evidence, AUTHORITY_FIELDS)
-    authority_not_false = [field for field in AUTHORITY_FIELDS if evidence.get(field) is not False]
+    missing_authority = _missing_authority_fields(evidence)
+    authority_not_false = _authority_not_false(evidence)
     deprecated_present = [field for field in DEPRECATED_FIELDS if field in pointer or field in evidence]
+    authority_source = (
+        "nested_authority_locks"
+        if isinstance(evidence.get(AUTHORITY_CONTAINER_FIELD), dict)
+        else "top_level_fields"
+    )
 
     public_fields = sorted(set(PUBLIC_REQUIRED_FINAL_EVIDENCE + PUBLIC_OPTIONAL_FINAL_EVIDENCE + AUTHORITY_FIELDS))
     result = {
@@ -80,6 +110,7 @@ def gate(repo_root: str | Path = ".", latest_pointer: str = "docs/context-layer/
         "missing_evidence_required": missing_evidence,
         "missing_authority_fields": missing_authority,
         "authority_not_false": authority_not_false,
+        "authority_source": authority_source,
         "deprecated_present": deprecated_present,
         "public_required_latest_pointer": PUBLIC_REQUIRED_LATEST_POINTER,
         "public_required_final_evidence": PUBLIC_REQUIRED_FINAL_EVIDENCE,
@@ -87,11 +118,11 @@ def gate(repo_root: str | Path = ".", latest_pointer: str = "docs/context-layer/
         "public_authority_fields": AUTHORITY_FIELDS,
         "public_fields": public_fields,
         "classification": {
-            "required": PUBLIC_REQUIRED_LATEST_POINTER + PUBLIC_REQUIRED_FINAL_EVIDENCE + AUTHORITY_FIELDS,
+            "required": PUBLIC_REQUIRED_LATEST_POINTER + PUBLIC_REQUIRED_FINAL_EVIDENCE,
             "optional": PUBLIC_OPTIONAL_FINAL_EVIDENCE,
             "deprecated": DEPRECATED_FIELDS,
             "private": ["helper implementation details", "temp stream paths unless referenced by sealed summaries"],
-            "alias": {},
+            "alias": {"authority_locks": AUTHORITY_FIELDS},
         },
         "non_claim_lock": "Evidence API gate validates local evidence shape only. It does not call remote APIs, rerun CI, execute repairs, or grant authority.",
     }

@@ -1,0 +1,51 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-017.1",
+  "group": "operation-commands",
+  "total": 5,
+  "ok": 5,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe operation base/current failed subject commit",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-017.1 repairs the current RHP-017.0 red subject.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-1-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile patched evidence API gate and alias tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/evidence_api_compatibility_gate.py rhp/rhpload_doctor.py tests/test_rhp_017_1_evidence_api_authority_locks_alias.py",
+      "why": "Catch syntax/import errors before sealing.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-1-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests-rhp-017-1",
+      "heading": "Run compatibility gate and doctor regression tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -o addopts= tests/test_rhp_017_1_evidence_api_authority_locks_alias.py tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_7_rhpload_doctor.py",
+      "why": "Prove nested authority_locks alias restores evidence API and doctor cockpit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-1-python-streams\\focused-tests-rhp-017-1.txt"
+    },
+    {
+      "stage": "evidence-api-gate",
+      "heading": "Run evidence API compatibility gate after repair",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-017-1-evidence-api-authority-locks-alias-repair\\evidence-api-gate-after-repair.json",
+      "why": "Seal machine-readable proof that the current pointer is compatible.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-1-python-streams\\evidence-api-gate.txt"
+    },
+    {
+      "stage": "rhpload-doctor",
+      "heading": "Run read-only RHP doctor after repair",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.doctor_cli --repo-root . --current-head-ci-status pending --ci-source operator-provided --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-017-1-evidence-api-authority-locks-alias-repair\\doctor-after-repair.json",
+      "why": "Prove the cockpit reports evidence_api_ok without granting mutation authority.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-017-1-python-streams\\rhpload-doctor.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

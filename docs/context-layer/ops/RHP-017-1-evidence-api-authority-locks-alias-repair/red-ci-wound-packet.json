@@ -1,0 +1,20 @@
+{
+  "schema": "RHP-CI-WOUND-PACKET-v0.1",
+  "operation": "RHP-017.1",
+  "wound_class": "evidence_api_break",
+  "subject_type": "git_commit",
+  "subject_commit": "621e9954cb3fa5ecefb22f226ce1f20b73e5f00d",
+  "workflow": "Tests / test (1) and Tests / test (4) (push)",
+  "run_url": "",
+  "failed_test_file": "tests/test_rhp_015_6_evidence_api_compatibility_gate.py; tests/test_rhp_015_7_rhpload_doctor.py",
+  "repro_command": "python -m pytest tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_7_rhpload_doctor.py",
+  "source": "operator-provided",
+  "observed_at_utc": "2026-06-11T16:07:57.521586+00:00",
+  "root_cause": "RHP-017.0 final evidence emitted authority locks inside authority_locks, while the legacy evidence API compatibility gate required each authority field at top level.",
+  "status": "open_before_repair",
+  "ci_status": "red",
+  "integration_closed": false,
+  "authority_granted": false,
+  "execution_enabled": false,
+  "non_claim_lock": "CI wound packet records a remote CI failure only. It does not repair, rerun CI, mutate dependencies, or grant authority."
+}
