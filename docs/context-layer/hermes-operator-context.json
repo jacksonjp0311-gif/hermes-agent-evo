@@ -1,12 +1,12 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.1",
-  "next_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+  "latest_operation": "RHP-018.2",
+  "next_operation": "create_ci_wound_packet_before_repair",
   "hermes_can": [
     "read_ci_observation_loop_evidence",
     "explain_commit_scoped_transition",
     "route_next_legal_operation_from_transition_table",
-    "wait_for_or_ingest_next_ci_result"
+    "prepare_ci_wound_packet_before_repair"
   ],
   "hermes_cannot": [
     "execute_autoheal",
