@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/stream_collapse.py rhp/tool_candidate_matrix.py tests/test_rhp_014_2_stream_collapse.py tests/test_rhp_014_2_tool_candidate_matrix.py
+RETURN CODE: 0
+

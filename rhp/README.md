@@ -470,7 +470,7 @@ select loop -> load required surfaces -> state authority boundary -> mutate smal
 
 Runtime wiring is still deferred.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_3_LOOP_BOXES_END -->
 
 <!-- RHP_013_4_RUNTIME_DISPLAY_START -->
@@ -484,7 +484,7 @@ RuntimeBootState -> operator status -> protocol strip -> banner
 
 Authority remains false. Runtime display is not runtime permission.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_4_RUNTIME_DISPLAY_END -->
 
 <!-- RHP_013_5_CI_WATCH_START -->
@@ -496,7 +496,7 @@ RHP-013.5 adds `rhp/ci_watch.py`, an observational GitHub Actions classifier, an
 green | pending | red-actionable | unknown
 ```
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_5_CI_WATCH_END -->
 
 <!-- RHP_013_6_RHPLOAD_FEEDBACK_START -->
@@ -511,7 +511,7 @@ rhp/ci_repair_classifier.py
 
 Purpose: make process feedback explicit enough for a zero-context AI or human operator to resume safely.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_6_RHPLOAD_FEEDBACK_END -->
 
 
@@ -522,7 +522,7 @@ RHP-013.7 adds `rhp/load_console.py`.
 
 Purpose: every future RHP operation can produce human-readable load feedback and a machine-readable JSONL transcript.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_7_RHPLOAD_LIVE_END -->
 
 
@@ -540,7 +540,7 @@ Purpose: make legal loops, autoheal attempt budgets, and zero-context resume pac
 
 Execution rule: package tools that import `rhp.*` must be run with `python -m rhp.<tool>` from repo root.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_8_LOOP_REGISTRY_END -->
 
 
@@ -557,7 +557,7 @@ rhp/autoheal_plan.py
 
 Purpose: detect failed-attempt residue before rebase, clean only bounded allowed paths, verify green, then continue. Also generate autoheal plans without mutation.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_013_9_AUTOHEAL_PREFLIGHT_END -->
 
 
@@ -574,7 +574,7 @@ rhp/autoheal_gate_extensions.py
 
 Purpose: prevent pushes when the active script identity is missing or mismatched, then allow bounded self-heal and green-check verification before continuing.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_014_0_PUSH_GATE_END -->
 
 <!-- RHP_014_1_OPERATOR_UX_START -->
@@ -590,5 +590,20 @@ rhp/dev_loop_chart.py
 
 Purpose: compress noisy CLI streams, keep loop boxes and tool charts current, eliminate terminal hold prompts, and make the PowerShell dev loop explicit for future AI iteration.
 
-Next: `RHP-014.2 CI red-job artifact extractor + autoheal executor dry-run`.
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_014_1_OPERATOR_UX_END -->
+
+<!-- RHP_014_2_STREAM_COLLAPSE_START -->
+### RHP-014.2 Stream Collapse + Tool Candidate Matrix
+
+RHP-014.2 adds:
+
+```text
+rhp/stream_collapse.py
+rhp/tool_candidate_matrix.py
+```
+
+Purpose: minimize grey command streams, preserve raw output in evidence, and track platform tools that can become future loop boxes.
+
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
+<!-- RHP_014_2_STREAM_COLLAPSE_END -->

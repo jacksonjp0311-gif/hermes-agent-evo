@@ -1,0 +1,13 @@
+3997aa48d37fbb4042e440d150f75721af037879635cafc5dcd9eea45242abcb  README.md
+fbdfaa9861aedfa43988511e013e2c6ce9cd10949f40cec94c6d0f7df38a5691  AGENTS.md
+03441d6fb22c39b0c6932d32bfb7eca0331058fbef53856977c38eeaa1c7c348  rhp/README.md
+1a0537b3e78695268474a972ecd7f4600f086627853c9d9c782c6175b7b3bd9c  rhp/stream_collapse.py
+3b5d61cccd13f5e70f39ca334be4f5195f74daff6ee36456e842a6f56978b6e5  rhp/tool_candidate_matrix.py
+2cd317bf51be397159f02114de4116643b8441dbad6b2e28028f4a8cd928a1a1  tests/test_rhp_014_2_stream_collapse.py
+dc01d1c775dd8ebe6260aed581c30341230737f631180e9f93717abb428ac6b7  tests/test_rhp_014_2_tool_candidate_matrix.py
+5aea3bc43fb08caf00d3849abf780bdc4d4e20f0561cd1b4c7d7e2113cc6a235  docs/context-layer/ops/RHP-014-2-final-evidence.json
+d9fbf698e38671083dbe56a0720931e6a3f7a91ad59451b8f3c03b88358bea8e  docs/context-layer/ops/RHP-014-2-stream-collapse-tool-candidate-matrix.md
+d34058532739b59be3942e58fa16740159d3ca691a57f70e1b6be99b1a4b25f3  docs/context-layer/ops/RHP-014-2-stream-collapse-tool-candidate-matrix/py-compile-output.txt
+c2664485454b7189c673bf8d0ee7fd73d3f8b96b0fa46ab4f6215c755144c880  docs/context-layer/ops/RHP-014-2-stream-collapse-tool-candidate-matrix/stream-collapse-output.txt
+bd89a48163d3e615032efdb36aafdc0b2e580ce5cf9f50f189679bc96386cecf  docs/context-layer/ops/RHP-014-2-stream-collapse-tool-candidate-matrix/tool-candidate-matrix-output.txt
+b680808ed46977fd2ee0ffc7d43b8d565ff4de9b3890b89997aeb5bc4487c880  docs/context-layer/ops/RHP-014-2-stream-collapse-tool-candidate-matrix/focused-test-output.txt

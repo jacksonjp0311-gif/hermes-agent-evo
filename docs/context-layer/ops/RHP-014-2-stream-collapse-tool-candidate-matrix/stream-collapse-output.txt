@@ -1,0 +1,13 @@
+COMMAND: python -m rhp.stream_collapse --text <sample>
+RETURN CODE: 0
+RHPLOAD [089%] loop=STREAM-COLLAPSE operation=RHP | status=ok [OK]
+`- stream collapse box
+   +- total lines: 5
+   +- suppressed lines: 4
+   +- CRLF warnings: 1
+   +- git status lines: 2
+   +- git summary lines: 1
+   +- raw: evidence artifact
+   `- verified: true [OK]
+   +- visible sample:
+      | normal diagnostic

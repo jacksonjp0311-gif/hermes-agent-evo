@@ -1,0 +1,9 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.tool_candidate_matrix
+RETURN CODE: 0
+| Candidate | Loop box | Purpose | Integration | Authority |
+|---|---|---|---|---|
+| GitHub Actions workflow commands | CI-ANNOTATION-BOX | group logs, emit warnings/errors/notices, and write job summaries | future CI workflow hardening | ci_output_only |
+| OpenTelemetry-style signals | OBSERVABILITY-SIGNAL-BOX | represent RHPLOAD events as traces/logs/metrics | future telemetry export | local_evidence_only |
+| Rich/Textual-style terminal UI | OPERATOR-TUI-BOX | upgrade PowerShell boxes into richer local interface when available | optional local UX | display_only |
+| SARIF/JUnit artifact outputs | MACHINE-REPORT-BOX | make failures parseable by CI and future autoheal tools | future CI red-job artifact extractor | evidence_only |
+| GitHub CLI / API watcher | CI-WATCH-BOX | watch run IDs, jobs, annotations, and artifacts | RHP-014.x CI wound packets | read_only_until_authorized |

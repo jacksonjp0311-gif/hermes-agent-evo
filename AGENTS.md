@@ -259,6 +259,35 @@ Rules for future All-One scripts:
 
 <!-- HERMES_AGENT_DEV_LOOP_UX_END -->
 
+<!-- HERMES_AGENT_STREAM_COLLAPSE_TOOLS_START -->
+## Stream Collapse and Tool Candidate Matrix
+
+RHP-014.2 adds:
+
+```text
+rhp/stream_collapse.py
+rhp/tool_candidate_matrix.py
+```
+
+Rule: grey/detail command streams should be minimized by default. Write raw command output to evidence artifacts and print only collapsed verified boxes.
+
+Additional tool rows:
+
+| STREAM-COLLAPSE | `rhp/stream_collapse.py` | Suppress noisy grey streams by default; raw output goes to evidence. |
+| TOOL-CANDIDATE-MATRIX | `rhp/tool_candidate_matrix.py` | Tracks candidate platform tools and loop boxes for future integration. |
+
+Future candidates to consider:
+
+```text
+GitHub Actions workflow groups / warnings / job summaries
+OpenTelemetry-style RHPLOAD traces
+Rich/Textual local operator UI
+SARIF/JUnit machine report artifacts
+GitHub CLI/API run watcher
+```
+
+<!-- HERMES_AGENT_STREAM_COLLAPSE_TOOLS_END -->
+
 ## Autoheal Preflight Box
 
 RHP-013.9 adds:
