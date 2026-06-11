@@ -1,10 +1,11 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.5",
+  "latest_operation": "RHP-018.6",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
   "hermes_can": [
-    "read_ci_cancellation_review_packet",
-    "explain_why_cancelled_job_does_not_authorize_code_repair",
+    "read_RHP_operator_bootstrap_from_README",
+    "follow_latest_rhp_json_before_any_edit",
+    "explain_active_wound_preserved_after_readme_alignment",
     "ask_operator_for_replacement_ci_or_remaining_failed_logs"
   ],
   "hermes_cannot": [

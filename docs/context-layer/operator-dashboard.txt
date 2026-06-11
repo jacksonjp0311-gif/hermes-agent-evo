@@ -1,7 +1,8 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.5 | status=ok [OK]
-`- CI cancellation review recorded
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.6 | status=ok [OK]
+`- README/AGENTS operator bootstrap aligned
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
-   +- review: cancelled_job_no_code_repair_basis
+   +- active wound: readiness_gate_install
+   +- prior blocking state: CI_CANCELLATION_REVIEWED_RERUN_REQUIRED
    +- repair basis: false
    +- replacement CI required: true
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair

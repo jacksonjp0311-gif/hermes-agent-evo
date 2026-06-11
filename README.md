@@ -126,17 +126,23 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-014-7-final-evidence.json` |
-| Current RHP status | `RHP-014.7 Operator Dashboard Bundle sealed` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-014-6-final-evidence.json` |
-| Previous RHP status | `RHP-014.6 Post-Seal Residue + Machine Reports sealed` |
-| Next RHP gate | `RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-6-final-evidence.json` |
+| Current RHP status | `RHP-018.6 README Operator Bootstrap Alignment sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-5-final-evidence.json` |
+| Previous RHP status | `RHP-018.5 CI cancellation review sealed; no code repair basis established` |
+| Current RHP state | `README_OPERATOR_BOOTSTRAP_ALIGNED_RERUN_REQUIRED` |
+| Blocking CI/wound state preserved | `CI_CANCELLATION_REVIEWED_RERUN_REQUIRED` |
+| Active wound class | `readiness_gate_install` |
+| Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
+| Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
 | RuntimeBootState home | `rhp/startup_context_packet.py` |
 | RuntimeBootState schema | `RHP-RUNTIME-BOOT-STATE-v0.1` |
-| CI Watch Loop tool | `rhp/ci_watch.py` |
+| CI observation loop kernel | `rhp/ci_observation_loop.py` |
+| Evolution readiness gate | `rhp/evolution_readiness_gate.py` |
+| CI wound packet tool | `rhp/ci_wound_packet.py` |
 | Load status contract | `RHPLOAD [000%..100%]` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
@@ -145,7 +151,7 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Autonomous authority | `False` |
 | Human authorization required | `True` |
 
-Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit.
+Public metrics lock: current public metrics must match latest OPS/RHP evidence before any future RHP commit. README status is subordinate to `docs/context-layer/latest-rhp.json` when a mismatch is discovered.
 <!-- HERMES_CURRENT_PUBLIC_METRICS_END -->
 
 
@@ -204,6 +210,111 @@ Add a new row only when all are true:
 
 Boundary: this section teaches coding preferences and process enhancements. It is not a runtime authority grant and does not authorize provider/model/tool execution, CMS writes, memory promotion, API writes, external ingestion, autonomy, production-readiness claims, or self-authorization.
 <!-- HERMES_AI_AGENT_PREFERENCES_ENHANCEMENTS_END -->
+
+<!-- RHP_OPERATOR_BOOTSTRAP_START -->
+## RHP Operator Bootstrap: Current Canon
+
+This repository must be operated from the sealed RHP state, not from intuition, memory, or stale README text.
+
+### Source-of-truth order
+
+1. Read `docs/context-layer/latest-rhp.json`.
+2. Read the `latest_evidence` file named by `latest-rhp.json`.
+3. Read `docs/context-layer/operator-dashboard.txt`.
+4. Read `docs/context-layer/hermes-operator-context.json`.
+5. Follow `next_operation`.
+6. Run `RHPREADY` before any mutation when the current state permits mutation.
+7. Never mutate outside a human-authorized All-One script.
+
+### Core execution law
+
+```text
+Hermes thinks and displays.
+RHP gates.
+All-One acts.
+Evidence remembers.
+Human authorizes.
+```
+
+### Current RHP loop states
+
+| State | Meaning | Legal next action |
+|---|---|---|
+| `CI_RECONCILED_GREEN` | Named subject commit is green and integrated. | Bounded evolution may proceed after RHPREADY. |
+| `READINESS_GATE_INSTALLED_REMOTE_UNKNOWN` | Local readiness gate installed, current operation CI not yet observed. | Observe current operation CI through loop kernel. |
+| `CI_PENDING` | Named subject CI is not final. | Wait or ingest final CI result. |
+| `CI_RED_WOUND_OPEN` | Named subject CI is red. | Create CI wound packet before repair. |
+| `CI_WOUND_PACKET_OPEN_LOGS_REQUIRED` | Wound exists but failed logs are not sufficient. | Ingest failed/cancelled CI logs. |
+| `CI_LOGS_INGESTED_CANCELLED_JOB_REVIEW_REQUIRED` | Logs show cancellation, not deterministic failure. | Review cancellation before repair. |
+| `CI_CANCELLATION_REVIEWED_RERUN_REQUIRED` | Cancellation reviewed; no code repair basis exists. | Rerun or ingest replacement CI before repair. |
+| `README_OPERATOR_BOOTSTRAP_ALIGNED_RERUN_REQUIRED` | README/AGENTS loop instructions are aligned while active wound remains open. | Rerun or ingest replacement CI before repair. |
+
+### Non-negotiable invariants
+
+```text
+No claim without subject.
+No mutation without human authorization.
+No local seal implies remote green.
+No green claim for the current operation commit from inside that same commit.
+Unknown is not pass.
+Pending is a named state, not failure.
+Red becomes wound packet.
+Cancelled CI is not a code failure.
+Warnings are not repair warrants.
+Green reconciles the named subject commit only.
+No autonomous authority.
+```
+
+### Subject/base distinction
+
+```text
+subject_commit:
+  The commit whose CI/state is being observed.
+
+operation_base_commit:
+  The current HEAD from which the new RHP operation is sealed.
+
+These may differ during historical CI observation.
+```
+
+### Failure handling
+
+```text
+Raw traceback must not be normal operator output.
+Expected/classifiable failures render as RHPDIAG boxes.
+Raw logs belong in raw artifacts.
+Repair proposals are no-execution until human-authorized.
+```
+
+### Post-seal residue rule
+
+```text
+Before commit:
+  repo evidence files may be written under docs/context-layer/ops/.
+
+After commit/push:
+  command streams, sealed-head files, final summaries, and raw command outputs go to temp only.
+
+Post-seal repo residue is a hygiene failure and must be cleaned before continuing.
+```
+
+### CI repair rule
+
+```text
+A red or cancelled CI state does not automatically authorize repair.
+
+Repair requires:
+  1. commit-scoped CI observation,
+  2. wound packet,
+  3. failed log ingestion,
+  4. deterministic failure surface,
+  5. bounded repair proposal,
+  6. human-authorized All-One execution.
+```
+
+Non-claim lock: this bootstrap teaches future agents how to preserve the RHP loop. It does not close the active wound, rerun CI, repair code, grant provider/model/tool/CMS/memory/API authority, or authorize autonomous action.
+<!-- RHP_OPERATOR_BOOTSTRAP_END -->
+
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

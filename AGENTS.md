@@ -43,6 +43,57 @@ Future agents may add to this section only when a validated evidence artifact is
 This section is an AI handoff accelerator, not a runtime authority grant.
 <!-- HERMES_AGENT_PREFERENCES_STATUS_END -->
 
+<!-- HERMES_AGENT_RHP_OPERATOR_BOOTSTRAP_START -->
+## RHP Operator Bootstrap for Coding Agents
+
+Before editing this repository, a coding agent must load the sealed RHP pointer and obey its `next_operation`.
+
+Required first reads:
+
+```text
+docs/context-layer/latest-rhp.json
+docs/context-layer/<latest_evidence from latest-rhp.json>
+docs/context-layer/operator-dashboard.txt
+docs/context-layer/hermes-operator-context.json
+README.md
+AGENTS.md
+```
+
+Current canon:
+
+```text
+Hermes thinks and displays.
+RHP gates.
+All-One acts.
+Evidence remembers.
+Human authorizes.
+```
+
+Rules:
+
+| Rule | Required behavior |
+|---|---|
+| Source truth | Treat `docs/context-layer/latest-rhp.json` as the first source of operational truth. |
+| Subject/base distinction | Do not require `subject_commit` to equal `operation_base_commit`; historical CI observation may target an older commit. |
+| Red CI | Convert red CI into a wound packet before repair. |
+| Cancelled CI | Do not treat cancellation as a deterministic code failure. |
+| Warnings | Do not repair from warnings unless a failure surface proves they are causal. |
+| Repair basis | Require failed logs plus deterministic failure surface before repair. |
+| Current commit | Never claim the current operation commit is green from inside that same operation. |
+| Output hygiene | Render expected/classifiable failures as `RHPDIAG`; raw traces go to artifacts. |
+| Post-seal hygiene | After commit/push, command streams and sealed-head files must stay in temp, not repo evidence folders. |
+| Authority | No self-authorization; human phrase is required for mutating All-One operations. |
+
+When the latest state is `CI_CANCELLATION_REVIEWED_RERUN_REQUIRED` or `README_OPERATOR_BOOTSTRAP_ALIGNED_RERUN_REQUIRED`, the legal next operation remains:
+
+```text
+operator_rerun_or_ingest_replacement_ci_before_repair
+```
+
+Non-claim lock: this section is an AI handoff rule surface. It grants no runtime, provider, model, tool, CMS, memory, API, external ingestion, or autonomous authority.
+<!-- HERMES_AGENT_RHP_OPERATOR_BOOTSTRAP_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

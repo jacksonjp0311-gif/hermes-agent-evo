@@ -1,0 +1,29 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-018.6",
+  "group": "operation-commands",
+  "total": 3,
+  "ok": 3,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "command": "git rev-parse HEAD",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-6-readme-operator-bootstrap-alignment\\operation-base-commit.txt"
+    },
+    {
+      "stage": "evidence-api-gate-before-readme-alignment",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-6-readme-operator-bootstrap-alignment\\evidence-api-gate-before-readme-alignment.json",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-6-readme-operator-bootstrap-alignment\\evidence-api-gate-before-readme-alignment.txt"
+    },
+    {
+      "stage": "evidence-api-gate-after-readme-alignment",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-6-readme-operator-bootstrap-alignment\\evidence-api-gate-after-readme-alignment.json",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-6-readme-operator-bootstrap-alignment\\evidence-api-gate-after-readme-alignment.txt"
+    }
+  ],
+  "post_seal_stream_rule": "commit/pull/push/sealed-head command streams are volatile temp only"
+}

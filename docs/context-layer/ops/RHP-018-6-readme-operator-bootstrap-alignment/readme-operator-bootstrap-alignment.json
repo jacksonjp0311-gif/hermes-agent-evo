@@ -1,0 +1,26 @@
+{
+  "schema": "RHP-README-OPERATOR-BOOTSTRAP-ALIGNMENT-v0.1",
+  "operation": "RHP-018.6",
+  "stale_metric_seen_before_patch": true,
+  "readme_metrics_aligned": true,
+  "readme_bootstrap_present": true,
+  "agents_bootstrap_present": true,
+  "required_invariants_present": true,
+  "active_wound_preserved": true,
+  "repair_execution_enabled": false,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  }
+}
