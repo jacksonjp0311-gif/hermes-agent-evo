@@ -1,0 +1,11 @@
+1b8f33f221aa9e4512ce8a19807248fd69c0b8be7f4f511e0ea1d0e40190d6a4  README.md
+d15a831292429c7d822b6e053b9aef933c94a252df8a5fb7268b2cf5dc513d8b  AGENTS.md
+df4e30b6bfb09506d08745faa6a4c6b8f2edb660d029713303670f3e088e43ba  rhp/README.md
+51723eb1e1e1207b41fb55abf49b39164248abe197684428d7f5e65fe8a82648  rhp/command_runner.py
+225344846d67a850588977f161937fb495ee3efe84470e03bbc9d724ad8c7bc2  tests/test_rhp_014_2_v3_command_runner.py
+b54cefa0a5a49016ec9cd78f65d21087ddc636192a0a181cdd05e9453558f38e  tests/test_rhp_014_2_v3_stream_collapse_strict.py
+cb8cb61b3de2c1f11afe593d99a1bf7e9e2660d1cedbe154f22949a824c59f0d  docs/context-layer/ops/RHP-014-2-v3-final-evidence.json
+1df432d176ea51687c1e3a5fdc4960dc3d95d86bfb8aab2a8ae6844c510cf254  docs/context-layer/ops/RHP-014-2-v3-strict-stream-collapse-residue-aware.md
+ec40d5364e05687427b14e85df647355e5bf20dde0d5242b73bceaf58df50000  docs/context-layer/ops/RHP-014-2-v3-strict-stream-collapse-residue-aware/py-compile-output.txt
+bd64704a8470dd7c230b899f47a40cf46ad4aced75eef52a50b3380ffb53b235  docs/context-layer/ops/RHP-014-2-v3-strict-stream-collapse-residue-aware/command-runner-output.txt
+4bc683a0b4c9920782fccf362875dab238cf323b69caab6d9ede9824114b278c  docs/context-layer/ops/RHP-014-2-v3-strict-stream-collapse-residue-aware/focused-test-output.txt

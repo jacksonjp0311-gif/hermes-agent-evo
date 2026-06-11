@@ -1,0 +1,29 @@
+COMMAND: python -m rhp.command_runner --raw-path <path> -- python -c <smoke>
+RETURN CODE: 0
+{
+  "schema": "RHP-COMMAND-RUNNER-v0.1",
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-c",
+    "print('runner smoke')"
+  ],
+  "return_code": 0,
+  "raw_path": "docs\\context-layer\\ops\\RHP-014-2-v3-strict-stream-collapse-residue-aware\\command-runner-smoke-raw.txt",
+  "collapsed": {
+    "schema": "RHP-STREAM-COLLAPSE-v0.1",
+    "total_lines": 1,
+    "visible_lines": 1,
+    "suppressed_lines": 0,
+    "crlf_warning_count": 0,
+    "git_status_count": 0,
+    "git_summary_count": 0,
+    "return_code": 0,
+    "sample": [
+      "runner smoke"
+    ],
+    "ok": true,
+    "non_claim_lock": "Stream collapse is display-only. Raw output must remain available in evidence artifacts."
+  },
+  "ok": true,
+  "non_claim_lock": "Command runner captures display streams only. It does not alter command semantics, hide nonzero exits, mutate files by itself, or grant authority."
+}

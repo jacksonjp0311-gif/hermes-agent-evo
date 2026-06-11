@@ -1,0 +1,8 @@
+{
+  "rhp_014_2_v3_passed": true,
+  "strict_stream_collapse_added": true,
+  "command_runner_added": true,
+  "residue_aware_preflight_added": true,
+  "focused_tests_passed": true,
+  "next": "RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run"
+}

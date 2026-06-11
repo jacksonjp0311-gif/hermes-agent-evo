@@ -1,0 +1,3 @@
+﻿From https://github.com/jacksonjp0311-gif/hermes-agent-evo
+ * branch                main       -> FETCH_HEAD
+Already up to date.

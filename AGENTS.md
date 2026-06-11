@@ -1492,3 +1492,25 @@ not the specific names.
 
 Reviewers should reject new change-detector tests; authors should convert
 them into invariants before re-requesting review.
+
+<!-- HERMES_AGENT_RESIDUE_AWARE_STREAM_START -->
+## Residue-Aware Stream Collapse
+
+RHP-014.2 V3 rule:
+
+Command-stream artifacts created after commit/push are transient evidence residues. If they live under the previous operation's `command-streams/` directory and no commit is pending for them, AUTOHEAL-PREFLIGHT may clean them.
+
+Allowed cleanup:
+
+```text
+docs/context-layer/ops/RHP-014-2-stream-collapse-tool-candidate-matrix/command-streams/*
+```
+
+Blocked cleanup:
+
+```text
+any unknown source file
+any user work outside the active/current operation allowlist
+```
+
+<!-- HERMES_AGENT_RESIDUE_AWARE_STREAM_END -->

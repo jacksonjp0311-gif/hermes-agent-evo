@@ -607,3 +607,11 @@ Purpose: minimize grey command streams, preserve raw output in evidence, and tra
 
 Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_014_2_STREAM_COLLAPSE_END -->
+
+<!-- RHP_014_2_V3_RESIDUE_AWARE_STREAM_START -->
+### RHP-014.2 V3 Strict Stream Collapse + Residue-Aware Preflight
+
+Adds residue-aware cleanup doctrine for post-commit command-stream artifacts from the prior stream-collapse run.
+
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
+<!-- RHP_014_2_V3_RESIDUE_AWARE_STREAM_END -->

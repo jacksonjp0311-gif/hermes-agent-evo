@@ -513,6 +513,28 @@ Added tool rows:
 Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_014_2_STREAM_COLLAPSE_END -->
 
+<!-- HERMES_RHP_014_2_V3_RESIDUE_AWARE_STREAM_START -->
+### RHP-014.2 V3 Strict Stream Collapse + Residue-Aware Preflight
+
+RHP-014.2 V3 fixes the command-stream residue edge case.
+
+Problem observed: RHP-014.2 created post-commit command-stream artifacts after staging. A later strict run correctly blocked those as unknown dirty files.
+
+Resolution: command-stream artifacts under the immediately previous RHP-014.2 stream-collapse operation are now classified as bounded transient residue and may be cleaned by AUTOHEAL-PREFLIGHT.
+
+Rule:
+
+```text
+old command-stream residue -> bounded cleanup
+unknown user work -> blocked
+noisy command -> captured command runner
+operator terminal -> boxes only
+raw stream -> evidence artifact
+```
+
+Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
+<!-- HERMES_RHP_014_2_V3_RESIDUE_AWARE_STREAM_END -->
+
 
 
 
