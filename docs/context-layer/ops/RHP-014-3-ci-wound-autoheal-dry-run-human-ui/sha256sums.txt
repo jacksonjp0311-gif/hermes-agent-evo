@@ -1,0 +1,16 @@
+12a8a968011f090851cccce5889b600afb8c49d5a2ce205bff04a29a1c23c375  README.md
+fb17291aaa16cf1070171814190dda9b24b802f288fe046c00b98c412f4a064b  AGENTS.md
+e58da98382b2cf947550885799720dd2ba44dddf8b83de9ec677178e579c8bad  rhp/README.md
+60df27ce592ed714e69e5ada34bc213e29e5158eb4ee947e7865071a6ca15aca  rhp/ci_artifact_extractor.py
+651a4f4d64aced119aa61f3ed1135abf4cf035c919ec77d520c2f8cc15619718  rhp/autoheal_executor_dry_run.py
+f84b0a3f51f95e1f8b0e449da17facfc5b16e0699b023a27849ec2b8581274b4  rhp/human_ui_summary.py
+2e850ab193159edd5feb536d3f841cbfa6e6ef28d69e5a3b4ca1f8c569d83d74  tests/test_rhp_014_3_ci_artifact_extractor.py
+de4bcb135b0c229dcfc30a20188e75fe5a66205dd5092b8f6cd88facd730f5af  tests/test_rhp_014_3_autoheal_executor_dry_run.py
+5de6a7dc3ddc66fc82a6dca7b78dc8ca288d3dcbe0096cd1a41394906f9da6de  tests/test_rhp_014_3_human_ui_summary.py
+5c42b9e4e79a1424e2bf9170d72729fc0610bc342af149fdbf9cc797b2fb5be3  docs/context-layer/ops/RHP-014-3-final-evidence.json
+1415edfe7e76792752ca5e2daa668f6dcb5c55bdd6efea1527dd021cfe41672e  docs/context-layer/ops/RHP-014-3-ci-wound-autoheal-dry-run-human-ui.md
+a3182d662acdee922a75bb7ccf4c9564c4252ae48f66bfda7b6fbbdf7bcfe226  docs/context-layer/ops/RHP-014-3-ci-wound-autoheal-dry-run-human-ui/py-compile-output.txt
+b4b171d8d6ab468c93e70794a4fbefb61c10086894c9bc0122f6b8f21ecfa0d0  docs/context-layer/ops/RHP-014-3-ci-wound-autoheal-dry-run-human-ui/ci-wound-packet-output.txt
+f504efe53d83fe2159af1eaf9c9fa106c44da436e2371c141a305e5e3c466a8c  docs/context-layer/ops/RHP-014-3-ci-wound-autoheal-dry-run-human-ui/autoheal-dry-run-output.txt
+d3ebc3eb5f98e1c614acc8f9fc3bce6645435f2b919cf46b79c901e8f30796bd  docs/context-layer/ops/RHP-014-3-ci-wound-autoheal-dry-run-human-ui/human-ui-summary-output.txt
+60ec8b1543b6c4e71845ba36308c07c8977e9937d69decfe1a6627ecaddadee8  docs/context-layer/ops/RHP-014-3-ci-wound-autoheal-dry-run-human-ui/focused-test-output.txt

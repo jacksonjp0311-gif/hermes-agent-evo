@@ -535,6 +535,26 @@ raw stream -> evidence artifact
 Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- HERMES_RHP_014_2_V3_RESIDUE_AWARE_STREAM_END -->
 
+<!-- HERMES_RHP_014_3_CI_WOUND_DRY_RUN_START -->
+### RHP-014.3 CI Wound Packet + Autoheal Executor Dry-Run + Human UI
+
+RHP-014.3 turns failing CI/log artifacts into structured wound packets and dry-run repair plans.
+
+```text
+CI log / screenshot text / job output
+-> rhp/ci_artifact_extractor.py
+-> RHP-CI-WOUND-PACKET-v0.1
+-> rhp/autoheal_executor_dry_run.py
+-> RHP-AUTOHEAL-DRY-RUN-v0.1
+-> rhp/human_ui_summary.py
+-> compact operator dashboard
+```
+
+This is still dry-run only: no mutation, no commit, no remote CI action, no autonomy.
+
+Next: `RHP-014.4 CI artifact ingestion from GitHub API + local paste fallback`.
+<!-- HERMES_RHP_014_3_CI_WOUND_DRY_RUN_END -->
+
 
 
 

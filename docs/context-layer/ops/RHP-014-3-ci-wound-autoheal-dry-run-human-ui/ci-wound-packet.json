@@ -1,0 +1,15 @@
+{
+  "schema": "RHP-CI-WOUND-PACKET-v0.1",
+  "ok": true,
+  "classification": "module_path_execution_bug",
+  "confidence": 0.92,
+  "source_kind": "sample-ci-log",
+  "summary": "Python package/module execution path failure.",
+  "evidence_lines": [
+    "Traceback",
+    "ModuleNotFoundError: No module named 'rhp'",
+    "FAILED tests/test_example.py"
+  ],
+  "suggested_loop": "AUTOHEAL-PLAN",
+  "non_claim_lock": "CI wound packets classify CI artifacts only. They do not mutate files, call remote APIs, grant authority, or execute repairs."
+}

@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_014_3_ci_artifact_extractor.py tests/test_rhp_014_3_autoheal_executor_dry_run.py tests/test_rhp_014_3_human_ui_summary.py
+RETURN CODE: 0
+.....                                                                    [100%]
+5 passed in 0.50s

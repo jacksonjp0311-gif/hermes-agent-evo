@@ -615,3 +615,19 @@ Adds residue-aware cleanup doctrine for post-commit command-stream artifacts fro
 
 Next: `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`.
 <!-- RHP_014_2_V3_RESIDUE_AWARE_STREAM_END -->
+
+<!-- RHP_014_3_CI_WOUND_DRY_RUN_START -->
+### RHP-014.3 CI Wound Packet + Autoheal Executor Dry-Run + Human UI
+
+Adds:
+
+```text
+rhp/ci_artifact_extractor.py
+rhp/autoheal_executor_dry_run.py
+rhp/human_ui_summary.py
+```
+
+Purpose: convert CI artifacts into wound packets, then produce a non-mutating dry-run plan and human-readable dashboard.
+
+Next: `RHP-014.4 CI artifact ingestion from GitHub API + local paste fallback`.
+<!-- RHP_014_3_CI_WOUND_DRY_RUN_END -->

@@ -1,0 +1,11 @@
+COMMAND: python -m rhp.human_ui_summary ...
+RETURN CODE: 0
+RHPLOAD [100%] HUMAN UI SUMMARY | operation=RHP-014.3 | status=ok [OK]
+`- operator dashboard
+   +- current: RHP-014.3
+   +- next: RHP-014.4 CI artifact ingestion from GitHub API + local paste fallback
+   +- evidence: RHP-014.3-final-evidence
+   +- authority: self=False autonomous=False
+   +- wound: module_path_execution_bug confidence=0.92
+   +- dry-run: would_mutate=False would_commit=False
+   `- verified: true [OK]

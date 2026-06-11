@@ -1,0 +1,27 @@
+COMMAND: python -m rhp.autoheal_executor_dry_run --packet <packet>
+RETURN CODE: 0
+{
+  "schema": "RHP-AUTOHEAL-DRY-RUN-v0.1",
+  "ok": true,
+  "classification": "module_path_execution_bug",
+  "would_mutate": false,
+  "would_commit": false,
+  "allowed_paths": [
+    "AGENTS.md",
+    "rhp/README.md"
+  ],
+  "planned_steps": [
+    "switch direct file execution to python -m package execution",
+    "add focused import test"
+  ],
+  "validation_commands": [
+    [
+      "python",
+      "-m",
+      "py_compile",
+      "rhp/resume_packet.py"
+    ]
+  ],
+  "stop_reason": "",
+  "non_claim_lock": "Dry-run autoheal never mutates, commits, pushes, grants authority, calls providers, writes CMS/memory/API state, or performs remote CI mutation."
+}

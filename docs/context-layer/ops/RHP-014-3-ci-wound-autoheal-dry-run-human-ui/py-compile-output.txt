@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/ci_artifact_extractor.py rhp/autoheal_executor_dry_run.py rhp/human_ui_summary.py tests/test_rhp_014_3_ci_artifact_extractor.py tests/test_rhp_014_3_autoheal_executor_dry_run.py tests/test_rhp_014_3_human_ui_summary.py
+RETURN CODE: 0
+

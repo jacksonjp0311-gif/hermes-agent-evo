@@ -1514,3 +1514,32 @@ any user work outside the active/current operation allowlist
 ```
 
 <!-- HERMES_AGENT_RESIDUE_AWARE_STREAM_END -->
+
+<!-- HERMES_AGENT_CI_WOUND_DRY_RUN_START -->
+## CI Wound Packets and Autoheal Dry-Run
+
+RHP-014.3 adds:
+
+```text
+rhp/ci_artifact_extractor.py
+rhp/autoheal_executor_dry_run.py
+rhp/human_ui_summary.py
+```
+
+Required flow for failed CI:
+
+```text
+CI artifact -> WOUND-PACKET -> AUTOHEAL-DRY-RUN -> HUMAN-UI-SUMMARY -> human authorization before any future executor
+```
+
+Rules:
+
+| Rule | Requirement |
+|---|---|
+| dry-run only | no mutation, no commit, no push |
+| classification first | no plan without wound packet |
+| human UI | summarize in one dashboard box |
+| raw artifacts | preserve CI/log input in evidence |
+| unknown class | return to DIAGNOSIS loop |
+
+<!-- HERMES_AGENT_CI_WOUND_DRY_RUN_END -->
