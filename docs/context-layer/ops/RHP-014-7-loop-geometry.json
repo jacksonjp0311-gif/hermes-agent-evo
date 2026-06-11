@@ -1,0 +1,18 @@
+{
+  "schema": "RHP-014.7-LOOP-GEOMETRY-v0.1",
+  "operation": "RHP-014.7",
+  "origin": "latest sealed evidence",
+  "axes": [
+    "evidence",
+    "transcript",
+    "wound",
+    "dry_run",
+    "residue",
+    "authority",
+    "tools",
+    "geometry"
+  ],
+  "boundary": "human authorization",
+  "motion": "validated delta",
+  "adaptation": "failure classes become bounded tools; dashboard makes them legible; no autonomy is added"
+}

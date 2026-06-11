@@ -1,0 +1,20 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.loop_geometry --json
+RETURN CODE: 0
+{
+  "schema": "RHP-LOOP-GEOMETRY-v0.1",
+  "origin": "latest sealed evidence",
+  "axes": [
+    "evidence",
+    "transcript",
+    "wound",
+    "dry_run",
+    "residue",
+    "authority",
+    "tools",
+    "geometry"
+  ],
+  "boundary": "human authorization",
+  "motion": "next legal delta only after gates pass",
+  "adaptation_rule": "failure classes become bounded tools or dashboard surfaces before any autonomy is added",
+  "non_claim_lock": "Loop geometry is an orientation model only. It does not assert cognition, autonomy, production readiness, or external authority."
+}

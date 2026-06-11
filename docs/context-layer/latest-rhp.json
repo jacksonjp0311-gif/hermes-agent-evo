@@ -1,9 +1,9 @@
 {
-  "schema": "RHP-LATEST-POINTER-v0.3",
-  "latest_operation": "RHP-014.6",
-  "latest_evidence": "docs/context-layer/ops/RHP-014-6-final-evidence.json",
-  "latest_commit_or_base": "d018b2bfca8a55624a6bd5c4e1b88d086c290e8e",
-  "next_operation": "RHP-014.7 Operator dashboard bundle: evidence + transcript + wound + dry-run + residue",
+  "schema": "RHP-LATEST-POINTER-v0.4",
+  "latest_operation": "RHP-014.7",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-7-final-evidence.json",
+  "latest_commit_or_base": "3d89d9cce5a9c6b256526870b42fb3dacfcc1e79",
+  "next_operation": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
   "zero_context_rebuild": "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
   "authority_ok": true
 }

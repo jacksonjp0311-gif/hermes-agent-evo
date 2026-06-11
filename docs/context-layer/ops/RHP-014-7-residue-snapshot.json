@@ -1,0 +1,6 @@
+{
+  "schema": "RHP-014.7-RESIDUE-SNAPSHOT-v0.1",
+  "operation": "RHP-014.7",
+  "policy": "unknown dirty paths block; bounded failed-run residue may be cleaned only after human authorization",
+  "post_seal_boundary": "commit/pull/push streams use volatile temp storage to prevent repo residue"
+}

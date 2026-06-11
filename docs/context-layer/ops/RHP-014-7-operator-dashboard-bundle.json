@@ -1,0 +1,68 @@
+{
+  "schema": "RHP-OPERATOR-DASHBOARD-BUNDLE-v0.1",
+  "operation": "RHP-014.7",
+  "evidence": {
+    "latest_pointer": "docs/context-layer/latest-rhp.json",
+    "latest_evidence": "docs/context-layer/ops/RHP-014-7-final-evidence.json",
+    "validation_passed": true,
+    "focused_tests_passed": true
+  },
+  "transcript": {
+    "surface": "docs/context-layer/ops/RHP-014-7-transcript-index.json",
+    "policy": "raw streams are summarized; volatile post-seal streams remain outside committed repo state"
+  },
+  "wound": {
+    "surface": "docs/context-layer/ops/RHP-014-7-wound-packet.json",
+    "known_classes": [
+      "generated_source_escape_bug",
+      "powershell_path_normalization_regex_bug",
+      "post_staging_command_stream_residue"
+    ]
+  },
+  "dry_run": {
+    "surface": "docs/context-layer/ops/RHP-014-7-dry-run-plan.json",
+    "mode": "propose_only"
+  },
+  "residue": {
+    "surface": "docs/context-layer/ops/RHP-014-7-residue-snapshot.json",
+    "policy": "classify before cleanup; unknown dirty paths block"
+  },
+  "authority": {
+    "ok": true,
+    "locks": {
+      "provider_call_executed": false,
+      "model_call_executed": false,
+      "tool_use_executed": false,
+      "cms_runtime_execution": false,
+      "cms_write": false,
+      "memory_write": false,
+      "memory_promotion": false,
+      "api_write": false,
+      "dependency_mutation_committed": false,
+      "external_ingestion": false,
+      "autonomous_authority": false,
+      "self_authorization": false
+    },
+    "human_authorization_boundary": true
+  },
+  "tools": {
+    "surface": "docs/context-layer/ops/RHP-014-7-tool-integration-map.json",
+    "principle": "tools display and classify; All-One performs bounded human-authorized mutation"
+  },
+  "geometry": {
+    "surface": "docs/context-layer/ops/RHP-014-7-loop-geometry.json",
+    "axes": [
+      "evidence",
+      "transcript",
+      "wound",
+      "dry_run",
+      "residue",
+      "authority",
+      "tools",
+      "geometry"
+    ],
+    "plain_english": "The dashboard makes the loop geometry visible: origin evidence, bounded axes, authority boundary, next legal delta."
+  },
+  "next": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
+  "non_claim_lock": "Operator dashboard bundle is an orientation and evidence surface only. It grants no autonomy, no provider calls, no memory writes, no CMS writes, and no self-authorization."
+}

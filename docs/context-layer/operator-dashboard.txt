@@ -1,9 +1,10 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.6 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.7 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-014.6
-   +- next: RHP-014.7 Operator dashboard bundle: evidence + transcript + wound + dry-run + residue
-   +- evidence: docs/context-layer/ops/RHP-014-6-final-evidence.json
-   +- active sequence boxes: 18
-   +- required gates: 7
+   +- latest: RHP-014.7
+   +- next: RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor
+   +- evidence: docs/context-layer/ops/RHP-014-7-final-evidence.json
+   +- bundle: docs/context-layer/ops/RHP-014-7-operator-dashboard-bundle.json
+   +- geometry axes: evidence, transcript, wound, dry_run, residue, authority, tools, geometry
+   +- rhpwait: single-line fill display only
    +- authority ok: true
    `- verified: true [OK]

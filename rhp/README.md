@@ -685,3 +685,18 @@ Purpose: classify bounded post-seal command residue and emit human/machine-reada
 
 Non-claim lock: reports and residue classifiers do not mutate workflows, rerun CI, execute repairs, or grant authority.
 <!-- RHP_014_6_MACHINE_REPORTS_END -->
+
+<!-- RHP_014_7_OPERATOR_DASHBOARD_BUNDLE_START -->
+### RHP-014.7 Operator Dashboard Bundle
+
+Adds:
+
+```text
+rhp/operator_dashboard_bundle.py
+rhp/loop_geometry.py
+```
+
+Purpose: join evidence, transcript, wound, dry-run, residue, authority, tools, and geometry into a readable operator bundle.
+
+Next: `RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor`.
+<!-- RHP_014_7_OPERATOR_DASHBOARD_BUNDLE_END -->

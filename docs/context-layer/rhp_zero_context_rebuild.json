@@ -1,10 +1,10 @@
 {
-  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.3",
+  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.4",
   "ok": true,
-  "latest_operation": "RHP-014.6",
-  "latest_evidence": "docs/context-layer/ops/RHP-014-6-final-evidence.json",
-  "latest_commit_or_base": "d018b2bfca8a55624a6bd5c4e1b88d086c290e8e",
-  "next_operation": "RHP-014.7 Operator dashboard bundle: evidence + transcript + wound + dry-run + residue",
+  "latest_operation": "RHP-014.7",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-7-final-evidence.json",
+  "latest_commit_or_base": "3d89d9cce5a9c6b256526870b42fb3dacfcc1e79",
+  "next_operation": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
   "active_sequence": [
     "ENTRYPOINT-GATE",
     "ROOT-ANCHOR",
@@ -20,6 +20,7 @@
     "CURRENT-SCRIPT-GATE",
     "COMMAND-RUNNER",
     "STREAM-COLLAPSE",
+    "RHPWAIT-FILL",
     "ERROR-BOX",
     "GITHUB-PUSH-BOX",
     "HUMAN-UI-SUMMARY",
@@ -33,7 +34,8 @@
     "README.md",
     "AGENTS.md",
     "rhp/README.md",
-    "docs/context-layer/ops/RHP-014-6-final-evidence.json"
+    "docs/context-layer/ops/RHP-014-7-final-evidence.json",
+    "docs/context-layer/ops/RHP-014-7-operator-dashboard-bundle.json"
   ],
   "required_gates": [
     "entrypoint must be file invocation",
@@ -42,7 +44,8 @@
     "operation in evidence must match current operation",
     "authority locks must remain false",
     "unknown dirty paths must block",
-    "no push before current-script gate"
+    "no push before current-script gate",
+    "RHPWAIT is display-only and separate from RHPLOAD audit grammar"
   ],
   "authority_locks": {
     "provider_call_executed": false,
@@ -60,7 +63,7 @@
   },
   "roles": {
     "Hermes": "agent/runtime surface and operator shell candidate",
-    "RHP": "governance, evidence, reconstruction, residue classification, and safety gating",
+    "RHP": "governance, evidence, reconstruction, residue classification, safety gating, and dashboard geometry",
     "All-One": "local human-authorized actuator",
     "Evidence": "proof memory and zero-context replay surface",
     "Human": "authorization boundary"

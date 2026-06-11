@@ -1637,3 +1637,20 @@ Rules:
 | unknown class | return to DIAGNOSIS loop |
 
 <!-- HERMES_AGENT_CI_WOUND_DRY_RUN_END -->
+
+<!-- HERMES_AGENT_OPERATOR_DASHBOARD_BUNDLE_START -->
+## Operator Dashboard Bundle and Loop Geometry
+
+RHP-014.7 adds a zero-context operator bundle. Future agents must treat it as an orientation surface, not authority.
+
+Rules:
+
+```text
+RHPLOAD = stable audit box.
+RHPWAIT = separate single-line fill progress only.
+Dashboard bundle = evidence + transcript + wound + dry_run + residue + authority + tools + geometry.
+Failure classes should become bounded tools or display surfaces before any autoheal execution is allowed.
+```
+
+Authority boundary remains human authorization through All-One.
+<!-- HERMES_AGENT_OPERATOR_DASHBOARD_BUNDLE_END -->

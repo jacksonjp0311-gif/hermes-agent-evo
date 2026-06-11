@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse, json
 from typing import Any
 
-RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.2"
+RHP_PLATFORM_TOOL_REGISTRY_SCHEMA = "RHP-PLATFORM-TOOL-REGISTRY-v0.3"
 
 TOOLS = [
     {"tool": "local-paste-fallback", "box": "CI-INGEST-BOX", "status": "active", "authority": "local_file_read", "purpose": "accept copied CI logs/screenshots text as wound-packet input"},
@@ -12,6 +12,9 @@ TOOLS = [
     {"tool": "github-actions-summary", "box": "CI-ANNOTATION-BOX", "status": "active", "authority": "evidence_output_only", "purpose": "write RHPLOAD boxes into GitHub job summaries when a workflow later calls the report module"},
     {"tool": "sarif-junit-export", "box": "MACHINE-REPORT-BOX", "status": "active", "authority": "evidence_output_only", "purpose": "emit parseable machine reports for CI and autoheal diagnosis"},
     {"tool": "post-seal-residue", "box": "POST-SEAL-RESIDUE-BOX", "status": "active", "authority": "classification_only", "purpose": "classify bounded command streams that are created after commit/push boundaries"},
+    {"tool": "operator-dashboard-bundle", "box": "OPERATOR-DASHBOARD-BOX", "status": "active", "authority": "orientation_only", "purpose": "join evidence, transcript, wound, dry-run, residue, authority, tools, and geometry into one operator bundle"},
+    {"tool": "loop-geometry", "box": "GEOMETRY-BOX", "status": "active", "authority": "orientation_only", "purpose": "make the RHP loop shape readable without granting autonomy"},
+    {"tool": "rhpwait-fill-progress", "box": "UI-WAIT-BOX", "status": "active", "authority": "display_only", "purpose": "show single-line fill progress while RHPLOAD remains stable audit output"},
 ]
 
 def registry() -> dict[str, Any]:

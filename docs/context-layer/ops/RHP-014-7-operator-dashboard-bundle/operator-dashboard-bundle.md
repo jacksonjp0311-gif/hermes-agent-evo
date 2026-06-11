@@ -1,0 +1,25 @@
+# RHP-014.7 Operator Dashboard Bundle
+
+Schema: `RHP-OPERATOR-DASHBOARD-BUNDLE-v0.1`
+Operation: `RHP-014.7`
+Authority ok: `True`
+
+## Geometry
+The dashboard makes the loop geometry visible: origin evidence, bounded axes, authority boundary, next legal delta.
+
+## Dashboard Axes
+| Axis | Surface | Purpose |
+|---|---|---|
+| evidence | latest pointer + final evidence | establish origin truth |
+| transcript | transcript index | preserve command/replay surfaces |
+| wound | wound packet | name failure classes and repairs |
+| dry_run | dry-run plan | propose next bounded action |
+| residue | residue snapshot | classify dirty state before action |
+| authority | authority locks | keep human boundary explicit |
+| tools | tool integration map | show what can display/classify/report |
+| geometry | loop geometry | make the system shape readable |
+
+## Next
+`RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor`
+
+Non-claim lock: Operator dashboard bundle is an orientation and evidence surface only. It grants no autonomy, no provider calls, no memory writes, no CMS writes, and no self-authorization.

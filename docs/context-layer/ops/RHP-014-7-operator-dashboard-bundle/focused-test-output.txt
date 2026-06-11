@@ -1,0 +1,4 @@
+COMMAND: C:\Program Files\Python312\python.exe -m pytest -q -o addopts= tests/test_rhp_014_7_operator_dashboard_bundle.py tests/test_rhp_014_7_loop_geometry.py
+RETURN CODE: 0
+..                                                                       [100%]
+2 passed in 0.75s

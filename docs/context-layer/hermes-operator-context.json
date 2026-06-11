@@ -1,9 +1,10 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.3",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.4",
   "hermes_mode": "operator_shell_candidate",
   "hermes_can": [
     "display_dashboard",
     "read_evidence",
+    "render_loop_geometry",
     "ingest_local_ci_artifacts",
     "propose_dry_run_plans",
     "emit_operator_context"
@@ -17,8 +18,8 @@
     "bypass_entrypoint_gate",
     "bypass_residue_manager"
   ],
-  "latest_operation": "RHP-014.6",
-  "next_operation": "RHP-014.7 Operator dashboard bundle: evidence + transcript + wound + dry-run + residue",
+  "latest_operation": "RHP-014.7",
+  "next_operation": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,

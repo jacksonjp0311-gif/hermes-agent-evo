@@ -1,0 +1,39 @@
+{
+  "schema": "RHP-014.7-TOOL-INTEGRATION-MAP-v0.1",
+  "operation": "RHP-014.7",
+  "tools": [
+    {
+      "name": "residue_manager",
+      "role": "classify dirty paths"
+    },
+    {
+      "name": "post_seal_residue",
+      "role": "classify post-staging streams"
+    },
+    {
+      "name": "report_github_summary",
+      "role": "human-readable machine summary"
+    },
+    {
+      "name": "report_junit",
+      "role": "test-report output"
+    },
+    {
+      "name": "report_sarif",
+      "role": "static-analysis report output"
+    },
+    {
+      "name": "operator_dashboard_bundle",
+      "role": "join evidence axes"
+    },
+    {
+      "name": "loop_geometry",
+      "role": "expose loop shape"
+    },
+    {
+      "name": "rhpwait-fill-progress",
+      "role": "display-only progress surface"
+    }
+  ],
+  "authority_boundary": "tools display/classify/report; All-One performs bounded human-authorized mutation"
+}

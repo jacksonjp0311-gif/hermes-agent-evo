@@ -1,0 +1,12 @@
+{
+  "schema": "RHP-014.7-DRY-RUN-PLAN-v0.1",
+  "operation": "RHP-014.7",
+  "next": "RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor",
+  "allowed_next_actions": [
+    "build evidence_coherence_auditor.py",
+    "build loop_state.py",
+    "build rhploop_doctor.py",
+    "keep autoheal execution disabled until coherence auditor passes"
+  ],
+  "authority": "proposal_only"
+}

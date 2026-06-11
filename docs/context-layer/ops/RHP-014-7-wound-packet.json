@@ -1,0 +1,11 @@
+{
+  "schema": "RHP-014.7-WOUND-PACKET-v0.1",
+  "operation": "RHP-014.7",
+  "wounds_promoted_to_tools": [
+    "generated_source_escape_bug -> generated-source validation",
+    "powershell_path_normalization_regex_bug -> literal path normalization",
+    "post_staging_command_stream_residue -> volatile stream boundary",
+    "UI bulk from animation frames -> single-line native fill progress"
+  ],
+  "non_claim_lock": "Wound packet records failure classes and repair surfaces only. It does not execute repairs."
+}

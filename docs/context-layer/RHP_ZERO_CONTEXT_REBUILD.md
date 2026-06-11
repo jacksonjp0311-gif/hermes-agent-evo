@@ -1,11 +1,11 @@
 # RHP Zero-Context Rebuild Packet
 
-- schema: `RHP-ZERO-CONTEXT-REBUILD-v0.3`
+- schema: `RHP-ZERO-CONTEXT-REBUILD-v0.4`
 - ok: `True`
-- latest operation: `RHP-014.6`
-- latest evidence: `docs/context-layer/ops/RHP-014-6-final-evidence.json`
-- latest commit/base: `d018b2bfca8a55624a6bd5c4e1b88d086c290e8e`
-- next operation: `RHP-014.7 Operator dashboard bundle: evidence + transcript + wound + dry-run + residue`
+- latest operation: `RHP-014.7`
+- latest evidence: `docs/context-layer/ops/RHP-014-7-final-evidence.json`
+- latest commit/base: `3d89d9cce5a9c6b256526870b42fb3dacfcc1e79`
+- next operation: `RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor`
 
 ## Required read order
 1. `docs/context-layer/latest-rhp.json`
@@ -15,7 +15,8 @@
 5. `README.md`
 6. `AGENTS.md`
 7. `rhp/README.md`
-8. `docs/context-layer/ops/RHP-014-6-final-evidence.json`
+8. `docs/context-layer/ops/RHP-014-7-final-evidence.json`
+9. `docs/context-layer/ops/RHP-014-7-operator-dashboard-bundle.json`
 
 ## Active sequence
 1. `ENTRYPOINT-GATE`
@@ -32,10 +33,11 @@
 12. `CURRENT-SCRIPT-GATE`
 13. `COMMAND-RUNNER`
 14. `STREAM-COLLAPSE`
-15. `ERROR-BOX`
-16. `GITHUB-PUSH-BOX`
-17. `HUMAN-UI-SUMMARY`
-18. `RETURN-ROOT`
+15. `RHPWAIT-FILL`
+16. `ERROR-BOX`
+17. `GITHUB-PUSH-BOX`
+18. `HUMAN-UI-SUMMARY`
+19. `RETURN-ROOT`
 
 ## Required gates
 - entrypoint must be file invocation
@@ -45,6 +47,7 @@
 - authority locks must remain false
 - unknown dirty paths must block
 - no push before current-script gate
+- RHPWAIT is display-only and separate from RHPLOAD audit grammar
 
 ## Authority locks
 - `provider_call_executed`: `False`
@@ -62,7 +65,7 @@
 
 ## Roles
 - Hermes: agent/runtime surface and operator shell candidate
-- RHP: governance, evidence, reconstruction, residue classification, and safety gating
+- RHP: governance, evidence, reconstruction, residue classification, safety gating, and dashboard geometry
 - All-One: local human-authorized actuator
 - Evidence: proof memory and zero-context replay surface
 - Human: authorization boundary

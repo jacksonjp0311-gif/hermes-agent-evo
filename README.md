@@ -126,11 +126,11 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-014-6-final-evidence.json` |
-| Current RHP status | `RHP-014.6 Post-Seal Residue + Machine Reports sealed` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-014-5-v6-final-evidence.json` |
-| Previous RHP status | `RHP-014.5-v6 Residue Manager + Error Box + Zero-Context sealed` |
-| Next RHP gate | `RHP-014.7 Operator dashboard bundle` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-014-7-final-evidence.json` |
+| Current RHP status | `RHP-014.7 Operator Dashboard Bundle sealed` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-014-6-final-evidence.json` |
+| Previous RHP status | `RHP-014.6 Post-Seal Residue + Machine Reports sealed` |
+| Next RHP gate | `RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
@@ -647,6 +647,24 @@ Generated Python report sources must be py_compile validated before evidence can
 
 Next: `RHP-014.7 Operator dashboard bundle`.
 <!-- HERMES_RHP_014_6_MACHINE_REPORTS_END -->
+
+<!-- HERMES_RHP_014_7_OPERATOR_DASHBOARD_START -->
+### RHP-014.7 Operator Dashboard Bundle
+
+RHP-014.7 makes the loop geometry readable by joining the active evidence surfaces into one operator bundle.
+
+```text
+origin      -> latest sealed evidence
+axes        -> evidence, transcript, wound, dry_run, residue, authority, tools, geometry
+boundary    -> human authorization
+motion      -> validated delta
+adaptation  -> failure classes become bounded tools before autonomy is considered
+```
+
+UI rule: `RHPLOAD` remains stable audit grammar. `RHPWAIT` is separate single-line fill progress.
+
+Next: `RHP-014.8 Evidence coherence auditor + loop_state + rhploop doctor`.
+<!-- HERMES_RHP_014_7_OPERATOR_DASHBOARD_END -->
 
 
 
