@@ -1,11 +1,12 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.8",
-  "latest_operation": "RHP-015.1",
-  "next_operation": "RHP-015.2 CI green verification and full RHP API surface audit",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.9",
+  "latest_operation": "RHP-015.2",
+  "next_operation": "RHP-015.3 README operator quickstart and CI green reconciliation",
   "hermes_can": [
-    "display_ci_wound",
-    "render_autoheal_dry_run",
-    "classify_api_surface_drift"
+    "read_contract_registry",
+    "run_api_surface_audit",
+    "classify_pasted_ci_wounds",
+    "render_compact_command_summaries"
   ],
   "hermes_cannot": [
     "execute_autoheal",

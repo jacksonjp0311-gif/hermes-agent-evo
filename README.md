@@ -2606,3 +2606,20 @@ RHP-015.0 repairs the CI boot/alignment wound by making `rhp/alignment_guard.py`
 <!-- RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
 RHP-015.1 repairs the remote CI import wound by restoring the legacy `rhp.autoheal_executor_dry_run` API surface: `RHP_AUTOHEAL_DRY_RUN_SCHEMA` and `dry_run_for_packet`. The newer `build_plan`/Markdown dry-run surfaces remain, and autoheal execution stays disabled. Current loop status: RHP-015.1 sealed locally; remote CI remains the integration truth surface. Next: RHP-015.2 CI green verification and full RHP API surface audit.
 <!-- /RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
+
+<!-- RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
+### RHP-015.2 API Surface Audit + Compact Command Summaries
+
+RHP-015.2 makes the loop easier for any future AI or human operator to rehydrate. Stable imports, evidence keys, and output surfaces are now explicit contract surfaces. Repetitive command logs should no longer spam the terminal; use `RHPDROP [closed]` to summarize a command group and point to a raw-index file.
+
+Operator rule:
+
+```text
+RHPLOAD = major gate/audit box
+RHPWAIT = single-line fill/loading surface
+RHPDROP [closed] = compact summary for repeated command groups
+RHPDIAG = failure diagnosis box
+```
+
+Any AI continuing this repo must first read `docs/context-layer/latest-rhp.json`, `docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md`, `docs/context-layer/operator-dashboard.txt`, `AGENTS.md`, `README.md`, and `rhp/README.md`, then run the next All-One from Downloads with exact human authorization. The system does not self-authorize.
+<!-- /RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->

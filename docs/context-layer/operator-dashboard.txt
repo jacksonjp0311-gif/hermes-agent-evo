@@ -1,10 +1,11 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.1 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.2 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.1
-   +- next: RHP-015.2 CI green verification and full RHP API surface audit
-   +- repair: autoheal dry-run legacy API compatibility
-   +- restored: RHP_AUTOHEAL_DRY_RUN_SCHEMA
-   +- restored: dry_run_for_packet
-   +- autoheal: dry-run/proposal only
+   +- latest: RHP-015.2
+   +- next: RHP-015.3 README operator quickstart and CI green reconciliation
+   +- added: rhp/api_surface_auditor.py
+   +- added: rhp/contract_registry.py
+   +- added: rhp/ci_wound_harvester.py
+   +- added: rhp/compact_output.py
+   +- output rule: RHPDROP [closed] for repetitive command groups
    +- authority ok: true
    `- verified: true [OK]

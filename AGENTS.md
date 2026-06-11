@@ -1670,3 +1670,7 @@ RHP-015.0 lesson: evidence/check keys are API surfaces. New pointer-aware alignm
 <!-- RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
 RHP-015.1 lesson: import names are API surfaces. Do not replace `RHP_AUTOHEAL_DRY_RUN_SCHEMA` or `dry_run_for_packet`; extend them additively. Autoheal dry-run is proposal-only and must not mutate, commit, push, rerun CI, or self-authorize.
 <!-- /RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
+
+<!-- RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
+RHP-015.2 rule: repetitive command output must be compressed into `RHPDROP [closed]` summaries with a raw-index path. Do not print repeated running/stream/ok triplets for low-level commands unless diagnosing a failure. Stable API symbols and evidence keys must be extended additively; run the API surface auditor before pushing.
+<!-- /RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->

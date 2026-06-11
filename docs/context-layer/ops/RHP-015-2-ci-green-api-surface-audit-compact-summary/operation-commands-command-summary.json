@@ -1,0 +1,75 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.1",
+  "operation": "RHP-015.2",
+  "group": "operation-commands",
+  "total": 8,
+  "ok": 8,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Read current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "Anchor evidence to pre-audit commit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact commit identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior state before audit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "ci-wound-harvest",
+      "heading": "Harvest CI wound classification from pasted log",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.ci_wound_harvester --input C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-2-ci-green-api-surface-audit-compact-summary\\ci-log-sample.txt --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-2-ci-green-api-surface-audit-compact-summary\\ci-wound-harvest.json",
+      "why": "Convert CI text into a stable wound packet.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\ci-wound-harvest.txt"
+    },
+    {
+      "stage": "api-surface-audit-registry",
+      "heading": "Audit stable API registry",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.api_surface_auditor --repo-root . --registry-only --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-2-ci-green-api-surface-audit-compact-summary\\api-surface-audit-registry.json",
+      "why": "Fail before push if a stable symbol disappears.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\api-surface-audit-registry.txt"
+    },
+    {
+      "stage": "contract-registry-json",
+      "heading": "Render stable contract registry",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.contract_registry",
+      "why": "Make stable imports, evidence keys, and output contracts machine-readable.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\contract-registry-json.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile new RHP-015.2 audit surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/contract_registry.py rhp/api_surface_auditor.py rhp/ci_wound_harvester.py rhp/compact_output.py tests/test_rhp_015_2_api_surface_auditor.py tests/test_rhp_015_2_ci_wound_harvester.py tests/test_rhp_015_2_compact_output.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run API-surface and compatibility focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_014_3_autoheal_executor_dry_run.py tests/test_rhp_014_4_ci_pipeline_bridge.py tests/test_rhp_alignment_guard.py tests/test_rhp_015_2_api_surface_auditor.py tests/test_rhp_015_2_ci_wound_harvester.py tests/test_rhp_015_2_compact_output.py",
+      "why": "Prove stable contracts remain importable before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-2-python-streams\\focused-tests.txt"
+    }
+  ],
+  "display_rule": "Terminal shows only this closed summary. Full command output remains in raw stream files."
+}

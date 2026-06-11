@@ -726,3 +726,11 @@ Boundary: repair is human-authorized through All-One; CI ingestion is read-only;
 
 Restores `RHP_AUTOHEAL_DRY_RUN_SCHEMA` and `dry_run_for_packet` for RHP-014.3/RHP-014.4 bridge tests while preserving the newer dry-run plan CLI. Boundary: compatibility only; autoheal execution remains disabled.
 <!-- /RHP_015_1_AUTOHEAL_DRY_RUN_API_COMPATIBILITY -->
+
+<!-- RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
+### RHP-015.2 API Surface Audit + Compact Output
+
+Adds `rhp/contract_registry.py`, `rhp/api_surface_auditor.py`, `rhp/ci_wound_harvester.py`, and `rhp/compact_output.py`.
+
+Use `python -m rhp.api_surface_auditor --repo-root . --registry-only` before push. Use `RHPDROP [closed]` summaries for repetitive command groups; raw streams remain evidence by path.
+<!-- /RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->

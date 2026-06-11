@@ -1,0 +1,16 @@
+{
+  "schema": "RHP-CI-WOUND-HARVESTER-v0.1",
+  "ok": true,
+  "classifications": [
+    "autoheal_dry_run_api_compatibility",
+    "collection_import_error"
+  ],
+  "primary_classification": "autoheal_dry_run_api_compatibility",
+  "failed_tests": [
+    "tests/test_rhp_014_3_autoheal_executor_dry_run.py"
+  ],
+  "missing_symbols": [
+    "dry_run_for_packet"
+  ],
+  "non_claim_lock": "CI wound harvester classifies pasted/exported CI text only. It does not call GitHub, rerun CI, mutate files, or grant authority."
+}
