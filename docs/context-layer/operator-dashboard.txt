@@ -1,11 +1,9 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-016.2 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-016.3 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-016.2
-   +- next: RHP-016.3 Bounded browser supervisor websockets dependency/API repair
-   +- failed subject commit: 1b61c682805e7083e5c410af705898ed4a373102
-   +- active wound class: browser_supervisor_websockets_dependency_api_drift
-   +- failed test: tests/tools/test_browser_supervisor.py
-   +- repro: python -m pytest tests/tools/test_browser_supervisor.py
-   +- proposal execution enabled: false
+   +- latest: RHP-016.3
+   +- next: RHP-016.4 Observe repair commit CI and reconcile or re-wound
+   +- repaired wound class: browser_supervisor_websockets_dependency_api_drift
+   +- modified path: tools/browser_supervisor.py
+   +- remote CI for repair commit: unknown_until_next_observation
    +- authority ok: true
    `- verified: true [OK]

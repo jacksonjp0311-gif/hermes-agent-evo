@@ -1714,3 +1714,7 @@ RHP-016.1 rule: current commit CI observations must be commit-scoped. Doctor CLI
 <!-- RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
 RHP-016.2 rule: CI red states should become wound packets before repair. The browser supervisor websockets drift packet is proposal-only; dependency/code repair requires a fresh human-authorized All-One.
 <!-- /RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
+
+<!-- RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
+RHP-016.3 rule: repair may patch the bounded browser supervisor import surface only. Do not claim remote CI green for the new repair commit until a later observation/reconciliation operation.
+<!-- /RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->

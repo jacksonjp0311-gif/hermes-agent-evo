@@ -1,18 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.9",
-  "latest_operation": "RHP-016.2",
-  "next_operation": "RHP-016.3 Bounded browser supervisor websockets dependency/API repair",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.0",
+  "latest_operation": "RHP-016.3",
+  "next_operation": "RHP-016.4 Observe repair commit CI and reconcile or re-wound",
   "hermes_can": [
-    "read_ci_wound_packet",
-    "read_browser_supervisor_websockets_proposal",
-    "explain_allowed_repair_paths"
+    "read_repair_evidence",
+    "explain_browser_supervisor_websockets_compat_repair",
+    "observe_next_ci_result"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "patch_dependency_without_authorization"
+    "claim_repair_commit_green_without_observation"
   ],
   "authority_locks": {
     "provider_call_executed": false,

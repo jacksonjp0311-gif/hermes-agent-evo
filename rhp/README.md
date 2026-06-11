@@ -862,3 +862,11 @@ Adds `rhp/ci_wound_packet.py` and `rhp/browser_supervisor_websockets_proposal.py
 
 Boundary: packet and proposal only. No repair execution, CI rerun, dependency mutation, or authority grant.
 <!-- /RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
+
+<!-- RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
+### RHP-016.3 Bounded Browser Supervisor Websockets Dependency/API Repair
+
+Patches `tools/browser_supervisor.py` so `ClientConnection` is imported only under `TYPE_CHECKING`.
+
+Boundary: no dependency pin change and no remote CI claim from inside the repair commit.
+<!-- /RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->

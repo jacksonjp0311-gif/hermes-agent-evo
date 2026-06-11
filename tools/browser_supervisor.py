@@ -26,12 +26,30 @@ import logging
 import threading
 import time
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Tuple
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
 
-import websockets
-from websockets.asyncio.client import ClientConnection
+try:
+    import websockets
+except ModuleNotFoundError:  # optional browser/CDP runtime dependency
+    websockets = None  # type: ignore[assignment]
+
+# ``ClientConnection`` is used only for typing. Importing
+# ``websockets.asyncio.client`` at runtime can fail on dependency
+# surfaces where the top-level ``websockets.connect`` works but the
+# newer asyncio client module expects unavailable proxy symbols.
+if TYPE_CHECKING:
+    from websockets.asyncio.client import ClientConnection
 
 logger = logging.getLogger(__name__)
+
+
+def _require_websockets():
+    """Return the optional websockets module or raise a clear runtime error."""
+    if websockets is None:
+        raise RuntimeError(
+            "websockets package is required for CDP supervisor; install the browser runtime extras"
+        )
+    return websockets
 
 
 # ── Config defaults ───────────────────────────────────────────────────────────
@@ -614,7 +632,7 @@ class CDPSupervisor:
         while not self._stop_requested:
             try:
                 self._ws = await asyncio.wait_for(
-                    websockets.connect(self.cdp_url, max_size=50 * 1024 * 1024),
+                    _require_websockets().connect(self.cdp_url, max_size=50 * 1024 * 1024),
                     timeout=10.0,
                 )
             except Exception as e:

@@ -2865,3 +2865,20 @@ python -m pytest tests/tools/test_browser_supervisor.py
 
 Boundary: this operation records the wound and proposal only. It does not repair dependencies, patch code, rerun CI, or grant authority.
 <!-- /RHP_016_2_CI_WOUND_BROWSER_SUPERVISOR_WEBSOCKETS -->
+
+<!-- RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->
+### RHP-016.3 Bounded Browser Supervisor Websockets Dependency/API Repair
+
+RHP-016.3 applies the bounded repair proposed by RHP-016.2.
+
+Repair:
+
+```text
+tools/browser_supervisor.py
+runtime import of websockets.asyncio.client.ClientConnection -> TYPE_CHECKING-only import
+```
+
+This keeps runtime use on `websockets.connect` while avoiding import-time dependency/API drift from newer websockets asyncio client internals.
+
+Boundary: local repair only. Remote CI remains unknown until the new commit is observed after push.
+<!-- /RHP_016_3_BROWSER_SUPERVISOR_WEBSOCKETS_COMPAT_REPAIR -->

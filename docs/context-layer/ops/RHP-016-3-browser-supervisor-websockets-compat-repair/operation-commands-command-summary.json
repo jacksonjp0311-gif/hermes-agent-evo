@@ -1,0 +1,59 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.3",
+  "operation": "RHP-016.3",
+  "group": "operation-commands",
+  "total": 6,
+  "ok": 6,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-016.2 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-016.3 starts from the wound packet seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-3-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-3-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "py-compile-browser-supervisor",
+      "heading": "Compile browser supervisor after import repair",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile tools/browser_supervisor.py",
+      "why": "Ensure syntax/import annotations compile.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-3-python-streams\\py-compile-browser-supervisor.txt"
+    },
+    {
+      "stage": "import-browser-supervisor",
+      "heading": "Import browser supervisor under installed websockets",
+      "command": "C:\\Program Files\\Python312\\python.exe -c import tools.browser_supervisor as b; print(b.CDPSupervisor.__name__)",
+      "why": "Prove module imports even when optional websockets runtime dependency is absent locally.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-3-python-streams\\import-browser-supervisor.txt"
+    },
+    {
+      "stage": "py-compile-tests",
+      "heading": "Compile RHP-016.3 compatibility tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile tests/test_rhp_016_3_browser_supervisor_websockets_compat.py",
+      "why": "Catch syntax issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-3-python-streams\\py-compile-tests.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run bounded repair focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_016_3_browser_supervisor_websockets_compat.py tests/test_rhp_016_2_ci_wound_packet.py tests/test_rhp_016_2_browser_supervisor_websockets_proposal.py",
+      "why": "Prove import compatibility repair and wound/proposal scaffolds.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-3-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

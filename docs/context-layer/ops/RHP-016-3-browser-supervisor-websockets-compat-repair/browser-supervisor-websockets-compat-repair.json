@@ -1,0 +1,19 @@
+{
+  "schema": "RHP-BROWSER-SUPERVISOR-WEBSOCKETS-COMPAT-REPAIR-v0.1",
+  "wound_class": "browser_supervisor_websockets_dependency_api_drift",
+  "repair_strategy": "runtime_safe_type_checking_clientconnection_import",
+  "test_false_positive_repaired": true,
+  "modified_path": "tools/browser_supervisor.py",
+  "patch_result": {
+    "patched": true,
+    "type_checking_present": true,
+    "runtime_asyncio_client_import_removed": true,
+    "optional_websockets_import_added": true,
+    "lazy_websockets_guard_added": true,
+    "runtime_connect_uses_guard": true
+  },
+  "authority_granted": false,
+  "dependency_mutation_committed": false,
+  "remote_ci_rerun_executed": false,
+  "non_claim_lock": "Local bounded repair only; remote CI status remains unknown until observed after push."
+}
