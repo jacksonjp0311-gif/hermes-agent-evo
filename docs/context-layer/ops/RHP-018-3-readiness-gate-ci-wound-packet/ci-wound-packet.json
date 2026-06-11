@@ -1,0 +1,24 @@
+{
+  "schema": "RHP-CI-WOUND-PACKET-v0.1",
+  "wound_class": "readiness_gate_install",
+  "subject_type": "git_commit",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "workflow": "GitHub Actions checks for RHP-018.0 readiness gate install; UI shows red 12/16",
+  "run_url": "",
+  "failed_test_file": "unknown_until_failed_job_logs_ingested",
+  "repro_command": "ingest_failed_github_actions_logs_for_subject_commit_ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "source": "operator-provided-github-ui-red",
+  "observed_at_utc": "2026-06-11T17:02:00.479200+00:00",
+  "root_cause": "RHP-018.0 readiness gate install commit is red on remote CI. Exact failing jobs/tests are not yet ingested; repair is blocked until failed logs are captured.",
+  "status": "open",
+  "ci_status": "red",
+  "integration_closed": false,
+  "authority_granted": false,
+  "execution_enabled": false,
+  "non_claim_lock": "CI wound packet records a remote CI failure only. It does not repair, rerun CI, mutate dependencies, or grant authority.",
+  "validation": {
+    "ok": true,
+    "missing": [],
+    "authority_ok": true
+  }
+}

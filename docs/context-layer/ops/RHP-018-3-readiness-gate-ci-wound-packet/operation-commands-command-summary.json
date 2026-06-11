@@ -1,0 +1,38 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-018.3",
+  "group": "operation-commands",
+  "total": 4,
+  "ok": 4,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "command": "git rev-parse HEAD",
+      "why": "Record current operation base commit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-3-readiness-gate-ci-wound-packet\\operation-base-commit.txt"
+    },
+    {
+      "stage": "py-compile-ci-wound-packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/ci_wound_packet.py",
+      "why": "Compile wound packet module.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-3-readiness-gate-ci-wound-packet\\py-compile-ci-wound-packet.txt"
+    },
+    {
+      "stage": "build-ci-wound-packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.ci_wound_packet --wound-class readiness_gate_install --subject-commit ddb24363e2fac630e7527a2c9eab31e6df50db52 --workflow GitHub Actions checks for RHP-018.0 readiness gate install; UI shows red 12/16 --failed-test-file unknown_until_failed_job_logs_ingested --repro-command ingest_failed_github_actions_logs_for_subject_commit_ddb24363e2fac630e7527a2c9eab31e6df50db52 --source operator-provided-github-ui-red --root-cause RHP-018.0 readiness gate install commit is red on remote CI. Exact failing jobs/tests are not yet ingested; repair is blocked until failed logs are captured. --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-3-readiness-gate-ci-wound-packet\\ci-wound-packet.json",
+      "why": "Create no-repair CI wound packet.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-3-readiness-gate-ci-wound-packet\\build-ci-wound-packet.txt"
+    },
+    {
+      "stage": "evidence-api-gate",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-3-readiness-gate-ci-wound-packet\\evidence-api-gate-after-wound-packet.json",
+      "why": "Validate public evidence API after wound packet.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-3-readiness-gate-ci-wound-packet\\evidence-api-gate.txt"
+    }
+  ]
+}

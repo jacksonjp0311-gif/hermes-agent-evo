@@ -1,20 +1,17 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.2",
-  "next_operation": "create_ci_wound_packet_before_repair",
+  "latest_operation": "RHP-018.3",
+  "next_operation": "ingest_failed_ci_logs_before_repair",
   "hermes_can": [
-    "read_ci_observation_loop_evidence",
-    "explain_commit_scoped_transition",
-    "route_next_legal_operation_from_transition_table",
-    "prepare_ci_wound_packet_before_repair"
+    "read_ci_wound_packet",
+    "ask_operator_for_failed_ci_logs",
+    "prepare_no_execution_repair_proposal_after_logs"
   ],
   "hermes_cannot": [
-    "execute_autoheal",
+    "execute_repair",
     "rerun_ci",
     "self_authorize",
-    "mutate_without_all_one",
-    "claim_current_operation_ci_without_observation",
-    "generalize_operator_observed_status_beyond_subject_commit"
+    "claim_current_operation_ci_without_observation"
   ],
   "authority_locks": {
     "provider_call_executed": false,
