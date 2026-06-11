@@ -1,11 +1,11 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.2 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.3 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.2
-   +- next: RHP-015.3 README operator quickstart and CI green reconciliation
-   +- added: rhp/api_surface_auditor.py
-   +- added: rhp/contract_registry.py
-   +- added: rhp/ci_wound_harvester.py
-   +- added: rhp/compact_output.py
-   +- output rule: RHPDROP [closed] for repetitive command groups
+   +- latest: RHP-015.3
+   +- next: RHP-015.4 Remote CI result ingestion and green-seal reconciliation
+   +- added: rhp/operator_quickstart.py
+   +- added: rhp/ci_green_reconciler.py
+   +- added: rhp/readme_loop_auditor.py
+   +- added: docs/context-layer/AI_OPERATOR_QUICKSTART.md
+   +- remote CI: unknown until verified; do not claim green from local tests
    +- authority ok: true
    `- verified: true [OK]

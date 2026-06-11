@@ -2623,3 +2623,43 @@ RHPDIAG = failure diagnosis box
 
 Any AI continuing this repo must first read `docs/context-layer/latest-rhp.json`, `docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md`, `docs/context-layer/operator-dashboard.txt`, `AGENTS.md`, `README.md`, and `rhp/README.md`, then run the next All-One from Downloads with exact human authorization. The system does not self-authorize.
 <!-- /RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
+
+<!-- RHP_015_3_OPERATOR_QUICKSTART -->
+### RHP-015.3 Operator Quickstart + CI Green Reconciliation
+
+RHP-015.3 adds an explicit operator/AI quickstart surface so a fresh AI or human can understand the loop before proposing or running a script.
+
+#### Required rehydration order
+
+```text
+1. docs/context-layer/latest-rhp.json
+2. docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+3. docs/context-layer/operator-dashboard.txt
+4. docs/context-layer/hermes-operator-context.json
+5. AGENTS.md
+6. README.md
+7. rhp/README.md
+8. docs/context-layer/AI_OPERATOR_QUICKSTART.md
+```
+
+#### Output grammar
+
+```text
+RHPLOAD = major gate/audit box
+RHPWAIT = single-line fill/loading surface
+RHPDROP [closed] = compact summary for repeated command groups
+RHPDIAG = failure diagnosis box
+```
+
+#### Operating law
+
+```text
+Hermes thinks and displays.
+RHP gates.
+All-One acts.
+Evidence remembers.
+Human authorizes.
+```
+
+Remote CI is the integration truth surface. Local focused tests prove bounded local repair; they do not prove remote integration closure until CI is green.
+<!-- /RHP_015_3_OPERATOR_QUICKSTART -->

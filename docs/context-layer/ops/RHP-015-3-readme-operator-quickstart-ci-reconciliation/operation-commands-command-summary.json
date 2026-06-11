@@ -1,0 +1,92 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.4",
+  "operation": "RHP-015.3",
+  "group": "operation-commands",
+  "total": 10,
+  "ok": 10,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Read current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "Anchor evidence to pre-quickstart commit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact commit identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior state before quickstart update.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "operator-quickstart-render",
+      "heading": "Render AI/operator quickstart",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.operator_quickstart --repo-root . --out-json C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ai_operator_quickstart.json --out-md C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\AI_OPERATOR_QUICKSTART.md",
+      "why": "Produce a zero-context guide future agents can read before mutating.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\operator-quickstart-render.txt"
+    },
+    {
+      "stage": "ci-green-reconcile-unknown",
+      "heading": "Record CI reconciliation placeholder",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.ci_green_reconciler --repo-root . --ci-status unknown --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-3-readme-operator-quickstart-ci-reconciliation\\ci-green-reconciliation-unknown.json",
+      "why": "Do not claim remote CI green unless it is actually verified.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\ci-green-reconcile-unknown.txt"
+    },
+    {
+      "stage": "api-surface-audit-registry",
+      "heading": "Audit stable API registry",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.api_surface_auditor --repo-root . --registry-only --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-3-readme-operator-quickstart-ci-reconciliation\\api-surface-audit-registry.json",
+      "why": "Ensure the RHP contract surfaces from 015.2 remain green.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\api-surface-audit-registry.txt"
+    },
+    {
+      "stage": "readme-loop-audit-post",
+      "heading": "Audit README loop clarity after docs block",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.readme_loop_auditor --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-3-readme-operator-quickstart-ci-reconciliation\\readme-loop-audit-post.json",
+      "why": "Prove future AI/human quickstart instructions are present.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\readme-loop-audit-post.txt"
+    },
+    {
+      "stage": "contract-registry-json",
+      "heading": "Render stable contract registry",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.contract_registry",
+      "why": "Keep contract registry available after README evolution.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\contract-registry-json.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.3 quickstart surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/operator_quickstart.py rhp/ci_green_reconciler.py rhp/readme_loop_auditor.py tests/test_rhp_015_3_operator_quickstart.py tests/test_rhp_015_3_ci_green_reconciler.py tests/test_rhp_015_3_readme_loop_auditor.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run quickstart/readme/API focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_2_api_surface_auditor.py tests/test_rhp_015_2_compact_output.py tests/test_rhp_015_3_operator_quickstart.py tests/test_rhp_015_3_ci_green_reconciler.py tests/test_rhp_015_3_readme_loop_auditor.py",
+      "why": "Prove future-AI quickstart surfaces and API contracts before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-3-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit",
+  "display_rule": "Repo compact summaries must be staged before commit; post-seal summaries must be volatile external."
+}

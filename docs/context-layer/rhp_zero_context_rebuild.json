@@ -1,10 +1,10 @@
 {
-  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.9",
+  "schema": "RHP-ZERO-CONTEXT-REBUILD-v1.0",
   "ok": true,
-  "latest_operation": "RHP-015.2",
-  "latest_evidence": "docs/context-layer/ops/RHP-015-2-final-evidence.json",
-  "latest_commit_or_base": "82ce52b826f59ac2321319b53cd1257ad187345c",
-  "next_operation": "RHP-015.3 README operator quickstart and CI green reconciliation",
+  "latest_operation": "RHP-015.3",
+  "latest_evidence": "docs/context-layer/ops/RHP-015-3-final-evidence.json",
+  "latest_commit_or_base": "d5203f3a8dee894b4f28bb8a0630fec1efce28b6",
+  "next_operation": "RHP-015.4 Remote CI result ingestion and green-seal reconciliation",
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,

@@ -734,3 +734,17 @@ Adds `rhp/contract_registry.py`, `rhp/api_surface_auditor.py`, `rhp/ci_wound_har
 
 Use `python -m rhp.api_surface_auditor --repo-root . --registry-only` before push. Use `RHPDROP [closed]` summaries for repetitive command groups; raw streams remain evidence by path.
 <!-- /RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
+
+<!-- RHP_015_3_OPERATOR_QUICKSTART -->
+### RHP-015.3 Operator Quickstart + CI Reconciliation
+
+Adds:
+
+```text
+rhp/operator_quickstart.py
+rhp/ci_green_reconciler.py
+rhp/readme_loop_auditor.py
+```
+
+Boundary: these are read/render/audit surfaces only. They do not mutate without an All-One script, rerun CI, call GitHub, or grant authority.
+<!-- /RHP_015_3_OPERATOR_QUICKSTART -->

@@ -1674,3 +1674,7 @@ RHP-015.1 lesson: import names are API surfaces. Do not replace `RHP_AUTOHEAL_DR
 <!-- RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
 RHP-015.2 rule: repetitive command output must be compressed into `RHPDROP [closed]` summaries with a raw-index path. Do not print repeated running/stream/ok triplets for low-level commands unless diagnosing a failure. Stable API symbols and evidence keys must be extended additively; run the API surface auditor before pushing.
 <!-- /RHP_015_2_API_SURFACE_AUDIT_COMPACT_SUMMARY -->
+
+<!-- RHP_015_3_OPERATOR_QUICKSTART -->
+RHP-015.3 rule: before proposing a new All-One, a future AI must read `docs/context-layer/AI_OPERATOR_QUICKSTART.md`, `latest-rhp.json`, zero-context rebuild, dashboard, AGENTS, README, and rhp/README. It must distinguish local seal from remote CI integration closure. It must not claim CI green from local tests.
+<!-- /RHP_015_3_OPERATOR_QUICKSTART -->

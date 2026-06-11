@@ -1,18 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.9",
-  "latest_operation": "RHP-015.2",
-  "next_operation": "RHP-015.3 README operator quickstart and CI green reconciliation",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.0",
+  "latest_operation": "RHP-015.3",
+  "next_operation": "RHP-015.4 Remote CI result ingestion and green-seal reconciliation",
   "hermes_can": [
-    "read_contract_registry",
-    "run_api_surface_audit",
-    "classify_pasted_ci_wounds",
-    "render_compact_command_summaries"
+    "read_ai_operator_quickstart",
+    "reconcile_operator_provided_ci_status",
+    "audit_readme_loop_clarity"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
-    "mutate_without_all_one"
+    "mutate_without_all_one",
+    "claim_remote_ci_green_without_verification"
   ],
   "authority_locks": {
     "provider_call_executed": false,

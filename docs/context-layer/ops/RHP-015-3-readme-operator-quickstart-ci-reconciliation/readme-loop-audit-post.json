@@ -1,0 +1,48 @@
+{
+  "schema": "RHP-README-LOOP-AUDITOR-v0.1",
+  "ok": true,
+  "checks": [
+    {
+      "file": "README.md",
+      "phrase": "RHPLOAD = major gate/audit box",
+      "ok": true
+    },
+    {
+      "file": "README.md",
+      "phrase": "RHPDROP [closed]",
+      "ok": true
+    },
+    {
+      "file": "README.md",
+      "phrase": "Any AI continuing this repo must first read",
+      "ok": true
+    },
+    {
+      "file": "README.md",
+      "phrase": "The system does not self-authorize",
+      "ok": true
+    },
+    {
+      "file": "AGENTS.md",
+      "phrase": "Stable API symbols and evidence keys must be extended additively",
+      "ok": true
+    },
+    {
+      "file": "AGENTS.md",
+      "phrase": "RHPDROP [closed]",
+      "ok": true
+    },
+    {
+      "file": "rhp/README.md",
+      "phrase": "rhp/api_surface_auditor.py",
+      "ok": true
+    },
+    {
+      "file": "rhp/README.md",
+      "phrase": "RHPDROP [closed]",
+      "ok": true
+    }
+  ],
+  "missing": [],
+  "non_claim_lock": "README loop auditor reads local docs only. It does not mutate files, execute repairs, call remote APIs, or grant authority."
+}

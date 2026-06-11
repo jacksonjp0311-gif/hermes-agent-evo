@@ -1,0 +1,78 @@
+{
+  "schema": "RHP-API-SURFACE-AUDITOR-v0.1",
+  "ok": true,
+  "registry_schema": "RHP-CONTRACT-REGISTRY-v0.1",
+  "checks": [
+    {
+      "kind": "registry",
+      "module": "rhp.autoheal_executor_dry_run",
+      "symbol": "RHP_AUTOHEAL_DRY_RUN_SCHEMA",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.autoheal_executor_dry_run",
+      "symbol": "dry_run_for_packet",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.autoheal_executor_dry_run",
+      "symbol": "build_plan",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.autoheal_executor_dry_run",
+      "symbol": "render_markdown",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.alignment_guard",
+      "symbol": "AlignmentResult",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.alignment_guard",
+      "symbol": "validate_alignment",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.alignment_guard",
+      "symbol": "find_repo_root",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.ci_pipeline_bridge",
+      "symbol": "run_bridge",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "kind": "registry",
+      "module": "rhp.current_script_gate",
+      "symbol": "main",
+      "ok": true,
+      "detail": "ok"
+    }
+  ],
+  "missing": [],
+  "summary": {
+    "total": 9,
+    "missing": 0,
+    "registry_symbols": 9,
+    "discovered_imports": 0
+  },
+  "non_claim_lock": "API auditor inspects/imports local Python surfaces only. It does not mutate files, execute repairs, rerun CI, call remote APIs, or grant authority."
+}
