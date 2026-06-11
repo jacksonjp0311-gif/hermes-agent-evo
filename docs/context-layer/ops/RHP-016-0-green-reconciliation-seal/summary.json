@@ -1,0 +1,11 @@
+{
+  "rhp_016_0_passed": true,
+  "green_reconciliation_added": true,
+  "green_reconciled_subject_commit": "1fb6a62f178f7a9cf112fc44e939c2e8290a1451",
+  "green_reconciled_subject_ci_status": "green",
+  "green_reconciled_subject_integration_closed": true,
+  "current_operation_remote_ci_status": "unknown_until_next_observation",
+  "focused_tests_passed": true,
+  "summary_path": "docs/context-layer/ops/RHP-016-0-green-reconciliation-seal/summary.json",
+  "next": "RHP-016.1 Current commit CI observation and doctor CLI wrapper"
+}

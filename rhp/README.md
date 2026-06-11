@@ -829,3 +829,15 @@ rhp/wound_queue.py
 
 Boundary: planner and queue produce proposal-carrying evidence only. They do not execute repair, rerun CI, mutate workflows, or grant authority.
 <!-- /RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
+
+<!-- RHP_016_0_GREEN_RECONCILIATION -->
+### RHP-016.0 Green Reconciliation Seal
+
+Adds:
+
+```text
+rhp/green_reconciliation.py
+```
+
+Boundary: green reconciliation records a CI observation for one subject commit only. It does not call GitHub, rerun CI, execute repair, mutate workflows, or grant authority.
+<!-- /RHP_016_0_GREEN_RECONCILIATION -->

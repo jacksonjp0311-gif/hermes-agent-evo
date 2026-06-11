@@ -1,25 +1,23 @@
 # RHP Zero-Context Rebuild Packet
 
-- schema: `RHP-ZERO-CONTEXT-REBUILD-v1.6`
+- schema: `RHP-ZERO-CONTEXT-REBUILD-v1.7`
 - ok: `True`
-- latest operation: `RHP-015.9`
-- latest evidence: `docs/context-layer/ops/RHP-015-9-final-evidence.json`
-- operation base commit: `f09b86e4152ef6257166647c6d02d2f67ca8e0f4`
-- observed previous sealed commit: `f09b86e4152ef6257166647c6d02d2f67ca8e0f4`
-- current head CI status: `pending`
-- current head integration closed: `False`
-- state machine state: `REMOTE_PENDING`
-- active wound class for CI state: `remote_ci_pending`
-- wound queue open count: `1`
+- latest operation: `RHP-016.0`
+- latest evidence: `docs/context-layer/ops/RHP-016-0-final-evidence.json`
+- operation base commit: `1fb6a62f178f7a9cf112fc44e939c2e8290a1451`
+- observed previous sealed commit: `1fb6a62f178f7a9cf112fc44e939c2e8290a1451`
+- green reconciled subject commit: `1fb6a62f178f7a9cf112fc44e939c2e8290a1451`
+- green reconciled subject CI status: `green`
+- green reconciled subject integration closed: `True`
+- green reconciled subject state: `RECONCILED`
 - current operation commit: `unobservable-from-inside-same-commit`
-- next operation: `RHP-016.0 Green reconciliation or CI wound packet depending on current-head CI result`
+- current operation remote CI status: `unknown_until_next_observation`
+- next operation: `RHP-016.1 Current commit CI observation and doctor CLI wrapper`
 
-## Proposal planner law
+## Green reconciliation law
 
-- Autoheal proposal planner creates plans only.
-- Wound queue surfaces plans only.
-- execution_enabled remains false.
-- authority_granted remains false.
-- Human-authorized All-One remains the write boundary.
+- Green CI claims must name a subject commit.
+- Integration closure applies to the subject commit only.
+- A new reconciliation commit cannot claim its own remote CI state from inside itself.
 
 Non-claim lock: Zero-context rebuild grants no authority.

@@ -2817,3 +2817,17 @@ Human-authorized All-One remains the only write boundary.
 
 This is the bridge from classification to repair planning without crossing into autonomous mutation.
 <!-- /RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
+
+<!-- RHP_016_0_GREEN_RECONCILIATION -->
+### RHP-016.0 Green Reconciliation Seal
+
+RHP-016.0 closes a specific commit-scoped CI claim.
+
+Green reconciliation law:
+
+```text
+remote_ci_green(commit=X, source=github-actions-verified) -> integration_closed_for_commit(X) = true
+```
+
+The green claim applies only to the subject commit. The new reconciliation commit created by RHP-016.0 cannot claim its own remote CI state from inside itself.
+<!-- /RHP_016_0_GREEN_RECONCILIATION -->

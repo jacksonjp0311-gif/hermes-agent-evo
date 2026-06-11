@@ -1702,3 +1702,7 @@ RHP-015.8 rule: repeated failure classes belong in wound taxonomy. Proposal pack
 <!-- RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
 RHP-015.9 rule: autoheal may plan, queue, and explain proposals, but execution_enabled and authority_granted must remain false. The doctor may surface wound queues, but mutation still requires an exact human-authorized All-One.
 <!-- /RHP_015_9_AUTOHEAL_PROPOSAL_WOUND_QUEUE -->
+
+<!-- RHP_016_0_GREEN_RECONCILIATION -->
+RHP-016.0 rule: green reconciliation must be commit-scoped. The observed subject commit can be marked integration-closed when CI is verified green, but the new RHP-016.0 commit remains unobserved until a later operation or external CI observation.
+<!-- /RHP_016_0_GREEN_RECONCILIATION -->

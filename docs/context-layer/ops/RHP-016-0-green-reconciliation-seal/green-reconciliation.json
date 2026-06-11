@@ -1,0 +1,15 @@
+{
+  "schema": "RHP-GREEN-RECONCILIATION-v0.1",
+  "claim": "remote_ci_green_reconciliation",
+  "subject_type": "git_commit",
+  "subject_commit": "1fb6a62f178f7a9cf112fc44e939c2e8290a1451",
+  "remote_ci_status": "green",
+  "source": "github-actions-verified",
+  "observed_at_utc": "2026-06-11T14:59:06.510976+00:00",
+  "integration_closed": true,
+  "state": "RECONCILED",
+  "authority_granted": false,
+  "execution_enabled": false,
+  "note": "Operator observed GitHub Actions green for this subject commit; RHP-016.0 scopes reconciliation to the subject commit only.",
+  "non_claim_lock": "Green reconciliation scopes CI status to one subject commit only. It does not call GitHub, rerun CI, mutate workflows, execute repair, or grant authority."
+}

@@ -1,12 +1,11 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.9 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-016.0 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.9
-   +- next: RHP-016.0 Green reconciliation or CI wound packet depending on current-head CI result
-   +- current head at operation start: f09b86e4152ef6257166647c6d02d2f67ca8e0f4
-   +- current head CI status: pending
-   +- state: REMOTE_PENDING
-   +- active wound class: remote_ci_pending
-   +- wound queue open count: 1
-   +- proposal execution enabled: false
+   +- latest: RHP-016.0
+   +- next: RHP-016.1 Current commit CI observation and doctor CLI wrapper
+   +- reconciled subject commit: 1fb6a62f178f7a9cf112fc44e939c2e8290a1451
+   +- reconciled subject CI status: green
+   +- reconciled subject state: RECONCILED
+   +- reconciled subject integration closed: true
+   +- current operation remote CI status: unknown_until_next_observation
    +- authority ok: true
    `- verified: true [OK]

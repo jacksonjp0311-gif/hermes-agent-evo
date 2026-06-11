@@ -1,18 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.6",
-  "latest_operation": "RHP-015.9",
-  "next_operation": "RHP-016.0 Green reconciliation or CI wound packet depending on current-head CI result",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.7",
+  "latest_operation": "RHP-016.0",
+  "next_operation": "RHP-016.1 Current commit CI observation and doctor CLI wrapper",
   "hermes_can": [
-    "plan_autoheal_proposal",
-    "surface_wound_queue",
-    "explain_proposal_packet"
+    "read_green_reconciliation",
+    "explain_subject_commit_ci_closure",
+    "run_doctor_after_new_ci_observation"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "grant_authority_from_wound_queue"
+    "claim_current_operation_ci_without_observation"
   ],
   "authority_locks": {
     "provider_call_executed": false,

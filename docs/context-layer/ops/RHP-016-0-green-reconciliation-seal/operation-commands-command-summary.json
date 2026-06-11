@@ -1,0 +1,67 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.0",
+  "operation": "RHP-016.0",
+  "group": "operation-commands",
+  "total": 7,
+  "ok": 7,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-015.9 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-016.0 reconciles this observed subject commit, not its own future commit.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact current identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "green-reconciliation",
+      "heading": "Create scoped green reconciliation packet",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.green_reconciliation --subject-commit 1fb6a62f178f7a9cf112fc44e939c2e8290a1451 --remote-ci-status green --source github-actions-verified --note Operator observed GitHub Actions green for this subject commit; RHP-016.0 scopes reconciliation to the subject commit only. --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-016-0-green-reconciliation-seal\\green-reconciliation.json",
+      "why": "A green claim must name exactly which commit it describes.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\green-reconciliation.txt"
+    },
+    {
+      "stage": "doctor-check",
+      "heading": "Run doctor with green subject status",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.rhpload_doctor --repo-root . --current-head-ci-status green --ci-source github-actions-verified --allow-operation-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-016-0-green-reconciliation-seal\\rhpload-doctor.json",
+      "why": "Confirm cockpit can classify the observed subject commit as green while construction is bounded.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\doctor-check.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-016.0 green reconciliation surface",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/green_reconciliation.py tests/test_rhp_016_0_green_reconciliation.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run green reconciliation focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_016_0_green_reconciliation.py tests/test_rhp_015_9_autoheal_proposal_planner.py tests/test_rhp_015_9_wound_queue.py",
+      "why": "Prove green reconciliation, proposal planner, and wound queue behavior before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-016-0-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}
