@@ -1,0 +1,33 @@
+{
+  "schema": "RHP-CI-CANCELLATION-REVIEW-v0.1",
+  "operation": "RHP-018.5",
+  "timestamp_utc": "2026-06-11T17:16:39.840240+00:00",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "wound_class": "readiness_gate_install",
+  "review_class": "cancelled_job_no_code_repair_basis",
+  "review_verdict": "rerun_or_replacement_ci_required",
+  "job_conclusion": "cancelled",
+  "workflow": "Nix",
+  "job": "nix (macos-latest)",
+  "hard_test_failure_observed": false,
+  "repair_allowed_from_ingested_log": false,
+  "repair_basis_established": false,
+  "replacement_ci_required": true,
+  "review_reason": "The ingested Nix macOS log terminates by cancellation, not by a visible failing test or deterministic code failure.",
+  "next_legal_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Cancellation review classifies evidence sufficiency only. It does not repair, rerun CI, call GitHub, mutate dependencies, grant authority, or claim any commit green."
+}

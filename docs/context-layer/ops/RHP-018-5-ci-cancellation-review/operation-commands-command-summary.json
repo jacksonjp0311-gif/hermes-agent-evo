@@ -1,0 +1,29 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-018.5",
+  "group": "operation-commands",
+  "total": 3,
+  "ok": 3,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "command": "git rev-parse HEAD",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-5-ci-cancellation-review\\operation-base-commit.txt"
+    },
+    {
+      "stage": "evidence-api-gate-before-review",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-5-ci-cancellation-review\\evidence-api-gate-before-review.json",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-5-ci-cancellation-review\\evidence-api-gate-before-review.txt"
+    },
+    {
+      "stage": "evidence-api-gate-after-review",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-5-ci-cancellation-review\\evidence-api-gate-after-review.json",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-5-ci-cancellation-review\\evidence-api-gate-after-review.txt"
+    }
+  ],
+  "post_seal_stream_rule": "git add/commit/pull/push/sealed-head outputs are volatile temp only"
+}

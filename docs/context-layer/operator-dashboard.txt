@@ -1,7 +1,7 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.4 | status=ok [OK]
-`- failed CI log ingested
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.5 | status=ok [OK]
+`- CI cancellation review recorded
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
-   +- job: nix (macos-latest)
-   +- conclusion: cancelled
-   +- repair allowed: false
-   `- next: review_ci_cancellation_before_repair
+   +- review: cancelled_job_no_code_repair_basis
+   +- repair basis: false
+   +- replacement CI required: true
+   `- next: operator_rerun_or_ingest_replacement_ci_before_repair
