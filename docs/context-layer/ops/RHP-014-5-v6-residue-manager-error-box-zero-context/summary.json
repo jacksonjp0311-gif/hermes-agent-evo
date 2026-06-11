@@ -1,0 +1,10 @@
+{
+  "rhp_014_5_v6_passed": true,
+  "residue_manager_added": true,
+  "error_box_added": true,
+  "entrypoint_guard_added": true,
+  "zero_context_rebuild_added": true,
+  "return_to_repo_root_enforced": true,
+  "focused_tests_passed": true,
+  "next": "RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning"
+}

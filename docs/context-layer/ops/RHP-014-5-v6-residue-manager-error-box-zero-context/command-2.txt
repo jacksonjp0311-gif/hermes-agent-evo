@@ -1,0 +1,11 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.latest_pointer --repo-root . --out docs/context-layer/latest-rhp.json
+RETURN CODE: 0
+{
+  "schema": "RHP-LATEST-POINTER-v0.3",
+  "latest_operation": "RHP-014.5-v6",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-5-v6-final-evidence.json",
+  "latest_commit_or_base": "7cf7d8901520398dbb6e3edab460b714c7161248",
+  "next_operation": "RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning",
+  "zero_context_rebuild": "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+  "authority_ok": true
+}

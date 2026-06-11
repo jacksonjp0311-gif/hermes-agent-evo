@@ -647,3 +647,23 @@ Purpose: ingest local or read-only CI artifacts, normalize them, and route them 
 
 Next: `RHP-014.5 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
 <!-- RHP_014_4_CI_INGEST_END -->
+
+<!-- RHP_014_5_ZERO_CONTEXT_START -->
+### RHP-014.5 V6 Residue Manager + Error Box + Zero-Context Rebuild
+
+Adds:
+
+```text
+rhp/residue_manager.py
+rhp/error_box.py
+rhp/entrypoint_guard.py
+rhp/zero_context_rebuild.py
+rhp/latest_pointer.py
+rhp/operator_dashboard.py
+rhp/hermes_operator_context.py
+```
+
+Purpose: make failed-run residue reusable, make errors box-readable, enforce return-root, and preserve zero-context reconstruction.
+
+Next: `RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
+<!-- RHP_014_5_ZERO_CONTEXT_END -->

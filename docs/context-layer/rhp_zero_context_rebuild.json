@@ -1,0 +1,69 @@
+{
+  "schema": "RHP-ZERO-CONTEXT-REBUILD-v0.3",
+  "ok": true,
+  "latest_operation": "RHP-014.5-v6",
+  "latest_evidence": "docs/context-layer/ops/RHP-014-5-v6-final-evidence.json",
+  "latest_commit_or_base": "7cf7d8901520398dbb6e3edab460b714c7161248",
+  "next_operation": "RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning",
+  "active_sequence": [
+    "ENTRYPOINT-GATE",
+    "ROOT-ANCHOR",
+    "RESIDUE-MANAGER",
+    "AUTOHEAL-PREFLIGHT",
+    "PULL-REBASE",
+    "HUMAN-AUTHORIZATION",
+    "OPERATION",
+    "VALIDATION",
+    "EVIDENCE",
+    "BOUNDARY",
+    "SECRET-SCAN",
+    "CURRENT-SCRIPT-GATE",
+    "COMMAND-RUNNER",
+    "STREAM-COLLAPSE",
+    "ERROR-BOX",
+    "GITHUB-PUSH-BOX",
+    "HUMAN-UI-SUMMARY",
+    "RETURN-ROOT"
+  ],
+  "required_read_order": [
+    "docs/context-layer/latest-rhp.json",
+    "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+    "docs/context-layer/all-one-script-contract.md",
+    "docs/context-layer/rhp_gate_checklist.md",
+    "README.md",
+    "AGENTS.md",
+    "rhp/README.md",
+    "docs/context-layer/ops/RHP-014-5-v6-final-evidence.json"
+  ],
+  "required_gates": [
+    "entrypoint must be file invocation",
+    "residue manager must classify failed-run residue",
+    "operator_script_name must match expected script",
+    "operation in evidence must match current operation",
+    "authority locks must remain false",
+    "unknown dirty paths must block",
+    "no push before current-script gate"
+  ],
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "roles": {
+    "Hermes": "agent/runtime surface and operator shell candidate",
+    "RHP": "governance, evidence, reconstruction, residue classification, and safety gating",
+    "All-One": "local human-authorized actuator",
+    "Evidence": "proof memory and zero-context replay surface",
+    "Human": "authorization boundary"
+  },
+  "non_claim_lock": "Zero-context rebuild reconstructs loop state only. It grants no provider/model/tool/CMS/memory/API/autonomous/self-authorization authority."
+}

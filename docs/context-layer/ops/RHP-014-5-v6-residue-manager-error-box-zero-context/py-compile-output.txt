@@ -1,0 +1,3 @@
+COMMAND: C:\Program Files\Python312\python.exe -m py_compile rhp/residue_manager.py rhp/error_box.py rhp/entrypoint_guard.py rhp/zero_context_rebuild.py rhp/latest_pointer.py rhp/operator_dashboard.py rhp/hermes_operator_context.py tests/test_rhp_014_5_v6_residue_manager.py tests/test_rhp_014_5_v6_error_box.py tests/test_rhp_014_5_v6_zero_context_rebuild.py
+RETURN CODE: 0
+

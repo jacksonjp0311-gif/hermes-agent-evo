@@ -1,0 +1,37 @@
+{
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.3",
+  "hermes_mode": "operator_shell_candidate",
+  "hermes_can": [
+    "display_dashboard",
+    "read_evidence",
+    "ingest_local_ci_artifacts",
+    "propose_dry_run_plans",
+    "emit_operator_context"
+  ],
+  "hermes_cannot": [
+    "self_authorize",
+    "mutate_without_all_one",
+    "push_without_gates",
+    "write_memory_or_cms",
+    "call_providers_from_rhp",
+    "bypass_entrypoint_gate",
+    "bypass_residue_manager"
+  ],
+  "latest_operation": "RHP-014.5-v6",
+  "next_operation": "RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Hermes operator context is read-only orientation. It grants no direct mutation or self-authorization authority."
+}

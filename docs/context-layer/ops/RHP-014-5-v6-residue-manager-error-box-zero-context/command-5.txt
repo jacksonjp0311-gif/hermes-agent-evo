@@ -1,0 +1,11 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.entrypoint_guard --expected-script RHP_014_5_V6_RESIDUE_MANAGER_ERROR_BOX_ZERO_CONTEXT_SINGLE_ALL_ONE.ps1 --actual-script RHP_014_5_V6_RESIDUE_MANAGER_ERROR_BOX_ZERO_CONTEXT_SINGLE_ALL_ONE.ps1
+RETURN CODE: 0
+{
+  "schema": "RHP-ENTRYPOINT-GUARD-v0.1",
+  "ok": true,
+  "expected_script": "RHP_014_5_V6_RESIDUE_MANAGER_ERROR_BOX_ZERO_CONTEXT_SINGLE_ALL_ONE.ps1",
+  "actual_script": "RHP_014_5_V6_RESIDUE_MANAGER_ERROR_BOX_ZERO_CONTEXT_SINGLE_ALL_ONE.ps1",
+  "invocation_mode": "file",
+  "failure": "",
+  "non_claim_lock": "Entrypoint guard verifies invocation surface only. It grants no authority."
+}

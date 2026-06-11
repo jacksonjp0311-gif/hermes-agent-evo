@@ -1,0 +1,9 @@
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.5-v6 | status=ok [OK]
+`- Hermes/RHP operator dashboard
+   +- latest: RHP-014.5-v6
+   +- next: RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning
+   +- evidence: docs/context-layer/ops/RHP-014-5-v6-final-evidence.json
+   +- active sequence boxes: 18
+   +- required gates: 7
+   +- authority ok: true
+   `- verified: true [OK]

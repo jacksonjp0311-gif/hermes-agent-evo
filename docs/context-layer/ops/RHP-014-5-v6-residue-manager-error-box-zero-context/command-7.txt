@@ -1,0 +1,9 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.error_box --operation RHP-014.5-v6 --message Path.mkdir() got an unexpected keyword argument eyist_ok --raw-path C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-014-5-v6-residue-manager-error-box-zero-context\sample-error.txt --next-action classify typo, repair helper, rerun
+RETURN CODE: 1
+RHPLOAD [ERR] loop=ERROR-BOX operation=RHP-014.5-v6 | status=failed [FAIL]
+`- error feedback box
+   +- class: python_helper_typo
+   +- message: Path.mkdir() got an unexpected keyword argument eyist_ok
+   +- raw: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-014-5-v6-residue-manager-error-box-zero-context\sample-error.txt
+   +- expand: Open raw_path for full traceback/details.
+   `- next: classify typo, repair helper, rerun

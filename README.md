@@ -582,6 +582,45 @@ gh-cli-run-view optional read-only
 Next: `RHP-014.5 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
 <!-- HERMES_RHP_014_4_CI_INGEST_END -->
 
+<!-- HERMES_RHP_014_5_ZERO_CONTEXT_START -->
+### RHP-014.5 V6 Residue Manager + Error Box + Zero-Context Rebuild
+
+RHP-014.5 V6 repairs the failed RHP-014.5 line and promotes residue handling into a reusable tool.
+
+```text
+RESIDUE-MANAGER
+-> classifies bounded failed-run residue
+-> blocks unknown user/source work
+-> feeds AUTOHEAL-PREFLIGHT
+
+ERROR-BOX
+-> renders failure class
+-> stores raw traceback path
+-> gives next action
+-> supports expandable artifact review
+```
+
+Return-root rule:
+
+```text
+Every success or failure path must Set-Location to the repository root.
+```
+
+Zero-context surfaces:
+
+```text
+docs/context-layer/latest-rhp.json
+docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+docs/context-layer/rhp_zero_context_rebuild.json
+docs/context-layer/operator-dashboard.txt
+docs/context-layer/hermes-operator-context.json
+docs/context-layer/all-one-script-contract.md
+docs/context-layer/rhp_gate_checklist.md
+```
+
+Next: `RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
+<!-- HERMES_RHP_014_5_ZERO_CONTEXT_END -->
+
 
 
 

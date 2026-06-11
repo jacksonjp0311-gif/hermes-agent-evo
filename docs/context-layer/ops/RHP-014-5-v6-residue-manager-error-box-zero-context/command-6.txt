@@ -1,0 +1,12 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.residue_manager tests/test_rhp_014_5_zero_context_rebuild.py
+RETURN CODE: 0
+{
+  "schema": "RHP-RESIDUE-MANAGER-v0.1",
+  "ok": true,
+  "cleanable": [
+    "tests/test_rhp_014_5_zero_context_rebuild.py"
+  ],
+  "blocked": [],
+  "classification": "bounded_failed_run_residue",
+  "non_claim_lock": "Residue manager only classifies bounded failed-run residue. It grants no authority and does not decide unknown user work is safe."
+}

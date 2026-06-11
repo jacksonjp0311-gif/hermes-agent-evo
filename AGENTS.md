@@ -1547,6 +1547,46 @@ Rules:
 | dry-run only | no repair execution in this layer |
 
 <!-- HERMES_AGENT_CI_INGEST_END -->
+
+<!-- HERMES_AGENT_ZERO_CONTEXT_START -->
+## Zero-Context Rebuild, Residue Manager, and Error Box
+
+RHP-014.5 V6 adds:
+
+```text
+rhp/residue_manager.py
+rhp/error_box.py
+rhp/entrypoint_guard.py
+rhp/zero_context_rebuild.py
+rhp/latest_pointer.py
+rhp/operator_dashboard.py
+rhp/hermes_operator_context.py
+```
+
+Rules:
+
+```text
+Residue manager classifies before cleanup.
+Unknown dirty work blocks.
+Error box renders failure feedback and points to raw artifacts.
+Return-root is mandatory on success and failure.
+```
+
+Cold-start rule for future AI:
+
+```text
+1. Read docs/context-layer/latest-rhp.json
+2. Read docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+3. Read docs/context-layer/all-one-script-contract.md
+4. Read docs/context-layer/rhp_gate_checklist.md
+5. Read README.md
+6. Read AGENTS.md
+7. Read rhp/README.md
+8. Read latest final evidence
+9. Generate only the next legal All-One
+```
+
+<!-- HERMES_AGENT_ZERO_CONTEXT_END -->
 ## CI Wound Packets and Autoheal Dry-Run
 
 RHP-014.3 adds:
