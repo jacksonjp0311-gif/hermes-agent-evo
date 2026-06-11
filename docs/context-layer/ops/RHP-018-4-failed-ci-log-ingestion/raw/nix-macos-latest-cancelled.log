@@ -1,0 +1,91 @@
+Skip to content
+jacksonjp0311-gif
+hermes-agent-evo
+Repository navigation
+Code
+Pull requests
+Agents
+Actions
+Projects
+Wiki
+Security and quality
+40
+ (40)
+Insights
+Settings
+Nix
+rhp: add RHP-018.0 evolution readiness gate #56
+All jobs
+Run details
+Annotations
+3 errors
+nix (macos-latest)
+cancelled 26 minutes ago in 4m 17s
+Search logs
+1s
+6s
+1m 7s
+0s
+2m 46s
+hermes-agent> Running phase: installPhase
+hermes-agent> Executing pyprojectInstallPhase
+hermes-agent> warning: Ignoring invalid `SSL_CERT_FILE`. Path does not exist: /no-cert-file.crt.
+hermes-agent> Using CPython 3.12.13 interpreter at: /nix/store/i61paf2j8s4386774b42jzrk0vwazs98-python3-3.12.13/bin/python3.12
+hermes-agent> Resolved 1 package in 28ms
+hermes-agent> Prepared 1 package in 222ms
+hermes-agent> Installed 1 package in 302ms
+hermes-tui> npm warn EBADENGINE Unsupported engine {
+hermes-tui> npm warn EBADENGINE   package: '@icons-pack/react-simple-icons@13.13.0',
+hermes-tui> npm warn EBADENGINE   required: { node: '>=24', pnpm: '>=10' },
+hermes-tui> npm warn EBADENGINE   current: { node: 'v22.22.2', npm: '10.9.7' }
+hermes-tui> npm warn EBADENGINE }
+hermes-web> npm warn EBADENGINE Unsupported engine {
+hermes-web> npm warn EBADENGINE   package: '@icons-pack/react-simple-icons@13.13.0',
+hermes-web> npm warn EBADENGINE   required: { node: '>=24', pnpm: '>=10' },
+hermes-web> npm warn EBADENGINE   current: { node: 'v22.22.2', npm: '10.9.7' }
+hermes-web> npm warn EBADENGINE }
+hermes-agent> Bytecode compiled 559 files in 3.69s
+hermes-agent>  + hermes-agent==0.15.1 (from file:///nix/var/nix/builds/nix-2838-2874940354/8ib434n79r779nld3zm7nj13bjlv5bbd-source/dist/hermes_agent-0.15.1-py3-none-any.whl)
+hermes-agent> Successfully installed hermes_agent-0.15.1-py3-none-any.whl
+hermes-agent> Finished executing pyprojectInstallPhase
+hermes-agent> Running phase: fixupPhase
+hermes-agent> checking for references to /nix/var/nix/builds/nix-2838-2874940354/ in /nix/store/qlvn7z4i79xlvcdnc65sz18xwyc88d2x-hermes-agent-0.15.1...
+hermes-agent> patching script interpreter paths in /nix/store/qlvn7z4i79xlvcdnc65sz18xwyc88d2x-hermes-agent-0.15.1
+hermes-agent> stripping (with command strip and flags -S) in  /nix/store/qlvn7z4i79xlvcdnc65sz18xwyc88d2x-hermes-agent-0.15.1/lib /nix/store/qlvn7z4i79xlvcdnc65sz18xwyc88d2x-hermes-agent-0.15.1/bin
+hermes-agent> Running phase: pyprojectOutputSetupHook
+building '/nix/store/7sfrikbng05h44bsrqgm6sjfznz9x5bj-hermes-agent-env.drv'...
+building '/nix/store/9kr0fcj1ad5dx0zwxq127nlixky8c4m7-hermes-agent-env.drv'...
+building '/nix/store/qn7c9qb6z1avsz9cnhpr6srig28gcdb7-hermes-agent-env.drv'...
+hermes-tui> npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory.
+hermes-tui> npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6
+hermes-tui> npm warn deprecated rimraf@2.6.3
+hermes-web> npm warn deprecated inflight@1.0.6
+hermes-agent-env> Sourcing pyproject-make-venv-hook
+hermes-agent-env> Using pyprojectMakeVenv
+hermes-tui> npm warn deprecated glob@7.2.3
+hermes-tui> npm warn deprecated glob@7.2.3
+hermes-web> npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6
+hermes-web> npm warn deprecated rimraf@2.6.3
+hermes-agent-env> Running phase: updateAutotoolsGnuConfigScriptsPhase
+hermes-agent-env> Running phase: installPhase
+hermes-agent-env> Executing pyprojectMakeVenv
+hermes-web> npm warn deprecated glob@7.2.3
+hermes-web> npm warn deprecated glob@7.2.3
+hermes-tui> npm warn deprecated boolean@3.2.0
+hermes-web> npm warn deprecated boolean@3.2.0
+hermes-agent-env> Finished executing pyprojectMakeVenv
+hermes-agent-env> Running phase: fixupPhase
+hermes-agent-env> checking for references to /nix/var/nix/builds/nix-2838-2874940357/ in /nix/store/qnadv3p64v6v0jliiiljrpbq042c2xa4-hermes-agent-env...
+hermes-agent-env> patching script interpreter paths in /nix/store/qnadv3p64v6v0jliiiljrpbq042c2xa4-hermes-agent-env
+hermes-tui> npm warn deprecated rcedit@5.0.2
+hermes-agent-env> stripping (with command strip and flags -S) in  /nix/store/qnadv3p64v6v0jliiiljrpbq042c2xa4-hermes-agent-env/lib /nix/store/qnadv3p64v6v0jliiiljrpbq042c2xa4-hermes-agent-env/bin
+hermes-web> npm warn deprecated rcedit@5.0.2
+Error: The operation was canceled.
+0s
+0s
+0s
+0s
+0s
+11s
+1s
+2s

@@ -1,0 +1,31 @@
+{
+  "schema": "RHP-FAILED-CI-LOG-INGESTION-v0.1",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "workflow": "Nix",
+  "job": "nix (macos-latest)",
+  "run_label": "rhp: add RHP-018.0 evolution readiness gate #56",
+  "job_conclusion": "cancelled",
+  "duration_observed": "4m 17s",
+  "terminal_error": "Error: The operation was canceled.",
+  "hard_test_failure_observed": false,
+  "failing_test_file": "",
+  "failing_test_name": "",
+  "failure_class": "ci_cancelled_without_failure_surface",
+  "warnings": {
+    "invalid_ssl_cert_file": true,
+    "npm_engine_mismatch_node22_vs_required_node24": true,
+    "npm_deprecations_present": true
+  },
+  "evidence_sufficiency": "insufficient_for_code_repair",
+  "repair_allowed_from_this_log": false,
+  "remaining_evidence_required": [
+    "Determine whether cancellation was manual, timeout, concurrency cancellation, or hosted runner interruption.",
+    "Ingest any remaining failed/cancelled job logs from the same run.",
+    "Do not patch code solely from npm warnings unless a job fails with an engine error."
+  ],
+  "proposed_next_operation": "review_ci_cancellation_before_repair",
+  "non_claim_lock": "This parser classifies the provided CI log excerpt only. It does not call GitHub, rerun CI, repair code, mutate dependencies, or grant authority.",
+  "source": "operator-pasted-github-actions-log",
+  "run_url": "",
+  "raw_log": "docs/context-layer/ops/RHP-018-4-failed-ci-log-ingestion/raw/nix-macos-latest-cancelled.log"
+}

@@ -1,6 +1,7 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.3 | status=ok [OK]
-`- CI wound packet recorded
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.4 | status=ok [OK]
+`- failed CI log ingested
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
-   +- wound: readiness_gate_install
-   +- state: CI_WOUND_PACKET_OPEN_LOGS_REQUIRED
-   `- next: ingest_failed_ci_logs_before_repair
+   +- job: nix (macos-latest)
+   +- conclusion: cancelled
+   +- repair allowed: false
+   `- next: review_ci_cancellation_before_repair

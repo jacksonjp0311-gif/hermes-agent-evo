@@ -1,16 +1,17 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.3",
-  "next_operation": "ingest_failed_ci_logs_before_repair",
+  "latest_operation": "RHP-018.4",
+  "next_operation": "review_ci_cancellation_before_repair",
   "hermes_can": [
-    "read_ci_wound_packet",
-    "ask_operator_for_failed_ci_logs",
-    "prepare_no_execution_repair_proposal_after_logs"
+    "read_failed_ci_log_ingestion_packet",
+    "explain_cancelled_ci_without_test_failure",
+    "prepare_no_execution_review_before_repair"
   ],
   "hermes_cannot": [
     "execute_repair",
     "rerun_ci",
     "self_authorize",
+    "mutate_dependencies",
     "claim_current_operation_ci_without_observation"
   ],
   "authority_locks": {
