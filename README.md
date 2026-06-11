@@ -2703,3 +2703,35 @@ wound_packet_required = remote_ci_status == red
 
 Rule: final JSON summaries should be compressed behind `RHPDROP [closed]`; full JSON belongs in evidence files or raw indexes.
 <!-- /RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
+
+<!-- RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
+### RHP-015.6 Evidence API Compatibility + Claim Ledger + Replay Scaffold
+
+RHP-015.6 adds semantic accounting. Every protocol claim must name:
+
+```text
+claim = what is asserted
+subject = commit/file/run/artifact being described
+source = who or what observed it
+observed_at = when it was observed
+status = pending | green | red | unknown | skipped | cancelled
+authority_granted = false unless explicitly and safely authorized
+```
+
+Remote CI status must always name the commit it describes. A previous green commit does not automatically make current HEAD green.
+
+New tools:
+
+```text
+rhp/claim_ledger.py
+rhp/ci_subject_resolver.py
+rhp/evidence_api_compatibility_gate.py
+rhp/rhpload_replay.py
+```
+
+Replay law:
+
+```text
+latest-rhp -> final evidence -> command summaries -> dashboard -> next legal operation
+```
+<!-- /RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->

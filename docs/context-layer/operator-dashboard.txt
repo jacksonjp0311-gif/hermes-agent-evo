@@ -1,12 +1,12 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.5 | status=ok [OK]
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-015.6 | status=ok [OK]
 `- Hermes/RHP operator dashboard
-   +- latest: RHP-015.5
-   +- next: RHP-015.6 Evidence API compatibility gate and replay scaffold
-   +- observed previous sealed commit: fe7c310e1cebb32e0b3b497231ed87cb254be992
-   +- current operation commit: unobservable-from-inside-same-commit
-   +- remote CI status: green
-   +- integration closed: true
-   +- wait state: false
-   +- render hygiene: passed
+   +- latest: RHP-015.6
+   +- next: RHP-015.7 RHP doctor cockpit and explicit state machine
+   +- current head at operation start: 2c5b2b62e041ac8972110becb5a14085c1c1a080
+   +- current head CI status: pending
+   +- current head integration closed: false
+   +- evidence API gate: added
+   +- claim ledger: added
+   +- replay scaffold: added
    +- authority ok: true
    `- verified: true [OK]

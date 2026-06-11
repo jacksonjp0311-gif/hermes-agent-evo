@@ -1,0 +1,25 @@
+{
+  "schema": "RHPLOAD-REPLAY-v0.1",
+  "operation": "RHP-015.5",
+  "ok": true,
+  "replay_completeness": 1.0,
+  "required": {
+    "latest_pointer": true,
+    "final_evidence": true,
+    "zero_context": true,
+    "operator_dashboard": true,
+    "command_summary": true
+  },
+  "latest_pointer": "docs\\context-layer\\latest-rhp.json",
+  "final_evidence": "docs\\context-layer\\ops\\RHP-015-5-final-evidence.json",
+  "command_summaries": [
+    "docs\\context-layer\\ops\\RHP-015-5-render-hygiene-wait-state-packet\\operation-commands-command-summary.json"
+  ],
+  "evidence_summary": {
+    "operation": "RHP-015.5",
+    "validation_passed": true,
+    "focused_tests_passed": true,
+    "next": "RHP-015.6 Evidence API compatibility gate and replay scaffold"
+  },
+  "non_claim_lock": "Replay reconstructs local evidence references only. It does not execute commands, call remote APIs, rerun CI, mutate files, or grant authority."
+}

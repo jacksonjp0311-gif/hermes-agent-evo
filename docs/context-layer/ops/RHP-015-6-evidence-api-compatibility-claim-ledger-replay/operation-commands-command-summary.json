@@ -1,0 +1,75 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v0.6",
+  "operation": "RHP-015.6",
+  "group": "operation-commands",
+  "total": 8,
+  "ok": 8,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "base-commit",
+      "heading": "Observe RHP-015.5 sealed commit/current HEAD",
+      "command": "git rev-parse HEAD",
+      "why": "RHP-015.6 starts from the already-published RHP-015.5 seal.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\base-commit.txt"
+    },
+    {
+      "stage": "base-short",
+      "heading": "Read current short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "why": "Record compact current identity.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\base-short.txt"
+    },
+    {
+      "stage": "base-message",
+      "heading": "Read current commit message",
+      "command": "git log -1 --pretty=%s",
+      "why": "Record prior sealed operation message.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\base-message.txt"
+    },
+    {
+      "stage": "ci-subject-resolve",
+      "heading": "Resolve CI claims by commit subject",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.ci_subject_resolver --previous-commit fe7c310e1cebb32e0b3b497231ed87cb254be992 --previous-ci-status green --current-head 2c5b2b62e041ac8972110becb5a14085c1c1a080 --current-head-ci-status pending --source operator-provided --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-6-evidence-api-compatibility-claim-ledger-replay\\ci-subject-resolution.json",
+      "why": "Prevent previous green claims from silently applying to current HEAD.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\ci-subject-resolve.txt"
+    },
+    {
+      "stage": "evidence-api-gate",
+      "heading": "Run evidence API compatibility gate",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-6-evidence-api-compatibility-claim-ledger-replay\\evidence-api-compatibility.json",
+      "why": "Fail if public evidence/check fields disappear or authority flags are not false.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\evidence-api-gate.txt"
+    },
+    {
+      "stage": "rhpload-replay-latest",
+      "heading": "Replay latest operation from evidence",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.rhpload_replay --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-015-6-evidence-api-compatibility-claim-ledger-replay\\rhpload-replay-latest.json",
+      "why": "Prove latest operation is reconstructable from pointer/evidence/summaries/dashboard.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\rhpload-replay-latest.txt"
+    },
+    {
+      "stage": "py-compile",
+      "heading": "Compile RHP-015.6 claim/evidence/replay surfaces",
+      "command": "C:\\Program Files\\Python312\\python.exe -m py_compile rhp/claim_ledger.py rhp/ci_subject_resolver.py rhp/evidence_api_compatibility_gate.py rhp/rhpload_replay.py tests/test_rhp_015_6_claim_ledger.py tests/test_rhp_015_6_ci_subject_resolver.py tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_6_rhpload_replay.py",
+      "why": "Catch syntax/import issues before focused tests.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\py-compile.txt"
+    },
+    {
+      "stage": "focused-tests",
+      "heading": "Run claim/evidence/replay focused tests",
+      "command": "C:\\Program Files\\Python312\\python.exe -m pytest -q -o addopts= tests/test_rhp_015_6_claim_ledger.py tests/test_rhp_015_6_ci_subject_resolver.py tests/test_rhp_015_6_evidence_api_compatibility_gate.py tests/test_rhp_015_6_rhpload_replay.py",
+      "why": "Prove claim subject accounting, evidence API compatibility, and replay scaffold before push.",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-015-6-python-streams\\focused-tests.txt"
+    }
+  ],
+  "residue_class": "repo-sealed-before-commit"
+}

@@ -1,18 +1,19 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.2",
-  "latest_operation": "RHP-015.5",
-  "next_operation": "RHP-015.6 Evidence API compatibility gate and replay scaffold",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v1.3",
+  "latest_operation": "RHP-015.6",
+  "next_operation": "RHP-015.7 RHP doctor cockpit and explicit state machine",
   "hermes_can": [
-    "audit_render_hygiene",
-    "read_wait_state_packet",
-    "prepare_evidence_api_compatibility_gate"
+    "validate_claim_ledger",
+    "run_evidence_api_compatibility_gate",
+    "resolve_ci_subjects",
+    "replay_rhp_operation"
   ],
   "hermes_cannot": [
     "execute_autoheal",
     "rerun_ci",
     "self_authorize",
     "mutate_without_all_one",
-    "claim_remote_ci_green_without_verification"
+    "claim_remote_ci_green_without_subject_commit"
   ],
   "authority_locks": {
     "provider_call_executed": false,

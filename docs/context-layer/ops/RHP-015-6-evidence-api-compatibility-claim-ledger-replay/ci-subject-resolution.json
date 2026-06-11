@@ -1,0 +1,47 @@
+{
+  "schema": "RHP-CI-SUBJECT-RESOLVER-v0.1",
+  "previous_commit": "fe7c310e1cebb32e0b3b497231ed87cb254be992",
+  "previous_ci_status": "green",
+  "current_head": "2c5b2b62e041ac8972110becb5a14085c1c1a080",
+  "current_head_ci_status": "pending",
+  "current_head_green": false,
+  "previous_green_applies_to_current_head": false,
+  "claims": [
+    {
+      "claim": "previous_commit_remote_ci_status",
+      "subject_type": "git_commit",
+      "subject_id": "fe7c310e1cebb32e0b3b497231ed87cb254be992",
+      "status": "green",
+      "source": "operator-provided",
+      "observed_at_utc": "2026-06-11T14:28:00.080222+00:00",
+      "applies_to_current_head": false,
+      "authority_granted": false,
+      "note": "CI status ascribed to the observed previous/base commit."
+    },
+    {
+      "claim": "current_head_remote_ci_status",
+      "subject_type": "git_commit",
+      "subject_id": "2c5b2b62e041ac8972110becb5a14085c1c1a080",
+      "status": "pending",
+      "source": "operator-provided",
+      "observed_at_utc": "2026-06-11T14:28:00.080222+00:00",
+      "applies_to_current_head": true,
+      "authority_granted": false,
+      "note": "CI status ascribed to current HEAD at operation start."
+    },
+    {
+      "claim": "remote_ci_green",
+      "subject_type": "git_commit",
+      "subject_id": "fe7c310e1cebb32e0b3b497231ed87cb254be992",
+      "status": "green",
+      "source": "operator-provided",
+      "observed_at_utc": "2026-06-11T14:28:00.080222+00:00",
+      "applies_to_current_head": false,
+      "authority_granted": false,
+      "note": "Green claim applies only to its subject commit."
+    }
+  ],
+  "ledger_ok": true,
+  "conflicts": [],
+  "non_claim_lock": "CI subject resolver does not query GitHub or rerun CI. It scopes provided CI observations to explicit commit subjects only."
+}

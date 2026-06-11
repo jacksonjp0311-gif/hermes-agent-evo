@@ -1686,3 +1686,7 @@ RHP-015.4 rule: separate local validation, operation base commit, previous seale
 <!-- RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
 RHP-015.5 rule: context text surfaces must use real physical newlines, not literal `\n` render escapes. Run render hygiene audit before seal. Final JSON summaries should be closed/linked, not expanded in the operator console by default.
 <!-- /RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
+
+<!-- RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
+RHP-015.6 rule: every claim must have a subject, source, observation time, status, and authority flag. Remote CI green must be scoped to a commit. Run evidence API compatibility and replay checks before sealing. Do not remove public evidence keys without an alias/deprecation path.
+<!-- /RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->

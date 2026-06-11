@@ -775,3 +775,18 @@ rhp/wait_state_packet.py
 
 Boundary: these audit/render local state only. They do not call GitHub, rerun CI, mutate workflows outside the current All-One, or grant authority.
 <!-- /RHP_015_5_RENDER_HYGIENE_WAIT_STATE -->
+
+<!-- RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->
+### RHP-015.6 Evidence API Compatibility + Claim Ledger + Replay Scaffold
+
+Adds:
+
+```text
+rhp/claim_ledger.py
+rhp/ci_subject_resolver.py
+rhp/evidence_api_compatibility_gate.py
+rhp/rhpload_replay.py
+```
+
+Boundary: these tools validate and reconstruct local protocol evidence. They do not call GitHub, rerun CI, mutate workflows, execute autoheal, or grant authority.
+<!-- /RHP_015_6_EVIDENCE_API_CLAIM_REPLAY -->

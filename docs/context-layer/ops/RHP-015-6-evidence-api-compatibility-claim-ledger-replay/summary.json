@@ -1,0 +1,12 @@
+{
+  "rhp_015_6_passed": true,
+  "claim_ledger_added": true,
+  "ci_subject_resolver_added": true,
+  "evidence_api_compatibility_gate_added": true,
+  "rhpload_replay_added": true,
+  "current_head_ci_status": "pending",
+  "current_head_integration_closed": false,
+  "focused_tests_passed": true,
+  "summary_path": "docs/context-layer/ops/RHP-015-6-evidence-api-compatibility-claim-ledger-replay/summary.json",
+  "next": "RHP-015.7 RHP doctor cockpit and explicit state machine"
+}
