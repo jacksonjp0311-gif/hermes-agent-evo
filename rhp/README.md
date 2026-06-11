@@ -667,3 +667,21 @@ Purpose: make failed-run residue reusable, make errors box-readable, enforce ret
 
 Next: `RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
 <!-- RHP_014_5_ZERO_CONTEXT_END -->
+
+<!-- RHP_014_6_MACHINE_REPORTS_START -->
+### RHP-014.6 Post-Seal Residue + Machine Reports
+
+Adds:
+
+```text
+rhp/post_seal_residue.py
+rhp/report_github_summary.py
+rhp/report_junit.py
+rhp/report_sarif.py
+rhp/machine_report_registry.py
+```
+
+Purpose: classify bounded post-seal command residue and emit human/machine-readable reports from RHP evidence.
+
+Non-claim lock: reports and residue classifiers do not mutate workflows, rerun CI, execute repairs, or grant authority.
+<!-- RHP_014_6_MACHINE_REPORTS_END -->

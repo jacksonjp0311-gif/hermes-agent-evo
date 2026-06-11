@@ -1,0 +1,60 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.report_sarif --evidence docs/context-layer/ops/RHP-014-6-final-evidence.json --out C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-014-6-post-seal-residue-machine-reports\rhp-report.sarif.json
+RETURN CODE: 0
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "RHPLOAD Machine Report",
+          "informationUri": "https://github.com/jacksonjp0311-gif/hermes-agent-evo",
+          "rules": [
+            {
+              "id": "RHP-AUTHORITY-LOCKS",
+              "shortDescription": {
+                "text": "Authority locks must remain false"
+              },
+              "fullDescription": {
+                "text": "RHP evidence must not assert autonomous, self-authorized, provider, model, CMS, memory, API, or external-ingestion authority."
+              }
+            },
+            {
+              "id": "RHP-VALIDATION",
+              "shortDescription": {
+                "text": "Validation must pass"
+              },
+              "fullDescription": {
+                "text": "Focused validation and evidence validation must pass before push."
+              }
+            },
+            {
+              "id": "RHP-SCRIPT-EVIDENCE",
+              "shortDescription": {
+                "text": "Operator script must be recorded"
+              },
+              "fullDescription": {
+                "text": "Final evidence must record operator_script_name for current-script gate verification."
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "RHP-VALIDATION",
+          "level": "error",
+          "message": {
+            "text": "Validation not confirmed for RHP-014.6"
+          }
+        }
+      ],
+      "properties": {
+        "rhp_schema": "RHP-SARIF-REPORT-v0.2",
+        "operation": "RHP-014.6",
+        "next": "RHP-014.7 Operator dashboard bundle: evidence + transcript + wound + dry-run + residue",
+        "non_claim_lock": "SARIF report is evidence/report output only. It does not execute repairs, mutate CI, or grant authority."
+      }
+    }
+  ]
+}

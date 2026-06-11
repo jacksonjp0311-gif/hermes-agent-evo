@@ -1,0 +1,10 @@
+{
+  "rhp_014_6_passed": true,
+  "post_seal_residue_observer_added": true,
+  "generated_source_escape_repair": true,
+  "powershell_path_normalization_repair": true,
+  "machine_reports_added": true,
+  "workflow_file_mutated": false,
+  "focused_tests_passed": true,
+  "next": "RHP-014.7 operator dashboard bundle"
+}

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RHPLOAD" tests="7" failures="0" errors="0" skipped="0"><testcase classname="rhp" name="authority_locks_false" /><testcase classname="rhp" name="focused_tests_passed" /><testcase classname="rhp" name="validation_passed" /><testcase classname="rhp" name="operator_script_recorded" /><testcase classname="rhp" name="post_seal_residue_observer_added" /><testcase classname="rhp" name="machine_reports_evidence_only" /><testcase classname="rhp" name="generated_source_escape_repair" /></testsuite>

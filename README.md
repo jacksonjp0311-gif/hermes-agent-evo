@@ -60,7 +60,7 @@ Hermes Cybernetic Sys = evidence-bounded loop: orient -> diagnose -> plan -> tes
 | All-One scripts | Human-authorized PowerShell + Python operations that anchor, validate, evidence, secret-scan, commit, rebase, push, and return. |
 | CI closure | GitHub Tests/Lint/Nix must be green before architecture evolution. |
 | Budget guard | Full rehydration is gated; compact checkpoints are the default unless drift or authorization requires more. |
-| Next architecture target | `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run`. |
+| Next architecture target | `RHP-014.7 Operator dashboard bundle`. |
 
 Non-claim lock: Hermes-Agent-Evo upgrades governance, continuity, evidence, and operator visibility. It does not grant provider/model/tool authority, CMS write authority, memory promotion, API write authority, external ingestion, autonomy, AGI/consciousness claims, production-readiness claims, or self-authorization.
 <!-- HERMES_AGENT_EVO_IDENTITY_END -->
@@ -126,11 +126,11 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-013-5-final-evidence.json` |
-| Current RHP status | `RHP-013.5 CI Watch Loop automation + stale operator-visible test repair sealed` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-013-4-final-evidence.json` |
-| Previous RHP status | `RHP-013.4 RuntimeBootState display wiring sealed` |
-| Next RHP gate | `RHP-014.3 CI red-job artifact extractor + autoheal executor dry-run` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-014-6-final-evidence.json` |
+| Current RHP status | `RHP-014.6 Post-Seal Residue + Machine Reports sealed` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-014-5-v6-final-evidence.json` |
+| Previous RHP status | `RHP-014.5-v6 Residue Manager + Error Box + Zero-Context sealed` |
+| Next RHP gate | `RHP-014.7 Operator dashboard bundle` |
 | Runtime-native boot hook | `hermes_cli/main.py` |
 | Operator-visible lock display | `rhp/operator_startup_status.py` |
 | Startup context packet | `rhp/startup_context_packet.py` |
@@ -620,6 +620,33 @@ docs/context-layer/rhp_gate_checklist.md
 
 Next: `RHP-014.6 GitHub Actions job-summary annotations + SARIF/JUnit report planning`.
 <!-- HERMES_RHP_014_5_ZERO_CONTEXT_END -->
+
+<!-- HERMES_RHP_014_6_MACHINE_REPORTS_START -->
+### RHP-014.6 Post-Seal Residue + Machine Reports
+
+RHP-014.6 adds a post-seal residue observer and evidence-only machine report emitters.
+
+```text
+rhp/post_seal_residue.py              -> classifies bounded post-seal command residue
+rhp/report_github_summary.py          -> GitHub job-summary Markdown output
+rhp/report_junit.py                   -> JUnit XML output
+rhp/report_sarif.py                   -> SARIF JSON output
+rhp/machine_report_registry.py        -> machine report registry
+```
+
+Boundary:
+
+```text
+No workflow mutation.
+No CI rerun.
+No repair execution.
+No self-authorization.
+Post-seal commit/pull/push streams are volatile and externalized to avoid repo residue.
+Generated Python report sources must be py_compile validated before evidence can seal.
+```
+
+Next: `RHP-014.7 Operator dashboard bundle`.
+<!-- HERMES_RHP_014_6_MACHINE_REPORTS_END -->
 
 
 

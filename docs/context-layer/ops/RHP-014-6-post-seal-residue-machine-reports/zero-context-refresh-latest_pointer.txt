@@ -1,3 +1,5 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.latest_pointer --repo-root . --out docs/context-layer/latest-rhp.json
+RETURN CODE: 0
 {
   "schema": "RHP-LATEST-POINTER-v0.3",
   "latest_operation": "RHP-014.6",

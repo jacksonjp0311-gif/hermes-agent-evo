@@ -1,3 +1,5 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.hermes_operator_context --repo-root . --out docs/context-layer/hermes-operator-context.json
+RETURN CODE: 0
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v0.3",
   "hermes_mode": "operator_shell_candidate",

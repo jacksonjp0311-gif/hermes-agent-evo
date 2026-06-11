@@ -1,0 +1,10 @@
+﻿Unstaged changes after reset:
+M	AGENTS.md
+M	README.md
+M	docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+M	docs/context-layer/hermes-operator-context.json
+M	docs/context-layer/latest-rhp.json
+M	docs/context-layer/operator-dashboard.txt
+M	docs/context-layer/rhp_zero_context_rebuild.json
+M	rhp/README.md
+M	rhp/platform_tool_registry.py

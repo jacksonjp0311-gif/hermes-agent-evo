@@ -1,0 +1,12 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.post_seal_residue --json docs/context-layer/ops/RHP-014-5-v6-residue-manager-error-box-zero-context/command-streams/push.txt
+RETURN CODE: 0
+{
+  "schema": "RHP-POST-SEAL-RESIDUE-v0.2",
+  "ok": true,
+  "cleanable": [
+    "docs/context-layer/ops/RHP-014-5-v6-residue-manager-error-box-zero-context/command-streams/push.txt"
+  ],
+  "blocked": [],
+  "classification": "bounded_post_seal_command_residue",
+  "non_claim_lock": "Post-seal residue classification only identifies bounded command residue. It does not mutate, commit, push, repair, or grant authority."
+}

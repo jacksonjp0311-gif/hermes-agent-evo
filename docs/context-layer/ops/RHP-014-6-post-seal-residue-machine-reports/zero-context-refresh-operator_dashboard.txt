@@ -1,3 +1,5 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.operator_dashboard --repo-root . --out docs/context-layer/operator-dashboard.txt
+RETURN CODE: 0
 RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-014.6 | status=ok [OK]
 `- Hermes/RHP operator dashboard
    +- latest: RHP-014.6

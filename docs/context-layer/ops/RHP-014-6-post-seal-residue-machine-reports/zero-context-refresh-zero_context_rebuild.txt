@@ -1,3 +1,5 @@
+COMMAND: C:\Program Files\Python312\python.exe -m rhp.zero_context_rebuild --repo-root . --out-json docs/context-layer/rhp_zero_context_rebuild.json --out-md docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+RETURN CODE: 0
 # RHP Zero-Context Rebuild Packet
 
 - schema: `RHP-ZERO-CONTEXT-REBUILD-v0.3`

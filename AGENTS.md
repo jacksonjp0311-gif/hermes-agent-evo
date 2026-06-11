@@ -64,6 +64,29 @@ Before editing, choose exactly one loop and announce it with `RHPLOAD`.
 Agent rule: do not combine loops unless the user explicitly authorizes a combined operation and the evidence names each loop.
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_END -->
 
+<!-- HERMES_AGENT_MACHINE_REPORTS_START -->
+## Machine Reports and Post-Seal Residue
+
+RHP-014.6 adds evidence-only report emitters and a post-seal residue classifier.
+
+```text
+python -m rhp.post_seal_residue --json <paths>
+python -m rhp.report_github_summary --evidence docs/context-layer/ops/RHP-014-6-final-evidence.json
+python -m rhp.report_junit --evidence docs/context-layer/ops/RHP-014-6-final-evidence.json
+python -m rhp.report_sarif --evidence docs/context-layer/ops/RHP-014-6-final-evidence.json
+```
+
+Rules:
+
+```text
+Machine reports are evidence surfaces only.
+Post-seal residue classification is not cleanup authority by itself.
+Commit/pull/push raw streams that occur after staging must not leave untracked repo residue.
+Generated report modules must compile before evidence can seal.
+```
+
+<!-- HERMES_AGENT_MACHINE_REPORTS_END -->
+
 <!-- HERMES_AGENT_RUNTIME_STATUS_LOOP_START -->
 ## Runtime Status Loop Wiring
 
