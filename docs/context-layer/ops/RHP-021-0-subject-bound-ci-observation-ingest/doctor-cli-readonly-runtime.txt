@@ -1,0 +1,72 @@
+{
+  "schema": "RHP-DOCTOR-CLI-v0.2",
+  "doctor": {
+    "schema": "RHPLOAD-DOCTOR-v0.2",
+    "latest_operation": "RHP-020.6",
+    "latest_evidence": "docs/context-layer/ops/RHP-020-6-final-evidence.json",
+    "head": "484d8c00a46279e218573ebbd595434506cdb3c7",
+    "short_head": "484d8c00a",
+    "worktree_clean": false,
+    "dirty_paths": [
+      "docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/",
+      "rhp/subject_bound_ci_observation.py",
+      "tests/test_rhp_021_0_subject_bound_ci_observation.py"
+    ],
+    "allow_operation_dirty": false,
+    "evidence_api_ok": true,
+    "replay_ok": true,
+    "local_validation_ok": true,
+    "current_head_ci_status": "unknown",
+    "ci_source": "github-connector",
+    "state": "REMOTE_PENDING",
+    "next_legal_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+    "can_mutate": false,
+    "blocked_reasons": [
+      "worktree_not_clean",
+      "remote_ci_not_final",
+      "human_all_one_authorization_required_for_mutation"
+    ],
+    "authority_required": "human_authorized_all_one_script",
+    "api_summary": {
+      "missing_pointer_required": [],
+      "missing_evidence_required": [],
+      "authority_not_false": [],
+      "deprecated_present": []
+    },
+    "replay_summary": {
+      "replay_completeness": 1.0,
+      "required": {
+        "latest_pointer": true,
+        "final_evidence": true,
+        "zero_context": true,
+        "operator_dashboard": true,
+        "command_summary": true
+      }
+    },
+    "non_claim_lock": "Doctor is read/classify/propose-only. It does not call GitHub, rerun CI, mutate files, execute repairs, or grant authority."
+  },
+  "allow_operation_dirty": false,
+  "human_summary": {
+    "latest_operation": "RHP-020.6",
+    "head": "484d8c00a46279e218573ebbd595434506cdb3c7",
+    "worktree_clean": false,
+    "dirty_paths": [
+      "docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/",
+      "rhp/subject_bound_ci_observation.py",
+      "tests/test_rhp_021_0_subject_bound_ci_observation.py"
+    ],
+    "allow_operation_dirty": false,
+    "evidence_api_ok": true,
+    "replay_ok": true,
+    "current_head_ci_status": "unknown",
+    "state": "REMOTE_PENDING",
+    "next_legal_operation": "wait_or_ingest_final_ci_status_before_green_claim",
+    "can_mutate": false,
+    "blocked_reasons": [
+      "worktree_not_clean",
+      "remote_ci_not_final",
+      "human_all_one_authorization_required_for_mutation"
+    ]
+  },
+  "non_claim_lock": "Doctor CLI wraps read-only doctor output. It does not call GitHub, rerun CI, mutate files, execute repair, or grant authority."
+}

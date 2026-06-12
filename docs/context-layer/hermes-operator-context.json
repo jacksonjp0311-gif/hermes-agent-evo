@@ -1,15 +1,15 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.11",
-  "latest_operation": "RHP-020.6",
-  "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "connector_observation_adapter": "rhp/connector_observation_adapter.py",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v3.0",
+  "latest_operation": "RHP-021.0",
+  "next_operation": "operator_rerun_ci_or_provide_replacement_green_subject_observation",
+  "subject_bound_ci_observation": "rhp/subject_bound_ci_observation.py",
   "hermes_can": [
-    "route_github_api_observations_through_connector_observation_adapter",
-    "preserve_subject_commit_binding_for_ci_observations",
-    "classify_unknown_and_pending_without_claiming_pass"
+    "treat_absent_status_contexts_as_unresolved_unknown",
+    "ask_operator_to_rerun_ci_or_provide_replacement_green_subject_observation",
+    "preserve_active_wound_until_subject_bound_green_evidence_exists"
   ],
   "hermes_cannot": [
-    "treat_connector_observation_as_authority",
+    "claim_unknown_is_pass",
     "close_active_subject_wound",
     "execute_repair",
     "rerun_ci_without_authority",
@@ -31,5 +31,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Connector observation adapter; no direct mutation or self-authorization."
+  "non_claim_lock": "Subject-bound CI observation ingestion; no direct mutation or self-authorization."
 }

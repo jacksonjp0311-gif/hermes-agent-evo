@@ -1,0 +1,49 @@
+{
+  "schema": "RHP-RUNTIME-AWARE-COMMAND-SUMMARY-v2.0",
+  "operation": "RHP-021.0",
+  "group": "operation-commands",
+  "total": 6,
+  "ok": 5,
+  "diagnostic_nonzero": 1,
+  "hard_failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "exit": 0,
+      "raw": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo/docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/operation-base-commit.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "py-compile-subject-bound-ci-observation",
+      "exit": 0,
+      "raw": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo/docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/py-compile-subject-bound-ci-observation.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "focused-tests-subject-bound-ci-observation",
+      "exit": 0,
+      "raw": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo/docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/focused-tests-subject-bound-ci-observation.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "rhpready-diagnostic-runtime",
+      "exit": 0,
+      "raw": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo/docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/rhpready-diagnostic-runtime.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "doctor-cli-readonly-runtime",
+      "exit": 1,
+      "raw": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo/docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/doctor-cli-readonly-runtime.txt",
+      "diagnostic_nonzero_allowed": true
+    },
+    {
+      "stage": "evidence-api-gate-after-subject-bound-ci-observation",
+      "exit": 0,
+      "raw": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo/docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/evidence-api-gate-after-subject-bound-ci-observation.txt",
+      "diagnostic_nonzero_allowed": false
+    }
+  ],
+  "status": "ok",
+  "non_claim_lock": "Diagnostic nonzero is classified separately from hard failure when valid evidence exists."
+}

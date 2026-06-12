@@ -1,8 +1,10 @@
-RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-020.6 | status=ok tone=gold
-`- connector observation adapter sealed
+RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-021.0 | status=ok tone=gold
+`- subject-bound CI observation ingested as unresolved
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- adapter: rhp/connector_observation_adapter.py
-   +- contract: docs/context-layer/ops/RHP-020-6-connector-observation-adapter/connector-observation-contract.json
+   +- observed CI status: unknown
+   +- status contexts: 0
+   +- workflow runs: 0
+   +- result state: unresolved_unknown
    +- repair basis: false
-   `- next: operator_rerun_or_ingest_replacement_ci_before_repair
+   `- next: operator_rerun_ci_or_provide_replacement_green_subject_observation

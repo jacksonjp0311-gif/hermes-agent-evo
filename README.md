@@ -123,17 +123,21 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 | Metric | Current value |
 |---|---|
-| Latest RHP proof | `docs/context-layer/ops/RHP-020-6-final-evidence.json` |
-| Current RHP status | `RHP-020.6 Connector Observation Adapter sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-020-5-final-evidence.json` |
-| Previous RHP status | `RHP-020.5 Evidence Graph Index sealed` |
-| Current RHP state | `CONNECTOR_OBSERVATION_ADAPTER_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `EVIDENCE_GRAPH_INDEX_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-021-0-final-evidence.json` |
+| Current RHP status | `RHP-021.0 Subject-Bound CI Observation Ingested; unresolved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-020-6-final-evidence.json` |
+| Previous RHP status | `RHP-020.6 Connector Observation Adapter sealed` |
+| Current RHP state | `SUBJECT_BOUND_CI_OBSERVATION_INGESTED_UNRESOLVED` |
+| Blocking CI/wound state preserved | `CONNECTOR_OBSERVATION_ADAPTER_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
-| Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Connector observation adapter | `rhp/connector_observation_adapter.py` |
-| Connector observation contract | `docs/context-layer/ops/RHP-020-6-connector-observation-adapter/connector-observation-contract.json` |
+| Observed CI status | `unknown` |
+| CI observation result | `unresolved_unknown` |
+| Status contexts observed | `0` |
+| Workflow runs observed | `0` |
+| Next RHP gate | `operator_rerun_ci_or_provide_replacement_green_subject_observation` |
+| Subject-bound CI observation module | `rhp/subject_bound_ci_observation.py` |
+| Subject-bound CI observation evidence | `docs/context-layer/ops/RHP-021-0-subject-bound-ci-observation-ingest/subject-bound-ci-observation.json` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -1294,6 +1298,41 @@ RHPCONNECTOR-OBS [GOLD] status=<accepted|blocked>
 
 Non-claim lock: connector observations are evidence inputs only. They do not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_CONNECTOR_OBSERVATION_ADAPTER_END -->
+
+<!-- RHP_SUBJECT_BOUND_CI_OBSERVATION_INGEST_START -->
+## RHP Subject-Bound CI Observation Ingestion
+
+CI observations must be bound to the named subject commit before they can affect RHP state.
+
+### CI ingestion law
+
+```text
+No CI observation without subject commit.
+No wound closure from unknown.
+No repair authorization from connector observation.
+No current-operation green claim from inside the current operation.
+No pass claim without concrete status context or workflow-run evidence.
+```
+
+For the active subject commit, the GitHub connector observation found no status contexts and no workflow runs. This is valid evidence, but it remains unresolved.
+
+### CI ingestion panel
+
+```text
+RHPCI-INGEST [GOLD] status=<ingested|blocked>
+`- subject-bound CI observation ingestion
+   +- subject-ok: true|false
+   +- source-ok: true|false
+   +- connector-authority-ok: true|false
+   +- status-interpretation-ok: true|false
+   +- wound-closure-ok: true|false
+   +- result-state: <state>
+   +- blocking-reasons: <reasons|none>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: subject-bound CI observation ingestion records evidence only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_SUBJECT_BOUND_CI_OBSERVATION_INGEST_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

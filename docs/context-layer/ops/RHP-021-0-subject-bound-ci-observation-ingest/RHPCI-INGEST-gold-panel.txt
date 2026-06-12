@@ -1,0 +1,10 @@
+RHPCI-INGEST [GOLD] status=ingested
+`- subject-bound CI observation ingestion
+   +- subject-ok: true
+   +- source-ok: true
+   +- connector-authority-ok: true
+   +- status-interpretation-ok: true
+   +- wound-closure-ok: true
+   +- result-state: unresolved_unknown
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]

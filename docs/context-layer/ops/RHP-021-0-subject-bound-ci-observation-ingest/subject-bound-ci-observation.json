@@ -1,0 +1,23 @@
+{
+  "schema": "RHP-SUBJECT-BOUND-CI-OBSERVATION-INGEST-v0.1",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "source": "github-connector",
+  "observed_status": "unknown",
+  "status_context_count": 0,
+  "workflow_run_count": 0,
+  "result_state": "unresolved_unknown",
+  "can_close_wound": false,
+  "can_authorize_repair": false,
+  "authority_granted": false,
+  "report": {
+    "ok": true,
+    "subject_ok": true,
+    "source_ok": true,
+    "connector_authority_ok": true,
+    "status_interpretation_ok": true,
+    "wound_closure_ok": true,
+    "result_state": "unresolved_unknown",
+    "blocking_reasons": []
+  },
+  "non_claim_lock": "Subject-bound CI observation ingestion records evidence only; unknown is not pass and grants no authority."
+}

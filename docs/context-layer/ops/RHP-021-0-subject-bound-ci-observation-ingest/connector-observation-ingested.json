@@ -1,0 +1,11 @@
+{
+  "schema": "RHP-CONNECTOR-OBSERVATION-ADAPTER-CONTRACT-v0.1",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "source": "github-connector",
+  "observed_status": "unknown",
+  "observed_at_utc": "2026-06-12T19:19:11.564904+00:00",
+  "observer": "RHP-021.0",
+  "raw_reference": "GitHub connector: combined status returned zero statuses; workflow_runs returned empty list",
+  "interpretation": "No pass/fail claim. Subject-bound replacement CI observation remains unresolved.",
+  "authority_granted": false
+}

@@ -656,6 +656,28 @@ A connector observation must never authorize repair, mutation, wound closure, me
 Non-claim lock: connector observation grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_CONNECTOR_OBSERVATION_ADAPTER_END -->
 
+<!-- HERMES_AGENT_SUBJECT_BOUND_CI_OBSERVATION_INGEST_START -->
+## Subject-Bound CI Observation Ingestion Rule
+
+A future coding agent must bind CI observations to the exact subject commit before interpreting them.
+
+The agent must preserve:
+
+- subject commit,
+- source,
+- raw reference,
+- observed status,
+- status context count,
+- workflow run count,
+- result state,
+- authority false,
+- wound closure false.
+
+Unknown CI status is evidence of unresolved state, not pass.
+
+Non-claim lock: CI observation ingestion grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_SUBJECT_BOUND_CI_OBSERVATION_INGEST_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 
