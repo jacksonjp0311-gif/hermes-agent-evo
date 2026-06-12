@@ -259,6 +259,42 @@ Non-claim lock: this rule improves runtime observability and command classificat
 <!-- HERMES_AGENT_RUNTIME_LOOP_ORDER_CANON_END -->
 
 
+<!-- HERMES_AGENT_RUNTIME_PROGRESS_CONSOLE_CANON_START -->
+## Runtime Progress Console Rules for Coding Agents
+
+Do not emit bare stage messages, static-only progress bars, or noisy per-frame animation logs when a full RHP operator surface is required.
+
+Every All-One should prefer one top progress surface plus concise settled panels:
+
+```text
+Write-Progress -Activity <OP> -Status <STAGE> -PercentComplete <NN>
+RHPLOAD [NNN%] loop=<STAGE> operation=<OP> | status=<status>
+`- settled: <detail>
+```
+
+Required fields:
+
+```text
+percentage
+loop/stage name
+operation
+status
+tone
+single global top progress bar
+concise settled panel
+detail
+```
+
+Self-Learning requirement:
+
+```text
+RHPLOOP-SELF-LEARNING must appear as a runtime progress checkpoint before RHPREFLECT and HUMAN-UI-SUMMARY.
+```
+
+Non-claim lock: progress rendering is operator UX and grants no authority.
+<!-- HERMES_AGENT_RUNTIME_PROGRESS_CONSOLE_CANON_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

@@ -1,0 +1,93 @@
+{
+  "schema": "RHP-RUNTIME-PROGRESS-CONSOLE-CONTRACT-v0.4",
+  "requires_percent": true,
+  "requires_spinner": true,
+  "requires_load_bar": true,
+  "requires_global_top_progress": true,
+  "requires_concise_settled_sections": true,
+  "requires_stage_label": true,
+  "requires_status": true,
+  "requires_detail": true,
+  "requires_motion": true,
+  "requires_animated_transition": true,
+  "motion_rule": "Use one global top progress surface, preferably PowerShell Write-Progress, then emit concise settled section panels. Do not print every animation frame as a log line.",
+  "stage_order": [
+    {
+      "stage": "ENTRYPOINT-GATE",
+      "percent": 5
+    },
+    {
+      "stage": "ROOT-ANCHOR",
+      "percent": 10
+    },
+    {
+      "stage": "RESIDUE-MANAGER",
+      "percent": 15
+    },
+    {
+      "stage": "PREAUTH-PULL",
+      "percent": 20
+    },
+    {
+      "stage": "RHPLOOP-RUNTIME",
+      "percent": 25
+    },
+    {
+      "stage": "HUMAN-AUTHORIZATION",
+      "percent": 30
+    },
+    {
+      "stage": "RHPREADY",
+      "percent": 35
+    },
+    {
+      "stage": "OPERATION-START",
+      "percent": 40
+    },
+    {
+      "stage": "RHPLOOP-DOCTOR",
+      "percent": 50
+    },
+    {
+      "stage": "RHPLOOP-SELF-LEARNING",
+      "percent": 60
+    },
+    {
+      "stage": "VALIDATION",
+      "percent": 70
+    },
+    {
+      "stage": "SECRET-SCAN",
+      "percent": 78
+    },
+    {
+      "stage": "COMMIT-SEAL",
+      "percent": 84
+    },
+    {
+      "stage": "PUSH-SEAL",
+      "percent": 90
+    },
+    {
+      "stage": "RHPDROP",
+      "percent": 94
+    },
+    {
+      "stage": "RHPREFLECT",
+      "percent": 97
+    },
+    {
+      "stage": "POST-SEAL-RESIDUE",
+      "percent": 98
+    },
+    {
+      "stage": "RETURN-ROOT",
+      "percent": 99
+    },
+    {
+      "stage": "HUMAN-UI-SUMMARY",
+      "percent": 100
+    }
+  ],
+  "non_claim_lock": "Progress console contract changes operator visibility only and grants no authority."
+}

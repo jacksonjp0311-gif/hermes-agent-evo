@@ -126,15 +126,16 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-10-final-evidence.json` |
-| Current RHP status | `RHP-018.10 Runtime Loop Order Canon sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-9-final-evidence.json` |
-| Previous RHP status | `RHP-018.9 RHPLOOP Doctor + Self-Learning Canon sealed` |
-| Current RHP state | `RUNTIME_LOOP_ORDER_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `RHPLOOP_DOCTOR_SELF_LEARNING_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-11-final-evidence.json` |
+| Current RHP status | `RHP-018.11 V4 Top Progress Console Canon sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-10-final-evidence.json` |
+| Previous RHP status | `RHP-018.10 Runtime Loop Order Canon sealed` |
+| Current RHP state | `RUNTIME_PROGRESS_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `RUNTIME_LOOP_ORDER_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
+| Runtime progress console | `rhp/progress_console.py` |
 | Runtime loop module | `rhp/runtime_loop.py` |
 | RHPLOOP Doctor module | `rhp/loop_doctor.py` |
 | Visible console renderer | `rhp/visible_console.py` |
@@ -588,6 +589,67 @@ HUMAN-UI-SUMMARY [GOLD]
 
 Non-claim lock: this canon changes operator visibility and command classification only. It does not repair, rerun CI, close wounds, grant authority, or self-authorize.
 <!-- RHP_RUNTIME_LOOP_ORDER_CANON_END -->
+
+
+<!-- RHP_RUNTIME_PROGRESS_CONSOLE_CANON_START -->
+## RHP Runtime Progress Console Canon
+
+RHP must show operator progress as one live top progress surface, not as noisy printed animation frames.
+
+Every runtime should prefer a single global progress bar, then emit concise settled panels:
+
+```text
+Write-Progress activity=<operation> percent=<percent> status=<stage>
+RHPLOAD [035%] loop=RHPREADY operation=<operation> | status=<status>
+`- settled: <human detail>
+```
+
+### Required progress surfaces
+
+```text
+percentage
+single global top progress bar
+percentage
+current stage
+status
+concise settled panel
+human-readable detail
+```
+
+### Canonical progress order
+
+| Stage | Percent |
+|---|---:|
+| `ENTRYPOINT-GATE` | 005% |
+| `ROOT-ANCHOR` | 010% |
+| `RESIDUE-MANAGER` | 015% |
+| `PREAUTH-PULL` | 020% |
+| `RHPLOOP-RUNTIME` | 025% |
+| `HUMAN-AUTHORIZATION` | 030% |
+| `RHPREADY` | 035% |
+| `OPERATION-START` | 040% |
+| `RHPLOOP-DOCTOR` | 050% |
+| `RHPLOOP-SELF-LEARNING` | 060% |
+| `VALIDATION` | 070% |
+| `SECRET-SCAN` | 078% |
+| `COMMIT-SEAL` | 084% |
+| `PUSH-SEAL` | 090% |
+| `RHPDROP` | 094% |
+| `RHPREFLECT` | 097% |
+| `POST-SEAL-RESIDUE` | 098% |
+| `RETURN-ROOT` | 099% |
+| `HUMAN-UI-SUMMARY` | 100% |
+
+### Progress law
+
+```text
+Progress must move in one global top bar, not by flooding the terminal with frame lines.
+If a stage can fail, its settled panel must include percent, status, detail, and raw artifact route.
+If Self-Learning occurs, it must have its own progress checkpoint before Reflection and Human Summary.
+```
+
+Non-claim lock: progress console canon changes operator visibility only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_RUNTIME_PROGRESS_CONSOLE_CANON_END -->
 
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->

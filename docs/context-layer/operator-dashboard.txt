@@ -1,8 +1,9 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.10 | status=ok [OK]
-`- runtime loop order canon aligned
+RHPLOAD [100%] spin=/ loop=HUMAN-UI-SUMMARY operation=RHP-018.11 | status=ok tone=gold
+`- [####################] runtime progress console canon aligned
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- runtime order: Doctor -> Self-Learning -> Reflect -> Human Summary
+   +- progress: percent + spinner + load bar required
+   +- self-learning progress checkpoint: required
    +- repair basis: false
    +- replacement CI required: true
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair

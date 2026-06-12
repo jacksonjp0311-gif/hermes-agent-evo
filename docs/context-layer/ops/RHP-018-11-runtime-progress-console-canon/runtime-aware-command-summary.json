@@ -1,0 +1,37 @@
+{
+  "schema": "RHP-RUNTIME-AWARE-COMMAND-SUMMARY-v0.2",
+  "operation": "RHP-018.11",
+  "group": "operation-commands",
+  "total": 4,
+  "ok": 4,
+  "diagnostic_nonzero": 0,
+  "hard_failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-11-runtime-progress-console-canon\\operation-base-commit.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "py-compile-progress-console",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-11-runtime-progress-console-canon\\py-compile-progress-console.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "focused-tests-progress-console",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-11-runtime-progress-console-canon\\focused-tests-progress-console.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "evidence-api-gate-after-progress-console",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-11-runtime-progress-console-canon\\evidence-api-gate-after-progress-console.txt",
+      "diagnostic_nonzero_allowed": false
+    }
+  ],
+  "status": "ok",
+  "non_claim_lock": "Diagnostic nonzero is classified separately from hard failure when valid evidence exists."
+}
