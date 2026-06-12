@@ -1,0 +1,49 @@
+{
+  "schema": "RHP-RUNTIME-AWARE-COMMAND-SUMMARY-v0.5",
+  "operation": "RHP-018.14",
+  "group": "operation-commands",
+  "total": 6,
+  "ok": 5,
+  "diagnostic_nonzero": 1,
+  "hard_failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-14-loop-geometry-alignment-guard\\operation-base-commit.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "py-compile-loop-geometry",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-14-loop-geometry-alignment-guard\\py-compile-loop-geometry.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "focused-tests-loop-geometry",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-14-loop-geometry-alignment-guard\\focused-tests-loop-geometry.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "rhpready-diagnostic-runtime",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-14-loop-geometry-alignment-guard\\rhpready-diagnostic-runtime.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "doctor-cli-readonly-runtime",
+      "exit": 1,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-14-loop-geometry-alignment-guard\\doctor-cli-readonly-runtime.txt",
+      "diagnostic_nonzero_allowed": true
+    },
+    {
+      "stage": "evidence-api-gate-after-loop-geometry",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-14-loop-geometry-alignment-guard\\evidence-api-gate-after-loop-geometry.txt",
+      "diagnostic_nonzero_allowed": false
+    }
+  ],
+  "status": "ok",
+  "non_claim_lock": "Diagnostic nonzero is classified separately from hard failure when valid evidence exists."
+}

@@ -126,16 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-13-final-evidence.json` |
-| Current RHP status | `RHP-018.13 README Canonical Runtime Run Block sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-12-final-evidence.json` |
-| Previous RHP status | `RHP-018.12 Clean Top Progress Body Canon sealed` |
-| Current RHP state | `README_CANONICAL_RUNTIME_RUN_BLOCK_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `CLEAN_TOP_PROGRESS_BODY_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-14-final-evidence.json` |
+| Current RHP status | `RHP-018.14 V4 Loop Geometry Alignment Guard sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-13-final-evidence.json` |
+| Previous RHP status | `RHP-018.13 README Canonical Runtime Run Block sealed` |
+| Current RHP state | `LOOP_GEOMETRY_ALIGNMENT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `README_CANONICAL_RUNTIME_RUN_BLOCK_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
 | Canonical runtime run block | `README.md#rhp-canonical-runtime-run-block` |
+| Loop geometry guard | `rhp/loop_geometry.py` |
 | Runtime progress console | `rhp/progress_console.py` |
 | Runtime loop module | `rhp/runtime_loop.py` |
 | RHPLOOP Doctor module | `rhp/loop_doctor.py` |
@@ -761,6 +762,18 @@ RHPLOOP-SELF-LEARNING [GOLD] status=runtime-checkpoint
    +- promotion: evidence-gated / human-authorized
    `- authority: no grant [LOCKED]
 
+RHPLOAD [070%] loop=VALIDATION operation=<OPERATION> | status=ok tone=green
+`- compile, focused tests, and compatibility gates passed or diagnostic evidence emitted
+
+RHPLOAD [078%] loop=SECRET-SCAN operation=<OPERATION> | status=ok tone=green
+`- staged diff scanned before commit
+
+RHPLOAD [084%] loop=COMMIT-SEAL operation=<OPERATION> | status=ok tone=green
+`- bounded evidence committed
+
+RHPLOAD [090%] loop=PUSH-SEAL operation=<OPERATION> | status=ok tone=green
+`- commit pushed to remote
+
 RHPDROP [closed] status=ok tone=gold
 `- runtime-aware command summary
    +- total: <n>
@@ -787,6 +800,22 @@ RHPLOAD [099%] loop=RETURN-ROOT operation=<OPERATION> | status=ok tone=green
 
 RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=<OPERATION> | status=ok tone=gold
 `- <final summary>; next=<next-operation>
+```
+
+### Loop geometry alignment law
+
+```text
+If the loop geometry changes, the live run must prove that its geometry matches the sealed README/runtime geometry.
+
+Geometry must align across:
+  README canonical run block
+  AGENTS coding-agent rule
+  rhp/runtime_loop.py
+  rhp/loop_geometry.py
+  operation evidence
+  live operator run output
+
+A run may update geometry only if it also updates and validates the geometry contract.
 ```
 
 ### Body-output rule

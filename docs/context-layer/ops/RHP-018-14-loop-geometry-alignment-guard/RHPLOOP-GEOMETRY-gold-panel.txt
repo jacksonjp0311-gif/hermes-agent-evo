@@ -1,0 +1,8 @@
+RHPLOOP-GEOMETRY [GOLD] operation=RHP-018.14 status=aligned
+`- runtime geometry alignment
+   +- expected-count: 19
+   +- observed-count: 19
+   +- missing: none
+   +- unexpected: none
+   +- order-ok: true
+   `- authority: no grant [LOCKED]

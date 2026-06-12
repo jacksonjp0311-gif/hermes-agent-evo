@@ -352,6 +352,50 @@ When updating runtime UX, update the README run block, AGENTS.md, final evidence
 Non-claim lock: this rule is operator UX governance only and grants no authority.
 <!-- HERMES_AGENT_CANONICAL_RUNTIME_RUN_BLOCK_END -->
 
+<!-- HERMES_AGENT_LOOP_GEOMETRY_ALIGNMENT_START -->
+## Loop Geometry Alignment Rule
+
+Before changing any All-One runtime loop, compare the intended runtime output against the canonical geometry.
+
+Canonical full runtime geometry:
+
+```text
+ENTRYPOINT-GATE
+ROOT-ANCHOR
+RESIDUE-MANAGER
+PREAUTH-PULL
+RHPLOOP-RUNTIME
+HUMAN-AUTHORIZATION
+RHPREADY
+OPERATION-START
+RHPLOOP-DOCTOR
+RHPLOOP-SELF-LEARNING
+VALIDATION
+SECRET-SCAN
+COMMIT-SEAL
+PUSH-SEAL
+RHPDROP
+RHPREFLECT
+POST-SEAL-RESIDUE
+RETURN-ROOT
+HUMAN-UI-SUMMARY
+```
+
+Geometry alignment requirement:
+
+```text
+README canonical run block must match the runtime geometry.
+AGENTS.md must name the same geometry rule.
+rhp/loop_geometry.py must validate the same geometry.
+Final evidence must record the geometry report.
+Live run output must include RHPLOOP-GEOMETRY when the geometry is updated.
+```
+
+Do not silently add, remove, reorder, or compress loop stages.
+
+Non-claim lock: geometry alignment validates operator UX and loop governance only. It grants no repair authority, no CI authority, and no self-authorization.
+<!-- HERMES_AGENT_LOOP_GEOMETRY_ALIGNMENT_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

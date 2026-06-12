@@ -1,10 +1,9 @@
-RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-018.13 | status=ok tone=gold
-`- README canonical runtime run block aligned
+RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-018.14 | status=ok tone=gold
+`- loop geometry alignment guard installed
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- run block: README.md#rhp-canonical-runtime-run-block
-   +- body inline bars allowed: false
-   +- body spinner allowed: false
+   +- README geometry: aligned
+   +- runtime geometry guard: rhp/loop_geometry.py
    +- repair basis: false
    +- replacement CI required: true
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair

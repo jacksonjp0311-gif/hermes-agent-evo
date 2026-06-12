@@ -1,14 +1,15 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.13",
+  "latest_operation": "RHP-018.14",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
   "hermes_can": [
+    "validate_loop_geometry_before_runtime_changes",
     "load_README_canonical_runtime_run_block",
-    "render_clean_settled_body_panels_without_inline_bars",
-    "preserve_RHPREADY_DOCTOR_SELF_LEARNING_DROP_REFLECT_SUMMARY",
+    "render_RHPLOOP_GEOMETRY_alignment_panel",
     "ask_operator_for_subject_commit_replacement_ci_or_remaining_failed_logs"
   ],
   "hermes_cannot": [
+    "silently_add_remove_or_reorder_loop_stages",
     "print_inline_body_progress_bars",
     "print_spin_frame_spam_in_body",
     "execute_repair",
