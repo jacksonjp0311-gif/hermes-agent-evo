@@ -1,0 +1,13 @@
+RHPREFLECT [GOLD] status=aligned tone=gold
+`- operator reflection summary
+   +- operation: RHP-018.8
+   +- state: UNCOMPRESSED_OPERATOR_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED
+   +- active-wound: readiness_gate_install
+   +- subject: ddb24363e2fac630e7527a2c9eab31e6df50db52
+   +- repair-basis: false
+   +- next: operator_rerun_or_ingest_replacement_ci_before_repair
+   `- authority: no grant [LOCKED]
+   +- learned:
+      - RHP panels are debugging primitives, not ceremony.
+      - Gold panels carry readiness, diagnostic, summary, and reflection context.
+      - The active subject wound remains unresolved until subject-scoped replacement CI exists.

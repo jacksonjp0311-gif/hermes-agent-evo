@@ -1,11 +1,11 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.7",
+  "latest_operation": "RHP-018.8",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
   "hermes_can": [
-    "read_visible_debug_loop_canon",
-    "use_named_RHP_stages_in_future_all_one_scripts",
-    "explain_partial_ci_evidence_does_not_close_active_subject_wound",
+    "render_uncompressed_operator_console_panels",
+    "use_gold_reflection_panels_for_readiness_diagnostics_and_summaries",
+    "explain_that_visible_panels_are_debugging_primitives",
     "ask_operator_for_subject_commit_replacement_ci_or_remaining_failed_logs"
   ],
   "hermes_cannot": [

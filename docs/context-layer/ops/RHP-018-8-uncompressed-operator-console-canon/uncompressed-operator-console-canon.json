@@ -1,0 +1,51 @@
+{
+  "schema": "RHP-UNCOMPRESSED-OPERATOR-CONSOLE-CANON-v0.1",
+  "operation": "RHP-018.8",
+  "panel_families": [
+    "RHPLOAD",
+    "RHPREADY",
+    "RHPDROP",
+    "RHPDIAG",
+    "RHPDEBUG",
+    "RHPREFLECT",
+    "HUMAN-UI-SUMMARY"
+  ],
+  "minimum_fields": [
+    "stage",
+    "decision",
+    "state",
+    "evidence",
+    "raw artifact",
+    "authority",
+    "repair basis",
+    "blocked actions",
+    "next operation"
+  ],
+  "gold_panels": [
+    "RHPREADY [DIAGNOSTIC]",
+    "RHPDROP [closed]",
+    "RHPDEBUG [ALIGNED]",
+    "RHPREFLECT [GOLD]",
+    "HUMAN-UI-SUMMARY"
+  ],
+  "end_summary_required": true,
+  "reflection_required": true,
+  "active_wound_preserved": true,
+  "repair_execution_enabled": false,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Console canon improves operator visibility and debugging comprehension only."
+}

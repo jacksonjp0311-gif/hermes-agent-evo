@@ -142,6 +142,41 @@ Non-claim lock: this section is an observability and debugging rule. It grants n
 <!-- HERMES_AGENT_VISIBLE_DEBUG_LOOP_CANON_END -->
 
 
+<!-- HERMES_AGENT_UNCOMPRESSED_OPERATOR_CONSOLE_CANON_START -->
+## Uncompressed Operator Console Canon for Coding Agents
+
+Future All-One scripts must preserve operator visibility. A compact status line is not enough when the operation can fail, gate, diagnose, seal, or change state.
+
+Required behavior:
+
+| Requirement | Agent behavior |
+|---|---|
+| Named stage | Every failure-capable section gets a named RHP stage. |
+| Raw artifact | Every failure-capable stage writes raw output to an artifact. |
+| Diagnostic panel | Expected/classifiable failures render `RHPDIAG`, not raw traceback UX. |
+| Gold readiness/reflection | `RHPREADY`, `RHPDROP`, `RHPDEBUG`, `RHPREFLECT`, and final summaries should be visibly emphasized. |
+| End summary | End with a structured `HUMAN-UI-SUMMARY` and `RHPREFLECT` panel. |
+| State update | If the operation seals, update `latest-rhp.json` and final evidence. |
+| Authority lock | Reflection panels must state authority remains locked unless explicitly granted. |
+
+Minimum final summary fields:
+
+```text
+latest_operation
+state
+subject_commit
+active_wound_class
+repair_basis_established
+replacement_ci_required
+blocked_actions
+next_operation
+authority_locks
+```
+
+Non-claim lock: this section teaches coding agents how to keep the human operator oriented. It grants no runtime, provider, model, tool, CMS, memory, API, external ingestion, or autonomous authority.
+<!-- HERMES_AGENT_UNCOMPRESSED_OPERATOR_CONSOLE_CANON_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

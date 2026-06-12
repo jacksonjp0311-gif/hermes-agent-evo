@@ -126,19 +126,18 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-7-final-evidence.json` |
-| Current RHP status | `RHP-018.7 CI Evidence Reconciliation + Visible Debug Loop Canon sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-6-final-evidence.json` |
-| Previous RHP status | `RHP-018.6 README Operator Bootstrap Alignment sealed; active wound preserved` |
-| Current RHP state | `VISIBLE_DEBUG_CANON_ALIGNED_PARTIAL_CI_EVIDENCE_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `README_OPERATOR_BOOTSTRAP_ALIGNED_RERUN_REQUIRED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-8-final-evidence.json` |
+| Current RHP status | `RHP-018.8 Uncompressed Operator Console Canon sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-7-final-evidence.json` |
+| Previous RHP status | `RHP-018.7 CI Evidence Reconciliation + Visible Debug Loop Canon sealed` |
+| Current RHP state | `UNCOMPRESSED_OPERATOR_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `VISIBLE_DEBUG_CANON_ALIGNED_PARTIAL_CI_EVIDENCE_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| CI observation loop kernel | `rhp/ci_observation_loop.py` |
-| Evolution readiness gate | `rhp/evolution_readiness_gate.py` |
-| CI wound packet tool | `rhp/ci_wound_packet.py` |
+| Visible console renderer | `rhp/visible_console.py` |
 | Visible debug loop canon | `README.md#rhp-visible-debug-loop-canon` |
+| Uncompressed operator console canon | `README.md#rhp-uncompressed-operator-console-canon` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -358,6 +357,79 @@ RHP is an operator-trust loop.
 
 Non-claim lock: this canon improves operator visibility and future debugging discipline. It does not close the active wound, repair code, rerun CI, grant authority, or authorize autonomous action.
 <!-- RHP_VISIBLE_DEBUG_LOOP_CANON_END -->
+
+
+<!-- RHP_UNCOMPRESSED_OPERATOR_CONSOLE_CANON_START -->
+## RHP Uncompressed Operator Console Canon
+
+RHP must remain visibly debuggable. Do not compress the operator loop until the human loses the ability to see where the system is thinking, gating, diagnosing, sealing, and reflecting.
+
+### Console doctrine
+
+```text
+RHP is not only a governance loop.
+RHP is an observability loop.
+RHP is a debugging loop.
+RHP is an operator-trust loop.
+```
+
+### Required panel families
+
+| Panel | Tone | Purpose |
+|---|---|---|
+| `RHPLOAD` | green/cyan/red | Stage progress, root anchoring, authorization, operation status, and return-root. |
+| `RHPREADY` | gold | Readiness decision, state, allowed classes, active wound, and authority lock. |
+| `RHPDROP` | gold/cyan | Compact command summary with raw artifact index. |
+| `RHPDIAG` | magenta/red | Failure class, symptom, raw artifact, likely cause, and next repair route. |
+| `RHPDEBUG` | gold | Debug-canon alignment, visible-stage preservation, and state-machine learning. |
+| `RHPREFLECT` | gold | Human-readable reflection: what happened, what it means, what was learned, and what remains blocked. |
+| `HUMAN-UI-SUMMARY` | green/gold | Final operator summary: latest state, active wound, subject, repair basis, blocked actions, and next legal operation. |
+
+### Minimum fields for expandable/drop-panel output
+
+```text
+stage
+decision
+state
+evidence
+raw artifact
+authority
+repair basis
+blocked actions
+next operation
+```
+
+### Gold reflection requirement
+
+Use gold/yellow emphasis for diagnostic and reflective panels, especially:
+
+```text
+RHPREADY [DIAGNOSTIC]
+RHPDROP [closed]
+RHPDEBUG [ALIGNED]
+RHPREFLECT [GOLD]
+HUMAN-UI-SUMMARY
+```
+
+### End-of-operation reflection summary
+
+Every non-trivial All-One should end with a human-readable reflection panel:
+
+```text
+RHPREFLECT [GOLD] status=aligned
+`- operator reflection summary
+   +- what-happened: <plain English event>
+   +- what-it-means: <state-machine interpretation>
+   +- what-we-learned: <new invariant or preserved rule>
+   +- active-wound: <wound class or none>
+   +- repair-basis: true|false
+   +- blocked-actions: <what remains forbidden>
+   +- next: <next legal operation>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: this canon improves operator visibility and debugging comprehension. It does not close wounds, repair code, rerun CI, grant authority, or authorize autonomous action.
+<!-- RHP_UNCOMPRESSED_OPERATOR_CONSOLE_CANON_END -->
 
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->

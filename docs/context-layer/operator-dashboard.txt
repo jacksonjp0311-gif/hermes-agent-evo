@@ -1,9 +1,9 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.7 | status=ok [OK]
-`- CI evidence reconciliation + visible debug canon aligned
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.8 | status=ok [OK]
+`- uncompressed operator console canon aligned
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- screenshot evidence: partial
    +- active subject closed: false
    +- repair basis: false
+   +- reflection panel: RHPREFLECT [GOLD]
    +- replacement CI required: true
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair
