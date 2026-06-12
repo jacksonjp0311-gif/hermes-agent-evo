@@ -1,0 +1,16 @@
+﻿{
+    "schema":  "RHP-021.4-POST-REPAIR-CI-OBSERVATION-v0.2",
+    "operation":  "RHP-021.4",
+    "repair_commit":  "c3957405b177d67dcf31b7690ae726c70b9651e5",
+    "prior_current_operation_commit":  "099264be31f0a329375a38fe49e8d0267016f045",
+    "subject_commit":  "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+    "observed_status":  "unknown",
+    "status_context_count":  0,
+    "workflow_run_count":  0,
+    "observation_mode":  "automatic_default_unknown",
+    "raw_reference":  "automatic-local-intake-no-github-status-surface-queried",
+    "green_eligible":  false,
+    "inherited_subject_closed":  false,
+    "authority_granted":  false,
+    "non_claim_lock":  "Automatic post-repair CI observation records evidence only and does not close wounds."
+}

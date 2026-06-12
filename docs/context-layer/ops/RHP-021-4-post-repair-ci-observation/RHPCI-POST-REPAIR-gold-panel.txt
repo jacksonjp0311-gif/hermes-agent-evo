@@ -1,0 +1,11 @@
+RHPCI-POST-REPAIR [GOLD] status=observed-unknown
+- automatic post-repair CI observation intake
+   +- repair-commit: c3957405b177d67dcf31b7690ae726c70b9651e5
+   +- observation-mode: automatic_default_unknown
+   +- observed-status: unknown
+   +- status-context-count: 0
+   +- workflow-run-count: 0
+   +- green-eligible: false
+   +- inherited-subject-closed: false
+   +- next-operation: observe_current_operation_ci_after_contract_drift_repair
+   - authority: no grant [LOCKED]

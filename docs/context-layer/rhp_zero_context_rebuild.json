@@ -1,12 +1,12 @@
 ﻿{
-    "schema":  "RHP-ZERO-CONTEXT-REBUILD-v3.3",
+    "schema":  "RHP-ZERO-CONTEXT-REBUILD-v3.4",
     "ok":  true,
-    "latest_operation":  "RHP-021.3",
-    "latest_evidence":  "docs/context-layer/ops/RHP-021-3-final-evidence.json",
+    "latest_operation":  "RHP-021.4",
+    "latest_evidence":  "docs/context-layer/ops/RHP-021-4-final-evidence.json",
     "subject_commit":  "ddb24363e2fac630e7527a2c9eab31e6df50db52",
-    "prior_current_operation_commit":  "099264be31f0a329375a38fe49e8d0267016f045",
-    "observed_ci_status":  "unknown_until_next_observation",
-    "state":  "CONTRACT_DRIFT_REPAIR_APPLIED_CI_PENDING",
+    "repair_commit":  "c3957405b177d67dcf31b7690ae726c70b9651e5",
+    "observed_ci_status":  "unknown",
+    "state":  "POST_REPAIR_CI_OBSERVED_UNKNOWN",
     "integration_closed":  false,
     "next_operation":  "observe_current_operation_ci_after_contract_drift_repair",
     "authority_locks":  {
