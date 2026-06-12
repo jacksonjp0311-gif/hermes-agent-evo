@@ -1,0 +1,25 @@
+{
+  "schema": "RHP-POINTER-EVIDENCE-LINEAGE-AUDIT-v0.1",
+  "ok": true,
+  "finding_count": 2,
+  "error_count": 0,
+  "warning_count": 1,
+  "info_count": 1,
+  "findings": [
+    {
+      "code": "operation_base_commit_divergence",
+      "severity": "warning",
+      "message": "Pointer operation_base_commit diverges from final evidence operation_base_commit; pointer may be retaining inherited root rather than operation-local base.",
+      "expected": "4d2ff65b6829980eb58d09a746ae6e08f27dffaf",
+      "actual": "099264be31f0a329375a38fe49e8d0267016f045"
+    },
+    {
+      "code": "head_commit_not_pointer_current_operation_commit",
+      "severity": "info",
+      "message": "HEAD is newer than pointer current_operation_commit; this can be expected when pointer tracks unresolved repair subject rather than latest repo HEAD.",
+      "expected": "47e6532a0cc9ea5abc6581792fe18f73385a6914",
+      "actual": "c3957405b177d67dcf31b7690ae726c70b9651e5"
+    }
+  ],
+  "non_claim_lock": "Lineage audit is observability only. It does not repair, close wounds, claim green, or grant authority."
+}

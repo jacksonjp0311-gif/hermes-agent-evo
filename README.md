@@ -4236,3 +4236,24 @@ The registry is implemented at `rhp/advancement_lane_registry.py` and tested by 
 
 Non-claim lock: lane permission is not wound closure, release, or green status.
 <!-- RHP_ORTHOGONAL_ADVANCEMENT_LANE_REGISTRY_END -->
+
+<!-- RHP_POINTER_EVIDENCE_LINEAGE_AUDITOR_START -->
+## RHP Pointer/Evidence Lineage Coherence Auditor
+
+RHP-022.2 installs an observability-lane auditor that compares:
+
+```text
+latest-rhp.json
+latest final evidence packet
+operation_base_commit
+subject_commit
+state / state_after_alignment
+observed_ci_status
+current_operation_commit / repair_commit
+HEAD
+```
+
+The auditor distinguishes error-level coherence breaks from warning-level lineage divergences. In particular, operation-base divergence can be warning-level when the pointer is preserving inherited root lineage while final evidence records operation-local base.
+
+Non-claim lock: lineage audit is observability only; it does not repair, close wounds, claim green, or grant authority.
+<!-- RHP_POINTER_EVIDENCE_LINEAGE_AUDITOR_END -->

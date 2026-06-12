@@ -1,0 +1,12 @@
+RHPLINEAGE-AUDIT [GOLD] status=installed
+- pointer/evidence lineage coherence auditor
+   +- lane: observability
+   +- audit-errors: 0
+   +- audit-warnings: 1
+   +- audit-infos: 1
+   +- operation-base-divergence-captured: false
+   +- observed-ci-status-preserved: unknown
+   +- repair-commit-preserved: c3957405b177d67dcf31b7690ae726c70b9651e5
+   +- inherited-subject-closed: false
+   +- next-operation: install_lane_declaration_gate
+   - authority: no grant [LOCKED]
