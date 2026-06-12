@@ -1,0 +1,48 @@
+{
+  "schema": "RHP-OPERATION-MANIFEST-v0.1",
+  "operation": "RHP-022.6",
+  "lane": "test_contract",
+  "ci_state": "unknown",
+  "story": "Install a repository file-size guard after AGENTS.md inflated to a GitHub-blocking 146 MB payload during RHP-022.5 repair.",
+  "declared_files": [
+    "rhp/repository_file_size_guard.py",
+    "tests/test_rhp_022_6_repository_file_size_guard.py",
+    "README.md",
+    "AGENTS.md",
+    "docs/context-layer/ops/RHP-022-6-final-evidence.json"
+  ],
+  "allowed_mutations": [
+    "add repository file-size guard",
+    "add file-size guard tests",
+    "add README and AGENTS file-size guard rules",
+    "update latest pointer and zero-context rebuild"
+  ],
+  "forbidden_actions": [
+    "claim_green",
+    "close_wound",
+    "release",
+    "promote",
+    "dependency_mutation",
+    "destructive_repair",
+    "grant_authority"
+  ],
+  "evidence_outputs": [
+    "docs/context-layer/ops/RHP-022-6-repository-file-size-guard/current-operation-manifest.json",
+    "docs/context-layer/ops/RHP-022-6-repository-file-size-guard/file-size-audit.json",
+    "docs/context-layer/ops/RHP-022-6-final-evidence.json"
+  ],
+  "validation_commands": [
+    "python -m py_compile rhp/repository_file_size_guard.py tests/test_rhp_022_6_repository_file_size_guard.py",
+    "python -m pytest -o addopts= tests/test_rhp_022_6_repository_file_size_guard.py",
+    "python -m rhp.evidence_api_compatibility_gate --repo-root ."
+  ],
+  "non_claim_locks": [
+    "does not claim green",
+    "does not close wounds",
+    "does not release",
+    "does not promote",
+    "does not mutate dependencies",
+    "does not perform destructive repair",
+    "does not grant authority"
+  ]
+}

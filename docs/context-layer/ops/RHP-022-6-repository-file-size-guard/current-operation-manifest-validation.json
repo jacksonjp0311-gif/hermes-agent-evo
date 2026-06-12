@@ -1,0 +1,12 @@
+{
+  "schema": "RHP-OPERATION-MANIFEST-VALIDATION-v0.1",
+  "operation": "RHP-022.6",
+  "lane": "test_contract",
+  "ci_state": "unknown",
+  "ok": true,
+  "missing_fields": [],
+  "missing_forbidden_actions": [],
+  "lane_gate_allowed": true,
+  "reason": "manifest_valid",
+  "non_claim_lock": "Manifest validation is pre-mutation structure only; it is not green status, wound closure, release, or authority."
+}

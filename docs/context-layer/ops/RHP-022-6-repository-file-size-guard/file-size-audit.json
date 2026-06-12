@@ -1,0 +1,18 @@
+{
+  "schema": "RHP-REPOSITORY-FILE-SIZE-AUDIT-v0.1",
+  "ok": true,
+  "hard_limit_bytes": 95000000,
+  "warning_limit_bytes": 10000000,
+  "error_count": 0,
+  "warning_count": 1,
+  "findings": [
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 33152041,
+      "severity": "warning",
+      "limit_bytes": 10000000,
+      "message": "file exceeds governance warning threshold and should be compressed"
+    }
+  ],
+  "non_claim_lock": "File-size audit is a repository hygiene guard only. It does not claim green, close wounds, release, promote, or grant authority."
+}

@@ -1,0 +1,12 @@
+RHPFILESIZE [GOLD] status=installed
+- repository file-size guard
+   +- lane: test_contract
+   +- audit-ok: true
+   +- hard-limit-bytes: 95000000
+   +- warning-limit-bytes: 10000000
+   +- audit-errors: 0
+   +- audit-warnings: 1
+   +- observed-ci-status-preserved: unknown
+   +- inherited-subject-closed: false
+   +- next-operation: compress_large_governance_files_or_continue_guard_hardening
+   - authority: no grant [LOCKED]

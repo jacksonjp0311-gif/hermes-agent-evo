@@ -4366,3 +4366,22 @@ The human authorizes.
 
 Non-claim lock: public storytelling is allowed only when it remains evidence-bounded.
 <!-- RHP_README_EVIDENCE_STORY_COHERENCE_AUDITOR_END -->
+
+<!-- RHP_REPOSITORY_FILE_SIZE_GUARD_START -->
+## RHP Repository File-Size Guard
+
+RHP-022.6 converts the RHP-022.5 GitHub rejection into a permanent repository hygiene guard.
+
+The wound was concrete: `AGENTS.md` inflated above GitHub's 100 MB file-size limit and the push was rejected. The repair reduced the file and preserved the valid RHP-022.5 evidence. The new guard checks tracked governance files before future promotion.
+
+Guard policy:
+
+```text
+hard limit: 95,000,000 bytes
+warning limit: 10,000,000 bytes
+```
+
+A hard-limit finding blocks promotion. A warning means the file is still legal but should be compressed or refactored.
+
+Non-claim lock: file-size guard results are repository hygiene evidence only, not green status, wound closure, release, promotion, or authority.
+<!-- RHP_REPOSITORY_FILE_SIZE_GUARD_END -->
