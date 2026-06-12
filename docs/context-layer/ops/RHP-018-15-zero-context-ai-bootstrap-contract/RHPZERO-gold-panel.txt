@@ -1,0 +1,13 @@
+RHPZERO [GOLD] status=rehydrated
+`- zero-context bootstrap report
+   +- readme-loaded: true
+   +- agents-loaded: true
+   +- latest-rhp-loaded: true
+   +- latest-evidence-loaded: true
+   +- zero-context-rebuild-loaded: true
+   +- operator-context-loaded: true
+   +- geometry-ok: true
+   +- authority-ok: true
+   +- active-wound: readiness_gate_install
+   +- next: operator_rerun_or_ingest_replacement_ci_before_repair
+   `- authority: no grant [LOCKED]

@@ -126,21 +126,18 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-14-final-evidence.json` |
-| Current RHP status | `RHP-018.14 V4 Loop Geometry Alignment Guard sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-13-final-evidence.json` |
-| Previous RHP status | `RHP-018.13 README Canonical Runtime Run Block sealed` |
-| Current RHP state | `LOOP_GEOMETRY_ALIGNMENT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `README_CANONICAL_RUNTIME_RUN_BLOCK_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-15-final-evidence.json` |
+| Current RHP status | `RHP-018.15 V2 Zero-Context AI Bootstrap Contract sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-14-final-evidence.json` |
+| Previous RHP status | `RHP-018.14 Loop Geometry Alignment Guard sealed` |
+| Current RHP state | `ZERO_CONTEXT_AI_BOOTSTRAP_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `LOOP_GEOMETRY_ALIGNMENT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Canonical runtime run block | `README.md#rhp-canonical-runtime-run-block` |
+| Zero-context bootstrap module | `rhp/zero_context_bootstrap.py` |
 | Loop geometry guard | `rhp/loop_geometry.py` |
-| Runtime progress console | `rhp/progress_console.py` |
-| Runtime loop module | `rhp/runtime_loop.py` |
-| RHPLOOP Doctor module | `rhp/loop_doctor.py` |
-| Visible console renderer | `rhp/visible_console.py` |
+| Canonical runtime run block | `README.md#rhp-canonical-runtime-run-block` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -829,6 +826,70 @@ The body must preserve Doctor, Self-Learning, Drop, Reflect, and Human Summary.
 
 Non-claim lock: this run block is a README/operator UX contract. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_CANONICAL_RUNTIME_RUN_BLOCK_END -->
+
+<!-- RHP_ZERO_CONTEXT_AI_BOOTSTRAP_CONTRACT_START -->
+## RHP Zero-Context AI Bootstrap Contract
+
+A fresh AI with no conversation memory must recover state from repository truth, not from vibes, cached memory, or an invented next step.
+
+### Mandatory source order
+
+```text
+1. README.md
+2. AGENTS.md
+3. docs/context-layer/latest-rhp.json
+4. latest_evidence named by latest-rhp.json
+5. docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+6. docs/context-layer/hermes-operator-context.json
+7. rhp/loop_geometry.py
+```
+
+### Required zero-context report
+
+```text
+RHPZERO [GOLD] status=rehydrated
+`- zero-context bootstrap report
+   +- readme-loaded: true
+   +- agents-loaded: true
+   +- latest-rhp-loaded: true
+   +- latest-evidence-loaded: true
+   +- zero-context-rebuild-loaded: true
+   +- operator-context-loaded: true
+   +- geometry-ok: true
+   +- authority-ok: true
+   +- active-wound: <active-wound>
+   +- next: <next-operation>
+   `- authority: no grant [LOCKED]
+```
+
+### Zero-context law
+
+```text
+README teaches the loop.
+AGENTS teaches the coding boundary.
+latest-rhp.json names the live state.
+latest evidence proves the live state.
+RHP_ZERO_CONTEXT_REBUILD.md compresses the recovery packet.
+hermes-operator-context.json names what Hermes may and may not do.
+rhp/loop_geometry.py validates that the loop shape still matches.
+
+A zero-context AI may summarize, diagnose, and propose.
+It may not mutate unless the sealed state and the human authorize a bounded All-One.
+```
+
+### Required refusal behavior
+
+```text
+If latest-rhp.json is missing: stop.
+If latest evidence is missing: stop.
+If geometry is not aligned: stop.
+If authority locks are not false: stop.
+If next_operation is unknown: stop.
+If active wound exists: do not close, repair, or bypass it without subject-scoped evidence.
+```
+
+Non-claim lock: this bootstrap contract improves cross-session and cross-model rehydration. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_ZERO_CONTEXT_AI_BOOTSTRAP_CONTRACT_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

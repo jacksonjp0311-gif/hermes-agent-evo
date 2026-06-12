@@ -1,0 +1,45 @@
+{
+  "schema": "RHP-ZERO-CONTEXT-BOOTSTRAP-REPORT-v0.1",
+  "operation": "RHP-018.15",
+  "report": {
+    "ok": true,
+    "readme_loaded": true,
+    "agents_loaded": true,
+    "latest_rhp_loaded": true,
+    "latest_evidence_loaded": true,
+    "zero_context_rebuild_loaded": true,
+    "operator_context_loaded": true,
+    "loop_geometry_loaded": true,
+    "geometry_ok": true,
+    "authority_ok": true,
+    "latest_operation": "RHP-018.14",
+    "state": "LOOP_GEOMETRY_ALIGNMENT_GUARD_ALIGNED_SUBJECT_UNRESOLVED",
+    "active_wound": "readiness_gate_install",
+    "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+    "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+    "blocked_actions": [
+      "repair",
+      "wound_closure",
+      "autonomous_authority",
+      "current_operation_green_claim",
+      "dependency_mutation",
+      "external_ingestion"
+    ],
+    "missing_sources": []
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Zero-context bootstrap grants no authority."
+}

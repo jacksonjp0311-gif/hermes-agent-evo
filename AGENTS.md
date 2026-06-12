@@ -396,6 +396,41 @@ Do not silently add, remove, reorder, or compress loop stages.
 Non-claim lock: geometry alignment validates operator UX and loop governance only. It grants no repair authority, no CI authority, and no self-authorization.
 <!-- HERMES_AGENT_LOOP_GEOMETRY_ALIGNMENT_END -->
 
+<!-- HERMES_AGENT_ZERO_CONTEXT_BOOTSTRAP_START -->
+## Zero-Context Bootstrap Rule
+
+When entering this repository with no prior context, follow this source order before proposing or mutating anything:
+
+```text
+README.md
+AGENTS.md
+docs/context-layer/latest-rhp.json
+<latest_evidence named by latest-rhp.json>
+docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md
+docs/context-layer/hermes-operator-context.json
+rhp/loop_geometry.py
+```
+
+Then emit or internally build the equivalent of:
+
+```text
+RHPZERO [GOLD] status=rehydrated
+```
+
+Required checks:
+
+```text
+latest evidence exists
+loop geometry validates
+authority locks are false
+active wound is preserved
+next_operation is followed
+no mutation occurs without human-authorized All-One
+```
+
+Non-claim lock: zero-context bootstrap grants no authority and does not override RHPREADY, RHPDIAG, RHPDROP, human authorization, or CI evidence.
+<!-- HERMES_AGENT_ZERO_CONTEXT_BOOTSTRAP_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

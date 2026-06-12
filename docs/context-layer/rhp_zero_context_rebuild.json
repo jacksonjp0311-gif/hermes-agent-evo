@@ -1,14 +1,23 @@
 {
-  "schema": "RHP-ZERO-CONTEXT-REBUILD-v2.1",
+  "schema": "RHP-ZERO-CONTEXT-REBUILD-v2.2",
   "ok": true,
-  "latest_operation": "RHP-018.14",
-  "latest_evidence": "docs/context-layer/ops/RHP-018-14-final-evidence.json",
+  "latest_operation": "RHP-018.15",
+  "latest_evidence": "docs/context-layer/ops/RHP-018-15-final-evidence.json",
   "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
   "observed_ci_status": "red",
-  "prior_blocking_state": "README_CANONICAL_RUNTIME_RUN_BLOCK_ALIGNED_SUBJECT_UNRESOLVED",
-  "state": "LOOP_GEOMETRY_ALIGNMENT_GUARD_ALIGNED_SUBJECT_UNRESOLVED",
+  "prior_blocking_state": "LOOP_GEOMETRY_ALIGNMENT_GUARD_ALIGNED_SUBJECT_UNRESOLVED",
+  "state": "ZERO_CONTEXT_AI_BOOTSTRAP_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED",
   "integration_closed": false,
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "source_order": [
+    "README.md",
+    "AGENTS.md",
+    "docs/context-layer/latest-rhp.json",
+    "latest_evidence",
+    "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
+    "docs/context-layer/hermes-operator-context.json",
+    "rhp/loop_geometry.py"
+  ],
   "authority_locks": {
     "provider_call_executed": false,
     "model_call_executed": false,
