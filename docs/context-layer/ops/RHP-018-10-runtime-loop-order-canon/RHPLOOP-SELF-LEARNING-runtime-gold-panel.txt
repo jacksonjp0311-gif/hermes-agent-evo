@@ -1,0 +1,8 @@
+RHPLOOP-SELF-LEARNING [GOLD] status=observed tone=gold
+`- runtime lesson checkpoint before final summary
+   +- observed-event: RHP-018.9 rendered Self-Learning but did not make it a required runtime checkpoint before Human Summary.
+   +- evidence: docs/context-layer/ops/RHP-018-9-final-evidence.json
+   +- lesson: Self-Learning must execute as a visible runtime loop before RHPREFLECT and HUMAN-UI-SUMMARY.
+   +- future-behavior: Future All-One scripts must render RHPLOOP-SELF-LEARNING before RHPREFLECT and HUMAN-UI-SUMMARY.
+   +- authority: no authority grant
+   `- promotion: evidence-gated / human-authorized [LOCKED]

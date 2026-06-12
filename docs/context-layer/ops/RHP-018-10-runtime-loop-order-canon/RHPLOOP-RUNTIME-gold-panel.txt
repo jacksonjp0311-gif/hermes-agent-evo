@@ -1,0 +1,21 @@
+RHPLOOP-RUNTIME [GOLD] status=aligned tone=gold
+`- canonical runtime loop order
+   +- 01: ENTRYPOINT-GATE
+   +- 02: ROOT-ANCHOR
+   +- 03: RESIDUE-MANAGER
+   +- 04: PREAUTH-PULL
+   +- 05: HUMAN-AUTHORIZATION
+   +- 06: RHPREADY
+   +- 07: OPERATION-START
+   +- 08: RHPLOOP-DOCTOR
+   +- 09: RHPLOOP-SELF-LEARNING
+   +- 10: VALIDATION
+   +- 11: SECRET-SCAN
+   +- 12: COMMIT-SEAL
+   +- 13: PUSH-SEAL
+   +- 14: RHPDROP
+   +- 15: RHPREFLECT
+   +- 16: POST-SEAL-RESIDUE
+   +- 17: RETURN-ROOT
+   +- 18: HUMAN-UI-SUMMARY
+   `- doctor and self-learning run before reflection and human summary

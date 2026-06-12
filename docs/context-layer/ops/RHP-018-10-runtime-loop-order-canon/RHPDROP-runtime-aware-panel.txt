@@ -1,0 +1,7 @@
+RHPDROP [closed] status=ok tone=gold
+`- runtime-aware command summary
+   +- total: 5
+   +- ok: 4
+   +- diagnostic-nonzero: 1
+   +- hard-failed: 0
+   `- diagnostic nonzero is not hard failure when valid evidence exists

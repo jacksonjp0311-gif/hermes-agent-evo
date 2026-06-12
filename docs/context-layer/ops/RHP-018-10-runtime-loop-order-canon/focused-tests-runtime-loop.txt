@@ -1,0 +1,10 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-9.0.2, pluggy-1.6.0
+rootdir: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo
+configfile: pyproject.toml
+plugins: anyio-4.12.1
+collected 4 items
+
+tests\test_rhp_018_10_runtime_loop_order.py ....                         [100%]
+
+============================== 4 passed in 0.44s ==============================

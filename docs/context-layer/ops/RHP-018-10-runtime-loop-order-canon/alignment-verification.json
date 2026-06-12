@@ -1,0 +1,28 @@
+{
+  "schema": "RHP-018.10-alignment-verification",
+  "operation": "RHP-018.10",
+  "runtime_loop_module": "rhp/runtime_loop.py",
+  "runtime_loop_tests": "tests/test_rhp_018_10_runtime_loop_order.py",
+  "runtime_panel_present": true,
+  "doctor_runtime_panel_present": true,
+  "self_learning_runtime_panel_present": true,
+  "readme_section_present": true,
+  "agents_section_present": true,
+  "active_wound_preserved": true,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "repair_execution_enabled": false,
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  }
+}

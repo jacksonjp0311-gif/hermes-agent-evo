@@ -1,0 +1,11 @@
+RHPLOOP-DOCTOR [GOLD] status=diagnostic tone=gold
+`- read-only loop doctor cockpit
+   +- latest-operation: RHP-018.9
+   +- state: REMOTE_PENDING
+   +- evidence-api-ok: true
+   +- replay-ok: true
+   +- worktree-clean: false
+   +- can-mutate: false
+   +- blocked-reasons: worktree_not_clean, remote_ci_not_final, human_all_one_authorization_required_for_mutation
+   +- next: wait_or_ingest_final_ci_status_before_green_claim
+   `- authority: no grant [LOCKED]

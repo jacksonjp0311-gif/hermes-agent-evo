@@ -222,6 +222,43 @@ Non-claim lock: Self-learning changes future behavior rules only through evidenc
 <!-- HERMES_AGENT_RHPLOOP_DOCTOR_SELF_LEARNING_END -->
 
 
+<!-- HERMES_AGENT_RUNTIME_LOOP_ORDER_CANON_START -->
+## Runtime Loop Order for Coding Agents
+
+A future All-One must render Self-Learning as a runtime loop panel before final summary.
+
+Required order:
+
+```text
+RHPLOOP-DOCTOR
+RHPLOOP-SELF-LEARNING
+RHPREFLECT
+HUMAN-UI-SUMMARY
+```
+
+Do not bury self-learning only in README text or final summaries. It must be visible as its own panel.
+
+Diagnostic nonzero rule:
+
+| Tool/stage | Nonzero means | Required handling |
+|---|---|---|
+| `rhpready-diagnostic` | blocked/diagnostic state may be expected | Parse JSON; hard-fail only if no valid JSON exists. |
+| `doctor-cli-readonly` | blocked state may be expected | Parse JSON; classify as diagnostic nonzero if evidence exists. |
+
+`RHPDROP` must distinguish:
+
+```text
+ok
+diagnostic-nonzero
+hard-failed
+```
+
+It must not print `status=ok` while reporting ordinary `failed > 0`.
+
+Non-claim lock: this rule improves runtime observability and command classification. It grants no mutation, repair, external authority, memory promotion, or self-authorization.
+<!-- HERMES_AGENT_RUNTIME_LOOP_ORDER_CANON_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

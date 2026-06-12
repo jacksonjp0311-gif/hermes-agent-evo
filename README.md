@@ -126,18 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-9-final-evidence.json` |
-| Current RHP status | `RHP-018.9 RHPLOOP Doctor + Self-Learning Canon sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-8-final-evidence.json` |
-| Previous RHP status | `RHP-018.8 Uncompressed Operator Console Canon sealed` |
-| Current RHP state | `RHPLOOP_DOCTOR_SELF_LEARNING_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `UNCOMPRESSED_OPERATOR_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-10-final-evidence.json` |
+| Current RHP status | `RHP-018.10 Runtime Loop Order Canon sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-9-final-evidence.json` |
+| Previous RHP status | `RHP-018.9 RHPLOOP Doctor + Self-Learning Canon sealed` |
+| Current RHP state | `RUNTIME_LOOP_ORDER_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `RHPLOOP_DOCTOR_SELF_LEARNING_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
+| Runtime loop module | `rhp/runtime_loop.py` |
 | RHPLOOP Doctor module | `rhp/loop_doctor.py` |
-| RHPLOAD Doctor | `rhp/rhpload_doctor.py` |
-| Doctor CLI | `rhp/doctor_cli.py` |
 | Visible console renderer | `rhp/visible_console.py` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
@@ -518,6 +517,77 @@ The environment may become smarter without becoming sovereign.
 
 Non-claim lock: RHPLOOP Doctor and Self-Learning are read/classify/propose/preserve loops. They do not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHPLOOP_DOCTOR_SELF_LEARNING_CANON_END -->
+
+
+<!-- RHP_RUNTIME_LOOP_ORDER_CANON_START -->
+## RHP Runtime Loop Order Canon
+
+The self-learning loop is not only a documentation section. It must appear as a runtime loop panel before reflection and before the final human summary.
+
+### Canonical runtime order
+
+```text
+ENTRYPOINT-GATE
+ROOT-ANCHOR
+RESIDUE-MANAGER
+PREAUTH-PULL
+HUMAN-AUTHORIZATION
+RHPREADY
+OPERATION-START
+RHPLOOP-DOCTOR
+RHPLOOP-SELF-LEARNING
+VALIDATION
+SECRET-SCAN
+COMMIT-SEAL
+PUSH-SEAL
+RHPDROP
+RHPREFLECT
+POST-SEAL-RESIDUE
+RETURN-ROOT
+HUMAN-UI-SUMMARY
+```
+
+### Runtime loop law
+
+```text
+Doctor classifies before Self-Learning.
+Self-Learning records lessons before Reflection.
+Reflection interprets before Human Summary.
+Human Summary closes the operator-visible turn.
+```
+
+### Diagnostic nonzero rule
+
+```text
+Some read-only diagnostic tools intentionally return nonzero when they find a blocked state.
+
+If the tool emits valid JSON evidence:
+  diagnostic nonzero is not a hard failure.
+
+If the tool emits no valid evidence:
+  nonzero is a hard failure.
+```
+
+Known diagnostic-nonzero surfaces:
+
+```text
+rhpready-diagnostic
+doctor-cli-readonly
+```
+
+### Required runtime panels
+
+```text
+RHPLOOP-RUNTIME [GOLD]
+RHPLOOP-DOCTOR [GOLD]
+RHPLOOP-SELF-LEARNING [GOLD]
+RHPDROP [closed]
+RHPREFLECT [GOLD]
+HUMAN-UI-SUMMARY [GOLD]
+```
+
+Non-claim lock: this canon changes operator visibility and command classification only. It does not repair, rerun CI, close wounds, grant authority, or self-authorize.
+<!-- RHP_RUNTIME_LOOP_ORDER_CANON_END -->
 
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->

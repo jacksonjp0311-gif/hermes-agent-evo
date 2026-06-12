@@ -1,0 +1,43 @@
+{
+  "schema": "RHP-RUNTIME-AWARE-COMMAND-SUMMARY-v0.1",
+  "operation": "RHP-018.10",
+  "group": "operation-commands",
+  "total": 5,
+  "ok": 4,
+  "diagnostic_nonzero": 1,
+  "hard_failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-10-runtime-loop-order-canon\\operation-base-commit.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "py-compile-runtime-loop",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-10-runtime-loop-order-canon\\py-compile-runtime-loop.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "focused-tests-runtime-loop",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-10-runtime-loop-order-canon\\focused-tests-runtime-loop.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "doctor-cli-readonly-runtime",
+      "exit": 1,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-10-runtime-loop-order-canon\\doctor-cli-readonly-runtime.txt",
+      "diagnostic_nonzero_allowed": true
+    },
+    {
+      "stage": "evidence-api-gate-after-runtime-loop-order",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-10-runtime-loop-order-canon\\evidence-api-gate-after-runtime-loop-order.txt",
+      "diagnostic_nonzero_allowed": false
+    }
+  ],
+  "status": "ok",
+  "non_claim_lock": "Diagnostic nonzero is classified separately from hard failure when valid evidence exists."
+}

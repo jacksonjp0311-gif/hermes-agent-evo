@@ -1,0 +1,39 @@
+{
+  "schema": "RHP-RUNTIME-LOOP-ORDER-CANON-v0.1",
+  "operation": "RHP-018.10",
+  "required_order": [
+    "RHPLOOP-DOCTOR",
+    "RHPLOOP-SELF-LEARNING",
+    "RHPREFLECT",
+    "HUMAN-UI-SUMMARY"
+  ],
+  "diagnostic_nonzero_surfaces": [
+    "rhpready-diagnostic",
+    "doctor-cli-readonly",
+    "doctor-cli-readonly-runtime",
+    "rhpready-diagnostic-runtime"
+  ],
+  "command_summary_fields": [
+    "ok",
+    "diagnostic_nonzero",
+    "hard_failed"
+  ],
+  "active_wound_preserved": true,
+  "repair_execution_enabled": false,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Runtime loop order canon changes visibility and diagnostic classification only."
+}

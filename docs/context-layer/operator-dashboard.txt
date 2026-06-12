@@ -1,10 +1,8 @@
-RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.9 | status=ok [OK]
-`- RHPLOOP Doctor + Self-Learning canon aligned
+RHPLOAD [100%] HUMAN-UI-SUMMARY operation=RHP-018.10 | status=ok [OK]
+`- runtime loop order canon aligned
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- doctor panel: RHPLOOP-DOCTOR [GOLD]
-   +- self-learning panel: RHPLOOP-SELF-LEARNING [GOLD]
-   +- active subject closed: false
+   +- runtime order: Doctor -> Self-Learning -> Reflect -> Human Summary
    +- repair basis: false
    +- replacement CI required: true
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair

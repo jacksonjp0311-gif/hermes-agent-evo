@@ -1,11 +1,11 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.9",
+  "latest_operation": "RHP-018.10",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
   "hermes_can": [
-    "render_RHPLOOP_DOCTOR_gold_panel",
-    "render_RHPLOOP_SELF_LEARNING_gold_panel",
-    "validate_self_learning_candidates_against_evidence_and_authority_boundary",
+    "render_RHPLOOP_RUNTIME_gold_panel",
+    "render_RHPLOOP_SELF_LEARNING_before_RHPREFLECT",
+    "classify_diagnostic_nonzero_separately_from_hard_failure",
     "ask_operator_for_subject_commit_replacement_ci_or_remaining_failed_logs"
   ],
   "hermes_cannot": [
@@ -14,7 +14,6 @@
     "self_authorize",
     "mutate_dependencies",
     "claim_current_operation_ci_without_observation",
-    "promote_learning_without_evidence",
     "close_active_subject_wound_without_subject_scoped_green_ci"
   ],
   "authority_locks": {
