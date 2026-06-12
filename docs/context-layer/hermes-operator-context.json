@@ -1,22 +1,21 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.3",
-  "latest_operation": "RHP-019.0",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.4",
+  "latest_operation": "RHP-019.1",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "replacement_ci_observation": "rhp/replacement_ci_observer.py",
+  "github_connector_ci_intake": "rhp/replacement_ci_connector_intake.py",
   "hermes_can": [
-    "observe_subject_scoped_replacement_ci",
-    "classify_green_red_pending_unknown_replacement_ci",
-    "preserve_active_wound_until_next_authorized_operation",
-    "ask_operator_for_failed_replacement_ci_logs_if_red"
+    "prefer_connector_ci_observation_before_operator_ci_prompts",
+    "classify_connector_green_red_pending_unknown",
+    "preserve_active_wound_until_next_authorized_operation"
   ],
   "hermes_cannot": [
-    "close_active_subject_wound_in_same_observation_operation",
+    "ask_operator_to_parse_ci_before_connector_observation",
+    "close_active_subject_wound_in_same_intake_operation",
     "execute_repair",
     "rerun_ci_without_authority",
     "self_authorize",
     "mutate_dependencies",
-    "claim_current_operation_ci_without_observation",
-    "close_active_subject_wound_without_subject_scoped_green_ci"
+    "claim_current_operation_ci_without_observation"
   ],
   "authority_locks": {
     "provider_call_executed": false,
@@ -32,5 +31,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Read-only observation; no direct mutation or self-authorization."
+  "non_claim_lock": "Read-only connector intake/classification; no direct mutation or self-authorization."
 }

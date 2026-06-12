@@ -126,18 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-019-0-final-evidence.json` |
-| Current RHP status | `RHP-019.0 Replacement CI Observation Packet sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-15-final-evidence.json` |
-| Previous RHP status | `RHP-018.15 Zero-Context AI Bootstrap Contract sealed` |
-| Current RHP state | `REPLACEMENT_CI_OBSERVATION_UNRESOLVED` |
-| Blocking CI/wound state preserved | `ZERO_CONTEXT_AI_BOOTSTRAP_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-019-1-final-evidence.json` |
+| Current RHP status | `RHP-019.1 GitHub Connector CI Intake Gate sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-019-0-final-evidence.json` |
+| Previous RHP status | `RHP-019.0 Replacement CI Observation Packet sealed` |
+| Current RHP state | `REPLACEMENT_CI_CONNECTOR_INTAKE_UNRESOLVED` |
+| Blocking CI/wound state preserved | `REPLACEMENT_CI_OBSERVATION_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
+| GitHub connector CI intake gate | `rhp/replacement_ci_connector_intake.py` |
 | Replacement CI observer | `rhp/replacement_ci_observer.py` |
-| Zero-context bootstrap module | `rhp/zero_context_bootstrap.py` |
-| Loop geometry guard | `rhp/loop_geometry.py` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -933,6 +932,53 @@ RHPCI [GOLD] status=<observed|unresolved>
 
 Non-claim lock: this packet observes replacement CI only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_REPLACEMENT_CI_OBSERVATION_PACKET_END -->
+
+<!-- RHP_GITHUB_CONNECTOR_CI_INTAKE_GATE_START -->
+## RHP GitHub Connector CI Intake Gate
+
+CI intake should be machine-observed before operator-provided evidence is requested.
+
+### Connector intake law
+
+```text
+Human authorization gates mutation.
+GitHub connector observes CI.
+The operator is not the CI parser.
+No manual status prompt is required when connector observation exists.
+Connector absence is unknown, not pass.
+```
+
+### Active subject connector observation
+
+```text
+subject_commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
+combined_status_count: 0
+workflow_run_count: 0
+observed_status: unknown
+classification: connector_replacement_ci_evidence_not_established
+```
+
+### Connector intake panel
+
+```text
+RHPCI-CONNECTOR [GOLD] status=<accepted|unresolved>
+`- GitHub connector CI evidence intake
+   +- subject-commit: <subject commit>
+   +- combined-status-count: <n>
+   +- workflow-run-count: <n>
+   +- connector-observed-status: green|red|pending|unknown
+   +- source-scope: github_connector_subject_commit
+   +- subject-scoped: true|false
+   +- replacement-ci-established: true|false
+   +- wound-closure-allowed-next: true|false
+   +- repair-allowed-next: false
+   +- classification: <classification>
+   +- next: <next-operation>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: this connector intake gate records GitHub connector CI observation only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_GITHUB_CONNECTOR_CI_INTAKE_GATE_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

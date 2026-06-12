@@ -454,6 +454,28 @@ Do not treat current-operation green, local tests, or unrelated workflow success
 Non-claim lock: replacement CI observation grants no repair authority and no autonomous wound closure.
 <!-- HERMES_AGENT_REPLACEMENT_CI_OBSERVATION_END -->
 
+<!-- HERMES_AGENT_GITHUB_CONNECTOR_CI_INTAKE_START -->
+## GitHub Connector CI Intake Rule
+
+When GitHub connector access exists, do not ask the operator to manually classify CI status first.
+
+Rules:
+
+```text
+connector observes subject commit status/runs
+no status prompt before connector observation
+no scope prompt before connector observation
+combined_status_count=0 and workflow_run_count=0 -> unknown, not pass
+green connector surface -> next may close wound, never same operation
+red connector surface -> ingest failed logs before repair
+pending connector surface -> wait or ingest final result
+```
+
+Human authorization is still required for the bounded All-One operation. The operator is not used as the CI parser.
+
+Non-claim lock: GitHub connector CI intake grants no repair authority and no autonomous wound closure.
+<!-- HERMES_AGENT_GITHUB_CONNECTOR_CI_INTAKE_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

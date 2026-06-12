@@ -1,0 +1,14 @@
+RHPCI-CONNECTOR [GOLD] status=unresolved
+`- GitHub connector CI evidence intake
+   +- subject-commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
+   +- combined-status-count: 0
+   +- workflow-run-count: 0
+   +- connector-observed-status: unknown
+   +- source-scope: github_connector_subject_commit
+   +- subject-scoped: true
+   +- replacement-ci-established: false
+   +- wound-closure-allowed-next: false
+   +- repair-allowed-next: false
+   +- classification: connector_replacement_ci_evidence_not_established
+   +- next: operator_rerun_or_ingest_replacement_ci_before_repair
+   `- authority: no grant [LOCKED]

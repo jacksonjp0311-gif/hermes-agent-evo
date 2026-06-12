@@ -1,0 +1,39 @@
+{
+  "schema": "RHP-GITHUB-CONNECTOR-CI-OBSERVATION-v0.1",
+  "operation": "RHP-019.1",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "connector_source": "chatgpt-github-connector-get_commit_combined_status-empty-and-fetch_commit_workflow_runs-empty",
+  "combined_status_count": 0,
+  "workflow_run_count": 0,
+  "connector_observed_status": "unknown",
+  "decision": {
+    "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+    "combined_status_count": 0,
+    "workflow_run_count": 0,
+    "connector_observed_status": "unknown",
+    "source_scope": "github_connector_subject_commit",
+    "subject_scoped": true,
+    "replacement_ci_established": false,
+    "wound_closure_allowed_next": false,
+    "failed_log_ingestion_required": false,
+    "repair_allowed_next": false,
+    "state_after_intake": "REPLACEMENT_CI_CONNECTOR_INTAKE_UNRESOLVED",
+    "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+    "classification": "connector_replacement_ci_evidence_not_established"
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "GitHub connector CI intake grants no repair authority and does not close the wound."
+}
