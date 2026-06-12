@@ -1,0 +1,14 @@
+RHPSTORY-AUDIT [GOLD] status=installed
+- README/evidence story coherence auditor v4
+   +- lane: observability
+   +- section-scoped: true
+   +- negation-aware: true
+   +- sentence-bounded-negation: true
+   +- story-audit-ok: true
+   +- audit-errors: 0
+   +- audit-warnings: 0
+   +- public-story-guard: active
+   +- observed-ci-status-preserved: unknown
+   +- inherited-subject-closed: false
+   +- next-operation: public_story_guard_required_before_readme_claim_changes
+   - authority: no grant [LOCKED]

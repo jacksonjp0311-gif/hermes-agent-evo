@@ -1,0 +1,17 @@
+{
+  "schema": "RHP-README-EVIDENCE-STORY-COHERENCE-AUDIT-v0.4",
+  "ok": true,
+  "section_scoped": true,
+  "negation_aware": true,
+  "sentence_bounded_negation": true,
+  "story_block_present": true,
+  "guard_block_present": true,
+  "finding_count": 0,
+  "error_count": 0,
+  "warning_count": 0,
+  "findings": [],
+  "latest_operation": "RHP-022.4",
+  "latest_evidence": "docs/context-layer/ops/RHP-022-4-final-evidence.json",
+  "evidence_operation": "RHP-022.4",
+  "non_claim_lock": "README story audit is scoped observability only. It does not repair, close wounds, claim green, or grant authority."
+}

@@ -4344,3 +4344,25 @@ grant_authority
 
 Non-claim lock: a valid manifest permits only the declared bounded mutation. It is not green status, wound closure, release, promotion, dependency mutation, destructive repair, or authority.
 <!-- RHP_OPERATION_MANIFEST_CONTRACT_END -->
+
+<!-- RHP_README_EVIDENCE_STORY_COHERENCE_AUDITOR_START -->
+## RHP README / Evidence Story Coherence Auditor
+
+RHP-022.5 protects the public story from outrunning sealed evidence.
+
+The README may explain the architecture, but it must not assert green status, wound closure, release completion, promotion, autonomous authority, or self-authorization unless those claims are backed by named evidence packets.
+
+The auditor is section-scoped, sentence-bounded, and negation-aware. It audits the live Hermes/RHP story block and story-coherence guard block as public claim surfaces. Archived or unrelated README text is not treated as a live story claim unless promoted into those guarded sections.
+
+The auditor checks that the README story contains the bounded identity:
+
+```text
+Hermes thinks and displays.
+RHP gates.
+All-One scripts act.
+Evidence remembers.
+The human authorizes.
+```
+
+Non-claim lock: public storytelling is allowed only when it remains evidence-bounded.
+<!-- RHP_README_EVIDENCE_STORY_COHERENCE_AUDITOR_END -->

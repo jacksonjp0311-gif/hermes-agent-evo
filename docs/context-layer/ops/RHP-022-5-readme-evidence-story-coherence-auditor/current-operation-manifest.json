@@ -1,0 +1,49 @@
+{
+  "schema": "RHP-OPERATION-MANIFEST-v0.1",
+  "operation": "RHP-022.5",
+  "lane": "observability",
+  "ci_state": "unknown",
+  "story": "Install a section-scoped README/evidence story coherence auditor so only live public story surfaces are audited as claims.",
+  "declared_files": [
+    "rhp/readme_story_coherence_auditor.py",
+    "tests/test_rhp_022_5_readme_story_coherence_auditor.py",
+    "README.md",
+    "AGENTS.md",
+    "docs/context-layer/ops/RHP-022-5-final-evidence.json"
+  ],
+  "allowed_mutations": [
+    "add section-scoped README story coherence auditor",
+    "add auditor tests",
+    "add README story coherence guard block",
+    "add AGENTS story coherence rule",
+    "update latest pointer and zero-context rebuild"
+  ],
+  "forbidden_actions": [
+    "claim_green",
+    "close_wound",
+    "release",
+    "promote",
+    "dependency_mutation",
+    "destructive_repair",
+    "grant_authority"
+  ],
+  "evidence_outputs": [
+    "docs/context-layer/ops/RHP-022-5-readme-evidence-story-coherence-auditor/current-operation-manifest.json",
+    "docs/context-layer/ops/RHP-022-5-readme-evidence-story-coherence-auditor/readme-story-coherence-audit.json",
+    "docs/context-layer/ops/RHP-022-5-final-evidence.json"
+  ],
+  "validation_commands": [
+    "python -m py_compile rhp/readme_story_coherence_auditor.py tests/test_rhp_022_5_readme_story_coherence_auditor.py",
+    "python -m pytest -o addopts= tests/test_rhp_022_5_readme_story_coherence_auditor.py",
+    "python -m rhp.evidence_api_compatibility_gate --repo-root ."
+  ],
+  "non_claim_locks": [
+    "does not claim green",
+    "does not close wounds",
+    "does not release",
+    "does not promote",
+    "does not mutate dependencies",
+    "does not perform destructive repair",
+    "does not grant authority"
+  ]
+}
