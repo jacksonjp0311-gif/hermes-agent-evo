@@ -1,0 +1,9 @@
+RHPFORWARD [GOLD] status=installed
+- forward progress governor
+   +- unresolved-ci-blocks: closure,release,promotion,green-claim
+   +- unresolved-ci-allows: documentation,canonization,adapter,tooling,observability,test_contract,operator_experience
+   +- observed-ci-status-preserved: unknown
+   +- repair-commit-preserved: c3957405b177d67dcf31b7690ae726c70b9651e5
+   +- inherited-subject-closed: false
+   +- next-operation: advance_orthogonal_system_capability_or_observe_ci_with_adapter
+   - authority: no grant [LOCKED]

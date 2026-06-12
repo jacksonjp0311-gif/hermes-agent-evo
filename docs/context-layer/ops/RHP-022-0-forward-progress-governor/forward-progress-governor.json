@@ -1,0 +1,42 @@
+﻿{
+    "schema":  "RHP-022.0-FORWARD-PROGRESS-GOVERNOR-v0.1",
+    "operation":  "RHP-022.0",
+    "installed_governor":  "rhp/forward_progress_governor.py",
+    "tests":  "tests/test_rhp_022_0_forward_progress_governor.py",
+    "core_rule":  "Unknown CI blocks closure/release/promotion/green claims but does not block orthogonal system advancement.",
+    "observed_ci_status_preserved":  "unknown",
+    "repair_commit_preserved":  "c3957405b177d67dcf31b7690ae726c70b9651e5",
+    "inherited_subject_closed":  false,
+    "allowed_unresolved_lanes":  [
+                                     "documentation",
+                                     "canonization",
+                                     "adapter",
+                                     "tooling",
+                                     "observability",
+                                     "test_contract",
+                                     "operator_experience"
+                                 ],
+    "blocked_unresolved_lanes":  [
+                                     "green_claim",
+                                     "wound_closure",
+                                     "release",
+                                     "promotion",
+                                     "dependency_mutation",
+                                     "destructive_repair"
+                                 ],
+    "authority_locks":  {
+                            "provider_call_executed":  false,
+                            "model_call_executed":  false,
+                            "tool_use_executed":  false,
+                            "cms_runtime_execution":  false,
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "memory_promotion":  false,
+                            "api_write":  false,
+                            "dependency_mutation_committed":  false,
+                            "external_ingestion":  false,
+                            "autonomous_authority":  false,
+                            "self_authorization":  false
+                        },
+    "non_claim_lock":  "Forward progress governor grants no authority, closes no wounds, and claims no green."
+}

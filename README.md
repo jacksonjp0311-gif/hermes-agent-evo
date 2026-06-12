@@ -4157,3 +4157,43 @@ The adapter is implemented at `rhp/ci_observation_adapter.py` and tested by `tes
 
 Non-claim lock: CI observation is evidence only; it grants no authority and closes no wounds.
 <!-- RHP_CANONICAL_CI_OBSERVATION_ADAPTER_END -->
+
+<!-- RHP_FORWARD_PROGRESS_GOVERNOR_START -->
+## RHP Forward Progress Governor
+
+RHP-022.0 installs the forward-progress rule that prevents the system from getting stuck in observation recursion.
+
+Core rule:
+
+```text
+Unknown CI blocks closure, release, promotion, dependency mutation, destructive repair, and green claims.
+Unknown CI does not block orthogonal system advancement.
+```
+
+Allowed advancement lanes while CI is unresolved:
+
+```text
+documentation
+canonization
+adapter
+tooling
+observability
+test_contract
+operator_experience
+```
+
+Blocked lanes while CI is unresolved:
+
+```text
+green_claim
+wound_closure
+release
+promotion
+dependency_mutation
+destructive_repair
+```
+
+The governor is implemented at `rhp/forward_progress_governor.py` and tested by `tests/test_rhp_022_0_forward_progress_governor.py`.
+
+Non-claim lock: forward progress is not wound closure, not release, and not a green claim.
+<!-- RHP_FORWARD_PROGRESS_GOVERNOR_END -->
