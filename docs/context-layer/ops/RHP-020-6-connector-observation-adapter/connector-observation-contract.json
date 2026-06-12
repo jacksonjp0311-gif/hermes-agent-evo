@@ -1,0 +1,38 @@
+{
+  "schema": "RHP-CONNECTOR-OBSERVATION-ADAPTER-CONTRACT-v0.1",
+  "required_observation_fields": [
+    "subject_commit",
+    "source",
+    "observed_status",
+    "observed_at_utc",
+    "observer",
+    "raw_reference",
+    "interpretation",
+    "authority_granted"
+  ],
+  "allowed_statuses": [
+    "success",
+    "failure",
+    "cancelled",
+    "pending",
+    "unknown"
+  ],
+  "forbidden_interpretations": [
+    "current_operation_green",
+    "wound_closed_without_subject_match",
+    "repair_authorized_by_connector",
+    "mutation_authorized_by_connector",
+    "model_authorized_by_connector",
+    "memory_promotion_authorized_by_connector"
+  ],
+  "rules": {
+    "connector_observes": true,
+    "connector_authorizes": false,
+    "observation_is_not_mutation": true,
+    "unknown_is_not_pass": true,
+    "pending_is_named_state": true,
+    "subject_commit_required": true,
+    "raw_reference_required": true
+  },
+  "non_claim_lock": "Connector observations are evidence inputs only; they grant no authority."
+}

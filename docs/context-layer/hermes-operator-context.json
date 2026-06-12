@@ -1,16 +1,15 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.10",
-  "latest_operation": "RHP-020.5",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.11",
+  "latest_operation": "RHP-020.6",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "evidence_graph_index": "rhp/evidence_graph_index.py",
+  "connector_observation_adapter": "rhp/connector_observation_adapter.py",
   "hermes_can": [
-    "navigate_sealed_rhp_proof_chain_from_evidence_graph",
-    "locate_operation_evidence_modules_tests_and_states",
-    "reject_loop_mutation_when_proof_chain_is_missing"
+    "route_github_api_observations_through_connector_observation_adapter",
+    "preserve_subject_commit_binding_for_ci_observations",
+    "classify_unknown_and_pending_without_claiming_pass"
   ],
   "hermes_cannot": [
-    "infer_proof_from_readme_alone_when_graph_exists",
-    "ignore_evidence_graph",
+    "treat_connector_observation_as_authority",
     "close_active_subject_wound",
     "execute_repair",
     "rerun_ci_without_authority",
@@ -32,5 +31,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Evidence graph index; no direct mutation or self-authorization."
+  "non_claim_lock": "Connector observation adapter; no direct mutation or self-authorization."
 }

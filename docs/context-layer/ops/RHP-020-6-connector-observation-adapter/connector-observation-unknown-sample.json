@@ -1,0 +1,11 @@
+{
+  "schema": "RHP-CONNECTOR-OBSERVATION-ADAPTER-CONTRACT-v0.1",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "source": "github-connector",
+  "observed_status": "unknown",
+  "observed_at_utc": "unknown_until_observed",
+  "observer": "RHP-020.6",
+  "raw_reference": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "interpretation": "No pass/fail claim. Observation unresolved.",
+  "authority_granted": false
+}

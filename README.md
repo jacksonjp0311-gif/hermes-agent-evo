@@ -123,20 +123,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 
 | Metric | Current value |
 |---|---|
-| Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
-| Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
-| Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-020-5-final-evidence.json` |
-| Current RHP status | `RHP-020.5 Evidence Graph Index sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-020-4-final-evidence.json` |
-| Previous RHP status | `RHP-020.4 Canonical All-One Template Emitter sealed` |
-| Current RHP state | `EVIDENCE_GRAPH_INDEX_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `CANONICAL_ALL_ONE_TEMPLATE_EMITTER_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-020-6-final-evidence.json` |
+| Current RHP status | `RHP-020.6 Connector Observation Adapter sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-020-5-final-evidence.json` |
+| Previous RHP status | `RHP-020.5 Evidence Graph Index sealed` |
+| Current RHP state | `CONNECTOR_OBSERVATION_ADAPTER_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `EVIDENCE_GRAPH_INDEX_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Evidence graph module | `rhp/evidence_graph_index.py` |
-| Evidence graph index | `docs/context-layer/ops/RHP-020-5-evidence-graph-index/evidence-graph-index.json` |
+| Connector observation adapter | `rhp/connector_observation_adapter.py` |
+| Connector observation contract | `docs/context-layer/ops/RHP-020-6-connector-observation-adapter/connector-observation-contract.json` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -1262,6 +1259,41 @@ RHPEVIDENCE-GRAPH [GOLD] status=<indexed|blocked>
 
 Non-claim lock: this graph indexes evidence only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_EVIDENCE_GRAPH_INDEX_END -->
+
+<!-- RHP_CONNECTOR_OBSERVATION_ADAPTER_START -->
+## RHP Connector Observation Adapter
+
+Connector observations may become evidence, but they do not grant authority.
+
+### Observation law
+
+```text
+A connector can observe.
+A connector cannot authorize.
+An observation is not a mutation.
+Unknown is not pass.
+Pending is a named state.
+Subject commit is required.
+Raw reference is required.
+```
+
+### Adapter panel
+
+```text
+RHPCONNECTOR-OBS [GOLD] status=<accepted|blocked>
+`- connector observation adapter contract
+   +- schema-ok: true|false
+   +- subject-ok: true|false
+   +- status-ok: true|false
+   +- field-contract-ok: true|false
+   +- authority-ok: true|false
+   +- interpretation-ok: true|false
+   +- blocking-reasons: <reasons|none>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: connector observations are evidence inputs only. They do not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_CONNECTOR_OBSERVATION_ADAPTER_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

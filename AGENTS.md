@@ -635,6 +635,27 @@ A future agent must not infer proof from README prose alone when evidence graph 
 Non-claim lock: the evidence graph grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_EVIDENCE_GRAPH_INDEX_END -->
 
+<!-- HERMES_AGENT_CONNECTOR_OBSERVATION_ADAPTER_START -->
+## Connector Observation Adapter Rule
+
+A future coding agent must route GitHub/API observations through the connector observation adapter before treating them as evidence.
+
+Required fields:
+
+- subject commit,
+- source,
+- observed status,
+- observation time,
+- observer,
+- raw reference,
+- interpretation,
+- authority granted flag.
+
+A connector observation must never authorize repair, mutation, wound closure, memory promotion, provider/model/tool authority, or current-operation CI green claims.
+
+Non-claim lock: connector observation grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_CONNECTOR_OBSERVATION_ADAPTER_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

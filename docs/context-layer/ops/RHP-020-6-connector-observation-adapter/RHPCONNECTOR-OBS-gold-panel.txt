@@ -1,0 +1,10 @@
+RHPCONNECTOR-OBS [GOLD] status=accepted
+`- connector observation adapter contract
+   +- schema-ok: true
+   +- subject-ok: true
+   +- status-ok: true
+   +- field-contract-ok: true
+   +- authority-ok: true
+   +- interpretation-ok: true
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]
