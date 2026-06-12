@@ -678,6 +678,22 @@ Unknown CI status is evidence of unresolved state, not pass.
 Non-claim lock: CI observation ingestion grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_SUBJECT_BOUND_CI_OBSERVATION_INGEST_END -->
 
+<!-- HERMES_AGENT_REPLACEMENT_GREEN_OBSERVATION_GATE_START -->
+## Replacement Green Observation Gate Rule
+
+A future coding agent must use the replacement green observation gate before any wound-closure proposal.
+
+The agent must reject green claims when:
+
+- subject commit does not match,
+- observed status is not `success`,
+- no status context or workflow run surface exists,
+- connector observation grants authority,
+- the same operation tries to validate green and close the wound.
+
+Non-claim lock: this gate grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_REPLACEMENT_GREEN_OBSERVATION_GATE_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

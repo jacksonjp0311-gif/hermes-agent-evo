@@ -1,0 +1,11 @@
+RHPGREEN-GATE [GOLD] status=waiting
+`- replacement green observation gate
+   +- subject-ok: true
+   +- source-ok: true
+   +- status-ok: false
+   +- evidence-surface-ok: false
+   +- authority-ok: true
+   +- no-closure-inside-gate-ok: true
+   +- eligible-for-future-closure: false
+   +- blocking-reasons: observed_status_not_success,no_status_context_or_workflow_run_surface
+   `- authority: no grant [LOCKED]

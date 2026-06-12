@@ -1334,6 +1334,25 @@ RHPCI-INGEST [GOLD] status=<ingested|blocked>
 Non-claim lock: subject-bound CI observation ingestion records evidence only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_SUBJECT_BOUND_CI_OBSERVATION_INGEST_END -->
 
+<!-- RHP_REPLACEMENT_GREEN_OBSERVATION_GATE_START -->
+## RHP Replacement Green Observation Gate
+
+The replacement green observation gate defines what future evidence must look like before a separate wound-closure operation can be considered.
+
+### Gate law
+
+```text
+Green observation must match the active subject commit.
+Green observation must come from the connector observation adapter.
+Green observation must have observed_status = success.
+Green observation must include at least one status context or workflow run surface.
+Green observation must grant no authority.
+This gate does not close the wound.
+```
+
+Non-claim lock: the gate validates future eligibility only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_REPLACEMENT_GREEN_OBSERVATION_GATE_END -->
+
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook
 

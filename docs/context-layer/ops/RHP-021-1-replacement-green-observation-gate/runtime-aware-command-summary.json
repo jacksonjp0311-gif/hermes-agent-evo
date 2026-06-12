@@ -1,0 +1,9 @@
+{
+  "schema": "RHP-RUNTIME-AWARE-COMMAND-SUMMARY-v2.1",
+  "operation": "RHP-021.1",
+  "total": 5,
+  "ok": 5,
+  "diagnostic_nonzero": 0,
+  "hard_failed": 0,
+  "non_claim_lock": "Diagnostic nonzero is classified separately from hard failure when valid evidence exists."
+}

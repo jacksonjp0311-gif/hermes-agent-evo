@@ -1,0 +1,34 @@
+{
+  "schema": "RHP-021.1-REPLACEMENT-GREEN-GATE-REPORT-v0.1",
+  "operation": "RHP-021.1",
+  "baseline_report": {
+    "ok": false,
+    "subject_ok": true,
+    "source_ok": true,
+    "status_ok": false,
+    "evidence_surface_ok": false,
+    "authority_ok": true,
+    "no_closure_inside_gate_ok": true,
+    "eligible_for_future_closure": false,
+    "blocking_reasons": [
+      "observed_status_not_success",
+      "no_status_context_or_workflow_run_surface"
+    ]
+  },
+  "baseline_expected_status": "waiting",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Replacement green observation gate grants no authority."
+}
