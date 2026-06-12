@@ -4126,3 +4126,34 @@ This is not arbitrary drift. It is a governed geometry evolution caused by faile
 
 Non-claim lock: runtime geometry canonization does not close wounds, rerun CI, grant authority, or claim green.
 <!-- RHP_RUNTIME_GEOMETRY_EVOLUTION_CANON_END -->
+
+<!-- RHP_CANONICAL_CI_OBSERVATION_ADAPTER_START -->
+## RHP Canonical CI Observation Adapter
+
+RHP-021.7 installs a reusable no-prompt CI observation adapter.
+
+The adapter classifies CI surfaces into exactly these evidence states:
+
+```text
+success
+failure
+cancelled
+pending
+unknown
+```
+
+Rules:
+
+```text
+No operator questions.
+No autonomous CI rerun.
+No wound closure.
+No green claim without a successful status/workflow surface.
+Unknown is a named evidence state.
+Failure dominates pending/success during merged observation.
+```
+
+The adapter is implemented at `rhp/ci_observation_adapter.py` and tested by `tests/test_rhp_021_7_ci_observation_adapter.py`.
+
+Non-claim lock: CI observation is evidence only; it grants no authority and closes no wounds.
+<!-- RHP_CANONICAL_CI_OBSERVATION_ADAPTER_END -->

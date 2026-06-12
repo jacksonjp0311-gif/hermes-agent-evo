@@ -1,0 +1,35 @@
+﻿{
+    "schema":  "RHP-021.7-CANONICAL-CI-OBSERVATION-ADAPTER-v0.1",
+    "operation":  "RHP-021.7",
+    "adapter":  "rhp/ci_observation_adapter.py",
+    "tests":  "tests/test_rhp_021_7_ci_observation_adapter.py",
+    "allowed_states":  [
+                           "success",
+                           "failure",
+                           "cancelled",
+                           "pending",
+                           "unknown"
+                       ],
+    "no_prompt":  true,
+    "no_rerun":  true,
+    "green_requires_surface":  true,
+    "failure_dominates_merge":  true,
+    "observed_ci_status_preserved":  "unknown",
+    "repair_commit_preserved":  "c3957405b177d67dcf31b7690ae726c70b9651e5",
+    "inherited_subject_closed":  false,
+    "authority_locks":  {
+                            "provider_call_executed":  false,
+                            "model_call_executed":  false,
+                            "tool_use_executed":  false,
+                            "cms_runtime_execution":  false,
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "memory_promotion":  false,
+                            "api_write":  false,
+                            "dependency_mutation_committed":  false,
+                            "external_ingestion":  false,
+                            "autonomous_authority":  false,
+                            "self_authorization":  false
+                        },
+    "non_claim_lock":  "Canonical CI observation adapter grants no authority and closes no wounds."
+}

@@ -1,0 +1,11 @@
+RHPCI-ADAPTER [GOLD] status=installed
+- canonical CI observation adapter
+   +- states: success,failure,cancelled,pending,unknown
+   +- no-prompt: true
+   +- no-rerun: true
+   +- green-requires-surface: true
+   +- failure-dominates-merge: true
+   +- observed-ci-status-preserved: unknown
+   +- inherited-subject-closed: false
+   +- next-operation: observe_current_operation_ci_with_canonical_adapter
+   - authority: no grant [LOCKED]
