@@ -1,0 +1,9 @@
+RHPGEN-CONTRACT [GOLD] status=accepted
+`- All-One generator contract
+   +- canonical-stage-order-ok: true
+   +- generation-rules-ok: true
+   +- forbidden-capabilities-ok: true
+   +- runtime-trace-contract-ok: true
+   +- authority-contract-ok: true
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]

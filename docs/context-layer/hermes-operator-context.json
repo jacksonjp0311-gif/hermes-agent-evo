@@ -1,14 +1,16 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.7",
-  "latest_operation": "RHP-020.2",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.8",
+  "latest_operation": "RHP-020.3",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "runtime_trace_drift_guard": "rhp/runtime_trace_drift_guard.py",
+  "all_one_generator_contract": "rhp/all_one_generator_contract.py",
   "hermes_can": [
-    "validate_runtime_trace_alignment_before_future_mutation",
-    "stop_when_readme_agents_code_or_evidence_disagree",
-    "preserve_exact_stage_to_script_trace"
+    "validate_future_all_one_scripts_against_generator_contract",
+    "reject_all_one_generation_without_canonical_runtime_order",
+    "reject_all_one_generation_without_exact_script_trace",
+    "reject_all_one_generation_without_runtime_trace_drift_guard"
   ],
   "hermes_cannot": [
+    "generate_all_one_from_vibes",
     "ignore_trace_drift",
     "compress_loop_into_vague_stages",
     "close_active_subject_wound",
@@ -32,5 +34,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Runtime trace drift guard; no direct mutation or self-authorization."
+  "non_claim_lock": "All-One generator contract; no direct mutation or self-authorization."
 }

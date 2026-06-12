@@ -126,17 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-020-2-final-evidence.json` |
-| Current RHP status | `RHP-020.2 Runtime Trace Drift Guard sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-020-1-final-evidence.json` |
-| Previous RHP status | `RHP-020.1 Exact Runtime Script Trace Map sealed` |
-| Current RHP state | `RUNTIME_TRACE_DRIFT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `EXACT_RUNTIME_SCRIPT_TRACE_MAP_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-020-3-final-evidence.json` |
+| Current RHP status | `RHP-020.3 All-One Generator Contract sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-020-2-final-evidence.json` |
+| Previous RHP status | `RHP-020.2 Runtime Trace Drift Guard sealed` |
+| Current RHP state | `ALL_ONE_GENERATOR_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `RUNTIME_TRACE_DRIFT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Runtime trace drift guard | `rhp/runtime_trace_drift_guard.py` |
-| Runtime trace guard evidence | `docs/context-layer/ops/RHP-020-2-runtime-trace-drift-guard/runtime-trace-drift-report.json` |
+| All-One generator contract | `rhp/all_one_generator_contract.py` |
+| Generator contract evidence | `docs/context-layer/ops/RHP-020-3-all-one-generator-contract/all-one-generator-contract.json` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -1131,6 +1131,65 @@ RHPTRACE-GUARD [GOLD] status=<aligned|blocked>
 
 Non-claim lock: this guard preserves trace alignment only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_RUNTIME_TRACE_DRIFT_GUARD_END -->
+
+<!-- RHP_ALL_ONE_GENERATOR_CONTRACT_START -->
+## RHP All-One Generator Contract
+
+Future All-One scripts must satisfy a generator contract before they are trusted.
+
+### Generator law
+
+```text
+No All-One script may be generated from vibes.
+No All-One script may omit canonical runtime order.
+No All-One script may omit exact stage-to-script trace.
+No All-One script may omit runtime trace drift guard.
+No All-One script may grant authority, close wounds, repair code, mutate dependencies, rerun CI, or claim current-operation CI green.
+```
+
+### Required generator contract
+
+```text
+exact_filename_gate
+root_anchor
+bounded_residue_manager
+preauth_pull_rebase
+exact_human_authorization_phrase
+generated_temp_python_helper
+repo_module_install
+focused_tests_install
+readme_agents_update
+runtime_trace_map_update
+runtime_trace_drift_guard
+py_compile
+focused_pytest
+evidence_api_compatibility_gate
+secret_shape_scan
+bounded_git_add
+commit_seal
+post_commit_pull_rebase
+push_seal
+post_seal_residue_check
+return_root
+human_ui_summary
+```
+
+### Contract panel
+
+```text
+RHPGEN-CONTRACT [GOLD] status=<accepted|blocked>
+`- All-One generator contract
+   +- canonical-stage-order-ok: true|false
+   +- generation-rules-ok: true|false
+   +- forbidden-capabilities-ok: true|false
+   +- runtime-trace-contract-ok: true|false
+   +- authority-contract-ok: true|false
+   +- blocking-reasons: <reasons|none>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: this contract governs future All-One generation only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_ALL_ONE_GENERATOR_CONTRACT_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

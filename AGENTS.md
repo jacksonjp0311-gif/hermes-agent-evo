@@ -558,6 +558,31 @@ A future All-One script must stop with RHPDIAG if these surfaces disagree about 
 Non-claim lock: runtime trace drift guarding grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_RUNTIME_TRACE_DRIFT_GUARD_END -->
 
+<!-- HERMES_AGENT_ALL_ONE_GENERATOR_CONTRACT_START -->
+## All-One Generator Contract Rule
+
+A future coding agent must not generate an All-One script unless it satisfies the generator contract.
+
+Before writing a new All-One, verify:
+
+- canonical 19-stage runtime order,
+- exact stage-to-script trace,
+- runtime trace drift guard compatibility,
+- bounded residue handling,
+- exact human authorization phrase,
+- focused tests,
+- evidence API gate,
+- secret-shape scan,
+- bounded git add,
+- post-seal residue check,
+- no authority grants,
+- no wound closure,
+- no repair execution,
+- no current-operation CI green claim.
+
+Non-claim lock: the All-One generator contract grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_ALL_ONE_GENERATOR_CONTRACT_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

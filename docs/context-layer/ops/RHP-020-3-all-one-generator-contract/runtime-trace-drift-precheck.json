@@ -1,0 +1,33 @@
+{
+  "schema": "RHP-020.3-RUNTIME-TRACE-DRIFT-PRECHECK-v0.2",
+  "operation": "RHP-020.3",
+  "source": "sealed-rhp-020-2-runtime-trace-drift-report",
+  "validated_previous_operation": "RHP-020.1",
+  "report": {
+    "ok": true,
+    "latest_ok": true,
+    "final_evidence_ok": true,
+    "trace_evidence_ok": true,
+    "module_ok": true,
+    "readme_ok": true,
+    "agents_ok": true,
+    "stage_count_ok": true,
+    "authority_ok": true,
+    "blocking_reasons": []
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Precheck consumes sealed drift evidence and grants no authority."
+}
