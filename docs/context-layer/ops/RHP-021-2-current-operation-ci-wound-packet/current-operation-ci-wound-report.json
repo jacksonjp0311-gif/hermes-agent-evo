@@ -1,0 +1,28 @@
+{
+  "schema": "RHP-021.2-CURRENT-OPERATION-CI-WOUND-REPORT-v0.1",
+  "operation": "RHP-021.2",
+  "report": {
+    "ok": true,
+    "current_operation_commit_ok": true,
+    "inherited_subject_preserved": true,
+    "ci_red_or_unresolved": true,
+    "wound_classes_ok": true,
+    "repair_not_executed": true,
+    "blocking_reasons": []
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Current operation CI wound report grants no authority."
+}

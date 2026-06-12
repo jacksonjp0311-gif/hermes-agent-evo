@@ -4045,3 +4045,26 @@ integration_closed = false
 
 Boundary: observation/reconciliation only. It does not rerun CI, execute repair, or grant authority.
 <!-- /RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
+
+<!-- RHP_CURRENT_OPERATION_CI_WOUND_PACKET_START -->
+## RHP Current Operation CI Wound Packet
+
+The current operation CI wound packet separates the inherited subject wound from the current operation commit's CI wounds.
+
+### Lineage separation
+
+```text
+inherited_subject_commit = ddb24363e2fac630e7527a2c9eab31e6df50db52
+current_operation_commit = 099264be31f0a329375a38fe49e8d0267016f045
+observed_current_operation_ci = failing / unresolved red
+```
+
+### Classified current-operation wounds
+
+```text
+zero_context_next_operation_contract_drift
+loop_geometry_legacy_api_drift
+```
+
+Non-claim lock: this packet records CI wounds only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_CURRENT_OPERATION_CI_WOUND_PACKET_END -->

@@ -2373,3 +2373,20 @@ RHP-016.3 rule: repair may patch the bounded browser supervisor import surface o
 <!-- RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
 RHP-016.4 rule: repair commit CI observations must name the subject commit. Green reconciles that subject only; red becomes a re-wound route; pending remains wait-state.
 <!-- /RHP_016_4_REPAIR_COMMIT_CI_OBSERVATION -->
+
+<!-- HERMES_AGENT_CURRENT_OPERATION_CI_WOUND_PACKET_START -->
+## Current Operation CI Wound Packet Rule
+
+A future coding agent must distinguish inherited subject wounds from current operation CI wounds.
+
+Do not confuse:
+
+- inherited subject commit,
+- current operation commit,
+- observed CI commit,
+- repair target commit.
+
+When Actions reveal test failures, first packetize the wounds before repair.
+
+Non-claim lock: current-operation CI wound packet grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_CURRENT_OPERATION_CI_WOUND_PACKET_END -->

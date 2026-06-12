@@ -1,0 +1,43 @@
+{
+  "schema": "RHP-CURRENT-OPERATION-CI-WOUND-PACKET-v0.1",
+  "operation": "RHP-021.2",
+  "current_operation_commit": "099264be31f0a329375a38fe49e8d0267016f045",
+  "inherited_subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "current_operation_ci_status": "failure",
+  "actions_runs": {
+    "lint": {
+      "run_id": 27437971840,
+      "conclusion": "success"
+    },
+    "docker": {
+      "run_id": 27437971817,
+      "conclusion": "skipped"
+    },
+    "tests": {
+      "run_id": 27437971828,
+      "conclusion": "failure",
+      "failed_jobs": [
+        "test (2)",
+        "test (5)",
+        "test (6)"
+      ]
+    },
+    "nix": {
+      "run_id": 27437971825,
+      "conclusion": "partial_or_in_progress_at_observation"
+    }
+  },
+  "failure_signals": [
+    "tests/test_rhp_018_15_zero_context_bootstrap.py:56 expected operator_rerun_or_ingest_replacement_ci_before_repair but runtime emits operator_rerun_ci_or_provide_replacement_green_subject_observation",
+    "tests/test_rhp_018_15_zero_context_bootstrap.py:64 expected operator_rerun_or_ingest_replacement_ci_before_repair but runtime emits operator_rerun_ci_or_provide_replacement_green_subject_observation",
+    "tests/test_rhp_014_7_loop_geometry.py:1 ImportError: from rhp.loop_geometry import geometry"
+  ],
+  "wound_classes": [
+    "zero_context_next_operation_contract_drift",
+    "loop_geometry_legacy_api_drift"
+  ],
+  "repair_execution_enabled": false,
+  "repair_executed": false,
+  "authority_granted": false,
+  "non_claim_lock": "This packet classifies current-operation CI wounds only; it grants no repair authority."
+}

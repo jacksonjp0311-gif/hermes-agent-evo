@@ -1,0 +1,10 @@
+RHPCI-WOUND [GOLD] status=packetized
+`- current operation CI wound packet
+   +- current-operation-commit-ok: true
+   +- inherited-subject-preserved: true
+   +- ci-red-or-unresolved: true
+   +- wound-classes-ok: true
+   +- repair-not-executed: true
+   +- wound-classes: zero_context_next_operation_contract_drift,loop_geometry_legacy_api_drift
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]
