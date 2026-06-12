@@ -4085,3 +4085,18 @@ The repair updates zero-context bootstrap tests to follow the live `latest-rhp.j
 
 Non-claim lock: this repair does not close the inherited subject wound, rerun CI, mutate dependencies, grant authority, or claim green.
 <!-- RHP_CONTRACT_DRIFT_REPAIR_END -->
+
+<!-- RHP_NO_PROMPT_OPERATOR_CONTRACT_START -->
+## RHP No-Prompt Operator Contract
+
+RHP-021.5 locks a permanent operator-experience rule:
+
+```text
+After authorization, an All-One script must not ask runtime questions.
+It must observe automatically, default to a named evidence state, or stop with RHPDIAG.
+```
+
+Allowed operator input after launch is limited to explicit authorization. CI status, workflow counts, commit state, repository state, and evidence facts must be derived from tools, local repo state, connector surfaces, or sealed as `unknown` / `pending`.
+
+Non-claim lock: no-prompt execution does not grant authority, close wounds, rerun CI, or claim green.
+<!-- RHP_NO_PROMPT_OPERATOR_CONTRACT_END -->

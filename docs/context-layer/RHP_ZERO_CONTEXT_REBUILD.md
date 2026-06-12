@@ -1,14 +1,15 @@
 # RHP Zero-Context Rebuild Packet
 
-- schema: RHP-ZERO-CONTEXT-REBUILD-v3.4
+- schema: RHP-ZERO-CONTEXT-REBUILD-v3.5
 - ok: True
 - latest operation: $Operation
-- latest evidence: docs/context-layer/ops/RHP-021-4-final-evidence.json
-- subject commit: $(@{schema=RHP-LATEST-POINTER-v2.1; latest_operation=RHP-021.4; latest_evidence=docs/context-layer/ops/RHP-021-4-final-evidence.json; operation_base_commit=099264be31f0a329375a38fe49e8d0267016f045; observed_previous_sealed_commit=ddb24363e2fac630e7527a2c9eab31e6df50db52; subject_commit=ddb24363e2fac630e7527a2c9eab31e6df50db52; observed_ci_status=unknown; ci_source=automatic-post-repair-ci-observation; repaired_wound_class=readiness_gate_install; active_wound_class=current_operation_ci_contract_drift_repaired_pending_observation; inherited_subject_wound_class=readiness_gate_install; prior_blocking_state=REPLACEMENT_GREEN_OBSERVATION_GATE_ALIGNED_SUBJECT_UNRESOLVED; state=POST_REPAIR_CI_OBSERVED_UNKNOWN; integration_closed=False; current_operation_commit=c3957405b177d67dcf31b7690ae726c70b9651e5; current_operation_remote_ci_status=unknown; next_operation=observe_current_operation_ci_after_contract_drift_repair; zero_context_rebuild=docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md; authority_ok=True}.subject_commit)
+- latest evidence: docs/context-layer/ops/RHP-021-5-final-evidence.json
+- subject commit: $SubjectCommit
 - repair commit: $RepairCommit
 - observed CI status: $ObservedStatus
 - state: $State
 - integration closed: False
 - next operation: $NextOperation
+- no-prompt operator contract: hp/no_prompt_operator_contract.py
 
 Non-claim lock: Zero-context rebuild grants no authority.

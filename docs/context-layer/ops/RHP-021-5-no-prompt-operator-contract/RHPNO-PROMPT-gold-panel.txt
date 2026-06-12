@@ -1,0 +1,10 @@
+RHPNO-PROMPT [GOLD] status=installed
+- no-prompt operator contract
+   +- authorization-mode: inline -Authorize parameter
+   +- runtime-questions-after-auth: forbidden
+   +- fallback: named unknown/pending evidence
+   +- observed-ci-status-preserved: unknown
+   +- repair-commit-preserved: c3957405b177d67dcf31b7690ae726c70b9651e5
+   +- inherited-subject-closed: false
+   +- next-operation: observe_current_operation_ci_after_contract_drift_repair
+   - authority: no grant [LOCKED]
