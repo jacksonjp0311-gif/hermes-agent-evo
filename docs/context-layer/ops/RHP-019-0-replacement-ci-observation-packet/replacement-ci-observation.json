@@ -1,0 +1,32 @@
+{
+  "schema": "RHP-REPLACEMENT-CI-OBSERVATION-v0.1",
+  "operation": "RHP-019.0",
+  "observation": {
+    "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+    "observed_status": "unknown",
+    "source": "github-connector-no-combined-status-or-workflow-runs-for-active-subject",
+    "source_scope": "unknown",
+    "evidence_note": "Connector returned no combined status and no workflow_runs for the active subject commit; replacement CI not established.",
+    "subject_scoped": false,
+    "replacement_ci_established": false,
+    "wound_closure_allowed_next": false,
+    "repair_allowed_next": false,
+    "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+    "classification": "replacement_ci_not_established"
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Replacement CI observation grants no authority."
+}

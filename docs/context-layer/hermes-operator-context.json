@@ -1,28 +1,16 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.2",
-  "latest_operation": "RHP-018.15",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.3",
+  "latest_operation": "RHP-019.0",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "zero_context_bootstrap": "rhp/zero_context_bootstrap.py",
-  "source_order": [
-    "README.md",
-    "AGENTS.md",
-    "docs/context-layer/latest-rhp.json",
-    "latest_evidence",
-    "docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md",
-    "docs/context-layer/hermes-operator-context.json",
-    "rhp/loop_geometry.py"
-  ],
+  "replacement_ci_observation": "rhp/replacement_ci_observer.py",
   "hermes_can": [
-    "validate_zero_context_bootstrap",
-    "validate_loop_geometry_before_runtime_changes",
-    "load_README_canonical_runtime_run_block",
-    "render_RHPZERO_rehydration_panel",
-    "ask_operator_for_subject_commit_replacement_ci_or_remaining_failed_logs"
+    "observe_subject_scoped_replacement_ci",
+    "classify_green_red_pending_unknown_replacement_ci",
+    "preserve_active_wound_until_next_authorized_operation",
+    "ask_operator_for_failed_replacement_ci_logs_if_red"
   ],
   "hermes_cannot": [
-    "act_from_memory_without_repository_bootstrap",
-    "skip_latest_rhp_or_latest_evidence",
-    "silently_add_remove_or_reorder_loop_stages",
+    "close_active_subject_wound_in_same_observation_operation",
     "execute_repair",
     "rerun_ci_without_authority",
     "self_authorize",
@@ -44,5 +32,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Read-only orientation; no direct mutation or self-authorization."
+  "non_claim_lock": "Read-only observation; no direct mutation or self-authorization."
 }

@@ -1,10 +1,10 @@
-RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-018.15 | status=ok tone=gold
-`- zero-context AI bootstrap contract installed
+RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-019.0 | status=ok tone=gold
+`- replacement CI observation packet installed
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- zero-context report: docs/context-layer/ops/RHP-018-15-zero-context-ai-bootstrap-contract/zero-context-bootstrap-report.json
-   +- geometry-ok: true
-   +- authority-ok: true
+   +- observed status: unknown
+   +- subject scoped: false
+   +- replacement CI established: false
+   +- wound closure allowed next: false
    +- repair basis: false
-   +- replacement CI required: true
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair

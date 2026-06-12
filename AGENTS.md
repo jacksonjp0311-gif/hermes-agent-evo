@@ -431,6 +431,29 @@ no mutation occurs without human-authorized All-One
 Non-claim lock: zero-context bootstrap grants no authority and does not override RHPREADY, RHPDIAG, RHPDROP, human authorization, or CI evidence.
 <!-- HERMES_AGENT_ZERO_CONTEXT_BOOTSTRAP_END -->
 
+<!-- HERMES_AGENT_REPLACEMENT_CI_OBSERVATION_START -->
+## Replacement CI Observation Rule
+
+Before repairing or closing the active `readiness_gate_install` wound, require a subject-scoped replacement CI observation for:
+
+```text
+ddb24363e2fac630e7527a2c9eab31e6df50db52
+```
+
+Rules:
+
+```text
+green + subject_commit scope -> next operation may close wound
+red + subject_commit scope -> ingest failed replacement CI logs before repair
+pending + subject_commit scope -> wait or ingest final result
+unknown/non-subject scope -> replacement CI not established
+```
+
+Do not treat current-operation green, local tests, or unrelated workflow success as replacement CI for the active subject.
+
+Non-claim lock: replacement CI observation grants no repair authority and no autonomous wound closure.
+<!-- HERMES_AGENT_REPLACEMENT_CI_OBSERVATION_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 
