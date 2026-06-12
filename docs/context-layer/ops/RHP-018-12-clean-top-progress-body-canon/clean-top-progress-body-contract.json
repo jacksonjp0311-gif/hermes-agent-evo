@@ -1,0 +1,115 @@
+{
+  "schema": "RHP-CLEAN-TOP-PROGRESS-BODY-CONTRACT-v0.1",
+  "progress_contract": {
+    "schema": "RHP-RUNTIME-PROGRESS-CONSOLE-CONTRACT-v0.5",
+    "requires_percent": true,
+    "requires_global_top_progress": true,
+    "requires_concise_settled_sections": true,
+    "body_inline_bars_allowed": false,
+    "body_spinner_allowed": false,
+    "body_frame_spam_allowed": false,
+    "preferred_runtime_surface": "PowerShell Write-Progress",
+    "motion_rule": "Use one global top progress surface, then emit concise settled loop panels. Do not print inline [#---] bars or spin= frames in the body.",
+    "stage_order": [
+      {
+        "stage": "ENTRYPOINT-GATE",
+        "percent": 5
+      },
+      {
+        "stage": "ROOT-ANCHOR",
+        "percent": 10
+      },
+      {
+        "stage": "RESIDUE-MANAGER",
+        "percent": 15
+      },
+      {
+        "stage": "PREAUTH-PULL",
+        "percent": 20
+      },
+      {
+        "stage": "RHPLOOP-RUNTIME",
+        "percent": 25
+      },
+      {
+        "stage": "HUMAN-AUTHORIZATION",
+        "percent": 30
+      },
+      {
+        "stage": "RHPREADY",
+        "percent": 35
+      },
+      {
+        "stage": "OPERATION-START",
+        "percent": 40
+      },
+      {
+        "stage": "RHPLOOP-DOCTOR",
+        "percent": 50
+      },
+      {
+        "stage": "RHPLOOP-SELF-LEARNING",
+        "percent": 60
+      },
+      {
+        "stage": "VALIDATION",
+        "percent": 70
+      },
+      {
+        "stage": "SECRET-SCAN",
+        "percent": 78
+      },
+      {
+        "stage": "COMMIT-SEAL",
+        "percent": 84
+      },
+      {
+        "stage": "PUSH-SEAL",
+        "percent": 90
+      },
+      {
+        "stage": "RHPDROP",
+        "percent": 94
+      },
+      {
+        "stage": "RHPREFLECT",
+        "percent": 97
+      },
+      {
+        "stage": "POST-SEAL-RESIDUE",
+        "percent": 98
+      },
+      {
+        "stage": "RETURN-ROOT",
+        "percent": 99
+      },
+      {
+        "stage": "HUMAN-UI-SUMMARY",
+        "percent": 100
+      }
+    ],
+    "non_claim_lock": "Progress console contract changes operator visibility only and grants no authority."
+  },
+  "global_progress_contract": {
+    "schema": "RHP-GLOBAL-TOP-PROGRESS-CONTRACT-v0.2",
+    "preferred_runtime_surface": "PowerShell Write-Progress",
+    "console_rule": "One moving top progress bar plus concise settled panels; no inline body bars; no spin= body spam.",
+    "requires_percent": true,
+    "requires_current_stage": true,
+    "requires_status": true,
+    "requires_concise_settled_sections": true,
+    "body_inline_bars_allowed": false,
+    "body_spinner_allowed": false,
+    "non_claim_lock": "Global top progress is operator UX only and grants no authority."
+  },
+  "body_inline_bars_allowed": false,
+  "body_spinner_allowed": false,
+  "full_loop_required": [
+    "RHPLOOP-DOCTOR",
+    "RHPLOOP-SELF-LEARNING",
+    "RHPDROP",
+    "RHPREFLECT",
+    "HUMAN-UI-SUMMARY"
+  ],
+  "non_claim_lock": "Clean body rendering is operator UX only and grants no authority."
+}

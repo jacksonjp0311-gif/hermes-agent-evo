@@ -1,0 +1,2 @@
+RHPLOAD [060%] loop=RHPLOOP-SELF-LEARNING operation=RHP-018.12 | status=runtime-checkpoint tone=gold
+`- self-learning checkpoint before reflection and human summary

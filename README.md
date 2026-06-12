@@ -126,12 +126,12 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-11-final-evidence.json` |
-| Current RHP status | `RHP-018.11 V4 Top Progress Console Canon sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-10-final-evidence.json` |
-| Previous RHP status | `RHP-018.10 Runtime Loop Order Canon sealed` |
-| Current RHP state | `RUNTIME_PROGRESS_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `RUNTIME_LOOP_ORDER_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-12-final-evidence.json` |
+| Current RHP status | `RHP-018.12 Clean Top Progress Body Canon sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-11-final-evidence.json` |
+| Previous RHP status | `RHP-018.11 Top Progress Console Canon sealed` |
+| Current RHP state | `CLEAN_TOP_PROGRESS_BODY_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `RUNTIME_PROGRESS_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
@@ -650,6 +650,59 @@ If Self-Learning occurs, it must have its own progress checkpoint before Reflect
 
 Non-claim lock: progress console canon changes operator visibility only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_RUNTIME_PROGRESS_CONSOLE_CANON_END -->
+
+
+<!-- RHP_CLEAN_TOP_PROGRESS_BODY_CANON_START -->
+## RHP Clean Top Progress Body Canon
+
+RHP progress has two surfaces:
+
+```text
+1. Motion surface:
+   One global top progress bar, preferably PowerShell Write-Progress.
+
+2. Body surface:
+   Concise settled loop panels with no inline [#---] bars and no spin= frame spam.
+```
+
+### Correct body shape
+
+```text
+RHPLOAD [060%] loop=RHPLOOP-SELF-LEARNING operation=<operation> | status=runtime-checkpoint tone=gold
+`- lesson checkpoint before reflection and human summary
+```
+
+### Forbidden body shapes
+
+```text
+`- [#-----------------] detail
+RHPLOAD [060%] spin=| loop=...
+one printed line per animation tick
+```
+
+### Top-progress law
+
+```text
+Motion belongs at the top.
+Evidence belongs in the body.
+Reflection belongs before the human summary.
+The body must not be a progress-bar dump.
+```
+
+Required runtime body order remains:
+
+```text
+RHPLOOP-DOCTOR
+RHPLOOP-SELF-LEARNING
+RHPDROP
+RHPREFLECT
+POST-SEAL-RESIDUE
+RETURN-ROOT
+HUMAN-UI-SUMMARY
+```
+
+Non-claim lock: this canon changes operator visibility only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_CLEAN_TOP_PROGRESS_BODY_CANON_END -->
 
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->

@@ -1,0 +1,29 @@
+{
+  "schema": "RHP-018.12-alignment-verification",
+  "operation": "RHP-018.12",
+  "progress_module": "rhp/progress_console.py",
+  "progress_tests": "tests/test_rhp_018_12_clean_top_progress_body.py",
+  "clean_sequence_panel": "docs/context-layer/ops/RHP-018-12-clean-top-progress-body-canon/RHPLOAD-clean-settled-sequence-panel.txt",
+  "self_learning_clean_panel": "docs/context-layer/ops/RHP-018-12-clean-top-progress-body-canon/RHPLOOP-SELF-LEARNING-clean-body-panel.txt",
+  "readme_section_present": true,
+  "agents_section_present": true,
+  "body_inline_bars_allowed": false,
+  "body_spinner_allowed": false,
+  "active_wound_preserved": true,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "repair_execution_enabled": false,
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  }
+}

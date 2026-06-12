@@ -1,14 +1,16 @@
 {
   "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.1",
-  "latest_operation": "RHP-018.11",
+  "latest_operation": "RHP-018.12",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
   "hermes_can": [
-    "render_RHPLOAD_percent_spinner_loadbar_panels",
-    "render_self_learning_progress_checkpoint_before_reflection",
-    "explain_progress_console_contract",
+    "render_single_top_progress_surface",
+    "render_clean_settled_body_panels_without_inline_bars",
+    "preserve_RHPLOOP_DOCTOR_SELF_LEARNING_RHPDROP_RHPREFLECT_SUMMARY",
     "ask_operator_for_subject_commit_replacement_ci_or_remaining_failed_logs"
   ],
   "hermes_cannot": [
+    "print_inline_body_progress_bars",
+    "print_spin_frame_spam_in_body",
     "execute_repair",
     "rerun_ci",
     "self_authorize",

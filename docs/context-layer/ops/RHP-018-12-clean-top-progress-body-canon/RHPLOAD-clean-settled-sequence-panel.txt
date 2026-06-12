@@ -1,0 +1,38 @@
+RHPLOAD [005%] loop=ENTRYPOINT-GATE operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [010%] loop=ROOT-ANCHOR operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [015%] loop=RESIDUE-MANAGER operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [020%] loop=PREAUTH-PULL operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [025%] loop=RHPLOOP-RUNTIME operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only
+RHPLOAD [030%] loop=HUMAN-AUTHORIZATION operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [035%] loop=RHPREADY operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only
+RHPLOAD [040%] loop=OPERATION-START operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [050%] loop=RHPLOOP-DOCTOR operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only
+RHPLOAD [060%] loop=RHPLOOP-SELF-LEARNING operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only
+RHPLOAD [070%] loop=VALIDATION operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [078%] loop=SECRET-SCAN operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [084%] loop=COMMIT-SEAL operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [090%] loop=PUSH-SEAL operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [094%] loop=RHPDROP operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only
+RHPLOAD [097%] loop=RHPREFLECT operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only
+RHPLOAD [098%] loop=POST-SEAL-RESIDUE operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [099%] loop=RETURN-ROOT operation=RHP-018.12 | status=checkpoint tone=green
+`- settled checkpoint; motion is top progress only
+RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-018.12 | status=checkpoint tone=gold
+`- settled checkpoint; motion is top progress only

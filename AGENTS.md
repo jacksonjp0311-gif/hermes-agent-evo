@@ -295,6 +295,43 @@ Non-claim lock: progress rendering is operator UX and grants no authority.
 <!-- HERMES_AGENT_RUNTIME_PROGRESS_CONSOLE_CANON_END -->
 
 
+<!-- HERMES_AGENT_CLEAN_TOP_PROGRESS_BODY_CANON_START -->
+## Clean Top Progress Body Rules for Coding Agents
+
+Use exactly one moving top progress surface. Do not print a new body line for every animation tick.
+
+Allowed:
+
+```text
+Write-Progress -Activity <operation> -Status <stage> -PercentComplete <percent>
+
+RHPLOAD [060%] loop=RHPLOOP-SELF-LEARNING operation=<operation> | status=runtime-checkpoint tone=gold
+`- lesson checkpoint before reflection and human summary
+```
+
+Forbidden in body output:
+
+```text
+[#-----------------]
+spin=
+one line per animation frame
+static progress bar pretending to be motion
+```
+
+Future All-One scripts must keep the full loop visible without making the console noisy:
+
+```text
+RHPLOOP-DOCTOR
+RHPLOOP-SELF-LEARNING
+RHPDROP
+RHPREFLECT
+HUMAN-UI-SUMMARY
+```
+
+Non-claim lock: clean progress-body rendering is operator UX only and grants no authority.
+<!-- HERMES_AGENT_CLEAN_TOP_PROGRESS_BODY_CANON_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 
