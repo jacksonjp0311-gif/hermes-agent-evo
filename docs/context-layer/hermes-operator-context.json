@@ -1,17 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.5",
-  "latest_operation": "RHP-020.0",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.6",
+  "latest_operation": "RHP-020.1",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "loop_tool_registry": "rhp/loop_tool_registry.py",
-  "loop_simulator": "rhp/loop_simulator.py",
+  "runtime_script_trace_map": "rhp/runtime_script_trace_map.py",
   "hermes_can": [
-    "register_loop_tools_with_authority_tiers",
-    "simulate_candidate_loop_transitions_before_mutation",
-    "allow_loop_tooling_while_active_wound_is_preserved",
-    "block_feature_evolution_under_active_wound"
+    "validate_exact_stage_to_script_trace",
+    "require_runtime_trace_map_updates_when_loop_changes",
+    "reject_all_one_generation_without_exact_script_trace"
   ],
   "hermes_cannot": [
-    "treat_registered_tools_as_authority",
+    "compress_loop_into_vague_stages",
+    "omit_python_helper_path",
+    "omit_raw_artifact_paths",
+    "omit_repo_evidence_paths",
     "close_active_subject_wound",
     "execute_repair",
     "rerun_ci_without_authority",
@@ -33,5 +34,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Loop tooling and simulation; no direct mutation or self-authorization."
+  "non_claim_lock": "Exact runtime trace preservation; no direct mutation or self-authorization."
 }

@@ -516,6 +516,29 @@ authority_expansion
 Non-claim lock: loop tool registration and simulation grant no repair authority and no autonomous wound closure.
 <!-- HERMES_AGENT_LOOP_TOOL_REGISTRY_AND_SIMULATOR_END -->
 
+<!-- HERMES_AGENT_EXACT_RUNTIME_SCRIPT_TRACE_MAP_START -->
+## Exact Runtime Script Trace Map Rule
+
+Every future All-One script must preserve both:
+
+1. canonical runtime order, and
+2. exact stage-to-script trace.
+
+A future coding agent must not generate an All-One script unless it can answer for every stage:
+
+- exact PowerShell script path,
+- exact runtime Python helper path,
+- exact repo Python module path,
+- launch location,
+- working directory before and after,
+- raw artifact path,
+- repo evidence path,
+- next stage,
+- forbidden actions.
+
+Non-claim lock: script-trace preservation grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_EXACT_RUNTIME_SCRIPT_TRACE_MAP_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

@@ -1,0 +1,14 @@
+RHPSCRIPT-TRACE [GOLD] status=resolved
+`- exact runtime script trace map
+   +- operation: RHP-020.1
+   +- all-one-script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1
+   +- launch-location: $env:USERPROFILE\Downloads
+   +- repo-root: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo
+   +- runtime-helper: $env:TEMP\RHP-020-1-python-streams\rhp_020_1_exact_runtime_script_trace_map.py
+   +- installed-module: rhp/runtime_script_trace_map.py
+   +- focused-tests: tests/test_rhp_020_1_runtime_script_trace_map.py
+   +- evidence-location: docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/
+   +- final-evidence: docs/context-layer/ops/RHP-020-1-final-evidence.json
+   +- stage-count: 19
+   +- exact-script-bound: true
+   `- authority: no grant [LOCKED]

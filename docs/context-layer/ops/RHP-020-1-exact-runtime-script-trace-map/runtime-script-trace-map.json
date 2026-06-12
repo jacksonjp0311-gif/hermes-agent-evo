@@ -1,0 +1,588 @@
+{
+  "schema": "RHP-RUNTIME-SCRIPT-TRACE-MAP-v0.1",
+  "operation": "RHP-020.1",
+  "all_one_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+  "launch_location": "$env:USERPROFILE\\Downloads",
+  "repo_root": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+  "runtime_helper": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+  "installed_module": "rhp/runtime_script_trace_map.py",
+  "focused_tests": "tests/test_rhp_020_1_runtime_script_trace_map.py",
+  "evidence_location": "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/",
+  "final_evidence": "docs/context-layer/ops/RHP-020-1-final-evidence.json",
+  "stage_count": 19,
+  "exact_script_bound": true,
+  "stage_order": [
+    "ENTRYPOINT-GATE",
+    "ROOT-ANCHOR",
+    "RESIDUE-MANAGER",
+    "PREAUTH-PULL",
+    "RHPLOOP-RUNTIME",
+    "HUMAN-AUTHORIZATION",
+    "RHPREADY",
+    "OPERATION-START",
+    "RHPLOOP-DOCTOR",
+    "RHPLOOP-SELF-LEARNING",
+    "VALIDATION",
+    "SECRET-SCAN",
+    "COMMIT-SEAL",
+    "PUSH-SEAL",
+    "RHPDROP",
+    "RHPREFLECT",
+    "POST-SEAL-RESIDUE",
+    "RETURN-ROOT",
+    "HUMAN-UI-SUMMARY"
+  ],
+  "stages": [
+    {
+      "stage": "ENTRYPOINT-GATE",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "$env:USERPROFILE\\Downloads",
+      "working_directory_after": "$env:USERPROFILE\\Downloads",
+      "commands": [],
+      "purpose": "Verify exact All-One filename and prevent pasted/dot-sourced execution.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [
+        "$env:TEMP\\RHP-020-1-python-streams\\entrypoint-gate.txt"
+      ],
+      "repo_evidence": [],
+      "next_stage": "ROOT-ANCHOR",
+      "forbidden": [
+        "continue if filename mismatch or no file invocation"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "ROOT-ANCHOR",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "$env:USERPROFILE\\Downloads",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git rev-parse --show-toplevel"
+      ],
+      "purpose": "Force the operation into the expected Hermes repository root.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [
+        "$env:TEMP\\RHP-020-1-python-streams\\root-anchor.txt"
+      ],
+      "repo_evidence": [],
+      "next_stage": "RESIDUE-MANAGER",
+      "forbidden": [
+        "continue from wrong repo root"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "RESIDUE-MANAGER",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git status --short",
+        "git restore --worktree --staged -- <bounded RHP-020.1 paths only>",
+        "git clean -fd -- <bounded RHP-020.1 paths only>"
+      ],
+      "purpose": "Classify dirty tree and clean only bounded failed-run RHP-020.1 residue.",
+      "writes_repo": "false, except bounded cleanup of failed-run residue",
+      "writes_remote": false,
+      "raw_artifacts": [
+        "$env:TEMP\\RHP-020-1-python-streams\\residue-manager.txt"
+      ],
+      "repo_evidence": [],
+      "next_stage": "PREAUTH-PULL",
+      "forbidden": [
+        "auto-clean unknown dirty paths"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "PREAUTH-PULL",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git pull --rebase origin main"
+      ],
+      "purpose": "Sync remote main before authorization.",
+      "writes_repo": "false, except git rebase metadata if remote changed",
+      "writes_remote": false,
+      "raw_artifacts": [
+        "$env:TEMP\\RHP-020-1-python-streams\\pull-rebase-preauth.txt"
+      ],
+      "repo_evidence": [],
+      "next_stage": "RHPLOOP-RUNTIME",
+      "forbidden": [
+        "continue after failed pull/rebase"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "RHPLOOP-RUNTIME",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Announce bounded operation and runtime contract.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [],
+      "next_stage": "HUMAN-AUTHORIZATION",
+      "forbidden": [
+        "begin mutation before authorization"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "panel": "RHPLOOP-RUNTIME [GOLD]"
+    },
+    {
+      "stage": "HUMAN-AUTHORIZATION",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Require exact human authorization phrase.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [],
+      "next_stage": "RHPREADY",
+      "forbidden": [
+        "mutation before exact phrase"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "input": "I AUTHORIZE RHP-020.1 EXACT RUNTIME SCRIPT TRACE MAP"
+    },
+    {
+      "stage": "RHPREADY",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell launching Python",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [
+        "rhp/evolution_readiness_gate.py"
+      ],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "python -m rhp.evolution_readiness_gate --repo-root . --candidate-operation-class diagnostic --current-head-ci-status unknown --ci-source github-connector --allow-dirty --out docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/rhpready-diagnostic-runtime.json --box-out docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/RHPREADY-diagnostic-runtime.txt"
+      ],
+      "purpose": "Verify the operation is legal from sealed state.",
+      "writes_repo": "diagnostic evidence only",
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/rhpready-diagnostic-runtime.json",
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/RHPREADY-diagnostic-runtime.txt"
+      ],
+      "next_stage": "OPERATION-START",
+      "forbidden": [
+        "treat diagnostic nonzero as hard failure if valid evidence exists"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "OPERATION-START",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell launching generated Python helper",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [
+        "rhp/runtime_script_trace_map.py"
+      ],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Start bounded helper operation and write the exact runtime script trace map.",
+      "writes_repo": true,
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/"
+      ],
+      "next_stage": "RHPLOOP-DOCTOR",
+      "forbidden": [
+        "scope creep beyond declared paths"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "focused_test_written": "tests/test_rhp_020_1_runtime_script_trace_map.py"
+    },
+    {
+      "stage": "RHPLOOP-DOCTOR",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [
+        "rhp/rhpload_doctor.py",
+        "rhp/doctor_cli.py",
+        "rhp/loop_doctor.py"
+      ],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "python -m rhp.doctor_cli --repo-root . --current-head-ci-status unknown --ci-source github-connector --out docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/doctor-cli-readonly-runtime.json"
+      ],
+      "purpose": "Read, inspect, classify, summarize blocked reasons, and propose next lawful operation.",
+      "writes_repo": "diagnostic evidence only",
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/doctor-cli-readonly-runtime.json"
+      ],
+      "next_stage": "RHPLOOP-SELF-LEARNING",
+      "forbidden": [
+        "repair or close wound"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "panel": "RHPLOOP-DOCTOR [GOLD]"
+    },
+    {
+      "stage": "RHPLOOP-SELF-LEARNING",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [
+        "rhp/runtime_script_trace_map.py"
+      ],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Record the validated lesson that every runtime loop stage must name the exact script and Python module that executes it.",
+      "writes_repo": "documentation/evidence only",
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/runtime-script-trace-map.json"
+      ],
+      "next_stage": "VALIDATION",
+      "forbidden": [
+        "autonomous memory promotion or authority expansion"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "panel": "RHPLOOP-SELF-LEARNING [GOLD]"
+    },
+    {
+      "stage": "VALIDATION",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python subprocess",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [
+        "rhp/runtime_script_trace_map.py",
+        "tests/test_rhp_020_1_runtime_script_trace_map.py",
+        "rhp/evidence_api_compatibility_gate.py"
+      ],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "python -m py_compile rhp/runtime_script_trace_map.py tests/test_rhp_020_1_runtime_script_trace_map.py",
+        "python -m pytest -o addopts= tests/test_rhp_020_1_runtime_script_trace_map.py",
+        "python -m rhp.evidence_api_compatibility_gate --repo-root . --out docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/evidence-api-gate-after-runtime-script-trace-map.json"
+      ],
+      "purpose": "Compile code, run focused tests, and validate evidence API compatibility.",
+      "writes_repo": "validation raw outputs and evidence JSON",
+      "writes_remote": false,
+      "raw_artifacts": [
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/py-compile-runtime-script-trace-map.txt",
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/focused-tests-runtime-script-trace-map.txt",
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/evidence-api-gate-after-runtime-script-trace-map.json"
+      ],
+      "repo_evidence": [],
+      "next_stage": "SECRET-SCAN",
+      "forbidden": [
+        "commit without validation evidence"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "SECRET-SCAN",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python subprocess",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git diff --cached -U0"
+      ],
+      "purpose": "Scan staged diff before commit.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [
+        "$env:TEMP\\RHP-020-1-python-streams\\secret-scan-diff.txt"
+      ],
+      "repo_evidence": [],
+      "next_stage": "COMMIT-SEAL",
+      "forbidden": [
+        "commit if secret-like material is detected",
+        "PRIVATE KEY",
+        "github_pat_",
+        "ghp_",
+        "AKIA*"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "COMMIT-SEAL",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python subprocess",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git add README.md AGENTS.md rhp/runtime_script_trace_map.py tests/test_rhp_020_1_runtime_script_trace_map.py docs/context-layer/latest-rhp.json docs/context-layer/RHP_ZERO_CONTEXT_REBUILD.md docs/context-layer/rhp_zero_context_rebuild.json docs/context-layer/operator-dashboard.txt docs/context-layer/hermes-operator-context.json docs/context-layer/ops/RHP-020-1-final-evidence.json docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map",
+        "git commit -m \"rhp: add exact runtime script trace map\""
+      ],
+      "purpose": "Seal bounded evidence and code/doc changes locally.",
+      "writes_repo": "git commit only",
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [],
+      "next_stage": "PUSH-SEAL",
+      "forbidden": [
+        "commit unbounded residue"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "PUSH-SEAL",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python subprocess",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git pull --rebase origin main",
+        "git push origin main"
+      ],
+      "purpose": "Publish sealed commit to remote.",
+      "writes_repo": false,
+      "writes_remote": true,
+      "raw_artifacts": [],
+      "repo_evidence": [],
+      "next_stage": "RHPDROP",
+      "forbidden": [
+        "claim remote CI green for current operation commit"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "RHPDROP",
+      "executing_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "Python",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [
+        "rhp/runtime_loop.py"
+      ],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Summarize command records and raw artifact index.",
+      "writes_repo": "runtime-aware-command-summary.json before commit if part of evidence; temp only after seal",
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [
+        "docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/runtime-aware-command-summary.json"
+      ],
+      "next_stage": "RHPREFLECT",
+      "forbidden": [
+        "hide raw command artifacts"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "panel": "RHPDROP [closed]"
+    },
+    {
+      "stage": "RHPREFLECT",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1\n$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "executing_language": "PowerShell panel + Python evidence writer",
+      "python_script": "$env:TEMP\\RHP-020-1-python-streams\\rhp_020_1_exact_runtime_script_trace_map.py",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Summarize what happened, what it means, what remains blocked, and next legal operation.",
+      "writes_repo": "final evidence and operator dashboard before commit; terminal panel after push",
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [
+        "docs/context-layer/ops/RHP-020-1-final-evidence.json",
+        "docs/context-layer/operator-dashboard.txt"
+      ],
+      "next_stage": "POST-SEAL-RESIDUE",
+      "forbidden": [
+        "claim wound closure or repair basis"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "panel": "RHPREFLECT [GOLD]"
+    },
+    {
+      "stage": "POST-SEAL-RESIDUE",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [
+        "git status --short"
+      ],
+      "purpose": "Verify working tree is clean after commit and push.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [
+        "$env:TEMP\\RHP-020-1-python-streams\\post-seal-residue.txt"
+      ],
+      "repo_evidence": [],
+      "next_stage": "RETURN-ROOT",
+      "forbidden": [
+        "continue if repo residue exists"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "RETURN-ROOT",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "any",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Restore operator to repo root.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [],
+      "next_stage": "HUMAN-UI-SUMMARY",
+      "forbidden": [
+        "leave operator in Downloads/temp/helper path"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false
+    },
+    {
+      "stage": "HUMAN-UI-SUMMARY",
+      "executing_script": "$env:USERPROFILE\\Downloads\\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1",
+      "executing_language": "PowerShell",
+      "python_script": "none",
+      "repo_modules": [],
+      "launch_location": "$env:USERPROFILE\\Downloads",
+      "working_directory_before": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "working_directory_after": "C:/Users/jacks/OneDrive/Desktop/hermes-agent-evo",
+      "commands": [],
+      "purpose": "Final operator-readable result.",
+      "writes_repo": false,
+      "writes_remote": false,
+      "raw_artifacts": [],
+      "repo_evidence": [],
+      "next_stage": "none",
+      "forbidden": [
+        "imply current operation CI is green"
+      ],
+      "grants_authority": false,
+      "closes_wound": false,
+      "repairs_code": false,
+      "claims_current_operation_ci_green": false,
+      "output": [
+        "latest operation",
+        "current state",
+        "active wound",
+        "subject commit",
+        "repair basis",
+        "blocked actions",
+        "next legal operation",
+        "exact script trace map location"
+      ],
+      "panel": "HUMAN-UI-SUMMARY [GOLD]"
+    }
+  ],
+  "non_claim_lock": "Exact runtime script trace map grants no authority."
+}
