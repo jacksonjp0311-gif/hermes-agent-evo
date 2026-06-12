@@ -1,0 +1,10 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-9.0.2, pluggy-1.6.0
+rootdir: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo
+configfile: pyproject.toml
+plugins: anyio-4.12.1
+collected 6 items
+
+tests\test_rhp_020_4_all_one_template_emitter.py ......                  [100%]
+
+============================== 6 passed in 0.47s ==============================

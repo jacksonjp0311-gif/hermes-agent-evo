@@ -1,0 +1,34 @@
+# RHP Canonical All-One Template Skeleton
+
+param()
+
+$ErrorActionPreference = 'Continue'
+$Operation = '<RHP-XXX.Y>'
+$ExpectedScriptName = '<EXACT_ALL_ONE_FILENAME.ps1>'
+$AuthPhrase = '<EXACT HUMAN AUTHORIZATION PHRASE>'
+$Root = Join-Path $env:USERPROFILE 'OneDrive\\Desktop\\hermes-agent-evo'
+$TempDir = Join-Path $env:TEMP '<RHP-XXX-Y-python-streams>'
+
+# STAGE 01 ENTRYPOINT-GATE: exact filename + file invocation only
+# STAGE 02 ROOT-ANCHOR: git rev-parse --show-toplevel must equal repo root
+# STAGE 03 RESIDUE-MANAGER: clean only bounded failed-run residue
+# STAGE 04 PREAUTH-PULL: git pull --rebase origin main before authorization
+# STAGE 05 RHPLOOP-RUNTIME: announce bounded operation contract
+# STAGE 06 HUMAN-AUTHORIZATION: exact phrase required before mutation
+# STAGE 07 RHPREADY: diagnostic evidence only
+# STAGE 08 OPERATION-START: generated temp Python helper writes bounded files
+# STAGE 09 RHPLOOP-DOCTOR: read/classify/propose only
+# STAGE 10 RHPLOOP-SELF-LEARNING: evidence-gated lesson only
+# STAGE 11 VALIDATION: py_compile, focused pytest, evidence API gate
+# STAGE 12 SECRET-SCAN: secret-shape scan only
+# STAGE 13 COMMIT-SEAL: bounded git add + commit
+# STAGE 14 PUSH-SEAL: pull --rebase + push
+# STAGE 15 RHPDROP: runtime-aware command summary
+# STAGE 16 RHPREFLECT: explain happened/meaning/remaining blocker/next
+# STAGE 17 POST-SEAL-RESIDUE: git status --short must be clean
+# STAGE 18 RETURN-ROOT: restore repo root
+# STAGE 19 HUMAN-UI-SUMMARY: final operator-readable state
+
+# NON-CLAIM LOCK:
+# This template grants no authority, closes no wound, repairs no code, mutates no dependencies,
+# reruns no CI, and does not claim current-operation CI green.

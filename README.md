@@ -126,17 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-020-3-final-evidence.json` |
-| Current RHP status | `RHP-020.3 All-One Generator Contract sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-020-2-final-evidence.json` |
-| Previous RHP status | `RHP-020.2 Runtime Trace Drift Guard sealed` |
-| Current RHP state | `ALL_ONE_GENERATOR_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `RUNTIME_TRACE_DRIFT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-020-4-final-evidence.json` |
+| Current RHP status | `RHP-020.4 Canonical All-One Template Emitter sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-020-3-final-evidence.json` |
+| Previous RHP status | `RHP-020.3 All-One Generator Contract sealed` |
+| Current RHP state | `CANONICAL_ALL_ONE_TEMPLATE_EMITTER_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `ALL_ONE_GENERATOR_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| All-One generator contract | `rhp/all_one_generator_contract.py` |
-| Generator contract evidence | `docs/context-layer/ops/RHP-020-3-all-one-generator-contract/all-one-generator-contract.json` |
+| Canonical template emitter | `rhp/all_one_template_emitter.py` |
+| Template emitter evidence | `docs/context-layer/ops/RHP-020-4-canonical-all-one-template-emitter/all-one-template-emitter.json` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -1190,6 +1190,38 @@ RHPGEN-CONTRACT [GOLD] status=<accepted|blocked>
 
 Non-claim lock: this contract governs future All-One generation only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_ALL_ONE_GENERATOR_CONTRACT_END -->
+
+<!-- RHP_CANONICAL_ALL_ONE_TEMPLATE_EMITTER_START -->
+## RHP Canonical All-One Template Emitter
+
+Future All-One scripts must be emitted from the canonical template shape, not reconstructed from memory or chat style.
+
+### Template emitter law
+
+```text
+No future All-One script may be generated unless the generator contract is already sealed.
+No future All-One script may omit the 19-stage runtime order.
+No future All-One script may omit exact stage-to-script trace.
+No future All-One script may omit runtime trace drift guard.
+No future All-One script may omit validation, secret-shape scan, bounded git add, post-seal residue, and return-root.
+```
+
+### Template panel
+
+```text
+RHPTEMPLATE-EMIT [GOLD] status=<emitted|blocked>
+`- canonical All-One template emitter
+   +- stage-order-ok: true|false
+   +- required-sections-ok: true|false
+   +- generator-contract-ok: true|false
+   +- forbidden-actions-ok: true|false
+   +- authority-ok: true|false
+   +- blocking-reasons: <reasons|none>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: this emitter preserves script shape only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_CANONICAL_ALL_ONE_TEMPLATE_EMITTER_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

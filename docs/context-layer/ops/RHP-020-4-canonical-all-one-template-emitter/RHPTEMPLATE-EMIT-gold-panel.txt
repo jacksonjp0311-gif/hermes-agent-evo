@@ -1,0 +1,9 @@
+RHPTEMPLATE-EMIT [GOLD] status=emitted
+`- canonical All-One template emitter
+   +- stage-order-ok: true
+   +- required-sections-ok: true
+   +- generator-contract-ok: true
+   +- forbidden-actions-ok: true
+   +- authority-ok: true
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]

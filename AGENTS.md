@@ -583,6 +583,36 @@ Before writing a new All-One, verify:
 Non-claim lock: the All-One generator contract grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_ALL_ONE_GENERATOR_CONTRACT_END -->
 
+<!-- HERMES_AGENT_CANONICAL_ALL_ONE_TEMPLATE_EMITTER_START -->
+## Canonical All-One Template Emitter Rule
+
+A future coding agent must emit All-One scripts from the canonical template shape.
+
+The agent must preserve:
+
+- exact filename gate,
+- root anchor,
+- bounded residue manager,
+- preauthorization pull/rebase,
+- exact human authorization phrase,
+- generated temp Python helper,
+- runtime trace map update,
+- runtime trace drift guard,
+- doctor and self-learning panels,
+- py_compile,
+- focused pytest,
+- evidence API compatibility gate,
+- secret-shape scan,
+- bounded git add,
+- commit/pull-rebase/push seal,
+- post-seal residue check,
+- return-root,
+- human UI summary,
+- non-claim lock.
+
+Non-claim lock: the template emitter grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_CANONICAL_ALL_ONE_TEMPLATE_EMITTER_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 
