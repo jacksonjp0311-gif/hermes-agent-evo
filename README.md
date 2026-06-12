@@ -4287,3 +4287,60 @@ Closure is never allowed inside the lane gate. Green claims, release, promotion,
 
 Non-claim lock: lane-gate permission is not wound closure, release, promotion, dependency mutation, or green status.
 <!-- RHP_LANE_DECLARATION_GATE_END -->
+
+<!-- HERMES_RHP_STORY_START -->
+## The Hermes / RHP Story
+
+This repository is the working record of a governed self-improvement architecture.
+
+The project began as an attempt to make AI-assisted coding stop drifting, stop inventing state, and stop losing the thread between sessions. The answer became RHP: a rehydration and evidence protocol where every meaningful change must anchor itself to repository truth, declare its authority boundary, emit evidence, and preserve unresolved wounds instead of hiding them.
+
+The architecture now separates roles:
+
+```text
+Hermes thinks and displays.
+RHP gates.
+All-One scripts act.
+Evidence remembers.
+The human authorizes.
+```
+
+The core idea is Evidence-Gated Reflexive Computation: frozen AI models can participate in cumulative operational adaptation without mutating their own weights or granting themselves authority. Failures become structured evidence. Evidence becomes gates. Gates become tools. Tools shape future execution.
+
+This repository is therefore not just code. It is a governed proof-state machine for safe AI-assisted software evolution.
+<!-- HERMES_RHP_STORY_END -->
+
+<!-- RHP_OPERATION_MANIFEST_CONTRACT_START -->
+## RHP Operation Manifest Contract
+
+RHP-022.4 requires every future All-One operation to emit a machine-readable operation manifest before mutation.
+
+Required manifest fields:
+
+```text
+operation
+lane
+ci_state
+story
+declared_files
+allowed_mutations
+forbidden_actions
+evidence_outputs
+validation_commands
+non_claim_locks
+```
+
+The manifest must pass the lane declaration gate and must explicitly forbid:
+
+```text
+claim_green
+close_wound
+release
+promote
+dependency_mutation
+destructive_repair
+grant_authority
+```
+
+Non-claim lock: a valid manifest permits only the declared bounded mutation. It is not green status, wound closure, release, promotion, dependency mutation, destructive repair, or authority.
+<!-- RHP_OPERATION_MANIFEST_CONTRACT_END -->

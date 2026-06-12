@@ -1,0 +1,49 @@
+{
+  "schema": "RHP-OPERATION-MANIFEST-v0.1",
+  "operation": "RHP-022.4",
+  "lane": "canonization",
+  "ci_state": "unknown",
+  "story": "Install a pre-mutation operation manifest contract and update the README story layer so future All-One scripts declare what they are doing before they act.",
+  "declared_files": [
+    "rhp/operation_manifest_contract.py",
+    "tests/test_rhp_022_4_operation_manifest_contract.py",
+    "README.md",
+    "AGENTS.md",
+    "docs/context-layer/ops/RHP-022-4-final-evidence.json"
+  ],
+  "allowed_mutations": [
+    "add operation manifest contract module",
+    "add manifest contract tests",
+    "add README story and manifest contract blocks",
+    "add AGENTS manifest gate rule",
+    "update latest pointer and zero-context rebuild"
+  ],
+  "forbidden_actions": [
+    "claim_green",
+    "close_wound",
+    "release",
+    "promote",
+    "dependency_mutation",
+    "destructive_repair",
+    "grant_authority"
+  ],
+  "evidence_outputs": [
+    "docs/context-layer/ops/RHP-022-4-operation-manifest-contract/current-operation-manifest.json",
+    "docs/context-layer/ops/RHP-022-4-operation-manifest-contract/current-operation-manifest-validation.json",
+    "docs/context-layer/ops/RHP-022-4-final-evidence.json"
+  ],
+  "validation_commands": [
+    "python -m py_compile rhp/operation_manifest_contract.py tests/test_rhp_022_4_operation_manifest_contract.py",
+    "python -m pytest -o addopts= tests/test_rhp_022_4_operation_manifest_contract.py",
+    "python -m rhp.evidence_api_compatibility_gate --repo-root ."
+  ],
+  "non_claim_locks": [
+    "does not claim green",
+    "does not close wounds",
+    "does not release",
+    "does not promote",
+    "does not mutate dependencies",
+    "does not perform destructive repair",
+    "does not grant authority"
+  ]
+}

@@ -1,0 +1,12 @@
+RHPMANIFEST [GOLD] status=installed
+- operation manifest contract
+   +- lane: canonization
+   +- story-required: true
+   +- declared-files-required: true
+   +- validation-commands-required: true
+   +- forbidden-actions-required: true
+   +- README-story-layer: updated
+   +- observed-ci-status-preserved: unknown
+   +- inherited-subject-closed: false
+   +- next-operation: all_future_operations_require_manifest_before_mutation
+   - authority: no grant [LOCKED]
