@@ -55,7 +55,7 @@ class ZeroContextBootstrapReport:
 
 
 def _read_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def authority_false_map(data: Mapping[str, Any]) -> dict[str, bool]:

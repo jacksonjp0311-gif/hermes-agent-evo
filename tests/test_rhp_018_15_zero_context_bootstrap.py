@@ -12,6 +12,9 @@ from rhp.zero_context_bootstrap import (
 )
 
 
+def _latest_next_operation():
+    return json.loads(Path("docs/context-layer/latest-rhp.json").read_text(encoding="utf-8-sig"))["next_operation"]
+
 def _authority_locks():
     return {key: False for key in REQUIRED_AUTHORITY_FALSE_KEYS}
 
@@ -53,7 +56,7 @@ def test_validate_current_repository_zero_context_bootstrap():
     assert report.loop_geometry_loaded
     assert report.geometry_ok
     assert report.authority_ok
-    assert report.next_operation == "operator_rerun_or_ingest_replacement_ci_before_repair"
+    assert report.next_operation == _latest_next_operation()
 
 
 def test_render_zero_context_panel_contains_locks_and_next():
@@ -61,7 +64,7 @@ def test_render_zero_context_panel_contains_locks_and_next():
     panel = render_zero_context_panel(report)
     assert "RHPZERO [GOLD]" in panel
     assert "authority: no grant [LOCKED]" in panel
-    assert "next: operator_rerun_or_ingest_replacement_ci_before_repair" in panel
+    assert f"next: {_latest_next_operation()}" in panel
 
 
 def test_report_to_dict_is_json_serializable():

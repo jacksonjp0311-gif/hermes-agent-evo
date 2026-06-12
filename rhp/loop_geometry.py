@@ -152,3 +152,17 @@ def render_geometry_panel(report: GeometryReport, *, operation: str) -> str:
         "   `- authority: no grant [LOCKED]",
     ]
     return "\n".join(lines)
+def geometry() -> dict:
+    """Legacy compatibility surface for pre-runtime-geometry tests."""
+    return {
+        "schema": "RHP-LOOP-GEOMETRY-v0.1",
+        "axes": [
+            "evidence",
+            "authority",
+            "runtime",
+            "residue",
+            "reflection",
+        ],
+        "boundary": "human authorization",
+        "adaptation_rule": "AI may propose bounded tools; only human authorization may cross the boundary.",
+    }

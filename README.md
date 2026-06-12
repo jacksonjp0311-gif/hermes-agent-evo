@@ -4068,3 +4068,20 @@ loop_geometry_legacy_api_drift
 
 Non-claim lock: this packet records CI wounds only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_CURRENT_OPERATION_CI_WOUND_PACKET_END -->
+
+<!-- RHP_CONTRACT_DRIFT_REPAIR_START -->
+## RHP Contract Drift Repair
+
+RHP-021.3 repairs four current-operation CI/evidence-contract wounds descended from the RHP-021.2 packet:
+
+```text
+zero_context_next_operation_contract_drift
+loop_geometry_legacy_api_drift
+zero_context_bom_json_loader_drift
+evidence_api_bom_pointer_loader_drift
+```
+
+The repair updates zero-context bootstrap tests to follow the live `latest-rhp.json` `next_operation` value, restores `rhp.loop_geometry.geometry()` as a backward-compatible read-only adapter, and makes zero-context plus evidence API JSON loading BOM-tolerant.
+
+Non-claim lock: this repair does not close the inherited subject wound, rerun CI, mutate dependencies, grant authority, or claim green.
+<!-- RHP_CONTRACT_DRIFT_REPAIR_END -->

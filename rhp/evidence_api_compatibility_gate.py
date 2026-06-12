@@ -84,9 +84,9 @@ def _authority_not_false(data: dict[str, Any]) -> list[str]:
 def gate(repo_root: str | Path = ".", latest_pointer: str = "docs/context-layer/latest-rhp.json") -> dict[str, Any]:
     root = Path(repo_root)
     pointer_path = root / latest_pointer
-    pointer = json.loads(pointer_path.read_text(encoding="utf-8"))
+    pointer = json.loads(pointer_path.read_text(encoding="utf-8-sig"))
     evidence_path = root / pointer["latest_evidence"]
-    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8-sig"))
 
     missing_pointer = _check_required(pointer, PUBLIC_REQUIRED_LATEST_POINTER)
     missing_evidence = _check_required(evidence, PUBLIC_REQUIRED_FINAL_EVIDENCE)

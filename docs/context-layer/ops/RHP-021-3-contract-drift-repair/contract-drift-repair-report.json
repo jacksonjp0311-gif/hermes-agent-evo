@@ -1,0 +1,40 @@
+﻿{
+    "schema":  "RHP-021.3-CONTRACT-DRIFT-REPAIR-REPORT-v0.4",
+    "operation":  "RHP-021.3",
+    "repaired_wound_classes":  [
+                                   "zero_context_next_operation_contract_drift",
+                                   "loop_geometry_legacy_api_drift",
+                                   "zero_context_bom_json_loader_drift",
+                                   "evidence_api_bom_pointer_loader_drift"
+                               ],
+    "lineage_before_auth":  {
+                                "local_head":  "0fe53c6b7c7d35167272a7effe3ba06850ef987c",
+                                "remote_head":  "0fe53c6b7c7d35167272a7effe3ba06850ef987c",
+                                "merge_base":  "0fe53c6b7c7d35167272a7effe3ba06850ef987c",
+                                "local_only":  0,
+                                "remote_only":  0
+                            },
+    "focused_tests":  [
+                          "tests/test_rhp_014_7_loop_geometry.py",
+                          "tests/test_rhp_018_15_zero_context_bootstrap.py",
+                          "tests/test_rhp_021_3_contract_drift_repair.py"
+                      ],
+    "evidence_api_gate_passed":  true,
+    "repair_executed":  true,
+    "inherited_subject_closed":  false,
+    "authority_locks":  {
+                            "provider_call_executed":  false,
+                            "model_call_executed":  false,
+                            "tool_use_executed":  false,
+                            "cms_runtime_execution":  false,
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "memory_promotion":  false,
+                            "api_write":  false,
+                            "dependency_mutation_committed":  false,
+                            "external_ingestion":  false,
+                            "autonomous_authority":  false,
+                            "self_authorization":  false
+                        },
+    "non_claim_lock":  "Contract drift repair report grants no autonomous authority."
+}

@@ -1,0 +1,11 @@
+RHPCONTRACT-REPAIR [GOLD] status=applied
+- human-authorized contract drift repair V4
+   +- zero-context-next-operation-contract-drift: repaired
+   +- loop-geometry-legacy-api-drift: repaired
+   +- zero-context-bom-json-loader-drift: repaired
+   +- evidence-api-bom-pointer-loader-drift: repaired
+   +- focused-tests: passed
+   +- evidence-api-gate: passed
+   +- repair-executed: true
+   +- inherited-subject-closed: false
+   - authority: human-authorized / no autonomous grant [LOCKED]
