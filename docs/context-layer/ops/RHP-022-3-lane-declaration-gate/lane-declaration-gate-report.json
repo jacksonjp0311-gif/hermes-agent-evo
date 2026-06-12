@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "RHP-022.3-LANE-DECLARATION-GATE-v0.1",
+    "operation":  "RHP-022.3",
+    "installed_gate":  "rhp/lane_declaration_gate.py",
+    "tests":  "tests/test_rhp_022_3_lane_declaration_gate.py",
+    "current_operation_lane":  "canonization",
+    "current_ci_state":  "unknown",
+    "required_fields":  [
+                            "operation",
+                            "lane",
+                            "ci_state",
+                            "mutation_requested",
+                            "closure_requested"
+                        ],
+    "current_operation_gate_proof":  "docs/context-layer/ops/RHP-022-3-lane-declaration-gate/current-operation-lane-gate-proof.json",
+    "repair_commit_preserved":  "c3957405b177d67dcf31b7690ae726c70b9651e5",
+    "inherited_subject_closed":  false,
+    "authority_locks":  {
+                            "provider_call_executed":  false,
+                            "model_call_executed":  false,
+                            "tool_use_executed":  false,
+                            "cms_runtime_execution":  false,
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "memory_promotion":  false,
+                            "api_write":  false,
+                            "dependency_mutation_committed":  false,
+                            "external_ingestion":  false,
+                            "autonomous_authority":  false,
+                            "self_authorization":  false
+                        },
+    "non_claim_lock":  "Lane declaration gate grants no authority, closes no wounds, and claims no green."
+}

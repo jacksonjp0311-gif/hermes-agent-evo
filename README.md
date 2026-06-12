@@ -4257,3 +4257,33 @@ The auditor distinguishes error-level coherence breaks from warning-level lineag
 
 Non-claim lock: lineage audit is observability only; it does not repair, close wounds, claim green, or grant authority.
 <!-- RHP_POINTER_EVIDENCE_LINEAGE_AUDITOR_END -->
+
+<!-- RHP_LANE_DECLARATION_GATE_START -->
+## RHP Lane Declaration Gate
+
+RHP-022.3 installs the hard gate for advancement lanes.
+
+Every future operation must declare, before mutation:
+
+```text
+operation
+lane
+ci_state
+mutation_requested
+closure_requested
+```
+
+The gate evaluates the declaration through `rhp.advancement_lane_registry` and returns:
+
+```text
+lane_kind
+allowed
+mutation_allowed
+closure_allowed
+reason
+```
+
+Closure is never allowed inside the lane gate. Green claims, release, promotion, dependency mutation, destructive repair, and wound closure remain blocked while CI is unresolved.
+
+Non-claim lock: lane-gate permission is not wound closure, release, promotion, dependency mutation, or green status.
+<!-- RHP_LANE_DECLARATION_GATE_END -->

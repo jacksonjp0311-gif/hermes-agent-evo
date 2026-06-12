@@ -1,0 +1,10 @@
+RHPLANE-GATE [GOLD] status=installed
+- lane declaration gate
+   +- required-fields: operation,lane,ci_state,mutation_requested,closure_requested
+   +- current-operation-lane: canonization
+   +- current-ci-state: unknown
+   +- mutation-allowed: true
+   +- closure-allowed: false
+   +- inherited-subject-closed: false
+   +- next-operation: all_future_operations_require_lane_gate
+   - authority: no grant [LOCKED]

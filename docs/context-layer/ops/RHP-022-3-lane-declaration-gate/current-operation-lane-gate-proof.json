@@ -1,0 +1,24 @@
+{
+  "schema": "RHP-022.3-LANE-GATE-PROOF-v0.1",
+  "declaration": {
+    "schema": "RHP-LANE-DECLARATION-v0.1",
+    "operation": "RHP-022.3",
+    "lane": "canonization",
+    "ci_state": "unknown",
+    "mutation_requested": true,
+    "closure_requested": false
+  },
+  "gate_result": {
+    "schema": "RHP-LANE-DECLARATION-GATE-RESULT-v0.1",
+    "operation": "RHP-022.3",
+    "lane": "canonization",
+    "ci_state": "unknown",
+    "allowed": true,
+    "lane_kind": "orthogonal",
+    "mutation_allowed": true,
+    "closure_allowed": false,
+    "reason": "orthogonal_lane_allowed_with_open_wound_preserved",
+    "missing_fields": [],
+    "non_claim_lock": "Lane gate permission is not wound closure, release, promotion, or green status."
+  }
+}
