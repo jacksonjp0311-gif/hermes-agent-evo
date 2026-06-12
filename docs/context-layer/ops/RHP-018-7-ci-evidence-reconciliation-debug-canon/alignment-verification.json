@@ -1,0 +1,26 @@
+{
+  "schema": "RHP-018.7-alignment-verification-v0.2",
+  "operation": "RHP-018.7",
+  "readme_debug_canon_present": true,
+  "agents_debug_canon_present": true,
+  "required_stages_present": true,
+  "rhpready_diagnostic_valid": true,
+  "active_subject_closed": false,
+  "active_wound_preserved": true,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "repair_execution_enabled": false,
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  }
+}

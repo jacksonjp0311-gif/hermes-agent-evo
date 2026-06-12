@@ -94,6 +94,54 @@ Non-claim lock: this section is an AI handoff rule surface. It grants no runtime
 <!-- HERMES_AGENT_RHP_OPERATOR_BOOTSTRAP_END -->
 
 
+<!-- HERMES_AGENT_VISIBLE_DEBUG_LOOP_CANON_START -->
+## Visible Debug Loop Canon for Coding Agents
+
+Do not compress All-One execution into a small number of opaque messages. Named RHP stages are debugging primitives.
+
+Required rule:
+
+```text
+If a script can fail, it needs a named RHP stage.
+If a stage can fail, it needs a raw artifact.
+If a raw artifact exists, the terminal should show an RHPDIAG box.
+If the operation seals, the final state must update latest-rhp.json.
+```
+
+Minimum stage vocabulary for future All-One work:
+
+```text
+ENTRYPOINT-GATE
+ROOT-ANCHOR
+RESIDUE-MANAGER
+PREAUTH-PULL
+HUMAN-AUTHORIZATION
+RHPREADY
+OPERATION-START
+RHPDROP
+RHPDIAG
+VALIDATION
+SECRET-SCAN
+COMMIT-SEAL
+PUSH-SEAL
+POST-SEAL-RESIDUE
+RETURN-ROOT
+```
+
+Agent behavior:
+
+| Situation | Required behavior |
+|---|---|
+| A command can fail | Give it a named stage. |
+| A stage fails | Save raw output to an artifact. |
+| A known/classifiable failure occurs | Render an `RHPDIAG` box instead of a raw traceback. |
+| The operation commits/pushes | Move post-seal command streams to temp only. |
+| The operation changes state | Update `docs/context-layer/latest-rhp.json` and final evidence. |
+
+Non-claim lock: this section is an observability and debugging rule. It grants no runtime, provider, model, tool, CMS, memory, API, external ingestion, or autonomous authority.
+<!-- HERMES_AGENT_VISIBLE_DEBUG_LOOP_CANON_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

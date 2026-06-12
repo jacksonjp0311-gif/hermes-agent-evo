@@ -1,0 +1,29 @@
+{
+  "schema": "RHP-COMPACT-COMMAND-SUMMARY-v1.4",
+  "operation": "RHP-018.7",
+  "group": "operation-commands",
+  "total": 3,
+  "ok": 3,
+  "failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "command": "git rev-parse HEAD",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-7-ci-evidence-reconciliation-debug-canon\\operation-base-commit.txt"
+    },
+    {
+      "stage": "rhpready-diagnostic",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evolution_readiness_gate --repo-root . --candidate-operation-class diagnostic --current-head-ci-status unknown --ci-source operator-provided --allow-dirty --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-7-ci-evidence-reconciliation-debug-canon\\rhpready-diagnostic.json --box-out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-7-ci-evidence-reconciliation-debug-canon\\RHPREADY-diagnostic.txt",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-7-ci-evidence-reconciliation-debug-canon\\rhpready-diagnostic.txt"
+    },
+    {
+      "stage": "evidence-api-gate-after-debug-canon",
+      "command": "C:\\Program Files\\Python312\\python.exe -m rhp.evidence_api_compatibility_gate --repo-root . --out C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-7-ci-evidence-reconciliation-debug-canon\\evidence-api-gate-after-debug-canon.json",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-7-ci-evidence-reconciliation-debug-canon\\evidence-api-gate-after-debug-canon.txt"
+    }
+  ],
+  "post_seal_stream_rule": "commit/pull/push/sealed-head command streams are volatile temp only"
+}

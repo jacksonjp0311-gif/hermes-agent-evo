@@ -1,0 +1,48 @@
+{
+  "schema": "RHP-VISIBLE-DEBUG-LOOP-CANON-v0.1",
+  "operation": "RHP-018.7",
+  "stages": [
+    "ENTRYPOINT-GATE",
+    "ROOT-ANCHOR",
+    "RESIDUE-MANAGER",
+    "PREAUTH-PULL",
+    "HUMAN-AUTHORIZATION",
+    "RHPREADY",
+    "OPERATION-START",
+    "RHPDROP",
+    "RHPDIAG",
+    "VALIDATION",
+    "SECRET-SCAN",
+    "COMMIT-SEAL",
+    "PUSH-SEAL",
+    "POST-SEAL-RESIDUE",
+    "RETURN-ROOT"
+  ],
+  "debugging_law": [
+    "If a script can fail, it needs a named RHP stage.",
+    "If a stage can fail, it needs a raw artifact.",
+    "If a raw artifact exists, the terminal should show an RHPDIAG box.",
+    "If the operation seals, the final state must update latest-rhp.json."
+  ],
+  "doctrine": [
+    "RHP is not only a governance loop.",
+    "RHP is an observability loop.",
+    "RHP is a debugging loop.",
+    "RHP is an operator-trust loop."
+  ],
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Visible debug canon improves observability only and grants no authority."
+}

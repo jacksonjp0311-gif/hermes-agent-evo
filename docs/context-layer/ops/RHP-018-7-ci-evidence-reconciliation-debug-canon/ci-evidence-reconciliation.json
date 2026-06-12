@@ -1,0 +1,53 @@
+{
+  "schema": "RHP-CI-EVIDENCE-RECONCILIATION-v0.1",
+  "operation": "RHP-018.7",
+  "timestamp_utc": "2026-06-12T01:32:59.626980+00:00",
+  "source": "operator-provided-github-commits-screenshot",
+  "source_note": "Screenshot shows recent main commits and GitHub check summaries visible to the operator.",
+  "observed_commits": [
+    {
+      "short_sha": "99b2849",
+      "message": "rhp: align README operator bootstrap loop",
+      "observed_status": "green",
+      "checks": "2/2"
+    },
+    {
+      "short_sha": "554ef32",
+      "message": "rhp: review RHP-018.0 cancelled CI log",
+      "observed_status": "green",
+      "checks": "2/2"
+    },
+    {
+      "short_sha": "bcf1b3b",
+      "message": "rhp: ingest RHP-018.0 cancelled CI log",
+      "observed_status": "red",
+      "checks": "1/2"
+    },
+    {
+      "short_sha": "67466ee",
+      "message": "rhp: create RHP-018.3 readiness gate CI wound packet",
+      "observed_status": "green",
+      "checks": "2/2"
+    },
+    {
+      "short_sha": "44ba78b",
+      "message": "rhp: observe RHP-018.0 repair CI through loop kernel",
+      "observed_status": "green",
+      "checks": "2/2"
+    },
+    {
+      "short_sha": "f978cc5",
+      "message": "rhp: observe RHP-018.0 repair CI through loop kernel",
+      "observed_status": "green",
+      "checks": "2/2"
+    }
+  ],
+  "active_subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "active_subject_observed_in_screenshot": false,
+  "active_subject_closed": false,
+  "replacement_ci_for_active_subject_established": false,
+  "repair_basis_established": false,
+  "interpretation": "Recent operator/bootstrap commits appear green, but the active RHP-018.0 subject commit is not shown in the provided screenshot. The active readiness_gate_install wound remains open until subject-scoped replacement CI is rerun or ingested.",
+  "next_legal_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "non_claim_lock": "This packet ingests operator-visible commit-status evidence only. It does not call GitHub, rerun CI, repair code, close the active subject wound, grant authority, or claim current operation remote CI green without a separate observation."
+}

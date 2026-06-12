@@ -1,0 +1,17 @@
+{
+  "schema": "RHPREADY-DIAGNOSTIC-CLASSIFICATION-v0.2",
+  "operation": "RHP-018.7",
+  "raw_exit_code": 0,
+  "diagnostic_exit_can_be_nonzero": true,
+  "decision": "allowed",
+  "allowed": true,
+  "readiness_state": "WOUND_OPEN",
+  "allowed_operation_classes": [
+    "diagnostic",
+    "known_wound_repair",
+    "observe"
+  ],
+  "blocked_reasons": [],
+  "classification": "valid_rhpready_diagnostic_result",
+  "non_claim_lock": "RHPREADY diagnostic result is evidence only; it does not authorize repair or mutation."
+}

@@ -126,24 +126,19 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-6-final-evidence.json` |
-| Current RHP status | `RHP-018.6 README Operator Bootstrap Alignment sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-5-final-evidence.json` |
-| Previous RHP status | `RHP-018.5 CI cancellation review sealed; no code repair basis established` |
-| Current RHP state | `README_OPERATOR_BOOTSTRAP_ALIGNED_RERUN_REQUIRED` |
-| Blocking CI/wound state preserved | `CI_CANCELLATION_REVIEWED_RERUN_REQUIRED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-7-final-evidence.json` |
+| Current RHP status | `RHP-018.7 CI Evidence Reconciliation + Visible Debug Loop Canon sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-6-final-evidence.json` |
+| Previous RHP status | `RHP-018.6 README Operator Bootstrap Alignment sealed; active wound preserved` |
+| Current RHP state | `VISIBLE_DEBUG_CANON_ALIGNED_PARTIAL_CI_EVIDENCE_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `README_OPERATOR_BOOTSTRAP_ALIGNED_RERUN_REQUIRED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Runtime-native boot hook | `hermes_cli/main.py` |
-| Operator-visible lock display | `rhp/operator_startup_status.py` |
-| Startup context packet | `rhp/startup_context_packet.py` |
-| RuntimeBootState home | `rhp/startup_context_packet.py` |
-| RuntimeBootState schema | `RHP-RUNTIME-BOOT-STATE-v0.1` |
 | CI observation loop kernel | `rhp/ci_observation_loop.py` |
 | Evolution readiness gate | `rhp/evolution_readiness_gate.py` |
 | CI wound packet tool | `rhp/ci_wound_packet.py` |
-| Load status contract | `RHPLOAD [000%..100%]` |
+| Visible debug loop canon | `README.md#rhp-visible-debug-loop-canon` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -314,6 +309,55 @@ Repair requires:
 
 Non-claim lock: this bootstrap teaches future agents how to preserve the RHP loop. It does not close the active wound, rerun CI, repair code, grant provider/model/tool/CMS/memory/API authority, or authorize autonomous action.
 <!-- RHP_OPERATOR_BOOTSTRAP_END -->
+
+
+<!-- RHP_VISIBLE_DEBUG_LOOP_CANON_START -->
+## RHP Visible Debug Loop Canon
+
+RHP is not only a governance loop. RHP is an observability loop, a debugging loop, and an operator-trust loop.
+
+Every future All-One operation should expose named stages instead of compressing failures into a vague script failure.
+
+### Required visible stages
+
+| Stage | Debug question |
+|---|---|
+| `ENTRYPOINT-GATE` | Did we run the correct file as a file invocation? |
+| `ROOT-ANCHOR` | Are we inside the correct repository root? |
+| `RESIDUE-MANAGER` | Is the worktree clean or is residue bounded/classified before start? |
+| `PREAUTH-PULL` | Did `origin/main` integrate before authorization? |
+| `HUMAN-AUTHORIZATION` | Did the human explicitly authorize this bounded operation? |
+| `RHPREADY` | Is this operation legal from the current sealed RHP state? |
+| `OPERATION-START` | Did the bounded operation begin inside the declared scope? |
+| `RHPDROP` | Where is the compact command summary / raw artifact index? |
+| `RHPDIAG` | What class of failure occurred, and where is the raw artifact? |
+| `VALIDATION` | Did compile/tests/evidence compatibility pass? |
+| `SECRET-SCAN` | Did the staged diff avoid forbidden credential-like material? |
+| `COMMIT-SEAL` | Did the local evidence seal commit? |
+| `PUSH-SEAL` | Did the remote publication succeed? |
+| `POST-SEAL-RESIDUE` | Did command streams or raw outputs leak into repo after commit? |
+| `RETURN-ROOT` | Was the operator returned to the repository root? |
+
+### Debugging law
+
+```text
+If a script can fail, it needs a named RHP stage.
+If a stage can fail, it needs a raw artifact.
+If a raw artifact exists, the terminal should show an RHPDIAG box.
+If the operation seals, the final state must update latest-rhp.json.
+```
+
+### Visibility doctrine
+
+```text
+RHP is not only a governance loop.
+RHP is an observability loop.
+RHP is a debugging loop.
+RHP is an operator-trust loop.
+```
+
+Non-claim lock: this canon improves operator visibility and future debugging discipline. It does not close the active wound, repair code, rerun CI, grant authority, or authorize autonomous action.
+<!-- RHP_VISIBLE_DEBUG_LOOP_CANON_END -->
 
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->

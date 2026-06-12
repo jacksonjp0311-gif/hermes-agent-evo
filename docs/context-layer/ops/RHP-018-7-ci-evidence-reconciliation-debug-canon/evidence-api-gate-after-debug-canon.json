@@ -1,0 +1,129 @@
+{
+  "schema": "RHP-EVIDENCE-API-COMPATIBILITY-GATE-v0.2",
+  "ok": true,
+  "latest_pointer": "docs/context-layer/latest-rhp.json",
+  "latest_operation": "RHP-018.7",
+  "latest_evidence": "docs/context-layer/ops/RHP-018-7-final-evidence.json",
+  "missing_pointer_required": [],
+  "missing_evidence_required": [],
+  "missing_authority_fields": [],
+  "authority_not_false": [],
+  "authority_source": "nested_authority_locks",
+  "deprecated_present": [],
+  "public_required_latest_pointer": [
+    "schema",
+    "latest_operation",
+    "latest_evidence",
+    "next_operation",
+    "authority_ok"
+  ],
+  "public_required_final_evidence": [
+    "schema",
+    "operation",
+    "operator_script_name",
+    "validation_passed",
+    "focused_tests_passed",
+    "non_claim_lock"
+  ],
+  "public_optional_final_evidence": [
+    "operation_base_commit",
+    "observed_previous_sealed_commit",
+    "current_operation_commit",
+    "current_operation_commit_observed_by",
+    "remote_ci_status",
+    "integration_closed",
+    "wait_state",
+    "authority_locks"
+  ],
+  "public_authority_fields": [
+    "provider_call_executed",
+    "model_call_executed",
+    "tool_use_executed",
+    "cms_runtime_execution",
+    "cms_write",
+    "memory_write",
+    "memory_promotion",
+    "api_write",
+    "dependency_mutation_committed",
+    "external_ingestion",
+    "autonomous_authority",
+    "self_authorization"
+  ],
+  "public_fields": [
+    "api_write",
+    "authority_locks",
+    "autonomous_authority",
+    "cms_runtime_execution",
+    "cms_write",
+    "current_operation_commit",
+    "current_operation_commit_observed_by",
+    "dependency_mutation_committed",
+    "external_ingestion",
+    "focused_tests_passed",
+    "integration_closed",
+    "memory_promotion",
+    "memory_write",
+    "model_call_executed",
+    "non_claim_lock",
+    "observed_previous_sealed_commit",
+    "operation",
+    "operation_base_commit",
+    "operator_script_name",
+    "provider_call_executed",
+    "remote_ci_status",
+    "schema",
+    "self_authorization",
+    "tool_use_executed",
+    "validation_passed",
+    "wait_state"
+  ],
+  "classification": {
+    "required": [
+      "schema",
+      "latest_operation",
+      "latest_evidence",
+      "next_operation",
+      "authority_ok",
+      "schema",
+      "operation",
+      "operator_script_name",
+      "validation_passed",
+      "focused_tests_passed",
+      "non_claim_lock"
+    ],
+    "optional": [
+      "operation_base_commit",
+      "observed_previous_sealed_commit",
+      "current_operation_commit",
+      "current_operation_commit_observed_by",
+      "remote_ci_status",
+      "integration_closed",
+      "wait_state",
+      "authority_locks"
+    ],
+    "deprecated": [
+      "latest_commit_or_base"
+    ],
+    "private": [
+      "helper implementation details",
+      "temp stream paths unless referenced by sealed summaries"
+    ],
+    "alias": {
+      "authority_locks": [
+        "provider_call_executed",
+        "model_call_executed",
+        "tool_use_executed",
+        "cms_runtime_execution",
+        "cms_write",
+        "memory_write",
+        "memory_promotion",
+        "api_write",
+        "dependency_mutation_committed",
+        "external_ingestion",
+        "autonomous_authority",
+        "self_authorization"
+      ]
+    }
+  },
+  "non_claim_lock": "Evidence API gate validates local evidence shape only. It does not call remote APIs, rerun CI, execute repairs, or grant authority."
+}
