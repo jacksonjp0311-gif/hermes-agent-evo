@@ -539,6 +539,25 @@ A future coding agent must not generate an All-One script unless it can answer f
 Non-claim lock: script-trace preservation grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_EXACT_RUNTIME_SCRIPT_TRACE_MAP_END -->
 
+<!-- HERMES_AGENT_RUNTIME_TRACE_DRIFT_GUARD_START -->
+## Runtime Trace Drift Guard Rule
+
+Before any future RHP mutation, a coding agent must run or preserve the runtime trace drift guard.
+
+The guard must compare:
+
+- `docs/context-layer/latest-rhp.json`
+- the latest final evidence file
+- `docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/runtime-script-trace-map.json`
+- `rhp/runtime_script_trace_map.py`
+- `README.md`
+- `AGENTS.md`
+
+A future All-One script must stop with RHPDIAG if these surfaces disagree about the exact stage-to-script trace.
+
+Non-claim lock: runtime trace drift guarding grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_RUNTIME_TRACE_DRIFT_GUARD_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

@@ -1,18 +1,16 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.6",
-  "latest_operation": "RHP-020.1",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.7",
+  "latest_operation": "RHP-020.2",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "runtime_script_trace_map": "rhp/runtime_script_trace_map.py",
+  "runtime_trace_drift_guard": "rhp/runtime_trace_drift_guard.py",
   "hermes_can": [
-    "validate_exact_stage_to_script_trace",
-    "require_runtime_trace_map_updates_when_loop_changes",
-    "reject_all_one_generation_without_exact_script_trace"
+    "validate_runtime_trace_alignment_before_future_mutation",
+    "stop_when_readme_agents_code_or_evidence_disagree",
+    "preserve_exact_stage_to_script_trace"
   ],
   "hermes_cannot": [
+    "ignore_trace_drift",
     "compress_loop_into_vague_stages",
-    "omit_python_helper_path",
-    "omit_raw_artifact_paths",
-    "omit_repo_evidence_paths",
     "close_active_subject_wound",
     "execute_repair",
     "rerun_ci_without_authority",
@@ -34,5 +32,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Exact runtime trace preservation; no direct mutation or self-authorization."
+  "non_claim_lock": "Runtime trace drift guard; no direct mutation or self-authorization."
 }

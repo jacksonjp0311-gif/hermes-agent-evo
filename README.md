@@ -126,17 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-020-1-final-evidence.json` |
-| Current RHP status | `RHP-020.1 Exact Runtime Script Trace Map sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-020-0-final-evidence.json` |
-| Previous RHP status | `RHP-020.0 Loop Tool Registry and Simulator sealed` |
-| Current RHP state | `EXACT_RUNTIME_SCRIPT_TRACE_MAP_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `LOOP_TOOL_REGISTRY_AND_SIMULATOR_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-020-2-final-evidence.json` |
+| Current RHP status | `RHP-020.2 Runtime Trace Drift Guard sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-020-1-final-evidence.json` |
+| Previous RHP status | `RHP-020.1 Exact Runtime Script Trace Map sealed` |
+| Current RHP state | `RUNTIME_TRACE_DRIFT_GUARD_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `EXACT_RUNTIME_SCRIPT_TRACE_MAP_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Exact runtime trace map | `rhp/runtime_script_trace_map.py` |
-| Runtime trace evidence | `docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/runtime-script-trace-map.json` |
+| Runtime trace drift guard | `rhp/runtime_trace_drift_guard.py` |
+| Runtime trace guard evidence | `docs/context-layer/ops/RHP-020-2-runtime-trace-drift-guard/runtime-trace-drift-report.json` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -1097,6 +1097,40 @@ $env:TEMP\RHP-020-1-python-streams\rhp_020_1_exact_runtime_script_trace_map.pyex
 
 Non-claim lock: this trace map preserves execution visibility only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_EXACT_RUNTIME_SCRIPT_TRACE_MAP_END -->
+
+<!-- RHP_RUNTIME_TRACE_DRIFT_GUARD_START -->
+## RHP Runtime Trace Drift Guard
+
+The exact runtime script trace map must remain aligned across README, AGENTS, latest RHP pointer, final evidence, runtime trace evidence, and repo code.
+
+### Drift law
+
+```text
+If the loop changes, the script trace map must change.
+If the script trace map changes, README and AGENTS must change.
+If README or AGENTS disagree with code or evidence, stop.
+If latest-rhp, final evidence, trace evidence, and runtime_script_trace_map.py disagree, stop.
+```
+
+### Guard panel
+
+```text
+RHPTRACE-GUARD [GOLD] status=<aligned|blocked>
+`- runtime trace drift guard
+   +- latest-ok: true|false
+   +- final-evidence-ok: true|false
+   +- trace-evidence-ok: true|false
+   +- module-ok: true|false
+   +- readme-ok: true|false
+   +- agents-ok: true|false
+   +- stage-count-ok: true|false
+   +- authority-ok: true|false
+   +- blocking-reasons: <reasons|none>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: this guard preserves trace alignment only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_RUNTIME_TRACE_DRIFT_GUARD_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

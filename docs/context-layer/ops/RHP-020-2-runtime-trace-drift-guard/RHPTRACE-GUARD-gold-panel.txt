@@ -1,0 +1,12 @@
+RHPTRACE-GUARD [GOLD] status=aligned
+`- runtime trace drift guard
+   +- latest-ok: true
+   +- final-evidence-ok: true
+   +- trace-evidence-ok: true
+   +- module-ok: true
+   +- readme-ok: true
+   +- agents-ok: true
+   +- stage-count-ok: true
+   +- authority-ok: true
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]

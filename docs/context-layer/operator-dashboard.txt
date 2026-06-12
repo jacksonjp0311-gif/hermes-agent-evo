@@ -1,10 +1,9 @@
-RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-020.1 | status=ok tone=gold
-`- exact runtime script trace map sealed
+RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=RHP-020.2 | status=ok tone=gold
+`- runtime trace drift guard sealed
    +- subject commit: ddb24363e2fac630e7527a2c9eab31e6df50db52
    +- active wound: readiness_gate_install
-   +- trace map: rhp/runtime_script_trace_map.py
-   +- evidence: C:\Users\jacks\OneDrive\Desktop\hermes-agent-evo\docs\context-layer\ops\RHP-020-1-exact-runtime-script-trace-map/runtime-script-trace-map.json
-   +- stage count: 19
-   +- exact script bound: true
+   +- guard: rhp/runtime_trace_drift_guard.py
+   +- report: docs/context-layer/ops/RHP-020-2-runtime-trace-drift-guard/runtime-trace-drift-report.json
+   +- trace alignment: true
    +- repair basis: false
    `- next: operator_rerun_or_ingest_replacement_ci_before_repair
