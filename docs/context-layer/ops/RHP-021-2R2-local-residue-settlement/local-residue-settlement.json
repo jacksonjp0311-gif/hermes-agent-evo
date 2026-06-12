@@ -1,0 +1,34 @@
+﻿{
+    "schema":  "RHP-021.2R2-LOCAL-RESIDUE-SETTLEMENT-v0.1",
+    "operation":  "RHP-021.2R2",
+    "status_before_clean":  [
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/git-add.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/git-commit.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/git-pull-rebase-postcommit.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/git-push.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/git-status-staged.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/post-seal-git-status.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/python-helper-exception.txt",
+                                "docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/secret-scan-diff.txt"
+                            ],
+    "status_after_bounded_clean":  [
+
+                                   ],
+    "remote_rhp_021_2r_proof_preserved":  true,
+    "repair_executed":  false,
+    "authority_locks":  {
+                            "provider_call_executed":  false,
+                            "model_call_executed":  false,
+                            "tool_use_executed":  false,
+                            "cms_runtime_execution":  false,
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "memory_promotion":  false,
+                            "api_write":  false,
+                            "dependency_mutation_committed":  false,
+                            "external_ingestion":  false,
+                            "autonomous_authority":  false,
+                            "self_authorization":  false
+                        },
+    "non_claim_lock":  "Local residue settlement grants no repair authority."
+}

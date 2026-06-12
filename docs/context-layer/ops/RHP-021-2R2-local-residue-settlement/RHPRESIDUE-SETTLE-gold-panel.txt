@@ -1,0 +1,8 @@
+RHPRESIDUE-SETTLE [GOLD] status=settled
+- local post-seal residue settlement
+   +- residue-before-clean: 8
+   +- unbounded-residue: 0
+   +- bounded-clean-ok: true
+   +- remote-proof-preserved: true
+   +- repair-executed: false
+   - authority: no grant [LOCKED]
