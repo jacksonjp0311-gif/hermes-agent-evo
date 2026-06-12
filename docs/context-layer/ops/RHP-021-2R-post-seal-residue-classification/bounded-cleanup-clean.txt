@@ -1,0 +1,6 @@
+Removing docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-add.txt
+Removing docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-commit.txt
+Removing docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-pull-rebase-postcommit.txt
+Removing docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-push.txt
+Removing docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-status-staged.txt
+Removing docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/secret-scan-diff.txt

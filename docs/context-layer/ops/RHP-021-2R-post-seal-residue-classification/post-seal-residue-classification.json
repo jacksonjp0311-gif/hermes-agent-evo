@@ -1,0 +1,49 @@
+{
+  "schema": "RHP-021.2R-POST-SEAL-RESIDUE-CLASSIFICATION-v0.1",
+  "operation": "RHP-021.2R",
+  "prior_operation": "RHP-021.2",
+  "source_file": "C:\\Users\\jacks\\AppData\\Local\\Temp\\RHP-021-2-ci-wound-packet-streams\\post-seal-residue.txt",
+  "current_git_status": [
+    "?? docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-add.txt",
+    "?? docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-commit.txt",
+    "?? docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-pull-rebase-postcommit.txt",
+    "?? docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-push.txt",
+    "?? docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-status-staged.txt",
+    "?? docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/secret-scan-diff.txt",
+    "?? docs/context-layer/ops/RHP-021-2R-post-seal-residue-classification/",
+    "?? rhp/rhp_021_2_post_seal_residue.py",
+    "?? tests/test_rhp_021_2_post_seal_residue.py"
+  ],
+  "classification": {
+    "ok": true,
+    "residue_count": 6,
+    "bounded_count": 6,
+    "unbounded_count": 0,
+    "bounded_paths": [
+      "docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-add.txt",
+      "docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-commit.txt",
+      "docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-pull-rebase-postcommit.txt",
+      "docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-push.txt",
+      "docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/git-status-staged.txt",
+      "docs/context-layer/ops/RHP-021-2-current-operation-ci-wound-packet/secret-scan-diff.txt"
+    ],
+    "unbounded_paths": [],
+    "classification": "bounded_rhp_021_2_residue",
+    "next_action": "clean_bounded_residue_and_reseal"
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Residue classification grants no repair authority."
+}

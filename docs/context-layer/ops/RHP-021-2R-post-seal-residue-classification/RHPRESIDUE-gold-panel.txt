@@ -1,0 +1,8 @@
+RHPRESIDUE [GOLD] status=classified
+`- post-seal residue classification
+   +- residue-count: 6
+   +- bounded-count: 6
+   +- unbounded-count: 0
+   +- classification: bounded_rhp_021_2_residue
+   +- next-action: clean_bounded_residue_and_reseal
+   `- authority: no grant [LOCKED]
