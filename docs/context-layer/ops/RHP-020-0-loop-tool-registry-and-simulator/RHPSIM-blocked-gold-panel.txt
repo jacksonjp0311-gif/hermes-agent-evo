@@ -1,0 +1,12 @@
+RHPSIM [GOLD] status=blocked
+`- loop transition simulation
+   +- candidate-operation: feature_evolution
+   +- requested-tool: RHPZERO
+   +- current-state: REPLACEMENT_CI_CONNECTOR_INTAKE_UNRESOLVED
+   +- active-wound: readiness_gate_install
+   +- can-mutate: false
+   +- can-close-wound: false
+   +- can-repair: false
+   +- blocked-reasons: active_wound_blocks_candidate_operation
+   +- simulated-stage-count: 19
+   `- authority: no grant [LOCKED]

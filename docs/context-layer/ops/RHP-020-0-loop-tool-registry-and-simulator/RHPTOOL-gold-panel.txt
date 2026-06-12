@@ -1,0 +1,8 @@
+RHPTOOL [GOLD] status=registered
+`- loop tool registry
+   +- total-tools: 8
+   +- read-only-tools: 2
+   +- diagnostic-tools: 4
+   +- evidence-only-tools: 2
+   +- forbidden-authority-tools: 0
+   `- authority: no grant [LOCKED]

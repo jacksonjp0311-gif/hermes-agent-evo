@@ -1,0 +1,144 @@
+{
+  "schema": "RHP-020.0-LOOP-TOOL-REGISTRY-EVIDENCE-v0.1",
+  "operation": "RHP-020.0",
+  "registry": {
+    "schema": "RHP-LOOP-TOOL-REGISTRY-v0.1",
+    "tools": [
+      {
+        "name": "RHPZERO",
+        "panel": "RHPZERO [GOLD]",
+        "authority_tier": "read_only",
+        "purpose": "Zero-context repository rehydration.",
+        "required_inputs": [
+          "README.md",
+          "AGENTS.md",
+          "latest-rhp.json",
+          "latest evidence",
+          "loop geometry"
+        ],
+        "writes_repo": false,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPLOOP-GEOMETRY",
+        "panel": "RHPLOOP-GEOMETRY [GOLD]",
+        "authority_tier": "diagnostic",
+        "purpose": "Validate live loop shape against sealed README/runtime geometry.",
+        "required_inputs": [
+          "README canonical run block",
+          "rhp/loop_geometry.py"
+        ],
+        "writes_repo": false,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPCI-CONNECTOR",
+        "panel": "RHPCI-CONNECTOR [GOLD]",
+        "authority_tier": "diagnostic",
+        "purpose": "Classify GitHub connector CI observation before operator CI intake.",
+        "required_inputs": [
+          "subject commit",
+          "combined status",
+          "workflow runs"
+        ],
+        "writes_repo": false,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPDIAG",
+        "panel": "RHPDIAG",
+        "authority_tier": "diagnostic",
+        "purpose": "Render named failure class and raw artifact path.",
+        "required_inputs": [
+          "stage",
+          "failure class",
+          "raw artifact"
+        ],
+        "writes_repo": false,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPDROP",
+        "panel": "RHPDROP [closed]",
+        "authority_tier": "evidence_only",
+        "purpose": "Summarize command records and diagnostic-nonzero handling.",
+        "required_inputs": [
+          "command records",
+          "raw outputs"
+        ],
+        "writes_repo": true,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPREFLECT",
+        "panel": "RHPREFLECT [GOLD]",
+        "authority_tier": "evidence_only",
+        "purpose": "Summarize what happened, what it means, and the next legal operation.",
+        "required_inputs": [
+          "latest state",
+          "operation evidence",
+          "active wound"
+        ],
+        "writes_repo": true,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPSIM",
+        "panel": "RHPSIM [GOLD]",
+        "authority_tier": "read_only",
+        "purpose": "Simulate a proposed loop transition before mutation.",
+        "required_inputs": [
+          "latest-rhp.json",
+          "candidate operation class"
+        ],
+        "writes_repo": false,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      },
+      {
+        "name": "RHPHEAL",
+        "panel": "RHPHEAL [PROPOSED]",
+        "authority_tier": "diagnostic",
+        "purpose": "Generate a no-execution repair proposal after failed logs are classified.",
+        "required_inputs": [
+          "wound packet",
+          "failed logs",
+          "bounded target files"
+        ],
+        "writes_repo": false,
+        "closes_wound": false,
+        "repairs_code": false,
+        "grants_authority": false
+      }
+    ],
+    "non_claim_lock": "Loop tools do not grant autonomous authority."
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Loop tool registry grants no authority."
+}

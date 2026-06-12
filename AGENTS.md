@@ -476,6 +476,46 @@ Human authorization is still required for the bounded All-One operation. The ope
 Non-claim lock: GitHub connector CI intake grants no repair authority and no autonomous wound closure.
 <!-- HERMES_AGENT_GITHUB_CONNECTOR_CI_INTAKE_END -->
 
+<!-- HERMES_AGENT_LOOP_TOOL_REGISTRY_AND_SIMULATOR_START -->
+## Loop Tool Registry and Simulator Rule
+
+Before introducing or invoking a new RHP loop tool, register it and simulate the transition.
+
+Required checks:
+
+```text
+tool has a name and panel
+tool has required inputs
+tool declares whether it writes repo
+tool declares closes_wound=false
+tool declares repairs_code=false
+tool declares grants_authority=false
+RHPSIM approves the candidate operation class
+```
+
+Allowed while the active wound remains open:
+
+```text
+loop_tooling
+diagnostic
+evidence_only
+connector_ci_observation
+zero_context_bootstrap
+```
+
+Blocked while the active wound remains open:
+
+```text
+feature_evolution
+repair
+wound_closure
+dependency_mutation
+authority_expansion
+```
+
+Non-claim lock: loop tool registration and simulation grant no repair authority and no autonomous wound closure.
+<!-- HERMES_AGENT_LOOP_TOOL_REGISTRY_AND_SIMULATOR_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

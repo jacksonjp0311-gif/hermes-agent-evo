@@ -126,17 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-019-1-final-evidence.json` |
-| Current RHP status | `RHP-019.1 GitHub Connector CI Intake Gate sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-019-0-final-evidence.json` |
-| Previous RHP status | `RHP-019.0 Replacement CI Observation Packet sealed` |
-| Current RHP state | `REPLACEMENT_CI_CONNECTOR_INTAKE_UNRESOLVED` |
-| Blocking CI/wound state preserved | `REPLACEMENT_CI_OBSERVATION_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-020-0-final-evidence.json` |
+| Current RHP status | `RHP-020.0 Loop Tool Registry and Simulator sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-019-1-final-evidence.json` |
+| Previous RHP status | `RHP-019.1 GitHub Connector CI Intake Gate sealed` |
+| Current RHP state | `LOOP_TOOL_REGISTRY_AND_SIMULATOR_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `REPLACEMENT_CI_CONNECTOR_INTAKE_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| GitHub connector CI intake gate | `rhp/replacement_ci_connector_intake.py` |
-| Replacement CI observer | `rhp/replacement_ci_observer.py` |
+| Loop tool registry | `rhp/loop_tool_registry.py` |
+| Loop simulator | `rhp/loop_simulator.py` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -979,6 +979,56 @@ RHPCI-CONNECTOR [GOLD] status=<accepted|unresolved>
 
 Non-claim lock: this connector intake gate records GitHub connector CI observation only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_GITHUB_CONNECTOR_CI_INTAKE_GATE_END -->
+
+<!-- RHP_LOOP_TOOL_REGISTRY_AND_SIMULATOR_START -->
+## RHP Loop Tool Registry and Simulator
+
+RHP tools must be named, scoped, and simulated before they are trusted inside the loop.
+
+### Registered tool principle
+
+```text
+A loop tool is not authority.
+A loop tool is a bounded function with a named panel, required inputs, write behavior, and forbidden powers.
+```
+
+### New panels
+
+```text
+RHPTOOL [GOLD] status=registered
+`- loop tool registry
+   +- total-tools: <n>
+   +- read-only-tools: <n>
+   +- diagnostic-tools: <n>
+   +- evidence-only-tools: <n>
+   +- forbidden-authority-tools: 0
+   `- authority: no grant [LOCKED]
+
+RHPSIM [GOLD] status=<allowed|blocked>
+`- loop transition simulation
+   +- candidate-operation: <class>
+   +- requested-tool: <tool>
+   +- current-state: <state>
+   +- active-wound: <wound>
+   +- can-mutate: true|false
+   +- can-close-wound: false
+   +- can-repair: false
+   +- blocked-reasons: <reasons|none>
+   +- simulated-stage-count: <n>
+   `- authority: no grant [LOCKED]
+```
+
+### Simulation law
+
+```text
+Before adding a tool to the loop, simulate its transition.
+Before using a tool to write evidence, verify its authority tier.
+No tool may close a wound, repair code, mutate dependencies, grant authority, or self-authorize.
+Active wound states block feature evolution but still allow loop tooling, diagnostics, and evidence-only hardening.
+```
+
+Non-claim lock: this registry and simulator improve loop governance only. They do not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_LOOP_TOOL_REGISTRY_AND_SIMULATOR_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

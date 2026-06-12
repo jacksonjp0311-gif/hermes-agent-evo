@@ -1,16 +1,18 @@
 {
-  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.4",
-  "latest_operation": "RHP-019.1",
+  "schema": "RHP-HERMES-OPERATOR-CONTEXT-v2.5",
+  "latest_operation": "RHP-020.0",
   "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
-  "github_connector_ci_intake": "rhp/replacement_ci_connector_intake.py",
+  "loop_tool_registry": "rhp/loop_tool_registry.py",
+  "loop_simulator": "rhp/loop_simulator.py",
   "hermes_can": [
-    "prefer_connector_ci_observation_before_operator_ci_prompts",
-    "classify_connector_green_red_pending_unknown",
-    "preserve_active_wound_until_next_authorized_operation"
+    "register_loop_tools_with_authority_tiers",
+    "simulate_candidate_loop_transitions_before_mutation",
+    "allow_loop_tooling_while_active_wound_is_preserved",
+    "block_feature_evolution_under_active_wound"
   ],
   "hermes_cannot": [
-    "ask_operator_to_parse_ci_before_connector_observation",
-    "close_active_subject_wound_in_same_intake_operation",
+    "treat_registered_tools_as_authority",
+    "close_active_subject_wound",
     "execute_repair",
     "rerun_ci_without_authority",
     "self_authorize",
@@ -31,5 +33,5 @@
     "autonomous_authority": false,
     "self_authorization": false
   },
-  "non_claim_lock": "Read-only connector intake/classification; no direct mutation or self-authorization."
+  "non_claim_lock": "Loop tooling and simulation; no direct mutation or self-authorization."
 }
