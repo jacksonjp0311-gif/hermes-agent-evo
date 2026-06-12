@@ -1,0 +1,12 @@
+RHPGEOMETRY-CANON [GOLD] status=installed
+- runtime geometry evolution canon
+   +- PREAUTH-PULL: superseded
+   +- PREAUTH-FETCH: canonical
+   +- PREAUTH-LINEAGE-ALIGNMENT: explicit
+   +- inline-authorization: canonical
+   +- post-authorization-runtime-questions: forbidden
+   +- unknown/pending: named evidence states
+   +- observed-ci-status-preserved: unknown
+   +- inherited-subject-closed: false
+   +- next-operation: observe_current_operation_ci_after_contract_drift_repair
+   - authority: no grant [LOCKED]

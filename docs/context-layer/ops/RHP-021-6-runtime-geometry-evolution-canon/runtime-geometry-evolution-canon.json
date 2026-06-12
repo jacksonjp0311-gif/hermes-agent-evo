@@ -1,0 +1,31 @@
+﻿{
+    "schema":  "RHP-021.6-RUNTIME-GEOMETRY-EVOLUTION-CANON-v0.1",
+    "operation":  "RHP-021.6",
+    "superseded_stage":  "PREAUTH-PULL",
+    "canonical_stage":  "PREAUTH-FETCH",
+    "explicit_lineage_stage":  "PREAUTH-LINEAGE-ALIGNMENT",
+    "inline_authorization_canonical":  true,
+    "post_authorization_questions_forbidden":  true,
+    "fallback_named_states":  [
+                                  "unknown",
+                                  "pending"
+                              ],
+    "observed_ci_status_preserved":  "unknown",
+    "repair_commit_preserved":  "c3957405b177d67dcf31b7690ae726c70b9651e5",
+    "inherited_subject_closed":  false,
+    "authority_locks":  {
+                            "provider_call_executed":  false,
+                            "model_call_executed":  false,
+                            "tool_use_executed":  false,
+                            "cms_runtime_execution":  false,
+                            "cms_write":  false,
+                            "memory_write":  false,
+                            "memory_promotion":  false,
+                            "api_write":  false,
+                            "dependency_mutation_committed":  false,
+                            "external_ingestion":  false,
+                            "autonomous_authority":  false,
+                            "self_authorization":  false
+                        },
+    "non_claim_lock":  "Runtime geometry evolution canon grants no authority and closes no wounds."
+}

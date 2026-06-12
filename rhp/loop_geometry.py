@@ -9,9 +9,11 @@ FULL_RUNTIME_GEOMETRY: tuple[str, ...] = (
     "ENTRYPOINT-GATE",
     "ROOT-ANCHOR",
     "RESIDUE-MANAGER",
-    "PREAUTH-PULL",
+    "PREAUTH-FETCH",
     "RHPLOOP-RUNTIME",
     "HUMAN-AUTHORIZATION",
+    "RHPREADY",
+    "PREAUTH-LINEAGE-ALIGNMENT",
     "RHPREADY",
     "OPERATION-START",
     "RHPLOOP-DOCTOR",
@@ -40,6 +42,9 @@ VISIBLE_BODY_GEOMETRY: tuple[str, ...] = (
 
 GEOMETRY_SOURCE_MARKER_START = "<!-- RHP_CANONICAL_RUNTIME_RUN_BLOCK_START -->"
 GEOMETRY_SOURCE_MARKER_END = "<!-- RHP_CANONICAL_RUNTIME_RUN_BLOCK_END -->"
+LINEAGE_RUNTIME_GEOMETRY_ALIASES: dict[str, str] = {
+    "PREAUTH-PULL": "PREAUTH-FETCH",
+}
 
 
 @dataclass(frozen=True)
@@ -52,10 +57,14 @@ class GeometryReport:
     ok: bool
 
 
+
+def canonicalize_runtime_stage(stage: str) -> str:
+    return LINEAGE_RUNTIME_GEOMETRY_ALIASES.get(stage, stage)
 def _unique_preserve_order(items: Iterable[str]) -> tuple[str, ...]:
     seen: set[str] = set()
     out: list[str] = []
     for item in items:
+        item = canonicalize_runtime_stage(item)
         if item not in seen:
             seen.add(item)
             out.append(item)

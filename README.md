@@ -324,8 +324,9 @@ Every future All-One operation should expose named stages instead of compressing
 | `ENTRYPOINT-GATE` | Did we run the correct file as a file invocation? |
 | `ROOT-ANCHOR` | Are we inside the correct repository root? |
 | `RESIDUE-MANAGER` | Is the worktree clean or is residue bounded/classified before start? |
-| `PREAUTH-PULL` | Did `origin/main` integrate before authorization? |
-| `HUMAN-AUTHORIZATION` | Did the human explicitly authorize this bounded operation? |
+| `PREAUTH-FETCH` | Did `origin/main` integrate before authorization? |
+| `HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENT` | Did the human explicitly authorize this bounded operation? |
 | `RHPREADY` | Is this operation legal from the current sealed RHP state? |
 | `OPERATION-START` | Did the bounded operation begin inside the declared scope? |
 | `RHPDROP` | Where is the compact command summary / raw artifact index? |
@@ -530,8 +531,9 @@ The self-learning loop is not only a documentation section. It must appear as a 
 ENTRYPOINT-GATE
 ROOT-ANCHOR
 RESIDUE-MANAGER
-PREAUTH-PULL
+PREAUTH-FETCH
 HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENT
 RHPREADY
 OPERATION-START
 RHPLOOP-DOCTOR
@@ -622,9 +624,10 @@ human-readable detail
 | `ENTRYPOINT-GATE` | 005% |
 | `ROOT-ANCHOR` | 010% |
 | `RESIDUE-MANAGER` | 015% |
-| `PREAUTH-PULL` | 020% |
+| `PREAUTH-FETCH` | 020% |
 | `RHPLOOP-RUNTIME` | 025% |
-| `HUMAN-AUTHORIZATION` | 030% |
+| `HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENT` | 030% |
 | `RHPREADY` | 035% |
 | `OPERATION-START` | 040% |
 | `RHPLOOP-DOCTOR` | 050% |
@@ -719,7 +722,7 @@ RHPLOAD [010%] loop=ROOT-ANCHOR operation=<OPERATION> | status=ok tone=green
 RHPLOAD [015%] loop=RESIDUE-MANAGER operation=<OPERATION> | status=ok tone=green
 `- worktree clean or bounded residue restored/cleaned
 
-RHPLOAD [020%] loop=PREAUTH-PULL operation=<OPERATION> | status=ok tone=green
+RHPLOAD [020%] loop=PREAUTH-FETCH operation=<OPERATION> | status=ok tone=green
 `- remote/main integrated before authorization
 
 RHPLOAD [025%] loop=RHPLOOP-RUNTIME operation=<OPERATION> | status=preauth tone=gold
@@ -728,7 +731,8 @@ RHPLOAD [025%] loop=RHPLOOP-RUNTIME operation=<OPERATION> | status=preauth tone=
 Type exactly this phrase to authorize <OPERATION>:
 I AUTHORIZE <OPERATION> <BOUNDED PURPOSE>
 
-RHPLOAD [030%] loop=HUMAN-AUTHORIZATION operation=<OPERATION> | status=ok tone=green
+RHPLOAD [030%] loop=HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENT operation=<OPERATION> | status=ok tone=green
 `- exact phrase accepted
 
 RHPREADY [DIAGNOSTIC] class=<class> decision=<allowed|blocked|pending>
@@ -1060,13 +1064,16 @@ RHPSCRIPT-TRACE [GOLD] status=resolved
 ### 2. ROOT-ANCHOR
 ```textstage: ROOT-ANCHORexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: $env:USERPROFILE\Downloadsworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - git rev-parse --show-toplevelpurpose: Force the operation into the expected Hermes repository root.writes_repo: Falsewrites_remote: Falseraw_artifacts:  - $env:TEMP\RHP-020-1-python-streams\root-anchor.txtrepo_evidence:  - nonenext_stage: RESIDUE-MANAGERforbidden:  - continue from wrong repo rootgrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
 ### 3. RESIDUE-MANAGER
-```textstage: RESIDUE-MANAGERexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - git status --short  - git restore --worktree --staged -- <bounded RHP-020.1 paths only>  - git clean -fd -- <bounded RHP-020.1 paths only>purpose: Classify dirty tree and clean only bounded failed-run RHP-020.1 residue.writes_repo: false, except bounded cleanup of failed-run residuewrites_remote: Falseraw_artifacts:  - $env:TEMP\RHP-020-1-python-streams\residue-manager.txtrepo_evidence:  - nonenext_stage: PREAUTH-PULLforbidden:  - auto-clean unknown dirty pathsgrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
-### 4. PREAUTH-PULL
-```textstage: PREAUTH-PULLexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - git pull --rebase origin mainpurpose: Sync remote main before authorization.writes_repo: false, except git rebase metadata if remote changedwrites_remote: Falseraw_artifacts:  - $env:TEMP\RHP-020-1-python-streams\pull-rebase-preauth.txtrepo_evidence:  - nonenext_stage: RHPLOOP-RUNTIMEforbidden:  - continue after failed pull/rebasegrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
+```textstage: RESIDUE-MANAGERexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - git status --short  - git restore --worktree --staged -- <bounded RHP-020.1 paths only>  - git clean -fd -- <bounded RHP-020.1 paths only>purpose: Classify dirty tree and clean only bounded failed-run RHP-020.1 residue.writes_repo: false, except bounded cleanup of failed-run residuewrites_remote: Falseraw_artifacts:  - $env:TEMP\RHP-020-1-python-streams\residue-manager.txtrepo_evidence:  - nonenext_stage: PREAUTH-FETCHforbidden:  - auto-clean unknown dirty pathsgrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
+### 4. PREAUTH-FETCH
+```textstage: PREAUTH-FETCHexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - git pull --rebase origin mainpurpose: Sync remote main before authorization.writes_repo: false, except git rebase metadata if remote changedwrites_remote: Falseraw_artifacts:  - $env:TEMP\RHP-020-1-python-streams\pull-rebase-preauth.txtrepo_evidence:  - nonenext_stage: RHPLOOP-RUNTIMEforbidden:  - continue after failed pull/rebasegrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
 ### 5. RHPLOOP-RUNTIME
-```textstage: RHPLOOP-RUNTIMEexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - nonepurpose: Announce bounded operation and runtime contract.writes_repo: Falsewrites_remote: Falseraw_artifacts:  - nonerepo_evidence:  - nonenext_stage: HUMAN-AUTHORIZATIONforbidden:  - begin mutation before authorizationgrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
+```textstage: RHPLOOP-RUNTIMEexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - nonepurpose: Announce bounded operation and runtime contract.writes_repo: Falsewrites_remote: Falseraw_artifacts:  - nonerepo_evidence:  - nonenext_stage: HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENTforbidden:  - begin mutation before authorizationgrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
 ### 6. HUMAN-AUTHORIZATION
-```textstage: HUMAN-AUTHORIZATIONexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - nonepurpose: Require exact human authorization phrase.writes_repo: Falsewrites_remote: Falseraw_artifacts:  - nonerepo_evidence:  - nonenext_stage: RHPREADYforbidden:  - mutation before exact phrasegrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
+PREAUTH-LINEAGE-ALIGNMENT
+```textstage: HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENTexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShellpython_script: nonerepo_modules:  - nonelaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - nonepurpose: Require exact human authorization phrase.writes_repo: Falsewrites_remote: Falseraw_artifacts:  - nonerepo_evidence:  - nonenext_stage: RHPREADYforbidden:  - mutation before exact phrasegrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
 ### 7. RHPREADY
 ```textstage: RHPREADYexecuting_script: $env:USERPROFILE\Downloads\RHP_020_1_V3_EXACT_RUNTIME_SCRIPT_TRACE_MAP_SINGLE_ALL_ONE.ps1executing_language: PowerShell launching Pythonpython_script: $env:TEMP\RHP-020-1-python-streams\rhp_020_1_exact_runtime_script_trace_map.pyrepo_modules:  - rhp/evolution_readiness_gate.pylaunch_location: $env:USERPROFILE\Downloadsworking_directory_before: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evoworking_directory_after: C:/Users/jacks/OneDrive/Desktop/hermes-agent-evocommands:  - python -m rhp.evolution_readiness_gate --repo-root . --candidate-operation-class diagnostic --current-head-ci-status unknown --ci-source github-connector --allow-dirty --out docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/rhpready-diagnostic-runtime.json --box-out docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/RHPREADY-diagnostic-runtime.txtpurpose: Verify the operation is legal from sealed state.writes_repo: diagnostic evidence onlywrites_remote: Falseraw_artifacts:  - nonerepo_evidence:  - docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/rhpready-diagnostic-runtime.json  - docs/context-layer/ops/RHP-020-1-exact-runtime-script-trace-map/RHPREADY-diagnostic-runtime.txtnext_stage: OPERATION-STARTforbidden:  - treat diagnostic nonzero as hard failure if valid evidence existsgrants_authority: Falsecloses_wound: Falserepairs_code: Falseclaims_current_operation_ci_green: False```
 ### 8. OPERATION-START
@@ -1606,6 +1613,7 @@ Required future All-One sequence:
 AUTOHEAL-PREFLIGHT
 PULL-REBASE
 HUMAN-AUTHORIZATION
+PREAUTH-LINEAGE-ALIGNMENT
 OPERATION
 VALIDATION
 EVIDENCE
@@ -4100,3 +4108,21 @@ Allowed operator input after launch is limited to explicit authorization. CI sta
 
 Non-claim lock: no-prompt execution does not grant authority, close wounds, rerun CI, or claim green.
 <!-- RHP_NO_PROMPT_OPERATOR_CONTRACT_END -->
+
+<!-- RHP_RUNTIME_GEOMETRY_EVOLUTION_CANON_START -->
+## RHP Runtime Geometry Evolution Canon
+
+RHP-021.6 promotes the lineage-safe runtime geometry discovered during RHP-021.3/RHP-021.5:
+
+```text
+PREAUTH-PULL is superseded by PREAUTH-FETCH.
+PREAUTH-LINEAGE-ALIGNMENT is now explicit after authorization.
+Inline -Authorize is the preferred authorization mode.
+After authorization, scripts must not ask runtime questions.
+Unknown and pending are named evidence states, not failures.
+```
+
+This is not arbitrary drift. It is a governed geometry evolution caused by failed-run residue and Git lineage evidence. Blind `pull --rebase` is replaced by fetch, lineage inspection, local-only blocking, and authorized alignment.
+
+Non-claim lock: runtime geometry canonization does not close wounds, rerun CI, grant authority, or claim green.
+<!-- RHP_RUNTIME_GEOMETRY_EVOLUTION_CANON_END -->
