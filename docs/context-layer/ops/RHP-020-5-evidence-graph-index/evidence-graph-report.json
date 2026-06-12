@@ -1,0 +1,31 @@
+{
+  "schema": "RHP-020.5-EVIDENCE-GRAPH-REPORT-v0.1",
+  "operation": "RHP-020.5",
+  "report": {
+    "ok": true,
+    "latest_ok": true,
+    "operation_order_ok": true,
+    "active_wound_ok": true,
+    "subject_ok": true,
+    "authority_ok": true,
+    "graph_complete": true,
+    "node_count": 5,
+    "edge_count": 20,
+    "blocking_reasons": []
+  },
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Evidence graph report grants no authority."
+}

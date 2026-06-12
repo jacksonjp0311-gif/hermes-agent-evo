@@ -613,6 +613,28 @@ The agent must preserve:
 Non-claim lock: the template emitter grants no authority and no autonomous mutation.
 <!-- HERMES_AGENT_CANONICAL_ALL_ONE_TEMPLATE_EMITTER_END -->
 
+<!-- HERMES_AGENT_EVIDENCE_GRAPH_INDEX_START -->
+## Evidence Graph Index Rule
+
+A future coding agent must consult the evidence graph before changing the RHP loop.
+
+The graph must show:
+
+- operation sequence,
+- final evidence path,
+- installed modules,
+- focused tests,
+- state after alignment,
+- active wound class,
+- subject commit,
+- next legal operation,
+- authority lock status.
+
+A future agent must not infer proof from README prose alone when evidence graph data is available.
+
+Non-claim lock: the evidence graph grants no authority and no autonomous mutation.
+<!-- HERMES_AGENT_EVIDENCE_GRAPH_INDEX_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

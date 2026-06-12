@@ -1,0 +1,12 @@
+RHPEVIDENCE-GRAPH [GOLD] status=indexed
+`- evidence graph index
+   +- latest-ok: true
+   +- operation-order-ok: true
+   +- active-wound-ok: true
+   +- subject-ok: true
+   +- authority-ok: true
+   +- graph-complete: true
+   +- node-count: 5
+   +- edge-count: 20
+   +- blocking-reasons: none
+   `- authority: no grant [LOCKED]

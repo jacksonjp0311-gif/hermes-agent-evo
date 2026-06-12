@@ -1,0 +1,214 @@
+{
+  "schema": "RHP-EVIDENCE-GRAPH-INDEX-v0.1",
+  "latest_operation": "RHP-020.4",
+  "latest_state": "CANONICAL_ALL_ONE_TEMPLATE_EMITTER_ALIGNED_SUBJECT_UNRESOLVED",
+  "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+  "active_wound_class": "readiness_gate_install",
+  "next_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "nodes": [
+    {
+      "id": "RHP-020.0",
+      "type": "operation",
+      "evidence": "docs/context-layer/ops/RHP-020-0-final-evidence.json",
+      "state_after_alignment": "LOOP_TOOL_REGISTRY_AND_SIMULATOR_ALIGNED_SUBJECT_UNRESOLVED",
+      "prior_blocking_state": "REPLACEMENT_CI_CONNECTOR_INTAKE_UNRESOLVED",
+      "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+      "wound_class": "readiness_gate_install",
+      "next_recommended_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+      "modules": [
+        "rhp/loop_simulator.py",
+        "rhp/loop_tool_registry.py"
+      ],
+      "tests": [
+        "tests/test_rhp_020_0_loop_tool_registry_and_simulator.py"
+      ],
+      "active_wound_preserved": true,
+      "active_subject_closed": false,
+      "repair_execution_enabled": false,
+      "authority_locks_false": true
+    },
+    {
+      "id": "RHP-020.1",
+      "type": "operation",
+      "evidence": "docs/context-layer/ops/RHP-020-1-final-evidence.json",
+      "state_after_alignment": "EXACT_RUNTIME_SCRIPT_TRACE_MAP_ALIGNED_SUBJECT_UNRESOLVED",
+      "prior_blocking_state": "LOOP_TOOL_REGISTRY_AND_SIMULATOR_ALIGNED_SUBJECT_UNRESOLVED",
+      "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+      "wound_class": "readiness_gate_install",
+      "next_recommended_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+      "modules": [
+        "rhp/runtime_script_trace_map.py"
+      ],
+      "tests": [
+        "tests/test_rhp_020_1_runtime_script_trace_map.py"
+      ],
+      "active_wound_preserved": true,
+      "active_subject_closed": false,
+      "repair_execution_enabled": false,
+      "authority_locks_false": true
+    },
+    {
+      "id": "RHP-020.2",
+      "type": "operation",
+      "evidence": "docs/context-layer/ops/RHP-020-2-final-evidence.json",
+      "state_after_alignment": "RUNTIME_TRACE_DRIFT_GUARD_ALIGNED_SUBJECT_UNRESOLVED",
+      "prior_blocking_state": "EXACT_RUNTIME_SCRIPT_TRACE_MAP_ALIGNED_SUBJECT_UNRESOLVED",
+      "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+      "wound_class": "readiness_gate_install",
+      "next_recommended_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+      "modules": [
+        "rhp/runtime_trace_drift_guard.py"
+      ],
+      "tests": [
+        "tests/test_rhp_020_2_runtime_trace_drift_guard.py"
+      ],
+      "active_wound_preserved": true,
+      "active_subject_closed": false,
+      "repair_execution_enabled": false,
+      "authority_locks_false": true
+    },
+    {
+      "id": "RHP-020.3",
+      "type": "operation",
+      "evidence": "docs/context-layer/ops/RHP-020-3-final-evidence.json",
+      "state_after_alignment": "ALL_ONE_GENERATOR_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED",
+      "prior_blocking_state": "RUNTIME_TRACE_DRIFT_GUARD_ALIGNED_SUBJECT_UNRESOLVED",
+      "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+      "wound_class": "readiness_gate_install",
+      "next_recommended_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+      "modules": [
+        "rhp/all_one_generator_contract.py"
+      ],
+      "tests": [
+        "tests/test_rhp_020_3_all_one_generator_contract.py"
+      ],
+      "active_wound_preserved": true,
+      "active_subject_closed": false,
+      "repair_execution_enabled": false,
+      "authority_locks_false": true
+    },
+    {
+      "id": "RHP-020.4",
+      "type": "operation",
+      "evidence": "docs/context-layer/ops/RHP-020-4-final-evidence.json",
+      "state_after_alignment": "CANONICAL_ALL_ONE_TEMPLATE_EMITTER_ALIGNED_SUBJECT_UNRESOLVED",
+      "prior_blocking_state": "ALL_ONE_GENERATOR_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED",
+      "subject_commit": "ddb24363e2fac630e7527a2c9eab31e6df50db52",
+      "wound_class": "readiness_gate_install",
+      "next_recommended_operation": "operator_rerun_or_ingest_replacement_ci_before_repair",
+      "modules": [
+        "rhp/all_one_template_emitter.py"
+      ],
+      "tests": [
+        "tests/test_rhp_020_4_all_one_template_emitter.py"
+      ],
+      "active_wound_preserved": true,
+      "active_subject_closed": false,
+      "repair_execution_enabled": false,
+      "authority_locks_false": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "RHP-020.0",
+      "to": "docs/context-layer/ops/RHP-020-0-final-evidence.json",
+      "kind": "operation_has_final_evidence"
+    },
+    {
+      "from": "RHP-020.0",
+      "to": "rhp/loop_tool_registry.py",
+      "kind": "operation_installs_module"
+    },
+    {
+      "from": "RHP-020.0",
+      "to": "rhp/loop_simulator.py",
+      "kind": "operation_installs_module"
+    },
+    {
+      "from": "RHP-020.0",
+      "to": "tests/test_rhp_020_0_loop_tool_registry_and_simulator.py",
+      "kind": "operation_installs_tests"
+    },
+    {
+      "from": "RHP-020.1",
+      "to": "docs/context-layer/ops/RHP-020-1-final-evidence.json",
+      "kind": "operation_has_final_evidence"
+    },
+    {
+      "from": "RHP-020.1",
+      "to": "rhp/runtime_script_trace_map.py",
+      "kind": "operation_installs_module"
+    },
+    {
+      "from": "RHP-020.1",
+      "to": "tests/test_rhp_020_1_runtime_script_trace_map.py",
+      "kind": "operation_installs_tests"
+    },
+    {
+      "from": "RHP-020.2",
+      "to": "docs/context-layer/ops/RHP-020-2-final-evidence.json",
+      "kind": "operation_has_final_evidence"
+    },
+    {
+      "from": "RHP-020.2",
+      "to": "rhp/runtime_trace_drift_guard.py",
+      "kind": "operation_installs_module"
+    },
+    {
+      "from": "RHP-020.2",
+      "to": "tests/test_rhp_020_2_runtime_trace_drift_guard.py",
+      "kind": "operation_installs_tests"
+    },
+    {
+      "from": "RHP-020.3",
+      "to": "docs/context-layer/ops/RHP-020-3-final-evidence.json",
+      "kind": "operation_has_final_evidence"
+    },
+    {
+      "from": "RHP-020.3",
+      "to": "rhp/all_one_generator_contract.py",
+      "kind": "operation_installs_module"
+    },
+    {
+      "from": "RHP-020.3",
+      "to": "tests/test_rhp_020_3_all_one_generator_contract.py",
+      "kind": "operation_installs_tests"
+    },
+    {
+      "from": "RHP-020.4",
+      "to": "docs/context-layer/ops/RHP-020-4-final-evidence.json",
+      "kind": "operation_has_final_evidence"
+    },
+    {
+      "from": "RHP-020.4",
+      "to": "rhp/all_one_template_emitter.py",
+      "kind": "operation_installs_module"
+    },
+    {
+      "from": "RHP-020.4",
+      "to": "tests/test_rhp_020_4_all_one_template_emitter.py",
+      "kind": "operation_installs_tests"
+    },
+    {
+      "from": "RHP-020.0",
+      "to": "RHP-020.1",
+      "kind": "operation_sequence"
+    },
+    {
+      "from": "RHP-020.1",
+      "to": "RHP-020.2",
+      "kind": "operation_sequence"
+    },
+    {
+      "from": "RHP-020.2",
+      "to": "RHP-020.3",
+      "kind": "operation_sequence"
+    },
+    {
+      "from": "RHP-020.3",
+      "to": "RHP-020.4",
+      "kind": "operation_sequence"
+    }
+  ],
+  "non_claim_lock": "Evidence graph indexes sealed proof surfaces only; it grants no authority."
+}

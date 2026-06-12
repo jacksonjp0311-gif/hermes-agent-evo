@@ -126,17 +126,17 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-020-4-final-evidence.json` |
-| Current RHP status | `RHP-020.4 Canonical All-One Template Emitter sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-020-3-final-evidence.json` |
-| Previous RHP status | `RHP-020.3 All-One Generator Contract sealed` |
-| Current RHP state | `CANONICAL_ALL_ONE_TEMPLATE_EMITTER_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `ALL_ONE_GENERATOR_CONTRACT_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-020-5-final-evidence.json` |
+| Current RHP status | `RHP-020.5 Evidence Graph Index sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-020-4-final-evidence.json` |
+| Previous RHP status | `RHP-020.4 Canonical All-One Template Emitter sealed` |
+| Current RHP state | `EVIDENCE_GRAPH_INDEX_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `CANONICAL_ALL_ONE_TEMPLATE_EMITTER_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
-| Canonical template emitter | `rhp/all_one_template_emitter.py` |
-| Template emitter evidence | `docs/context-layer/ops/RHP-020-4-canonical-all-one-template-emitter/all-one-template-emitter.json` |
+| Evidence graph module | `rhp/evidence_graph_index.py` |
+| Evidence graph index | `docs/context-layer/ops/RHP-020-5-evidence-graph-index/evidence-graph-index.json` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -1222,6 +1222,46 @@ RHPTEMPLATE-EMIT [GOLD] status=<emitted|blocked>
 
 Non-claim lock: this emitter preserves script shape only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_CANONICAL_ALL_ONE_TEMPLATE_EMITTER_END -->
+
+<!-- RHP_EVIDENCE_GRAPH_INDEX_START -->
+## RHP Evidence Graph Index
+
+The evidence graph connects sealed operations to their proof surfaces.
+
+### Graph law
+
+```text
+operation -> final evidence
+operation -> module
+operation -> focused tests
+operation -> state
+operation -> wound class
+operation -> next legal operation
+operation -> authority locks
+operation -> next operation in sequence
+```
+
+A future AI thread should inspect the evidence graph before modifying the loop. The graph does not authorize action; it only indexes sealed proof.
+
+### Graph panel
+
+```text
+RHPEVIDENCE-GRAPH [GOLD] status=<indexed|blocked>
+`- evidence graph index
+   +- latest-ok: true|false
+   +- operation-order-ok: true|false
+   +- active-wound-ok: true|false
+   +- subject-ok: true|false
+   +- authority-ok: true|false
+   +- graph-complete: true|false
+   +- node-count: <n>
+   +- edge-count: <n>
+   +- blocking-reasons: <reasons|none>
+   `- authority: no grant [LOCKED]
+```
+
+Non-claim lock: this graph indexes evidence only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_EVIDENCE_GRAPH_INDEX_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook
