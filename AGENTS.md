@@ -332,6 +332,26 @@ Non-claim lock: clean progress-body rendering is operator UX only and grants no 
 <!-- HERMES_AGENT_CLEAN_TOP_PROGRESS_BODY_CANON_END -->
 
 
+<!-- HERMES_AGENT_CANONICAL_RUNTIME_RUN_BLOCK_START -->
+## Canonical Runtime Run Block Rule
+
+The main README contains the canonical RHP runtime run block. Future All-One scripts must preserve its body grammar:
+
+```text
+top progress surface only for motion
+no inline body progress bars
+no spin= body frame spam
+Doctor before Self-Learning
+Self-Learning before Reflect
+Reflect before Human Summary
+authority locks always visible
+```
+
+When updating runtime UX, update the README run block, AGENTS.md, final evidence, and `docs/context-layer/latest-rhp.json` together.
+
+Non-claim lock: this rule is operator UX governance only and grants no authority.
+<!-- HERMES_AGENT_CANONICAL_RUNTIME_RUN_BLOCK_END -->
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 

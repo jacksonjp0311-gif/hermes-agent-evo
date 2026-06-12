@@ -126,15 +126,16 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-12-final-evidence.json` |
-| Current RHP status | `RHP-018.12 Clean Top Progress Body Canon sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-11-final-evidence.json` |
-| Previous RHP status | `RHP-018.11 Top Progress Console Canon sealed` |
-| Current RHP state | `CLEAN_TOP_PROGRESS_BODY_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `RUNTIME_PROGRESS_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-13-final-evidence.json` |
+| Current RHP status | `RHP-018.13 README Canonical Runtime Run Block sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-12-final-evidence.json` |
+| Previous RHP status | `RHP-018.12 Clean Top Progress Body Canon sealed` |
+| Current RHP state | `README_CANONICAL_RUNTIME_RUN_BLOCK_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `CLEAN_TOP_PROGRESS_BODY_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
+| Canonical runtime run block | `README.md#rhp-canonical-runtime-run-block` |
 | Runtime progress console | `rhp/progress_console.py` |
 | Runtime loop module | `rhp/runtime_loop.py` |
 | RHPLOOP Doctor module | `rhp/loop_doctor.py` |
@@ -704,6 +705,101 @@ HUMAN-UI-SUMMARY
 Non-claim lock: this canon changes operator visibility only. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
 <!-- RHP_CLEAN_TOP_PROGRESS_BODY_CANON_END -->
 
+
+<!-- RHP_CANONICAL_RUNTIME_RUN_BLOCK_START -->
+## RHP Canonical Runtime Run Block
+
+Use this block as the canonical operator-facing runtime shape for future All-One scripts.
+
+```text
+RHPLOAD [005%] loop=ENTRYPOINT-GATE operation=<OPERATION> | status=ok tone=green
+`- file invocation detected: <script>
+
+RHPLOAD [010%] loop=ROOT-ANCHOR operation=<OPERATION> | status=ok tone=green
+`- <repo-root>
+
+RHPLOAD [015%] loop=RESIDUE-MANAGER operation=<OPERATION> | status=ok tone=green
+`- worktree clean or bounded residue restored/cleaned
+
+RHPLOAD [020%] loop=PREAUTH-PULL operation=<OPERATION> | status=ok tone=green
+`- remote/main integrated before authorization
+
+RHPLOAD [025%] loop=RHPLOOP-RUNTIME operation=<OPERATION> | status=preauth tone=gold
+`- top progress only; body has no inline bars or spin spam
+
+Type exactly this phrase to authorize <OPERATION>:
+I AUTHORIZE <OPERATION> <BOUNDED PURPOSE>
+
+RHPLOAD [030%] loop=HUMAN-AUTHORIZATION operation=<OPERATION> | status=ok tone=green
+`- exact phrase accepted
+
+RHPREADY [DIAGNOSTIC] class=<class> decision=<allowed|blocked|pending>
+`- readiness diagnostic evidence
+   +- state: <state>
+   +- allowed: <true|false>
+   +- active-wound: <wound-class|none>
+   +- next: <next-operation>
+   `- authority: no grant [LOCKED]
+
+RHPLOAD [040%] loop=OPERATION-START operation=<OPERATION> | status=running tone=green
+`- <bounded operation detail>
+
+RHPLOOP-DOCTOR [GOLD] status=<diagnostic|preserved|aligned>
+`- read-only loop doctor cockpit
+   +- role: read/classify/propose
+   +- can-mutate: false
+   +- blocked-reasons: <reasons|none>
+   +- next: <next-operation>
+   `- authority: no grant [LOCKED]
+
+RHPLOOP-SELF-LEARNING [GOLD] status=runtime-checkpoint
+`- lesson checkpoint before reflection and human summary
+   +- observed-event: <event>
+   +- evidence: <artifact>
+   +- lesson: <lesson>
+   +- future-behavior: <behavior-change>
+   +- promotion: evidence-gated / human-authorized
+   `- authority: no grant [LOCKED]
+
+RHPDROP [closed] status=ok tone=gold
+`- runtime-aware command summary
+   +- total: <n>
+   +- ok: <n>
+   +- diagnostic-nonzero: <n>
+   +- hard-failed: 0
+   `- diagnostic nonzero is not hard failure when valid evidence exists
+
+RHPREFLECT [GOLD] status=aligned
+`- operator reflection summary
+   +- what-happened: <plain-English event>
+   +- what-it-means: <state-machine interpretation>
+   +- active-wound: <wound-class|none>
+   +- repair-basis: <true|false>
+   +- blocked-actions: <blocked-actions>
+   +- next: <next-operation>
+   `- authority: no grant [LOCKED]
+
+RHPLOAD [098%] loop=POST-SEAL-RESIDUE operation=<OPERATION> | status=ok tone=green
+`- working tree clean
+
+RHPLOAD [099%] loop=RETURN-ROOT operation=<OPERATION> | status=ok tone=green
+`- repo root restored
+
+RHPLOAD [100%] loop=HUMAN-UI-SUMMARY operation=<OPERATION> | status=ok tone=gold
+`- <final summary>; next=<next-operation>
+```
+
+### Body-output rule
+
+```text
+Motion belongs in the single top progress surface.
+The body must not contain inline [#---] progress bars.
+The body must not contain spin= frame spam.
+The body must preserve Doctor, Self-Learning, Drop, Reflect, and Human Summary.
+```
+
+Non-claim lock: this run block is a README/operator UX contract. It does not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHP_CANONICAL_RUNTIME_RUN_BLOCK_END -->
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->
 ## Operational Loop Boxes and AI Takeover Runbook

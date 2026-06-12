@@ -1,0 +1,42 @@
+{
+  "schema": "RHP-CANONICAL-RUNTIME-RUN-BLOCK-v0.1",
+  "operation": "RHP-018.13",
+  "readme_section": "RHP Canonical Runtime Run Block",
+  "body_inline_bars_allowed": false,
+  "body_spinner_allowed": false,
+  "required_panels": [
+    "ENTRYPOINT-GATE",
+    "ROOT-ANCHOR",
+    "RESIDUE-MANAGER",
+    "PREAUTH-PULL",
+    "RHPLOOP-RUNTIME",
+    "HUMAN-AUTHORIZATION",
+    "RHPREADY",
+    "OPERATION-START",
+    "RHPLOOP-DOCTOR",
+    "RHPLOOP-SELF-LEARNING",
+    "RHPDROP",
+    "RHPREFLECT",
+    "POST-SEAL-RESIDUE",
+    "RETURN-ROOT",
+    "HUMAN-UI-SUMMARY"
+  ],
+  "active_wound_preserved": true,
+  "repair_execution_enabled": false,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "Run block is README/operator UX contract only."
+}

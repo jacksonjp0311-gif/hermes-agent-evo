@@ -1,0 +1,37 @@
+{
+  "schema": "RHP-RUNTIME-AWARE-COMMAND-SUMMARY-v0.4",
+  "operation": "RHP-018.13",
+  "group": "operation-commands",
+  "total": 4,
+  "ok": 3,
+  "diagnostic_nonzero": 1,
+  "hard_failed": 0,
+  "records": [
+    {
+      "stage": "operation-base-commit",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-13-readme-canonical-runtime-run-block\\operation-base-commit.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "rhpready-diagnostic-runtime",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-13-readme-canonical-runtime-run-block\\rhpready-diagnostic-runtime.txt",
+      "diagnostic_nonzero_allowed": false
+    },
+    {
+      "stage": "doctor-cli-readonly-runtime",
+      "exit": 1,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-13-readme-canonical-runtime-run-block\\doctor-cli-readonly-runtime.txt",
+      "diagnostic_nonzero_allowed": true
+    },
+    {
+      "stage": "evidence-api-gate-after-readme-run-block",
+      "exit": 0,
+      "raw": "C:\\Users\\jacks\\OneDrive\\Desktop\\hermes-agent-evo\\docs\\context-layer\\ops\\RHP-018-13-readme-canonical-runtime-run-block\\evidence-api-gate-after-readme-run-block.txt",
+      "diagnostic_nonzero_allowed": false
+    }
+  ],
+  "status": "ok",
+  "non_claim_lock": "Diagnostic nonzero is classified separately from hard failure when valid evidence exists."
+}
