@@ -1,0 +1,8 @@
+{
+  "schema": "RHPLOOP-SELF-LEARNING-CANDIDATE-VALIDATION-v0.1",
+  "ok": true,
+  "missing": [],
+  "grants_authority": false,
+  "classification": "promotable_lesson_candidate",
+  "non_claim_lock": "Self-learning candidates propose future behavior rules only; they do not mutate memory, grant authority, or apply repairs."
+}

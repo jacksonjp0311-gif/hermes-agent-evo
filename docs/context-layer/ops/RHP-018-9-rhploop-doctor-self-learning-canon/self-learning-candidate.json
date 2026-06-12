@@ -1,0 +1,7 @@
+{
+  "observed_event": "Operator identified missing RHPLOOP Doctor and Self-Learning sections after uncompressed console canon.",
+  "evidence_path": "docs/context-layer/ops/RHP-018-8-final-evidence.json",
+  "lesson": "Self-healing requires visible Doctor and Self-Learning loops before proposal/apply layers.",
+  "future_behavior_change": "Future self-healing operations must show RHPLOOP-DOCTOR and RHPLOOP-SELF-LEARNING panels before mutation proposals.",
+  "authority_boundary": "no authority grant"
+}

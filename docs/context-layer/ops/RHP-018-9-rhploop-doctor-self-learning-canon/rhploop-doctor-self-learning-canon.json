@@ -1,0 +1,41 @@
+{
+  "schema": "RHPLOOP-DOCTOR-SELF-LEARNING-CANON-v0.1",
+  "operation": "RHP-018.9",
+  "doctor_loop": {
+    "tag": "RHPLOOP-DOCTOR [GOLD]",
+    "module": "rhp/loop_doctor.py",
+    "existing_doctor": "rhp/rhpload_doctor.py",
+    "existing_cli": "rhp/doctor_cli.py",
+    "mutation_enabled": false
+  },
+  "self_learning_loop": {
+    "tag": "RHPLOOP-SELF-LEARNING [GOLD]",
+    "required_fields": [
+      "observed_event",
+      "evidence_path",
+      "lesson",
+      "future_behavior_change",
+      "authority_boundary"
+    ],
+    "promotion_rule": "evidence-gated and human-authorized",
+    "mutation_enabled": false
+  },
+  "active_wound_preserved": true,
+  "repair_execution_enabled": false,
+  "next_operation_preserved": "operator_rerun_or_ingest_replacement_ci_before_repair",
+  "authority_locks": {
+    "provider_call_executed": false,
+    "model_call_executed": false,
+    "tool_use_executed": false,
+    "cms_runtime_execution": false,
+    "cms_write": false,
+    "memory_write": false,
+    "memory_promotion": false,
+    "api_write": false,
+    "dependency_mutation_committed": false,
+    "external_ingestion": false,
+    "autonomous_authority": false,
+    "self_authorization": false
+  },
+  "non_claim_lock": "RHPLOOP Doctor and Self-Learning are read/classify/propose/preserve loops only."
+}

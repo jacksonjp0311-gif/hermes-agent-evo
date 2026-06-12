@@ -126,18 +126,19 @@ Current public finding: Hermes provides the actor/runtime body. RCC provides rep
 | Latest OPS bridge proof | `docs/context-layer/ops/OPS-027-final-evidence.json` |
 | Current OPS status | `OPS-027 HRCN v0.3 seal and tag passed` |
 | Current HRCN OPS tag | `hrcn-ops-v0.3.0` |
-| Latest RHP proof | `docs/context-layer/ops/RHP-018-8-final-evidence.json` |
-| Current RHP status | `RHP-018.8 Uncompressed Operator Console Canon sealed; active wound preserved` |
-| Previous RHP seal | `docs/context-layer/ops/RHP-018-7-final-evidence.json` |
-| Previous RHP status | `RHP-018.7 CI Evidence Reconciliation + Visible Debug Loop Canon sealed` |
-| Current RHP state | `UNCOMPRESSED_OPERATOR_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
-| Blocking CI/wound state preserved | `VISIBLE_DEBUG_CANON_ALIGNED_PARTIAL_CI_EVIDENCE_SUBJECT_UNRESOLVED` |
+| Latest RHP proof | `docs/context-layer/ops/RHP-018-9-final-evidence.json` |
+| Current RHP status | `RHP-018.9 RHPLOOP Doctor + Self-Learning Canon sealed; active wound preserved` |
+| Previous RHP seal | `docs/context-layer/ops/RHP-018-8-final-evidence.json` |
+| Previous RHP status | `RHP-018.8 Uncompressed Operator Console Canon sealed` |
+| Current RHP state | `RHPLOOP_DOCTOR_SELF_LEARNING_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
+| Blocking CI/wound state preserved | `UNCOMPRESSED_OPERATOR_CONSOLE_CANON_ALIGNED_SUBJECT_UNRESOLVED` |
 | Active wound class | `readiness_gate_install` |
 | Active subject commit | `ddb24363e2fac630e7527a2c9eab31e6df50db52` |
 | Next RHP gate | `operator_rerun_or_ingest_replacement_ci_before_repair` |
+| RHPLOOP Doctor module | `rhp/loop_doctor.py` |
+| RHPLOAD Doctor | `rhp/rhpload_doctor.py` |
+| Doctor CLI | `rhp/doctor_cli.py` |
 | Visible console renderer | `rhp/visible_console.py` |
-| Visible debug loop canon | `README.md#rhp-visible-debug-loop-canon` |
-| Uncompressed operator console canon | `README.md#rhp-uncompressed-operator-console-canon` |
 | Runtime source authority | `False` |
 | CMS write authority | `False` |
 | Memory promotion authority | `False` |
@@ -430,6 +431,93 @@ RHPREFLECT [GOLD] status=aligned
 
 Non-claim lock: this canon improves operator visibility and debugging comprehension. It does not close wounds, repair code, rerun CI, grant authority, or authorize autonomous action.
 <!-- RHP_UNCOMPRESSED_OPERATOR_CONSOLE_CANON_END -->
+
+
+<!-- RHPLOOP_DOCTOR_SELF_LEARNING_CANON_START -->
+## RHPLOOP Doctor and Self-Learning Canon
+
+RHP has two explicit meta-loops that must stay visible:
+
+```text
+RHPLOOP-DOCTOR
+  read -> inspect -> classify -> summarize blocked reasons -> propose next lawful operation
+  mutation: false
+
+RHPLOOP-SELF-LEARNING
+  observe friction/failure -> bind evidence -> propose future behavior rule -> preserve authority boundary
+  mutation: documentation/evidence only unless separately authorized
+```
+
+### RHPLOOP-DOCTOR
+
+The Doctor loop is the read-only cockpit. It does not heal directly. It tells the operator what is true, what is blocked, and what legal operation comes next.
+
+Required Doctor surfaces:
+
+```text
+rhp/rhpload_doctor.py
+rhp/doctor_cli.py
+rhp/loop_doctor.py
+docs/context-layer/latest-rhp.json
+docs/context-layer/<latest evidence>
+```
+
+Required Doctor panel:
+
+```text
+RHPLOOP-DOCTOR [GOLD] status=diagnostic
+`- read-only loop doctor cockpit
+   +- latest-operation: <latest RHP operation>
+   +- state: <derived/current state>
+   +- evidence-api-ok: true|false
+   +- replay-ok: true|false
+   +- worktree-clean: true|false
+   +- can-mutate: false
+   +- blocked-reasons: <reasons>
+   +- next: <next lawful operation>
+   `- authority: no grant [LOCKED]
+```
+
+### RHPLOOP-SELF-LEARNING
+
+Self-learning means the environment learns by preserving validated operational lessons. It does not mean autonomous mutation, memory promotion, or self-authorization.
+
+A self-learning candidate must name:
+
+```text
+observed_event
+evidence_path
+lesson
+future_behavior_change
+authority_boundary
+```
+
+Required self-learning panel:
+
+```text
+RHPLOOP-SELF-LEARNING [GOLD] status=proposed|blocked
+`- validated lesson candidate
+   +- observed-event: <what happened>
+   +- evidence: <artifact path>
+   +- lesson: <what was learned>
+   +- future-behavior: <how future operations change>
+   +- classification: promotable_lesson_candidate|blocked_learning_candidate
+   +- authority: no grant
+   `- promotion: evidence-gated / human-authorized [LOCKED]
+```
+
+### Self-learning law
+
+```text
+No lesson without evidence.
+No evidence, no promotion.
+No promotion that grants autonomous authority.
+No learning rule that bypasses RHPREADY, RHPDIAG, RHPDROP, or human authorization.
+The environment may become smarter without becoming sovereign.
+```
+
+Non-claim lock: RHPLOOP Doctor and Self-Learning are read/classify/propose/preserve loops. They do not repair, rerun CI, close wounds, mutate dependencies, grant authority, or self-authorize.
+<!-- RHPLOOP_DOCTOR_SELF_LEARNING_CANON_END -->
 
 
 <!-- HERMES_OPERATIONAL_LOOP_BOXES_START -->

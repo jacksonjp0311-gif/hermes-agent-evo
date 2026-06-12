@@ -177,6 +177,51 @@ Non-claim lock: this section teaches coding agents how to keep the human operato
 <!-- HERMES_AGENT_UNCOMPRESSED_OPERATOR_CONSOLE_CANON_END -->
 
 
+<!-- HERMES_AGENT_RHPLOOP_DOCTOR_SELF_LEARNING_START -->
+## RHPLOOP Doctor and Self-Learning Rules for Coding Agents
+
+Before attempting self-healing, run or respect the Doctor loop.
+
+### RHPLOOP-DOCTOR
+
+Use Doctor when state is unclear, CI is unresolved, the worktree might be dirty, evidence compatibility may be stale, or the user asks whether the loop drifted.
+
+Doctor behavior:
+
+| Field | Requirement |
+|---|---|
+| `can_mutate` | Must remain `false`. |
+| `blocked_reasons` | Must be surfaced to the operator. |
+| `next_legal_operation` | Must be preserved unless a newer evidence packet changes it. |
+| `authority` | No grant. |
+
+### RHPLOOP-SELF-LEARNING
+
+Use Self-Learning when a repeated failure, operator-friction event, or useful invariant is discovered.
+
+A learning rule may be promoted only when it has:
+
+```text
+observed_event
+evidence_path
+lesson
+future_behavior_change
+authority_boundary
+```
+
+Do not promote lessons that grant:
+
+```text
+self_authorization
+autonomous_authority
+unbounded mutation
+provider/model/tool/CMS/memory/API authority
+```
+
+Non-claim lock: Self-learning changes future behavior rules only through evidence and human-authorized commits. It does not directly repair code or close wounds.
+<!-- HERMES_AGENT_RHPLOOP_DOCTOR_SELF_LEARNING_END -->
+
+
 <!-- HERMES_AGENT_OPERATIONAL_LOOPS_START -->
 ## Operational Loop Selection
 
