@@ -4197,3 +4197,42 @@ The governor is implemented at `rhp/forward_progress_governor.py` and tested by 
 
 Non-claim lock: forward progress is not wound closure, not release, and not a green claim.
 <!-- RHP_FORWARD_PROGRESS_GOVERNOR_END -->
+
+<!-- RHP_ORTHOGONAL_ADVANCEMENT_LANE_REGISTRY_START -->
+## RHP Orthogonal Advancement Lane Registry
+
+RHP-022.1 installs the lane registry required by the forward progress governor.
+
+Core rule:
+
+```text
+Every future operation must declare its advancement lane before mutation.
+```
+
+Orthogonal lanes allowed while CI is unresolved:
+
+```text
+documentation
+canonization
+adapter
+tooling
+observability
+test_contract
+operator_experience
+```
+
+Blocked lanes while CI is unresolved:
+
+```text
+green_claim
+wound_closure
+release
+promotion
+dependency_mutation
+destructive_repair
+```
+
+The registry is implemented at `rhp/advancement_lane_registry.py` and tested by `tests/test_rhp_022_1_advancement_lane_registry.py`.
+
+Non-claim lock: lane permission is not wound closure, release, or green status.
+<!-- RHP_ORTHOGONAL_ADVANCEMENT_LANE_REGISTRY_END -->
